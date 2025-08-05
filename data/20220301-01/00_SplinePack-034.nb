@@ -3,10 +3,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[         0,          0]
-NotebookDataLength[    372107,       7373]
-NotebookOptionsPosition[    369936,       7333]
-NotebookOutlinePosition[    370446,       7351]
-CellTagsIndexPosition[    370403,       7348]
+NotebookDataLength[    376015,       7466]
+NotebookOptionsPosition[    373844,       7426]
+NotebookOutlinePosition[    374354,       7444]
+CellTagsIndexPosition[    374311,       7441]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -113,8 +113,100 @@ In[1]:=",ExpressionUUID->"74e212c9-a1f0-4bea-b984-9c8eddb0d1a3"]
 }, Open  ]],
 
 Cell[BoxData[
- RowBox[{"\[IndentingNewLine]", 
+ RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
   RowBox[{
+   RowBox[{"ReadQRCode", "=."}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"ReadQRCode", "[", "X_", "]"}], ":=", 
+     RowBox[{"Module", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"f", ",", "Y"}], "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"Y", "=", 
+         RowBox[{"Join", "@@", 
+          RowBox[{"Round", "[", 
+           RowBox[{"255", "*", 
+            RowBox[{"ImageData", "[", "X", "]"}]}], "]"}]}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"f", "=", 
+         RowBox[{"StringJoin", "[", 
+          RowBox[{"MyTempDir", ",", "\"\<outputstream.dat\>\""}], "]"}]}], ";",
+         "\[IndentingNewLine]", 
+        RowBox[{"Off", "[", 
+         RowBox[{"DeleteFile", "::", "fdnfnd"}], "]"}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"DeleteFile", "[", "f", "]"}], ";", "\[IndentingNewLine]", 
+        RowBox[{"On", "[", 
+         RowBox[{"DeleteFile", "::", "fdnfnd"}], "]"}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"BinaryWrite", "[", 
+         RowBox[{"f", ",", "Y"}], "]"}], ";", "\[IndentingNewLine]", 
+        RowBox[{"Close", "[", "f", "]"}], ";", "\[IndentingNewLine]", 
+        RowBox[{"Y", "=", 
+         RowBox[{"Get", "[", "f", "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"DeleteFile", "[", "f", "]"}], ";", "\[IndentingNewLine]", 
+        "Y"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]",
+    "\[IndentingNewLine]", 
+   RowBox[{"WriteQRCode", "=."}], "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"WriteQRCode", "[", "X_", "]"}], ":=", 
+     RowBox[{"Module", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"f", ",", "Y"}], "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"f", "=", 
+         RowBox[{"StringJoin", "[", 
+          RowBox[{"MyTempDir", ",", "\"\<outputstream.dat\>\""}], "]"}]}], ";",
+         "\[IndentingNewLine]", 
+        RowBox[{"Off", "[", 
+         RowBox[{"DeleteFile", "::", "fdnfnd"}], "]"}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"DeleteFile", "[", "f", "]"}], ";", "\[IndentingNewLine]", 
+        RowBox[{"On", "[", 
+         RowBox[{"DeleteFile", "::", "fdnfnd"}], "]"}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"Put", "[", 
+         RowBox[{"X", ",", "f"}], "]"}], ";", "\[IndentingNewLine]", 
+        RowBox[{"Y", "=", 
+         RowBox[{"BinaryReadList", "[", "f", "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"DeleteFile", "[", "f", "]"}], ";", "\[IndentingNewLine]", 
+        RowBox[{"Y", "=", 
+         RowBox[{"Join", "[", 
+          RowBox[{"Y", ",", 
+           RowBox[{"ConstantArray", "[", 
+            RowBox[{"32", ",", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"Ceiling", "[", 
+                RowBox[{"Sqrt", "[", 
+                 RowBox[{"Length", "[", "Y", "]"}], "]"}], "]"}], "^", "2"}], 
+              "-", 
+              RowBox[{"Length", "[", "Y", "]"}]}]}], "]"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"Y", "=", 
+         RowBox[{"Partition", "[", 
+          RowBox[{"Y", ",", 
+           RowBox[{"Sqrt", "[", 
+            RowBox[{"Length", "[", "Y", "]"}], "]"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Union", "[", 
+            RowBox[{"Length", "/@", "Y"}], "]"}], "===", 
+           RowBox[{"{", 
+            RowBox[{"Length", "[", "Y", "]"}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"Image", "[", 
+           RowBox[{"Y", ",", "\"\<Byte\>\""}], "]"}], ",", 
+          "\[IndentingNewLine]", "1"}], "]"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
    RowBox[{"Clear", "[", "MyFindRoot1D", "]"}], "\[IndentingNewLine]", 
    "\[IndentingNewLine]", "\[IndentingNewLine]", 
    RowBox[{
@@ -481,8 +573,9 @@ Cell[BoxData[
    3.675853522163555*^9, 3.6758535306800423`*^9}, {3.676014664557869*^9, 
    3.6760146706364765`*^9}, {3.6760147062020326`*^9, 3.676014748456258*^9}, {
    3.6760147976841803`*^9, 3.6760148015975714`*^9}, {3.676014836581069*^9, 
-   3.67601484908632*^9}, {3.676014900751486*^9, 
-   3.6760149090013103`*^9}},ExpressionUUID->"67e807e5-1c44-456a-8d92-\
+   3.67601484908632*^9}, {3.676014900751486*^9, 3.6760149090013103`*^9}, {
+   3.963410004673397*^9, 
+   3.9634100156587315`*^9}},ExpressionUUID->"67e807e5-1c44-456a-8d92-\
 f4223a98c69a"],
 
 Cell[BoxData[
@@ -7354,20 +7447,20 @@ Cell[CellGroupData[{
 Cell[422, 15, 1382, 26, 320, "Input",ExpressionUUID->"d6eeb49a-91c2-4d18-9b0c-6bc7b9a909ea"],
 Cell[1807, 43, 4492, 68, 93, "Print",ExpressionUUID->"74e212c9-a1f0-4bea-b984-9c8eddb0d1a3"]
 }, Open  ]],
-Cell[6314, 114, 19062, 371, 1054, "Input",ExpressionUUID->"67e807e5-1c44-456a-8d92-f4223a98c69a"],
-Cell[25379, 487, 18881, 395, 1205, "Input",ExpressionUUID->"dc805442-61a6-4d61-9e6b-d977e92876c9"],
-Cell[44263, 884, 15466, 307, 4437, "Input",ExpressionUUID->"36244cc9-1ebc-4f2d-a335-f095cd9d258b"],
-Cell[59732, 1193, 5872, 109, 2257, "Input",ExpressionUUID->"22a97ba0-5662-4b2e-a706-db98792cb3a1"],
-Cell[65607, 1304, 71766, 1471, 22434, "Input",ExpressionUUID->"e2d459d9-fa8f-4423-8c5d-db99e42b656e"],
-Cell[137376, 2777, 27847, 588, 9160, "Input",ExpressionUUID->"1eb4b200-cc7a-4329-979a-f3ae8f6d1e70"],
-Cell[165226, 3367, 30729, 536, 8301, "Input",ExpressionUUID->"96d9fc2c-0067-434b-857a-c8f8d4e1f165"],
-Cell[195958, 3905, 21987, 428, 8439, "Input",ExpressionUUID->"a124033b-e6a0-407d-a719-831263cf4863"],
-Cell[217948, 4335, 14473, 282, 5421, "Input",ExpressionUUID->"d62c6496-d15c-4d3e-9b6a-1d7a827fa42e"],
-Cell[232424, 4619, 29386, 555, 10356, "Input",ExpressionUUID->"36db56be-3be6-4518-b3ef-f424929f471f"],
-Cell[261813, 5176, 18353, 406, 9125, "Input",ExpressionUUID->"515714a7-d1ff-4da1-af0c-ec9c1ba6655c"],
-Cell[280169, 5584, 33336, 687, 16526, "Input",ExpressionUUID->"eb8a6f99-ef53-4145-9c7f-0072128d8751"],
-Cell[313508, 6273, 34002, 629, 14471, "Input",ExpressionUUID->"a95dcfa7-5a85-442d-b747-4130cea00db8"],
-Cell[347513, 6904, 22419, 427, 9259, "Input",ExpressionUUID->"04e2bbfb-b093-4162-a384-d03a5dda861d"]
+Cell[6314, 114, 22970, 464, 1886, "Input",ExpressionUUID->"67e807e5-1c44-456a-8d92-f4223a98c69a"],
+Cell[29287, 580, 18881, 395, 1516, "Input",ExpressionUUID->"dc805442-61a6-4d61-9e6b-d977e92876c9"],
+Cell[48171, 977, 15466, 307, 4437, "Input",ExpressionUUID->"36244cc9-1ebc-4f2d-a335-f095cd9d258b"],
+Cell[63640, 1286, 5872, 109, 2257, "Input",ExpressionUUID->"22a97ba0-5662-4b2e-a706-db98792cb3a1"],
+Cell[69515, 1397, 71766, 1471, 22434, "Input",ExpressionUUID->"e2d459d9-fa8f-4423-8c5d-db99e42b656e"],
+Cell[141284, 2870, 27847, 588, 9160, "Input",ExpressionUUID->"1eb4b200-cc7a-4329-979a-f3ae8f6d1e70"],
+Cell[169134, 3460, 30729, 536, 8301, "Input",ExpressionUUID->"96d9fc2c-0067-434b-857a-c8f8d4e1f165"],
+Cell[199866, 3998, 21987, 428, 8439, "Input",ExpressionUUID->"a124033b-e6a0-407d-a719-831263cf4863"],
+Cell[221856, 4428, 14473, 282, 5421, "Input",ExpressionUUID->"d62c6496-d15c-4d3e-9b6a-1d7a827fa42e"],
+Cell[236332, 4712, 29386, 555, 10356, "Input",ExpressionUUID->"36db56be-3be6-4518-b3ef-f424929f471f"],
+Cell[265721, 5269, 18353, 406, 9125, "Input",ExpressionUUID->"515714a7-d1ff-4da1-af0c-ec9c1ba6655c"],
+Cell[284077, 5677, 33336, 687, 16526, "Input",ExpressionUUID->"eb8a6f99-ef53-4145-9c7f-0072128d8751"],
+Cell[317416, 6366, 34002, 629, 14471, "Input",ExpressionUUID->"a95dcfa7-5a85-442d-b747-4130cea00db8"],
+Cell[351421, 6997, 22419, 427, 9259, "Input",ExpressionUUID->"04e2bbfb-b093-4162-a384-d03a5dda861d"]
 }
 ]
 *)

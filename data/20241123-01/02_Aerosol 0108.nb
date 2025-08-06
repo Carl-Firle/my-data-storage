@@ -1,0 +1,3551 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    146010,       3543]
+NotebookOptionsPosition[    143108,       3487]
+NotebookOutlinePosition[    143531,       3504]
+CellTagsIndexPosition[    143488,       3501]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{
+     "NotebookEvaluate", 
+      "[", "\"\<https://github.com/Carl-Firle/my-data-storage/raw/refs/heads/\
+main/data/20220301-01/00_SplinePack-034.nb\>\"", "]"}], "//", "Quiet"}], 
+    ";"}], "\[IndentingNewLine]", "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+     "Get", "[", \
+"\"\<https://github.com/Carl-Firle/my-data-storage/raw/refs/heads/main/data/\
+20220301-01/TP_ImProc_01-m101.wl\>\"", "]"}], "//", "Quiet"}], ";"}], 
+   "\[IndentingNewLine]", "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+     "Get", "[", \
+"\"\<https://github.com/Carl-Firle/my-data-storage/raw/refs/heads/main/data/\
+20220301-01/TP_ImProc_01-m101.wl\>\"", "]"}], "//", "Quiet"}], ";"}], 
+   "\n"}]}]], "Input",
+ CellChangeTimes->{3.884054393726717*^9, 3.963453821730713*^9},
+ CellLabel->"In[10]:=",ExpressionUUID->"f0040bd0-ff3f-42bd-a338-ea3d70f1a482"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"    \"\>", "\[InvisibleSpace]", "\<\"\"\>", 
+   "\[InvisibleSpace]", "\<\"        \"\>", 
+   "\[InvisibleSpace]", "\<\"Null[[3]].Null[[2]].Null[[1]] \
+Null[[4]]:Null[[5]]:Null[[6]]\"\>", "\[InvisibleSpace]", "\<\"    (\"\>", "\[InvisibleSpace]", 
+   RowBox[{"FileByteCount", "[", "\<\"\"\>", "]"}], 
+   "\[InvisibleSpace]", "\<\" Bytes)\"\>"}],
+  SequenceForm[
+  "    ", "", "        ", 
+   "Null[[3]].Null[[2]].Null[[1]] Null[[4]]:Null[[5]]:Null[[6]]", "    (", 
+   FileByteCount[""], " Bytes)"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.9634538352653275`*^9},
+ CellLabel->
+  "During evaluation of \
+In[1]:=",ExpressionUUID->"d1efa33f-a458-a048-b43a-4a04c7ea2b39"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"    \"\>", "\[InvisibleSpace]", "\<\"\"\>", 
+   "\[InvisibleSpace]", "\<\"        \"\>", 
+   "\[InvisibleSpace]", "\<\"Null[[3]].Null[[2]].Null[[1]] \
+Null[[4]]:Null[[5]]:Null[[6]]\"\>", "\[InvisibleSpace]", "\<\"    (\"\>", "\[InvisibleSpace]", 
+   RowBox[{"FileByteCount", "[", "\<\"\"\>", "]"}], 
+   "\[InvisibleSpace]", "\<\" Bytes)\"\>"}],
+  SequenceForm[
+  "    ", "", "        ", 
+   "Null[[3]].Null[[2]].Null[[1]] Null[[4]]:Null[[5]]:Null[[6]]", "    (", 
+   FileByteCount[""], " Bytes)"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.963453836260084*^9},
+ CellLabel->
+  "During evaluation of \
+In[35]:=",ExpressionUUID->"01e45f56-6081-a746-8783-9f5bb422c0dc"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"    \"\>", "\[InvisibleSpace]", "\<\"\"\>", 
+   "\[InvisibleSpace]", "\<\"        \"\>", 
+   "\[InvisibleSpace]", "\<\"Null[[3]].Null[[2]].Null[[1]] \
+Null[[4]]:Null[[5]]:Null[[6]]\"\>", "\[InvisibleSpace]", "\<\"    (\"\>", "\[InvisibleSpace]", 
+   RowBox[{"FileByteCount", "[", "\<\"\"\>", "]"}], 
+   "\[InvisibleSpace]", "\<\" Bytes)\"\>"}],
+  SequenceForm[
+  "    ", "", "        ", 
+   "Null[[3]].Null[[2]].Null[[1]] Null[[4]]:Null[[5]]:Null[[6]]", "    (", 
+   FileByteCount[""], " Bytes)"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.9634538365996456`*^9},
+ CellLabel->
+  "During evaluation of \
+In[35]:=",ExpressionUUID->"47d3f737-fbf1-be40-8830-81cf3690715c"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Clear", "[", "SavitzkyGolayFilterExtended", "]"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"SavitzkyGolayFilterExtended", "[", 
+      RowBox[{"DOrder_", ",", "M_", ",", "nl_", ",", "nr_", ",", "data_"}], 
+      "]"}], " ", ":=", " ", 
+     RowBox[{"Module", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"i", ",", "j", ",", "p", ",", "t"}], "}"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"p", " ", "=", " ", 
+         RowBox[{"Table", "[", 
+          RowBox[{
+           RowBox[{"t", "^", "i"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"i", ",", "0", ",", "M"}], "}"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"j", " ", "=", " ", 
+         RowBox[{"nl", "+", "nr", "+", "1"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"i", " ", "=", " ", 
+         RowBox[{"Range", "[", "j", "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"Join", "[", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"D", "[", 
+            RowBox[{
+             RowBox[{"Fit", "[", 
+              RowBox[{
+               RowBox[{"Transpose", "[", 
+                RowBox[{"{", 
+                 RowBox[{"i", ",", 
+                  RowBox[{"Take", "[", 
+                   RowBox[{"data", ",", "   ", "j"}], "]"}]}], "}"}], "]"}], ",",
+                "p", ",", "t"}], "]"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"t", ",", "DOrder"}], "}"}]}], "]"}], "/.", 
+           RowBox[{"t", "\[Rule]", 
+            RowBox[{"Take", "[", 
+             RowBox[{"i", ",", "  ", "nl"}], "]"}]}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"SavitzkyGolayFilter", "[", 
+           RowBox[{"DOrder", ",", "M", ",", "nl", ",", "nr", ",", "data"}], 
+           "]"}], ",", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"D", "[", 
+            RowBox[{
+             RowBox[{"Fit", "[", 
+              RowBox[{
+               RowBox[{"Transpose", "[", 
+                RowBox[{"{", 
+                 RowBox[{"i", ",", 
+                  RowBox[{"Take", "[", 
+                   RowBox[{"data", ",", 
+                    RowBox[{"-", "j"}]}], "]"}]}], "}"}], "]"}], ",", "p", ",",
+                "t"}], "]"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"t", ",", "DOrder"}], "}"}]}], "]"}], "/.", 
+           RowBox[{"t", "\[Rule]", 
+            RowBox[{"Take", "[", 
+             RowBox[{"i", ",", 
+              RowBox[{"-", "nr"}]}], "]"}]}]}]}], "]"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", "\n", "\[IndentingNewLine]", 
+   RowBox[{"Clear", "[", "\[IndentingNewLine]", 
+    RowBox[{"ParamPadToTake", ",", "\[IndentingNewLine]", "ParamTakeToPad"}], 
+    "]"}], "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"ParamPadToTake", "[", 
+      RowBox[{"ImgDim_", ",", "LeftRightBottomTop_"}], "]"}], " ", ":=", " ", 
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"LeftRightBottomTop", "[", 
+           RowBox[{"[", 
+            RowBox[{"2", ",", "2"}], "]"}], "]"}], "+", "1"}], ",", 
+         RowBox[{
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{"ListQ", "[", "ImgDim", "]"}], ",", 
+            RowBox[{"ImgDim", "[", 
+             RowBox[{"[", "2", "]"}], "]"}], ",", 
+            RowBox[{"-", "1"}]}], "]"}], "-", 
+          RowBox[{"LeftRightBottomTop", "[", 
+           RowBox[{"[", 
+            RowBox[{"2", ",", "1"}], "]"}], "]"}]}]}], "}"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"LeftRightBottomTop", "[", 
+           RowBox[{"[", 
+            RowBox[{"1", ",", "1"}], "]"}], "]"}], "+", "1"}], ",", 
+         RowBox[{
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{"ListQ", "[", "ImgDim", "]"}], ",", 
+            RowBox[{"ImgDim", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], ",", 
+            RowBox[{"-", "1"}]}], "]"}], "-", 
+          RowBox[{"LeftRightBottomTop", "[", 
+           RowBox[{"[", 
+            RowBox[{"1", ",", "2"}], "]"}], "]"}]}]}], "}"}]}], "}"}]}], 
+    ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"ParamTakeToPad", "[", 
+      RowBox[{"ImgDim_", ",", "RowsCols_"}], "]"}], " ", ":=", " ", 
+     RowBox[{"Module", "[", 
+      RowBox[{
+       RowBox[{"{", "LeftRightBottomTop", "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"LeftRightBottomTop", " ", "=", " ", 
+         RowBox[{"Reverse", "[", "RowsCols", "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"LeftRightBottomTop", " ", "=", " ", 
+         RowBox[{"Transpose", "[", "LeftRightBottomTop", "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"LeftRightBottomTop", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], " ", "-=", " ", "1"}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"LeftRightBottomTop", "[", 
+          RowBox[{"[", "2", "]"}], "]"}], " ", "=", " ", 
+         RowBox[{"ImgDim", "-", 
+          RowBox[{"LeftRightBottomTop", "[", 
+           RowBox[{"[", "2", "]"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"LeftRightBottomTop", " ", "=", " ", 
+         RowBox[{"Transpose", "[", "LeftRightBottomTop", "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"LeftRightBottomTop", "[", 
+          RowBox[{"[", "2", "]"}], "]"}], " ", "=", " ", 
+         RowBox[{"Reverse", "[", 
+          RowBox[{"LeftRightBottomTop", "[", 
+           RowBox[{"[", "2", "]"}], "]"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", "LeftRightBottomTop"}]}], "]"}]}], ";"}], "\n",
+    "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"Clear", "[", "\[IndentingNewLine]", 
+    RowBox[{"LoadFromTIF", ",", "\[IndentingNewLine]", "SaveAsTIF"}], "]"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"LoadFromTIF", "[", 
+      RowBox[{"CheckBitLength_", ",", "fname_"}], "]"}], " ", ":=", " ", 
+     RowBox[{"Module", "[", 
+      RowBox[{
+       RowBox[{"{", "X", "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"X", " ", "=", " ", 
+         RowBox[{"Import", "[", "fname", "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"X", "[", 
+          RowBox[{"[", 
+           RowBox[{"-", "1"}], "]"}], "]"}], " ", "=", " ", 
+         RowBox[{"ReadQRCode", "[", 
+          RowBox[{"X", "[", 
+           RowBox[{"[", 
+            RowBox[{"-", "1"}], "]"}], "]"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"If", "[", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{"TrueQ", "[", "CheckBitLength", "]"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"SameQ", "[", "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{
+               RowBox[{
+                RowBox[{"Piecewise", "[", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", 
+                    RowBox[{"#", "\[LessEqual]", "1"}]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"8", ",", 
+                    RowBox[{"1", "<", "#", "\[LessEqual]", "8"}]}], "}"}]}], 
+                   "}"}], ",", "16"}], "]"}], "&"}], "/@", 
+               RowBox[{"Ceiling", "[", 
+                RowBox[{"Log", "[", 
+                 RowBox[{"2", ",", 
+                  RowBox[{"X", "[", 
+                   RowBox[{"[", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], ",", "1"}], "]"}], "]"}]}], "]"}], 
+                "]"}]}], ",", "\[IndentingNewLine]", 
+              RowBox[{"Ceiling", "[", 
+               RowBox[{"Log", "[", 
+                RowBox[{"2", ",", 
+                 RowBox[{"Map", "[", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"Length", "[", 
+                    RowBox[{"Union", "@@", 
+                    RowBox[{"ImageData", "[", "#", "]"}]}], "]"}], "&"}], ",", 
+                   RowBox[{"Drop", "[", 
+                    RowBox[{"X", ",", 
+                    RowBox[{"-", "1"}]}], "]"}]}], "]"}]}], "]"}], "]"}]}], 
+             "]"}], ",", "\[IndentingNewLine]", "True"}], "]"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"X", "[", 
+             RowBox[{"[", 
+              RowBox[{"-", "1"}], "]"}], "]"}], " ", "=", " ", 
+            RowBox[{"X", "[", 
+             RowBox[{"[", 
+              RowBox[{
+               RowBox[{"-", "1"}], ",", "2"}], "]"}], "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"Fold", "[", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"ReplacePart", "[", 
+               RowBox[{"#1", ",", 
+                RowBox[{"#2", "[", 
+                 RowBox[{"[", "1", "]"}], "]"}], ",", 
+                RowBox[{"#2", "[", 
+                 RowBox[{"[", "2", "]"}], "]"}]}], "]"}], "&"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"X", "[", 
+              RowBox[{"[", 
+               RowBox[{"-", "1"}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"Transpose", "[", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"Drop", "[", 
+                 RowBox[{"X", ",", 
+                  RowBox[{"-", "1"}]}], "]"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"Position", "[", 
+                 RowBox[{
+                  RowBox[{"X", "[", 
+                   RowBox[{"[", 
+                    RowBox[{"-", "1"}], "]"}], "]"}], ",", "Image"}], "]"}]}],
+                "}"}], "]"}]}], "]"}]}]}], "]"}]}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"SaveAsTIF", "[", 
+      RowBox[{"fname_", ",", "data_"}], "]"}], " ", ":=", " ", 
+     RowBox[{"Module", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"x", ",", "X"}], "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"X", " ", "=", " ", 
+         RowBox[{"data", "/.", 
+          RowBox[{"x_", "\[RuleDelayed]", 
+           RowBox[{"MyVectorPlaceholder", "/;", 
+            RowBox[{"ImageQ", "[", "x", "]"}]}]}]}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"X", " ", "=", " ", 
+         RowBox[{"Append", "[", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"Extract", "[", 
+            RowBox[{"data", ",", 
+             RowBox[{"Position", "[", 
+              RowBox[{"X", ",", "MyVectorPlaceholder"}], "]"}]}], "]"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"X", "/.", 
+            RowBox[{"MyVectorPlaceholder", "\[Rule]", "Image"}]}]}], "]"}]}], 
+        ";", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"X", "[", 
+          RowBox[{"[", 
+           RowBox[{"-", "1"}], "]"}], "]"}], " ", "=", " ", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"Map", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"Length", "[", 
+               RowBox[{"Union", "@@", 
+                RowBox[{"ImageData", "[", "#", "]"}]}], "]"}], "&"}], ",", 
+             RowBox[{"Drop", "[", 
+              RowBox[{"X", ",", 
+               RowBox[{"-", "1"}]}], "]"}]}], "]"}], ",", 
+           RowBox[{"X", "[", 
+            RowBox[{"[", 
+             RowBox[{"-", "1"}], "]"}], "]"}]}], "}"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"X", "[", 
+          RowBox[{"[", 
+           RowBox[{"-", "1"}], "]"}], "]"}], " ", "=", " ", 
+         RowBox[{"WriteQRCode", "[", 
+          RowBox[{"X", "[", 
+           RowBox[{"[", 
+            RowBox[{"-", "1"}], "]"}], "]"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"MDExport", "[", 
+         RowBox[{"fname", ",", "X", ",", 
+          RowBox[{"\"\<ImageEncoding\>\"", "\[Rule]", "\"\<LZW\>\""}]}], 
+         "]"}]}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", "\n", "\n", 
+   RowBox[{"Clear", "[", "ChangeImgDims", "]"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"ChangeImgDims", "[", "\[IndentingNewLine]", "  ", 
+      RowBox[{
+       RowBox[{"B_", "?", "ImageQ"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"nx_", "?", "IntegerQ"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"ny_", "?", "IntegerQ"}], ",", "\[IndentingNewLine]", 
+       "padding_"}], "]"}], " ", ":=", " ", 
+     RowBox[{"Module", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"R", ",", "x", ",", "y"}], "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"x", ",", "y"}], "}"}], " ", "=", " ", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"nx", ",", "ny"}], "}"}], "-", 
+          RowBox[{"ImageDimensions", "[", 
+           RowBox[{"R", "=", "B"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{"y", "<", "0"}], ",", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"y", " ", "=", " ", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"Quotient", "[", 
+               RowBox[{
+                RowBox[{"-", "y"}], ",", "2"}], "]"}], ",", 
+              RowBox[{"-", "y"}]}], "}"}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{"y", " ", "=", " ", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"First", "[", "y", "]"}], ",", 
+               RowBox[{"Subtract", "@@", "y"}]}], "}"}], "+", 
+             RowBox[{"{", 
+              RowBox[{"1", ",", 
+               RowBox[{"-", "1"}]}], "}"}]}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{"R", " ", "=", " ", 
+            RowBox[{"ImageTake", "[", 
+             RowBox[{"R", ",", "y"}], "]"}]}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{"y", ">", "0"}], ",", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"y", " ", "=", " ", 
+              RowBox[{"{", 
+               RowBox[{"y", ",", 
+                RowBox[{"Quotient", "[", 
+                 RowBox[{"y", ",", "2"}], "]"}]}], "}"}]}], ";", 
+             "\[IndentingNewLine]", 
+             RowBox[{"y", " ", "=", " ", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"Last", "[", "y", "]"}], ",", 
+                RowBox[{"Subtract", "@@", "y"}]}], "}"}]}], ";", 
+             "\[IndentingNewLine]", 
+             RowBox[{"R", " ", "=", " ", 
+              RowBox[{"ImagePad", "[", 
+               RowBox[{"R", ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{"0", ",", "0"}], "}"}], ",", "y"}], "}"}], ",", 
+                "padding"}], "]"}]}]}]}], "]"}]}], "]"}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{"x", "<", "0"}], ",", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"x", " ", "=", " ", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"Quotient", "[", 
+               RowBox[{
+                RowBox[{"-", "x"}], ",", "2"}], "]"}], ",", 
+              RowBox[{"-", "x"}]}], "}"}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{"x", " ", "=", " ", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"First", "[", "x", "]"}], ",", 
+               RowBox[{"Subtract", "@@", "x"}]}], "}"}], "+", 
+             RowBox[{"{", 
+              RowBox[{"1", ",", 
+               RowBox[{"-", "1"}]}], "}"}]}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{"R", " ", "=", " ", 
+            RowBox[{"ImageTake", "[", 
+             RowBox[{"R", ",", "All", ",", "x"}], "]"}]}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{"x", ">", "0"}], ",", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"x", " ", "=", " ", 
+              RowBox[{"{", 
+               RowBox[{"x", ",", 
+                RowBox[{"Quotient", "[", 
+                 RowBox[{"x", ",", "2"}], "]"}]}], "}"}]}], ";", 
+             "\[IndentingNewLine]", 
+             RowBox[{"x", " ", "=", " ", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"Last", "[", "x", "]"}], ",", 
+                RowBox[{"Subtract", "@@", "x"}]}], "}"}]}], ";", 
+             "\[IndentingNewLine]", 
+             RowBox[{"R", " ", "=", " ", 
+              RowBox[{"ImagePad", "[", 
+               RowBox[{"R", ",", 
+                RowBox[{"{", 
+                 RowBox[{"x", ",", 
+                  RowBox[{"{", 
+                   RowBox[{"0", ",", "0"}], "}"}]}], "}"}], ",", "padding"}], 
+               "]"}]}]}]}], "]"}]}], "]"}], ";", "\[IndentingNewLine]", 
+        "R"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.963453838921633*^9, 3.963453840338478*^9}},
+ CellLabel->"In[13]:=",ExpressionUUID->"73abc4bf-21fd-49a6-a30b-8e25bf10f478"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"$HistoryLength", " ", "=", " ", "10"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"PrependTo", "[", 
+   RowBox[{"MyTS", ",", 
+    RowBox[{"FontSize", "\[Rule]", "24"}]}], "]"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"DatenOrdner", " ", "=", 
+   RowBox[{"OutPath", "=", " ", 
+    RowBox[{
+     RowBox[{"NotebookDirectory", "[", "]"}], 
+     "~~", "\"\<output directory\\\\\>\""}]}]}], ";"}]}], "Input",
+ CellChangeTimes->{
+  3.820514326455021*^9, {3.8269189843137093`*^9, 3.826918984612157*^9}, {
+   3.8843193456547832`*^9, 3.884319361305277*^9}, {3.96345385107707*^9, 
+   3.9634538557634583`*^9}, {3.9634539186699543`*^9, 3.9634539189602127`*^9}},
+ CellLabel->"In[34]:=",ExpressionUUID->"8a418de8-a494-47fe-9797-c78c2f8d67cb"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Clear", "[", 
+  RowBox[{"ToEnglish", ",", "Z", ",", "newID"}], "]"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"ToEnglish", ",", "Z"}], "}"}], " ", "=", " ", 
+   RowBox[{
+   "Get", "[", \
+"\"\<https://github.com/Carl-Firle/my-data-storage/raw/refs/heads/main/data/\
+20220301-01/EmissionRatePlotData.dat\>\"", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"newID", "=", 
+   RowBox[{"Map", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"#", "[", 
+        RowBox[{"[", "1", "]"}], "]"}], "->", 
+       RowBox[{"StringJoin", "[", 
+        RowBox[{"\"\<P\>\"", ",", 
+         RowBox[{"ToString", "@", 
+          RowBox[{"#", "[", 
+           RowBox[{"[", "2", "]"}], "]"}]}]}], "]"}]}], "&"}], ",", 
+     RowBox[{"Transpose", "@", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Union", "[", 
+         RowBox[{"Drop", "[", 
+          RowBox[{
+           RowBox[{"Z", "[", 
+            RowBox[{"[", 
+             RowBox[{"All", ",", "1"}], "]"}], "]"}], ",", "2"}], "]"}], 
+         "]"}], ",", 
+        RowBox[{"Table", "[", 
+         RowBox[{"n", ",", 
+          RowBox[{"{", 
+           RowBox[{"n", ",", 
+            RowBox[{"Length", "@", 
+             RowBox[{"Union", "[", 
+              RowBox[{"Drop", "[", 
+               RowBox[{
+                RowBox[{"Z", "[", 
+                 RowBox[{"[", 
+                  RowBox[{"All", ",", "1"}], "]"}], "]"}], ",", "2"}], "]"}], 
+              "]"}]}]}], "}"}]}], "]"}]}], "}"}]}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Z", "[", 
+    RowBox[{"[", 
+     RowBox[{"All", ",", "1"}], "]"}], "]"}], "=", 
+   RowBox[{
+    RowBox[{"Z", "[", 
+     RowBox[{"[", 
+      RowBox[{"All", ",", "1"}], "]"}], "]"}], "/.", "newID"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"TableForm", "[", "Z", "]"}], "\n", 
+ RowBox[{"Length", "[", "Z", "]"}]}], "Input",
+ CellChangeTimes->{{3.884319370679713*^9, 3.88431941285881*^9}, {
+  3.8843194822540765`*^9, 3.8843195130380635`*^9}, {3.8843195815025578`*^9, 
+  3.8843195944514494`*^9}, {3.8843196314480543`*^9, 3.884319631777356*^9}, {
+  3.8843196792204103`*^9, 3.8843198904322586`*^9}, {3.884319941856639*^9, 
+  3.8843200836281505`*^9}, {3.963453882063694*^9, 3.963453894462448*^9}},
+ CellLabel->"In[26]:=",ExpressionUUID->"45b43cb1-ad81-49c3-a46d-a17dc913d5e4"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"\<\"Proband\"\>", "\<\"Instrument\"\>", "\<\"Task\"\>", "\<\"Begin \
+(s)\"\>", "\<\"End (s)\"\>", "\<\"Emission rate (P/s)\"\>", "\<\"ER \[Sigma] \
+(P/s)\"\>", "\<\"Water emission (mg/s)\"\>", "\<\"Particles/Water (P/mg)\"\>"},
+    {"\<\"\"\>", "\<\"\"\>", "\<\"\"\>", "\<\"\"\>", "\<\"\"\>", "\<\"\"\>", \
+"\<\"\"\>", "\<\"\"\>", "\<\"\"\>"},
+    {"\<\"P1\"\>", "\<\"C\"\>", "\<\"Breathing\"\>", "6206", "7408", 
+     RowBox[{"-", "98"}], "171", "6.351327194057242`", 
+     RowBox[{"-", "15.429845921289623`"}]},
+    {"\<\"P1\"\>", "\<\"C\"\>", "\<\"Playing\"\>", "1200", "2408", "355", 
+     "261", "19.655543731818753`", "18.061062306066837`"},
+    {"\<\"P1\"\>", "\<\"C\"\>", "\<\"Playing With Surgical Mask\"\>", "8449", 
+     "9061", "790", "764", "7.364646453219532`", "107.26923621087653`"},
+    {"\<\"P1\"\>", "\<\"C\"\>", "\<\"Speaking\"\>", "4010", "5236", "22", 
+     "100", "8.700552654587954`", "2.528575008209279`"},
+    {"\<\"P32\"\>", "\<\"S\"\>", "\<\"Breathing\"\>", "3340", "4555", "228", 
+     "153", "\<\"\"\>", "\<\"\"\>"},
+    {"\<\"P32\"\>", "\<\"S\"\>", "\<\"Speaking\"\>", "1200", "2405", "89", 
+     "94", "\<\"\"\>", "\<\"\"\>"},
+    {"\<\"P32\"\>", "\<\"S\"\>", "\<\"Speaking With Surgical Mask\"\>", 
+     "5466", "6682", 
+     RowBox[{"-", "122"}], "196", "\<\"\"\>", "\<\"\"\>"},
+    {"\<\"P36\"\>", "\<\"S\"\>", "\<\"Speaking With Surgical Mask\"\>", 
+     "4524", "5723", 
+     RowBox[{"-", "1"}], "184", "4.882597695940306`", 
+     RowBox[{"-", "0.20480900993163167`"}]},
+    {"\<\"P37\"\>", "\<\"S\"\>", "\<\"Breathing\"\>", "4051", "5256", 
+     RowBox[{"-", "157"}], "302", "8.03067627038516`", 
+     RowBox[{"-", "19.55003473106881`"}]},
+    {"\<\"P37\"\>", "\<\"S\"\>", "\<\"Speaking\"\>", "7443", "8659", "590", 
+     "162", "5.927319393209148`", "99.53909362062643`"},
+    {"\<\"P37\"\>", "\<\"S\"\>", "\<\"Speaking With Surgical Mask\"\>", 
+     "1200", "2408", "666", "215", "5.7453998858453605`", 
+     "115.91882431730978`"},
+    {"\<\"P38\"\>", "\<\"S\"\>", "\<\"Speaking\"\>", "5299", "6523", 
+     RowBox[{"-", "137"}], "198", "5.182857353952823`", 
+     RowBox[{"-", "26.43329550552146`"}]},
+    {"\<\"P38\"\>", "\<\"S\"\>", "\<\"Speaking With Surgical Mask\"\>", "424",
+      "1648", "78", "93", "6.089841723334468`", "12.808214653777803`"},
+    {"\<\"P39\"\>", "\<\"S\"\>", "\<\"Speaking With Surgical Mask\"\>", "876",
+      "2098", 
+     RowBox[{"-", "50"}], "107", "5.952280004386302`", 
+     RowBox[{"-", "8.400142460226071`"}]},
+    {"\<\"P40\"\>", "\<\"S\"\>", "\<\"Breathing\"\>", "4106", "5320", 
+     RowBox[{"-", "199"}], "335", "8.312503556154542`", 
+     RowBox[{"-", "23.939839382403783`"}]},
+    {"\<\"P40\"\>", "\<\"S\"\>", "\<\"Speaking\"\>", "1869", "3080", "16", 
+     "189", "17.580342740308296`", "0.9101073987206815`"},
+    {"\<\"P40\"\>", "\<\"S\"\>", "\<\"Speaking With Surgical Mask\"\>", 
+     "6825", "8040", "114", "267", "5.604597750828517`", 
+     "20.340442805756684`"},
+    {"\<\"P41\"\>", "\<\"S\"\>", "\<\"Breathing\"\>", "3261", "4466", 
+     RowBox[{"-", "105"}], "151", "3.1102517726815675`", 
+     RowBox[{"-", "33.759324863103316`"}]},
+    {"\<\"P41\"\>", "\<\"S\"\>", "\<\"Speaking\"\>", "5840", "7058", 
+     RowBox[{"-", "260"}], "312", "5.799210132811161`", 
+     RowBox[{"-", "44.833691838299586`"}]},
+    {"\<\"P41\"\>", "\<\"S\"\>", "\<\"Speaking With Surgical Mask\"\>", 
+     "1200", "2405", "473", "83", "6.947870214700895`", "68.07841617409409`"},
+    {"\<\"P42\"\>", "\<\"S\"\>", "\<\"Breathing\"\>", "3646", "4851", "48", 
+     "164", "3.956458561464089`", "12.132061856408672`"},
+    {"\<\"P42\"\>", "\<\"S\"\>", "\<\"Speaking\"\>", "7694", "8906", "203", 
+     "327", "4.588626334142455`", "44.23981933101503`"},
+    {"\<\"P42\"\>", "\<\"S\"\>", "\<\"Speaking With Surgical Mask\"\>", 
+     "1200", "2440", 
+     RowBox[{"-", "163"}], "249", "9.105831757895384`", 
+     RowBox[{"-", "17.90061625712201`"}]},
+    {"\<\"P43\"\>", "\<\"S\"\>", "\<\"Breathing\"\>", "3656", "4859", "455", 
+     "302", "8.05345924925726`", "56.49746101862537`"},
+    {"\<\"P43\"\>", "\<\"S\"\>", "\<\"Speaking\"\>", "7093", "8303", "1605", 
+     "305", "8.390803615934328`", "191.28084429864003`"},
+    {"\<\"P43\"\>", "\<\"S\"\>", "\<\"Speaking With Surgical Mask\"\>", 
+     "1200", "2403", "586", "610", "10.177725749447694`", 
+     "57.57671354347507`"},
+    {"\<\"P33\"\>", "\<\"S\"\>", "\<\"Breathing\"\>", "4239", "5441", "296", 
+     "224", "8.288010871157587`", "35.71423886883219`"},
+    {"\<\"P33\"\>", "\<\"S\"\>", "\<\"Playing\"\>", "10644", "11848", "2122", 
+     "605", "12.871310729574944`", "164.86277462979686`"},
+    {"\<\"P33\"\>", "\<\"S\"\>", "\<\"Speaking\"\>", "7057", "8273", "242", 
+     "209", "8.445101065523916`", "28.6556665364178`"},
+    {"\<\"P33\"\>", "\<\"S\"\>", "\<\"Speaking With Surgical Mask\"\>", 
+     "1200", "2408", "947", "475", "18.750361174149667`", 
+     "50.505693794612824`"},
+    {"\<\"P34\"\>", "\<\"S\"\>", "\<\"Breathing\"\>", "3418", "4622", "559", 
+     "443", "9.56070455925251`", "58.46849429721365`"},
+    {"\<\"P34\"\>", "\<\"S\"\>", "\<\"Speaking\"\>", "5828", "7040", "1671", 
+     "207", "9.96254548070964`", "167.72821797757788`"},
+    {"\<\"P34\"\>", "\<\"S\"\>", "\<\"Speaking With Surgical Mask\"\>", "944",
+      "2159", "2", "413", "9.345685905765556`", "0.2140024841586166`"},
+    {"\<\"P35\"\>", "\<\"S\"\>", "\<\"Breathing\"\>", "4027", "5230", 
+     RowBox[{"-", "44"}], "210", "12.525846364990558`", 
+     RowBox[{"-", "3.512736682048005`"}]},
+    {"\<\"P35\"\>", "\<\"S\"\>", "\<\"Playing\"\>", "10374", "11579", "1355", 
+     "428", "16.19225608553984`", "83.68197691796975`"},
+    {"\<\"P35\"\>", "\<\"S\"\>", "\<\"Speaking\"\>", "7275", "8480", "481", 
+     "229", "8.781836424744533`", "54.77214294776533`"},
+    {"\<\"P35\"\>", "\<\"S\"\>", "\<\"Speaking With Surgical Mask\"\>", 
+     "1093", "2317", "970", "160", "16.496568617556488`", 
+     "58.80010700938598`"},
+    {"\<\"P24\"\>", "\<\"O\"\>", "\<\"Breathing\"\>", "6157", "7360", 
+     RowBox[{"-", "48"}], "198", "5.045288225932738`", 
+     RowBox[{"-", "9.513827129494885`"}]},
+    {"\<\"P24\"\>", "\<\"O\"\>", "\<\"Playing\"\>", "1828", "3032", "838", 
+     "288", "19.427123831324216`", "43.135566915407836`"},
+    {"\<\"P24\"\>", "\<\"O\"\>", "\<\"Playing With Surgical Mask\"\>", "8546",
+      "9159", "320", "568", "8.025279931573609`", "39.87399850577597`"},
+    {"\<\"P24\"\>", "\<\"O\"\>", "\<\"Speaking\"\>", "4113", "5328", 
+     RowBox[{"-", "245"}], "356", "8.909985129649574`", 
+     RowBox[{"-", "27.49724005539791`"}]},
+    {"\<\"P25\"\>", "\<\"O\"\>", "\<\"Breathing\"\>", "5900", "7104", "23", 
+     "166", "5.181880322231418`", "4.438543264174761`"},
+    {"\<\"P25\"\>", "\<\"O\"\>", "\<\"Playing\"\>", "1200", "2400", "466", 
+     "115", "21.925322205021637`", "21.25396359709005`"},
+    {"\<\"P25\"\>", "\<\"O\"\>", "\<\"Playing With Surgical Mask\"\>", "8292",
+      "8912", "215", "400", "9.70404456536838`", "22.155710286748697`"},
+    {"\<\"P25\"\>", "\<\"O\"\>", "\<\"Speaking\"\>", "3515", "4735", "56", 
+     "307", "8.710464620260556`", "6.429048557265694`"},
+    {"\<\"P25\"\>", "\<\"O\"\>", "\<\"Speaking With Surgical Mask\"\>", 
+     "10570", "11789", 
+     RowBox[{"-", "164"}], "273", "4.286407477223111`", 
+     RowBox[{"-", "38.26047823765114`"}]},
+    {"\<\"P26\"\>", "\<\"O\"\>", "\<\"Breathing\"\>", "6226", "7429", "93", 
+     "95", "5.8019815638510455`", "16.029006465555117`"},
+    {"\<\"P26\"\>", "\<\"O\"\>", "\<\"Playing\"\>", "1200", "2427", "1309", 
+     "210", "16.382022324231112`", "79.90466464349893`"},
+    {"\<\"P26\"\>", "\<\"O\"\>", "\<\"Playing With Surgical Mask\"\>", "8482",
+      "9086", "911", "612", "6.447168779137292`", "141.3023345918831`"},
+    {"\<\"P26\"\>", "\<\"O\"\>", "\<\"Speaking\"\>", "3697", "4929", "189", 
+     "114", "6.8897388479992845`", "27.432099266706434`"},
+    {"\<\"P26\"\>", "\<\"O\"\>", "\<\"Speaking With Surgical Mask\"\>", 
+     "10224", "11456", 
+     RowBox[{"-", "66"}], "142", "4.881311098932159`", 
+     RowBox[{"-", "13.52095751783537`"}]},
+    {"\<\"P27\"\>", "\<\"O\"\>", "\<\"Speaking\"\>", "3109", "4303", 
+     RowBox[{"-", "164"}], "319", "11.384247201043097`", 
+     RowBox[{"-", "14.405871297750217`"}]},
+    {"\<\"P28\"\>", "\<\"O\"\>", "\<\"Breathing\"\>", "6070", "7281", "117", 
+     "304", "9.313354405843203`", "12.562605791807316`"},
+    {"\<\"P28\"\>", "\<\"O\"\>", "\<\"Playing\"\>", "1200", "2429", "521", 
+     "316", "35.626972709057185`", "14.623751623655354`"},
+    {"\<\"P28\"\>", "\<\"O\"\>", "\<\"Playing With Surgical Mask\"\>", "8842",
+      "9451", "1610", "483", "9.255841006412725`", "173.94421521334945`"},
+    {"\<\"P28\"\>", "\<\"O\"\>", "\<\"Speaking\"\>", "3683", "4905", "257", 
+     "227", "14.361118720517522`", "17.89554177508663`"},
+    {"\<\"P29\"\>", "\<\"O\"\>", "\<\"Breathing\"\>", "6229", "7432", "181", 
+     "223", "9.506451352614219`", "19.039701912557103`"},
+    {"\<\"P29\"\>", "\<\"O\"\>", "\<\"Playing\"\>", "1200", "2433", "2535", 
+     "195", "34.97867871156735`", "72.47272033639403`"},
+    {"\<\"P29\"\>", "\<\"O\"\>", "\<\"Playing With Surgical Mask\"\>", "8409",
+      "9017", "670", "238", "13.419265029582641`", "49.9282187603413`"},
+    {"\<\"P29\"\>", "\<\"O\"\>", "\<\"Speaking\"\>", "3689", "4894", "715", 
+     "296", "18.831849231805833`", "37.96759368657269`"},
+    {"\<\"P30\"\>", "\<\"O\"\>", "\<\"Breathing\"\>", "7834", "9039", 
+     RowBox[{"-", "187"}], "432", "7.197218179918494`", 
+     RowBox[{"-", "25.982260829852695`"}]},
+    {"\<\"P30\"\>", "\<\"O\"\>", "\<\"Playing\"\>", "1569", "2777", "1229", 
+     "147", "32.466101597400296`", "37.854868294332306`"},
+    {"\<\"P30\"\>", "\<\"O\"\>", "\<\"Playing With Surgical Mask\"\>", 
+     "10204", "10835", "1053", "273", "15.793394605298973`", 
+     "66.67344331703707`"},
+    {"\<\"P30\"\>", "\<\"O\"\>", "\<\"Speaking\"\>", "5280", "6512", 
+     RowBox[{"-", "175"}], "294", "9.946919056447191`", 
+     RowBox[{"-", "17.59338736013661`"}]},
+    {"\<\"P31\"\>", "\<\"O\"\>", "\<\"Breathing\"\>", "6075", "7278", 
+     RowBox[{"-", "145"}], "266", "5.341683855709349`", 
+     RowBox[{"-", "27.14499845306639`"}]},
+    {"\<\"P31\"\>", "\<\"O\"\>", "\<\"Playing\"\>", "1200", "2404", "1645", 
+     "461", "22.964856222331345`", "71.6311908976978`"},
+    {"\<\"P31\"\>", "\<\"O\"\>", "\<\"Playing With Surgical Mask\"\>", "8431",
+      "9042", "1589", "534", "14.83835188868303`", "107.0873646831293`"},
+    {"\<\"P31\"\>", "\<\"O\"\>", "\<\"Speaking\"\>", "4015", "5222", "9", 
+     "191", "7.946262666021293`", "1.1326079162326903`"},
+    {"\<\"P21\"\>", "\<\"O\"\>", "\<\"Playing\"\>", "1200", "2402", "218", 
+     "185", "17.796984865009442`", "12.249265909564752`"},
+    {"\<\"P21\"\>", "\<\"O\"\>", "\<\"Playing With Surgical Mask\"\>", "8608",
+      "9211", 
+     RowBox[{"-", "209"}], "268", "17.534313215697132`", 
+     RowBox[{"-", "11.919485949007587`"}]},
+    {"\<\"P21\"\>", "\<\"O\"\>", "\<\"Speaking\"\>", "3747", "4961", 
+     RowBox[{"-", "3"}], "148", "11.849198209194663`", 
+     RowBox[{"-", "0.25318168765816407`"}]},
+    {"\<\"P21\"\>", "\<\"O\"\>", "\<\"Speaking With Surgical Mask\"\>", 
+     "10242", "11447", 
+     RowBox[{"-", "136"}], "279", "10.1543241354698`", 
+     RowBox[{"-", "13.39330891801474`"}]},
+    {"\<\"P22\"\>", "\<\"O\"\>", "\<\"Breathing\"\>", "5645", "6848", "21", 
+     "244", "7.204084102251647`", "2.9150131650234927`"},
+    {"\<\"P22\"\>", "\<\"O\"\>", "\<\"Playing\"\>", "1032", "2258", "1484", 
+     "211", "26.51070408830963`", "55.97738917294152`"},
+    {"\<\"P22\"\>", "\<\"O\"\>", "\<\"Playing With Surgical Mask\"\>", "8124",
+      "8741", "1263", "1224", "10.812501816765185`", "116.80922892809801`"},
+    {"\<\"P22\"\>", "\<\"O\"\>", "\<\"Speaking\"\>", "3379", "4595", "144", 
+     "409", "13.172320324660207`", "10.932014743857561`"},
+    {"\<\"P23\"\>", "\<\"O\"\>", "\<\"Breathing\"\>", "6274", "7483", 
+     RowBox[{"-", "150"}], "196", "8.329923894566122`", 
+     RowBox[{"-", "18.007367401981888`"}]},
+    {"\<\"P23\"\>", "\<\"O\"\>", "\<\"Playing\"\>", "1200", "2411", "660", 
+     "274", "24.528522657009376`", "26.90745012363782`"},
+    {"\<\"P23\"\>", "\<\"O\"\>", "\<\"Playing With Surgical Mask\"\>", "8782",
+      "9386", "894", "620", "14.573254296193088`", "61.34525493276652`"},
+    {"\<\"P23\"\>", "\<\"O\"\>", "\<\"Speaking\"\>", "3565", "4770", "725", 
+     "128", "12.705459632030223`", "57.06208362366433`"},
+    {"\<\"P2\"\>", "\<\"F\"\>", "\<\"Breathing\"\>", "5183", "6376", "48", 
+     "35", "6.176092897195646`", "7.771903823175193`"},
+    {"\<\"P2\"\>", "\<\"F\"\>", "\<\"Playing\"\>", "1200", "2392", "1434", 
+     "366", "26.467966572761874`", "54.17869922337465`"},
+    {"\<\"P2\"\>", "\<\"F\"\>", "\<\"Speaking\"\>", "3057", "4260", "641", 
+     "384", "11.74973795221516`", "54.55440815845202`"},
+    {"\<\"P2\"\>", "\<\"F\"\>", "\<\"Speaking With Surgical Mask\"\>", "6929",
+      "8125", "447", "189", "8.238945819289528`", "54.254513842469514`"},
+    {"\<\"P13\"\>", "\<\"F\"\>", "\<\"Breathing\"\>", "6063", "7278", "119", 
+     "151", "7.490659234690775`", "15.886452216233073`"},
+    {"\<\"P13\"\>", "\<\"F\"\>", "\<\"Playing\"\>", "1379", "2586", "343", 
+     "486", "29.30352899200128`", "11.705074842474625`"},
+    {"\<\"P13\"\>", "\<\"F\"\>", "\<\"Speaking\"\>", "3612", "4826", "63", 
+     "92", "14.98646898295822`", "4.203792105507982`"},
+    {"\<\"P15\"\>", "\<\"F\"\>", "\<\"Breathing\"\>", "3293", "4493", "39", 
+     "213", "\<\"\"\>", "\<\"\"\>"},
+    {"\<\"P15\"\>", "\<\"F\"\>", "\<\"Playing\"\>", "1588", "2755", "57", 
+     "175", "\<\"\"\>", "\<\"\"\>"},
+    {"\<\"P15\"\>", "\<\"F\"\>", "\<\"Speaking\"\>", "4983", "6228", 
+     RowBox[{"-", "144"}], "175", "\<\"\"\>", "\<\"\"\>"},
+    {"\<\"P15\"\>", "\<\"F\"\>", "\<\"Speaking With Surgical Mask\"\>", 
+     "7425", "8615", "455", "293", "\<\"\"\>", "\<\"\"\>"},
+    {"\<\"P16\"\>", "\<\"F\"\>", "\<\"Breathing\"\>", "5604", "6813", 
+     RowBox[{"-", "2"}], "317", "8.182708659196834`", 
+     RowBox[{"-", "0.24441784295376687`"}]},
+    {"\<\"P16\"\>", "\<\"F\"\>", "\<\"Playing\"\>", "1200", "2405", "2318", 
+     "644", "27.403749031608097`", "84.58696645215832`"},
+    {"\<\"P16\"\>", "\<\"F\"\>", "\<\"Speaking\"\>", "3543", "4759", 
+     RowBox[{"-", "79"}], "366", "13.689309313442186`", 
+     RowBox[{"-", "5.7709266545994495`"}]},
+    {"\<\"P16\"\>", "\<\"F\"\>", "\<\"Speaking With Surgical Mask\"\>", 
+     "7928", "9141", "432", "245", "6.096555065984293`", "70.85968966479815`"},
+    {"\<\"P17\"\>", "\<\"F\"\>", "\<\"Playing\"\>", "1200", "2401", "1143", 
+     "206", "21.095022518131298`", "54.18339795644137`"},
+    {"\<\"P17\"\>", "\<\"F\"\>", "\<\"Speaking\"\>", "4001", "5223", 
+     RowBox[{"-", "80"}], "174", "6.67977792155233`", 
+     RowBox[{"-", "11.976446064453683`"}]},
+    {"\<\"P17\"\>", "\<\"F\"\>", "\<\"Speaking With Surgical Mask\"\>", 
+     "8298", "9499", 
+     RowBox[{"-", "89"}], "291", "5.7086439806951965`", 
+     RowBox[{"-", "15.59039244713271`"}]},
+    {"\<\"P18\"\>", "\<\"F\"\>", "\<\"Breathing\"\>", "4996", "6211", "350", 
+     "175", "12.831853505018147`", "27.275872488968616`"},
+    {"\<\"P18\"\>", "\<\"F\"\>", "\<\"Playing\"\>", "1200", "2416", "635", 
+     "128", "\<\"\"\>", "\<\"\"\>"},
+    {"\<\"P18\"\>", "\<\"F\"\>", "\<\"Speaking\"\>", "3159", "4364", "7", 
+     "67", "23.547940438274242`", "0.297265912420195`"},
+    {"\<\"P19\"\>", "\<\"F\"\>", "\<\"Breathing\"\>", "5401", "6604", 
+     RowBox[{"-", "1"}], "79", "\<\"\"\>", "\<\"\"\>"},
+    {"\<\"P19\"\>", "\<\"F\"\>", "\<\"Playing\"\>", "1200", "2420", "1171", 
+     "176", "\<\"\"\>", "\<\"\"\>"},
+    {"\<\"P19\"\>", "\<\"F\"\>", "\<\"Speaking\"\>", "3399", "4611", "129", 
+     "256", "\<\"\"\>", "\<\"\"\>"},
+    {"\<\"P19\"\>", "\<\"F\"\>", "\<\"Speaking With Surgical Mask\"\>", 
+     "7200", "8407", "486", "220", "\<\"\"\>", "\<\"\"\>"},
+    {"\<\"P20\"\>", "\<\"F\"\>", "\<\"Breathing\"\>", "5911", "7119", "274", 
+     "317", "4.313079618701531`", "63.52769348656001`"},
+    {"\<\"P20\"\>", "\<\"F\"\>", "\<\"Playing\"\>", "1200", "2404", "799", 
+     "307", "8.141770566925372`", "98.1359021888689`"},
+    {"\<\"P20\"\>", "\<\"F\"\>", "\<\"Speaking\"\>", "3521", "4759", 
+     RowBox[{"-", "121"}], "140", "5.555791794433966`", 
+     RowBox[{"-", "21.77907388848212`"}]},
+    {"\<\"P20\"\>", "\<\"F\"\>", "\<\"Speaking With Surgical Mask\"\>", 
+     "8075", "9283", "474", "368", "5.381055268880674`", "88.08681128796468`"},
+    {"\<\"P3\"\>", "\<\"F\"\>", "\<\"Playing\"\>", "1200", "2398", "11", 
+     "288", "\<\"\"\>", "\<\"\"\>"},
+    {"\<\"P3\"\>", "\<\"F\"\>", "\<\"Speaking\"\>", "3145", "4340", "5", 
+     "203", "18.380165555408734`", "0.2720323701615761`"},
+    {"\<\"P3\"\>", "\<\"F\"\>", "\<\"Speaking With Surgical Mask\"\>", "6889",
+      "8093", "943", "173", "5.751066433845861`", "163.9695890922609`"},
+    {"\<\"P4\"\>", "\<\"F\"\>", "\<\"Breathing\"\>", "5914", "7118", "149", 
+     "368", "3.987271493340747`", "37.368912613261735`"},
+    {"\<\"P4\"\>", "\<\"F\"\>", "\<\"Playing\"\>", "1200", "2413", "15", 
+     "313", "18.797662638337776`", "0.7979715504313576`"},
+    {"\<\"P5\"\>", "\<\"F\"\>", "\<\"Breathing\"\>", "5897", "7103", 
+     RowBox[{"-", "127"}], "237", "6.855449918112523`", 
+     RowBox[{"-", "18.525407014419017`"}]},
+    {"\<\"P5\"\>", "\<\"F\"\>", "\<\"Playing\"\>", "1160", "2375", "1708", 
+     "348", "29.612332464849963`", "57.67867161519301`"},
+    {"\<\"P5\"\>", "\<\"F\"\>", "\<\"Speaking\"\>", "3754", "4965", "251", 
+     "163", "10.301216107532957`", "24.36605517055909`"},
+    {"\<\"P5\"\>", "\<\"F\"\>", "\<\"Speaking With Surgical Mask\"\>", "8233",
+      "9443", "564", "295", "6.658156774700045`", "84.70812855340262`"},
+    {"\<\"P6\"\>", "\<\"F\"\>", "\<\"Playing\"\>", "1095", "2307", "905", 
+     "75", "12.328181269548553`", "73.40904389809806`"},
+    {"\<\"P6\"\>", "\<\"F\"\>", "\<\"Speaking\"\>", "3354", "4557", "228", 
+     "191", "9.82398106311368`", "23.208513792445782`"},
+    {"\<\"P6\"\>", "\<\"F\"\>", "\<\"Speaking With Surgical Mask\"\>", "8378",
+      "9576", "88", "239", "5.650729621112404`", "15.573210169393363`"},
+    {"\<\"P7\"\>", "\<\"F\"\>", "\<\"Breathing\"\>", "6529", "7740", "181", 
+     "209", "3.60989578186438`", "50.13995165991193`"},
+    {"\<\"P7\"\>", "\<\"F\"\>", "\<\"Playing\"\>", "1200", "2425", "700", 
+     "368", "13.762718216566986`", "50.86204549021204`"},
+    {"\<\"P7\"\>", "\<\"F\"\>", "\<\"Speaking\"\>", "3939", "5168", "64", 
+     "253", "7.931030905587675`", "8.069568857046045`"},
+    {"\<\"P8\"\>", "\<\"F\"\>", "\<\"Breathing\"\>", "6108", "7316", 
+     RowBox[{"-", "11"}], "196", "4.081243830872967`", 
+     RowBox[{"-", "2.6952567540291095`"}]},
+    {"\<\"P8\"\>", "\<\"F\"\>", "\<\"Playing\"\>", "1200", "2404", "2358", 
+     "120", "24.80608407716077`", "95.05732515721965`"},
+    {"\<\"P8\"\>", "\<\"F\"\>", "\<\"Speaking\"\>", "3849", "5063", "233", 
+     "215", "9.138099378886213`", "25.497643474785555`"},
+    {"\<\"P8\"\>", "\<\"F\"\>", "\<\"Speaking With Surgical Mask\"\>", "8331",
+      "9540", "31", "316", "4.555664429044103`", "6.804715422488791`"},
+    {"\<\"P9\"\>", "\<\"F\"\>", "\<\"Breathing\"\>", "6620", "7824", "200", 
+     "83", "6.774152083612614`", "29.523990239873864`"},
+    {"\<\"P9\"\>", "\<\"F\"\>", "\<\"Playing\"\>", "1200", "2409", "364", 
+     "278", "33.74777085218825`", "10.785897581036755`"},
+    {"\<\"P9\"\>", "\<\"F\"\>", "\<\"Speaking\"\>", "4532", "5738", "298", 
+     "187", "12.23728875701351`", "24.351799317410766`"},
+    {"\<\"P10\"\>", "\<\"F\"\>", "\<\"Breathing\"\>", "6635", "7852", "21", 
+     "124", "3.9550266049477494`", "5.309698795383309`"},
+    {"\<\"P10\"\>", "\<\"F\"\>", "\<\"Playing\"\>", "1200", "2418", "512", 
+     "294", "17.139821372433353`", "29.871956590135163`"},
+    {"\<\"P10\"\>", "\<\"F\"\>", "\<\"Speaking\"\>", "4614", "5820", "410", 
+     "161", "6.47669463814871`", "63.30389541372509`"},
+    {"\<\"P10\"\>", "\<\"F\"\>", "\<\"Speaking With Surgical Mask\"\>", 
+     "9133", "10355", "1125", "161", "4.303377049184108`", 
+     "261.4225960547177`"},
+    {"\<\"P11\"\>", "\<\"F\"\>", "\<\"Breathing\"\>", "6927", "8129", "86", 
+     "191", "5.962446159992831`", "14.423610325749825`"},
+    {"\<\"P11\"\>", "\<\"F\"\>", "\<\"Playing\"\>", "1516", "2727", "390", 
+     "155", "19.732086683169314`", "19.764762149187927`"},
+    {"\<\"P11\"\>", "\<\"F\"\>", "\<\"Speaking\"\>", "4058", "5259", "427", 
+     "123", "11.217623520092596`", "38.06510347179804`"},
+    {"\<\"P11\"\>", "\<\"F\"\>", "\<\"Speaking With Surgical Mask\"\>", 
+     "9464", "10668", "513", "395", "8.310432706403686`", 
+     "61.72963768838448`"},
+    {"\<\"P12\"\>", "\<\"F\"\>", "\<\"Breathing\"\>", "6116", "7321", "589", 
+     "354", "5.469429289856027`", "107.68948070914806`"},
+    {"\<\"P12\"\>", "\<\"F\"\>", "\<\"Playing\"\>", "1200", "2423", "1917", 
+     "365", "8.885259096218368`", "215.75060211985146`"},
+    {"\<\"P12\"\>", "\<\"F\"\>", "\<\"Speaking\"\>", "3664", "4888", "681", 
+     "151", "2.8405402788392595`", "239.7431238955286`"},
+    {"\<\"P12\"\>", "\<\"F\"\>", "\<\"Speaking With Surgical Mask\"\>", 
+     "9035", "10245", "776", "531", "3.7607077141661303`", 
+     "206.34414024703437`"},
+    {"\<\"P14\"\>", "\<\"F\"\>", "\<\"Breathing\"\>", "6432", "7665", "204", 
+     "140", "3.838095479211338`", "53.15136142520312`"},
+    {"\<\"P14\"\>", "\<\"F\"\>", "\<\"Playing\"\>", "1200", "2403", "1410", 
+     "342", "13.981453841068047`", "100.84788148843109`"},
+    {"\<\"P14\"\>", "\<\"F\"\>", "\<\"Speaking\"\>", "3807", "5022", "770", 
+     "152", "5.9852348626583005`", "128.64992229528147`"},
+    {"\<\"P14\"\>", "\<\"F\"\>", "\<\"Speaking With Surgical Mask\"\>", 
+     "8636", "9874", "559", "162", "5.279150450916579`", 
+     "105.88824948206297`"},
+    {"\<\"P44\"\>", "\<\"T\"\>", "\<\"Playing\"\>", "1200", "2415", "192", 
+     "448", "30.083517024640614`", "6.3822324977075615`"},
+    {"\<\"P44\"\>", "\<\"T\"\>", "\<\"Playing With Surgical Mask\"\>", "8984",
+      "9589", "28", "2562", "9.067382039720888`", "3.087991647130586`"},
+    {"\<\"P44\"\>", "\<\"T\"\>", "\<\"Speaking\"\>", "3907", "5135", 
+     RowBox[{"-", "306"}], "348", "13.460780222716727`", 
+     RowBox[{"-", "22.732709021100224`"}]}
+   },
+   GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[2.0999999999999996`]}, 
+       Offset[0.27999999999999997`]}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}}],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{
+  3.8551347351069317`*^9, 3.88405443666881*^9, 3.884319377472921*^9, 
+   3.8843194138555613`*^9, 3.884319595489461*^9, 3.8843196324416437`*^9, {
+   3.884319692773057*^9, 3.884319715429843*^9}, 3.8843200843957014`*^9, 
+   3.963453895843878*^9},
+ CellLabel->
+  "Out[30]//TableForm=",ExpressionUUID->"36dfd9cb-9f40-8a47-93dd-\
+22fb1cc6bcc6"],
+
+Cell[BoxData["152"], "Output",
+ CellChangeTimes->{
+  3.8551347351069317`*^9, 3.88405443666881*^9, 3.884319377472921*^9, 
+   3.8843194138555613`*^9, 3.884319595489461*^9, 3.8843196324416437`*^9, {
+   3.884319692773057*^9, 3.884319715429843*^9}, 3.8843200843957014`*^9, 
+   3.9634538958866177`*^9},
+ CellLabel->"Out[31]=",ExpressionUUID->"c4c41f7c-4bb2-ce45-a607-0a43942fb262"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Entries", "[", 
+  RowBox[{"Z", ",", "\"\<Instrument\>\""}], "]"}]], "Input",
+ CellLabel->"In[32]:=",ExpressionUUID->"9ff98a41-763e-473a-af27-4b403915edc1"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"67", ",", "\<\"F\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"43", ",", "\<\"O\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"33", ",", "\<\"S\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"4", ",", "\<\"C\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", "\<\"T\"\>"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.8551347369829645`*^9, 3.88405443830765*^9, 
+  3.963453897885996*^9},
+ CellLabel->"Out[32]=",ExpressionUUID->"383b98b1-b008-f841-9b82-55bbb9a3c72d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Entries", "[", 
+  RowBox[{"Z", ",", 
+   RowBox[{"\"\<Aufgabe\>\"", "/.", "ToEnglish"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.827073432130838*^9, 3.827073433107956*^9}, 
+   3.830255377653728*^9},
+ CellLabel->"In[33]:=",ExpressionUUID->"b3dc169c-06e7-4b03-916b-b2b79f177eac"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"41", ",", "\<\"Speaking\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"35", ",", "\<\"Breathing\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"33", ",", "\<\"Playing\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"29", ",", "\<\"Speaking With Surgical Mask\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"12", ",", "\<\"Playing With Surgical Mask\"\>"}], "}"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.855134738683894*^9, 3.884054439372552*^9, 
+  3.9634538992086487`*^9},
+ CellLabel->"Out[33]=",ExpressionUUID->"3ae05caa-c58c-594a-ae9a-99e42d2bb6e0"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Measurements", " ", "=", " ", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"\"\<Atmen\>\"", ",", "\"\<Sprechen mit MNS\>\"", 
+      ",", "\"\<Sprechen\>\""}], "}"}], "/.", "ToEnglish"}]}], ";"}], "\n", 
+ RowBox[{"TableForm", "[", 
+  RowBox[{"Subsets", "[", 
+   RowBox[{"Measurements", ",", 
+    RowBox[{"{", "2", "}"}]}], "]"}], "]"}], "\n", 
+ RowBox[{"OutPath", " ", "=", " ", 
+  RowBox[{"StringJoin", "[", 
+   RowBox[{"OutPath", "~~", "\"\<\\\\Fig\\\\\>\""}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.8205148150710773`*^9, 3.8205148417828093`*^9}, {
+   3.820521159205081*^9, 3.8205211611430635`*^9}, {3.8270883360315423`*^9, 
+   3.8270883371802397`*^9}, 3.8271347330841417`*^9, {3.83025539698999*^9, 
+   3.830255405651906*^9}, {3.8843202457199173`*^9, 3.88432025821131*^9}, {
+   3.9634539381465816`*^9, 3.9634539557821045`*^9}},
+ CellLabel->"In[37]:=",ExpressionUUID->"4017caf8-3e86-4a40-8cbc-a2d88edc7b82"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"\<\"Breathing\"\>", "\<\"Speaking With Surgical Mask\"\>"},
+    {"\<\"Breathing\"\>", "\<\"Speaking\"\>"},
+    {"\<\"Speaking With Surgical Mask\"\>", "\<\"Speaking\"\>"}
+   },
+   GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[2.0999999999999996`]}, 
+       Offset[0.27999999999999997`]}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}}],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{3.8551347482748623`*^9, 3.855134811258315*^9, 
+  3.884054494007942*^9, 3.8843202589689775`*^9, 3.9634539566859207`*^9},
+ CellLabel->
+  "Out[38]//TableForm=",ExpressionUUID->"dcccc862-1b26-3241-8cfd-\
+77ed83c8ac3e"],
+
+Cell[BoxData["\<\"C:\\\\Users\\\\mona_\\\\Downloads\\\\upload aerosol study \
+2020\\\\output directory\\\\\\\\Fig\\\\\"\>"], "Output",
+ CellChangeTimes->{3.8551347482748623`*^9, 3.855134811258315*^9, 
+  3.884054494007942*^9, 3.8843202589689775`*^9, 3.9634539566906643`*^9},
+ CellLabel->"Out[39]=",ExpressionUUID->"b81007d7-e58d-6f44-9730-fd4231d9a5dd"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Clear", "[", 
+    RowBox[{
+    "R", ",", "TaskPlot", ",", "\[IndentingNewLine]", "A", ",", "h", ",", 
+     "i"}], "]"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"R", " ", "=", " ", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "600"}], "*", "0"}], ",", 
+       RowBox[{"3000", "+", "200"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"TaskPlot", "[", 
+     RowBox[{"task_", "?", "StringQ"}], "]"}], " ", ":=", " ", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"A", ",", "h", ",", "i"}], "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"A", " ", "=", " ", 
+        RowBox[{"SelectRows", "[", 
+         RowBox[{"Z", ",", 
+          RowBox[{"\"\<Aufgabe\>\"", "/.", "ToEnglish"}], ",", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"#", "\[Equal]", "task"}], ")"}], "&"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Length", "[", "A", "]"}], "\[Equal]", "2"}], ",", 
+         RowBox[{"Return", "[", "1", "]"}]}], "]"}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"A", " ", "=", " ", 
+        RowBox[{"Drop", "[", 
+         RowBox[{
+          RowBox[{"ExtractColumn", "[", 
+           RowBox[{"A", ",", 
+            RowBox[{
+             RowBox[{"{", 
+              
+              RowBox[{"\"\<Instrument\>\"", ",", "\"\<Emissionsrate (P/s)\>\"",
+                ",", "\"\<ER \[Sigma] (P/s)\>\"", ",", "\"\<Proband\>\""}], 
+              "}"}], "/.", "ToEnglish"}]}], "]"}], ",", "2"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"Rest", "/@", "A"}]}]}], "\[IndentingNewLine]", "]"}]}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"TaskPlot", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"\"\<Sprechen\>\"", ",", "\"\<Sprechen\>\""}], "}"}], "[", 
+      RowBox[{"[", "2", "]"}], "]"}], "/.", "ToEnglish"}], "]"}], 
+   "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.855134857580397*^9, 3.8551348665394316`*^9}, {
+   3.855134898834505*^9, 3.8551349281867857`*^9}, 3.8551349881917543`*^9, {
+   3.884054891046259*^9, 3.884054897965803*^9}, {3.8840571812661905`*^9, 
+   3.884057192531742*^9}, 3.8843205985129623`*^9, {3.8843206700611963`*^9, 
+   3.8843206736853704`*^9}, {3.8843207401222744`*^9, 3.884320751672305*^9}, {
+   3.88432078332294*^9, 3.8843208406551332`*^9}, {3.884320995959491*^9, 
+   3.884321001394739*^9}},
+ CellLabel->"In[56]:=",ExpressionUUID->"0209627b-b210-4a97-81d6-0716459b13ec"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"22", ",", "100", ",", "\<\"P1\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"89", ",", "94", ",", "\<\"P32\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"590", ",", "162", ",", "\<\"P37\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "137"}], ",", "198", ",", "\<\"P38\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"16", ",", "189", ",", "\<\"P40\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "260"}], ",", "312", ",", "\<\"P41\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"203", ",", "327", ",", "\<\"P42\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1605", ",", "305", ",", "\<\"P43\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"242", ",", "209", ",", "\<\"P33\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1671", ",", "207", ",", "\<\"P34\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"481", ",", "229", ",", "\<\"P35\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "245"}], ",", "356", ",", "\<\"P24\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"56", ",", "307", ",", "\<\"P25\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"189", ",", "114", ",", "\<\"P26\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "164"}], ",", "319", ",", "\<\"P27\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"257", ",", "227", ",", "\<\"P28\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"715", ",", "296", ",", "\<\"P29\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "175"}], ",", "294", ",", "\<\"P30\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"9", ",", "191", ",", "\<\"P31\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "3"}], ",", "148", ",", "\<\"P21\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"144", ",", "409", ",", "\<\"P22\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"725", ",", "128", ",", "\<\"P23\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"641", ",", "384", ",", "\<\"P2\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"63", ",", "92", ",", "\<\"P13\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "144"}], ",", "175", ",", "\<\"P15\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "79"}], ",", "366", ",", "\<\"P16\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "80"}], ",", "174", ",", "\<\"P17\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"7", ",", "67", ",", "\<\"P18\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"129", ",", "256", ",", "\<\"P19\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "121"}], ",", "140", ",", "\<\"P20\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"5", ",", "203", ",", "\<\"P3\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"251", ",", "163", ",", "\<\"P5\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"228", ",", "191", ",", "\<\"P6\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"64", ",", "253", ",", "\<\"P7\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"233", ",", "215", ",", "\<\"P8\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"298", ",", "187", ",", "\<\"P9\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"410", ",", "161", ",", "\<\"P10\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"427", ",", "123", ",", "\<\"P11\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"681", ",", "151", ",", "\<\"P12\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"770", ",", "152", ",", "\<\"P14\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "306"}], ",", "348", ",", "\<\"P44\"\>"}], "}"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.884320815386088*^9, 3.8843208276500196`*^9}, 
+   3.884320866040927*^9, 3.884321002179342*^9, 3.9634539666811543`*^9, 
+   3.9634540959301815`*^9},
+ CellLabel->"Out[59]=",ExpressionUUID->"a0948294-6ea1-ee4e-9397-3642480a17f6"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"\"\<C\>\"", ",", "\"\<F\>\"", ",", "\"\<O\>\"", ",", "\"\<S\>\"",
+       ",", "\"\<T\>\""}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"{", 
+        RowBox[{"22", ",", "100", ",", "\"\<P1\>\""}], "}"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "144"}], ",", "175", ",", "\"\<P15\>\""}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "121"}], ",", "140", ",", "\"\<P20\>\""}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "80"}], ",", "174", ",", "\"\<P17\>\""}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "79"}], ",", "366", ",", "\"\<P16\>\""}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"5", ",", "203", ",", "\"\<P3\>\""}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"7", ",", "67", ",", "\"\<P18\>\""}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"63", ",", "92", ",", "\"\<P13\>\""}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"64", ",", "253", ",", "\"\<P7\>\""}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"129", ",", "256", ",", "\"\<P19\>\""}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"228", ",", "191", ",", "\"\<P6\>\""}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"233", ",", "215", ",", "\"\<P8\>\""}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"251", ",", "163", ",", "\"\<P5\>\""}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"298", ",", "187", ",", "\"\<P9\>\""}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"410", ",", "161", ",", "\"\<P10\>\""}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"427", ",", "123", ",", "\"\<P11\>\""}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"641", ",", "384", ",", "\"\<P2\>\""}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"681", ",", "151", ",", "\"\<P12\>\""}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"770", ",", "152", ",", "\"\<P14\>\""}], "}"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "245"}], ",", "356", ",", "\"\<P24\>\""}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "175"}], ",", "294", ",", "\"\<P30\>\""}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "164"}], ",", "319", ",", "\"\<P27\>\""}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "3"}], ",", "148", ",", "\"\<P21\>\""}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"9", ",", "191", ",", "\"\<P31\>\""}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"56", ",", "307", ",", "\"\<P25\>\""}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"144", ",", "409", ",", "\"\<P22\>\""}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"189", ",", "114", ",", "\"\<P26\>\""}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"257", ",", "227", ",", "\"\<P28\>\""}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"715", ",", "296", ",", "\"\<P29\>\""}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"725", ",", "128", ",", "\"\<P23\>\""}], "}"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "260"}], ",", "312", ",", "\"\<P41\>\""}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "137"}], ",", "198", ",", "\"\<P38\>\""}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"16", ",", "189", ",", "\"\<P40\>\""}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"89", ",", "94", ",", "\"\<P32\>\""}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"203", ",", "327", ",", "\"\<P42\>\""}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"242", ",", "209", ",", "\"\<P33\>\""}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"481", ",", "229", ",", "\"\<P35\>\""}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"590", ",", "162", ",", "\"\<P37\>\""}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"1605", ",", "305", ",", "\"\<P43\>\""}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"1671", ",", "207", ",", "\"\<P34\>\""}], "}"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"-", "306"}], ",", "348", ",", "\"\<P44\>\""}], "}"}], 
+       "}"}]}], "}"}]}], "}"}], ";"}]], "Input",
+ CellChangeTimes->{{3.884320860845066*^9, 3.8843208618410654`*^9}, 
+   3.963454087143965*^9},
+ CellLabel->"In[60]:=",ExpressionUUID->"783627bd-ea2a-4522-84cf-350156625de9"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Clear", "[", 
+    RowBox[{
+    "R", ",", "TaskPlot", ",", "\[IndentingNewLine]", "A", ",", "h", ",", 
+     "i"}], "]"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"R", " ", "=", " ", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "600"}], "*", "0"}], ",", 
+       RowBox[{"2000", "+", "200"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"TaskPlot", "[", 
+      RowBox[{"task_", "?", "StringQ"}], "]"}], " ", ":=", " ", 
+     RowBox[{"Module", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"D", ",", "A", ",", "h", ",", "i", ",", "G", ",", "H"}], 
+        "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"A", " ", "=", " ", 
+         RowBox[{"SelectRows", "[", 
+          RowBox[{"Z", ",", 
+           RowBox[{"\"\<Aufgabe\>\"", "/.", "ToEnglish"}], ",", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"#", "\[Equal]", "task"}], ")"}], "&"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Length", "[", "A", "]"}], "\[Equal]", "2"}], ",", 
+          RowBox[{"Return", "[", "1", "]"}]}], "]"}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"A", " ", "=", " ", 
+         RowBox[{"Drop", "[", 
+          RowBox[{
+           RowBox[{"ExtractColumn", "[", 
+            RowBox[{"A", ",", 
+             RowBox[{
+              RowBox[{"{", 
+               
+               RowBox[{"\"\<Emissionsrate (P/s)\>\"", 
+                ",", "\"\<ER \[Sigma] (P/s)\>\"", ",", "\"\<Proband\>\""}], 
+               "}"}], "/.", "ToEnglish"}]}], "]"}], ",", "2"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"A", "=", 
+         RowBox[{"SortBy", "[", 
+          RowBox[{"A", ",", "First"}], "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"i", "=", "0"}], ";", "\[IndentingNewLine]", 
+        RowBox[{"D", "=", 
+         RowBox[{"Flatten", "@", 
+          RowBox[{"Map", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"++", "i"}], ";", "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"Point", "[", 
+                  RowBox[{"{", 
+                   RowBox[{"i", ",", 
+                    RowBox[{"#", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}]}], "}"}], "]"}], ",", 
+                 RowBox[{"Line", "[", 
+                  RowBox[{"h", "=", 
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"i", ",", 
+                    RowBox[{"Max", "[", 
+                    RowBox[{
+                    RowBox[{"-", "Infinity"}], ",", 
+                    RowBox[{
+                    RowBox[{"#", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], "-", 
+                    RowBox[{"#", "[", 
+                    RowBox[{"[", "2", "]"}], "]"}]}]}], "]"}]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"i", ",", 
+                    RowBox[{
+                    RowBox[{"#", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], "+", 
+                    RowBox[{"#", "[", 
+                    RowBox[{"[", "2", "]"}], "]"}]}]}], "}"}]}], "}"}]}], 
+                  "]"}], ",", 
+                 RowBox[{"Text", "@@", 
+                  RowBox[{"Prepend", "[", 
+                   RowBox[{
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{"MemberQ", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"(*", "\"\<Playing\>\"", "*)"}], "}"}], ",", 
+                    "task"}], "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"h", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "2"}], "}"}]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"h", "[", 
+                    RowBox[{"[", "2", "]"}], "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", 
+                    RowBox[{"-", "2"}]}], "}"}]}], "}"}]}], "]"}], ",", 
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    RowBox[{"StringDrop", "[", 
+                    RowBox[{
+                    RowBox[{"#", "[", 
+                    RowBox[{"[", "3", "]"}], "]"}], ",", "0"}], "]"}], ",", 
+                    RowBox[{"FontColor", "->", 
+                    RowBox[{"GrayLevel", "[", "0", "]"}]}], ",", 
+                    RowBox[{"FontFamily", "->", "\"\<Arial\>\""}], ",", 
+                    RowBox[{"FontSlant", "->", "\"\<Plain\>\""}], ",", 
+                    RowBox[{"FontWeight", "->", "\"\<Plain\>\""}], ",", 
+                    RowBox[{"FontSize", "->", 
+                    RowBox[{"Round", "[", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"FontSize", "/.", " ", "MyTS"}], ")"}], "*", 
+                    RowBox[{"2", "/", "3"}]}], "]"}]}]}], "]"}]}], "]"}]}]}], 
+                "}"}]}], ")"}], "&"}], ",", "A"}], "]"}]}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"G", "=", 
+         RowBox[{"Graphics", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"AbsoluteThickness", "[", "4", "]"}], ",", 
+             RowBox[{"AbsolutePointSize", "[", "10", "]"}], ",", "D"}], "}"}],
+            ",", 
+           RowBox[{"AspectRatio", "->", "0.4"}], ",", 
+           RowBox[{"Axes", "->", "False"}], ",", 
+           RowBox[{"DisplayFunction", "->", "Identity"}], ",", 
+           RowBox[{"Frame", "->", "True"}], ",", 
+           RowBox[{"FrameLabel", "->", 
+            RowBox[{"{", 
+             RowBox[{"None", ",", 
+              
+              RowBox[{"\"\<Emission rate,  P/s\>\"", "/.", " ", 
+               "ToEnglish"}]}], "}"}]}], ",", 
+           RowBox[{"FrameTicks", "->", 
+            RowBox[{"{", 
+             RowBox[{"None", ",", "Automatic"}], "}"}]}], ",", 
+           RowBox[{"GridLines", "->", 
+            RowBox[{"{", 
+             RowBox[{"None", ",", "Automatic"}], "}"}]}], ",", 
+           RowBox[{"ImageSize", "->", "1200"}], ",", 
+           RowBox[{"LabelStyle", "->", "MyTS"}], ",", 
+           RowBox[{"PlotLabel", "->", 
+            RowBox[{"StringJoin", "[", 
+             RowBox[{"\"\<Aerosol emission during \>\"", ",", 
+              RowBox[{"ToLowerCase", "[", "task", "]"}]}], "]"}]}], ",", 
+           RowBox[{"PlotRange", "->", 
+            RowBox[{"{", 
+             RowBox[{"All", ",", "R"}], "}"}]}], ",", 
+           RowBox[{"PlotRangeClipping", "->", "True"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"Export", "[", 
+         RowBox[{
+          RowBox[{"OutPath", "~~", 
+           RowBox[{"StringJoin", "[", 
+            RowBox[{"\"\<Aerosol emission during \>\"", ",", 
+             RowBox[{"ToLowerCase", "[", "task", "]"}]}], "]"}], 
+           "~~", "\"\<.tif\>\""}], ",", "G"}], "]"}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"H", "=", " ", 
+         RowBox[{"Histogram", "[", 
+          RowBox[{
+           RowBox[{"First", "/@", "A"}], ",", "10"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"{", 
+         RowBox[{"H", ",", "G"}], "}"}]}]}], "\[IndentingNewLine]", "]"}]}], 
+    ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"TaskPlot", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"\"\<Sprechen\>\"", ",", "\"\<Sprechen\>\""}], "}"}], "[", 
+        RowBox[{"[", "2", "]"}], "]"}], "/.", "ToEnglish"}], "]"}], ",", 
+     RowBox[{"TaskPlot", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"\"\<Sprechen mit MNS\>\"", 
+          ",", "\"\<Sprechen mit MNS\>\""}], "}"}], "[", 
+        RowBox[{"[", "2", "]"}], "]"}], "/.", "ToEnglish"}], "]"}], ",", 
+     RowBox[{"TaskPlot", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"\"\<Atmen\>\"", ",", "\"\<Atmen\>\""}], "}"}], "[", 
+        RowBox[{"[", "2", "]"}], "]"}], "/.", "ToEnglish"}], "]"}]}], "}"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.855134857580397*^9, 3.8551348665394316`*^9}, {
+   3.855134898834505*^9, 3.8551349281867857`*^9}, 3.8551349881917543`*^9, {
+   3.884054891046259*^9, 3.884054897965803*^9}, {3.8840571812661905`*^9, 
+   3.884057192531742*^9}, 3.884347184616689*^9, {3.8843472284964104`*^9, 
+   3.8843473836424875`*^9}, {3.8843474972021923`*^9, 
+   3.8843475280006475`*^9}, {3.88434767917705*^9, 3.884347683657054*^9}, {
+   3.884347728622883*^9, 3.88434772887115*^9}, {3.884347760693469*^9, 
+   3.884347773834743*^9}, {3.8843478083479204`*^9, 3.8843478199640007`*^9}, {
+   3.8843478802975197`*^9, 3.884347894754218*^9}, {3.8843479601719823`*^9, 
+   3.8843479667737207`*^9}, {3.884348153141533*^9, 3.884348160405486*^9}, {
+   3.8843482700487394`*^9, 3.8843482701475286`*^9}, {3.8843483003854313`*^9, 
+   3.8843484783040977`*^9}, {3.8843485141517673`*^9, 3.884348521065382*^9}, {
+   3.884348779698181*^9, 3.8843488073076982`*^9}, {3.8843488795453215`*^9, 
+   3.8843488998610215`*^9}, {3.8843489391220856`*^9, 
+   3.8843489473632545`*^9}, {3.88434897970236*^9, 3.8843490183856106`*^9}, {
+   3.884349133881206*^9, 3.8843491343042355`*^9}, 3.884349202890583*^9, {
+   3.8843492577453213`*^9, 3.884349375363799*^9}, {3.963454122684286*^9, 
+   3.9634541964655514`*^9}, {3.9634542499188347`*^9, 
+   3.9634542746370735`*^9}, {3.963454389614624*^9, 3.96345439158358*^9}},
+ CellLabel->"In[97]:=",ExpressionUUID->"dff22444-d866-4740-a7e8-121f869c8fac"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ GraphicsBox[{
+   {RGBColor[1., 0.79375, 0.25], EdgeForm[{Opacity[0.609], Thickness[
+    Small]}], {}, 
+    {RGBColor[1., 0.79375, 0.25], EdgeForm[{Opacity[0.609], Thickness[
+     Small]}], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        TagBox[
+         DynamicBox[{
+           FEPrivate`If[
+            CurrentValue["MouseOver"], 
+            EdgeForm[{
+              GrayLevel[0.5], 
+              AbsoluteThickness[1.5], 
+              Opacity[0.66]}], {}, {}], 
+           RectangleBox[{-400., 0}, {-200., 3.}, "RoundingRadius" -> 0]},
+          
+          ImageSizeCache->{{12.28654079513611, 30.598871113936603`}, {
+           26.507016230256703`, 56.46397898479301}}],
+         "DelayedMouseEffectStyle"],
+        StatusArea[#, 3]& ,
+        TagBoxNote->"3"],
+       StyleBox["3", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[3, {}], "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        TagBox[
+         DynamicBox[{
+           FEPrivate`If[
+            CurrentValue["MouseOver"], 
+            EdgeForm[{
+              GrayLevel[0.5], 
+              AbsoluteThickness[1.5], 
+              Opacity[0.66]}], {}, {}], 
+           RectangleBox[{-200., 0}, {0., 8.}, "RoundingRadius" -> 0]},
+          
+          ImageSizeCache->{{30.298871113936606`, 
+           48.611201432737104`}, {-22.9212550273038, 56.463978984793}}],
+         "DelayedMouseEffectStyle"],
+        StatusArea[#, 8]& ,
+        TagBoxNote->"8"],
+       StyleBox["8", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[8, {}], "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        TagBox[
+         DynamicBox[{
+           FEPrivate`If[
+            CurrentValue["MouseOver"], 
+            EdgeForm[{
+              GrayLevel[0.5], 
+              AbsoluteThickness[1.5], 
+              Opacity[0.66]}], {}, {}], 
+           RectangleBox[{0., 0}, {200., 12.}, "RoundingRadius" -> 0]},
+          
+          ImageSizeCache->{{48.31120143273709, 
+           66.6235317515376}, {-62.46387203335221, 56.46397898479301}}],
+         "DelayedMouseEffectStyle"],
+        StatusArea[#, 12]& ,
+        TagBoxNote->"12"],
+       StyleBox["12", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[12, {}], "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        TagBox[
+         DynamicBox[{
+           FEPrivate`If[
+            CurrentValue["MouseOver"], 
+            EdgeForm[{
+              GrayLevel[0.5], 
+              AbsoluteThickness[1.5], 
+              Opacity[0.66]}], {}, {}], 
+           RectangleBox[{200., 0}, {400., 7.}, "RoundingRadius" -> 0]},
+          
+          ImageSizeCache->{{66.32353175153759, 
+           84.63586207033808}, {-13.0356007757917, 56.46397898479301}}],
+         "DelayedMouseEffectStyle"],
+        StatusArea[#, 7]& ,
+        TagBoxNote->"7"],
+       StyleBox["7", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[7, {}], "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        TagBox[
+         DynamicBox[{
+           FEPrivate`If[
+            CurrentValue["MouseOver"], 
+            EdgeForm[{
+              GrayLevel[0.5], 
+              AbsoluteThickness[1.5], 
+              Opacity[0.66]}], {}, {}], 
+           RectangleBox[{400., 0}, {600., 4.}, "RoundingRadius" -> 0]},
+          
+          ImageSizeCache->{{84.33586207033808, 102.64819238913857`}, {
+           16.621361978744595`, 56.46397898479301}}],
+         "DelayedMouseEffectStyle"],
+        StatusArea[#, 4]& ,
+        TagBoxNote->"4"],
+       StyleBox["4", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[4, {}], "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        TagBox[
+         DynamicBox[{
+           FEPrivate`If[
+            CurrentValue["MouseOver"], 
+            EdgeForm[{
+              GrayLevel[0.5], 
+              AbsoluteThickness[1.5], 
+              Opacity[0.66]}], {}, {}], 
+           RectangleBox[{600., 0}, {800., 5.}, "RoundingRadius" -> 0]},
+          
+          ImageSizeCache->{{102.34819238913857`, 120.66052270793907`}, {
+           6.735707727232494, 56.46397898479301}}],
+         "DelayedMouseEffectStyle"],
+        StatusArea[#, 5]& ,
+        TagBoxNote->"5"],
+       StyleBox["5", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[5, {}], "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        TagBox[
+         DynamicBox[{
+           FEPrivate`If[
+            CurrentValue["MouseOver"], 
+            EdgeForm[{
+              GrayLevel[0.5], 
+              AbsoluteThickness[1.5], 
+              Opacity[0.66]}], {}, {}], 
+           RectangleBox[{1600., 0}, {1800., 2.}, "RoundingRadius" -> 0]},
+          
+          ImageSizeCache->{{192.40984398314103`, 210.72217430194158`}, {
+           36.392670481768796`, 56.46397898479301}}],
+         "DelayedMouseEffectStyle"],
+        StatusArea[#, 2]& ,
+        TagBoxNote->"2"],
+       StyleBox["2", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[2, {}], "Tooltip"]& ]}, {}, {}}, {{}, {}, {}, {}, {}, {}, {}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{None, None},
+  AxesOrigin->{-444., 0},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  Method->{CoordinatesToolOptions -> {"DisplayFunction" -> ({
+        Identity[
+         Part[#, 1]], 
+        Identity[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        Identity[
+         Part[#, 1]], 
+        Identity[
+         Part[#, 2]]}& )}, "AxisPadding" -> Scaled[0.02], "ChartDefaultStyle" -> {
+      RGBColor[1., 0.725, 0], 
+      RGBColor[0.24, 0.6, 0.8], 
+      RGBColor[0.455, 0.7, 0.21], 
+      RGBColor[0.922526, 0.385626, 0.209179], 
+      RGBColor[0.578, 0.51, 0.85], 
+      RGBColor[0.772079, 0.431554, 0.102387], 
+      RGBColor[0.4, 0.64, 1.], 
+      RGBColor[1., 0.75, 0.], 
+      RGBColor[0.8, 0.4, 0.76], 
+      RGBColor[0.637, 0.65, 0.], 
+      RGBColor[0.915, 0.3325, 0.2125], 
+      RGBColor[0.40082222609352647`, 0.5220066643438841, 0.85], 
+      RGBColor[0.9728288904374106, 0.621644452187053, 0.07336199581899142], 
+      RGBColor[0.736782672705901, 0.358, 0.5030266573755369], 
+      RGBColor[0.28026441037696703`, 0.715, 0.4292089322474965]}, 
+    "DefaultBoundaryStyle" -> Automatic, "DefaultChartBaseStyle" -> 
+    RGBColor[1., 0.79375, 0.25], 
+    "DefaultGraphicsInteraction" -> {
+     "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+      "Effects" -> {
+       "Highlight" -> {"ratio" -> 2}, "HighlightPoint" -> {"ratio" -> 2}, 
+        "Droplines" -> {
+         "freeformCursorMode" -> True, 
+          "placement" -> {"x" -> "All", "y" -> "None"}}}}, "DefaultPlotStyle" -> 
+    Automatic, "DomainPadding" -> Scaled[0.02], "RangePadding" -> 
+    Scaled[0.05]},
+  PlotRange->{{-400., 1800.}, {All, All}},
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.02], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Print",
+ CellChangeTimes->{
+  3.8843491365143223`*^9, 3.8843492033637114`*^9, {3.884349261065047*^9, 
+   3.8843493499625425`*^9}, 3.963453977868517*^9, 3.9634540103342953`*^9, 
+   3.963454098930029*^9, {3.9634541831612263`*^9, 3.9634541982832947`*^9}, {
+   3.963454257853401*^9, 3.9634542757711716`*^9}, 3.9634543939210777`*^9},
+ CellLabel->
+  "During evaluation of \
+In[97]:=",ExpressionUUID->"e5c69b71-adbd-914d-8979-66a67395cf06"],
+
+Cell[BoxData[
+ GraphicsBox[{
+   {RGBColor[1., 0.79375, 0.25], EdgeForm[{Opacity[0.588], Thickness[
+    Small]}], {}, 
+    {RGBColor[1., 0.79375, 0.25], EdgeForm[{Opacity[0.588], Thickness[
+     Small]}], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        TagBox[
+         DynamicBox[{
+           FEPrivate`If[
+            CurrentValue["MouseOver"], 
+            EdgeForm[{
+              GrayLevel[0.5], 
+              AbsoluteThickness[1.5], 
+              Opacity[0.66]}], {}, {}], 
+           RectangleBox[{-200., 0}, {-100., 4.}, "RoundingRadius" -> 0]},
+          
+          ImageSizeCache->{{8.971017156862755, 
+           23.49995677958684}, {-23.010765506301667`, 56.80136463640039}}],
+         "DelayedMouseEffectStyle"],
+        StatusArea[#, 4]& ,
+        TagBoxNote->"4"],
+       StyleBox["4", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[4, {}], "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        TagBox[
+         DynamicBox[{
+           FEPrivate`If[
+            CurrentValue["MouseOver"], 
+            EdgeForm[{
+              GrayLevel[0.5], 
+              AbsoluteThickness[1.5], 
+              Opacity[0.66]}], {}, {}], 
+           RectangleBox[{-100., 0}, {0., 4.}, "RoundingRadius" -> 0]},
+          
+          ImageSizeCache->{{23.19995677958684, 
+           37.72889640231092}, {-23.010765506301667`, 56.80136463640039}}],
+         "DelayedMouseEffectStyle"],
+        StatusArea[#, 4]& ,
+        TagBoxNote->"4"],
+       StyleBox["4", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[4, {}], "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        TagBox[
+         DynamicBox[{
+           FEPrivate`If[
+            CurrentValue["MouseOver"], 
+            EdgeForm[{
+              GrayLevel[0.5], 
+              AbsoluteThickness[1.5], 
+              Opacity[0.66]}], {}, {}], 
+           RectangleBox[{0., 0}, {100., 4.}, "RoundingRadius" -> 0]},
+          
+          ImageSizeCache->{{37.428896402310926`, 
+           51.95783602503501}, {-23.010765506301667`, 56.80136463640039}}],
+         "DelayedMouseEffectStyle"],
+        StatusArea[#, 4]& ,
+        TagBoxNote->"4"],
+       StyleBox["4", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[4, {}], "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        TagBox[
+         DynamicBox[{
+           FEPrivate`If[
+            CurrentValue["MouseOver"], 
+            EdgeForm[{
+              GrayLevel[0.5], 
+              AbsoluteThickness[1.5], 
+              Opacity[0.66]}], {}, {}], 
+           RectangleBox[{100., 0}, {200., 1.}, "RoundingRadius" -> 0]},
+          
+          ImageSizeCache->{{51.657836025035, 66.1867756477591}, {
+           36.62333210072487, 56.8013646364004}}],
+         "DelayedMouseEffectStyle"],
+        StatusArea[#, 1]& ,
+        TagBoxNote->"1"],
+       StyleBox["1", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[1, {}], "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        TagBox[
+         DynamicBox[{
+           FEPrivate`If[
+            CurrentValue["MouseOver"], 
+            EdgeForm[{
+              GrayLevel[0.5], 
+              AbsoluteThickness[1.5], 
+              Opacity[0.66]}], {}, {}], 
+           RectangleBox[{400., 0}, {500., 6.}, "RoundingRadius" -> 0]},
+          
+          ImageSizeCache->{{94.34465489320726, 
+           108.87359451593134`}, {-62.766830577652705`, 56.8013646364004}}],
+         "DelayedMouseEffectStyle"],
+        StatusArea[#, 6]& ,
+        TagBoxNote->"6"],
+       StyleBox["6", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[6, {}], "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        TagBox[
+         DynamicBox[{
+           FEPrivate`If[
+            CurrentValue["MouseOver"], 
+            EdgeForm[{
+              GrayLevel[0.5], 
+              AbsoluteThickness[1.5], 
+              Opacity[0.66]}], {}, {}], 
+           RectangleBox[{500., 0}, {600., 4.}, "RoundingRadius" -> 0]},
+          
+          ImageSizeCache->{{108.57359451593135`, 
+           123.10253413865543`}, {-23.010765506301674`, 56.8013646364004}}],
+         "DelayedMouseEffectStyle"],
+        StatusArea[#, 4]& ,
+        TagBoxNote->"4"],
+       StyleBox["4", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[4, {}], "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        TagBox[
+         DynamicBox[{
+           FEPrivate`If[
+            CurrentValue["MouseOver"], 
+            EdgeForm[{
+              GrayLevel[0.5], 
+              AbsoluteThickness[1.5], 
+              Opacity[0.66]}], {}, {}], 
+           RectangleBox[{600., 0}, {700., 1.}, "RoundingRadius" -> 0]},
+          
+          ImageSizeCache->{{122.80253413865543`, 137.33147376137953`}, {
+           36.62333210072487, 56.8013646364004}}],
+         "DelayedMouseEffectStyle"],
+        StatusArea[#, 1]& ,
+        TagBoxNote->"1"],
+       StyleBox["1", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[1, {}], "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        TagBox[
+         DynamicBox[{
+           FEPrivate`If[
+            CurrentValue["MouseOver"], 
+            EdgeForm[{
+              GrayLevel[0.5], 
+              AbsoluteThickness[1.5], 
+              Opacity[0.66]}], {}, {}], 
+           RectangleBox[{700., 0}, {800., 1.}, "RoundingRadius" -> 0]},
+          
+          ImageSizeCache->{{137.03147376137952`, 151.5604133841036}, {
+           36.62333210072487, 56.8013646364004}}],
+         "DelayedMouseEffectStyle"],
+        StatusArea[#, 1]& ,
+        TagBoxNote->"1"],
+       StyleBox["1", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[1, {}], "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        TagBox[
+         DynamicBox[{
+           FEPrivate`If[
+            CurrentValue["MouseOver"], 
+            EdgeForm[{
+              GrayLevel[0.5], 
+              AbsoluteThickness[1.5], 
+              Opacity[0.66]}], {}, {}], 
+           RectangleBox[{900., 0}, {1000., 3.}, "RoundingRadius" -> 0]},
+          
+          ImageSizeCache->{{165.48935300682768`, 
+           180.01829262955178`}, {-3.132732970626158, 56.8013646364004}}],
+         "DelayedMouseEffectStyle"],
+        StatusArea[#, 3]& ,
+        TagBoxNote->"3"],
+       StyleBox["3", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[3, {}], "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        TagBox[
+         DynamicBox[{
+           FEPrivate`If[
+            CurrentValue["MouseOver"], 
+            EdgeForm[{
+              GrayLevel[0.5], 
+              AbsoluteThickness[1.5], 
+              Opacity[0.66]}], {}, {}], 
+           RectangleBox[{1100., 0}, {1200., 1.}, "RoundingRadius" -> 0]},
+          
+          ImageSizeCache->{{193.94723225227585`, 208.47617187499995`}, {
+           36.62333210072487, 56.8013646364004}}],
+         "DelayedMouseEffectStyle"],
+        StatusArea[#, 1]& ,
+        TagBoxNote->"1"],
+       StyleBox["1", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[1, {}], 
+       "Tooltip"]& ]}, {}, {}}, {{}, {}, {}, {}, {}, {}, {}, {}, {}, {}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{None, None},
+  AxesOrigin->{-228., 0},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  Method->{CoordinatesToolOptions -> {"DisplayFunction" -> ({
+        Identity[
+         Part[#, 1]], 
+        Identity[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        Identity[
+         Part[#, 1]], 
+        Identity[
+         Part[#, 2]]}& )}, "AxisPadding" -> Scaled[0.02], "ChartDefaultStyle" -> {
+      RGBColor[1., 0.725, 0], 
+      RGBColor[0.24, 0.6, 0.8], 
+      RGBColor[0.455, 0.7, 0.21], 
+      RGBColor[0.922526, 0.385626, 0.209179], 
+      RGBColor[0.578, 0.51, 0.85], 
+      RGBColor[0.772079, 0.431554, 0.102387], 
+      RGBColor[0.4, 0.64, 1.], 
+      RGBColor[1., 0.75, 0.], 
+      RGBColor[0.8, 0.4, 0.76], 
+      RGBColor[0.637, 0.65, 0.], 
+      RGBColor[0.915, 0.3325, 0.2125], 
+      RGBColor[0.40082222609352647`, 0.5220066643438841, 0.85], 
+      RGBColor[0.9728288904374106, 0.621644452187053, 0.07336199581899142], 
+      RGBColor[0.736782672705901, 0.358, 0.5030266573755369], 
+      RGBColor[0.28026441037696703`, 0.715, 0.4292089322474965]}, 
+    "DefaultBoundaryStyle" -> Automatic, "DefaultChartBaseStyle" -> 
+    RGBColor[1., 0.79375, 0.25], 
+    "DefaultGraphicsInteraction" -> {
+     "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+      "Effects" -> {
+       "Highlight" -> {"ratio" -> 2}, "HighlightPoint" -> {"ratio" -> 2}, 
+        "Droplines" -> {
+         "freeformCursorMode" -> True, 
+          "placement" -> {"x" -> "All", "y" -> "None"}}}}, "DefaultPlotStyle" -> 
+    Automatic, "DomainPadding" -> Scaled[0.02], "RangePadding" -> 
+    Scaled[0.05]},
+  PlotRange->{{-200., 1200.}, {All, All}},
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.02], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Print",
+ CellChangeTimes->{
+  3.8843491365143223`*^9, 3.8843492033637114`*^9, {3.884349261065047*^9, 
+   3.8843493499625425`*^9}, 3.963453977868517*^9, 3.9634540103342953`*^9, 
+   3.963454098930029*^9, {3.9634541831612263`*^9, 3.9634541982832947`*^9}, {
+   3.963454257853401*^9, 3.9634542757711716`*^9}, 3.963454394129633*^9},
+ CellLabel->
+  "During evaluation of \
+In[97]:=",ExpressionUUID->"bfa3de94-4e7e-d343-8384-600620fbdac5"],
+
+Cell[BoxData[
+ GraphicsBox[{
+   {RGBColor[1., 0.79375, 0.25], EdgeForm[{Opacity[0.63], Thickness[
+    Small]}], {}, 
+    {RGBColor[1., 0.79375, 0.25], EdgeForm[{Opacity[0.63], Thickness[Small]}], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        TagBox[
+         DynamicBox[{
+           FEPrivate`If[
+            CurrentValue["MouseOver"], 
+            EdgeForm[{
+              GrayLevel[0.5], 
+              AbsoluteThickness[1.5], 
+              Opacity[0.66]}], {}, {}], 
+           RectangleBox[{-200., 0}, {-100., 7.}, "RoundingRadius" -> 0]},
+          
+          ImageSizeCache->{{9.003732000612748, 
+           34.4088441138174}, {-48.1992365998481, 57.31736744021962}}],
+         "DelayedMouseEffectStyle"],
+        StatusArea[#, 7]& ,
+        TagBoxNote->"7"],
+       StyleBox["7", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[7, {}], "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        TagBox[
+         DynamicBox[{
+           FEPrivate`If[
+            CurrentValue["MouseOver"], 
+            EdgeForm[{
+              GrayLevel[0.5], 
+              AbsoluteThickness[1.5], 
+              Opacity[0.66]}], {}, {}], 
+           RectangleBox[{-100., 0}, {0., 6.}, "RoundingRadius" -> 0]},
+          
+          ImageSizeCache->{{34.108844113817405`, 
+           59.513956227022064`}, {-33.168293165552704`, 57.31736744021962}}],
+         "DelayedMouseEffectStyle"],
+        StatusArea[#, 6]& ,
+        TagBoxNote->"6"],
+       StyleBox["6", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[6, {}], "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        TagBox[
+         DynamicBox[{
+           FEPrivate`If[
+            CurrentValue["MouseOver"], 
+            EdgeForm[{
+              GrayLevel[0.5], 
+              AbsoluteThickness[1.5], 
+              Opacity[0.66]}], {}, {}], 
+           RectangleBox[{0., 0}, {100., 8.}, "RoundingRadius" -> 0]},
+          
+          ImageSizeCache->{{59.21395622702206, 
+           84.61906834022673}, {-63.23018003414349, 57.31736744021963}}],
+         "DelayedMouseEffectStyle"],
+        StatusArea[#, 8]& ,
+        TagBoxNote->"8"],
+       StyleBox["8", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[8, {}], "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        TagBox[
+         DynamicBox[{
+           FEPrivate`If[
+            CurrentValue["MouseOver"], 
+            EdgeForm[{
+              GrayLevel[0.5], 
+              AbsoluteThickness[1.5], 
+              Opacity[0.66]}], {}, {}], 
+           RectangleBox[{100., 0}, {200., 5.}, "RoundingRadius" -> 0]},
+          
+          ImageSizeCache->{{84.31906834022672, 
+           109.72418045343137`}, {-18.137349731257316`, 57.31736744021963}}],
+         "DelayedMouseEffectStyle"],
+        StatusArea[#, 5]& ,
+        TagBoxNote->"5"],
+       StyleBox["5", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[5, {}], "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        TagBox[
+         DynamicBox[{
+           FEPrivate`If[
+            CurrentValue["MouseOver"], 
+            EdgeForm[{
+              GrayLevel[0.5], 
+              AbsoluteThickness[1.5], 
+              Opacity[0.66]}], {}, {}], 
+           RectangleBox[{200., 0}, {300., 5.}, "RoundingRadius" -> 0]},
+          
+          ImageSizeCache->{{109.42418045343138`, 
+           134.82929256663604`}, {-18.137349731257316`, 57.31736744021963}}],
+         "DelayedMouseEffectStyle"],
+        StatusArea[#, 5]& ,
+        TagBoxNote->"5"],
+       StyleBox["5", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[5, {}], "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        TagBox[
+         DynamicBox[{
+           FEPrivate`If[
+            CurrentValue["MouseOver"], 
+            EdgeForm[{
+              GrayLevel[0.5], 
+              AbsoluteThickness[1.5], 
+              Opacity[0.66]}], {}, {}], 
+           RectangleBox[{300., 0}, {400., 1.}, "RoundingRadius" -> 0]},
+          
+          ImageSizeCache->{{134.52929256663603`, 159.9344046798407}, {
+           41.98642400592423, 57.31736744021963}}],
+         "DelayedMouseEffectStyle"],
+        StatusArea[#, 1]& ,
+        TagBoxNote->"1"],
+       StyleBox["1", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[1, {}], "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        TagBox[
+         DynamicBox[{
+           FEPrivate`If[
+            CurrentValue["MouseOver"], 
+            EdgeForm[{
+              GrayLevel[0.5], 
+              AbsoluteThickness[1.5], 
+              Opacity[0.66]}], {}, {}], 
+           RectangleBox[{400., 0}, {500., 1.}, "RoundingRadius" -> 0]},
+          
+          ImageSizeCache->{{159.63440467984069`, 185.03951679304535`}, {
+           41.98642400592423, 57.31736744021963}}],
+         "DelayedMouseEffectStyle"],
+        StatusArea[#, 1]& ,
+        TagBoxNote->"1"],
+       StyleBox["1", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[1, {}], "Tooltip"]& ], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        TagBox[
+         DynamicBox[{
+           FEPrivate`If[
+            CurrentValue["MouseOver"], 
+            EdgeForm[{
+              GrayLevel[0.5], 
+              AbsoluteThickness[1.5], 
+              Opacity[0.66]}], {}, {}], 
+           RectangleBox[{500., 0}, {600., 2.}, "RoundingRadius" -> 0]},
+          
+          ImageSizeCache->{{184.73951679304534`, 210.14462890625003`}, {
+           26.955480571628836`, 57.31736744021963}}],
+         "DelayedMouseEffectStyle"],
+        StatusArea[#, 2]& ,
+        TagBoxNote->"2"],
+       StyleBox["2", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[2, {}], 
+       "Tooltip"]& ]}, {}, {}}, {{}, {}, {}, {}, {}, {}, {}, {}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{None, None},
+  AxesOrigin->{-216., 0},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  Method->{CoordinatesToolOptions -> {"DisplayFunction" -> ({
+        Identity[
+         Part[#, 1]], 
+        Identity[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        Identity[
+         Part[#, 1]], 
+        Identity[
+         Part[#, 2]]}& )}, "AxisPadding" -> Scaled[0.02], "ChartDefaultStyle" -> {
+      RGBColor[1., 0.725, 0], 
+      RGBColor[0.24, 0.6, 0.8], 
+      RGBColor[0.455, 0.7, 0.21], 
+      RGBColor[0.922526, 0.385626, 0.209179], 
+      RGBColor[0.578, 0.51, 0.85], 
+      RGBColor[0.772079, 0.431554, 0.102387], 
+      RGBColor[0.4, 0.64, 1.], 
+      RGBColor[1., 0.75, 0.], 
+      RGBColor[0.8, 0.4, 0.76], 
+      RGBColor[0.637, 0.65, 0.], 
+      RGBColor[0.915, 0.3325, 0.2125], 
+      RGBColor[0.40082222609352647`, 0.5220066643438841, 0.85], 
+      RGBColor[0.9728288904374106, 0.621644452187053, 0.07336199581899142], 
+      RGBColor[0.736782672705901, 0.358, 0.5030266573755369], 
+      RGBColor[0.28026441037696703`, 0.715, 0.4292089322474965]}, 
+    "DefaultBoundaryStyle" -> Automatic, "DefaultChartBaseStyle" -> 
+    RGBColor[1., 0.79375, 0.25], 
+    "DefaultGraphicsInteraction" -> {
+     "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+      "Effects" -> {
+       "Highlight" -> {"ratio" -> 2}, "HighlightPoint" -> {"ratio" -> 2}, 
+        "Droplines" -> {
+         "freeformCursorMode" -> True, 
+          "placement" -> {"x" -> "All", "y" -> "None"}}}}, "DefaultPlotStyle" -> 
+    Automatic, "DomainPadding" -> Scaled[0.02], "RangePadding" -> 
+    Scaled[0.05]},
+  PlotRange->{{-200., 600.}, {All, All}},
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.02], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Print",
+ CellChangeTimes->{
+  3.8843491365143223`*^9, 3.8843492033637114`*^9, {3.884349261065047*^9, 
+   3.8843493499625425`*^9}, 3.963453977868517*^9, 3.9634540103342953`*^9, 
+   3.963454098930029*^9, {3.9634541831612263`*^9, 3.9634541982832947`*^9}, {
+   3.963454257853401*^9, 3.9634542757711716`*^9}, 3.9634543943787613`*^9},
+ CellLabel->
+  "During evaluation of \
+In[97]:=",ExpressionUUID->"850719e9-4f75-b24f-8097-78125544a64e"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"Null", ",", 
+     GraphicsBox[
+      {AbsolutePointSize[10], AbsoluteThickness[4], PointBox[{1, -306}], 
+       LineBox[{{1, -654}, {1, 42}}], InsetBox[
+        StyleBox["\<\"P44\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {1, 42}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{2, -260}], 
+       LineBox[{{2, -572}, {2, 52}}], InsetBox[
+        StyleBox["\<\"P41\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {2, 52}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{3, -245}], 
+       LineBox[{{3, -601}, {3, 111}}], InsetBox[
+        StyleBox["\<\"P24\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {3, 111}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{4, -175}], 
+       LineBox[{{4, -469}, {4, 119}}], InsetBox[
+        StyleBox["\<\"P30\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {4, 119}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{5, -164}], 
+       LineBox[{{5, -483}, {5, 155}}], InsetBox[
+        StyleBox["\<\"P27\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {5, 155}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{6, -144}], 
+       LineBox[{{6, -319}, {6, 31}}], InsetBox[
+        StyleBox["\<\"P15\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {6, 31}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{7, -137}], 
+       LineBox[{{7, -335}, {7, 61}}], InsetBox[
+        StyleBox["\<\"P38\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {7, 61}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{8, -121}], 
+       LineBox[{{8, -261}, {8, 19}}], InsetBox[
+        StyleBox["\<\"P20\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {8, 19}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{9, -80}], 
+       LineBox[{{9, -254}, {9, 94}}], InsetBox[
+        StyleBox["\<\"P17\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {9, 94}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{10, -79}], 
+       LineBox[{{10, -445}, {10, 287}}], InsetBox[
+        StyleBox["\<\"P16\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {10, 287}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{11, -3}], 
+       LineBox[{{11, -151}, {11, 145}}], InsetBox[
+        StyleBox["\<\"P21\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {11, 145}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{12, 5}], 
+       LineBox[{{12, -198}, {12, 208}}], InsetBox[
+        StyleBox["\<\"P3\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {12, 208}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{13, 7}], 
+       LineBox[{{13, -60}, {13, 74}}], InsetBox[
+        StyleBox["\<\"P18\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {13, 74}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{14, 9}], 
+       LineBox[{{14, -182}, {14, 200}}], InsetBox[
+        StyleBox["\<\"P31\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {14, 200}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{15, 16}], 
+       LineBox[{{15, -173}, {15, 205}}], InsetBox[
+        StyleBox["\<\"P40\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {15, 205}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{16, 22}], 
+       LineBox[{{16, -78}, {16, 122}}], InsetBox[
+        StyleBox["\<\"P1\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {16, 122}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{17, 56}], 
+       LineBox[{{17, -251}, {17, 363}}], InsetBox[
+        StyleBox["\<\"P25\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {17, 363}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{18, 63}], 
+       LineBox[{{18, -29}, {18, 155}}], InsetBox[
+        StyleBox["\<\"P13\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {18, 155}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{19, 64}], 
+       LineBox[{{19, -189}, {19, 317}}], InsetBox[
+        StyleBox["\<\"P7\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {19, 317}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{20, 89}], 
+       LineBox[{{20, -5}, {20, 183}}], InsetBox[
+        StyleBox["\<\"P32\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {20, 183}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{21, 129}], 
+       LineBox[{{21, -127}, {21, 385}}], InsetBox[
+        StyleBox["\<\"P19\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {21, 385}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{22, 144}], 
+       LineBox[{{22, -265}, {22, 553}}], InsetBox[
+        StyleBox["\<\"P22\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {22, 553}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{23, 189}], 
+       LineBox[{{23, 75}, {23, 303}}], InsetBox[
+        StyleBox["\<\"P26\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {23, 303}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{24, 203}], 
+       LineBox[{{24, -124}, {24, 530}}], InsetBox[
+        StyleBox["\<\"P42\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {24, 530}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{25, 228}], 
+       LineBox[{{25, 37}, {25, 419}}], InsetBox[
+        StyleBox["\<\"P6\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {25, 419}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{26, 233}], 
+       LineBox[{{26, 18}, {26, 448}}], InsetBox[
+        StyleBox["\<\"P8\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {26, 448}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{27, 242}], 
+       LineBox[{{27, 33}, {27, 451}}], InsetBox[
+        StyleBox["\<\"P33\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {27, 451}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{28, 251}], 
+       LineBox[{{28, 88}, {28, 414}}], InsetBox[
+        StyleBox["\<\"P5\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {28, 414}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{29, 257}], 
+       LineBox[{{29, 30}, {29, 484}}], InsetBox[
+        StyleBox["\<\"P28\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {29, 484}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{30, 298}], 
+       LineBox[{{30, 111}, {30, 485}}], InsetBox[
+        StyleBox["\<\"P9\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {30, 485}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{31, 410}], 
+       LineBox[{{31, 249}, {31, 571}}], InsetBox[
+        StyleBox["\<\"P10\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {31, 571}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{32, 427}], 
+       LineBox[{{32, 304}, {32, 550}}], InsetBox[
+        StyleBox["\<\"P11\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {32, 550}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{33, 481}], 
+       LineBox[{{33, 252}, {33, 710}}], InsetBox[
+        StyleBox["\<\"P35\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {33, 710}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{34, 590}], 
+       LineBox[{{34, 428}, {34, 752}}], InsetBox[
+        StyleBox["\<\"P37\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {34, 752}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{35, 641}], 
+       LineBox[{{35, 257}, {35, 1025}}], InsetBox[
+        StyleBox["\<\"P2\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {35, 1025}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{36, 681}], 
+       LineBox[{{36, 530}, {36, 832}}], InsetBox[
+        StyleBox["\<\"P12\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {36, 832}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{37, 715}], 
+       LineBox[{{37, 419}, {37, 1011}}], InsetBox[
+        StyleBox["\<\"P29\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {37, 1011}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{38, 725}], 
+       LineBox[{{38, 597}, {38, 853}}], InsetBox[
+        StyleBox["\<\"P23\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {38, 853}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{39, 770}], 
+       LineBox[{{39, 618}, {39, 922}}], InsetBox[
+        StyleBox["\<\"P14\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {39, 922}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{40, 1605}], 
+       LineBox[{{40, 1300}, {40, 1910}}], InsetBox[
+        StyleBox["\<\"P43\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {40, 1910}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{41, 1671}], 
+       LineBox[{{41, 1464}, {41, 1878}}], InsetBox[
+        StyleBox["\<\"P34\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {41, 1878}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]]},
+      AspectRatio->0.4,
+      Axes->False,
+      DisplayFunction->Identity,
+      Frame->True,
+      FrameLabel->{None, 
+        FormBox["\"Emission rate,  P/s\"", TraditionalForm]},
+      FrameTicks->{None, Automatic},
+      GridLines->{None, Automatic},
+      ImageSize->1200,
+      LabelStyle->{
+       FontSize -> 24, FontSize -> 24, FontColor -> GrayLevel[0], FontFamily -> 
+        "Arial", FontSlant -> "Plain", FontWeight -> "Plain", FontSize -> 12},
+      PlotLabel->FormBox[
+       "\"Aerosol emission during speaking\"", TraditionalForm],
+      PlotRange->{All, {0, 2200}},
+      PlotRangeClipping->True]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"Null", ",", 
+     GraphicsBox[
+      {AbsolutePointSize[10], AbsoluteThickness[4], PointBox[{1, -164}], 
+       LineBox[{{1, -437}, {1, 109}}], InsetBox[
+        StyleBox["\<\"P25\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {1, 109}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{2, -163}], 
+       LineBox[{{2, -412}, {2, 86}}], InsetBox[
+        StyleBox["\<\"P42\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {2, 86}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{3, -136}], 
+       LineBox[{{3, -415}, {3, 143}}], InsetBox[
+        StyleBox["\<\"P21\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {3, 143}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{4, -122}], 
+       LineBox[{{4, -318}, {4, 74}}], InsetBox[
+        StyleBox["\<\"P32\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {4, 74}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{5, -89}], 
+       LineBox[{{5, -380}, {5, 202}}], InsetBox[
+        StyleBox["\<\"P17\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {5, 202}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{6, -66}], 
+       LineBox[{{6, -208}, {6, 76}}], InsetBox[
+        StyleBox["\<\"P26\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {6, 76}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{7, -50}], 
+       LineBox[{{7, -157}, {7, 57}}], InsetBox[
+        StyleBox["\<\"P39\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {7, 57}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{8, -1}], 
+       LineBox[{{8, -185}, {8, 183}}], InsetBox[
+        StyleBox["\<\"P36\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {8, 183}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{9, 2}], 
+       LineBox[{{9, -411}, {9, 415}}], InsetBox[
+        StyleBox["\<\"P34\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {9, 415}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{10, 31}], 
+       LineBox[{{10, -285}, {10, 347}}], InsetBox[
+        StyleBox["\<\"P8\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {10, 347}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{11, 78}], 
+       LineBox[{{11, -15}, {11, 171}}], InsetBox[
+        StyleBox["\<\"P38\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {11, 171}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{12, 88}], 
+       LineBox[{{12, -151}, {12, 327}}], InsetBox[
+        StyleBox["\<\"P6\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {12, 327}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{13, 114}], 
+       LineBox[{{13, -153}, {13, 381}}], InsetBox[
+        StyleBox["\<\"P40\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {13, 381}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{14, 432}], 
+       LineBox[{{14, 187}, {14, 677}}], InsetBox[
+        StyleBox["\<\"P16\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {14, 677}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{15, 447}], 
+       LineBox[{{15, 258}, {15, 636}}], InsetBox[
+        StyleBox["\<\"P2\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {15, 636}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{16, 455}], 
+       LineBox[{{16, 162}, {16, 748}}], InsetBox[
+        StyleBox["\<\"P15\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {16, 748}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{17, 473}], 
+       LineBox[{{17, 390}, {17, 556}}], InsetBox[
+        StyleBox["\<\"P41\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {17, 556}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{18, 474}], 
+       LineBox[{{18, 106}, {18, 842}}], InsetBox[
+        StyleBox["\<\"P20\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {18, 842}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{19, 486}], 
+       LineBox[{{19, 266}, {19, 706}}], InsetBox[
+        StyleBox["\<\"P19\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {19, 706}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{20, 513}], 
+       LineBox[{{20, 118}, {20, 908}}], InsetBox[
+        StyleBox["\<\"P11\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {20, 908}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{21, 559}], 
+       LineBox[{{21, 397}, {21, 721}}], InsetBox[
+        StyleBox["\<\"P14\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {21, 721}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{22, 564}], 
+       LineBox[{{22, 269}, {22, 859}}], InsetBox[
+        StyleBox["\<\"P5\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {22, 859}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{23, 586}], 
+       LineBox[{{23, -24}, {23, 1196}}], InsetBox[
+        StyleBox["\<\"P43\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {23, 1196}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{24, 666}], 
+       LineBox[{{24, 451}, {24, 881}}], InsetBox[
+        StyleBox["\<\"P37\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {24, 881}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{25, 776}], 
+       LineBox[{{25, 245}, {25, 1307}}], InsetBox[
+        StyleBox["\<\"P12\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {25, 1307}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{26, 943}], 
+       LineBox[{{26, 770}, {26, 1116}}], InsetBox[
+        StyleBox["\<\"P3\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {26, 1116}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{27, 947}], 
+       LineBox[{{27, 472}, {27, 1422}}], InsetBox[
+        StyleBox["\<\"P33\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {27, 1422}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{28, 970}], 
+       LineBox[{{28, 810}, {28, 1130}}], InsetBox[
+        StyleBox["\<\"P35\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {28, 1130}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{29, 1125}], 
+       LineBox[{{29, 964}, {29, 1286}}], InsetBox[
+        StyleBox["\<\"P10\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {29, 1286}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]]},
+      AspectRatio->0.4,
+      Axes->False,
+      DisplayFunction->Identity,
+      Frame->True,
+      FrameLabel->{None, 
+        FormBox["\"Emission rate,  P/s\"", TraditionalForm]},
+      FrameTicks->{None, Automatic},
+      GridLines->{None, Automatic},
+      ImageSize->1200,
+      LabelStyle->{
+       FontSize -> 24, FontSize -> 24, FontColor -> GrayLevel[0], FontFamily -> 
+        "Arial", FontSlant -> "Plain", FontWeight -> "Plain", FontSize -> 12},
+      PlotLabel->FormBox[
+       "\"Aerosol emission during speaking with surgical mask\"", 
+        TraditionalForm],
+      PlotRange->{All, {0, 2200}},
+      PlotRangeClipping->True]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"Null", ",", 
+     GraphicsBox[
+      {AbsolutePointSize[10], AbsoluteThickness[4], PointBox[{1, -199}], 
+       LineBox[{{1, -534}, {1, 136}}], InsetBox[
+        StyleBox["\<\"P40\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {1, 136}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{2, -187}], 
+       LineBox[{{2, -619}, {2, 245}}], InsetBox[
+        StyleBox["\<\"P30\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {2, 245}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{3, -157}], 
+       LineBox[{{3, -459}, {3, 145}}], InsetBox[
+        StyleBox["\<\"P37\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {3, 145}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{4, -150}], 
+       LineBox[{{4, -346}, {4, 46}}], InsetBox[
+        StyleBox["\<\"P23\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {4, 46}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{5, -145}], 
+       LineBox[{{5, -411}, {5, 121}}], InsetBox[
+        StyleBox["\<\"P31\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {5, 121}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{6, -127}], 
+       LineBox[{{6, -364}, {6, 110}}], InsetBox[
+        StyleBox["\<\"P5\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {6, 110}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{7, -105}], 
+       LineBox[{{7, -256}, {7, 46}}], InsetBox[
+        StyleBox["\<\"P41\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {7, 46}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{8, -98}], 
+       LineBox[{{8, -269}, {8, 73}}], InsetBox[
+        StyleBox["\<\"P1\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {8, 73}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{9, -48}], 
+       LineBox[{{9, -246}, {9, 150}}], InsetBox[
+        StyleBox["\<\"P24\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {9, 150}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{10, -44}], 
+       LineBox[{{10, -254}, {10, 166}}], InsetBox[
+        StyleBox["\<\"P35\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {10, 166}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{11, -11}], 
+       LineBox[{{11, -207}, {11, 185}}], InsetBox[
+        StyleBox["\<\"P8\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {11, 185}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{12, -2}], 
+       LineBox[{{12, -319}, {12, 315}}], InsetBox[
+        StyleBox["\<\"P16\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {12, 315}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{13, -1}], 
+       LineBox[{{13, -80}, {13, 78}}], InsetBox[
+        StyleBox["\<\"P19\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {13, 78}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{14, 21}], 
+       LineBox[{{14, -103}, {14, 145}}], InsetBox[
+        StyleBox["\<\"P10\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {14, 145}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{15, 21}], 
+       LineBox[{{15, -223}, {15, 265}}], InsetBox[
+        StyleBox["\<\"P22\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {15, 265}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{16, 23}], 
+       LineBox[{{16, -143}, {16, 189}}], InsetBox[
+        StyleBox["\<\"P25\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {16, 189}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{17, 39}], 
+       LineBox[{{17, -174}, {17, 252}}], InsetBox[
+        StyleBox["\<\"P15\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {17, 252}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{18, 48}], 
+       LineBox[{{18, 13}, {18, 83}}], InsetBox[
+        StyleBox["\<\"P2\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {18, 83}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{19, 48}], 
+       LineBox[{{19, -116}, {19, 212}}], InsetBox[
+        StyleBox["\<\"P42\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {19, 212}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{20, 86}], 
+       LineBox[{{20, -105}, {20, 277}}], InsetBox[
+        StyleBox["\<\"P11\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {20, 277}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{21, 93}], 
+       LineBox[{{21, -2}, {21, 188}}], InsetBox[
+        StyleBox["\<\"P26\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {21, 188}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{22, 117}], 
+       LineBox[{{22, -187}, {22, 421}}], InsetBox[
+        StyleBox["\<\"P28\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {22, 421}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{23, 119}], 
+       LineBox[{{23, -32}, {23, 270}}], InsetBox[
+        StyleBox["\<\"P13\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {23, 270}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{24, 149}], 
+       LineBox[{{24, -219}, {24, 517}}], InsetBox[
+        StyleBox["\<\"P4\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {24, 517}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{25, 181}], 
+       LineBox[{{25, -28}, {25, 390}}], InsetBox[
+        StyleBox["\<\"P7\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {25, 390}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{26, 181}], 
+       LineBox[{{26, -42}, {26, 404}}], InsetBox[
+        StyleBox["\<\"P29\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {26, 404}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{27, 200}], 
+       LineBox[{{27, 117}, {27, 283}}], InsetBox[
+        StyleBox["\<\"P9\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {27, 283}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{28, 204}], 
+       LineBox[{{28, 64}, {28, 344}}], InsetBox[
+        StyleBox["\<\"P14\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {28, 344}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{29, 228}], 
+       LineBox[{{29, 75}, {29, 381}}], InsetBox[
+        StyleBox["\<\"P32\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {29, 381}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{30, 274}], 
+       LineBox[{{30, -43}, {30, 591}}], InsetBox[
+        StyleBox["\<\"P20\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {30, 591}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{31, 296}], 
+       LineBox[{{31, 72}, {31, 520}}], InsetBox[
+        StyleBox["\<\"P33\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {31, 520}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{32, 350}], 
+       LineBox[{{32, 175}, {32, 525}}], InsetBox[
+        StyleBox["\<\"P18\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {32, 525}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{33, 455}], 
+       LineBox[{{33, 153}, {33, 757}}], InsetBox[
+        StyleBox["\<\"P43\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {33, 757}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{34, 559}], 
+       LineBox[{{34, 116}, {34, 1002}}], InsetBox[
+        StyleBox["\<\"P34\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {34, 1002}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]], PointBox[{35, 589}], 
+       LineBox[{{35, 235}, {35, 943}}], InsetBox[
+        StyleBox["\<\"P12\"\>",
+         StripOnInput->False,
+         FontFamily->"Arial",
+         FontSize->16,
+         FontWeight->"Plain",
+         FontSlant->"Plain",
+         FontColor->GrayLevel[0]], {35, 943}, NCache[
+        ImageScaled[{Rational[1, 2], Rational[-1, 2]}], 
+         ImageScaled[{0.5, -0.5}]]]},
+      AspectRatio->0.4,
+      Axes->False,
+      DisplayFunction->Identity,
+      Frame->True,
+      FrameLabel->{None, 
+        FormBox["\"Emission rate,  P/s\"", TraditionalForm]},
+      FrameTicks->{None, Automatic},
+      GridLines->{None, Automatic},
+      ImageSize->1200,
+      LabelStyle->{
+       FontSize -> 24, FontSize -> 24, FontColor -> GrayLevel[0], FontFamily -> 
+        "Arial", FontSlant -> "Plain", FontWeight -> "Plain", FontSize -> 12},
+      PlotLabel->FormBox[
+       "\"Aerosol emission during breathing\"", TraditionalForm],
+      PlotRange->{All, {0, 2200}},
+      PlotRangeClipping->True]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.8843472932925453`*^9, 3.8843473098771143`*^9}, 
+   3.8843473431284046`*^9, 3.884347390884863*^9, {3.884347499795826*^9, 
+   3.8843475284298515`*^9}, 3.884347687237336*^9, {3.8843477259221272`*^9, 
+   3.8843477297167387`*^9}, 3.884347844762405*^9, {3.88434788495218*^9, 
+   3.8843478956938767`*^9}, {3.884347961527734*^9, 3.8843479670005407`*^9}, 
+   3.884348271163185*^9, 3.884348352760964*^9, {3.884348383176606*^9, 
+   3.884348396669319*^9}, 3.884348479646962*^9, 3.8843485222925243`*^9, 
+   3.884349136949565*^9, 3.884349203478033*^9, {3.8843492611752925`*^9, 
+   3.884349350074355*^9}, 3.963453978030369*^9, 3.9634540105225086`*^9, 
+   3.9634540990836105`*^9, {3.96345418337615*^9, 3.9634541987969112`*^9}, {
+   3.9634542584775486`*^9, 3.963454276281185*^9}, 3.9634543944473896`*^9},
+ CellLabel->
+  "Out[100]=",ExpressionUUID->"31b1180b-f2da-164d-a1c9-32f08d9ee13a"]
+}, Open  ]]
+},
+WindowSize->{718.5, 735},
+WindowMargins->{{Automatic, -5.25}, {Automatic, 0}},
+Magnification:>0.6,
+FrontEndVersion->"14.2 for Microsoft Windows (64-bit) (March 14, 2025)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"ba03c06d-8cac-4470-9fe0-280754c2b15c"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 952, 25, 96, "Input",ExpressionUUID->"f0040bd0-ff3f-42bd-a338-ea3d70f1a482"],
+Cell[CellGroupData[{
+Cell[1557, 51, 724, 16, 16, "Print",ExpressionUUID->"d1efa33f-a458-a048-b43a-4a04c7ea2b39"],
+Cell[2284, 69, 723, 16, 16, "Print",ExpressionUUID->"01e45f56-6081-a746-8783-9f5bb422c0dc"],
+Cell[3010, 87, 725, 16, 16, "Print",ExpressionUUID->"47d3f737-fbf1-be40-8830-81cf3690715c"]
+}, Open  ]]
+}, Open  ]],
+Cell[3762, 107, 17595, 428, 1124, "Input",ExpressionUUID->"73abc4bf-21fd-49a6-a30b-8e25bf10f478"],
+Cell[21360, 537, 750, 17, 39, "Input",ExpressionUUID->"8a418de8-a494-47fe-9797-c78c2f8d67cb"],
+Cell[CellGroupData[{
+Cell[22135, 558, 2356, 62, 74, "Input",ExpressionUUID->"45b43cb1-ad81-49c3-a46d-a17dc913d5e4"],
+Cell[24494, 622, 23015, 374, 1557, "Output",ExpressionUUID->"36dfd9cb-9f40-8a47-93dd-22fb1cc6bcc6"],
+Cell[47512, 998, 375, 6, 22, "Output",ExpressionUUID->"c4c41f7c-4bb2-ce45-a607-0a43942fb262"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[47924, 1009, 179, 3, 19, "Input",ExpressionUUID->"9ff98a41-763e-473a-af27-4b403915edc1"],
+Cell[48106, 1014, 560, 15, 22, "Output",ExpressionUUID->"383b98b1-b008-f841-9b82-55bbb9a3c72d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[48703, 1034, 301, 6, 19, "Input",ExpressionUUID->"b3dc169c-06e7-4b03-916b-b2b79f177eac"],
+Cell[49007, 1042, 638, 16, 22, "Output",ExpressionUUID->"3ae05caa-c58c-594a-ae9a-99e42d2bb6e0"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[49682, 1063, 945, 19, 39, "Input",ExpressionUUID->"4017caf8-3e86-4a40-8cbc-a2d88edc7b82"],
+Cell[50630, 1084, 813, 20, 45, "Output",ExpressionUUID->"dcccc862-1b26-3241-8cfd-77ed83c8ac3e"],
+Cell[51446, 1106, 352, 4, 22, "Output",ExpressionUUID->"b81007d7-e58d-6f44-9730-fd4231d9a5dd"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[51835, 1115, 2703, 65, 176, "Input",ExpressionUUID->"0209627b-b210-4a97-81d6-0716459b13ec"],
+Cell[54541, 1182, 3912, 100, 64, "Output",ExpressionUUID->"a0948294-6ea1-ee4e-9397-3642480a17f6"]
+}, Open  ]],
+Cell[58468, 1285, 4689, 113, 96, "Input",ExpressionUUID->"783627bd-ea2a-4522-84cf-350156625de9"],
+Cell[CellGroupData[{
+Cell[63182, 1402, 9998, 227, 370, "Input",ExpressionUUID->"dff22444-d866-4740-a7e8-121f869c8fac"],
+Cell[CellGroupData[{
+Cell[73205, 1633, 7538, 211, 139, "Print",ExpressionUUID->"e5c69b71-adbd-914d-8979-66a67395cf06"],
+Cell[80746, 1846, 9618, 275, 140, "Print",ExpressionUUID->"bfa3de94-4e7e-d343-8384-600620fbdac5"],
+Cell[90367, 2123, 8231, 232, 141, "Print",ExpressionUUID->"850719e9-4f75-b24f-8097-78125544a64e"]
+}, Open  ]],
+Cell[98613, 2358, 44479, 1126, 312, "Output",ExpressionUUID->"31b1180b-f2da-164d-a1c9-32f08d9ee13a"]
+}, Open  ]]
+}
+]
+*)
+

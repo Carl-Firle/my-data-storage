@@ -1,0 +1,1161 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     45808,       1153]
+NotebookOptionsPosition[     40564,       1058]
+NotebookOutlinePosition[     40965,       1074]
+CellTagsIndexPosition[     40922,       1071]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["detect number of discussed titles", "Section",
+ CellChangeTimes->{{3.925833000879589*^9, 
+  3.925833035118924*^9}},ExpressionUUID->"feebfaaf-ca24-4a50-a9de-\
+d731429e8c10"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"d", "=", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"dAR", ",", "dCF"}], "}"}], "=", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+        "Import", 
+         "[", "\"\<https://github.com/Carl-Firle/my-data-storage/raw/refs/\
+heads/main/data/20231221-01/Screening%20List%20AR.xlsx\>\"", "]"}], "[", 
+        RowBox[{"[", "3", "]"}], "]"}], ",", 
+       RowBox[{
+        RowBox[{
+        "Import", 
+         "[", "\"\<https://github.com/Carl-Firle/my-data-storage/raw/refs/\
+heads/main/data/20231221-01/Screening%20List%20CF.xlsx\>\"", "]"}], "[", 
+        RowBox[{"[", "3", "]"}], "]"}]}], "}"}]}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\n", 
+ RowBox[{
+  RowBox[{"disc", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Select", "[", 
+      RowBox[{"#", ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"#", "[", 
+          RowBox[{"[", "2", "]"}], "]"}], "==", "2."}], "&"}]}], "]"}], "&"}],
+     "/@", "d"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.909249460355462*^9, 3.9092494953185663`*^9}, {
+  3.90924954196634*^9, 3.9092496262830987`*^9}, {3.909332275918229*^9, 
+  3.9093322800093246`*^9}, {3.925833076097299*^9, 3.925833079062645*^9}, {
+  3.9258331208428288`*^9, 3.925833166242919*^9}, {3.963587613143923*^9, 
+  3.963587624837309*^9}, {3.9635876582482567`*^9, 3.963587659166649*^9}},
+ CellLabel->"In[12]:=",ExpressionUUID->"0ce84330-6c81-46ae-8552-d4558bb8505b"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Row", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"Text", "[", "\"\<Number of discussed titles: \>\"", "]"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"Length", "@", 
+     RowBox[{"Select", "[", 
+      RowBox[{
+       RowBox[{"Tally", "[", 
+        RowBox[{"Flatten", "[", 
+         RowBox[{"disc", "[", 
+          RowBox[{"[", 
+           RowBox[{"All", ",", "All", ",", "4"}], "]"}], "]"}], "]"}], "]"}], 
+       ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"#", "[", 
+          RowBox[{"[", "2", "]"}], "]"}], "==", "1"}], "&"}]}], "]"}]}]}], 
+   "}"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Row", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{
+    "Text", "[", "\"\<Percentage of discussed titles of all screened studies: \
+\>\"", "]"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"N", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Length", "@", 
+        RowBox[{"Select", "[", 
+         RowBox[{
+          RowBox[{"Tally", "[", 
+           RowBox[{"Flatten", "[", 
+            RowBox[{"disc", "[", 
+             RowBox[{"[", 
+              RowBox[{"All", ",", "All", ",", "4"}], "]"}], "]"}], "]"}], 
+           "]"}], ",", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"#", "[", 
+             RowBox[{"[", "2", "]"}], "]"}], "==", "1"}], "&"}]}], "]"}]}], "/",
+        "531"}], "*", "100"}], "]"}]}], "}"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.9258332945101*^9, 3.9258334356455097`*^9}, {
+  3.925833523219853*^9, 3.9258335316007276`*^9}, {3.9258336468676414`*^9, 
+  3.9258337449686193`*^9}, {3.925833793633608*^9, 3.9258338488350163`*^9}, {
+  3.925833891840207*^9, 3.9258338924874907`*^9}},
+ CellLabel->"In[14]:=",ExpressionUUID->"e40914b3-5ce2-4957-95cf-5d59a13b27ea"],
+
+Cell[BoxData[
+ TemplateBox[{
+   InterpretationBox[
+    Cell[
+     BoxData[
+      FormBox["\"Number of discussed titles: \"", TextForm]], "InlineText"], 
+    Text["Number of discussed titles: "]], "72"},
+  "RowDefault"]], "Output",
+ CellChangeTimes->{{3.9258332990158834`*^9, 3.9258333416353893`*^9}, {
+   3.925833382713103*^9, 3.9258334361369896`*^9}, {3.9258335236720753`*^9, 
+   3.925833532306906*^9}, {3.9258336636272645`*^9, 3.9258336968095083`*^9}, 
+   3.925833796402647*^9, {3.925833829167359*^9, 3.9258338492143855`*^9}, 
+   3.9258338936034327`*^9, 3.963587666451412*^9},
+ CellLabel->"Out[14]=",ExpressionUUID->"b1651b70-a84f-9740-85c8-f83f3c5e417a"],
+
+Cell[BoxData[
+ TemplateBox[{
+   InterpretationBox[
+    Cell[
+     BoxData[
+      FormBox[
+      "\"Percentage of discussed titles of all screened studies: \"", 
+       TextForm]], "InlineText"], 
+    Text["Percentage of discussed titles of all screened studies: "]], 
+   "13.559322033898304`"},
+  "RowDefault"]], "Output",
+ CellChangeTimes->{{3.9258332990158834`*^9, 3.9258333416353893`*^9}, {
+   3.925833382713103*^9, 3.9258334361369896`*^9}, {3.9258335236720753`*^9, 
+   3.925833532306906*^9}, {3.9258336636272645`*^9, 3.9258336968095083`*^9}, 
+   3.925833796402647*^9, {3.925833829167359*^9, 3.9258338492143855`*^9}, 
+   3.9258338936034327`*^9, 3.9635876664549065`*^9},
+ CellLabel->"Out[15]=",ExpressionUUID->"bffb47df-8099-8e48-b01c-13915d40a743"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "/@", "disc"}]], "Input",
+ CellChangeTimes->{{3.9258331118249016`*^9, 3.9258331123678074`*^9}, {
+  3.9258331973713865`*^9, 3.9258332470729747`*^9}},
+ CellLabel->"In[16]:=",ExpressionUUID->"d37e0690-af9a-4f97-9590-122b863b1345"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"56", ",", "22"}], "}"}]], "Output",
+ CellChangeTimes->{3.925833247565967*^9, 3.9635876678789444`*^9},
+ CellLabel->"Out[16]=",ExpressionUUID->"c14e8d7d-3ce1-7647-9951-edbf89e353b5"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["detect number of included/excluded titles", "Section",
+ CellChangeTimes->{{3.925833043208486*^9, 
+  3.9258330608710356`*^9}},ExpressionUUID->"e5a56b45-e2a3-4e18-b818-\
+6ab4fa3c5f4d"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"d", "=", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"dAR", ",", "dCF"}], "}"}], "=", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+        "Import", 
+         "[", "\"\<https://github.com/Carl-Firle/my-data-storage/raw/refs/\
+heads/main/data/20231221-01/Screening%20List%20AR.xlsx\>\"", "]"}], "[", 
+        RowBox[{"[", "1", "]"}], "]"}], ",", 
+       RowBox[{
+        RowBox[{
+        "Import", 
+         "[", "\"\<https://github.com/Carl-Firle/my-data-storage/raw/refs/\
+heads/main/data/20231221-01/Screening%20List%20CF.xlsx\>\"", "]"}], "[", 
+        RowBox[{"[", "1", "]"}], "]"}]}], "}"}]}]}], ";"}], 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.909249460355462*^9, 3.9092494953185663`*^9}, {
+   3.90924954196634*^9, 3.9092496262830987`*^9}, {3.909332275918229*^9, 
+   3.9093322800093246`*^9}, {3.925833076097299*^9, 3.925833079062645*^9}, {
+   3.9258331208428288`*^9, 3.925833166242919*^9}, {3.963587613143923*^9, 
+   3.963587624837309*^9}, {3.9635876582482567`*^9, 3.963587659166649*^9}, 
+   3.9635879307645893`*^9, {3.963588082785803*^9, 3.96358808576799*^9}},
+ CellLabel->"In[44]:=",ExpressionUUID->"cbf3e11a-9363-9b48-9d21-c71356a68815"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"#", "[", 
+     RowBox[{"[", 
+      RowBox[{"All", ",", "4"}], "]"}], "]"}], "&"}], "/@", "d"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{"Length", "/@", "%"}], ")"}], "-", "1"}]}], "Input",
+ CellChangeTimes->{{3.9092496830934734`*^9, 3.9092498431117144`*^9}, {
+   3.9093323092341213`*^9, 3.9093323131234636`*^9}, {3.909332430640489*^9, 
+   3.9093324376091895`*^9}, {3.9093327683894663`*^9, 3.9093328321374636`*^9}, 
+   3.9093328750525312`*^9, {3.9093329192883573`*^9, 3.9093329283075924`*^9}},
+ CellLabel->"In[45]:=",ExpressionUUID->"4f256b89-8bc5-4523-8a66-46143874edbe"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"531", ",", "531"}], "}"}]], "Output",
+ CellChangeTimes->{{3.9092497116758585`*^9, 3.909249843686562*^9}, 
+   3.909251299238471*^9, 3.9092514674638753`*^9, {3.9093322668028355`*^9, 
+   3.9093323148245735`*^9}, {3.9093327685740232`*^9, 3.909332832402177*^9}, 
+   3.9093328756553583`*^9, 3.9093329288960447`*^9, 3.9093357726578236`*^9, 
+   3.909336247753296*^9, 3.909336371423128*^9, 3.9093369143884387`*^9, 
+   3.9095004969766126`*^9, 3.9109762856951017`*^9, 3.963588089106388*^9},
+ CellLabel->"Out[46]=",ExpressionUUID->"4e38ca42-69c4-b74a-ac1b-9fbd552be9fb"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"719", "-", "188"}]], "Input",
+ CellChangeTimes->{{3.910976390710349*^9, 3.9109763928554235`*^9}},
+ CellLabel->"In[47]:=",ExpressionUUID->"e2833ad4-80be-4da7-a6dd-0b7419fe9ed8"],
+
+Cell[BoxData["531"], "Output",
+ CellChangeTimes->{3.910976393417941*^9, 3.9635880904514503`*^9},
+ CellLabel->"Out[47]=",ExpressionUUID->"f82b498d-62cd-2d4b-9df5-ffe9caee10a1"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"Tally", "[", 
+    RowBox[{"Rest", "[", 
+     RowBox[{"#", "[", 
+      RowBox[{"[", 
+       RowBox[{"All", ",", "2"}], "]"}], "]"}], "]"}], "]"}], "&"}], "/@", 
+  "d"}]], "Input",
+ CellChangeTimes->{{3.9093370816903768`*^9, 3.90933713534505*^9}},
+ CellLabel->"In[21]:=",ExpressionUUID->"b29de72c-ce00-4d65-8402-d93e3c532bc4"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"0.`", ",", "444"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"2.`", ",", "56"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"1.`", ",", "41"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"0.`", ",", "421"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"1.`", ",", "106"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"2.`", ",", "22"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\<\" \"\>", ",", "1"}], "}"}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.909337115316337*^9, 3.9093371360437193`*^9}, 
+   3.9095004998130884`*^9, 3.9109764486929708`*^9, 3.963587729616762*^9},
+ CellLabel->"Out[21]=",ExpressionUUID->"cf093baf-2109-b94f-8dc6-4bf96ae99e74"]
+}, Open  ]],
+
+Cell["\<\
+previous values {{{0., 444}, {1., 88}}, {{0., 423}, {1., 109}}}\
+\>", "Text",
+ CellChangeTimes->{{3.909337115316337*^9, 3.9093371360437193`*^9}, 
+   3.9095004998130884`*^9, {3.910976434480814*^9, 
+   3.9109764450012126`*^9}},ExpressionUUID->"9606904b-d9eb-4ca3-9015-\
+7eccc9f59cf6"],
+
+Cell[TextData[{
+ "vor Abgleich des Nicht-\[CapitalUDoubleDot]berschneidungsbereichs (cor)",
+ Cell[BoxData[
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"0.`", ",", "443"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"1.`", ",", "89"}], "}"}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"0.`", ",", "417"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"1.`", ",", "115"}], "}"}]}], "}"}]}], "}"}]], "Output",
+  CellChangeTimes->{{3.909337115316337*^9, 3.9093371360437193`*^9}},
+  ExpressionUUID->"3991c8ec-9f1c-4a70-b466-174cc69cf3b3"]
+}], "Text",
+ CellChangeTimes->{{3.90950043068933*^9, 
+  3.9095004811153717`*^9}},ExpressionUUID->"0afb15cd-43f6-4173-b745-\
+01a70e95621d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"incl", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Select", "[", 
+      RowBox[{"#", ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"#", "[", 
+          RowBox[{"[", "2", "]"}], "]"}], "==", "1."}], "&"}]}], "]"}], "&"}],
+     "/@", "d"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"incl2", "=", 
+   RowBox[{"Tally", "[", 
+    RowBox[{"Flatten", "[", 
+     RowBox[{"incl", "[", 
+      RowBox[{"[", 
+       RowBox[{"All", ",", "All", ",", "4"}], "]"}], "]"}], "]"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"nincl", "=", 
+   RowBox[{"Length", "[", 
+    RowBox[{"Select", "[", 
+     RowBox[{"incl2", ",", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"#", "[", 
+         RowBox[{"[", "2", "]"}], "]"}], "==", "2"}], "&"}]}], "]"}], "]"}]}],
+   ";"}], "\[IndentingNewLine]", 
+ RowBox[{"\"\<both included\\n\>\"", "<>", 
+  RowBox[{"ToString", "[", "nincl", "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"nsepinlc", "=", 
+   RowBox[{"Length", "[", 
+    RowBox[{"Select", "[", 
+     RowBox[{"incl2", ",", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"#", "[", 
+         RowBox[{"[", "2", "]"}], "]"}], "==", "1"}], "&"}]}], "]"}], "]"}]}],
+   ";"}], "\[IndentingNewLine]", 
+ RowBox[{"\"\<separately included\\n\>\"", " ", "<>", 
+  RowBox[{"ToString", "[", "nsepinlc", "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Select", "[", 
+  RowBox[{"incl2", ",", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"#", "[", 
+      RowBox[{"[", "2", "]"}], "]"}], "==", "1"}], "&"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.909337539152396*^9, 3.909337596705183*^9}, {
+   3.9093376453159256`*^9, 3.9093376458161526`*^9}, 3.9093377473839617`*^9, {
+   3.90933790940708*^9, 3.9093379145728073`*^9}, {3.9093379449335833`*^9, 
+   3.9093379506257687`*^9}, 3.9093386229415593`*^9, {3.90941951520656*^9, 
+   3.9094195374683514`*^9}, {3.925832241185336*^9, 3.925832241983335*^9}},
+ CellLabel->"In[48]:=",ExpressionUUID->"9cd3c10d-b789-4ffc-939d-016f076de23c"],
+
+Cell[BoxData["\<\"both included\\n88\"\>"], "Output",
+ CellChangeTimes->{{3.9093381083205557`*^9, 3.909338123926894*^9}, {
+   3.909338230966161*^9, 3.909338315912259*^9}, 3.9093383628857393`*^9, {
+   3.909338405402238*^9, 3.9093384121095037`*^9}, {3.9093384771074553`*^9, 
+   3.909338483276626*^9}, 3.9094195381057982`*^9, 3.9095006479213114`*^9, 
+   3.9109765264068365`*^9, 3.9635880930765705`*^9},
+ CellLabel->"Out[51]=",ExpressionUUID->"0d1ee07e-a423-a647-a385-3a1972cb6dc8"],
+
+Cell[BoxData["\<\"separately included\\n20\"\>"], "Output",
+ CellChangeTimes->{{3.9093381083205557`*^9, 3.909338123926894*^9}, {
+   3.909338230966161*^9, 3.909338315912259*^9}, 3.9093383628857393`*^9, {
+   3.909338405402238*^9, 3.9093384121095037`*^9}, {3.9093384771074553`*^9, 
+   3.909338483276626*^9}, 3.9094195381057982`*^9, 3.9095006479213114`*^9, 
+   3.9109765264068365`*^9, 3.963588093081583*^9},
+ CellLabel->"Out[53]=",ExpressionUUID->"53cbc07c-48c7-eb4c-8703-09871d8f41ba"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"\<\"4th International Conference and Exhibition on\"\>", ",", 
+     "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"A Role of Medial Olivocochlear Reflex as a Protection \
+Mechanism from Noise-Induced Hearing Loss Revealed in Short-Practicing \
+Violinists\"\>", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"ABR findings in musicians with normal audiogram and \
+otoacoustic emissions: evidence of cochlear synaptopathy?\"\>", ",", "1"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Acceptance of hearing protection aids in members of an \
+instrumental and voice music band\"\>", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Acute hearing loss in the orchestral musician: Noise trauma \
+or idiopathic sudden deafness?\"\>", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"An auditive protection for professional musicians\"\>", ",", 
+     "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Auditory Electrophysiological and Perceptual Measures in \
+Student Musicians with High Sound Exposure\"\>", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Characteristics of noise exposure during solitary trumpet \
+playing: immediate impact on distortion-product otoacoustic emissions and \
+long-term implications for hearing\"\>", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Do professional musicians carry a risk of hearing disorders?\
+\"\>", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Effect of musical training on masking paradigm\"\>", ",", 
+     "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Environmental factors in susceptibility to noise-induced \
+hearing loss in student musicians\"\>", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Hearing conservation and noise management practices in \
+professional orchestras\"\>", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Multiple Auditory Processing Assessment as a tool to \
+quantify hidden hearing loss\"\>", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Noise Exposure and Hearing Protection in Marching Band \
+Students\"\>", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Noise-induced hearing loss and orchestral musicians\"\>", ",",
+      "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Pop-rock musicians: assessment of their satisfaction \
+provided by hearing protectors\"\>", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Review of orchestra musicians' hearing loss riskss\"\>", ",",
+      "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Temporary threshold shift after exposure to pop music\"\>", ",",
+      "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"The otoacoustic emissions evoked as hearing disorders \
+monitoring tool in young musicians\"\>", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Transient evoked otoacoustic emissions in rock \
+musicians\"\>", ",", "1"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.9093381083205557`*^9, 3.909338123926894*^9}, {
+   3.909338230966161*^9, 3.909338315912259*^9}, 3.9093383628857393`*^9, {
+   3.909338405402238*^9, 3.9093384121095037`*^9}, {3.9093384771074553`*^9, 
+   3.909338483276626*^9}, 3.9094195381057982`*^9, 3.9095006479213114`*^9, 
+   3.9109765264068365`*^9, 3.9635880930882053`*^9},
+ CellLabel->"Out[54]=",ExpressionUUID->"3657ced7-3009-4148-9f63-c3b055e2d50b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Intersection", " ", "\[LongDash]", " ", 
+    RowBox[{"Antonia", " ", "hat", " ", "88", " ", "eingeschlossen"}], ",", 
+    " ", 
+    RowBox[{
+    "davon", " ", "sind", " ", "88", " ", "deckungsgleich", " ", "mit", " ", 
+     "meinen"}]}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"88", "/", "88"}], "//", "N"}]}]], "Input",
+ CellChangeTimes->{{3.9093385397175684`*^9, 3.909338547969596*^9}, {
+  3.9093386021309924`*^9, 3.909338660170811*^9}, {3.909500690131778*^9, 
+  3.9095006934805346`*^9}},
+ CellLabel->"In[12]:=",ExpressionUUID->"25fc94b7-721c-4d4b-8fc9-2dc98a63a84a"],
+
+Cell[BoxData["1.`"], "Output",
+ CellChangeTimes->{{3.909338544326503*^9, 3.9093385483853807`*^9}, 
+   3.9095006951902533`*^9},
+ CellLabel->"Out[12]=",ExpressionUUID->"e9a82660-9b24-4fbf-8200-7880d0373fac"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "@", "incl2"}]], "Input",
+ CellChangeTimes->{{3.909420898567834*^9, 3.9094209046375976`*^9}},
+ CellLabel->
+  "In[393]:=",ExpressionUUID->"7734313d-8416-426f-afc1-978abfcc65a2"],
+
+Cell[BoxData["108"], "Output",
+ CellChangeTimes->{3.909420904893895*^9, 3.9095006998072195`*^9, 
+  3.9109765400625243`*^9},
+ CellLabel->
+  "Out[393]=",ExpressionUUID->"bdbb43fe-93d1-43c3-8046-0e6878df76c7"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"fulltextlist", "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"#", "[", 
+       RowBox[{"[", "1", "]"}], "]"}], "&"}], "/@", 
+     RowBox[{"GatherBy", "[", 
+      RowBox[{
+       RowBox[{"Flatten", "[", 
+        RowBox[{"incl", ",", "1"}], "]"}], ",", 
+       RowBox[{
+        RowBox[{"#", "[", 
+         RowBox[{"[", "4", "]"}], "]"}], "&"}]}], "]"}]}]}], ";"}], "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"exportlist", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"#", "[", 
+      RowBox[{"[", 
+       RowBox[{"{", 
+        RowBox[{
+        "4", ",", "2", ",", "3", ",", "5", ",", "1", ",", "6", ",", "7", ",", 
+         "8", ",", "9", ",", "10", ",", "11", ",", "12"}], "}"}], "]"}], 
+      "]"}], "&"}], "/@", 
+    RowBox[{"Prepend", "[", 
+     RowBox[{"fulltextlist", ",", 
+      RowBox[{"dAR", "[", 
+       RowBox[{"[", "1", "]"}], "]"}]}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"exportlist", "[", 
+    RowBox[{"[", 
+     RowBox[{
+      RowBox[{"2", ";;", 
+       RowBox[{"-", "1"}]}], ",", "2"}], "]"}], "]"}], "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{"\"\<\>\"", ",", 
+     RowBox[{"Length", "@", 
+      RowBox[{"exportlist", "[", 
+       RowBox[{"[", 
+        RowBox[{
+         RowBox[{"2", ";;", 
+          RowBox[{"-", "1"}]}], ",", "2"}], "]"}], "]"}]}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Export", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"NotebookDirectory", "[", "]"}], 
+    "~~", "\"\<Screening list Fulltext.xlsx\>\""}], ",", "exportlist"}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.909419636540246*^9, 3.9094196376456656`*^9}, {
+   3.90941980932603*^9, 3.9094199056634493`*^9}, {3.909420061315568*^9, 
+   3.909420065158134*^9}, 3.909420461839286*^9, {3.90942071760588*^9, 
+   3.90942073514153*^9}, {3.963588125587963*^9, 
+   3.963588130390314*^9}},ExpressionUUID->"abb67ec4-a661-4bbb-a8c9-\
+86b9dda2399b"],
+
+Cell[BoxData["\<\"D:\\\\Daten\\\\b1464\\\\Desktop\\\\Screening list \
+Fulltext.xlsx\"\>"], "Output",
+ CellChangeTimes->{{3.9094200845001516`*^9, 3.909420126892106*^9}, 
+   3.909420290846525*^9, 3.909420375262532*^9, 3.909420739205804*^9, 
+   3.909500712237877*^9, 3.9109766949104185`*^9},
+ CellLabel->
+  "Out[397]=",ExpressionUUID->"6a3ddd44-8dc0-4508-8a1a-f32d189e9086"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["previous corrections", "Title",
+ CellChangeTimes->{{3.909335800995969*^9, 
+  3.909335806015544*^9}},ExpressionUUID->"94dcf40b-ef04-4ad1-b38a-\
+b0e914f84bfc"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Bei CF - Datensatz sind noch doppelte Titel bei Medline mit . drinnen\
+\>", "Subsubsection",
+ CellChangeTimes->{{3.9092514699745793`*^9, 
+  3.909251495577387*^9}},ExpressionUUID->"d9e77852-ad89-4a8f-90f9-\
+0d75bc37d6b1"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"dCFc", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"StringTake", "[", 
+         RowBox[{"#", ",", 
+          RowBox[{"-", "1"}]}], "]"}], "==", "\"\<.\>\""}], ",", 
+       RowBox[{"StringTake", "[", 
+        RowBox[{"#", ",", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", 
+           RowBox[{"-", "2"}]}], "}"}]}], "]"}], ",", "#"}], "]"}], "&"}], "/@", 
+    RowBox[{"dCF", "[", 
+     RowBox[{"[", 
+      RowBox[{"All", ",", "4"}], "]"}], "]"}]}]}], ";"}], "\n", 
+ RowBox[{"Length", "@", "dCFc"}], "\n", 
+ RowBox[{
+  RowBox[{"dCFc2", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"StringTake", "[", 
+          RowBox[{"#", ",", "1"}], "]"}], "==", "\"\<[\>\""}], " ", "&&", " ", 
+        RowBox[{
+         RowBox[{"StringTake", "[", 
+          RowBox[{"#", ",", 
+           RowBox[{"-", "1"}]}], "]"}], "==", "\"\<]\>\""}]}], ",", 
+       RowBox[{"StringTake", "[", 
+        RowBox[{"#", ",", 
+         RowBox[{"{", 
+          RowBox[{"2", ",", 
+           RowBox[{"-", "2"}]}], "}"}]}], "]"}], ",", "#"}], "]"}], "&"}], "/@",
+     "dCFc"}]}], ";"}], "\n", 
+ RowBox[{"Length", "@", "dCFc2"}], "\[IndentingNewLine]", 
+ RowBox[{"duplCF", "=", 
+  RowBox[{"Select", "[", 
+   RowBox[{
+    RowBox[{"Tally", "[", "dCFc2", "]"}], ",", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"#", "[", 
+       RowBox[{"[", "2", "]"}], "]"}], "==", "2"}], "&"}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Length", "@", "duplCF"}]}], "Input",
+ CellChangeTimes->{{3.909250200343828*^9, 3.9092502170245624`*^9}, 
+   3.9092502573755054`*^9, {3.909251321854479*^9, 3.9092513321979504`*^9}, {
+   3.9092513815504932`*^9, 3.909251439495621*^9}, {3.909251612019144*^9, 
+   3.9092516466895995`*^9}, {3.9093330729625487`*^9, 
+   3.9093330731219225`*^9}, {3.909333135750598*^9, 3.9093331421298637`*^9}, {
+   3.9093332422511415`*^9, 3.9093332519700747`*^9}, {3.9093333688477726`*^9, 
+   3.909333369150635*^9}, {3.9093335318279*^9, 3.909333535944336*^9}, {
+   3.909333647458548*^9, 3.9093336476398993`*^9}, {3.9093337941058846`*^9, 
+   3.909333806087724*^9}},
+ CellLabel->
+  "In[160]:=",ExpressionUUID->"77f28f80-f5f9-4768-a7b7-20ecaef0ed41"],
+
+Cell[BoxData["551"], "Output",
+ CellChangeTimes->{{3.9092517357294207`*^9, 3.9092517582988124`*^9}, 
+   3.909333172300126*^9, 3.909333259469095*^9, 3.9093333721885*^9, 
+   3.9093335389138794`*^9, 3.909333648440591*^9, {3.9093337988340025`*^9, 
+   3.9093338064881015`*^9}},
+ CellLabel->
+  "Out[161]=",ExpressionUUID->"391df666-6060-4058-a61d-0bbbdea601bb"],
+
+Cell[BoxData["551"], "Output",
+ CellChangeTimes->{{3.9092517357294207`*^9, 3.9092517582988124`*^9}, 
+   3.909333172300126*^9, 3.909333259469095*^9, 3.9093333721885*^9, 
+   3.9093335389138794`*^9, 3.909333648440591*^9, {3.9093337988340025`*^9, 
+   3.909333806493267*^9}},
+ CellLabel->
+  "Out[163]=",ExpressionUUID->"01b572c5-ce52-4be1-b93c-92f5846357fa"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"\<\"Acoustic trauma in classical music players\"\>", ",", "2"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Attitudes and use of musician's earplugs\"\>", ",", "2"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Evaluation of the noise exposure of symphonic orchestra \
+musicians\"\>", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"FRIEDRICH SMETANA, A DEAF MUSICIAN. ON THE 140TH BIRTHDAY OF \
+THE COMPOSER ON MARCH 2, 1964\"\>", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Functional hearing loss presenting as sudden hearing loss: a \
+case report\"\>", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Genius between music and disease: Medical considerations on \
+Ludwig van Beethoven\"\>", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Hearing in pop musicians\"\>", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Hearing protectors in musicians\"\>", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Musician's medicine: when loudness becomes a problem\"\>", ",",
+      "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Noise and the classical musician\"\>", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Observations from a musician with hearing loss\"\>", ",", 
+     "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Orofacial and hearing specific problems among 340 wind \
+instrumentalists in Lebanon\"\>", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Pitch perception modification due to antiepileptics: A \
+literature and pharmacovigilance databases review\"\>", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Prevention of noise induced hearing loss in musicians of \
+Chinese opera\"\>", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Risk assessment of hearing loss in orchestral musicians\"\>",
+      ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Symphony orchestra musicians' use of hearing protection and \
+attenuation of custom-made hearing protectors as measured with two different \
+real-ear attenuation at threshold methods\"\>", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"THE DEAF MUSICIAN ROBERT FRANZ\"\>", ",", "2"}], "}"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.9092517357294207`*^9, 3.9092517582988124`*^9}, 
+   3.909333172300126*^9, 3.909333259469095*^9, 3.9093333721885*^9, 
+   3.9093335389138794`*^9, 3.909333648440591*^9, {3.9093337988340025`*^9, 
+   3.909333806493267*^9}},
+ CellLabel->
+  "Out[164]=",ExpressionUUID->"27b7b43d-ff36-442b-bd54-abf23711884e"],
+
+Cell[BoxData["17"], "Output",
+ CellChangeTimes->{{3.9092517357294207`*^9, 3.9092517582988124`*^9}, 
+   3.909333172300126*^9, 3.909333259469095*^9, 3.9093333721885*^9, 
+   3.9093335389138794`*^9, 3.909333648440591*^9, {3.9093337988340025`*^9, 
+   3.909333806493267*^9}},
+ CellLabel->
+  "Out[165]=",ExpressionUUID->"82117472-51d0-460d-a954-82b6116d807d"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"duplCF", "[", 
+  RowBox[{"[", 
+   RowBox[{"All", ",", "1"}], "]"}], "]"}]], "Input",
+ CellLabel->
+  "In[185]:=",ExpressionUUID->"00c1f902-5988-48da-95e1-435aaf7108f9"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Select", "[", 
+  RowBox[{
+   RowBox[{"Rest", "[", 
+    RowBox[{"dCF", "[", 
+     RowBox[{"[", 
+      RowBox[{"All", ",", "4"}], "]"}], "]"}], "]"}], ",", 
+   RowBox[{
+    RowBox[{"StringContainsQ", "[", 
+     RowBox[{"#", ",", 
+      RowBox[{"duplCF", "[", 
+       RowBox[{"[", 
+        RowBox[{"All", ",", "1"}], "]"}], "]"}]}], "]"}], "&"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.9093342752294493`*^9, 3.9093343386564646`*^9}, {
+  3.9093346089583235`*^9, 3.9093346120015326`*^9}},
+ CellLabel->
+  "In[188]:=",ExpressionUUID->"251e3438-220d-4983-a8b0-9b399ae25ba5"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"Acoustic trauma in classical music players\"\>", 
+   ",", "\<\"Acoustic trauma in classical music players\"\>", 
+   ",", "\<\"Attitudes and use of musician's earplugs\"\>", 
+   ",", "\<\"Attitudes and use of musician's earplugs.\"\>", 
+   ",", "\<\"Evaluation of the noise exposure of symphonic orchestra \
+musicians\"\>", 
+   ",", "\<\"Evaluation of the noise exposure of symphonic orchestra \
+musicians.\"\>", 
+   ",", "\<\"FRIEDRICH SMETANA, A DEAF MUSICIAN. ON THE 140TH BIRTHDAY OF THE \
+COMPOSER ON MARCH 2, 1964.\"\>", 
+   ",", "\<\"FRIEDRICH SMETANA, A DEAF MUSICIAN. ON THE 140TH BIRTHDAY OF THE \
+COMPOSER ON MARCH 2, 1964\"\>", 
+   ",", "\<\"Functional hearing loss presenting as sudden hearing loss: a \
+case report\"\>", 
+   ",", "\<\"Functional hearing loss presenting as sudden hearing loss: a \
+case report.\"\>", 
+   ",", "\<\"Genius between music and disease: Medical considerations on \
+Ludwig van Beethoven\"\>", 
+   ",", "\<\"Genius between music and disease: Medical considerations on \
+Ludwig van Beethoven\"\>", ",", "\<\"Hearing in pop musicians\"\>", 
+   ",", "\<\"Hearing in pop musicians\"\>", 
+   ",", "\<\"Hearing protectors in musicians\"\>", 
+   ",", "\<\"Hearing protectors in musicians\"\>", 
+   ",", "\<\"Musician's medicine: when loudness becomes a problem\"\>", 
+   ",", "\<\"Musician's medicine: when loudness becomes a problem\"\>", 
+   ",", "\<\"Noise and the classical musician\"\>", 
+   ",", "\<\"Noise and the classical musician.\"\>", 
+   ",", "\<\"Observations from a musician with hearing loss\"\>", 
+   ",", "\<\"Observations from a musician with hearing loss.\"\>", 
+   ",", "\<\"Orofacial and hearing specific problems among 340 wind \
+instrumentalists in Lebanon\"\>", 
+   ",", "\<\"Orofacial and hearing specific problems among 340 wind \
+instrumentalists in Lebanon\"\>", 
+   ",", "\<\"Pitch perception modification due to antiepileptics: A \
+literature and pharmacovigilance databases review\"\>", 
+   ",", "\<\"Pitch perception modification due to antiepileptics: A \
+literature and pharmacovigilance databases review\"\>", 
+   ",", "\<\"Prevention of noise induced hearing loss in musicians of Chinese \
+opera\"\>", 
+   ",", "\<\"Prevention of noise induced hearing loss in musicians of Chinese \
+opera\"\>", 
+   ",", "\<\"Risk assessment of hearing loss in orchestral musicians\"\>", 
+   ",", "\<\"Risk assessment of hearing loss in orchestral musicians\"\>", 
+   ",", "\<\"Symphony orchestra musicians' use of hearing protection and \
+attenuation of custom-made hearing protectors as measured with two different \
+real-ear attenuation at threshold methods\"\>", 
+   ",", "\<\"Symphony orchestra musicians' use of hearing protection and \
+attenuation of custom-made hearing protectors as measured with two different \
+real-ear attenuation at threshold methods.\"\>", 
+   ",", "\<\"THE DEAF MUSICIAN ROBERT FRANZ.\"\>", 
+   ",", "\<\"THE DEAF MUSICIAN ROBERT FRANZ\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{{3.9093343234779105`*^9, 3.9093343393268003`*^9}, 
+   3.909334613103612*^9},
+ CellLabel->
+  "Out[188]=",ExpressionUUID->"2def417f-e977-4cdc-9399-6131945e6485"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"Select", "[", 
+    RowBox[{
+     RowBox[{"Rest", "[", 
+      RowBox[{"#", "[", 
+       RowBox[{"[", 
+        RowBox[{"All", ",", "4"}], "]"}], "]"}], "]"}], ",", 
+     RowBox[{"StringContainsQ", "[", "]"}]}], "]"}], "&"}], "/@", 
+  "d"}]], "Input",
+ CellChangeTimes->{{3.909334025896944*^9, 3.909334061954769*^9}, {
+  3.9093341285348363`*^9, 
+  3.909334177206215*^9}},ExpressionUUID->"004d1b93-8501-4a64-a081-\
+9b82476f958f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+diese m\[UDoubleDot]ssen aussortiert werden, dann komme ich auf 550 - 9 = 541 \
+(entspricht nAR)\
+\>", "Subsubsection",
+ CellChangeTimes->{{3.909251822750786*^9, 
+  3.9092518583660135`*^9}},ExpressionUUID->"19aafb75-e638-4078-b8f4-\
+17d874474e38"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"dARc", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"StringTake", "[", 
+         RowBox[{"#", ",", 
+          RowBox[{"-", "1"}]}], "]"}], "==", "\"\<.\>\""}], ",", 
+       RowBox[{"StringTake", "[", 
+        RowBox[{"#", ",", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", 
+           RowBox[{"-", "2"}]}], "}"}]}], "]"}], ",", "#"}], "]"}], "&"}], "/@", 
+    RowBox[{"dAR", "[", 
+     RowBox[{"[", 
+      RowBox[{"All", ",", "4"}], "]"}], "]"}]}]}], ";"}], "\n", 
+ RowBox[{"Length", "@", "dARc"}], "\n", 
+ RowBox[{
+  RowBox[{"dARc2", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"StringTake", "[", 
+          RowBox[{"#", ",", "1"}], "]"}], "==", "\"\<[\>\""}], "&&", 
+        RowBox[{
+         RowBox[{"StringTake", "[", 
+          RowBox[{"#", ",", 
+           RowBox[{"-", "1"}]}], "]"}], "==", "\"\<]\>\""}]}], ",", 
+       RowBox[{"StringTake", "[", 
+        RowBox[{"#", ",", 
+         RowBox[{"{", 
+          RowBox[{"2", ",", 
+           RowBox[{"-", "2"}]}], "}"}]}], "]"}], ",", "#"}], "]"}], "&"}], "/@",
+     "dARc"}]}], ";", 
+  RowBox[{"Length", "@", "dARc2"}]}], "\n", 
+ RowBox[{"duplAR", "=", 
+  RowBox[{"Select", "[", 
+   RowBox[{
+    RowBox[{"Tally", "[", "dARc2", "]"}], ",", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"#", "[", 
+       RowBox[{"[", "2", "]"}], "]"}], "==", "2"}], "&"}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Length", "@", "duplAR"}]}], "Input",
+ CellChangeTimes->{{3.909250200343828*^9, 3.9092502170245624`*^9}, 
+   3.9092502573755054`*^9, {3.909251321854479*^9, 3.9092513321979504`*^9}, {
+   3.9092513815504932`*^9, 3.909251439495621*^9}, {3.909251612019144*^9, 
+   3.9092516466895995`*^9}, {3.9093330729625487`*^9, 
+   3.9093330731219225`*^9}, {3.909333135750598*^9, 3.9093331421298637`*^9}, {
+   3.9093332422511415`*^9, 3.9093332519700747`*^9}, 3.9093333035228224`*^9, {
+   3.90933337921628*^9, 3.909333379468006*^9}, 3.9093336603305635`*^9, {
+   3.9093338166159277`*^9, 3.9093338390570917`*^9}},
+ CellLabel->
+  "In[171]:=",ExpressionUUID->"82cfef5f-0542-41f6-b99b-cb7557b0c391"],
+
+Cell[BoxData["542"], "Output",
+ CellChangeTimes->{
+  3.909333306707373*^9, 3.9093333801869617`*^9, 3.9093336606076145`*^9, {
+   3.90933381949038*^9, 3.909333839406339*^9}},
+ CellLabel->
+  "Out[172]=",ExpressionUUID->"4f5d828e-f8c5-45d0-b91f-9ae91c838031"],
+
+Cell[BoxData["542"], "Output",
+ CellChangeTimes->{
+  3.909333306707373*^9, 3.9093333801869617`*^9, 3.9093336606076145`*^9, {
+   3.90933381949038*^9, 3.9093338394148893`*^9}},
+ CellLabel->
+  "Out[173]=",ExpressionUUID->"f6e12b45-02f2-4feb-83a9-89a9c5e154bd"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"\<\"Peripheral vestibular syndrome intricated pathogenic issues. \
+A case report\"\>", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Attitudes and use of musician's earplugs\"\>", ",", "2"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Evaluation of the noise exposure of symphonic orchestra \
+musicians\"\>", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"FRIEDRICH SMETANA, A DEAF MUSICIAN. ON THE 140TH BIRTHDAY OF \
+THE COMPOSER ON MARCH 2, 1964\"\>", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Functional hearing loss presenting as sudden hearing loss: a \
+case report\"\>", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Noise and the classical musician\"\>", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Observations from a musician with hearing loss\"\>", ",", 
+     "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Symphony orchestra musicians' use of hearing protection and \
+attenuation of custom-made hearing protectors as measured with two different \
+real-ear attenuation at threshold methods\"\>", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"THE DEAF MUSICIAN ROBERT FRANZ\"\>", ",", "2"}], "}"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{
+  3.909333306707373*^9, 3.9093333801869617`*^9, 3.9093336606076145`*^9, {
+   3.90933381949038*^9, 3.9093338394148893`*^9}},
+ CellLabel->
+  "Out[174]=",ExpressionUUID->"8f91aa2d-3f9e-4606-9fb3-aa779ff17dca"],
+
+Cell[BoxData["9"], "Output",
+ CellChangeTimes->{
+  3.909333306707373*^9, 3.9093333801869617`*^9, 3.9093336606076145`*^9, {
+   3.90933381949038*^9, 3.9093338394148893`*^9}},
+ CellLabel->
+  "Out[175]=",ExpressionUUID->"b6cb0ad8-e696-4940-bd35-28f57f63ac61"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SortBy", "[", 
+  RowBox[{
+   RowBox[{"Tally", "[", 
+    RowBox[{"Flatten", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"duplAR", ",", "duplCF"}], "}"}], "[", 
+      RowBox[{"[", 
+       RowBox[{"All", ",", "All", ",", "1"}], "]"}], "]"}], "]"}], "]"}], ",", 
+   RowBox[{
+    RowBox[{"#", "[", 
+     RowBox[{"[", "2", "]"}], "]"}], "&"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.9093338872184863`*^9, 3.9093339599872026`*^9}},
+ CellLabel->
+  "In[181]:=",ExpressionUUID->"f9bc7062-9ca1-44d7-abe1-4fd6d6df9a53"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"\<\"Acoustic trauma in classical music players\"\>", ",", "1"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Genius between music and disease: Medical considerations on \
+Ludwig van Beethoven\"\>", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Hearing in pop musicians\"\>", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Hearing protectors in musicians\"\>", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Musician's medicine: when loudness becomes a problem\"\>", ",",
+      "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Orofacial and hearing specific problems among 340 wind \
+instrumentalists in Lebanon\"\>", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Peripheral vestibular syndrome intricated pathogenic issues. \
+A case report\"\>", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Pitch perception modification due to antiepileptics: A \
+literature and pharmacovigilance databases review\"\>", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Prevention of noise induced hearing loss in musicians of \
+Chinese opera\"\>", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Risk assessment of hearing loss in orchestral musicians\"\>",
+      ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Attitudes and use of musician's earplugs\"\>", ",", "2"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Evaluation of the noise exposure of symphonic orchestra \
+musicians\"\>", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"FRIEDRICH SMETANA, A DEAF MUSICIAN. ON THE 140TH BIRTHDAY OF \
+THE COMPOSER ON MARCH 2, 1964\"\>", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Functional hearing loss presenting as sudden hearing loss: a \
+case report\"\>", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Noise and the classical musician\"\>", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Observations from a musician with hearing loss\"\>", ",", 
+     "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Symphony orchestra musicians' use of hearing protection and \
+attenuation of custom-made hearing protectors as measured with two different \
+real-ear attenuation at threshold methods\"\>", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"THE DEAF MUSICIAN ROBERT FRANZ\"\>", ",", "2"}], "}"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.9093338976642494`*^9, 3.909333960628515*^9}},
+ CellLabel->
+  "Out[181]=",ExpressionUUID->"ac20aca1-04dc-4993-80c9-dc31663ac301"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{747, 735},
+WindowMargins->{{Automatic, -5.25}, {Automatic, 0}},
+FrontEndVersion->"14.2 for Microsoft Windows (64-bit) (March 14, 2025)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"baf0b4dc-2909-994a-bdcc-b9d41e3bcc33"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 178, 3, 66, "Section",ExpressionUUID->"feebfaaf-ca24-4a50-a9de-d731429e8c10"],
+Cell[761, 27, 1449, 38, 237, "Input",ExpressionUUID->"0ce84330-6c81-46ae-8552-d4558bb8505b"],
+Cell[CellGroupData[{
+Cell[2235, 69, 1742, 47, 180, "Input",ExpressionUUID->"e40914b3-5ce2-4957-95cf-5d59a13b27ea"],
+Cell[3980, 118, 657, 13, 32, "Output",ExpressionUUID->"b1651b70-a84f-9740-85c8-f83f3c5e417a"],
+Cell[4640, 133, 751, 16, 32, "Output",ExpressionUUID->"bffb47df-8099-8e48-b01c-13915d40a743"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5428, 154, 260, 4, 28, "Input",ExpressionUUID->"d37e0690-af9a-4f97-9590-122b863b1345"],
+Cell[5691, 160, 220, 4, 32, "Output",ExpressionUUID->"c14e8d7d-3ce1-7647-9951-edbf89e353b5"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5960, 170, 188, 3, 66, "Section",ExpressionUUID->"e5a56b45-e2a3-4e18-b818-6ab4fa3c5f4d"],
+Cell[6151, 175, 1237, 28, 218, "Input",ExpressionUUID->"cbf3e11a-9363-9b48-9d21-c71356a68815"],
+Cell[CellGroupData[{
+Cell[7413, 207, 660, 14, 47, "Input",ExpressionUUID->"4f256b89-8bc5-4523-8a66-46143874edbe"],
+Cell[8076, 223, 598, 9, 32, "Output",ExpressionUUID->"4e38ca42-69c4-b74a-ac1b-9fbd552be9fb"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8711, 237, 200, 3, 28, "Input",ExpressionUUID->"e2833ad4-80be-4da7-a6dd-0b7419fe9ed8"],
+Cell[8914, 242, 175, 2, 51, "Output",ExpressionUUID->"f82b498d-62cd-2d4b-9df5-ffe9caee10a1"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9126, 249, 371, 10, 28, "Input",ExpressionUUID->"b29de72c-ce00-4d65-8402-d93e3c532bc4"],
+Cell[9500, 261, 822, 23, 51, "Output",ExpressionUUID->"cf093baf-2109-b94f-8dc6-4bf96ae99e74"]
+}, Open  ]],
+Cell[10337, 287, 292, 6, 33, "Text",ExpressionUUID->"9606904b-d9eb-4ca3-9015-7eccc9f59cf6"],
+Cell[10632, 295, 771, 22, 55, "Text",ExpressionUUID->"0afb15cd-43f6-4173-b745-01a70e95621d"],
+Cell[CellGroupData[{
+Cell[11428, 321, 1995, 55, 142, "Input",ExpressionUUID->"9cd3c10d-b789-4ffc-939d-016f076de23c"],
+Cell[13426, 378, 478, 6, 51, "Output",ExpressionUUID->"0d1ee07e-a423-a647-a385-3a1972cb6dc8"],
+Cell[13907, 386, 482, 6, 51, "Output",ExpressionUUID->"53cbc07c-48c7-eb4c-8703-09871d8f41ba"],
+Cell[14392, 394, 3452, 71, 564, "Output",ExpressionUUID->"3657ced7-3009-4148-9f63-c3b055e2d50b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17881, 470, 637, 14, 66, "Input",ExpressionUUID->"25fc94b7-721c-4d4b-8fc9-2dc98a63a84a"],
+Cell[18521, 486, 205, 3, 32, "Output",ExpressionUUID->"e9a82660-9b24-4fbf-8200-7880d0373fac"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18763, 494, 209, 4, 28, "Input",ExpressionUUID->"7734313d-8416-426f-afc1-978abfcc65a2"],
+Cell[18975, 500, 206, 4, 32, "Output",ExpressionUUID->"bdbb43fe-93d1-43c3-8046-0e6878df76c7"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19218, 509, 1940, 57, 104, "Input",ExpressionUUID->"abb67ec4-a661-4bbb-a8c9-86b9dda2399b"],
+Cell[21161, 568, 371, 6, 32, "Output",ExpressionUUID->"6a3ddd44-8dc0-4508-8a1a-f32d189e9086"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[21581, 580, 163, 3, 96, "Title",ExpressionUUID->"94dcf40b-ef04-4ad1-b38a-b0e914f84bfc"],
+Cell[CellGroupData[{
+Cell[21769, 587, 230, 5, 43, "Subsubsection",ExpressionUUID->"d9e77852-ad89-4a8f-90f9-0d75bc37d6b1"],
+Cell[CellGroupData[{
+Cell[22024, 596, 2283, 60, 161, "Input",ExpressionUUID->"77f28f80-f5f9-4768-a7b7-20ecaef0ed41"],
+Cell[24310, 658, 355, 6, 32, "Output",ExpressionUUID->"391df666-6060-4058-a61d-0bbbdea601bb"],
+Cell[24668, 666, 353, 6, 32, "Output",ExpressionUUID->"01b572c5-ce52-4be1-b93c-92f5846357fa"],
+Cell[25024, 674, 2640, 57, 374, "Output",ExpressionUUID->"27b7b43d-ff36-442b-bd54-abf23711884e"],
+Cell[27667, 733, 352, 6, 32, "Output",ExpressionUUID->"82117472-51d0-460d-a954-82b6116d807d"]
+}, Open  ]],
+Cell[28034, 742, 191, 5, 28, "Input",ExpressionUUID->"00c1f902-5988-48da-95e1-435aaf7108f9"],
+Cell[CellGroupData[{
+Cell[28250, 751, 595, 17, 28, "Input",ExpressionUUID->"251e3438-220d-4983-a8b0-9b399ae25ba5"],
+Cell[28848, 770, 3168, 56, 679, "Output",ExpressionUUID->"2def417f-e977-4cdc-9399-6131945e6485"]
+}, Open  ]],
+Cell[32031, 829, 472, 14, 28, "Input",ExpressionUUID->"004d1b93-8501-4a64-a081-9b82476f958f"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[32540, 848, 257, 6, 68, "Subsubsection",ExpressionUUID->"19aafb75-e638-4078-b8f4-17d874474e38"],
+Cell[CellGroupData[{
+Cell[32822, 858, 2202, 59, 161, "Input",ExpressionUUID->"82cfef5f-0542-41f6-b99b-cb7557b0c391"],
+Cell[35027, 919, 255, 5, 32, "Output",ExpressionUUID->"4f5d828e-f8c5-45d0-b91f-9ae91c838031"],
+Cell[35285, 926, 257, 5, 32, "Output",ExpressionUUID->"f6e12b45-02f2-4feb-83a9-89a9c5e154bd"],
+Cell[35545, 933, 1527, 34, 222, "Output",ExpressionUUID->"8f91aa2d-3f9e-4606-9fb3-aa779ff17dca"],
+Cell[37075, 969, 255, 5, 32, "Output",ExpressionUUID->"b6cb0ad8-e696-4940-bd35-28f57f63ac61"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[37367, 979, 544, 15, 28, "Input",ExpressionUUID->"f9bc7062-9ca1-44d7-abe1-4fd6d6df9a53"],
+Cell[37914, 996, 2610, 57, 393, "Output",ExpressionUUID->"ac20aca1-04dc-4993-80c9-dc31663ac301"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

@@ -1,0 +1,2213 @@
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[         0,          0]
+NotebookDataLength[     89705,       2212]
+NotebookOptionsPosition[     84555,       2119]
+NotebookOutlinePosition[     84991,       2136]
+CellTagsIndexPosition[     84948,       2133]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"generated", " ", "2023"}], "-", "12", "-", "21"}], ",", " ", 
+   RowBox[{"by", " ", 
+    RowBox[{"Dr", ".", " ", "Carl"}], " ", "Firle"}], ",", " ", 
+   RowBox[{
+    RowBox[{
+    "MD", "\[IndentingNewLine]", "Wolfram", " ", "Mathematica", " ", "13.0", 
+     ".1", "\n", 
+     RowBox[{"https", ":"}]}], "//", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"orcid", ".", "org"}], "/", "0000"}], "-", "0003", "-", "3233", 
+     "-", 
+     RowBox[{"178", "X"}]}]}]}], "*)"}]], "Input",
+ CellChangeTimes->{{3.9635854113403378`*^9, 
+  3.963585427049385*^9}},ExpressionUUID->"702c17b0-a5d4-e34a-8f93-\
+e0ecd5566d52"],
+
+Cell[BoxData[{
+ RowBox[{"dateret", "=."}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"dateret", "=", "\"\<2023/08/14\>\""}], ";"}], " ", 
+  RowBox[{"(*", 
+   RowBox[{"22", ":", "10"}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{"head", "=."}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"head", "=", 
+    RowBox[{"{", 
+     RowBox[{"{", 
+      RowBox[{"\"\<Database\>\"", 
+       ",", "\"\<Date of Retrieval [year/month/day]\>\"", ",", "\"\<Title\>\"",
+        ",", "\"\<Authors\>\"", ",", "\"\<Year\>\"", ",", "\"\<Language\>\"", 
+       ",", "\"\<Journal Title\>\"", ",", "\"\<Publication Type\>\"", 
+       ",", "\"\<DOI/Hyperlink\>\"", ",", "\"\<Abstract\>\"", 
+       ",", "\"\<Included [1], Excluded [0], To be discussed [2]\>\"", 
+       ",", "\"\<Comment\>\""}], "}"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"Pubmed", " ", 
+    RowBox[{"Abbr", ".", " ", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"\"\<Database\>\"", ",", "\"\<Title\>\"", ",", "\"\<Authors\>\"",
+        ",", "\"\<Year\>\"", ",", "\"\<Language\>\"", 
+       ",", "\"\<Journal Title\>\"", ",", "\"\<Publication Type\>\"", 
+       ",", "\"\<DOI/Link\>\"", ",", "\"\<Abstract\>\""}], "}"}]}], "\n", 
+    RowBox[{"{", 
+     RowBox[{"\"\<DB\>\"", ",", "\"\<TI\>\"", ",", "\"\<AU\>\"", 
+      ",", "\"\<DP\>\"", ",", "\"\<LA\>\"", ",", "\"\<JT\>\"", 
+      ",", "\"\<PT\>\"", ",", "\"\<AID\>\"", ",", "\"\<AB\>\""}], "}"}]}], 
+   "*)"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.9004258248973923`*^9, 3.900425883323045*^9}, {
+   3.9004259178695087`*^9, 3.9004259222173777`*^9}, {3.900425966316806*^9, 
+   3.9004259997759714`*^9}, {3.9004260380872803`*^9, 
+   3.9004260608863363`*^9}, {3.900426100040011*^9, 3.900426122025096*^9}, {
+   3.900603538248802*^9, 3.9006035409533014`*^9}, {3.9006036074190216`*^9, 
+   3.9006036499143734`*^9}, 3.900603708262398*^9, {3.90077938733694*^9, 
+   3.9007794354417534`*^9}, {3.900779510761492*^9, 3.900779540152768*^9}, {
+   3.900986042659528*^9, 3.9009860654031334`*^9}, {3.9009871068618774`*^9, 
+   3.9009871112418933`*^9}, {3.901119117241313*^9, 3.901119120994164*^9}, 
+   3.9019010478746233`*^9},ExpressionUUID->"236d011b-3778-4448-bb76-\
+e2d03c15f665"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+  "searchTerm", 
+   "=", "\"\<(hearing loss OR hearing impairment OR hearing difficulties OR \
+acoustic trauma) AND (musician)\>\""}], ";"}]], "Input",
+ CellChangeTimes->{{3.963585806882128*^9, 
+  3.9635858128730183`*^9}},ExpressionUUID->"97481b95-34cc-46c4-9ef6-\
+d0962febf1ae"],
+
+Cell[CellGroupData[{
+
+Cell["Google Scholar", "Title",
+ CellChangeTimes->{{3.90034612106927*^9, 
+  3.900346122974351*^9}},ExpressionUUID->"a4434970-fd74-4d48-bac4-\
+6d2b1f7c5593"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"https", ":"}], "//", 
+      RowBox[{
+       RowBox[{"scholar", ".", "google", ".", "de"}], "/", 
+       RowBox[{"scholar", "?", "start"}]}]}], "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"10", "&"}], "q"}], "=", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", "Children", ")"}], "+", "and", "+", 
+          RowBox[{"(", 
+           RowBox[{
+           "cochlear", "+", "implant", "+", "or", "+", "CI", "+", "or", "+", 
+            "Cochlea", "-", "Implantat"}], ")"}], "+", "and", "+", 
+          RowBox[{"(", "indication", ")"}]}], "&"}], "hl"}], "=", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"de", "&"}], "as_sdt"}], "=", "0"}]}]}]}], ",", "5"}], 
+   "\[IndentingNewLine]", "*)"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"searchTermG", "=", 
+    RowBox[{"StringReplace", "[", 
+     RowBox[{"searchTerm", ",", 
+      RowBox[{"\"\< \>\"", "->", "\"\<+\>\""}]}], "]"}]}], ";"}]}]], "Input",
+ CellChangeTimes->{{3.910967737189128*^9, 3.910967761309097*^9}, 
+   3.91207796730661*^9, {3.9120780102285085`*^9, 3.912078040851453*^9}, {
+   3.9120781075401444`*^9, 3.9120781161056733`*^9}, {3.912096925492747*^9, 
+   3.9120969293188777`*^9}, {3.912103143258812*^9, 
+   3.9121031488888383`*^9}},ExpressionUUID->"a478bfd4-f894-47d8-8100-\
+9c60e4bbc7dd"],
+
+Cell[BoxData[{
+ RowBox[{"d", "=."}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"d", "=", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"StringCases", "[", 
+       RowBox[{
+        RowBox[{"Import", "[", 
+         RowBox[{
+          RowBox[{"\"\<https://scholar.google.de/scholar?start=\>\"", "~~", 
+           RowBox[{"ToString", "[", "i", "]"}], "~~", "\"\<&q=\>\"", "~~", 
+           "searchTermG", "~~", "\"\<&hl=de&as_sdt=0,5\>\""}], 
+          ",", "\"\<Source\>\""}], "]"}], ",", 
+        RowBox[{
+         RowBox[{"\"\<Alert erstellen\>\"", " ", "~~", "a__", 
+          "~~", "\"\<Alert erstellen\>\""}], "\[Rule]", "a"}]}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "1", ",", "10", ",", "20", ",", "30", ",", "40", ",", "50", ",", 
+          "60", ",", "70", ",", "80", ",", "90", ",", "100", ",", "110", ",", 
+          "120", ",", "130", ",", "140", ",", "150", ",", "160", ",", "170", ",",
+           "180", ",", "190"}], "}"}]}], "}"}]}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\n"}], "Input",
+ CellChangeTimes->{
+  3.900343789016387*^9, 3.900344155879723*^9, {3.9003442341951404`*^9, 
+   3.9003442592050962`*^9}, {3.9006001942748013`*^9, 3.900600210698829*^9}, {
+   3.9006047768912387`*^9, 3.90060481379212*^9}, {3.9007808592366056`*^9, 
+   3.9007808655163994`*^9}, {3.9009867227725554`*^9, 
+   3.9009867552589583`*^9}, {3.9009868016136417`*^9, 3.900986830117322*^9}, {
+   3.9009869674302573`*^9, 3.9009869977710743`*^9}, 3.9009873180616164`*^9, 
+   3.900989147732377*^9, 3.9010318057076645`*^9, {3.901124686488016*^9, 
+   3.9011246945267296`*^9}, {3.910967840458649*^9, 3.9109678632490172`*^9}, {
+   3.9109678967090034`*^9, 3.9109678974410243`*^9}, 3.9109679289395566`*^9, {
+   3.9120781259857864`*^9, 3.912078130461993*^9}, 
+   3.9120969331595817`*^9},ExpressionUUID->"dea9b66b-5168-401f-b5fb-\
+5f05859a718e"],
+
+Cell[BoxData[{
+ RowBox[{"list", "=."}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"list", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"StringCases", "[", 
+        RowBox[{"#", ",", 
+         RowBox[{
+          RowBox[{"\"\<href=\\\"\>\"", "~~", 
+           RowBox[{"Shortest", "[", "a__", "]"}], "~~", "\"\<\\\"\>\""}], "->",
+           "a"}]}], "]"}], ",", 
+       RowBox[{"StringCases", "[", 
+        RowBox[{"#", ",", 
+         RowBox[{
+          RowBox[{"\"\<id=\\\"\>\"", "~~", "__", "~~", "\"\<\\\">\>\"", "~~", 
+           RowBox[{"Shortest", "[", "a__", "]"}], "~~", "\"\<</a>\>\""}], "->",
+           "a"}]}], "]"}]}], "}"}], "&"}], "/@", 
+    RowBox[{"StringCases", "[", 
+     RowBox[{
+      RowBox[{"StringJoin", "@", "d"}], ",", 
+      RowBox[{
+       RowBox[{"\"\<<h3\>\"", "~~", 
+        RowBox[{"Shortest", "[", "a__", "]"}], "~~", "\"\<</h3>\>\""}], "->", 
+       "a"}]}], "]"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"list", "[", 
+     RowBox[{"[", 
+      RowBox[{"All", ",", "2"}], "]"}], "]"}], "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"StringReplace", "[", 
+       RowBox[{"#", ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"\"\<<b>\>\"", "->", "\"\<\>\""}], ",", 
+          RowBox[{"\"\<</b>\>\"", "->", "\"\<\>\""}]}], "}"}]}], "]"}], "&"}],
+      "/@", 
+     RowBox[{"list", "[", 
+      RowBox[{"[", 
+       RowBox[{"All", ",", "2"}], "]"}], "]"}]}]}], ";"}], "\n", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"HTTPRequest", "[", "#", "]"}], ",", 
+         RowBox[{"URLRead", "[", "#", "]"}]}], "}"}], "&"}], "/@", 
+      RowBox[{
+       RowBox[{"Flatten", "[", 
+        RowBox[{"list", "[", 
+         RowBox[{"[", 
+          RowBox[{"All", ",", "1"}], "]"}], "]"}], "]"}], "[", 
+       RowBox[{"[", 
+        RowBox[{"1", ";;", "15"}], "]"}], "]"}]}], "\n", 
+     RowBox[{
+      RowBox[{"test", "[", 
+       RowBox[{"[", 
+        RowBox[{"1", ",", "2"}], "]"}], "]"}], "[", 
+      RowBox[{"[", 
+       RowBox[{"2", ",", "2"}], "]"}], "]"}]}], "//", 
+    RowBox[{"FullForm", 
+     RowBox[{"(*", 
+      RowBox[{"Status", " ", "Code", " ", "ok"}], "*)"}], "\n", 
+     RowBox[{
+      RowBox[{"test", "[", 
+       RowBox[{"[", 
+        RowBox[{"3", ",", "2"}], "]"}], "]"}], "[", 
+      RowBox[{"[", 
+       RowBox[{"2", ",", "2"}], "]"}], "]"}]}]}], 
+   RowBox[{"(*", 
+    RowBox[{"Status", " ", "Code", " ", "forbidden"}], "*)"}], 
+   "\[IndentingNewLine]", "*)"}], "\n"}], "\n", 
+ RowBox[{
+  RowBox[{"abstracts", "=", 
+   RowBox[{"{", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"extractabstract", "=."}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"extractabstract", "[", "urls_List", "]"}], ":=", " ", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"abs", "=", "\"\<no abstract available\>\""}], ",", "extr"}], 
+      "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Map", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"abs", "=", "\"\<no abstract available\>\""}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{"URLRead", "[", "#", "]"}], "[", 
+             RowBox[{"[", 
+              RowBox[{"2", ",", "2"}], "]"}], "]"}], "==", "200"}], ",", 
+           RowBox[{"extr", "=", 
+            RowBox[{"Import", "[", "#", "]"}]}], ",", 
+           RowBox[{"extr", "=", "0"}]}], "]"}], ";", "\[IndentingNewLine]", 
+         "\[IndentingNewLine]", 
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{"StringQ", "[", "extr", "]"}], ",", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"extr", "=", 
+             RowBox[{"StringReplace", "[", 
+              RowBox[{"extr", ",", " ", 
+               RowBox[{"\"\<\\n\>\"", "->", "\"\<     \>\""}]}], "]"}]}], ";",
+             "\[IndentingNewLine]", "\[IndentingNewLine]", 
+            RowBox[{"abs", "=", 
+             RowBox[{"Which", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"StringContainsQ", "[", 
+                 RowBox[{"extr", ",", 
+                  RowBox[{"\"\<Abstract\>\"", "|", "\"\<ABSTRACT\>\""}]}], 
+                 "]"}], " ", "&&", 
+                RowBox[{"StringContainsQ", "[", 
+                 RowBox[{"extr", ",", 
+                  RowBox[{"\"\<Keywords\>\"", "|", "\"\<KEYWORDS\>\""}]}], 
+                 "]"}]}], ",", 
+               RowBox[{"StringCases", "[", 
+                RowBox[{"extr", ",", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"\"\<Abstract\>\"", "|", "\"\<ABSTRACT\>\""}], "~~", 
+                   RowBox[{"Shortest", "[", "a__", "]"}], "~~", 
+                   RowBox[{"\"\<Keywords\>\"", "|", "\"\<KEYWORDS\>\""}]}], "->",
+                   "a"}]}], "]"}], ",", 
+               RowBox[{
+                RowBox[{"StringContainsQ", "[", 
+                 RowBox[{"extr", ",", 
+                  RowBox[{"\"\<Abstract\>\"", "|", "\"\<ABSTRACT\>\""}]}], 
+                 "]"}], " ", "&&", " ", 
+                RowBox[{"StringContainsQ", "[", 
+                 RowBox[{"extr", ",", 
+                  
+                  RowBox[{"\"\<Introduction\>\"", 
+                   "|", "\"\<INTRODUCTION\>\""}]}], "]"}]}], ",", 
+               RowBox[{"StringCases", "[", 
+                RowBox[{"extr", ",", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"\"\<Abstract\>\"", "|", "\"\<ABSTRACT\>\""}], "~~", 
+                   RowBox[{"Shortest", "[", "a__", "]"}], "~~", 
+                   
+                   RowBox[{"\"\<Introduction\>\"", 
+                    "|", "\"\<INTRODUCTION\>\""}]}], "->", "a"}]}], "]"}], ",", 
+               RowBox[{"StringContainsQ", "[", 
+                RowBox[{"extr", ",", 
+                 RowBox[{"\"\<Abstract\>\"", "|", "\"\<ABSTRACT\>\""}]}], 
+                "]"}], ",", 
+               RowBox[{"StringCases", "[", 
+                RowBox[{"extr", ",", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"\"\<Abstract\>\"", "|", "\"\<ABSTRACT\>\""}], "~~",
+                    "a__"}], "->", "a"}]}], "]"}], ",", "True", ",", 
+               RowBox[{"{", "\"\<no abstract available\>\"", "}"}]}], "]"}]}],
+             ";", "\[IndentingNewLine]", 
+            RowBox[{"abs", "=", 
+             RowBox[{"If", "[", 
+              RowBox[{
+               RowBox[{"abs", "!=", 
+                RowBox[{"{", "}"}]}], ",", 
+               RowBox[{"StringTake", "[", 
+                RowBox[{"abs", ",", 
+                 RowBox[{"If", "[", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{"StringLength", "[", "abs", "]"}], "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], ">", "3000"}], ",", 
+                   "3000", ",", 
+                   RowBox[{
+                    RowBox[{"StringLength", "[", "abs", "]"}], "[", 
+                    RowBox[{"[", "1", "]"}], "]"}]}], "]"}]}], "]"}], 
+               ",", "\"\<no abstract available\>\""}], "]"}]}], ";"}], 
+           "\[IndentingNewLine]", ",", 
+           RowBox[{
+            RowBox[{"abs", "=", "\"\<no abstract available\>\""}], ";"}]}], 
+          "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
+         RowBox[{"AppendTo", "[", 
+          RowBox[{"abstracts", ",", "abs"}], "]"}], ";"}], 
+        "\[IndentingNewLine]", "&"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"Flatten", "[", "urls", "]"}]}], "\[IndentingNewLine]", 
+      "]"}]}], "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"extractabstract", "[", 
+    RowBox[{"list", "[", 
+     RowBox[{"[", 
+      RowBox[{"All", ",", "1"}], "]"}], "]"}], "]"}], ";"}], "\n", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"abstracts", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Which", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"StringContainsQ", "[", 
+           RowBox[{"#", ",", 
+            RowBox[{"\"\<Abstract\>\"", "|", "\"\<ABSTRACT\>\""}]}], "]"}], 
+          " ", "&&", 
+          RowBox[{"StringContainsQ", "[", 
+           RowBox[{"#", ",", 
+            RowBox[{"\"\<Keywords\>\"", "|", "\"\<KEYWORDS\>\""}]}], "]"}]}], 
+         ",", 
+         RowBox[{"StringCases", "[", 
+          RowBox[{"#", ",", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"\"\<Abstract\>\"", "|", "\"\<ABSTRACT\>\""}], "~~", 
+             RowBox[{"Shortest", "[", "a__", "]"}], "~~", 
+             RowBox[{"\"\<Keywords\>\"", "|", "\"\<KEYWORDS\>\""}]}], "->", 
+            "a"}]}], "]"}], ",", 
+         RowBox[{
+          RowBox[{"StringContainsQ", "[", 
+           RowBox[{"#", ",", 
+            RowBox[{"\"\<Abstract\>\"", "|", "\"\<ABSTRACT\>\""}]}], "]"}], 
+          " ", "&&", " ", 
+          RowBox[{"StringContainsQ", "[", 
+           RowBox[{"#", ",", 
+            RowBox[{"\"\<Introduction\>\"", "|", "\"\<INTRODUCTION\>\""}]}], 
+           "]"}]}], ",", 
+         RowBox[{"StringCases", "[", 
+          RowBox[{"#", ",", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"\"\<Abstract\>\"", "|", "\"\<ABSTRACT\>\""}], "~~", 
+             RowBox[{"Shortest", "[", "a__", "]"}], "~~", 
+             RowBox[{"\"\<Introduction\>\"", "|", "\"\<INTRODUCTION\>\""}]}], 
+            "->", "a"}]}], "]"}], ",", 
+         RowBox[{"StringContainsQ", "[", 
+          RowBox[{"#", ",", 
+           RowBox[{"\"\<Abstract\>\"", "|", "\"\<ABSTRACT\>\""}]}], "]"}], ",", 
+         RowBox[{"StringCases", "[", 
+          RowBox[{"#", ",", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"\"\<Abstract\>\"", "|", "\"\<ABSTRACT\>\""}], "~~", 
+             "a__"}], "->", "a"}]}], "]"}], ",", "True", ",", 
+         RowBox[{"{", "\"\<no abstract available\>\"", "}"}]}], "]"}], "&"}], 
+      "/@", "abstracts"}]}], ";", "\n", "\[IndentingNewLine]", 
+    RowBox[{"abstracts", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"#", "!=", 
+          RowBox[{"{", "}"}]}], ",", 
+         RowBox[{"StringTake", "[", 
+          RowBox[{"#", ",", 
+           RowBox[{"If", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{
+               RowBox[{"StringLength", "[", "#", "]"}], "[", 
+               RowBox[{"[", "1", "]"}], "]"}], ">", "3000"}], ",", "3000", ",", 
+             RowBox[{
+              RowBox[{"StringLength", "[", "#", "]"}], "[", 
+              RowBox[{"[", "1", "]"}], "]"}]}], "]"}]}], "]"}], 
+         ",", "\"\<no abstract available\>\""}], "]"}], "&"}], "/@", 
+      "abstracts"}]}], ";", "\n", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Which", "[", 
+       RowBox[{
+        RowBox[{"StringContainsQ", "[", 
+         RowBox[{"#", ",", 
+          RowBox[{"\"\<DOI: \>\"", "|", "\"\<doi: \>\""}]}], "]"}], ",", 
+        RowBox[{"StringCases", "[", 
+         RowBox[{"#", ",", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"\"\<doi: \>\"", "|", "\"\<DOI: \>\""}], 
+            "~~", "\"\<10.\>\"", "~~", 
+            RowBox[{"Shortest", "@", "a__"}], "~~", "\"\< \>\""}], "->", 
+           RowBox[{"\"\<10.\>\"", "~~", "a"}]}]}], "]"}], ",", 
+        RowBox[{"StringContainsQ", "[", 
+         RowBox[{"#", ",", 
+          RowBox[{"\"\<DOI \>\"", "|", "\"\<doi \>\""}]}], "]"}], ",", 
+        RowBox[{"StringCases", "[", 
+         RowBox[{"#", ",", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"\"\<doi \>\"", "|", "\"\<DOI \>\""}], "~~", "\"\<10.\>\"",
+             "~~", 
+            RowBox[{"Shortest", "@", "a__"}], "~~", "\"\< \>\""}], "->", 
+           RowBox[{"\"\<10.\>\"", "~~", "a"}]}]}], "]"}], ",", 
+        RowBox[{"StringContainsQ", "[", 
+         RowBox[{"#", ",", "\"\<https://doi.org/\>\""}], "]"}], ",", 
+        RowBox[{"StringCases", "[", 
+         RowBox[{"#", ",", 
+          RowBox[{
+           RowBox[{"\"\<https://doi.org/\>\"", "~~", "\"\<10.\>\"", "~~", 
+            RowBox[{"Shortest", "@", "a__"}], "~~", 
+            RowBox[{"\"\< \>\"", "|", "\"\<\\n\>\""}]}], "->", 
+           RowBox[{"\"\<10.\>\"", "~~", "a"}]}]}], "]"}], ",", 
+        RowBox[{"StringContainsQ", "[", 
+         RowBox[{"#", ",", 
+          RowBox[{"\"\<DOI\>\"", "|", "\"\<doi\>\""}]}], "]"}], ",", 
+        RowBox[{"StringCases", "[", 
+         RowBox[{"#", ",", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"\"\<doi\>\"", "|", "\"\<DOI\>\""}], "~~", 
+            RowBox[{"Whitespace", ".."}], "~~", "\"\<10.\>\"", "~~", 
+            RowBox[{"Shortest", "@", "a__"}], "~~", "\"\< \>\""}], "->", 
+           RowBox[{"\"\<10.\>\"", "~~", "a"}]}]}], "]"}], ",", "True", 
+        ",", "\"\<no DOI available\>\""}], "]"}], "&"}], "/@", "ex"}]}], 
+   "\[IndentingNewLine]", "*)"}], "\n", "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"Put", "[", 
+  RowBox[{"abstracts", ",", 
+   RowBox[{"\"\<D:\\\\Daten\\\\b1464\\\\Desktop\\\\Abstracts Google Scholar \
+\>\"", "~~", "searchTerm", "~~", "\"\<.m\>\""}]}], "]"}]}], "Input",
+ CellChangeTimes->{
+  3.900343789016387*^9, 3.900344155879723*^9, {3.9003442341951404`*^9, 
+   3.9003442592050962`*^9}, {3.9006001942748013`*^9, 3.900600210698829*^9}, {
+   3.9006047768912387`*^9, 3.90060481379212*^9}, {3.9007808592366056`*^9, 
+   3.9007808655163994`*^9}, {3.9009867227725554`*^9, 
+   3.9009867552589583`*^9}, {3.9009868016136417`*^9, 3.900986830117322*^9}, {
+   3.9009869674302573`*^9, 3.9009869977710743`*^9}, 3.9009873180616164`*^9, 
+   3.900989147732377*^9, 3.9010318057076645`*^9, {3.901124686488016*^9, 
+   3.9011246945267296`*^9}, {3.912078165457329*^9, 3.912078166661045*^9}, 
+   3.912096963397421*^9},ExpressionUUID->"637867cd-f9f1-493b-8685-\
+d32cf5848379"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"dgooglescholar", "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"\"\<DB\>\"", "->", "\"\<Google Scholar\>\""}], ",", 
+        RowBox[{"\"\<TI\>\"", "->", 
+         RowBox[{"#", "[", 
+          RowBox[{"[", "2", "]"}], "]"}]}], ",", 
+        RowBox[{"\"\<AU\>\"", "->", "\"\<\>\""}], ",", 
+        RowBox[{"\"\<DP\>\"", "->", "\"\<\>\""}], ",", 
+        RowBox[{"\"\<LA\>\"", "->", "\"\<\>\""}], ",", 
+        RowBox[{"\"\<JT\>\"", "->", "\"\<\>\""}], ",", 
+        RowBox[{"\"\<PT\>\"", "->", "\"\<\>\""}], ",", 
+        RowBox[{"\"\<AID\>\"", "->", 
+         RowBox[{"#", "[", 
+          RowBox[{"[", "1", "]"}], "]"}]}], ",", 
+        RowBox[{"\"\<AB\>\"", "->", 
+         RowBox[{"StringTrim", "[", 
+          RowBox[{"#", "[", 
+           RowBox[{"[", "3", "]"}], "]"}], "]"}]}]}], "}"}], "&"}], "/@", 
+     RowBox[{"Map", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Flatten", "[", "#", "]"}], "&"}], ",", 
+       RowBox[{"Transpose", "@", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"Part", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Flatten", "[", 
+              RowBox[{"list", ",", 
+               RowBox[{"{", "3", "}"}]}], "]"}], "/.", 
+             RowBox[{
+              RowBox[{"{", "}"}], "->", "Nothing"}]}], ",", "1"}], "]"}], ",",
+           "abstracts"}], "}"}]}], ",", 
+       RowBox[{"{", "1", "}"}]}], "]"}]}]}], ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"Put", "[", 
+  RowBox[{"dgooglescholar", ",", 
+   RowBox[{"\"\<D:\\\\Daten\\\\b1464\\\\Desktop\\\\Data Google Scholar \>\"", 
+    "~~", "searchTerm", "~~", "\"\<.m\>\""}]}], "]"}]}], "Input",
+ CellChangeTimes->{
+  3.900343789016387*^9, 3.900344155879723*^9, {3.9003442341951404`*^9, 
+   3.9003442592050962`*^9}, {3.9006001942748013`*^9, 3.900600210698829*^9}, {
+   3.9006047768912387`*^9, 3.90060481379212*^9}, {3.9007808592366056`*^9, 
+   3.9007808655163994`*^9}, {3.9009867227725554`*^9, 
+   3.9009867552589583`*^9}, {3.9009868016136417`*^9, 3.900986830117322*^9}, {
+   3.9009869674302573`*^9, 3.9009869977710743`*^9}, {3.9009873180616164`*^9, 
+   3.9009873536283216`*^9}, {3.901032547366111*^9, 3.901032547773943*^9}, 
+   3.901124601093294*^9, {3.901643599847057*^9, 3.9016436063677616`*^9}, 
+   3.912096978868555*^9},ExpressionUUID->"aeb193d5-6934-4471-b364-\
+43064751ec24"],
+
+Cell[BoxData["dgooglescholar"], "Input",
+ CellChangeTimes->{{3.9006862057399206`*^9, 3.9006862087418795`*^9}, {
+  3.901643446868298*^9, 3.9016434472006674`*^9}, {3.9016435126406364`*^9, 
+  3.901643514671628*^9}},
+ CellLabel->
+  "In[101]:=",ExpressionUUID->"8ab312df-2b80-460b-8caf-f7e759681bbf"],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Detect", " ", "Authors", "\[IndentingNewLine]", "temp"}], "=", 
+    RowBox[{
+    "Import", 
+     "[", "\"\<https://scholar.google.com/scholar?start=1&q=musician+hearing+\
+loss&hl=de&as_sdt=0,5\>\"", "]"}]}], ";", "\n", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"StringCases", "[", 
+      RowBox[{"temp", ",", 
+       RowBox[{
+        RowBox[{"#", "~~", "\"\<\\n\>\"", "~~", 
+         RowBox[{"Shortest", "[", "a__", "]"}], "~~", 
+         RowBox[{"\"\<\[Ellipsis] \>\"", "|", "\"\<\[Bullet] \>\""}]}], "->", 
+        "a"}]}], "]"}], "&"}], "/@", 
+    RowBox[{"list", "[", 
+     RowBox[{"[", 
+      RowBox[{"All", ",", "2", ",", "1"}], "]"}], "]"}]}]}], " ", 
+  "\[IndentingNewLine]", "*)"}]], "Input",
+ CellChangeTimes->{{3.900686258899074*^9, 3.9006862617851696`*^9}, {
+   3.9006862955150013`*^9, 3.900686301514908*^9}, 3.900687078090546*^9, {
+   3.9006871912743516`*^9, 3.900687262676036*^9}, {3.900687338929573*^9, 
+   3.900687355033615*^9}, {3.900688178014784*^9, 
+   3.900688182189762*^9}},ExpressionUUID->"25263113-43d1-48a3-b6e9-\
+b8c7f1c38dc7"],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Keywords", " ", "vor", " ", "Abstract"}], " ", "->", " ", 
+    RowBox[{
+     RowBox[{"{", "}"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     "temp2"}]}], "=", 
+   RowBox[{
+    RowBox[{
+    "Import", 
+     "[", "\"\<https://jcaa.caa-aca.ca/index.php/jcaa/article/view/1429\>\"", 
+     "]"}], "\n", 
+    RowBox[{"Which", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"StringContainsQ", "[", 
+        RowBox[{"temp2", ",", 
+         RowBox[{"\"\<Abstract\>\"", "|", "\"\<ABSTRACT\>\""}]}], "]"}], "&&", 
+       RowBox[{"StringContainsQ", "[", 
+        RowBox[{"temp2", ",", 
+         RowBox[{"\"\<Keywords\>\"", "|", "\"\<KEYWORDS\>\""}]}], "]"}]}], ",", 
+      RowBox[{"StringCases", "[", 
+       RowBox[{"temp2", ",", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"\"\<Abstract\>\"", "|", "\"\<ABSTRACT\>\""}], "~~", 
+          RowBox[{"Shortest", "[", "a__", "]"}], "~~", 
+          RowBox[{"\"\<Keywords\>\"", "|", "\"\<KEYWORDS\>\""}]}], "->", 
+         "a"}]}], "]"}], ",", 
+      RowBox[{
+       RowBox[{"StringContainsQ", "[", 
+        RowBox[{"temp2", ",", 
+         RowBox[{"\"\<Abstract\>\"", "|", "\"\<ABSTRACT\>\""}]}], "]"}], "&&", 
+       RowBox[{"StringContainsQ", "[", 
+        RowBox[{"temp2", ",", 
+         RowBox[{"\"\<Introduction\>\"", "|", "\"\<INTRODUCTION\>\""}]}], 
+        "]"}]}], ",", 
+      RowBox[{"StringCases", "[", 
+       RowBox[{"temp2", ",", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"\"\<Abstract\>\"", "|", "\"\<ABSTRACT\>\""}], "~~", 
+          RowBox[{"Shortest", "[", "a__", "]"}], "~~", 
+          RowBox[{"\"\<Introduction\>\"", "|", "\"\<INTRODUCTION\>\""}]}], "->",
+          "a"}]}], "]"}], ",", 
+      RowBox[{"StringContainsQ", "[", 
+       RowBox[{"temp2", ",", 
+        RowBox[{"\"\<Abstract\>\"", "|", "\"\<ABSTRACT\>\""}]}], "]"}], ",", 
+      RowBox[{"StringCases", "[", 
+       RowBox[{"temp2", ",", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"\"\<Abstract\>\"", "|", "\"\<ABSTRACT\>\""}], "~~", 
+          "a__"}], "->", "a"}]}], "]"}], ",", "True", ",", 
+      RowBox[{"{", "\"\<no abstract available\>\"", "}"}]}], "]"}], "\n", "\[IndentingNewLine]", 
+    RowBox[{"{", "}"}]}]}], " ", "*)"}]], "Input",
+ CellChangeTimes->{{3.900687732273383*^9, 3.9006877349161873`*^9}, {
+  3.9006879077827835`*^9, 3.9006879089837027`*^9}, {3.9006881230797577`*^9, 
+  3.9006881693509884`*^9}},ExpressionUUID->"90da5275-308a-4fab-b7f3-\
+cb6e04aa24c8"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["PubMed", "Title",
+ CellChangeTimes->{{3.90034613136802*^9, 
+  3.9003461327152367`*^9}},ExpressionUUID->"fffbbe86-5350-48ac-8c8f-\
+88a67cd6c7b0"],
+
+Cell[BoxData[{
+ RowBox[{"dpubmed", "=."}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dpubmed", "=", 
+   RowBox[{
+   "Import", 
+    "[", "\"\<H:\\\\Projekte\\\\Musikermedizin\\\\L\[ADoubleDot]rmschwerh\
+\[ODoubleDot]rigkeit Review\\\\Literatur\\\\Pubmed Hearing Loss Musician \
+PubMed format.txt\>\"", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dpubmed", "=", 
+   RowBox[{"StringReplace", "[", 
+    RowBox[{"dpubmed", ",", 
+     RowBox[{"\"\<\\n      \>\"", "->", "\"\<\>\""}]}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"dpubmed", "=", 
+   RowBox[{"StringSplit", "[", 
+    RowBox[{"dpubmed", ",", "\"\<\\n\\n\>\""}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"listpubmed", "=", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"StringCases", "[", 
+         RowBox[{"#", ",", 
+          RowBox[{
+           RowBox[{"i", "~~", "\"\<- \>\"", "~~", 
+            RowBox[{"Shortest", "[", "a__", "]"}], "~~", "\"\<\\n\>\""}], "->", 
+           RowBox[{
+            RowBox[{"StringTrim", "[", "i", "]"}], "->", "a"}]}]}], "]"}], 
+        "&"}], "/@", "dpubmed"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", 
+        RowBox[{"{", 
+         RowBox[{"\"\<TI  \>\"", ",", " ", "\"\<AU  \>\"", ",", 
+          " ", "\"\<DP  \>\"", ",", " ", "\"\<LA  \>\"", ",", 
+          " ", "\"\<JT  \>\"", ",", " ", "\"\<PT  \>\"", ",", 
+          " ", "\"\<AID \>\"", ",", " ", "\"\<PMID\>\""}], "}"}]}], "}"}]}], 
+     "]"}]}], ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+   "Titles", " ", "in", " ", "PubMed", " ", "end", " ", "with", " ", "a", " ",
+     "dot"}], "*)"}]}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"listpubmed", "[", 
+     RowBox[{"[", 
+      RowBox[{"1", ",", "All", ",", "1", ",", "2"}], "]"}], "]"}], "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"StringTake", "[", 
+          RowBox[{"#", ",", 
+           RowBox[{"-", "1"}]}], "]"}], "==", "\"\<.\>\""}], ",", 
+        RowBox[{"StringTake", "[", 
+         RowBox[{"#", ",", 
+          RowBox[{"{", 
+           RowBox[{"1", ",", 
+            RowBox[{"-", "2"}]}], "}"}]}], "]"}], ",", "#"}], "]"}], "&"}], "/@", 
+     RowBox[{"listpubmed", "[", 
+      RowBox[{"[", 
+       RowBox[{"1", ",", "All", ",", "1", ",", "2"}], "]"}], "]"}]}]}], ";"}],
+   "\[IndentingNewLine]", "\n", 
+  RowBox[{"(*", 
+   RowBox[{"Titles", " ", "in", " ", "PubMed", " ", "in", " ", "brackets"}], 
+   "*)"}]}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"listpubmed", "[", 
+     RowBox[{"[", 
+      RowBox[{"1", ",", "All", ",", "1", ",", "2"}], "]"}], "]"}], "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"StringTake", "[", 
+           RowBox[{"#", ",", "1"}], "]"}], "==", "\"\<[\>\""}], " ", "&&", 
+         " ", 
+         RowBox[{
+          RowBox[{"StringTake", "[", 
+           RowBox[{"#", ",", 
+            RowBox[{"-", "1"}]}], "]"}], "==", "\"\<]\>\""}]}], ",", 
+        RowBox[{"StringTake", "[", 
+         RowBox[{"#", ",", 
+          RowBox[{"{", 
+           RowBox[{"2", ",", 
+            RowBox[{"-", "2"}]}], "}"}]}], "]"}], ",", "#"}], "]"}], "&"}], "/@", 
+     RowBox[{"listpubmed", "[", 
+      RowBox[{"[", 
+       RowBox[{"1", ",", "All", ",", "1", ",", "2"}], "]"}], "]"}]}]}], ";"}],
+   "\[IndentingNewLine]", "\[IndentingNewLine]", "\n", 
+  RowBox[{"(*", 
+   RowBox[{
+   "missing", " ", "AID", " ", "are", " ", "replaced", " ", "with", " ", 
+    "PMID", " ", "and", " ", "PubMed", " ", "URL"}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"newAID", "=", 
+   RowBox[{"Transpose", "@", 
+    RowBox[{"listpubmed", "[", 
+     RowBox[{"[", 
+      RowBox[{
+       RowBox[{"-", "2"}], ";;", 
+       RowBox[{"-", "1"}]}], "]"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"newAID", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"#", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], "===", 
+         RowBox[{"{", "}"}]}], ",", 
+        RowBox[{"#", "=", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"\"\<AID\>\"", "->", 
+             RowBox[{"\"\<https://pubmed.ncbi.nlm.nih.gov/\>\"", "~~", 
+              RowBox[{"ToString", "[", 
+               RowBox[{"#", "[", 
+                RowBox[{"[", 
+                 RowBox[{"2", ",", "1", ",", "2"}], "]"}], "]"}], "]"}]}]}], 
+            "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"\"\<PMID\>\"", "->", 
+             RowBox[{"#", "[", 
+              RowBox[{"[", 
+               RowBox[{"2", ",", "1", ",", "2"}], "]"}], "]"}]}], "}"}]}], 
+          "}"}]}], ",", "#"}], "]"}], "&"}], "/@", "newAID"}], "//", 
+    "Quiet"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"listpubmed", "[", 
+     RowBox[{"[", 
+      RowBox[{
+       RowBox[{"-", "2"}], ";;", 
+       RowBox[{"-", "1"}]}], "]"}], "]"}], "=", 
+    RowBox[{"Transpose", "@", "newAID"}]}], ";"}], "\n", 
+  RowBox[{"(*", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"abs", "=", "\"\<no abstract available\>\""}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+        "URLRead", "[", "\"\<https://pubmed.ncbi.nlm.nih.gov/6720146\>\"", 
+         "]"}], "[", 
+        RowBox[{"[", 
+         RowBox[{"2", ",", "2"}], "]"}], "]"}], "==", "200"}], ",", 
+      RowBox[{"extr", "=", 
+       RowBox[{
+       "Import", "[", "\"\<https://pubmed.ncbi.nlm.nih.gov/6720146\>\"", 
+        "]"}]}], ",", 
+      RowBox[{"extr", "=", "0"}]}], "]"}], ";", "\[IndentingNewLine]", 
+    "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"StringQ", "[", "extr", "]"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"extr", "=", 
+        RowBox[{"StringReplace", "[", 
+         RowBox[{"extr", ",", " ", 
+          RowBox[{"\"\<\\n\>\"", "->", "\"\<     \>\""}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"abs", "=", 
+        RowBox[{"StringCases", "[", 
+         RowBox[{"extr", ",", 
+          RowBox[{
+           RowBox[{"\"\<PubMed PMID          Abstract\>\"", "~~", 
+            RowBox[{"Shortest", "[", "a__", "]"}], 
+            "~~", "\"\<Similar articles\>\""}], "->", "a"}]}], "]"}]}]}]}], 
+     "]"}]}], "\[IndentingNewLine]", "*)"}], "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"PrependTo", "[", 
+   RowBox[{"listpubmed", ",", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"\"\<DB\>\"", "->", "\"\<MEDLINE\>\""}], "}"}], ",", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Length", "[", "#", "]"}], "&"}], "/@", "listpubmed"}], 
+        ")"}], "[", 
+       RowBox[{"[", "1", "]"}], "]"}]}], "]"}]}], "]"}], ";"}], "\n", 
+ RowBox[{"Clear", "[", "a", "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"AppendTo", "[", 
+    RowBox[{"listpubmed", ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"StringContainsQ", "[", 
+          RowBox[{"#", ",", "\"\<AB  -\>\""}], "]"}], ",", 
+         RowBox[{"StringCases", "[", 
+          RowBox[{"#", ",", 
+           RowBox[{
+            RowBox[{"\"\<AB\>\"", "~~", 
+             RowBox[{"WhitespaceCharacter", ".."}], "~~", " ", "\"\<- \>\"", "~~", 
+             RowBox[{"Shortest", "[", "a__", "]"}], "~~", "\"\<.\\n\>\"", "~~", 
+             RowBox[{"LetterCharacter", ".."}], "~~", 
+             RowBox[{"WhitespaceCharacter", ".."}], "~~", "\"\<- \>\""}], "->", 
+            RowBox[{"\"\<AB\>\"", "->", 
+             RowBox[{"a", "~~", "\"\<.\>\""}]}]}]}], "]"}], ",", 
+         RowBox[{"\"\<AB\>\"", "->", "\"\<no abstract available\>\""}]}], 
+        "]"}], "&"}], "/@", "dpubmed"}]}], "]"}], ";"}], 
+  "\[IndentingNewLine]"}], "\n", 
+ RowBox[{
+  RowBox[{"listpubmed", "=", 
+   RowBox[{"Flatten", "/@", 
+    RowBox[{"Transpose", "@", "listpubmed"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"listpubmed", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"GroupBy", "[", 
+      RowBox[{"#", ",", "Keys"}], "]"}], "&"}], "/@", "listpubmed"}]}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.9004234698805566`*^9, 3.9004234927142277`*^9}, {
+   3.900425503792076*^9, 3.9004255217253237`*^9}, {3.900580116437453*^9, 
+   3.90058011891181*^9}, 3.900580196225269*^9, 3.9005818804596653`*^9, {
+   3.900582068232548*^9, 3.900582096343481*^9}, {3.9005821583042493`*^9, 
+   3.9005821810886106`*^9}, {3.9005823076411953`*^9, 3.900582308041994*^9}, {
+   3.9005825955104427`*^9, 3.900582636249279*^9}, {3.9005826765640044`*^9, 
+   3.900582690339573*^9}, {3.90058284148328*^9, 3.9005828416795235`*^9}, {
+   3.9005828752356358`*^9, 3.9005828759531183`*^9}, {3.900583193412427*^9, 
+   3.900583225608962*^9}, 3.9005832710747375`*^9, 3.900583310779331*^9, 
+   3.900583365105712*^9, {3.9005834061104393`*^9, 3.9005835052492976`*^9}, {
+   3.9005836047757096`*^9, 3.90058360614745*^9}, {3.9005836538674145`*^9, 
+   3.9005836622667427`*^9}, {3.9007759519999075`*^9, 3.900775954046219*^9}, 
+   3.900776064206427*^9, {3.900776139259303*^9, 3.900776143670679*^9}, {
+   3.90077619057194*^9, 3.900776234211353*^9}, 3.900776278184806*^9, {
+   3.9007763132399597`*^9, 3.9007763170793457`*^9}, {3.9010331432337933`*^9, 
+   3.901033154534918*^9}, {3.901206955690776*^9, 3.9012069573831263`*^9}, {
+   3.9012077651440353`*^9, 3.901207779036189*^9}, {3.9012078103108597`*^9, 
+   3.9012078229629364`*^9}, 3.901207903045638*^9, {3.90120986225368*^9, 
+   3.9012098633642497`*^9}, {3.9012099295974045`*^9, 
+   3.9012099300032825`*^9}, {3.90121176192642*^9, 3.9012117798248653`*^9}, {
+   3.901211843847762*^9, 3.901211880475623*^9}, {3.9012120362244964`*^9, 
+   3.9012120400520635`*^9}, {3.9016436302073812`*^9, 
+   3.9016436386413727`*^9}, {3.9016438526859875`*^9, 3.901643862821746*^9}, {
+   3.9019005737246704`*^9, 3.901900616087732*^9}, {3.90190075409099*^9, 
+   3.9019007621852293`*^9}},ExpressionUUID->"9f9efd55-241e-48e5-8ed7-\
+34d483fee98f"],
+
+Cell[BoxData[{
+ RowBox[{"Values", "[", 
+  RowBox[{"listpubmed", "[", 
+   RowBox[{"[", "45", "]"}], "]"}], "]"}], "\n", 
+ RowBox[{"listpubmed", "[", 
+  RowBox[{"[", "45", "]"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Values", "[", 
+  RowBox[{"listpubmed", "[", 
+   RowBox[{"[", "45", "]"}], "]"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Values", "[", 
+  RowBox[{"Flatten", "[", 
+   RowBox[{"Values", "[", 
+    RowBox[{"listpubmed", "[", 
+     RowBox[{"[", "45", "]"}], "]"}], "]"}], "]"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.9005839543232265`*^9, 3.9005839592354665`*^9}, 
+   3.9008597208105717`*^9},ExpressionUUID->"61342174-0782-4c04-9a5d-\
+68bd8cb6a257"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Embase", "Title",
+ CellChangeTimes->{{3.90034613136802*^9, 3.9003461327152367`*^9}, {
+  3.9006904553676653`*^9, 
+  3.9006904577830544`*^9}},ExpressionUUID->"fffae688-7bc9-478c-a873-\
+e8cf7292a7a0"],
+
+Cell[BoxData[{
+ RowBox[{"dembase", "=."}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dembase", "=", 
+   RowBox[{
+   "Import", 
+    "[", "\"\<H:\\\\Projekte\\\\Musikermedizin\\\\L\[ADoubleDot]rmschwerh\
+\[ODoubleDot]rigkeit Review\\\\Literatur\\\\Embase Hearing Loss Musician \
+Embase RIS.txt\>\"", "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"dembase", "=", 
+   RowBox[{"StringSplit", "[", 
+    RowBox[{"dembase", ",", "\"\<\\n\\n\>\""}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"dembaselist", "=", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"StringCases", "[", 
+         RowBox[{"#", ",", 
+          RowBox[{
+           RowBox[{"i", "~~", "\"\<- \>\"", "~~", 
+            RowBox[{"Shortest", "[", "a__", "]"}], "~~", "\"\<\\n\>\""}], "->", 
+           RowBox[{
+            RowBox[{"StringTrim", "[", "i", "]"}], "->", "a"}]}]}], "]"}], 
+        "&"}], "/@", "dembase"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", 
+        RowBox[{"{", 
+         RowBox[{"\"\<T1  \>\"", ",", " ", "\"\<A1  \>\"", ",", 
+          " ", "\"\<Y1  \>\"", ",", " ", "\"\<LA  \>\"", ",", 
+          " ", "\"\<JF  \>\"", ",", " ", "\"\<TY  \>\"", ",", 
+          " ", "\"\<L2  \>\"", ",", " ", "\"\<U2  \>\""}], "}"}]}], "}"}]}], 
+     "]"}]}], ";"}], "\n", "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+   "missing", " ", "AID", " ", "are", " ", "replaced", " ", "with", " ", 
+    "Embase", " ", "ID", " ", "and", " ", "Embse", " ", "URL"}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"newAID", "=", 
+    RowBox[{"Transpose", "@", 
+     RowBox[{"dembaselist", "[", 
+      RowBox[{"[", 
+       RowBox[{
+        RowBox[{"-", "2"}], ";;", 
+        RowBox[{"-", "1"}]}], "]"}], "]"}]}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\n", 
+ RowBox[{
+  RowBox[{"newAID", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"#", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], "===", 
+         RowBox[{"{", "}"}]}], ",", 
+        RowBox[{"#", "=", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"\"\<L2\>\"", "->", 
+             
+             RowBox[{"\"\<https://www.embase.com/records?subaction=viewrecord&\
+id=\>\"", "~~", 
+              RowBox[{"ToString", "[", 
+               RowBox[{"#", "[", 
+                RowBox[{"[", 
+                 RowBox[{"2", ",", "1", ",", "2"}], "]"}], "]"}], "]"}]}]}], 
+            "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"\"\<U2\>\"", "->", 
+             RowBox[{"#", "[", 
+              RowBox[{"[", 
+               RowBox[{"2", ",", "1", ",", "2"}], "]"}], "]"}]}], "}"}]}], 
+          "}"}]}], ",", "#"}], "]"}], "&"}], "/@", "newAID"}], "//", 
+    "Quiet"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"dembaselist", "[", 
+     RowBox[{"[", 
+      RowBox[{
+       RowBox[{"-", "2"}], ";;", 
+       RowBox[{"-", "1"}]}], "]"}], "]"}], "=", 
+    RowBox[{"Transpose", "@", "newAID"}]}], ";"}], "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"PrependTo", "[", 
+    RowBox[{"dembaselist", ",", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\"\<DB\>\"", "->", "\"\<Embase\>\""}], "}"}], ",", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Length", "[", "#", "]"}], "&"}], "/@", "dembaselist"}], 
+         ")"}], "[", 
+        RowBox[{"[", "1", "]"}], "]"}]}], "]"}]}], "]"}], ";"}], 
+  "\[IndentingNewLine]"}], "\n", 
+ RowBox[{"Clear", "[", "a", "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"AppendTo", "[", 
+    RowBox[{"dembaselist", ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"StringContainsQ", "[", 
+          RowBox[{"#", ",", "\"\<N2  -\>\""}], "]"}], ",", 
+         RowBox[{"StringCases", "[", 
+          RowBox[{"#", ",", 
+           RowBox[{
+            RowBox[{"\"\<N2\>\"", "~~", 
+             RowBox[{"WhitespaceCharacter", ".."}], "~~", " ", "\"\<- \>\"", "~~", 
+             RowBox[{"Shortest", "[", "a__", "]"}], "~~", "\"\<.\\n\>\"", "~~", 
+             RowBox[{"LetterCharacter", ".."}], "~~", 
+             RowBox[{"WhitespaceCharacter", ".."}], "~~", "\"\<- \>\""}], "->", 
+            RowBox[{"\"\<AB\>\"", "->", 
+             RowBox[{"a", "~~", "\"\<.\>\""}]}]}]}], "]"}], ",", 
+         RowBox[{"\"\<AB\>\"", "->", "\"\<no abstract available\>\""}]}], 
+        "]"}], "&"}], "/@", "dembase"}]}], "]"}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dembaselist", "=", 
+   RowBox[{"Flatten", "/@", 
+    RowBox[{"Transpose", "@", "dembaselist"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dembaselist", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"GroupBy", "[", 
+      RowBox[{"#", ",", "Keys"}], "]"}], "&"}], "/@", "dembaselist"}]}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.9004234698805566`*^9, 3.9004234927142277`*^9}, {
+   3.900425503792076*^9, 3.9004255217253237`*^9}, {3.900580116437453*^9, 
+   3.90058011891181*^9}, 3.900580196225269*^9, 3.9005818804596653`*^9, {
+   3.900582068232548*^9, 3.900582096343481*^9}, {3.9005821583042493`*^9, 
+   3.9005821810886106`*^9}, {3.9005823076411953`*^9, 3.900582308041994*^9}, {
+   3.9005825955104427`*^9, 3.900582636249279*^9}, {3.9005826765640044`*^9, 
+   3.900582690339573*^9}, {3.90058284148328*^9, 3.9005828416795235`*^9}, {
+   3.9005828752356358`*^9, 3.9005828759531183`*^9}, {3.900583193412427*^9, 
+   3.900583225608962*^9}, 3.9005832710747375`*^9, 3.900583310779331*^9, 
+   3.900583365105712*^9, {3.9005834061104393`*^9, 3.9005835052492976`*^9}, {
+   3.9005836047757096`*^9, 3.90058360614745*^9}, {3.9005836538674145`*^9, 
+   3.9005836622667427`*^9}, {3.900689685273755*^9, 3.9006896920981407`*^9}, {
+   3.9006906185669293`*^9, 3.9006906192210183`*^9}, {3.90069070598011*^9, 
+   3.900690706766465*^9}, {3.9006907911294622`*^9, 3.9006907978435717`*^9}, {
+   3.900691118985097*^9, 3.9006911222381916`*^9}, {3.9006923474967246`*^9, 
+   3.9006923626236563`*^9}, {3.90069263528026*^9, 3.9006926356209116`*^9}, {
+   3.9006926756220293`*^9, 3.9006926757607164`*^9}, {3.900692728360508*^9, 
+   3.900692738718743*^9}, {3.901033567379531*^9, 3.9010335890392923`*^9}, 
+   3.901202959571345*^9, {3.901213035943898*^9, 3.9012131244384623`*^9}, {
+   3.9012131570034986`*^9, 3.9012132049213734`*^9}, {3.901213285012944*^9, 
+   3.9012132856196737`*^9}, {3.901213395283079*^9, 3.9012134132670603`*^9}, {
+   3.9012135637122602`*^9, 3.901213637338382*^9}},
+ CellLabel->"In[32]:=",ExpressionUUID->"859bc055-4697-48d1-8056-ac75dc766fa5"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Cochrane Library", "Title",
+ CellChangeTimes->{{3.90034613136802*^9, 3.9003461327152367`*^9}, {
+  3.9006904553676653`*^9, 3.9006904577830544`*^9}, {3.900691909504736*^9, 
+  3.9006919141673293`*^9}},ExpressionUUID->"c42ebb31-2841-4189-9193-\
+2d96b34c38df"],
+
+Cell[BoxData[{
+ RowBox[{"dcochrane", "=."}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"dcochrane", "=", 
+    RowBox[{
+    "Import", 
+     "[", "\"\<H:\\\\Projekte\\\\Musikermedizin\\\\L\[ADoubleDot]rmschwerh\
+\[ODoubleDot]rigkeit Review\\\\Literatur\\\\Cochrane Library Hearing Loss \
+Musician RIS.txt\>\"", "]"}]}], ";"}], "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"dcochrane", "=", 
+    RowBox[{"StringSplit", "[", 
+     RowBox[{"dcochrane", ",", "\"\<\\n\\n\\n\>\""}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"dcochranelist", "=", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"StringCases", "[", 
+         RowBox[{"#", ",", 
+          RowBox[{
+           RowBox[{"i", "~~", 
+            RowBox[{"WhitespaceCharacter", ".."}], "~~", "\"\<-  \>\"", "~~", 
+            RowBox[{"Shortest", "[", "a__", "]"}], "~~", "\"\<\\n\>\""}], "->", 
+           RowBox[{"i", "->", "a"}]}]}], "]"}], "&"}], "/@", "dcochrane"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", 
+        RowBox[{"{", 
+         RowBox[{"\"\<T1\>\"", ",", "\"\<A1\>\"", ",", "\"\<PY\>\"", 
+          ",", "\"\<JF\>\"", ",", "\"\<TY\>\"", ",", "\"\<UR\>\""}], "}"}]}], 
+       "}"}]}], "]"}]}], ";"}], "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"PrependTo", "[", 
+    RowBox[{"dcochranelist", ",", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\"\<DB\>\"", "->", "\"\<Cochrane\>\""}], "}"}], ",", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Length", "[", "#", "]"}], "&"}], "/@", "dcochranelist"}], 
+         ")"}], "[", 
+        RowBox[{"[", "1", "]"}], "]"}]}], "]"}]}], "]"}], ";"}], "\n"}], "\[IndentingNewLine]", 
+ RowBox[{"Clear", "[", "a", "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"AppendTo", "[", 
+    RowBox[{"dcochranelist", ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"StringContainsQ", "[", 
+          RowBox[{"#", ",", "\"\<N2  -\>\""}], "]"}], ",", 
+         RowBox[{"StringCases", "[", 
+          RowBox[{"#", ",", 
+           RowBox[{
+            RowBox[{"\"\<N2\>\"", "~~", 
+             RowBox[{"WhitespaceCharacter", ".."}], "~~", " ", "\"\<- \>\"", "~~", 
+             RowBox[{"Shortest", "[", "a__", "]"}], "~~", "\"\<.\\n\>\"", "~~", 
+             RowBox[{"LetterCharacter", ".."}], "~~", 
+             RowBox[{"WhitespaceCharacter", ".."}], "~~", "\"\<- \>\""}], "->", 
+            RowBox[{"\"\<AB\>\"", "->", 
+             RowBox[{"a", "~~", "\"\<.\>\""}]}]}]}], "]"}], ",", 
+         RowBox[{"\"\<AB\>\"", "->", "\"\<no abstract available\>\""}]}], 
+        "]"}], "&"}], "/@", "dcochrane"}]}], "]"}], ";"}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"dcochranelist", "=", 
+    RowBox[{"Flatten", "/@", 
+     RowBox[{"Transpose", "@", "dcochranelist"}]}]}], ";"}], 
+  "\[IndentingNewLine]", "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"dcochranelist", "=", 
+    RowBox[{"Select", "[", 
+     RowBox[{"dcochranelist", ",", 
+      RowBox[{
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"{", "}"}], "===", 
+          RowBox[{"StringContainsQ", "[", 
+           RowBox[{
+            RowBox[{"ToLowerCase", "[", 
+             RowBox[{"Values", "[", 
+              RowBox[{"KeyTake", "[", 
+               RowBox[{"#", ",", 
+                RowBox[{"{", "\"\<AB\>\"", "}"}]}], "]"}], "]"}], "]"}], ",", 
+            RowBox[{
+            "___", "~~", "\"\<hearing\>\"", " ", "~~", "___", "~~", 
+             " ", "\"\<musician\>\"", "~~", 
+             RowBox[{"___", " ", "|", "___"}], "~~", "\"\<musician\>\"", " ", 
+             "~~", "___", "~~", " ", "\"\<hearing\>\"", "~~", "___"}]}], 
+           "]"}]}], ",", "False", ",", 
+         RowBox[{
+          RowBox[{"StringContainsQ", "[", 
+           RowBox[{
+            RowBox[{"ToLowerCase", "[", 
+             RowBox[{"Values", "[", 
+              RowBox[{"KeyTake", "[", 
+               RowBox[{"#", ",", 
+                RowBox[{"{", "\"\<AB\>\"", "}"}]}], "]"}], "]"}], "]"}], ",", 
+            RowBox[{
+            "___", "~~", "\"\<hearing\>\"", " ", "~~", "___", "~~", 
+             " ", "\"\<musician\>\"", "~~", 
+             RowBox[{"___", " ", "|", "___"}], "~~", "\"\<musician\>\"", " ", 
+             "~~", "___", "~~", " ", "\"\<hearing\>\"", "~~", "___"}]}], 
+           "]"}], "[", 
+          RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "&"}]}], "]"}]}], ";"}], 
+  "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dcochranelist", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"GroupBy", "[", 
+      RowBox[{"#", ",", "Keys"}], "]"}], "&"}], "/@", "dcochranelist"}]}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.9004234698805566`*^9, 3.9004234927142277`*^9}, {
+   3.900425503792076*^9, 3.9004255217253237`*^9}, {3.900580116437453*^9, 
+   3.90058011891181*^9}, 3.900580196225269*^9, 3.9005818804596653`*^9, {
+   3.900582068232548*^9, 3.900582096343481*^9}, {3.9005821583042493`*^9, 
+   3.9005821810886106`*^9}, {3.9005823076411953`*^9, 3.900582308041994*^9}, {
+   3.9005825955104427`*^9, 3.900582636249279*^9}, {3.9005826765640044`*^9, 
+   3.900582690339573*^9}, {3.90058284148328*^9, 3.9005828416795235`*^9}, {
+   3.9005828752356358`*^9, 3.9005828759531183`*^9}, {3.900583193412427*^9, 
+   3.900583225608962*^9}, 3.9005832710747375`*^9, 3.900583310779331*^9, 
+   3.900583365105712*^9, {3.9005834061104393`*^9, 3.9005835052492976`*^9}, {
+   3.9005836047757096`*^9, 3.90058360614745*^9}, {3.9005836538674145`*^9, 
+   3.9005836622667427`*^9}, {3.900689685273755*^9, 3.9006896920981407`*^9}, {
+   3.9006906185669293`*^9, 3.9006906192210183`*^9}, {3.90069070598011*^9, 
+   3.900690706766465*^9}, {3.9006907911294622`*^9, 3.9006907978435717`*^9}, {
+   3.900691118985097*^9, 3.9006911222381916`*^9}, {3.9006919372181063`*^9, 
+   3.9006919831425467`*^9}, {3.900692083229185*^9, 3.9006920841554756`*^9}, {
+   3.9006923016795826`*^9, 3.900692302561144*^9}, {3.9006926602172422`*^9, 
+   3.9006926659189215`*^9}, {3.9006927215548124`*^9, 3.900692721753873*^9}, {
+   3.9006927887897153`*^9, 3.900692818936105*^9}, {3.9006928891024013`*^9, 
+   3.9006928898704176`*^9}, {3.900692979360318*^9, 3.900693004609904*^9}, {
+   3.9006930437045336`*^9, 3.900693067492227*^9}, {3.900861716807192*^9, 
+   3.9008617310795975`*^9}, {3.9010360233750205`*^9, 3.901036044577139*^9}, {
+   3.9010363445825834`*^9, 3.9010363479427977`*^9}, {3.9011160569528704`*^9, 
+   3.9011160636453176`*^9}, {3.9011161288220663`*^9, 3.9011161485511045`*^9}, 
+   3.901116415902238*^9, 3.9012029697630796`*^9, 3.901203018961754*^9},
+ CellLabel->
+  "In[189]:=",ExpressionUUID->"9d4ca270-7cd8-4c32-af31-29380ec23e8b"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Output", "Title",
+ CellChangeTimes->{{3.900773553633887*^9, 
+  3.900773554304985*^9}},ExpressionUUID->"bad5483f-188a-40b4-85c5-\
+02afc5ac2395"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"exportlist", "=."}], "\[IndentingNewLine]", 
+ RowBox[{"exportlist", "=", "head"}]}], "Input",
+ CellChangeTimes->{{3.900774931273627*^9, 3.9007749617027597`*^9}, 
+   3.9019010541629567`*^9},
+ CellLabel->
+  "In[200]:=",ExpressionUUID->"ffa89a97-d499-486a-8c8c-95b451cc32f4"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"\<\"Database\"\>", 
+    ",", "\<\"Date of Retrieval [year/month/day]\"\>", ",", "\<\"Title\"\>", 
+    ",", "\<\"Authors\"\>", ",", "\<\"Year\"\>", ",", "\<\"Language\"\>", 
+    ",", "\<\"Journal Title\"\>", ",", "\<\"Publication Type\"\>", 
+    ",", "\<\"DOI/Hyperlink\"\>", ",", "\<\"Abstract\"\>", 
+    ",", "\<\"Included [1], Excluded [0], To be discussed [2]\"\>", 
+    ",", "\<\"Comment\"\>"}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.9012119313987055`*^9, 3.9012120758417606`*^9, 3.901212585403697*^9, 
+   3.9012136649133797`*^9, 3.9016439687763186`*^9, 3.90190081521024*^9, {
+   3.901901040080643*^9, 3.9019010556001053`*^9}},
+ CellLabel->
+  "Out[201]=",ExpressionUUID->"14bc01eb-2d91-4d89-96c4-23c629ea602f"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"Put", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+    "listpubmed", ",", "dembaselist", ",", "dcochranelist", ",", 
+     "dgooglescholar"}], "}"}], 
+   ",", "\"\<Desktop\\\\temp_literature reading.m\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.900944942146536*^9, 3.900944974570879*^9}, {
+   3.9009450654669027`*^9, 3.9009451117005606`*^9}, 3.9009453637666235`*^9},
+ CellLabel->"In[72]:=",ExpressionUUID->"2eea9e40-2941-4253-8a0e-e293f76f4b01"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"dgooglescholar", "=", 
+    RowBox[{
+     RowBox[{
+     "Get", "[", \
+"\"\<H:\\\\Projekte\\\\Musikermedizin\\\\L\[ADoubleDot]rmschwerh\[ODoubleDot]\
+rigkeit Review\\\\Literatur\\\\Screening List Data.m\>\"", "]"}], "[", 
+     RowBox[{"[", "4", "]"}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.901644004108618*^9, 3.9016440481373625`*^9}},
+ CellLabel->
+  "In[149]:=",ExpressionUUID->"88487ca7-f9f1-4d14-9246-f18b0dd06998"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", "Pubmed", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"\"\<DB\>\"", ",", "\"\<TI\>\"", ",", "\"\<AU\>\"", 
+          ",", "\"\<DP\>\"", ",", "\"\<LA\>\"", ",", "\"\<JT\>\"", 
+          ",", "\"\<PT\>\"", ",", "\"\<AID\>\"", ",", "\"\<AB\>\""}], "}"}], "/.",
+         "#"}], "&"}], "/@", "listpubmed"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{"Map", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Head", "[", "#", "]"}], "===", "String"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"#", "->", "\"\<\>\""}], "}"}], ",", "#"}], "]"}], "&"}], ",",
+        "temp", ",", 
+       RowBox[{"{", "2", "}"}]}], "]"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{"Map", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Values", "[", "#", "]"}], "&"}], ",", "temp", ",", 
+       RowBox[{"{", "2", "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"temp", "[", 
+      RowBox[{"[", 
+       RowBox[{"All", ",", "8"}], "]"}], "]"}], "=", 
+     RowBox[{"Map", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{"StringContainsQ", "[", 
+           RowBox[{"#", ",", "\"\<doi\>\""}], "]"}], ",", 
+          RowBox[{"StringCases", "[", 
+           RowBox[{"#", ",", 
+            RowBox[{
+             RowBox[{"\"\<10\>\"", "~~", "a__", "~~", "\"\< \>\""}], "->", 
+             RowBox[{"\"\<https://doi.org/10\>\"", "~~", "a"}]}]}], "]"}], ",",
+           "#"}], "]"}], "&"}], ",", 
+       RowBox[{"temp", "[", 
+        RowBox[{"[", 
+         RowBox[{"All", ",", "8"}], "]"}], "]"}], ",", 
+       RowBox[{"{", "2", "}"}]}], "]"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{"Map", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Length", "@", "#"}], ">", "1"}], ",", 
+          RowBox[{"Riffle", "[", 
+           RowBox[{"#", ",", "\"\<; \>\""}], "]"}], ",", "#"}], "]"}], "&"}], 
+       ",", "temp", ",", 
+       RowBox[{"{", "2", "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{"Map", "[", 
+      RowBox[{"StringJoin", ",", "temp", ",", 
+       RowBox[{"{", "2", "}"}]}], "]"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{"Flatten", "/@", "temp"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Insert", "[", 
+        RowBox[{"#", ",", "dateret", ",", "2"}], "]"}], "&"}], "/@", 
+      "temp"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Insert", "[", 
+        RowBox[{"#", ",", "\"\< \>\"", ",", 
+         RowBox[{"-", "1"}]}], "]"}], "&"}], "/@", "temp"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Insert", "[", 
+        RowBox[{"#", ",", "\"\< \>\"", ",", 
+         RowBox[{"-", "1"}]}], "]"}], "&"}], "/@", "temp"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"exportlist", "=", 
+     RowBox[{"Join", "[", 
+      RowBox[{"exportlist", ",", "temp"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\n", 
+   RowBox[{"(*", "Embase", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"\"\<DB\>\"", ",", "\"\<T1\>\"", ",", "\"\<A1\>\"", 
+          ",", "\"\<Y1\>\"", ",", "\"\<LA\>\"", ",", "\"\<JF\>\"", 
+          ",", "\"\<TY\>\"", ",", "\"\<L2\>\"", ",", "\"\<AB\>\""}], "}"}], "/.",
+         "#"}], "&"}], "/@", "dembaselist"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{"Map", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Head", "[", "#", "]"}], "===", "String"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"#", "->", "\"\<\>\""}], "}"}], ",", "#"}], "]"}], "&"}], ",",
+        "temp", ",", 
+       RowBox[{"{", "2", "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{"Map", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Values", "[", "#", "]"}], "&"}], ",", "temp", ",", 
+       RowBox[{"{", "2", "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{"Map", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Length", "@", "#"}], ">", "1"}], ",", 
+          RowBox[{"Riffle", "[", 
+           RowBox[{"#", ",", "\"\<; \>\""}], "]"}], ",", "#"}], "]"}], "&"}], 
+       ",", "temp", ",", 
+       RowBox[{"{", "2", "}"}]}], "]"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{"Map", "[", 
+      RowBox[{"StringJoin", ",", "temp", ",", 
+       RowBox[{"{", "2", "}"}]}], "]"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{"Flatten", "/@", "temp"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Insert", "[", 
+        RowBox[{"#", ",", "dateret", ",", "2"}], "]"}], "&"}], "/@", 
+      "temp"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Insert", "[", 
+        RowBox[{"#", ",", "\"\< \>\"", ",", 
+         RowBox[{"-", "1"}]}], "]"}], "&"}], "/@", "temp"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Insert", "[", 
+        RowBox[{"#", ",", "\"\< \>\"", ",", 
+         RowBox[{"-", "1"}]}], "]"}], "&"}], "/@", "temp"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"exportlist", "=", 
+     RowBox[{"Join", "[", 
+      RowBox[{"exportlist", ",", "temp"}], "]"}]}], ";"}], "\n", 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", "Cochrane", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"\"\<DB\>\"", ",", "\"\<T1\>\"", ",", "\"\<A1\>\"", 
+          ",", "\"\<PY\>\"", ",", "\"\<LA\>\"", ",", "\"\<JF\>\"", 
+          ",", "\"\<TY\>\"", ",", "\"\<UR\>\"", ",", "\"\<AB\>\""}], "}"}], "/.",
+         "#"}], "&"}], "/@", "dcochranelist"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{"Map", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Head", "[", "#", "]"}], "===", "String"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"#", "->", "\"\<\>\""}], "}"}], ",", "#"}], "]"}], "&"}], ",",
+        "temp", ",", 
+       RowBox[{"{", "2", "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{"Map", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Values", "[", "#", "]"}], "&"}], ",", "temp", ",", 
+       RowBox[{"{", "2", "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{"Map", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Length", "@", "#"}], ">", "1"}], ",", 
+          RowBox[{"Riffle", "[", 
+           RowBox[{"#", ",", "\"\<; \>\""}], "]"}], ",", "#"}], "]"}], "&"}], 
+       ",", "temp", ",", 
+       RowBox[{"{", "2", "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{"Map", "[", 
+      RowBox[{"StringJoin", ",", "temp", ",", 
+       RowBox[{"{", "2", "}"}]}], "]"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{"Flatten", "/@", "temp"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Insert", "[", 
+        RowBox[{"#", ",", "dateret", ",", "2"}], "]"}], "&"}], "/@", 
+      "temp"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Insert", "[", 
+        RowBox[{"#", ",", "\"\< \>\"", ",", 
+         RowBox[{"-", "1"}]}], "]"}], "&"}], "/@", "temp"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Insert", "[", 
+        RowBox[{"#", ",", "\"\< \>\"", ",", 
+         RowBox[{"-", "1"}]}], "]"}], "&"}], "/@", "temp"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"exportlist", "=", 
+     RowBox[{"Join", "[", 
+      RowBox[{"exportlist", ",", "temp"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\n", 
+   RowBox[{"(*", 
+    RowBox[{"Google", " ", "Scholar"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"\"\<DB\>\"", ",", "\"\<TI\>\"", ",", "\"\<AU\>\"", 
+          ",", "\"\<DP\>\"", ",", "\"\<LA\>\"", ",", "\"\<JT\>\"", 
+          ",", "\"\<PT\>\"", ",", "\"\<AID\>\"", ",", "\"\<AB\>\""}], "}"}], "/.",
+         "#"}], "&"}], "/@", "dgooglescholar"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"StringReplace", "[", 
+        RowBox[{"#", ",", 
+         RowBox[{"\"\<&#39;\>\"", "->", "\"\<'\>\""}]}], "]"}], "&"}], "/@", 
+      "temp"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Insert", "[", 
+        RowBox[{"#", ",", "\"\<2023/08/15\>\"", ",", "2"}], "]"}], "&"}], "/@",
+       "temp"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Insert", "[", 
+        RowBox[{"#", ",", "\"\< \>\"", ",", 
+         RowBox[{"-", "1"}]}], "]"}], "&"}], "/@", "temp"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Insert", "[", 
+        RowBox[{"#", ",", "\"\< \>\"", ",", 
+         RowBox[{"-", "1"}]}], "]"}], "&"}], "/@", "temp"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"exportlist", "=", 
+     RowBox[{"Join", "[", 
+      RowBox[{"exportlist", ",", "temp"}], "]"}]}], ";"}]}]}]], "Input",
+ CellChangeTimes->{{3.9007751901726236`*^9, 3.9007752438042035`*^9}, {
+   3.9007752738109255`*^9, 3.900775274547058*^9}, {3.900777222116623*^9, 
+   3.900777229358697*^9}, {3.9007774993674746`*^9, 3.9007775136374884`*^9}, {
+   3.900777842499962*^9, 3.9007778440781746`*^9}, {3.9007778999656534`*^9, 
+   3.90077790076612*^9}, {3.9007781344264116`*^9, 3.9007781514210234`*^9}, {
+   3.9007783084088516`*^9, 3.900778311488804*^9}, {3.900778428838235*^9, 
+   3.9007784302657814`*^9}, {3.9007789959916153`*^9, 3.900779045028552*^9}, {
+   3.900779623138741*^9, 3.900779679746335*^9}, {3.900779713896635*^9, 
+   3.9007797199154005`*^9}, {3.9007798162538977`*^9, 
+   3.9007798228961415`*^9}, {3.9007799795469055`*^9, 3.900780005125017*^9}, {
+   3.900780042783801*^9, 3.900780048023735*^9}, 3.9007806310278425`*^9, 
+   3.90078108709562*^9, {3.9008618717333803`*^9, 3.900861881739576*^9}, {
+   3.9012032531428256`*^9, 3.901203260683546*^9}, {3.901205430413491*^9, 
+   3.9012054331755257`*^9}},
+ CellLabel->
+  "In[202]:=",ExpressionUUID->"d7ad0640-d3f3-45fe-9c83-eaaf9f379350"],
+
+Cell[BoxData["dcochranelist"], "Input",
+ CellChangeTimes->{{3.9012054554280744`*^9, 3.901205458445044*^9}},
+ CellLabel->
+  "In[571]:=",ExpressionUUID->"4e00205c-42d0-48c3-8fda-d291b40717a4"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Length", "@", "exportlist"}], "-", "1", " ", 
+  RowBox[{"(*", 
+   RowBox[{"Row", " ", "1", " ", "as", " ", "Description"}], 
+   "*)"}]}]], "Input",
+ CellChangeTimes->{{3.900861965939584*^9, 3.900861970846222*^9}, {
+  3.9009520764047127`*^9, 3.9009520857100925`*^9}, {3.901644070287348*^9, 
+  3.901644071410225*^9}},
+ CellLabel->
+  "In[239]:=",ExpressionUUID->"8776309a-eca4-4f77-bf99-e510f59f8071"],
+
+Cell[BoxData["719"], "Output",
+ CellChangeTimes->{
+  3.90086197132388*^9, 3.9009454406790266`*^9, 3.9009477436898093`*^9, 
+   3.900952105422501*^9, 3.901203286699437*^9, 3.9012055298372946`*^9, 
+   3.9012119434202795`*^9, 3.9012120901172776`*^9, 3.90121259420804*^9, 
+   3.9012136757916684`*^9, 3.9016440724164057`*^9, 3.9019008383899007`*^9, {
+   3.9019009375070953`*^9, 3.9019009558517427`*^9}, 3.901901065276827*^9},
+ CellLabel->
+  "Out[239]=",ExpressionUUID->"783b9929-cb73-4a2c-9f99-21d2f7372ede"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Tally", "[", 
+   RowBox[{"Rest", "[", 
+    RowBox[{"exportlist", "[", 
+     RowBox[{"[", 
+      RowBox[{"All", ",", "1"}], "]"}], "]"}], "]"}], "]"}], "//", 
+  "TableForm"}]], "Input",
+ CellChangeTimes->{{3.901203657104031*^9, 3.9012036856129284`*^9}},
+ CellLabel->
+  "In[240]:=",ExpressionUUID->"db2f3bf2-de81-4a3e-96fa-107ac70c5484"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"\<\"MEDLINE\"\>", "253"},
+    {"\<\"Embase\"\>", "277"},
+    {"\<\"Cochrane\"\>", "3"},
+    {"\<\"Google Scholar\"\>", "186"}
+   },
+   GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[2.0999999999999996`]}, 
+       Offset[0.27999999999999997`]}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}}],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{{3.90120366532362*^9, 3.901203686147646*^9}, 
+   3.90120552761174*^9, 3.901211945632437*^9, 3.901212093446618*^9, 
+   3.901212609285536*^9, 3.901213677574254*^9, 3.901644076708417*^9, 
+   3.901900977832059*^9, 3.901901069874136*^9},
+ CellLabel->
+  "Out[240]//TableForm=",ExpressionUUID->"17d1fa4c-810a-4f96-b57b-\
+8291f0fabada"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Export", "[", 
+  RowBox[{
+   RowBox[{"\"\<D:\\\\Daten\\\\b1464\\\\Downloads\\\\pubmed export \>\"", "~~",
+     "searchTerm", "~~", "\"\<.xlsx\>\""}], ",", "exportlist"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.900775254586752*^9, 3.9007753071535053`*^9}, 
+   3.9007768905034676`*^9, {3.900777086207363*^9, 3.900777089254266*^9}, {
+   3.9007771338350887`*^9, 3.9007771413991585`*^9}, 3.9007790037506466`*^9, 
+   3.900779785643615*^9, {3.912103112744712*^9, 
+   3.912103118758533*^9}},ExpressionUUID->"73510aa1-0601-43ef-a917-\
+9b6030a49c2d"],
+
+Cell[BoxData["\<\"D:\\\\Daten\\\\b1464\\\\Downloads\\\\pubmed \
+export.xlsx\"\>"], "Output",
+ CellChangeTimes->{
+  3.900775261352415*^9, 3.900775311008686*^9, {3.900776901791634*^9, 
+   3.9007769098520045`*^9}, {3.900777086377942*^9, 3.90077709978622*^9}, 
+   3.9007771668942895`*^9, 3.9007775246663566`*^9, 3.900778159487629*^9, 
+   3.900778315525424*^9, 3.9007784412645288`*^9, 3.9007797390718503`*^9, 
+   3.9007797906310425`*^9, 3.9007798442757325`*^9, 3.9007800705816507`*^9, 
+   3.900780758271437*^9, 3.900780936349161*^9, {3.9007810635027103`*^9, 
+   3.9007810912964735`*^9}, 3.9008602657972383`*^9, {3.900861589373973*^9, 
+   3.900861599964301*^9}, 3.900861748177574*^9, 3.900861886727676*^9},
+ CellLabel->
+  "Out[201]=",ExpressionUUID->"59c2c08e-429b-4697-ae1b-b8ccb76b7daa"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"dupl", "=", 
+   RowBox[{"Select", "[", 
+    RowBox[{
+     RowBox[{"GroupBy", "[", 
+      RowBox[{"exportlist", ",", 
+       RowBox[{
+        RowBox[{"ToLowerCase", "[", 
+         RowBox[{"#", "[", 
+          RowBox[{"[", "3", "]"}], "]"}], "]"}], "&"}]}], "]"}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Length", " ", "[", "#", "]"}], ">", "1"}], "&"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"duplpos", "=", 
+   RowBox[{"Map", "[", 
+    RowBox[{"Flatten", ",", 
+     RowBox[{"Map", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Position", "[", 
+         RowBox[{"exportlist", ",", "#"}], "]"}], "&"}], ",", 
+       RowBox[{"Values", "[", "dupl", "]"}], ",", 
+       RowBox[{"{", "2", "}"}]}], "]"}], ",", 
+     RowBox[{"{", "1", "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"duplpos", "=", 
+   RowBox[{"Union", "/@", "duplpos"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"duplpos", "=", 
+   RowBox[{"duplpos", "[", 
+    RowBox[{"[", 
+     RowBox[{"All", ",", 
+      RowBox[{"2", ";;", 
+       RowBox[{"-", "1"}]}]}], "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"exportlistWOdupl", "=", 
+   RowBox[{"Delete", "[", 
+    RowBox[{"exportlist", ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"{", "#", "}"}], "&"}], "/@", 
+      RowBox[{"Flatten", "[", "duplpos", "]"}]}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Length", "@", "exportlistWOdupl"}], "-", "1"}], 
+  RowBox[{"(*", 
+   RowBox[{"Row", " ", "1", " ", "as", " ", "Description"}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Row", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Length", "@", "exportlist"}], "-", 
+     RowBox[{"Length", "@", "exportlistWOdupl"}]}], 
+    ",", "\"\< duplicates\>\""}], "}"}], 
+  "]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.9009505754834538`*^9, 3.900950576149313*^9}, {
+   3.900950632029991*^9, 3.9009506876387568`*^9}, {3.900950734133417*^9, 
+   3.900950883199953*^9}, {3.9009510412292876`*^9, 3.9009510599400167`*^9}, {
+   3.90095114585839*^9, 3.900951153965886*^9}, {3.900951195291498*^9, 
+   3.9009512137105775`*^9}, {3.900951383411194*^9, 3.9009515722217517`*^9}, {
+   3.90095160245695*^9, 3.900951622626151*^9}, 3.900951664227354*^9, {
+   3.900951701982849*^9, 3.9009518114708705`*^9}, {3.900951841476715*^9, 
+   3.900951847684972*^9}, {3.900952095173895*^9, 3.9009520959446154`*^9}, {
+   3.900952351853082*^9, 3.9009523601408606`*^9}},
+ CellLabel->
+  "In[122]:=",ExpressionUUID->"a76dd2db-3911-444f-8c93-5f2e85ff22ef"],
+
+Cell[BoxData["550"], "Output",
+ CellChangeTimes->{
+  3.900950884335352*^9, 3.9009510612351832`*^9, 3.9009511576963944`*^9, {
+   3.900951209252805*^9, 3.9009512144970913`*^9}, {3.900951542025525*^9, 
+   3.9009515730924797`*^9}, {3.9009516065551624`*^9, 3.9009516241760883`*^9}, 
+   3.900951665685582*^9, {3.900951728596354*^9, 3.900951790112731*^9}, {
+   3.900951827164146*^9, 3.9009518488095727`*^9}, 3.9009520966446905`*^9, 
+   3.9009523821481414`*^9, 3.901203353926519*^9, {3.901205503111373*^9, 
+   3.9012055330246363`*^9}, 3.9012119483681927`*^9, 3.9012121094401636`*^9, 
+   3.9012126406530237`*^9, 3.9012136806729975`*^9, 3.9016440976902175`*^9},
+ CellLabel->
+  "Out[127]=",ExpressionUUID->"80469039-4fc5-464b-bed6-65e4cc0cc70e"],
+
+Cell[BoxData[
+ TemplateBox[{"169", "\" duplicates\""},
+  "RowDefault"]], "Output",
+ CellChangeTimes->{
+  3.900950884335352*^9, 3.9009510612351832`*^9, 3.9009511576963944`*^9, {
+   3.900951209252805*^9, 3.9009512144970913`*^9}, {3.900951542025525*^9, 
+   3.9009515730924797`*^9}, {3.9009516065551624`*^9, 3.9009516241760883`*^9}, 
+   3.900951665685582*^9, {3.900951728596354*^9, 3.900951790112731*^9}, {
+   3.900951827164146*^9, 3.9009518488095727`*^9}, 3.9009520966446905`*^9, 
+   3.9009523821481414`*^9, 3.901203353926519*^9, {3.901205503111373*^9, 
+   3.9012055330246363`*^9}, 3.9012119483681927`*^9, 3.9012121094401636`*^9, 
+   3.9012126406530237`*^9, 3.9012136806729975`*^9, 3.9016440977001686`*^9},
+ CellLabel->
+  "Out[128]=",ExpressionUUID->"4f37c93b-6600-4f60-a88e-abb3baadc81c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+die Exportliste sollte noch nach Titeln alphabetisch sortiert werden, was \
+doppelte Titel schneller erkennen l\[ADoubleDot]sst\
+\>", "Subsubsection",
+ CellChangeTimes->{{3.9093349688323236`*^9, 3.9093349900308676`*^9}, 
+   3.9093351606200266`*^9},ExpressionUUID->"86550be3-445a-4c22-9de7-\
+453cbb7dfb20"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Export", "[", 
+  RowBox[{
+   RowBox[{"\"\<H:\\\\Projekte\\\\Musikermedizin\\\\L\[ADoubleDot]rmschwerh\
+\[ODoubleDot]rigkeit Review\\\\Screening List\>\"", "~~", "searchTerm", 
+    "~~", "\"\<.xlsx\>\""}], ",", "exportlistWOdupl"}], "]"}]], "Input",
+ CellChangeTimes->{{3.900775254586752*^9, 3.9007753071535053`*^9}, 
+   3.9007768905034676`*^9, {3.900777086207363*^9, 3.900777089254266*^9}, {
+   3.9007771338350887`*^9, 3.9007771413991585`*^9}, 3.9007790037506466`*^9, 
+   3.900779785643615*^9, {3.90095196680763*^9, 3.900952019126034*^9}, {
+   3.901205544106884*^9, 3.901205544348647*^9}, {3.90121196504842*^9, 
+   3.901211965390863*^9}, {3.901213728317908*^9, 3.9012137286476808`*^9}, {
+   3.90125406778373*^9, 3.9012540824588623`*^9}, {3.9121031290550776`*^9, 
+   3.91210313277962*^9}},ExpressionUUID->"d4a8ff57-d55e-4898-a747-\
+524689ffbe78"],
+
+Cell[BoxData["\<\"H:\\\\Projekte\\\\Musikermedizin\\\\L\[ADoubleDot]rmschwerh\
+\[ODoubleDot]rigkeit Review\\\\Screening List.xlsx\"\>"], "Output",
+ CellChangeTimes->{
+  3.900775261352415*^9, 3.900775311008686*^9, {3.900776901791634*^9, 
+   3.9007769098520045`*^9}, {3.900777086377942*^9, 3.90077709978622*^9}, 
+   3.9007771668942895`*^9, 3.9007775246663566`*^9, 3.900778159487629*^9, 
+   3.900778315525424*^9, 3.9007784412645288`*^9, 3.9007797390718503`*^9, 
+   3.9007797906310425`*^9, 3.9007798442757325`*^9, 3.9007800705816507`*^9, 
+   3.900780758271437*^9, 3.900780936349161*^9, {3.9007810635027103`*^9, 
+   3.9007810912964735`*^9}, 3.9008602657972383`*^9, {3.900861589373973*^9, 
+   3.900861599964301*^9}, 3.900861748177574*^9, 3.900861886727676*^9, 
+   3.9009520275908775`*^9, 3.9009524072180924`*^9, 3.9012046053331213`*^9, {
+   3.9012055383621883`*^9, 3.9012055456180763`*^9}, 3.9012119665598817`*^9, 
+   3.9012121123508005`*^9, 3.9012126536425843`*^9, 3.9012137299858227`*^9, 
+   3.901644282206189*^9},
+ CellLabel->
+  "Out[129]=",ExpressionUUID->"a2d64f8c-bc43-45c6-b535-4d86cb60aeee"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["previous functions", "Title",
+ CellChangeTimes->{{3.9003434671138864`*^9, 
+  3.9003434833285933`*^9}},ExpressionUUID->"45f519fb-2232-4fb0-9aab-\
+dcc761baa14b"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"If", "[", 
+    RowBox[{
+     RowBox[{"StringContainsQ", "[", 
+      RowBox[{"#", ",", 
+       RowBox[{"\"\<Abstract\>\"", "|", "\"\<ABSTRACT\>\""}]}], "]"}], ",", 
+     RowBox[{"StringCases", "[", 
+      RowBox[{"#", ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"\"\<Abstract\>\"", "|", "\"\<ABSTRACT\>\""}], "~~", 
+         RowBox[{"Shortest", "[", "a__", "]"}], "~~", 
+         RowBox[{"\"\<Keywords\>\"", "|", "\"\<KEYWORDS\>\"", 
+          "|", "\"\<Introduction\>\"", "|", "\"\<INTRODUCTION\>\""}]}], "->", 
+        "a"}]}], "]"}], ",", "\"\<no abstract\>\""}], "]"}], "&"}], "/@", 
+  "ex"}]], "Input",
+ CellChangeTimes->{{3.9002981540094156`*^9, 3.9002981593682966`*^9}, {
+  3.900298195133037*^9, 3.9002982271663275`*^9}, {3.9002983517261076`*^9, 
+  3.9002984839901066`*^9}, {3.9002986600642505`*^9, 3.9002986990505404`*^9}, {
+  3.900301586290871*^9, 3.900301586576188*^9}, {3.9003016907505736`*^9, 
+  3.900301734469242*^9}, {3.9003018345127687`*^9, 3.900301855453084*^9}, {
+  3.9003018965268717`*^9, 3.900301919647251*^9}, {3.900319384283012*^9, 
+  3.900319390280663*^9}, {3.900319963854498*^9, 3.900319970065778*^9}},
+ CellLabel->"In[75]:=",ExpressionUUID->"104c94f9-ffa8-4a6d-a6a5-10aa4652b301"],
+
+Cell[BoxData[
+ RowBox[{"Export", "[", 
+  RowBox[{"\"\<formula.html\>\"", ",", 
+   RowBox[{"Sqrt", "[", 
+    RowBox[{"a", " ", "-", " ", 
+     RowBox[{"b", "/", "4"}]}], "]"}]}], "]"}]], "Input",ExpressionUUID->\
+"9aa407fd-7747-443b-847d-c2a59c610812"],
+
+Cell[BoxData[
+ RowBox[{"Flatten", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"StringTake", "[", 
+       RowBox[{
+        RowBox[{"StringReplace", "[", 
+         RowBox[{"#", ",", 
+          RowBox[{"\"\<\\n\>\"", "->", "\"\<    \>\""}]}], "]"}], ",", 
+        "2000"}], "]"}], "&"}], "/@", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{"StringContainsQ", "[", 
+        RowBox[{"#", ",", 
+         RowBox[{"\"\<Abstract\>\"", "|", "\"\<ABSTRACT\>\""}]}], "]"}], ",", 
+       RowBox[{"StringCases", "[", 
+        RowBox[{"#", ",", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"\"\<Abstract\>\"", "|", "\"\<ABSTRACT\>\""}], "~~", 
+           "a__"}], "->", "a"}]}], "]"}], ",", "\"\<no abstract\>\""}], 
+      "]"}]}], "&"}], "/@", "ex"}], "]"}]], "Input",
+ CellChangeTimes->{3.900343400007786*^9},
+ CellLabel->"In[99]:=",ExpressionUUID->"9ddd42f5-f2c3-4df1-ba9f-6716d5eb5bbb"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "@", "%"}]], "Input",
+ CellChangeTimes->{{3.9002970720946054`*^9, 3.900297074095186*^9}},
+ CellLabel->"In[52]:=",ExpressionUUID->"68c2a04b-6112-4712-9f94-e4b08ec21f74"],
+
+Cell[RawData["\<\
+\\[AGrave]\.96\\[Section]\.9f\\[NTilde]\.01\.01\.00\.00\.00\.00\.00\.00\.00\
+\.00\.00\.00\.00\.00\.00\.00\.00\.00\.00\.00$H\\[CCedilla]z\\[ODoubleDot]\.7f\
+\.00\.00\\[CapitalODoubleDot]\.00\.00\.00\.00\.00\.00\.00@\.00\.00\.00\.00\.00\
+\.00\.00\.00\.00\\[AAcute]\.8f\\[NTilde]\.01\.01\.00\.00\.195\\[SZ]3\\[AE]\.00\
+\.00\.00\.0e\.00\.00\.00\.00\.00\.00\.00\\[CapitalCCedilla]\.b3\.8f[\\[\
+UDoubleDot]\.7f\.00\.00\.00\.00\\[CapitalUAcute]\.8f\\[NTilde]\.01\.01\.00\.00\
+\.03\.00\.00\.00\.00\.00\.00\.00\.01\.01\.00\.00\.00\.00\.00\.00\.00\.00\.00\
+\.00\.00\\[AE]\.00\.00\.00\.0e\.00\.00\.00\.00\.00\.00\.00\\[CapitalCCedilla]\
+\.b3\.8f[\\[UDoubleDot]\.7f\.00\.00\.00\.00\\[CapitalUAcute]\.8f\.02\.00\.00\
+\.00\.03\.00\.00\.00\.00\.00\.00\.00\\[CapitalOHat]\.00\.00\.00\.00\.00\.00\
+\.00\.00\.00\.00\.00\.00\.00\.00\.00\.00\.00\.00\.00\.00\.00\.00\.00\.00\.00\
+\.00\.00\.00\.00\.00\.000\\[CapitalUDoubleDot]\\[DiscretionaryHyphen]\.af\\[\
+NTilde]\.01\.01\.00\.00\.00\.00\\[CapitalUAcute]\.8f\\[NTilde]\.01\.01\.00\.00\
+\\[CapitalIGrave]\.02\\[CapitalUAcute]\.8f\\[NTilde]\.01\.01\.00\.00\\[\
+CapitalCCedilla]\.b3\.8f\
+\>"], "Output"]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{"dpubmed", "=."}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dpubmed", "=", 
+   RowBox[{
+   "Import", 
+    "[", "\"\<D:\\\\Daten\\\\b1464\\\\Desktop\\\\Pubmed Search Result.txt\>\"",
+     "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"dpubmed", "=", 
+   RowBox[{"StringSplit", "[", 
+    RowBox[{"dpubmed", ",", "\"\<\\n\\n\>\""}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"listpubmed", "=", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"StringCases", "[", 
+         RowBox[{"#", ",", 
+          RowBox[{
+           RowBox[{"i", "~~", 
+            RowBox[{"WhitespaceCharacter", ".."}], "~~", "\"\<- \>\"", "~~", 
+            RowBox[{"Shortest", "[", "a__", "]"}], "~~", "\"\<\\n\>\""}], "->", 
+           RowBox[{"i", "->", 
+            RowBox[{"StringReplace", "[", 
+             RowBox[{"a", ",", 
+              RowBox[{"\"\<\\n      \>\"", "->", "\"\<\>\""}]}], "]"}]}]}]}], 
+         "]"}], "&"}], "/@", "dpubmed"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", 
+        RowBox[{"{", 
+         RowBox[{"\"\<TI\>\"", ",", "\"\<AU\>\"", ",", "\"\<DP\>\"", 
+          ",", "\"\<LA\>\"", ",", "\"\<JT\>\"", ",", "\"\<PT\>\"", 
+          ",", "\"\<AID\>\""}], "}"}]}], "}"}]}], "]"}]}], ";"}], "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"PrependTo", "[", 
+   RowBox[{"listpubmed", ",", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"\"\<DB\>\"", "->", "\"\<PubMed\>\""}], "}"}], ",", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Length", "[", "#", "]"}], "&"}], "/@", "listpubmed"}], 
+        ")"}], "[", 
+       RowBox[{"[", "1", "]"}], "]"}]}], "]"}]}], "]"}], ";"}], "\n", 
+ RowBox[{"Clear", "[", "a", "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"AppendTo", "[", 
+   RowBox[{"listpubmed", ",", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"StringContainsQ", "[", 
+         RowBox[{"#", ",", "\"\<AB  -\>\""}], "]"}], ",", 
+        RowBox[{"StringCases", "[", 
+         RowBox[{"#", ",", 
+          RowBox[{
+           RowBox[{"\"\<AB\>\"", "~~", 
+            RowBox[{"WhitespaceCharacter", ".."}], "~~", " ", "\"\<- \>\"", "~~", 
+            RowBox[{"Shortest", "[", "a__", "]"}], "~~", "\"\<.\\n\>\"", "~~", 
+            RowBox[{"LetterCharacter", ".."}], "~~", 
+            RowBox[{"WhitespaceCharacter", ".."}], "~~", "\"\<- \>\""}], "->", 
+           RowBox[{"\"\<AB\>\"", "->", 
+            RowBox[{"StringReplace", "[", 
+             RowBox[{"a", ",", 
+              RowBox[{"\"\<\\n      \>\"", "->", "\"\<\>\""}]}], "]"}]}]}]}], 
+         "]"}], ",", 
+        RowBox[{"\"\<AB\>\"", "->", "\"\<no abstract available\>\""}]}], 
+       "]"}], "&"}], "/@", "dpubmed"}]}], "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"listpubmed", "=", 
+  RowBox[{"Flatten", "/@", 
+   RowBox[{"Transpose", "@", "listpubmed"}]}]}]}], "Input",
+ CellChangeTimes->{{3.9004234698805566`*^9, 3.9004234927142277`*^9}, {
+   3.900425503792076*^9, 3.9004255217253237`*^9}, {3.900580116437453*^9, 
+   3.90058011891181*^9}, 3.900580196225269*^9, 3.9005818804596653`*^9, {
+   3.900582068232548*^9, 3.900582096343481*^9}, {3.9005821583042493`*^9, 
+   3.9005821810886106`*^9}, {3.9005823076411953`*^9, 3.900582308041994*^9}, {
+   3.9005825955104427`*^9, 3.900582636249279*^9}, {3.9005826765640044`*^9, 
+   3.900582690339573*^9}, {3.90058284148328*^9, 3.9005828416795235`*^9}, {
+   3.9005828752356358`*^9, 3.9005828759531183`*^9}, {3.900583193412427*^9, 
+   3.900583225608962*^9}, 3.9005832710747375`*^9, 3.900583310779331*^9, 
+   3.900583365105712*^9},
+ CellLabel->
+  "In[301]:=",ExpressionUUID->"bebd429f-1f8a-44a4-b94a-dbb727a1baef"]
+}, Open  ]]
+},
+WindowSize->{480, 467.25},
+WindowMargins->{{108, Automatic}, {Automatic, 103.5}},
+Magnification:>0.8 Inherited,
+FrontEndVersion->"14.2 for Microsoft Windows (64-bit) (March 14, 2025)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"a427489a-a856-4c1e-a7e0-5cda3881ce86"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[400, 13, 670, 19, 53, "Input",ExpressionUUID->"702c17b0-a5d4-e34a-8f93-e0ecd5566d52"],
+Cell[1073, 34, 2255, 43, 205, "Input",ExpressionUUID->"236d011b-3778-4448-bb76-e2d03c15f665"],
+Cell[3331, 79, 314, 8, 68, "Input",ExpressionUUID->"97481b95-34cc-46c4-9ef6-d0962febf1ae"],
+Cell[CellGroupData[{
+Cell[3670, 91, 156, 3, 77, "Title",ExpressionUUID->"a4434970-fd74-4d48-bac4-6d2b1f7c5593"],
+Cell[3829, 96, 1429, 38, 113, "Input",ExpressionUUID->"a478bfd4-f894-47d8-8100-9c60e4bbc7dd"],
+Cell[5261, 136, 1920, 39, 174, "Input",ExpressionUUID->"dea9b66b-5168-401f-b5fb-5f05859a718e"],
+Cell[7184, 177, 13963, 338, 1362, "Input",ExpressionUUID->"637867cd-f9f1-493b-8685-d32cf5848379"],
+Cell[21150, 517, 2414, 55, 174, "Input",ExpressionUUID->"aeb193d5-6934-4471-b364-43064751ec24"],
+Cell[23567, 574, 295, 5, 22, "Input",ExpressionUUID->"8ab312df-2b80-460b-8caf-f7e759681bbf"],
+Cell[23865, 581, 1138, 27, 144, "Input",ExpressionUUID->"25263113-43d1-48a3-b6e9-b8c7f1c38dc7"],
+Cell[25006, 610, 2498, 60, 296, "Input",ExpressionUUID->"90da5275-308a-4fab-b7f3-cb6e04aa24c8"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[27541, 675, 150, 3, 77, "Title",ExpressionUUID->"fffbbe86-5350-48ac-8c8f-88a67cd6c7b0"],
+Cell[27694, 680, 10166, 260, 935, "Input",ExpressionUUID->"9f9efd55-241e-48e5-8ed7-34d483fee98f"],
+Cell[37863, 942, 665, 16, 68, "Input",ExpressionUUID->"61342174-0782-4c04-9a5d-68bd8cb6a257"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[38565, 963, 203, 4, 57, "Title",ExpressionUUID->"fffae688-7bc9-478c-a873-e8cf7292a7a0"],
+Cell[38771, 969, 6678, 163, 631, "Input",ExpressionUUID->"859bc055-4697-48d1-8056-ac75dc766fa5"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[45486, 1137, 261, 4, 57, "Title",ExpressionUUID->"c42ebb31-2841-4189-9193-2d96b34c38df"],
+Cell[45750, 1143, 6863, 153, 650, "Input",ExpressionUUID->"9d4ca270-7cd8-4c32-af31-29380ec23e8b"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[52650, 1301, 149, 3, 57, "Title",ExpressionUUID->"bad5483f-188a-40b4-85c5-02afc5ac2395"],
+Cell[CellGroupData[{
+Cell[52824, 1308, 297, 6, 37, "Input",ExpressionUUID->"ffa89a97-d499-486a-8c8c-95b451cc32f4"],
+Cell[53124, 1316, 782, 15, 71, "Output",ExpressionUUID->"14bc01eb-2d91-4d89-96c4-23c629ea602f"]
+}, Open  ]],
+Cell[53921, 1334, 473, 10, 37, "Input",ExpressionUUID->"2eea9e40-2941-4253-8a0e-e293f76f4b01"],
+Cell[54397, 1346, 501, 13, 53, "Input",ExpressionUUID->"88487ca7-f9f1-4d14-9246-f18b0dd06998"],
+Cell[54901, 1361, 11476, 319, 707, "Input",ExpressionUUID->"d7ad0640-d3f3-45fe-9c83-eaaf9f379350"],
+Cell[66380, 1682, 190, 3, 22, "Input",ExpressionUUID->"4e00205c-42d0-48c3-8fda-d291b40717a4"],
+Cell[CellGroupData[{
+Cell[66595, 1689, 433, 10, 22, "Input",ExpressionUUID->"8776309a-eca4-4f77-bf99-e510f59f8071"],
+Cell[67031, 1701, 502, 8, 25, "Output",ExpressionUUID->"783b9929-cb73-4a2c-9f99-21d2f7372ede"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[67570, 1714, 370, 10, 22, "Input",ExpressionUUID->"db2f3bf2-de81-4a3e-96fa-107ac70c5484"],
+Cell[67943, 1726, 882, 23, 82, "Output",ExpressionUUID->"17d1fa4c-810a-4f96-b57b-8291f0fabada"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[68862, 1754, 567, 11, 38, "Input",ExpressionUUID->"73510aa1-0601-43ef-a917-9b6030a49c2d"],
+Cell[69432, 1767, 783, 12, 25, "Output",ExpressionUUID->"59c2c08e-429b-4697-ae1b-b8ccb76b7daa"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[70252, 1784, 2622, 68, 191, "Input",ExpressionUUID->"a76dd2db-3911-444f-8c93-5f2e85ff22ef"],
+Cell[72877, 1854, 734, 11, 25, "Output",ExpressionUUID->"80469039-4fc5-464b-bed6-65e4cc0cc70e"],
+Cell[73614, 1867, 786, 13, 25, "Output",ExpressionUUID->"4f37c93b-6600-4f60-a88e-abb3baadc81c"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[74437, 1885, 315, 6, 56, "Subsubsection",ExpressionUUID->"86550be3-445a-4c22-9de7-453cbb7dfb20"],
+Cell[CellGroupData[{
+Cell[74777, 1895, 869, 14, 69, "Input",ExpressionUUID->"d4a8ff57-d55e-4898-a747-524689ffbe78"],
+Cell[75649, 1911, 1093, 16, 41, "Output",ExpressionUUID->"a2d64f8c-bc43-45c6-b535-4d86cb60aeee"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[76803, 1934, 165, 3, 78, "Title",ExpressionUUID->"45f519fb-2232-4fb0-9aab-dcc761baa14b"],
+Cell[76971, 1939, 1262, 25, 86, "Input",ExpressionUUID->"104c94f9-ffa8-4a6d-a6a5-10aa4652b301"],
+Cell[78236, 1966, 251, 6, 22, "Input",ExpressionUUID->"9aa407fd-7747-443b-847d-c2a59c610812"],
+Cell[78490, 1974, 923, 25, 85, "Input",ExpressionUUID->"9ddd42f5-f2c3-4df1-ba9f-6716d5eb5bbb"],
+Cell[CellGroupData[{
+Cell[79438, 2003, 201, 3, 22, "Input",ExpressionUUID->"68c2a04b-6112-4712-9f94-e4b08ec21f74"],
+Cell[79642, 2008, 1149, 16, 18, "Output",ExpressionUUID->"1269e8ea-6621-4407-9038-acac117b54d2"]
+}, Open  ]],
+Cell[80806, 2027, 3733, 89, 344, "Input",ExpressionUUID->"bebd429f-1f8a-44a4-b94a-dbb727a1baef"]
+}, Open  ]]
+}
+]
+*)
+

@@ -1,0 +1,1102 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     47121,       1094]
+NotebookOptionsPosition[     43137,       1029]
+NotebookOutlinePosition[     43551,       1045]
+CellTagsIndexPosition[     43508,       1042]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"d", "=", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"dAR", ",", "dCF"}], "}"}], "=", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+       "Import", "[", 
+        "\"\<C:\\\\Users\\\\mona_\\\\OneDrive\\\\Jummeds\\\\Arbeitsgruppen\\\\\
+Arbeitsmedizin\\\\L\[ADoubleDot]rmschwerh\[ODoubleDot]rigkeit MusikerInnen \
+Literatur\[UDoubleDot]bersicht\\\\Screening Lists Full Text\\\\Screening List \
+Full Text AR.xlsx\>\"", "]"}], "[", 
+       RowBox[{"[", "1", "]"}], "]"}], ",", 
+      RowBox[{
+       RowBox[{
+       "Import", "[", 
+        "\"\<C:\\\\Users\\\\mona_\\\\OneDrive\\\\Jummeds\\\\Arbeitsgruppen\\\\\
+Arbeitsmedizin\\\\L\[ADoubleDot]rmschwerh\[ODoubleDot]rigkeit MusikerInnen \
+Literatur\[UDoubleDot]bersicht\\\\Screening Lists Full Text\\\\Screening List \
+Full Text CF.xlsx\>\"", "]"}], "[", 
+       RowBox[{"[", "1", "]"}], "]"}]}], "}"}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.9258320613201056`*^9, 3.9258321244249353`*^9}},
+ CellLabel->
+  "In[170]:=",ExpressionUUID->"27884821-bf23-4e04-bf7e-018148276112"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"#", "[", 
+     RowBox[{"[", 
+      RowBox[{"All", ",", "4"}], "]"}], "]"}], "&"}], "/@", "d"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{"Length", "/@", "%"}], ")"}], "-", "1"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Tally", "[", 
+    RowBox[{"Rest", "[", 
+     RowBox[{"#", "[", 
+      RowBox[{"[", 
+       RowBox[{"All", ",", "2"}], "]"}], "]"}], "]"}], "]"}], "&"}], "/@", 
+  "d"}]}], "Input",
+ CellChangeTimes->{{3.9258321899780817`*^9, 3.9258321901540174`*^9}},
+ CellLabel->
+  "In[173]:=",ExpressionUUID->"0bc88e2b-dc02-474d-8d7c-55cae1679c10"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"106", ",", "106"}], "}"}]], "Output",
+ CellChangeTimes->{3.92583213923567*^9, 3.9258321907891355`*^9},
+ CellLabel->
+  "Out[174]=",ExpressionUUID->"194b9879-aa7c-4d93-9ac4-25df503b683c"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"0.`", ",", "27"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"1.`", ",", "78"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\<\"not retrievable\"\>", ",", "1"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"0.`", ",", "27"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"1.`", ",", "78"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\<\"not retrievable\"\>", ",", "1"}], "}"}]}], "}"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.92583213923567*^9, 3.92583219079412*^9},
+ CellLabel->
+  "Out[175]=",ExpressionUUID->"5ac556a8-f81f-4b9e-8505-0157ac5c011e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"incl", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Select", "[", 
+      RowBox[{"#", ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"#", "[", 
+          RowBox[{"[", "2", "]"}], "]"}], "==", "1."}], "&"}]}], "]"}], "&"}],
+     "/@", "d"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"incl2", "=", 
+   RowBox[{"Tally", "[", 
+    RowBox[{"Flatten", "[", 
+     RowBox[{"incl", "[", 
+      RowBox[{"[", 
+       RowBox[{"All", ",", "All", ",", "1"}], "]"}], "]"}], "]"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"nincl", "=", 
+   RowBox[{"Length", "[", 
+    RowBox[{"Select", "[", 
+     RowBox[{"incl2", ",", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"#", "[", 
+         RowBox[{"[", "2", "]"}], "]"}], "==", "2"}], "&"}]}], "]"}], "]"}]}],
+   ";"}], "\[IndentingNewLine]", 
+ RowBox[{"\"\<both included\\n\>\"", "<>", 
+  RowBox[{"ToString", "[", "nincl", "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"nsepinlc", "=", 
+   RowBox[{"Length", "[", 
+    RowBox[{"Select", "[", 
+     RowBox[{"incl2", ",", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"#", "[", 
+         RowBox[{"[", "2", "]"}], "]"}], "==", "1"}], "&"}]}], "]"}], "]"}]}],
+   ";"}], "\[IndentingNewLine]", 
+ RowBox[{"\"\<separately included\\n\>\"", " ", "<>", 
+  RowBox[{"ToString", "[", "nsepinlc", "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Select", "[", 
+  RowBox[{"incl2", ",", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"#", "[", 
+      RowBox[{"[", "2", "]"}], "]"}], "==", "1"}], "&"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.9258322447882676`*^9, 3.925832373967222*^9}},
+ CellLabel->
+  "In[192]:=",ExpressionUUID->"13833464-a4d9-4b1d-8c5a-83ccb2c50eef"],
+
+Cell[BoxData["\<\"both included\\n78\"\>"], "Output",
+ CellChangeTimes->{{3.9258322485463696`*^9, 3.92583237533974*^9}},
+ CellLabel->
+  "Out[195]=",ExpressionUUID->"401f97d6-87ea-4b17-90f5-8c715ba42352"],
+
+Cell[BoxData["\<\"separately included\\n0\"\>"], "Output",
+ CellChangeTimes->{{3.9258322485463696`*^9, 3.9258323753437514`*^9}},
+ CellLabel->
+  "Out[197]=",ExpressionUUID->"978b49da-89a8-4ebd-8064-de243b232388"],
+
+Cell[BoxData[
+ RowBox[{"{", "}"}]], "Output",
+ CellChangeTimes->{{3.9258322485463696`*^9, 3.925832375348477*^9}},
+ CellLabel->
+  "Out[198]=",ExpressionUUID->"4650344c-829b-4086-b3f6-faf197d73e98"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"d", "=", 
+  RowBox[{"FileNames", "[", 
+   RowBox[{
+   "All", ",", 
+    "\"\<C:\\\\Users\\\\mona_\\\\OneDrive\\\\Jummeds\\\\Arbeitsgruppen\\\\\
+Arbeitsmedizin\\\\L\[ADoubleDot]rmschwerh\[ODoubleDot]rigkeit MusikerInnen \
+Literatur\[UDoubleDot]bersicht\\\\Full Text Literature\\\\Included\\\\\>\""}],
+    "]"}]}]], "Input",
+ CellChangeTimes->{{3.9215889921798553`*^9, 3.921589049677025*^9}},
+ CellLabel->"In[4]:=",ExpressionUUID->"d90db0ad-b46b-47d9-be9b-3808bbbc2c44"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Tally", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"StringContainsQ", "[", 
+     RowBox[{"#", ",", "\"\<_ocred\>\""}], "]"}], "&"}], "/@", "d"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.9215890544353733`*^9, 3.9215890896012683`*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"6a088d4d-7a49-41ad-b8e0-0000a6e92f2e"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"False", ",", "76"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"True", ",", "17"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.921589069212969*^9, 3.921589090146615*^9}},
+ CellLabel->"Out[7]=",ExpressionUUID->"273799a7-306f-4a43-b60a-8414b52673ee"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"extract", "=", 
+   RowBox[{
+    RowBox[{
+    "Import", "[", 
+     "\"\<C:\\\\Users\\\\mona_\\\\OneDrive\\\\Jummeds\\\\Arbeitsgruppen\\\\\
+Arbeitsmedizin\\\\L\[ADoubleDot]rmschwerh\[ODoubleDot]rigkeit MusikerInnen \
+Literatur\[UDoubleDot]bersicht\\\\Extract from Full Text Analysis.xlsx\>\"", 
+     "]"}], "[", 
+    RowBox[{"[", "1", "]"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.921590332975914*^9, 3.9215903695189486`*^9}},
+ CellLabel->"In[8]:=",ExpressionUUID->"57f9c94a-8272-4cca-8b6a-f7221e524ece"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Complement", "[", 
+  RowBox[{
+   RowBox[{"Rest", "@", 
+    RowBox[{"extract", "[", 
+     RowBox[{"[", 
+      RowBox[{"All", ",", "1"}], "]"}], "]"}]}], ",", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"StringReplace", "[", 
+      RowBox[{"#", ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{
+         "\"\<C:\\\\Users\\\\mona_\\\\OneDrive\\\\Jummeds\\\\Arbeitsgruppen\\\
+\\Arbeitsmedizin\\\\L\[ADoubleDot]rmschwerh\[ODoubleDot]rigkeit MusikerInnen \
+Literatur\[UDoubleDot]bersicht\\\\Full Text Literature\\\\Included\\\\\>\"", 
+          "->", "\"\<\>\""}], ",", 
+         RowBox[{"\"\<.pdf\>\"", "->", "\"\<\>\""}]}], "}"}]}], "]"}], "&"}], 
+    "/@", 
+    RowBox[{"Select", "[", 
+     RowBox[{"d", ",", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"StringContainsQ", "[", 
+         RowBox[{"#", ",", "\"\<_ocred\>\""}], "]"}], "===", "False"}], 
+       "&"}]}], "]"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.9215903713077435`*^9, 3.9215903802372165`*^9}, {
+  3.9215905088917823`*^9, 3.9215905270599155`*^9}, {3.9215905851566725`*^9, 
+  3.921590637112182*^9}, {3.921590685494709*^9, 3.9215907166481133`*^9}},
+ CellLabel->"In[23]:=",ExpressionUUID->"53af20ef-e097-4282-b6bf-631e724d114a"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"ABR findings in musicians with normal audiogram and \
+otoacoustic emissions: evidence of cochlear synaptopathy?\"\>", 
+   ",", "\<\"Acoustic sensitivity of the saccule and daf music\"\>", 
+   ",", "\<\"An assessment of threshold shifts in nonprofessional pop/rock \
+musicians using conventional and extended high-frequency audiometry\"\>", 
+   ",", "\<\"Assessment of hearing and hearing disorders in rock/jazz \
+musicians\"\>", 
+   ",", "\<\"Audiological and electrophysiological assessment of professional \
+pop/rock musicians\"\>", 
+   ",", "\<\"Auditory thresholds among military musicians: conventional and \
+high frequency\"\>", 
+   ",", "\<\"Beyond music: auditory temporary threshold shift in rock \
+musicians after a heavy metal concert\"\>", 
+   ",", "\<\"Does pop music cause hearing damage?\"\>", 
+   ",", "\<\"Effects of instrument type and orchestral position on hearing \
+sensitivity for 0.25 to 20 kHz in the orchestral musician\"\>", 
+   ",", "\<\"Exposure to music and noise-induced hearing loss (NIHL) among \
+professional pop/rock/jazz musicians\"\>", 
+   ",", "\<\"Hearing conservation program for marching band members: a risk \
+for noise-induced hearing loss?\"\>", 
+   ",", "\<\"Hearing impairment in orchestral musicians\"\>", 
+   ",", "\<\"Hearing in nonprofessional pop/rock musicians\"\>", 
+   ",", "\<\"Hearing in pop musicians\"\>", 
+   ",", "\<\"Hearing in pop/rock musicians: a follow-up study\"\>", 
+   ",", "\<\"Hearing in various age groups of orchestral musicians and \
+progression of hearing loss with increased number of years of music exposure: \
+a thesis [...]\"\>", 
+   ",", "\<\"Hearing loss and tinnitus in rock musicians: A Norwegian \
+survey\"\>", ",", "\<\"Hearing loss in rock-and-roll musicians\"\>", 
+   ",", "\<\"Investigating the effects of noise exposure on self-report, \
+behavioral and electrophysiological indices of hearing damage in musicians \
+with normal audiometric thresholds\"\>", 
+   ",", "\<\"Is the audiologic status of professional musicians a reflection \
+of the noise exposure in classical orchestral music?\"\>", 
+   ",", "\<\"Music students: conventional hearing thresholds and at high \
+frequencies\"\>", 
+   ",", "\<\"Noise effect of gamelan jegog to the risk of hearing loss among \
+jegog players in Sangkaragung village, Negara, Jembrana\"\>", 
+   ",", "\<\"Noise exposure and auditory thresholds of military musicians: a \
+follow up study\"\>", 
+   ",", "\<\"Noise exposure and hearing loss in classical orchestra \
+musicians: A five-year follow-up\"\>", 
+   ",", "\<\"Noise-induced hearing loss and orchestral musicians\"\>", 
+   ",", "\<\"Pop-rock musicians: assessment of their satisfaction provided by \
+hearing protectors\"\>", 
+   ",", "\<\"Prevalence of Noise-Induced Hearing Loss in Middle and High \
+School Band Members: A Preliminary Study\"\>", 
+   ",", "\<\"Prevalence of noise-induced hearing loss in student \
+musicians\"\>", 
+   ",", "\<\"Review of orchestra musicians' hearing loss riskss\"\>", 
+   ",", "\<\"Sound exposure and audiometric profile of military police band \
+musicians\"\>", 
+   ",", "\<\"The comprehensive audiological evaluation in young violinists: \
+the medial olivocochlear system, high frequency thresholds, and the auditory \
+figure ground test\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{{3.9215903749714727`*^9, 3.921590381596903*^9}, {
+   3.921590517157242*^9, 3.9215905272894382`*^9}, 3.9215906056982527`*^9, 
+   3.9215906376755676`*^9, {3.921590694438071*^9, 3.9215907173024473`*^9}},
+ CellLabel->"Out[23]=",ExpressionUUID->"3b46dfbd-b7e3-44c6-8643-c38234aa2a3c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TableForm", "@", "%%"}]], "Input",
+ CellChangeTimes->{{3.921590768889412*^9, 3.9215907733330607`*^9}},
+ CellLabel->"In[25]:=",ExpressionUUID->"f402020a-37bc-46f3-bd25-ceb79411e1d5"],
+
+Cell[BoxData[
+ TagBox[
+  TagBox[GridBox[{
+     {"\<\"ABR findings in musicians with normal audiogram and otoacoustic \
+emissions: evidence of cochlear synaptopathy?\"\>"},
+     {"\<\"Acoustic sensitivity of the saccule and daf music\"\>"},
+     {"\<\"An assessment of threshold shifts in nonprofessional pop/rock \
+musicians using conventional and extended high-frequency audiometry\"\>"},
+     {"\<\"Assessment of hearing and hearing disorders in rock/jazz musicians\
+\"\>"},
+     {"\<\"Audiological and electrophysiological assessment of professional \
+pop/rock musicians\"\>"},
+     {"\<\"Auditory thresholds among military musicians: conventional and \
+high frequency\"\>"},
+     {"\<\"Beyond music: auditory temporary threshold shift in rock musicians \
+after a heavy metal concert\"\>"},
+     {"\<\"Does pop music cause hearing damage?\"\>"},
+     {"\<\"Effects of instrument type and orchestral position on hearing \
+sensitivity for 0.25 to 20 kHz in the orchestral musician\"\>"},
+     {"\<\"Exposure to music and noise-induced hearing loss (NIHL) among \
+professional pop/rock/jazz musicians\"\>"},
+     {"\<\"Hearing conservation program for marching band members: a risk for \
+noise-induced hearing loss?\"\>"},
+     {"\<\"Hearing impairment in orchestral musicians\"\>"},
+     {"\<\"Hearing in nonprofessional pop/rock musicians\"\>"},
+     {"\<\"Hearing in pop musicians\"\>"},
+     {"\<\"Hearing in pop/rock musicians: a follow-up study\"\>"},
+     {"\<\"Hearing in various age groups of orchestral musicians and \
+progression of hearing loss with increased number of years of music exposure: \
+a thesis [...]\"\>"},
+     {"\<\"Hearing loss and tinnitus in rock musicians: A Norwegian \
+survey\"\>"},
+     {"\<\"Hearing loss in rock-and-roll musicians\"\>"},
+     {"\<\"Investigating the effects of noise exposure on self-report, \
+behavioral and electrophysiological indices of hearing damage in musicians \
+with normal audiometric thresholds\"\>"},
+     {"\<\"Is the audiologic status of professional musicians a reflection of \
+the noise exposure in classical orchestral music?\"\>"},
+     {"\<\"Music students: conventional hearing thresholds and at high \
+frequencies\"\>"},
+     {"\<\"Noise effect of gamelan jegog to the risk of hearing loss among \
+jegog players in Sangkaragung village, Negara, Jembrana\"\>"},
+     {"\<\"Noise exposure and auditory thresholds of military musicians: a \
+follow up study\"\>"},
+     {"\<\"Noise exposure and hearing loss in classical orchestra musicians: \
+A five-year follow-up\"\>"},
+     {"\<\"Noise-induced hearing loss and orchestral musicians\"\>"},
+     {"\<\"Pop-rock musicians: assessment of their satisfaction provided by \
+hearing protectors\"\>"},
+     {"\<\"Prevalence of Noise-Induced Hearing Loss in Middle and High School \
+Band Members: A Preliminary Study\"\>"},
+     {"\<\"Prevalence of noise-induced hearing loss in student musicians\"\>"},
+     {"\<\"Review of orchestra musicians' hearing loss riskss\"\>"},
+     {"\<\"Sound exposure and audiometric profile of military police band \
+musicians\"\>"},
+     {"\<\"The comprehensive audiological evaluation in young violinists: the \
+medial olivocochlear system, high frequency thresholds, and the auditory \
+figure ground test\"\>"}
+    },
+    GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.5599999999999999]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}}],
+   Column],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{3.921590773921013*^9},
+ CellLabel->
+  "Out[25]//TableForm=",ExpressionUUID->"8a3b85f0-ff18-48b0-bf1a-\
+b2ce7fdd3d36"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "@", "%"}]], "Input",
+ CellChangeTimes->{{3.921590529819825*^9, 3.9215905316081457`*^9}},
+ CellLabel->"In[24]:=",ExpressionUUID->"d47543c9-6fae-4d48-bc41-72f0097c03ed"],
+
+Cell[BoxData["31"], "Output",
+ CellChangeTimes->{3.921590532030895*^9, 3.921590609424883*^9, 
+  3.921590645624278*^9, 3.92159072654074*^9},
+ CellLabel->"Out[24]=",ExpressionUUID->"492a72da-cd33-4e0c-9ec3-9dfcf2efa4d3"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"lit", "=", 
+   RowBox[{
+    RowBox[{
+    "Import", "[", 
+     "\"\<C:\\\\Users\\\\mona_\\\\OneDrive\\\\Jummeds\\\\Arbeitsgruppen\\\\\
+Arbeitsmedizin\\\\L\[ADoubleDot]rmschwerh\[ODoubleDot]rigkeit MusikerInnen \
+Literatur\[UDoubleDot]bersicht\\\\Literaturliste mit Titel, Autoren, DOI.xlsx\
+\>\"", "]"}], "[", 
+    RowBox[{"[", "1", "]"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.9215985245582743`*^9, 3.921598548423888*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"89556608-d489-4483-a129-cfdacf3f7f89"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.921598683500024*^9, 
+  3.9215986889597178`*^9}},ExpressionUUID->"2352c47a-55b5-477c-8415-\
+c191dbedee1a"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"litex", "=", 
+  RowBox[{"myTake", "[", 
+   RowBox[{"lit", ",", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", "4"}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.921598566946827*^9, 3.9215986102523327`*^9}, {
+  3.9215986922959566`*^9, 3.921598694681693*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"80932c4b-4b7a-4105-92ff-519043f81ba4"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"\<\"Title\"\>", ",", "\<\"DOI/Hyperlink\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"A comparison of the digits-in-noise test and extended high \
+frequency response between formally trained musicians and non-musicians\"\>", 
+     ",", "\<\"https://repository.up.ac.za/handle/2263/90644\"\>"}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"ABR findings in musicians with normal audiogram and \
+otoacoustic emissions: evidence of cochlear synaptopathy?\"\>", 
+     ",", "\<\"http://dx.doi.org/10.1080/21695717.2019.1663054\"\>"}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Acceptance of hearing protection aids in members of an \
+instrumental and voice music band\"\>", 
+     ",", "\<\"https://doi.org/10.1016/S1808-8694(15)31175-7\"\>"}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Acoustic sensitivity of the saccule and daf music\"\>", 
+     ",", "\<\"https://pubmed.ncbi.nlm.nih.gov/24744999/\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Acoustic trauma in classical music players\"\>", 
+     ",", "\<\"https://pubmed.ncbi.nlm.nih.gov/17999904/\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"An assessment of threshold shifts in nonprofessional \
+pop/rock musicians using conventional and extended high-frequency \
+audiometry\"\>", 
+     ",", "\<\"https://doi.org/10.1097/AUD.0b013e31812f7144\"\>"}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"An auditive protection for professional musicians\"\>", 
+     ",", "\<\"https://doi.org/10.3233/WOR-2012-0592-3260\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Assessment of hearing and hearing disorders in rock/jazz \
+musicians\"\>", ",", "\<\"https://doi.org/10.3109/14992020309078347\"\>"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Assisted protection headphone proposal to prevent chronic \
+exposure to percussion instruments on musicians\"\>", 
+     ",", "\<\"https://doi.org/10.1155/2018/9672185\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Audiological and electrophysiological assessment of \
+professional pop/rock musicians\"\>", 
+     ",", "\<\"https://doi.org/10.4103/1463-1741.93314\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Audiological and noise exposure findings among members of a \
+Brazilian folklore music group\"\>", 
+     ",", "\<\"https://doi.org/10.3233/WOR-203370\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Auditory effects of music exposure in young musicians of a \
+philharmonic band\"\>", 
+     ",", "\<\"https://doi.org/10.1590/s2317-17822013000200015\"\>"}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Auditory electrophysiological and perceptual measures in \
+student musicians with high sound exposure\"\>", 
+     ",", "\<\"https://doi.org/10.3390/diagnostics13050934\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Auditory thresholds among military musicians: conventional \
+and high frequency\"\>", 
+     ",", "\<\"https://doi.org/10.1590/s2317-17822013000200015\"\>"}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Auditory thresholds and factors contributing to hearing loss \
+in a large sample of percussionists\"\>", 
+     ",", "\<\"https://doi.org/10.21091/mppa.2006.2011\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Beyond music: auditory temporary threshold shift in rock \
+musicians after a heavy metal concert\"\>", 
+     ",", "\<\"https://doi.org/10.1177/014107689208501010\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Does pop music cause hearing damage?\"\>", 
+     ",", "\<\"https://doi.org/10.3109/00206097709071856\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Effect of musical training on masking paradigm\"\>", 
+     ",", "\<\"http://dx.doi.org/10.4103/0971-7749.182280\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Effects of instrument type and orchestral position on \
+hearing sensitivity for 0.25 to 20 kHz in the orchestral musician\"\>", 
+     ",", "\<\"https://doi.org/10.3109/01050398509045944\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Environmental factors in susceptibility to noise-induced \
+hearing loss in student musicians\"\>", 
+     ",", "\<\"https://www.embase.com/records?subaction=viewrecord&id=\
+L351441252\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Evidence of noise-induced hearing loss among orchestral \
+musicians\"\>", 
+     ",", "\<\"http://researchonline.rcm.ac.uk/id/eprint/367/\"\>"}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Exposure to excessive sounds and hearing status in academic \
+classical music students\"\>", 
+     ",", "\<\"https://doi.org/10.13075/ijomeh.1896.00709\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Exposure to music and noise-induced hearing loss (NIHL) \
+among professional pop/rock/jazz musicians\"\>", 
+     ",", "\<\"https://doi.org/10.4103/1463-1741.155848\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Extended high frequency hearing sensitivity. A normative \
+threshold study in musicians\"\>", 
+     ",", "\<\"https://doi.org/10.1177/000348948609500219\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Factors increasing the risk for hearing loss in 'pop' \
+musicians\"\>", ",", "\<\"https://doi.org/10.3109/01050397709043112\"\>"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Hearing ability in Danish symphony orchestra musicians\"\>", 
+     ",", "\<\"https://pubmed.ncbi.nlm.nih.gov/12689507\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Hearing assessment of classical orchestral musicians\"\>", 
+     ",", "\<\"https://doi.org/10.1080/010503901750069536\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Hearing conservation program for marching band members: a \
+risk for noise-induced hearing loss?\"\>", 
+     ",", "\<\"https://doi.org/10.1044/1059-0889(2012/11-0030)\"\>"}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Hearing development in classical orchestral musicians. A \
+follow-up study\"\>", 
+     ",", "\<\"https://doi.org/10.1080/010503901316914511\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Hearing impairment among orchestral musicians\"\>", 
+     ",", "\<\"https://online.ucpress.edu/mp/article-abstract/5/3/261/62710\"\
+\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Hearing impairment in orchestral musicians\"\>", 
+     ",", "\<\"https://doi.org/10.3109/01050398909042202\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Hearing in nonprofessional pop/rock musicians\"\>", 
+     ",", "\<\"https://doi.org/10.1097/01.aud.0000224737.34907.5e\"\>"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Hearing in pop musicians\"\>", 
+     ",", "\<\"https://doi.org/10.3109/00016487809111929\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Hearing in pop/rock musicians: a follow-up study\"\>", 
+     ",", "\<\"https://doi.org/10.1097/00003446-199506000-00001\"\>"}], "}"}],
+    ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Hearing in various age groups of orchestral musicians and \
+progression of hearing loss with increased number of years of music exposure: \
+a thesis [...]\"\>", 
+     ",", "\<\"https://mro.massey.ac.nz/handle/10179/3681\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Hearing loss among classical-orchestra musicians\"\>", 
+     ",", "\<\"https://doi.org/10.4103/1463-1741.74001\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Hearing loss and mental health issues in amateur and \
+professional musicians\"\>", 
+     ",", "\<\"https://doi.org/10.1177/03057356231155970\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Hearing loss and tinnitus in rock musicians: a Norwegian \
+survey\"\>", ",", "\<\"https://doi.org/10.4103/1463-1741.169708\"\>"}], "}"}],
+    ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Hearing loss in British Army musicians\"\>", 
+     ",", "\<\"https://doi.org/10.1093/occmed/kqt026\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Hearing loss in relation to sound exposure of professional \
+symphony orchestra musicians\"\>", 
+     ",", "\<\"https://doi.org/10.1097/AUD.0000000000000029\"\>"}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Hearing loss in rock-and-roll musicians\"\>", 
+     ",", "\<\"https://doi.org/10.1097/00043764-197006000-00004\"\>"}], "}"}],
+    ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Hearing loss in steelband musicians\"\>", 
+     ",", "\<\"https://doi.org/10.1016/j.otohns.2003.12.023\"\>"}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Hearing loss in students at a conservatory\"\>", 
+     ",", "\<\"https://doi.org/10.3109/00206099409071879\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Inner ear damage in an opera theatre orchestra as detected \
+by otoacoustic emissions, pure tone audiometry and sound levels\"\>", 
+     ",", "\<\"https://www.embase.com/records?subaction=viewrecord&id=\
+L29161453\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Investigating the effects of noise exposure on self-report, \
+behavioral and electrophysiological indices of hearing damage in musicians \
+with normal audiometric thresholds\"\>", 
+     ",", "\<\"https://doi.org/10.1016/j.heares.2020.108021\"\>"}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Is the audiologic status of professional musicians a \
+reflection of the noise exposure in classical orchestral music?\"\>", 
+     ",", "\<\"https://doi.org/10.1007/s00405-007-0538-z\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Music students: conventional hearing thresholds and at high \
+frequencies\"\>", 
+     ",", "\<\"https://doi.org/10.1016/j.bjorl.2014.05.010\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Noise and the classical musician\"\>", 
+     ",", "\<\"https://doi.org/10.1136/bmj.305.6868.1561\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Noise effect of gamelan jegog to the risk of hearing loss \
+among jegog players in Sangkaragung village, Negara, Jembrana\"\>", 
+     ",", "\<\"http://dx.doi.org/10.13005/bpj/1598\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Noise exposure and auditory thresholds of military \
+musicians: a follow up study\"\>", 
+     ",", "\<\"https://doi.org/10.1186/s12995-018-0196-7\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Noise exposure and hearing loss in classical orchestra \
+musicians\"\>", 
+     ",", "\<\"http://dx.doi.org/10.1016/j.ergon.2012.11.001\"\>"}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Noise exposure and hearing loss in classical orchestra \
+musicians: a five-year follow-up\"\>", 
+     ",", "\<\"https://doi.org/10.4103/nah.NAH_39_17\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Noise exposure and hearing protection in marching band \
+students\"\>", ",", "\<\"https://scholarworks.uark.edu/rhrcuht/71/\"\>"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Noise induced hearing loss and other hearing complaints \
+among musicians of symphony orchestras\"\>", 
+     ",", "\<\"https://doi.org/10.1007/s00420-008-0317-1\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Noise-induced hearing loss among professional musicians\"\>",
+      ",", "\<\"https://doi.org/10.1539/joh.16-0217-OA\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Noise-induced hearing loss and orchestral musicians\"\>", 
+     ",", "\<\"https://doi.org/10.1001/archotol.1981.00790480037010\"\>"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Noise-induced hearing loss in professional orchestral \
+musicians\"\>", 
+     ",", "\<\"http://acousticsnew.ippt.pan.pl/index.php/aa/article/view/37\"\
+\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Ototraumatic effects of hard rock music\"\>", 
+     ",", "\<\"https://pubmed.ncbi.nlm.nih.gov/5008499\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Patterns of noise exposure and prevalence of hearing loss \
+amongst Cape Town Minstrel Carnival musicians\"\>", 
+     ",", "\<\"https://doi.org/10.4102/sajcd.v68i1.789\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Perception of hearing loss in orchestral musicians\"\>", 
+     ",", "\<\"https://digitalcommons.unl.edu/cehsdiss/285/\"\>"}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Pop music and hearing\"\>", 
+     ",", "\<\"https://doi.org/10.1097/00003446-198103000-00002\"\>"}], "}"}],
+    ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Pop-rock musicians: assessment of their satisfaction \
+provided by hearing protectors\"\>", 
+     ",", "\<\"https://doi.org/10.1590/S1808-86942010000400009\"\>"}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Prevalence of hearing loss among university music students\"\
+\>", ",", \
+"\<\"https://jcaa.caa-aca.ca/index.php/jcaa/article/view/3042\"\>"}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Prevalence of noise-induced hearing loss in middle and high \
+school band members: a preliminary study\"\>", 
+     ",", "\<\"https://doi.org/10.1159/000501154\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Prevalence of noise-induced hearing loss in student \
+musicians\"\>", ",", "\<\"https://doi.org/10.3109/14992020903470809\"\>"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Review of orchestra musicians' hearing loss riskss\"\>", 
+     ",", "\<\"http://jcaa.caa-aca.ca/index.php/jcaa/article/view/1429\"\>"}],
+     "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Screening and prevalence of hearing loss in professional \
+musicians\"\>", 
+     ",", "\<\"http://dx.doi.org/10.1016/j.shaw.2021.12.1625\"\>"}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Sound exposure and audiometric profile of military police \
+band musicians\"\>", 
+     ",", "\<\"https://www.embase.com/records?subaction=viewrecord&id=\
+L623446701\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Sound exposures and hearing thresholds of symphony orchestra \
+musicians\"\>", ",", "\<\"https://doi.org/10.1121/1.400719\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Studies of the effectiveness and degree of acceptance of \
+earplugs in orchestral musicians\"\>", 
+     ",", "\<\"https://www.embase.com/records?subaction=viewrecord&id=\
+L30783003\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Study of the hearing of rock and roll musicians\"\>", 
+     ",", "\<\"https://doi.org/10.1590/s0104-56872008000100009\"\>"}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Temporary threshold shift in rock-and-roll musicians\"\>", 
+     ",", "\<\"https://doi.org/10.1044/jshr.1301.221\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"The audiological health of horn players\"\>", 
+     ",", "\<\"https://doi.org/10.1080/15459624.2013.818227\"\>"}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"The comprehensive audiological evaluation in young \
+violinists: the medial olivocochlear system, high frequency thresholds, and \
+the auditory figure ground test\"\>", 
+     ",", "\<\"https://doi.org/10.1007/s00405-021-07122-8\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"The hearing of symphony orchestra musicians\"\>", 
+     ",", "\<\"https://doi.org/10.3109/01050398309044429\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"The influence of sound exposure onset and duration to the \
+hearing loss prevalence in musicians\"\>", 
+     ",", "\<\"https://ieomsociety.org/proceedings/2022australia/29.pdf\"\>"}]\
+, "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Transient evoked otoacoustic emissions in rock \
+musicians\"\>", 
+     ",", "\<\"https://doi.org/10.1080/14992027.2017.1321788\"\>"}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Valencia's cathedral church bell acoustics impact on the \
+hearing abilities of bell ringers\"\>", 
+     ",", "\<\"https://doi.org/10.3390/ijerph16091564\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"\"\>", ",", "\<\"\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"\"\>", ",", "\<\"\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"\"\>", ",", "\<\"\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"\"\>", ",", "\<\"\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"\"\>", ",", "\<\"\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"\"\>", ",", "\<\"\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"\"\>", ",", "\<\"\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"\"\>", ",", "\<\"\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"\"\>", ",", "\<\"\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"\"\>", ",", "\<\"\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"\"\>", ",", "\<\"\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"\"\>", ",", "\<\"\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"\"\>", ",", "\<\"\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"\"\>", ",", "\<\"\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"\"\>", ",", "\<\"\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"\"\>", ",", "\<\"\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"\"\>", ",", "\<\"\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"\"\>", ",", "\<\"\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"\"\>", ",", "\<\"\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"\"\>", ",", "\<\"\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"\"\>", ",", "\<\"\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"\"\>", ",", "\<\"\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"\"\>", ",", "\<\"\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"\"\>", ",", "\<\"\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"\"\>", ",", "\<\"\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"\"\>", ",", "\<\"\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"\"\>", ",", "\<\"\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"\"\>", ",", "\<\"\"\>"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.9215986106715965`*^9, 3.9215986960273886`*^9},
+ CellLabel->"Out[7]=",ExpressionUUID->"b3d9357d-f0b1-4570-a62a-7f9b2809fd39"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"StringContainsQ", "[", 
+    RowBox[{
+     RowBox[{"Import", "[", 
+      RowBox[{"#", "[", 
+       RowBox[{"[", "2", "]"}], "]"}], "]"}], ",", 
+     RowBox[{"#", "[", 
+      RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "&"}], "/@", 
+  RowBox[{"(", 
+   RowBox[{"litex", "/.", " ", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\"\<\>\"", ",", "\"\<\>\""}], "}"}], "->", "Nothing"}]}], 
+   ")"}]}]], "Input",
+ CellChangeTimes->{{3.921598697765457*^9, 3.921598813755619*^9}, {
+  3.921598857786298*^9, 3.921598872774335*^9}},
+ CellLabel->"In[14]:=",ExpressionUUID->"34e7b64e-9760-4b53-b740-f3bf40fdc19f"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Import", "nffil", 
+   "\"File \\!\\(\\*RowBox[{\\\"\\\\\\\"DOI/Hyperlink\\\\\\\"\\\"}]\\) not \
+found during \\!\\(\\*RowBox[{\\\"Import\\\"}]\\).\"", 2, 14, 1, 
+   26304754337003946894, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.9215988759132967`*^9},
+ CellLabel->
+  "During evaluation of \
+In[14]:=",ExpressionUUID->"402ff0a7-60f8-4c88-b994-8aac57eb2101"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "StringContainsQ", "strse", 
+   "\"String or list of strings expected at position \\!\\(\\*RowBox[{\\\"1\\\
+\"}]\\) in \\!\\(\\*RowBox[{\\\"StringContainsQ\\\", \\\"[\\\", \
+RowBox[{\\\"$Failed\\\", \\\",\\\", \\\"\\\\\\\"Title\\\\\\\"\\\"}], \
+\\\"]\\\"}]\\).\"", 2, 14, 2, 26304754337003946894, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.921598876009104*^9},
+ CellLabel->
+  "During evaluation of \
+In[14]:=",ExpressionUUID->"3f9d08ba-9555-4f63-95a6-36d7d82b8c01"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Import", "nfurl", 
+   "\"Unable to retrieve data from \
+\\!\\(\\*RowBox[{\\\"\\\\\\\"https://doi.org/10.4103/1463-1741.93314\\\\\\\"\\\
+\"}]\\). Consult Internal`$LastInternalFailure for potential information.\"", 
+   2, 14, 3, 26304754337003946894, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.921599014058854*^9},
+ CellLabel->
+  "During evaluation of \
+In[14]:=",ExpressionUUID->"efd4d9a5-e689-44b6-b082-0f1484921cee"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "StringContainsQ", "strse", 
+   "\"String or list of strings expected at position \\!\\(\\*RowBox[{\\\"1\\\
+\"}]\\) in \\!\\(\\*RowBox[{\\\"StringContainsQ\\\", \\\"[\\\", \
+RowBox[{\\\"$Failed\\\", \\\",\\\", \\\"\\\\\\\"Audiological and \
+electrophysiological assessment of professional pop/rock \
+musicians\\\\\\\"\\\"}], \\\"]\\\"}]\\).\"", 2, 14, 4, 26304754337003946894, 
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.9215990140752325`*^9},
+ CellLabel->
+  "During evaluation of \
+In[14]:=",ExpressionUUID->"401629f4-10a0-4244-94fb-0e86abe358c7"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Import", "nfurl", 
+   "\"Unable to retrieve data from \
+\\!\\(\\*RowBox[{\\\"\\\\\\\"http://dx.doi.org/10.4103/0971-7749.182280\\\\\\\
+\"\\\"}]\\). Consult Internal`$LastInternalFailure for potential information.\
+\"", 2, 14, 5, 26304754337003946894, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.921599032472027*^9},
+ CellLabel->
+  "During evaluation of \
+In[14]:=",ExpressionUUID->"07d472c5-72bd-47b0-9610-5b783585c53b"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "StringContainsQ", "strse", 
+   "\"String or list of strings expected at position \\!\\(\\*RowBox[{\\\"1\\\
+\"}]\\) in \\!\\(\\*RowBox[{\\\"StringContainsQ\\\", \\\"[\\\", \
+RowBox[{\\\"$Failed\\\", \\\",\\\", \\\"\\\\\\\"Effect of musical training on \
+masking paradigm\\\\\\\"\\\"}], \\\"]\\\"}]\\).\"", 2, 14, 6, 
+   26304754337003946894, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.921599032493647*^9},
+ CellLabel->
+  "During evaluation of \
+In[14]:=",ExpressionUUID->"ab6605a8-5a31-458e-9305-dd44df3ac8c4"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General", "stop", 
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"StringContainsQ\\\", \\\
+\"::\\\", \\\"strse\\\"}], \\\"MessageName\\\"]\\) will be suppressed during \
+this calculation.\"", 2, 14, 7, 26304754337003946894, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.921599032502016*^9},
+ CellLabel->
+  "During evaluation of \
+In[14]:=",ExpressionUUID->"f8da6da9-f5b4-4071-83c6-a81b6fe4f714"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Import", "nfurl", 
+   "\"Unable to retrieve data from \
+\\!\\(\\*RowBox[{\\\"\\\\\\\"https://doi.org/10.4103/1463-1741.155848\\\\\\\"\
+\\\"}]\\). Consult Internal`$LastInternalFailure for potential \
+information.\"", 2, 14, 8, 26304754337003946894, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.9215990415954742`*^9},
+ CellLabel->
+  "During evaluation of \
+In[14]:=",ExpressionUUID->"f25aa003-cda6-4ab0-9708-5a370d6e792f"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General", "stop", 
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"Import\\\", \\\"::\\\", \
+\\\"nfurl\\\"}], \\\"MessageName\\\"]\\) will be suppressed during this \
+calculation.\"", 2, 14, 9, 26304754337003946894, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.9215990416044464`*^9},
+ CellLabel->
+  "During evaluation of \
+In[14]:=",ExpressionUUID->"2cc2c2f2-85ea-4f60-8d9b-f153d5cd3bd5"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "StringContainsQ", "strse", 
+   "\"String or list of strings expected at position \\!\\(\\*RowBox[{\\\"1\\\
+\"}]\\) in \\!\\(\\*RowBox[{\\\"StringContainsQ\\\", \\\"[\\\", \
+RowBox[{\\\"$Failed\\\", \\\",\\\", \\\"\\\\\\\"Title\\\\\\\"\\\"}], \
+\\\"]\\\"}]\\).\"", 2, 15, 10, 26304754337003946894, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.921599368508187*^9},
+ CellLabel->
+  "During evaluation of \
+In[15]:=",ExpressionUUID->"c4745ece-0883-4a1b-892e-87976158986f"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "StringContainsQ", "strse", 
+   "\"String or list of strings expected at position \\!\\(\\*RowBox[{\\\"1\\\
+\"}]\\) in \\!\\(\\*RowBox[{\\\"StringContainsQ\\\", \\\"[\\\", \
+RowBox[{\\\"$Failed\\\", \\\",\\\", \\\"\\\\\\\"Audiological and \
+electrophysiological assessment of professional pop/rock \
+musicians\\\\\\\"\\\"}], \\\"]\\\"}]\\).\"", 2, 15, 11, 26304754337003946894, 
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.921599368524519*^9},
+ CellLabel->
+  "During evaluation of \
+In[15]:=",ExpressionUUID->"92e277e4-be9d-48a8-8eb2-638b1b7dbb03"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "StringContainsQ", "strse", 
+   "\"String or list of strings expected at position \\!\\(\\*RowBox[{\\\"1\\\
+\"}]\\) in \\!\\(\\*RowBox[{\\\"StringContainsQ\\\", \\\"[\\\", \
+RowBox[{\\\"$Failed\\\", \\\",\\\", \\\"\\\\\\\"Effect of musical training on \
+masking paradigm\\\\\\\"\\\"}], \\\"]\\\"}]\\).\"", 2, 15, 12, 
+   26304754337003946894, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.921599368532506*^9},
+ CellLabel->
+  "During evaluation of \
+In[15]:=",ExpressionUUID->"8834bb2b-7cf8-4135-bc64-20535745a0f1"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General", "stop", 
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"StringContainsQ\\\", \\\
+\"::\\\", \\\"strse\\\"}], \\\"MessageName\\\"]\\) will be suppressed during \
+this calculation.\"", 2, 15, 13, 26304754337003946894, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.9215993685419235`*^9},
+ CellLabel->
+  "During evaluation of \
+In[15]:=",ExpressionUUID->"8236c496-0e2b-433e-892e-27015899a9de"]
+}, Open  ]]
+},
+WindowSize->{565.1999999999999, 569.4},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (August 22, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"86bca7a6-1a52-46b9-98a3-8b1bc5710798"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 1076, 26, 257, "Input",ExpressionUUID->"27884821-bf23-4e04-bf7e-018148276112"],
+Cell[CellGroupData[{
+Cell[1659, 50, 659, 21, 67, "Input",ExpressionUUID->"0bc88e2b-dc02-474d-8d7c-55cae1679c10"],
+Cell[2321, 73, 225, 5, 32, "Output",ExpressionUUID->"194b9879-aa7c-4d93-9ac4-25df503b683c"],
+Cell[2549, 80, 713, 22, 52, "Output",ExpressionUUID->"5ac556a8-f81f-4b9e-8505-0157ac5c011e"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3299, 107, 1714, 52, 143, "Input",ExpressionUUID->"13833464-a4d9-4b1d-8c5a-83ccb2c50eef"],
+Cell[5016, 161, 203, 3, 52, "Output",ExpressionUUID->"401f97d6-87ea-4b17-90f5-8c715ba42352"],
+Cell[5222, 166, 211, 3, 52, "Output",ExpressionUUID->"978b49da-89a8-4ebd-8064-de243b232388"],
+Cell[5436, 171, 196, 4, 32, "Output",ExpressionUUID->"4650344c-829b-4086-b3f6-faf197d73e98"]
+}, Open  ]],
+Cell[5647, 178, 491, 10, 105, "Input",ExpressionUUID->"d90db0ad-b46b-47d9-be9b-3808bbbc2c44"],
+Cell[CellGroupData[{
+Cell[6163, 192, 335, 8, 28, "Input",ExpressionUUID->"6a088d4d-7a49-41ad-b8e0-0000a6e92f2e"],
+Cell[6501, 202, 324, 8, 32, "Output",ExpressionUUID->"273799a7-306f-4a43-b60a-8414b52673ee"]
+}, Open  ]],
+Cell[6840, 213, 546, 12, 124, "Input",ExpressionUUID->"57f9c94a-8272-4cca-8b6a-f7221e524ece"],
+Cell[CellGroupData[{
+Cell[7411, 229, 1227, 30, 162, "Input",ExpressionUUID->"53af20ef-e097-4282-b6bf-631e724d114a"],
+Cell[8641, 261, 3626, 60, 1079, "Output",ExpressionUUID->"3b46dfbd-b7e3-44c6-8643-c38234aa2a3c"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12304, 326, 205, 3, 28, "Input",ExpressionUUID->"f402020a-37bc-46f3-bd25-ceb79411e1d5"],
+Cell[12512, 331, 3786, 73, 561, "Output",ExpressionUUID->"8a3b85f0-ff18-48b0-bf1a-b2ce7fdd3d36"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16335, 409, 201, 3, 28, "Input",ExpressionUUID->"d47543c9-6fae-4d48-bc41-72f0097c03ed"],
+Cell[16539, 414, 218, 3, 32, "Output",ExpressionUUID->"492a72da-cd33-4e0c-9ec3-9dfcf2efa4d3"]
+}, Open  ]],
+Cell[16772, 420, 545, 12, 105, "Input",ExpressionUUID->"89556608-d489-4483-a129-cfdacf3f7f89"],
+Cell[17320, 434, 154, 3, 28, "Input",ExpressionUUID->"2352c47a-55b5-477c-8415-c191dbedee1a"],
+Cell[CellGroupData[{
+Cell[17499, 441, 360, 8, 28, "Input",ExpressionUUID->"80932c4b-4b7a-4105-92ff-519043f81ba4"],
+Cell[17862, 451, 17893, 381, 3286, "Output",ExpressionUUID->"b3d9357d-f0b1-4570-a62a-7f9b2809fd39"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[35792, 837, 644, 18, 28, "Input",ExpressionUUID->"34e7b64e-9760-4b53-b740-f3bf40fdc19f"],
+Cell[36439, 857, 418, 10, 28, "Message",ExpressionUUID->"402ff0a7-60f8-4c88-b994-8aac57eb2101"],
+Cell[36860, 869, 525, 11, 28, "Message",ExpressionUUID->"3f9d08ba-9555-4f63-95a6-36d7d82b8c01"],
+Cell[37388, 882, 479, 11, 46, "Message",ExpressionUUID->"efd4d9a5-e689-44b6-b082-0f1484921cee"],
+Cell[37870, 895, 611, 13, 47, "Message",ExpressionUUID->"401629f4-10a0-4244-94fb-0e86abe358c7"],
+Cell[38484, 910, 480, 11, 46, "Message",ExpressionUUID->"07d472c5-72bd-47b0-9610-5b783585c53b"],
+Cell[38967, 923, 570, 12, 47, "Message",ExpressionUUID->"ab6605a8-5a31-458e-9305-dd44df3ac8c4"],
+Cell[39540, 937, 460, 10, 28, "Message",ExpressionUUID->"f8da6da9-f5b4-4071-83c6-a81b6fe4f714"],
+Cell[40003, 949, 480, 11, 46, "Message",ExpressionUUID->"f25aa003-cda6-4ab0-9708-5a370d6e792f"],
+Cell[40486, 962, 453, 10, 28, "Message",ExpressionUUID->"2cc2c2f2-85ea-4f60-8d9b-f153d5cd3bd5"],
+Cell[40942, 974, 526, 11, 28, "Message",ExpressionUUID->"c4745ece-0883-4a1b-892e-87976158986f"],
+Cell[41471, 987, 610, 13, 47, "Message",ExpressionUUID->"92e277e4-be9d-48a8-8eb2-638b1b7dbb03"],
+Cell[42084, 1002, 571, 12, 47, "Message",ExpressionUUID->"8834bb2b-7cf8-4135-bc64-20535745a0f1"],
+Cell[42658, 1016, 463, 10, 28, "Message",ExpressionUUID->"8236c496-0e2b-433e-892e-27015899a9de"]
+}, Open  ]]
+}
+]
+*)
+

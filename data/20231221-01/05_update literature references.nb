@@ -1,0 +1,3888 @@
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[         0,          0]
+NotebookDataLength[    179653,       3887]
+NotebookOptionsPosition[    173234,       3773]
+NotebookOutlinePosition[    173666,       3790]
+CellTagsIndexPosition[    173623,       3787]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Literature update 1st Jan 2025", "Title",
+ CellChangeTimes->{{3.944797092498478*^9, 
+  3.944797101746439*^9}},ExpressionUUID->"9263053e-f879-3743-8ede-\
+0c62926ee559"],
+
+Cell[BoxData[{
+ RowBox[{"dateret", "=."}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"dateret", "=", "\"\<2025/01/02\>\""}], ";"}], " ", 
+  RowBox[{"(*", 
+   RowBox[{"22", ":", "10"}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{"head", "=."}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"head", "=", 
+    RowBox[{"{", 
+     RowBox[{"{", 
+      RowBox[{
+      "\"\<Database\>\"", ",", "\"\<Date of Retrieval [year/month/day]\>\"", 
+       ",", "\"\<Title\>\"", ",", "\"\<Authors\>\"", ",", "\"\<Year\>\"", 
+       ",", "\"\<Language\>\"", ",", "\"\<Journal Title\>\"", ",", 
+       "\"\<Publication Type\>\"", ",", "\"\<DOI/Hyperlink\>\"", ",", 
+       "\"\<Abstract\>\"", ",", 
+       "\"\<Included [1], Excluded [0], To be discussed [2]\>\"", ",", 
+       "\"\<Comment\>\""}], "}"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"Pubmed", " ", 
+    RowBox[{"Abbr", ".", " ", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+      "\"\<Database\>\"", ",", "\"\<Title\>\"", ",", "\"\<Authors\>\"", ",", 
+       "\"\<Year\>\"", ",", "\"\<Language\>\"", ",", "\"\<Journal Title\>\"", 
+       ",", "\"\<Publication Type\>\"", ",", "\"\<DOI/Link\>\"", ",", 
+       "\"\<Abstract\>\""}], "}"}]}], "\n", 
+    RowBox[{"{", 
+     RowBox[{
+     "\"\<DB\>\"", ",", "\"\<TI\>\"", ",", "\"\<AU\>\"", ",", "\"\<DP\>\"", 
+      ",", "\"\<LA\>\"", ",", "\"\<JT\>\"", ",", "\"\<PT\>\"", ",", 
+      "\"\<AID\>\"", ",", "\"\<AB\>\""}], "}"}]}], "*)"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.9004258248973923`*^9, 3.900425883323045*^9}, {
+   3.9004259178695087`*^9, 3.9004259222173777`*^9}, {3.900425966316806*^9, 
+   3.9004259997759714`*^9}, {3.9004260380872803`*^9, 
+   3.9004260608863363`*^9}, {3.900426100040011*^9, 3.900426122025096*^9}, {
+   3.900603538248802*^9, 3.9006035409533014`*^9}, {3.9006036074190216`*^9, 
+   3.9006036499143734`*^9}, 3.900603708262398*^9, {3.90077938733694*^9, 
+   3.9007794354417534`*^9}, {3.900779510761492*^9, 3.900779540152768*^9}, {
+   3.900986042659528*^9, 3.9009860654031334`*^9}, {3.9009871068618774`*^9, 
+   3.9009871112418933`*^9}, {3.901119117241313*^9, 3.901119120994164*^9}, 
+   3.9019010478746233`*^9, {3.94479690184346*^9, 3.9447969061545925`*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"236d011b-3778-4448-bb76-e2d03c15f665"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+   "searchTerm", 
+    "=", "\"\<(hearing loss OR hearing impairment OR hearing difficulties OR \
+acoustic trauma) AND (musician)\>\""}], ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"outpath", "=", 
+   RowBox[{
+    RowBox[{"NotebookDirectory", "[", "]"}], "~~", "\"\<output\\\\\>\""}]}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.944796929288786*^9, 3.944796967229767*^9}, {
+  3.9447986833253384`*^9, 3.944798683453987*^9}, {3.9637493562023544`*^9, 
+  3.9637493623567924`*^9}},ExpressionUUID->"97481b95-34cc-46c4-9ef6-\
+d0962febf1ae"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Google Scholar", "Title",
+ CellChangeTimes->{{3.90034612106927*^9, 
+  3.900346122974351*^9}},ExpressionUUID->"a4434970-fd74-4d48-bac4-\
+6d2b1f7c5593"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"https", ":"}], "//", 
+      RowBox[{
+       RowBox[{"scholar", ".", "google", ".", "de"}], "/", 
+       RowBox[{"scholar", "?", "start"}]}]}], "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"10", "&"}], "q"}], "=", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", "Children", ")"}], "+", "and", "+", 
+          RowBox[{"(", 
+           RowBox[{
+           "cochlear", "+", "implant", "+", "or", "+", "CI", "+", "or", "+", 
+            "Cochlea", "-", "Implantat"}], ")"}], "+", "and", "+", 
+          RowBox[{"(", "indication", ")"}]}], "&"}], "hl"}], "=", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"de", "&"}], "as_sdt"}], "=", "0"}]}]}]}], ",", "5"}], 
+   "\[IndentingNewLine]", "*)"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"searchTermG", "=", 
+    RowBox[{"StringReplace", "[", 
+     RowBox[{"searchTerm", ",", 
+      RowBox[{"\"\< \>\"", "->", "\"\<+\>\""}]}], "]"}]}], ";"}]}]], "Input",
+ CellChangeTimes->{{3.910967737189128*^9, 3.910967761309097*^9}, 
+   3.91207796730661*^9, {3.9120780102285085`*^9, 3.912078040851453*^9}, {
+   3.9120781075401444`*^9, 3.9120781161056733`*^9}, {3.912096925492747*^9, 
+   3.9120969293188777`*^9}, {3.912103143258812*^9, 3.9121031488888383`*^9}},
+ CellLabel->"In[51]:=",ExpressionUUID->"a478bfd4-f894-47d8-8100-9c60e4bbc7dd"],
+
+Cell[BoxData[{
+ RowBox[{"d", "=."}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"d", "=", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"StringCases", "[", 
+       RowBox[{
+        RowBox[{"Import", "[", 
+         RowBox[{
+          RowBox[{"\"\<https://scholar.google.de/scholar?start=\>\"", "~~", 
+           RowBox[{"ToString", "[", "i", "]"}], "~~", "\"\<&q=\>\"", "~~", 
+           "searchTermG", "~~", "\"\<&hl=de&as_sdt=0,5&as_ylo=2024\>\""}], 
+          ",", "\"\<Source\>\""}], "]"}], ",", 
+        RowBox[{
+         RowBox[{
+         "\"\<Alert erstellen\>\"", " ", "~~", "a__", "~~", 
+          "\"\<Alert erstellen\>\""}], "\[Rule]", "a"}]}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "1", ",", "10", ",", "20", ",", "30", ",", "40", ",", "50", ",", 
+          "60", ",", "70", ",", "80", ",", "90", ",", "100"}], "}"}]}], 
+       "}"}]}], "]"}]}], ";"}], "\n"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{
+  3.900343789016387*^9, 3.900344155879723*^9, {3.9003442341951404`*^9, 
+   3.9003442592050962`*^9}, {3.9006001942748013`*^9, 3.900600210698829*^9}, {
+   3.9006047768912387`*^9, 3.90060481379212*^9}, {3.9007808592366056`*^9, 
+   3.9007808655163994`*^9}, {3.9009867227725554`*^9, 
+   3.9009867552589583`*^9}, {3.9009868016136417`*^9, 3.900986830117322*^9}, {
+   3.9009869674302573`*^9, 3.9009869977710743`*^9}, 3.9009873180616164`*^9, 
+   3.900989147732377*^9, 3.9010318057076645`*^9, {3.901124686488016*^9, 
+   3.9011246945267296`*^9}, {3.910967840458649*^9, 3.9109678632490172`*^9}, {
+   3.9109678967090034`*^9, 3.9109678974410243`*^9}, 3.9109679289395566`*^9, {
+   3.9120781259857864`*^9, 3.912078130461993*^9}, 3.9120969331595817`*^9, 
+   3.944797383820753*^9, {3.9447974191705475`*^9, 3.94479741954438*^9}},
+ CellLabel->"In[62]:=",ExpressionUUID->"dea9b66b-5168-401f-b5fb-5f05859a718e"],
+
+Cell[BoxData[{
+ RowBox[{"list", "=."}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"list", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"StringCases", "[", 
+        RowBox[{"#", ",", 
+         RowBox[{
+          RowBox[{"\"\<href=\\\"\>\"", "~~", 
+           RowBox[{"Shortest", "[", "a__", "]"}], "~~", "\"\<\\\"\>\""}], "->",
+           "a"}]}], "]"}], ",", 
+       RowBox[{"StringCases", "[", 
+        RowBox[{"#", ",", 
+         RowBox[{
+          RowBox[{"\"\<id=\\\"\>\"", "~~", "__", "~~", "\"\<\\\">\>\"", "~~", 
+           RowBox[{"Shortest", "[", "a__", "]"}], "~~", "\"\<</a>\>\""}], "->",
+           "a"}]}], "]"}]}], "}"}], "&"}], "/@", 
+    RowBox[{"StringCases", "[", 
+     RowBox[{
+      RowBox[{"StringJoin", "@", "d"}], ",", 
+      RowBox[{
+       RowBox[{"\"\<<h3\>\"", "~~", 
+        RowBox[{"Shortest", "[", "a__", "]"}], "~~", "\"\<</h3>\>\""}], "->", 
+       "a"}]}], "]"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"list", "[", 
+     RowBox[{"[", 
+      RowBox[{"All", ",", "2"}], "]"}], "]"}], "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"StringReplace", "[", 
+       RowBox[{"#", ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"\"\<<b>\>\"", "->", "\"\<\>\""}], ",", 
+          RowBox[{"\"\<</b>\>\"", "->", "\"\<\>\""}]}], "}"}]}], "]"}], "&"}],
+      "/@", 
+     RowBox[{"list", "[", 
+      RowBox[{"[", 
+       RowBox[{"All", ",", "2"}], "]"}], "]"}]}]}], ";"}], "\n", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"HTTPRequest", "[", "#", "]"}], ",", 
+         RowBox[{"URLRead", "[", "#", "]"}]}], "}"}], "&"}], "/@", 
+      RowBox[{
+       RowBox[{"Flatten", "[", 
+        RowBox[{"list", "[", 
+         RowBox[{"[", 
+          RowBox[{"All", ",", "1"}], "]"}], "]"}], "]"}], "[", 
+       RowBox[{"[", 
+        RowBox[{"1", ";;", "15"}], "]"}], "]"}]}], "\n", 
+     RowBox[{
+      RowBox[{"test", "[", 
+       RowBox[{"[", 
+        RowBox[{"1", ",", "2"}], "]"}], "]"}], "[", 
+      RowBox[{"[", 
+       RowBox[{"2", ",", "2"}], "]"}], "]"}]}], "//", 
+    RowBox[{"FullForm", 
+     RowBox[{"(*", 
+      RowBox[{"Status", " ", "Code", " ", "ok"}], "*)"}], "\n", 
+     RowBox[{
+      RowBox[{"test", "[", 
+       RowBox[{"[", 
+        RowBox[{"3", ",", "2"}], "]"}], "]"}], "[", 
+      RowBox[{"[", 
+       RowBox[{"2", ",", "2"}], "]"}], "]"}]}]}], 
+   RowBox[{"(*", 
+    RowBox[{"Status", " ", "Code", " ", "forbidden"}], "*)"}], 
+   "\[IndentingNewLine]", "*)"}], "\n"}], "\n", 
+ RowBox[{
+  RowBox[{"abstracts", "=", 
+   RowBox[{"{", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"extractabstract", "=."}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"extractabstract", "[", "urls_List", "]"}], ":=", " ", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"abs", "=", "\"\<no abstract available\>\""}], ",", "extr"}], 
+      "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Map", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"abs", "=", "\"\<no abstract available\>\""}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{"URLRead", "[", "#", "]"}], "[", 
+             RowBox[{"[", 
+              RowBox[{"2", ",", "2"}], "]"}], "]"}], "==", "200"}], ",", 
+           RowBox[{"extr", "=", 
+            RowBox[{"Import", "[", "#", "]"}]}], ",", 
+           RowBox[{"extr", "=", "0"}]}], "]"}], ";", "\[IndentingNewLine]", 
+         "\[IndentingNewLine]", 
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{"StringQ", "[", "extr", "]"}], ",", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"extr", "=", 
+             RowBox[{"StringReplace", "[", 
+              RowBox[{"extr", ",", " ", 
+               RowBox[{"\"\<\\n\>\"", "->", "\"\<     \>\""}]}], "]"}]}], ";",
+             "\[IndentingNewLine]", "\[IndentingNewLine]", 
+            RowBox[{"abs", "=", 
+             RowBox[{"Which", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"StringContainsQ", "[", 
+                 RowBox[{"extr", ",", 
+                  RowBox[{"\"\<Abstract\>\"", "|", "\"\<ABSTRACT\>\""}]}], 
+                 "]"}], " ", "&&", 
+                RowBox[{"StringContainsQ", "[", 
+                 RowBox[{"extr", ",", 
+                  RowBox[{"\"\<Keywords\>\"", "|", "\"\<KEYWORDS\>\""}]}], 
+                 "]"}]}], ",", 
+               RowBox[{"StringCases", "[", 
+                RowBox[{"extr", ",", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"\"\<Abstract\>\"", "|", "\"\<ABSTRACT\>\""}], "~~", 
+                   RowBox[{"Shortest", "[", "a__", "]"}], "~~", 
+                   RowBox[{"\"\<Keywords\>\"", "|", "\"\<KEYWORDS\>\""}]}], "->",
+                   "a"}]}], "]"}], ",", 
+               RowBox[{
+                RowBox[{"StringContainsQ", "[", 
+                 RowBox[{"extr", ",", 
+                  RowBox[{"\"\<Abstract\>\"", "|", "\"\<ABSTRACT\>\""}]}], 
+                 "]"}], " ", "&&", " ", 
+                RowBox[{"StringContainsQ", "[", 
+                 RowBox[{"extr", ",", 
+                  RowBox[{
+                  "\"\<Introduction\>\"", "|", "\"\<INTRODUCTION\>\""}]}], 
+                 "]"}]}], ",", 
+               RowBox[{"StringCases", "[", 
+                RowBox[{"extr", ",", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"\"\<Abstract\>\"", "|", "\"\<ABSTRACT\>\""}], "~~", 
+                   RowBox[{"Shortest", "[", "a__", "]"}], "~~", 
+                   RowBox[{
+                   "\"\<Introduction\>\"", "|", "\"\<INTRODUCTION\>\""}]}], "->",
+                   "a"}]}], "]"}], ",", 
+               RowBox[{"StringContainsQ", "[", 
+                RowBox[{"extr", ",", 
+                 RowBox[{"\"\<Abstract\>\"", "|", "\"\<ABSTRACT\>\""}]}], 
+                "]"}], ",", 
+               RowBox[{"StringCases", "[", 
+                RowBox[{"extr", ",", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"\"\<Abstract\>\"", "|", "\"\<ABSTRACT\>\""}], "~~",
+                    "a__"}], "->", "a"}]}], "]"}], ",", "True", ",", 
+               RowBox[{"{", "\"\<no abstract available\>\"", "}"}]}], "]"}]}],
+             ";", "\[IndentingNewLine]", 
+            RowBox[{"abs", "=", 
+             RowBox[{"If", "[", 
+              RowBox[{
+               RowBox[{"abs", "!=", 
+                RowBox[{"{", "}"}]}], ",", 
+               RowBox[{"StringTake", "[", 
+                RowBox[{"abs", ",", 
+                 RowBox[{"If", "[", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{"StringLength", "[", "abs", "]"}], "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], ">", "3000"}], ",", 
+                   "3000", ",", 
+                   RowBox[{
+                    RowBox[{"StringLength", "[", "abs", "]"}], "[", 
+                    RowBox[{"[", "1", "]"}], "]"}]}], "]"}]}], "]"}], ",", 
+               "\"\<no abstract available\>\""}], "]"}]}], ";"}], 
+           "\[IndentingNewLine]", ",", 
+           RowBox[{
+            RowBox[{"abs", "=", "\"\<no abstract available\>\""}], ";"}]}], 
+          "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
+         RowBox[{"AppendTo", "[", 
+          RowBox[{"abstracts", ",", "abs"}], "]"}], ";"}], 
+        "\[IndentingNewLine]", "&"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"Flatten", "[", "urls", "]"}]}], "\[IndentingNewLine]", 
+      "]"}]}], "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"extractabstract", "[", 
+    RowBox[{"list", "[", 
+     RowBox[{"[", 
+      RowBox[{"All", ",", "1"}], "]"}], "]"}], "]"}], ";"}], 
+  "\[IndentingNewLine]", "\n", 
+  RowBox[{"(*", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"abstracts", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Which", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"StringContainsQ", "[", 
+           RowBox[{"#", ",", 
+            RowBox[{"\"\<Abstract\>\"", "|", "\"\<ABSTRACT\>\""}]}], "]"}], 
+          " ", "&&", 
+          RowBox[{"StringContainsQ", "[", 
+           RowBox[{"#", ",", 
+            RowBox[{"\"\<Keywords\>\"", "|", "\"\<KEYWORDS\>\""}]}], "]"}]}], 
+         ",", 
+         RowBox[{"StringCases", "[", 
+          RowBox[{"#", ",", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"\"\<Abstract\>\"", "|", "\"\<ABSTRACT\>\""}], "~~", 
+             RowBox[{"Shortest", "[", "a__", "]"}], "~~", 
+             RowBox[{"\"\<Keywords\>\"", "|", "\"\<KEYWORDS\>\""}]}], "->", 
+            "a"}]}], "]"}], ",", 
+         RowBox[{
+          RowBox[{"StringContainsQ", "[", 
+           RowBox[{"#", ",", 
+            RowBox[{"\"\<Abstract\>\"", "|", "\"\<ABSTRACT\>\""}]}], "]"}], 
+          " ", "&&", " ", 
+          RowBox[{"StringContainsQ", "[", 
+           RowBox[{"#", ",", 
+            RowBox[{"\"\<Introduction\>\"", "|", "\"\<INTRODUCTION\>\""}]}], 
+           "]"}]}], ",", 
+         RowBox[{"StringCases", "[", 
+          RowBox[{"#", ",", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"\"\<Abstract\>\"", "|", "\"\<ABSTRACT\>\""}], "~~", 
+             RowBox[{"Shortest", "[", "a__", "]"}], "~~", 
+             RowBox[{"\"\<Introduction\>\"", "|", "\"\<INTRODUCTION\>\""}]}], 
+            "->", "a"}]}], "]"}], ",", 
+         RowBox[{"StringContainsQ", "[", 
+          RowBox[{"#", ",", 
+           RowBox[{"\"\<Abstract\>\"", "|", "\"\<ABSTRACT\>\""}]}], "]"}], 
+         ",", 
+         RowBox[{"StringCases", "[", 
+          RowBox[{"#", ",", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"\"\<Abstract\>\"", "|", "\"\<ABSTRACT\>\""}], "~~", 
+             "a__"}], "->", "a"}]}], "]"}], ",", "True", ",", 
+         RowBox[{"{", "\"\<no abstract available\>\"", "}"}]}], "]"}], "&"}], 
+      "/@", "abstracts"}]}], ";", "\n", "\[IndentingNewLine]", 
+    RowBox[{"abstracts", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"#", "!=", 
+          RowBox[{"{", "}"}]}], ",", 
+         RowBox[{"StringTake", "[", 
+          RowBox[{"#", ",", 
+           RowBox[{"If", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{
+               RowBox[{"StringLength", "[", "#", "]"}], "[", 
+               RowBox[{"[", "1", "]"}], "]"}], ">", "3000"}], ",", "3000", 
+             ",", 
+             RowBox[{
+              RowBox[{"StringLength", "[", "#", "]"}], "[", 
+              RowBox[{"[", "1", "]"}], "]"}]}], "]"}]}], "]"}], ",", 
+         "\"\<no abstract available\>\""}], "]"}], "&"}], "/@", 
+      "abstracts"}]}], ";", "\n", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Which", "[", 
+       RowBox[{
+        RowBox[{"StringContainsQ", "[", 
+         RowBox[{"#", ",", 
+          RowBox[{"\"\<DOI: \>\"", "|", "\"\<doi: \>\""}]}], "]"}], ",", 
+        RowBox[{"StringCases", "[", 
+         RowBox[{"#", ",", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"\"\<doi: \>\"", "|", "\"\<DOI: \>\""}], "~~", 
+            "\"\<10.\>\"", "~~", 
+            RowBox[{"Shortest", "@", "a__"}], "~~", "\"\< \>\""}], "->", 
+           RowBox[{"\"\<10.\>\"", "~~", "a"}]}]}], "]"}], ",", 
+        RowBox[{"StringContainsQ", "[", 
+         RowBox[{"#", ",", 
+          RowBox[{"\"\<DOI \>\"", "|", "\"\<doi \>\""}]}], "]"}], ",", 
+        RowBox[{"StringCases", "[", 
+         RowBox[{"#", ",", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"\"\<doi \>\"", "|", "\"\<DOI \>\""}], "~~", 
+            "\"\<10.\>\"", "~~", 
+            RowBox[{"Shortest", "@", "a__"}], "~~", "\"\< \>\""}], "->", 
+           RowBox[{"\"\<10.\>\"", "~~", "a"}]}]}], "]"}], ",", 
+        RowBox[{"StringContainsQ", "[", 
+         RowBox[{"#", ",", "\"\<https://doi.org/\>\""}], "]"}], ",", 
+        RowBox[{"StringCases", "[", 
+         RowBox[{"#", ",", 
+          RowBox[{
+           RowBox[{"\"\<https://doi.org/\>\"", "~~", "\"\<10.\>\"", "~~", 
+            RowBox[{"Shortest", "@", "a__"}], "~~", 
+            RowBox[{"\"\< \>\"", "|", "\"\<\\n\>\""}]}], "->", 
+           RowBox[{"\"\<10.\>\"", "~~", "a"}]}]}], "]"}], ",", 
+        RowBox[{"StringContainsQ", "[", 
+         RowBox[{"#", ",", 
+          RowBox[{"\"\<DOI\>\"", "|", "\"\<doi\>\""}]}], "]"}], ",", 
+        RowBox[{"StringCases", "[", 
+         RowBox[{"#", ",", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"\"\<doi\>\"", "|", "\"\<DOI\>\""}], "~~", 
+            RowBox[{"Whitespace", ".."}], "~~", "\"\<10.\>\"", "~~", 
+            RowBox[{"Shortest", "@", "a__"}], "~~", "\"\< \>\""}], "->", 
+           RowBox[{"\"\<10.\>\"", "~~", "a"}]}]}], "]"}], ",", "True", ",", 
+        "\"\<no DOI available\>\""}], "]"}], "&"}], "/@", "ex"}]}], 
+   "\[IndentingNewLine]", "*)"}]}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{
+  3.900343789016387*^9, 3.900344155879723*^9, {3.9003442341951404`*^9, 
+   3.9003442592050962`*^9}, {3.9006001942748013`*^9, 3.900600210698829*^9}, {
+   3.9006047768912387`*^9, 3.90060481379212*^9}, {3.9007808592366056`*^9, 
+   3.9007808655163994`*^9}, {3.9009867227725554`*^9, 
+   3.9009867552589583`*^9}, {3.9009868016136417`*^9, 3.900986830117322*^9}, {
+   3.9009869674302573`*^9, 3.9009869977710743`*^9}, 3.9009873180616164`*^9, 
+   3.900989147732377*^9, 3.9010318057076645`*^9, {3.901124686488016*^9, 
+   3.9011246945267296`*^9}, {3.912078165457329*^9, 3.912078166661045*^9}, 
+   3.912096963397421*^9, {3.944796983507225*^9, 3.944797000125717*^9}, {
+   3.9447970669629364`*^9, 3.9447970681653976`*^9}, 
+   3.9447986784814568`*^9},ExpressionUUID->"637867cd-f9f1-493b-8685-\
+d32cf5848379"],
+
+Cell[BoxData[
+ RowBox[{"Put", "[", 
+  RowBox[{"abstracts", ",", 
+   RowBox[{
+   "outpath", "~~", "\"\<update hearing loss musicians abstracts\>\"", "~~", 
+    "\"\<.m\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{
+  3.900343789016387*^9, 3.900344155879723*^9, {3.9003442341951404`*^9, 
+   3.9003442592050962`*^9}, {3.9006001942748013`*^9, 3.900600210698829*^9}, {
+   3.9006047768912387`*^9, 3.90060481379212*^9}, {3.9007808592366056`*^9, 
+   3.9007808655163994`*^9}, {3.9009867227725554`*^9, 
+   3.9009867552589583`*^9}, {3.9009868016136417`*^9, 3.900986830117322*^9}, {
+   3.9009869674302573`*^9, 3.9009869977710743`*^9}, 3.9009873180616164`*^9, 
+   3.900989147732377*^9, 3.9010318057076645`*^9, {3.901124686488016*^9, 
+   3.9011246945267296`*^9}, {3.912078165457329*^9, 3.912078166661045*^9}, 
+   3.912096963397421*^9, {3.944796983507225*^9, 3.944797000125717*^9}, {
+   3.9447970669629364`*^9, 3.9447970681653976`*^9}, 3.9447986784814568`*^9},
+ CellLabel->"In[75]:=",ExpressionUUID->"a6b6358d-0a28-ff44-ac4f-85c198e4700a"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"dgooglescholar", "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"\"\<DB\>\"", "->", "\"\<Google Scholar\>\""}], ",", 
+        RowBox[{"\"\<TI\>\"", "->", 
+         RowBox[{"#", "[", 
+          RowBox[{"[", "2", "]"}], "]"}]}], ",", 
+        RowBox[{"\"\<AU\>\"", "->", "\"\<\>\""}], ",", 
+        RowBox[{"\"\<DP\>\"", "->", "\"\<\>\""}], ",", 
+        RowBox[{"\"\<LA\>\"", "->", "\"\<\>\""}], ",", 
+        RowBox[{"\"\<JT\>\"", "->", "\"\<\>\""}], ",", 
+        RowBox[{"\"\<PT\>\"", "->", "\"\<\>\""}], ",", 
+        RowBox[{"\"\<AID\>\"", "->", 
+         RowBox[{"#", "[", 
+          RowBox[{"[", "1", "]"}], "]"}]}], ",", 
+        RowBox[{"\"\<AB\>\"", "->", 
+         RowBox[{"StringTrim", "[", 
+          RowBox[{"#", "[", 
+           RowBox[{"[", "3", "]"}], "]"}], "]"}]}]}], "}"}], "&"}], "/@", 
+     RowBox[{"Map", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Flatten", "[", "#", "]"}], "&"}], ",", 
+       RowBox[{"Transpose", "@", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"Part", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Flatten", "[", 
+              RowBox[{"list", ",", 
+               RowBox[{"{", "3", "}"}]}], "]"}], "/.", 
+             RowBox[{
+              RowBox[{"{", "}"}], "->", "Nothing"}]}], ",", "1"}], "]"}], ",",
+           "abstracts"}], "}"}]}], ",", 
+       RowBox[{"{", "1", "}"}]}], "]"}]}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"Put", "[", 
+  RowBox[{"dgooglescholar", ",", 
+   RowBox[{
+   "outpath", "~~", "\"\<update hearing loss musicians\>\"", "~~", 
+    "\"\<.m\>\""}]}], "]"}]}], "Input",
+ CellChangeTimes->{
+  3.900343789016387*^9, 3.900344155879723*^9, {3.9003442341951404`*^9, 
+   3.9003442592050962`*^9}, {3.9006001942748013`*^9, 3.900600210698829*^9}, {
+   3.9006047768912387`*^9, 3.90060481379212*^9}, {3.9007808592366056`*^9, 
+   3.9007808655163994`*^9}, {3.9009867227725554`*^9, 
+   3.9009867552589583`*^9}, {3.9009868016136417`*^9, 3.900986830117322*^9}, {
+   3.9009869674302573`*^9, 3.9009869977710743`*^9}, {3.9009873180616164`*^9, 
+   3.9009873536283216`*^9}, {3.901032547366111*^9, 3.901032547773943*^9}, 
+   3.901124601093294*^9, {3.901643599847057*^9, 3.9016436063677616`*^9}, 
+   3.912096978868555*^9, {3.944797061696497*^9, 3.9447970819400654`*^9}},
+ CellLabel->"In[76]:=",ExpressionUUID->"aeb193d5-6934-4471-b364-43064751ec24"],
+
+Cell[BoxData["dgooglescholar"], "Input",
+ CellChangeTimes->{{3.9006862057399206`*^9, 3.9006862087418795`*^9}, {
+  3.901643446868298*^9, 3.9016434472006674`*^9}, {3.9016435126406364`*^9, 
+  3.901643514671628*^9}},
+ CellLabel->"In[78]:=",ExpressionUUID->"8ab312df-2b80-460b-8caf-f7e759681bbf"],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Detect", " ", "Authors", "\[IndentingNewLine]", "temp"}], "=", 
+    RowBox[{
+    "Import", "[", 
+     "\"\<https://scholar.google.com/scholar?start=1&q=musician+hearing+loss&\
+hl=de&as_sdt=0,5\>\"", "]"}]}], ";", "\n", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"StringCases", "[", 
+      RowBox[{"temp", ",", 
+       RowBox[{
+        RowBox[{"#", "~~", "\"\<\\n\>\"", "~~", 
+         RowBox[{"Shortest", "[", "a__", "]"}], "~~", 
+         RowBox[{"\"\<\[Ellipsis] \>\"", "|", "\"\<\[Bullet] \>\""}]}], "->", 
+        "a"}]}], "]"}], "&"}], "/@", 
+    RowBox[{"list", "[", 
+     RowBox[{"[", 
+      RowBox[{"All", ",", "2", ",", "1"}], "]"}], "]"}]}]}], " ", 
+  "\[IndentingNewLine]", "*)"}]], "Input",
+ CellChangeTimes->{{3.900686258899074*^9, 3.9006862617851696`*^9}, {
+   3.9006862955150013`*^9, 3.900686301514908*^9}, 3.900687078090546*^9, {
+   3.9006871912743516`*^9, 3.900687262676036*^9}, {3.900687338929573*^9, 
+   3.900687355033615*^9}, {3.900688178014784*^9, 
+   3.900688182189762*^9}},ExpressionUUID->"25263113-43d1-48a3-b6e9-\
+b8c7f1c38dc7"],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Keywords", " ", "vor", " ", "Abstract"}], " ", "->", " ", 
+    RowBox[{
+     RowBox[{"{", "}"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     "temp2"}]}], "=", 
+   RowBox[{
+    RowBox[{
+    "Import", "[", 
+     "\"\<https://jcaa.caa-aca.ca/index.php/jcaa/article/view/1429\>\"", 
+     "]"}], "\n", 
+    RowBox[{"Which", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"StringContainsQ", "[", 
+        RowBox[{"temp2", ",", 
+         RowBox[{"\"\<Abstract\>\"", "|", "\"\<ABSTRACT\>\""}]}], "]"}], "&&", 
+       RowBox[{"StringContainsQ", "[", 
+        RowBox[{"temp2", ",", 
+         RowBox[{"\"\<Keywords\>\"", "|", "\"\<KEYWORDS\>\""}]}], "]"}]}], 
+      ",", 
+      RowBox[{"StringCases", "[", 
+       RowBox[{"temp2", ",", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"\"\<Abstract\>\"", "|", "\"\<ABSTRACT\>\""}], "~~", 
+          RowBox[{"Shortest", "[", "a__", "]"}], "~~", 
+          RowBox[{"\"\<Keywords\>\"", "|", "\"\<KEYWORDS\>\""}]}], "->", 
+         "a"}]}], "]"}], ",", 
+      RowBox[{
+       RowBox[{"StringContainsQ", "[", 
+        RowBox[{"temp2", ",", 
+         RowBox[{"\"\<Abstract\>\"", "|", "\"\<ABSTRACT\>\""}]}], "]"}], "&&", 
+       RowBox[{"StringContainsQ", "[", 
+        RowBox[{"temp2", ",", 
+         RowBox[{"\"\<Introduction\>\"", "|", "\"\<INTRODUCTION\>\""}]}], 
+        "]"}]}], ",", 
+      RowBox[{"StringCases", "[", 
+       RowBox[{"temp2", ",", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"\"\<Abstract\>\"", "|", "\"\<ABSTRACT\>\""}], "~~", 
+          RowBox[{"Shortest", "[", "a__", "]"}], "~~", 
+          RowBox[{"\"\<Introduction\>\"", "|", "\"\<INTRODUCTION\>\""}]}], "->",
+          "a"}]}], "]"}], ",", 
+      RowBox[{"StringContainsQ", "[", 
+       RowBox[{"temp2", ",", 
+        RowBox[{"\"\<Abstract\>\"", "|", "\"\<ABSTRACT\>\""}]}], "]"}], ",", 
+      RowBox[{"StringCases", "[", 
+       RowBox[{"temp2", ",", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"\"\<Abstract\>\"", "|", "\"\<ABSTRACT\>\""}], "~~", 
+          "a__"}], "->", "a"}]}], "]"}], ",", "True", ",", 
+      RowBox[{"{", "\"\<no abstract available\>\"", "}"}]}], "]"}], "\n", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", "}"}]}]}], " ", "*)"}]], "Input",
+ CellChangeTimes->{{3.900687732273383*^9, 3.9006877349161873`*^9}, {
+  3.9006879077827835`*^9, 3.9006879089837027`*^9}, {3.9006881230797577`*^9, 
+  3.9006881693509884`*^9}},ExpressionUUID->"90da5275-308a-4fab-b7f3-\
+cb6e04aa24c8"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["PubMed", "Title",
+ CellChangeTimes->{{3.90034613136802*^9, 
+  3.9003461327152367`*^9}},ExpressionUUID->"fffbbe86-5350-48ac-8c8f-\
+88a67cd6c7b0"],
+
+Cell[BoxData[{
+ RowBox[{"dpubmed", "=."}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dpubmed", "=", 
+   RowBox[{
+   "Import", "[", 
+    "\"\<D:\\\\Daten\\\\b1464\\\\Desktop\\\\Hearing Loss Update\\\\pubmed \
+hearing loss update 2023-2025 _  02.01.2025.txt\>\"", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dpubmed", "=", 
+   RowBox[{"StringReplace", "[", 
+    RowBox[{"dpubmed", ",", 
+     RowBox[{"\"\<\\n      \>\"", "->", "\"\<\>\""}]}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"dpubmed", "=", 
+   RowBox[{"StringSplit", "[", 
+    RowBox[{"dpubmed", ",", "\"\<\\n\\n\>\""}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"listpubmed", "=", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"StringCases", "[", 
+         RowBox[{"#", ",", 
+          RowBox[{
+           RowBox[{"i", "~~", "\"\<- \>\"", "~~", 
+            RowBox[{"Shortest", "[", "a__", "]"}], "~~", "\"\<\\n\>\""}], "->", 
+           RowBox[{
+            RowBox[{"StringTrim", "[", "i", "]"}], "->", "a"}]}]}], "]"}], 
+        "&"}], "/@", "dpubmed"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<TI  \>\"", ",", " ", "\"\<AU  \>\"", ",", " ", "\"\<DP  \>\"", 
+          ",", " ", "\"\<LA  \>\"", ",", " ", "\"\<JT  \>\"", ",", " ", 
+          "\"\<PT  \>\"", ",", " ", "\"\<AID \>\"", ",", " ", 
+          "\"\<PMID\>\""}], "}"}]}], "}"}]}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+   "Titles", " ", "in", " ", "PubMed", " ", "end", " ", "with", " ", "a", " ",
+     "dot"}], "*)"}]}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"listpubmed", "[", 
+     RowBox[{"[", 
+      RowBox[{"1", ",", "All", ",", "1", ",", "2"}], "]"}], "]"}], "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"StringTake", "[", 
+          RowBox[{"#", ",", 
+           RowBox[{"-", "1"}]}], "]"}], "==", "\"\<.\>\""}], ",", 
+        RowBox[{"StringTake", "[", 
+         RowBox[{"#", ",", 
+          RowBox[{"{", 
+           RowBox[{"1", ",", 
+            RowBox[{"-", "2"}]}], "}"}]}], "]"}], ",", "#"}], "]"}], "&"}], "/@", 
+     RowBox[{"listpubmed", "[", 
+      RowBox[{"[", 
+       RowBox[{"1", ",", "All", ",", "1", ",", "2"}], "]"}], "]"}]}]}], ";"}],
+   "\n", "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"Titles", " ", "in", " ", "PubMed", " ", "in", " ", "brackets"}], 
+   "*)"}]}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"listpubmed", "[", 
+     RowBox[{"[", 
+      RowBox[{"1", ",", "All", ",", "1", ",", "2"}], "]"}], "]"}], "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"StringTake", "[", 
+           RowBox[{"#", ",", "1"}], "]"}], "==", "\"\<[\>\""}], " ", "&&", 
+         " ", 
+         RowBox[{
+          RowBox[{"StringTake", "[", 
+           RowBox[{"#", ",", 
+            RowBox[{"-", "1"}]}], "]"}], "==", "\"\<]\>\""}]}], ",", 
+        RowBox[{"StringTake", "[", 
+         RowBox[{"#", ",", 
+          RowBox[{"{", 
+           RowBox[{"2", ",", 
+            RowBox[{"-", "2"}]}], "}"}]}], "]"}], ",", "#"}], "]"}], "&"}], "/@", 
+     RowBox[{"listpubmed", "[", 
+      RowBox[{"[", 
+       RowBox[{"1", ",", "All", ",", "1", ",", "2"}], "]"}], "]"}]}]}], ";"}],
+   "\[IndentingNewLine]", "\[IndentingNewLine]", "\n", 
+  RowBox[{"(*", 
+   RowBox[{
+   "missing", " ", "AID", " ", "are", " ", "replaced", " ", "with", " ", 
+    "PMID", " ", "and", " ", "PubMed", " ", "URL"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"newAID", "=", 
+   RowBox[{"Transpose", "@", 
+    RowBox[{"listpubmed", "[", 
+     RowBox[{"[", 
+      RowBox[{
+       RowBox[{"-", "2"}], ";;", 
+       RowBox[{"-", "1"}]}], "]"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"newAID", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"#", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], "===", 
+         RowBox[{"{", "}"}]}], ",", 
+        RowBox[{"#", "=", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"\"\<AID\>\"", "->", 
+             RowBox[{"\"\<https://pubmed.ncbi.nlm.nih.gov/\>\"", "~~", 
+              RowBox[{"ToString", "[", 
+               RowBox[{"#", "[", 
+                RowBox[{"[", 
+                 RowBox[{"2", ",", "1", ",", "2"}], "]"}], "]"}], "]"}]}]}], 
+            "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"\"\<PMID\>\"", "->", 
+             RowBox[{"#", "[", 
+              RowBox[{"[", 
+               RowBox[{"2", ",", "1", ",", "2"}], "]"}], "]"}]}], "}"}]}], 
+          "}"}]}], ",", "#"}], "]"}], "&"}], "/@", "newAID"}], "//", 
+    "Quiet"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"listpubmed", "[", 
+     RowBox[{"[", 
+      RowBox[{
+       RowBox[{"-", "2"}], ";;", 
+       RowBox[{"-", "1"}]}], "]"}], "]"}], "=", 
+    RowBox[{"Transpose", "@", "newAID"}]}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"abs", "=", "\"\<no abstract available\>\""}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+        "URLRead", "[", "\"\<https://pubmed.ncbi.nlm.nih.gov/6720146\>\"", 
+         "]"}], "[", 
+        RowBox[{"[", 
+         RowBox[{"2", ",", "2"}], "]"}], "]"}], "==", "200"}], ",", 
+      RowBox[{"extr", "=", 
+       RowBox[{
+       "Import", "[", "\"\<https://pubmed.ncbi.nlm.nih.gov/6720146\>\"", 
+        "]"}]}], ",", 
+      RowBox[{"extr", "=", "0"}]}], "]"}], ";", "\[IndentingNewLine]", 
+    "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"StringQ", "[", "extr", "]"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"extr", "=", 
+        RowBox[{"StringReplace", "[", 
+         RowBox[{"extr", ",", " ", 
+          RowBox[{"\"\<\\n\>\"", "->", "\"\<     \>\""}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"abs", "=", 
+        RowBox[{"StringCases", "[", 
+         RowBox[{"extr", ",", 
+          RowBox[{
+           RowBox[{"\"\<PubMed PMID          Abstract\>\"", "~~", 
+            RowBox[{"Shortest", "[", "a__", "]"}], "~~", 
+            "\"\<Similar articles\>\""}], "->", "a"}]}], "]"}]}]}]}], "]"}]}],
+    "\[IndentingNewLine]", "*)"}], "\n"}], "\n", 
+ RowBox[{
+  RowBox[{"PrependTo", "[", 
+   RowBox[{"listpubmed", ",", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"\"\<DB\>\"", "->", "\"\<MEDLINE\>\""}], "}"}], ",", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Length", "[", "#", "]"}], "&"}], "/@", "listpubmed"}], 
+        ")"}], "[", 
+       RowBox[{"[", "1", "]"}], "]"}]}], "]"}]}], "]"}], ";"}], "\n", 
+ RowBox[{"Clear", "[", "a", "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"AppendTo", "[", 
+    RowBox[{"listpubmed", ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"StringContainsQ", "[", 
+          RowBox[{"#", ",", "\"\<AB  -\>\""}], "]"}], ",", 
+         RowBox[{"StringCases", "[", 
+          RowBox[{"#", ",", 
+           RowBox[{
+            RowBox[{"\"\<AB\>\"", "~~", 
+             RowBox[{"WhitespaceCharacter", ".."}], "~~", " ", "\"\<- \>\"", "~~", 
+             RowBox[{"Shortest", "[", "a__", "]"}], "~~", "\"\<.\\n\>\"", "~~", 
+             RowBox[{"LetterCharacter", ".."}], "~~", 
+             RowBox[{"WhitespaceCharacter", ".."}], "~~", "\"\<- \>\""}], "->", 
+            RowBox[{"\"\<AB\>\"", "->", 
+             RowBox[{"a", "~~", "\"\<.\>\""}]}]}]}], "]"}], ",", 
+         RowBox[{"\"\<AB\>\"", "->", "\"\<no abstract available\>\""}]}], 
+        "]"}], "&"}], "/@", "dpubmed"}]}], "]"}], ";"}], 
+  "\[IndentingNewLine]"}], "\n", 
+ RowBox[{
+  RowBox[{"listpubmed", "=", 
+   RowBox[{"Flatten", "/@", 
+    RowBox[{"Transpose", "@", "listpubmed"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"listpubmed", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"GroupBy", "[", 
+      RowBox[{"#", ",", "Keys"}], "]"}], "&"}], "/@", "listpubmed"}]}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.9004234698805566`*^9, 3.9004234927142277`*^9}, {
+   3.900425503792076*^9, 3.9004255217253237`*^9}, {3.900580116437453*^9, 
+   3.90058011891181*^9}, 3.900580196225269*^9, 3.9005818804596653`*^9, {
+   3.900582068232548*^9, 3.900582096343481*^9}, {3.9005821583042493`*^9, 
+   3.9005821810886106`*^9}, {3.9005823076411953`*^9, 3.900582308041994*^9}, {
+   3.9005825955104427`*^9, 3.900582636249279*^9}, {3.9005826765640044`*^9, 
+   3.900582690339573*^9}, {3.90058284148328*^9, 3.9005828416795235`*^9}, {
+   3.9005828752356358`*^9, 3.9005828759531183`*^9}, {3.900583193412427*^9, 
+   3.900583225608962*^9}, 3.9005832710747375`*^9, 3.900583310779331*^9, 
+   3.900583365105712*^9, {3.9005834061104393`*^9, 3.9005835052492976`*^9}, {
+   3.9005836047757096`*^9, 3.90058360614745*^9}, {3.9005836538674145`*^9, 
+   3.9005836622667427`*^9}, {3.9007759519999075`*^9, 3.900775954046219*^9}, 
+   3.900776064206427*^9, {3.900776139259303*^9, 3.900776143670679*^9}, {
+   3.90077619057194*^9, 3.900776234211353*^9}, 3.900776278184806*^9, {
+   3.9007763132399597`*^9, 3.9007763170793457`*^9}, {3.9010331432337933`*^9, 
+   3.901033154534918*^9}, {3.901206955690776*^9, 3.9012069573831263`*^9}, {
+   3.9012077651440353`*^9, 3.901207779036189*^9}, {3.9012078103108597`*^9, 
+   3.9012078229629364`*^9}, 3.901207903045638*^9, {3.90120986225368*^9, 
+   3.9012098633642497`*^9}, {3.9012099295974045`*^9, 
+   3.9012099300032825`*^9}, {3.90121176192642*^9, 3.9012117798248653`*^9}, {
+   3.901211843847762*^9, 3.901211880475623*^9}, {3.9012120362244964`*^9, 
+   3.9012120400520635`*^9}, {3.9016436302073812`*^9, 
+   3.9016436386413727`*^9}, {3.9016438526859875`*^9, 3.901643862821746*^9}, {
+   3.9019005737246704`*^9, 3.901900616087732*^9}, {3.90190075409099*^9, 
+   3.9019007621852293`*^9}, {3.9447971717614326`*^9, 
+   3.9447971896111546`*^9}, {3.944797221515299*^9, 
+   3.9447972333108826`*^9}},ExpressionUUID->"9f9efd55-241e-48e5-8ed7-\
+34d483fee98f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Values", "[", 
+  RowBox[{"listpubmed", "[", 
+   RowBox[{"[", "2", "]"}], "]"}], "]"}], "\n", 
+ RowBox[{"listpubmed", "[", 
+  RowBox[{"[", "2", "]"}], "]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.9005839543232265`*^9, 3.9005839592354665`*^9}, 
+   3.9008597208105717`*^9, {3.944797237935198*^9, 3.9447972459368286`*^9}},
+ CellLabel->"In[23]:=",ExpressionUUID->"61342174-0782-4c04-9a5d-68bd8cb6a257"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"\<\"DB\"\>", "\[Rule]", "\<\"MEDLINE\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"TI\"\>", 
+     "\[Rule]", "\<\"Interviews with musicians with hearing aids\"\>"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\<\"AU\"\>", "\[Rule]", "\<\"Swann S\"\>"}], ",", 
+     RowBox[{"\<\"AU\"\>", "\[Rule]", "\<\"O'Brien I\"\>"}], ",", 
+     RowBox[{"\<\"AU\"\>", "\[Rule]", "\<\"Rance G\"\>"}], ",", 
+     RowBox[{"\<\"AU\"\>", "\[Rule]", "\<\"Dowell R\"\>"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"DP\"\>", "\[Rule]", "\<\"2024 Nov\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"LA\"\>", "\[Rule]", "\<\"eng\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"JT\"\>", 
+     "\[Rule]", "\<\"International journal of audiology\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"PT\"\>", "\[Rule]", "\<\"Journal Article\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"AID\"\>", 
+     "\[Rule]", "\<\"10.1080/14992027.2023.2275118 [doi]\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"PMID\"\>", "\[Rule]", "\<\"37980926\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"AB\"\>", 
+     "\[Rule]", "\<\"OBJECTIVES: Musicians who wear hearing aids are a unique \
+subset of hearing-impaired individuals. There are a number of issues \
+musicians experience with hearing aids, making effective hearing \
+rehabilitation a challenge. Research suggests hearing aid satisfaction in \
+musicians is lower partly due to their advanced listening skills, however, \
+qualitative research addressing musicians who wear hearing aids for music is \
+scarce. The current study aimed to record the barriers encountered by \
+musicians who wear hearing aids when playing their instrument/singing, \
+listening to recorded music and listening to live music. DESIGN: Professional \
+musicians who wear hearing aids were interviewed. Participants were \
+questioned about their experiences with hearing loss and hearing aids, with \
+particular emphasis on experiences listening to recorded and live music, and \
+playing or performing music with the hearing aids. STUDY SAMPLE: Eight \
+professional musicians were interviewed, using a semi-structured interview \
+style, with a question and prompt guide. RESULTS: Thematic analysis revealed \
+three main themes in the data: the musicians' journey, communication, and \
+flexibility/adjustability. CONCLUSIONS: The results have implications for \
+future research into specific fitting parameters for hearing aids for \
+musicians (particularly for music performance), the need for evidence-based \
+rehabilitation programs for musicians with hearing loss, and the need for a \
+glossary of terms to assist communication between Audiologists and musicians.\
+\"\>"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.944797246669962*^9},
+ CellLabel->"Out[23]=",ExpressionUUID->"63f44f00-4880-934c-b5ef-611dd0545489"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"DB\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\<\"DB\"\>", "\[Rule]", "\<\"MEDLINE\"\>"}], "}"}]}], ",", 
+   RowBox[{"\<\"TI\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\<\"TI\"\>", 
+      "\[Rule]", "\<\"Interviews with musicians with hearing aids\"\>"}], 
+     "}"}]}], ",", 
+   RowBox[{"\<\"AU\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"\<\"AU\"\>", "\[Rule]", "\<\"Swann S\"\>"}], ",", 
+      RowBox[{"\<\"AU\"\>", "\[Rule]", "\<\"O'Brien I\"\>"}], ",", 
+      RowBox[{"\<\"AU\"\>", "\[Rule]", "\<\"Rance G\"\>"}], ",", 
+      RowBox[{"\<\"AU\"\>", "\[Rule]", "\<\"Dowell R\"\>"}]}], "}"}]}], ",", 
+   RowBox[{"\<\"DP\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\<\"DP\"\>", "\[Rule]", "\<\"2024 Nov\"\>"}], "}"}]}], ",", 
+   RowBox[{"\<\"LA\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\<\"LA\"\>", "\[Rule]", "\<\"eng\"\>"}], "}"}]}], ",", 
+   RowBox[{"\<\"JT\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\<\"JT\"\>", 
+      "\[Rule]", "\<\"International journal of audiology\"\>"}], "}"}]}], ",", 
+   RowBox[{"\<\"PT\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\<\"PT\"\>", "\[Rule]", "\<\"Journal Article\"\>"}], "}"}]}], 
+   ",", 
+   RowBox[{"\<\"AID\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\<\"AID\"\>", 
+      "\[Rule]", "\<\"10.1080/14992027.2023.2275118 [doi]\"\>"}], "}"}]}], 
+   ",", 
+   RowBox[{"\<\"PMID\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\<\"PMID\"\>", "\[Rule]", "\<\"37980926\"\>"}], "}"}]}], ",", 
+   RowBox[{"\<\"AB\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\<\"AB\"\>", 
+      "\[Rule]", "\<\"OBJECTIVES: Musicians who wear hearing aids are a \
+unique subset of hearing-impaired individuals. There are a number of issues \
+musicians experience with hearing aids, making effective hearing \
+rehabilitation a challenge. Research suggests hearing aid satisfaction in \
+musicians is lower partly due to their advanced listening skills, however, \
+qualitative research addressing musicians who wear hearing aids for music is \
+scarce. The current study aimed to record the barriers encountered by \
+musicians who wear hearing aids when playing their instrument/singing, \
+listening to recorded music and listening to live music. DESIGN: Professional \
+musicians who wear hearing aids were interviewed. Participants were \
+questioned about their experiences with hearing loss and hearing aids, with \
+particular emphasis on experiences listening to recorded and live music, and \
+playing or performing music with the hearing aids. STUDY SAMPLE: Eight \
+professional musicians were interviewed, using a semi-structured interview \
+style, with a question and prompt guide. RESULTS: Thematic analysis revealed \
+three main themes in the data: the musicians' journey, communication, and \
+flexibility/adjustability. CONCLUSIONS: The results have implications for \
+future research into specific fitting parameters for hearing aids for \
+musicians (particularly for music performance), the need for evidence-based \
+rehabilitation programs for musicians with hearing loss, and the need for a \
+glossary of terms to assist communication between Audiologists and musicians.\
+\"\>"}], "}"}]}]}], "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{3.9447972466875286`*^9},
+ CellLabel->"Out[24]=",ExpressionUUID->"9a4e3442-7d1d-e941-819b-19f5c912ad14"]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Embase", "Title",
+ CellChangeTimes->{{3.90034613136802*^9, 3.9003461327152367`*^9}, {
+  3.9006904553676653`*^9, 
+  3.9006904577830544`*^9}},ExpressionUUID->"fffae688-7bc9-478c-a873-\
+e8cf7292a7a0"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"dembase", "=."}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dembase", "=", 
+   RowBox[{
+   "Import", "[", 
+    "\"\<D:\\\\Daten\\\\b1464\\\\Desktop\\\\Hearing Loss Update\\\\embase \
+hearing loss update 2023-2025 _ 02.01.2025.txt\>\"", "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"dembase", "=", 
+   RowBox[{"StringSplit", "[", 
+    RowBox[{"dembase", ",", "\"\<\\n\\n\>\""}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"dembaselist", "=", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"StringCases", "[", 
+         RowBox[{"#", ",", 
+          RowBox[{
+           RowBox[{"i", "~~", "\"\<- \>\"", "~~", 
+            RowBox[{"Shortest", "[", "a__", "]"}], "~~", "\"\<\\n\>\""}], "->", 
+           RowBox[{
+            RowBox[{"StringTrim", "[", "i", "]"}], "->", "a"}]}]}], "]"}], 
+        "&"}], "/@", "dembase"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<T1  \>\"", ",", " ", "\"\<A1  \>\"", ",", " ", "\"\<Y1  \>\"", 
+          ",", " ", "\"\<LA  \>\"", ",", " ", "\"\<JF  \>\"", ",", " ", 
+          "\"\<TY  \>\"", ",", " ", "\"\<L2  \>\"", ",", " ", 
+          "\"\<U2  \>\""}], "}"}]}], "}"}]}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]", "\n", 
+  RowBox[{"(*", 
+   RowBox[{
+   "missing", " ", "AID", " ", "are", " ", "replaced", " ", "with", " ", 
+    "Embase", " ", "ID", " ", "and", " ", "Embse", " ", "URL"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"newAID", "=", 
+    RowBox[{"Transpose", "@", 
+     RowBox[{"dembaselist", "[", 
+      RowBox[{"[", 
+       RowBox[{
+        RowBox[{"-", "2"}], ";;", 
+        RowBox[{"-", "1"}]}], "]"}], "]"}]}]}], ";"}], 
+  "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"newAID", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"#", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], "===", 
+         RowBox[{"{", "}"}]}], ",", 
+        RowBox[{"#", "=", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"\"\<L2\>\"", "->", 
+             RowBox[{
+             "\"\<https://www.embase.com/records?subaction=viewrecord&id=\>\"\
+", "~~", 
+              RowBox[{"ToString", "[", 
+               RowBox[{"#", "[", 
+                RowBox[{"[", 
+                 RowBox[{"2", ",", "1", ",", "2"}], "]"}], "]"}], "]"}]}]}], 
+            "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"\"\<U2\>\"", "->", 
+             RowBox[{"#", "[", 
+              RowBox[{"[", 
+               RowBox[{"2", ",", "1", ",", "2"}], "]"}], "]"}]}], "}"}]}], 
+          "}"}]}], ",", "#"}], "]"}], "&"}], "/@", "newAID"}], "//", 
+    "Quiet"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"dembaselist", "[", 
+     RowBox[{"[", 
+      RowBox[{
+       RowBox[{"-", "2"}], ";;", 
+       RowBox[{"-", "1"}]}], "]"}], "]"}], "=", 
+    RowBox[{"Transpose", "@", "newAID"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"PrependTo", "[", 
+    RowBox[{"dembaselist", ",", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\"\<DB\>\"", "->", "\"\<Embase\>\""}], "}"}], ",", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Length", "[", "#", "]"}], "&"}], "/@", "dembaselist"}], 
+         ")"}], "[", 
+        RowBox[{"[", "1", "]"}], "]"}]}], "]"}]}], "]"}], ";"}], 
+  "\n"}], "\[IndentingNewLine]", 
+ RowBox[{"Clear", "[", "a", "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"AppendTo", "[", 
+    RowBox[{"dembaselist", ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"StringContainsQ", "[", 
+          RowBox[{"#", ",", "\"\<N2  -\>\""}], "]"}], ",", 
+         RowBox[{"StringCases", "[", 
+          RowBox[{"#", ",", 
+           RowBox[{
+            RowBox[{"\"\<N2\>\"", "~~", 
+             RowBox[{"WhitespaceCharacter", ".."}], "~~", " ", "\"\<- \>\"", "~~", 
+             RowBox[{"Shortest", "[", "a__", "]"}], "~~", "\"\<.\\n\>\"", "~~", 
+             RowBox[{"LetterCharacter", ".."}], "~~", 
+             RowBox[{"WhitespaceCharacter", ".."}], "~~", "\"\<- \>\""}], "->", 
+            RowBox[{"\"\<AB\>\"", "->", 
+             RowBox[{"a", "~~", "\"\<.\>\""}]}]}]}], "]"}], ",", 
+         RowBox[{"\"\<AB\>\"", "->", "\"\<no abstract available\>\""}]}], 
+        "]"}], "&"}], "/@", "dembase"}]}], "]"}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dembaselist", "=", 
+   RowBox[{"Flatten", "/@", 
+    RowBox[{"Transpose", "@", "dembaselist"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dembaselist", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"GroupBy", "[", 
+      RowBox[{"#", ",", "Keys"}], "]"}], "&"}], "/@", "dembaselist"}]}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.9004234698805566`*^9, 3.9004234927142277`*^9}, {
+   3.900425503792076*^9, 3.9004255217253237`*^9}, {3.900580116437453*^9, 
+   3.90058011891181*^9}, 3.900580196225269*^9, 3.9005818804596653`*^9, {
+   3.900582068232548*^9, 3.900582096343481*^9}, {3.9005821583042493`*^9, 
+   3.9005821810886106`*^9}, {3.9005823076411953`*^9, 3.900582308041994*^9}, {
+   3.9005825955104427`*^9, 3.900582636249279*^9}, {3.9005826765640044`*^9, 
+   3.900582690339573*^9}, {3.90058284148328*^9, 3.9005828416795235`*^9}, {
+   3.9005828752356358`*^9, 3.9005828759531183`*^9}, {3.900583193412427*^9, 
+   3.900583225608962*^9}, 3.9005832710747375`*^9, 3.900583310779331*^9, 
+   3.900583365105712*^9, {3.9005834061104393`*^9, 3.9005835052492976`*^9}, {
+   3.9005836047757096`*^9, 3.90058360614745*^9}, {3.9005836538674145`*^9, 
+   3.9005836622667427`*^9}, {3.900689685273755*^9, 3.9006896920981407`*^9}, {
+   3.9006906185669293`*^9, 3.9006906192210183`*^9}, {3.90069070598011*^9, 
+   3.900690706766465*^9}, {3.9006907911294622`*^9, 3.9006907978435717`*^9}, {
+   3.900691118985097*^9, 3.9006911222381916`*^9}, {3.9006923474967246`*^9, 
+   3.9006923626236563`*^9}, {3.90069263528026*^9, 3.9006926356209116`*^9}, {
+   3.9006926756220293`*^9, 3.9006926757607164`*^9}, {3.900692728360508*^9, 
+   3.900692738718743*^9}, {3.901033567379531*^9, 3.9010335890392923`*^9}, 
+   3.901202959571345*^9, {3.901213035943898*^9, 3.9012131244384623`*^9}, {
+   3.9012131570034986`*^9, 3.9012132049213734`*^9}, {3.901213285012944*^9, 
+   3.9012132856196737`*^9}, {3.901213395283079*^9, 3.9012134132670603`*^9}, {
+   3.9012135637122602`*^9, 3.901213637338382*^9}, {3.944797263786558*^9, 
+   3.9447973142868156`*^9}},ExpressionUUID->"859bc055-4697-48d1-8056-\
+ac75dc766fa5"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"DB\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"DB\"\>", "\[Rule]", "\<\"Embase\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"T1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"T1\"\>", 
+        "\[Rule]", "\<\"Speech auditory brainstem responses (s-ABRs) as a new \
+approach for the assessment of speech sounds coding\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"A1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Elsayed, H.A.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Nada, E.H.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Galhoum, D.H.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Elnabtity, N.M.\"\>"}]}], 
+       "}"}]}], ",", 
+     RowBox[{"\<\"Y1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Y1\"\>", "\[Rule]", "\<\"2024\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"LA\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"LA\"\>", "\[Rule]", "\<\"English\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"JF\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"JF\"\>", 
+        "\[Rule]", "\<\"Egyptian Journal of Otolaryngology\"\>"}], "}"}]}], 
+     ",", 
+     RowBox[{"\<\"TY\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"TY\"\>", "\[Rule]", "\<\"JOUR\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"L2\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"L2\"\>", 
+        "\[Rule]", "\<\"http://dx.doi.org/10.1186/s43163-024-00562-z\"\>"}], 
+       "}"}]}], ",", 
+     RowBox[{"\<\"U2\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"U2\"\>", "\[Rule]", "\<\"L2028011129\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"AB\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"AB\"\>", 
+        "\[Rule]", "\<\"Background: The evoked auditory brainstem response \
+(EABR) is an objective electrophysiological test used to assess the brainstem\
+\[CloseCurlyQuote]s auditory neural activity. Speech ABR (s-ABR) testing \
+using verbal stimuli gives more important details about how the brainstem \
+processes speech inputs which enables the detection of auditory processing \
+impairments that do not manifest in click-provoked ABR. The use of speech \
+syllables in the s-ABR reveals an important brainstem function that plays a \
+crucial part in reading development and phonologic achievement which is an \
+assessment of speech syllables. The syllable /da/ is often utilized in s-ABR \
+measurement being a global syllable that can be tested in many nations with \
+effective experimental confidence. Conclusion: The speech ABR is an \
+objective, unbiased, quick test. It can be used to differentiate between many \
+conditions such as auditory processing disorders (APD), specific language \
+impairment (SLI), and children with academic challenges.\"\>"}], "}"}]}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"DB\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"DB\"\>", "\[Rule]", "\<\"Embase\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"T1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"T1\"\>", 
+        "\[Rule]", "\<\"Interviews with musicians with hearing aids\"\>"}], 
+       "}"}]}], ",", 
+     RowBox[{"\<\"A1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Swann, S.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"O'Brien, I.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Rance, G.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Dowell, R.\"\>"}]}], "}"}]}], 
+     ",", 
+     RowBox[{"\<\"Y1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Y1\"\>", "\[Rule]", "\<\"2024\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"LA\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"LA\"\>", "\[Rule]", "\<\"English\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"JF\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"JF\"\>", 
+        "\[Rule]", "\<\"International journal of audiology\"\>"}], "}"}]}], 
+     ",", 
+     RowBox[{"\<\"TY\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"TY\"\>", "\[Rule]", "\<\"JOUR\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"L2\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"L2\"\>", 
+        "\[Rule]", \
+"\<\"http://dx.doi.org/10.1080/14992027.2023.2275118\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"U2\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"U2\"\>", "\[Rule]", "\<\"L642790015\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"AB\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"AB\"\>", 
+        "\[Rule]", "\<\"OBJECTIVES: Musicians who wear hearing aids are a \
+unique subset of hearing-impaired individuals. There are a number of issues \
+musicians experience with hearing aids, making effective hearing \
+rehabilitation a challenge. Research suggests hearing aid satisfaction in \
+musicians is lower partly due to their advanced listening skills, however, \
+qualitative research addressing musicians who wear hearing aids for music is \
+scarce. The current study aimed to record the barriers encountered by \
+musicians who wear hearing aids when playing their instrument/singing, \
+listening to recorded music and listening to live music. DESIGN: Professional \
+musicians who wear hearing aids were interviewed. Participants were \
+questioned about their experiences with hearing loss and hearing aids, with \
+particular emphasis on experiences listening to recorded and live music, and \
+playing or performing music with the hearing aids. STUDY SAMPLE: Eight \
+professional musicians were interviewed, using a semi-structured interview \
+style, with a question and prompt guide. RESULTS: Thematic analysis revealed \
+three main themes in the data: the musicians' journey, communication, and \
+flexibility/adjustability. CONCLUSIONS: The results have implications for \
+future research into specific fitting parameters for hearing aids for \
+musicians (particularly for music performance), the need for evidence-based \
+rehabilitation programs for musicians with hearing loss, and the need for a \
+glossary of terms to assist communication between Audiologists and musicians.\
+\"\>"}], "}"}]}]}], "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"DB\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"DB\"\>", "\[Rule]", "\<\"Embase\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"T1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"T1\"\>", 
+        "\[Rule]", "\<\"Comment on Castellucci et al. Impaired \
+Vestibulo-Ocular Reflex on Video Head Impulse Test in Superior Canal \
+Dehiscence: \[OpenCurlyDoubleQuote]Spontaneous Plugging\
+\[CloseCurlyDoubleQuote] or Endolymphatic Flow Dissipation? Audiol. Res. \
+2023, 13, 802\[Dash]820\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"A1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Ionescu, E.C.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Mustea, E.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Reynard, P.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Thai-Van, H.\"\>"}]}], "}"}]}], 
+     ",", 
+     RowBox[{"\<\"Y1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Y1\"\>", "\[Rule]", "\<\"2024\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"LA\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"LA\"\>", "\[Rule]", "\<\"English\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"JF\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"JF\"\>", "\[Rule]", "\<\"Audiology Research\"\>"}], 
+       "}"}]}], ",", 
+     RowBox[{"\<\"TY\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"TY\"\>", "\[Rule]", "\<\"JOUR\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"L2\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"L2\"\>", 
+        "\[Rule]", "\<\"http://dx.doi.org/10.3390/audiolres14050072\"\>"}], 
+       "}"}]}], ",", 
+     RowBox[{"\<\"U2\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"U2\"\>", "\[Rule]", "\<\"L2031969344\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"AB\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"AB\"\>", "\[Rule]", "\<\"no abstract available\"\>"}], 
+       "}"}]}]}], "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"DB\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"DB\"\>", "\[Rule]", "\<\"Embase\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"T1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"T1\"\>", 
+        "\[Rule]", "\<\"A longitudinal study investigating the effects of \
+noise exposure on behavioural, electrophysiological and self-report measures \
+of hearing in musicians with normal audiometric thresholds\"\>"}], "}"}]}], 
+     ",", 
+     RowBox[{"\<\"A1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Couth, S.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Prendergast, G.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Guest, H.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Munro, K.J.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Moore, D.R.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Plack, C.J.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Ginsborg, J.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Dawes, P.\"\>"}]}], "}"}]}], 
+     ",", 
+     RowBox[{"\<\"Y1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Y1\"\>", "\[Rule]", "\<\"2024\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"LA\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"LA\"\>", "\[Rule]", "\<\"English\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"JF\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"JF\"\>", "\[Rule]", "\<\"Hearing Research\"\>"}], "}"}]}],
+      ",", 
+     RowBox[{"\<\"TY\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"TY\"\>", "\[Rule]", "\<\"JOUR\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"L2\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"L2\"\>", 
+        "\[Rule]", "\<\"http://dx.doi.org/10.1016/j.heares.2024.109077\"\>"}],
+        "}"}]}], ",", 
+     RowBox[{"\<\"U2\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"U2\"\>", "\[Rule]", "\<\"L2033573385\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"AB\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"AB\"\>", 
+        "\[Rule]", "\<\"Musicians are at risk of hearing loss and tinnitus \
+due to regular exposure to high levels of noise. This level of risk may have \
+been underestimated previously since damage to the auditory system, such as \
+cochlear synaptopathy, may not be easily detectable using standard clinical \
+measures. Most previous research investigating hearing loss in musicians has \
+involved cross-sectional study designs that may capture only a snapshot of \
+hearing health in relation to noise exposure. The aim of this study was to \
+investigate the effects of cumulative noise exposure on behavioural, \
+electrophysiological, and self-report indices of hearing damage in \
+early-career musicians and non-musicians with normal hearing over a 2-year \
+period. Participants completed an annual test battery consisting of pure tone \
+audiometry, extended high-frequency hearing thresholds, distortion product \
+otoacoustic emissions (DPOAEs), speech perception in noise, auditory \
+brainstem responses, and self-report measures of tinnitus, hyperacusis, and \
+hearing in background noise. Participants also completed the Noise Exposure \
+Structured Interview to estimate cumulative noise exposure across the study \
+period. Linear mixed models assessed changes over time. The longitudinal \
+analysis comprised 64 early-career musicians (female n = 34; age range at T0 \
+= 18\[Dash]26 years) and 30 non-musicians (female n = 20; age range at T0 = \
+18\[Dash]27 years). There were few longitudinal changes as a result of \
+musicianship. Small improvements over time in some measures may be \
+attributable to a practice/test-retest effect. Some measures (e.g., DPOAE \
+indices of outer hair cell function) were associated with noise exposure at \
+each time point, but did not show a significant change over time. A small \
+proportion of participants reported a worsening of their tinnitus symptoms, \
+which participants attributed to noise exposure, or not using hearing \
+protection. Future longitudinal studies should attempt to capture the effects \
+of noise exposure over a longer period, taken at several time points, for a \
+precise measure of how hearing changes over time. Hearing conservation \
+programmes for \[OpenCurlyDoubleQuote]at risk\[CloseCurlyDoubleQuote] \
+individuals should closely monitor DPOAEs to detect early signs of \
+noise-induced hearing loss when audiometric thresholds are clinically normal.\
+\"\>"}], "}"}]}]}], "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"DB\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"DB\"\>", "\[Rule]", "\<\"Embase\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"T1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"T1\"\>", 
+        "\[Rule]", "\<\"Patient-Led Research to Develop a Training Programme \
+for Restoring Musical Joy in Cochlear Implant Recipients: A Reflexive Process \
+Evaluation\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"A1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Maas, M.J.M.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Veltman, J.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"van der Wees, P.J.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Beijk, C.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Huinck, W.J.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Groenhuis, A.Y.M.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Versnel, H.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Schuiling, G.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Hoetink, A.E.\"\>"}]}], "}"}]}],
+      ",", 
+     RowBox[{"\<\"Y1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Y1\"\>", "\[Rule]", "\<\"2024\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"LA\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"LA\"\>", "\[Rule]", "\<\"English\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"JF\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"JF\"\>", 
+        "\[Rule]", "\<\"Health expectations : an international journal of \
+public participation in health care and health policy\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"TY\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"TY\"\>", "\[Rule]", "\<\"JOUR\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"L2\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"L2\"\>", 
+        "\[Rule]", "\<\"http://dx.doi.org/10.1111/hex.14133\"\>"}], "}"}]}], 
+     ",", 
+     RowBox[{"\<\"U2\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"U2\"\>", "\[Rule]", "\<\"L644732729\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"AB\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"AB\"\>", 
+        "\[Rule]", "\<\"BACKGROUND: The role of patients in healthcare \
+research is slowly evolving, although patient roles in the research process \
+are limited. This paper reports on a patient-led research project aiming to \
+develop a musical hearing training programme for patients with a cochlear \
+implant (CI): the Musi-CI programme. A CI is an inner ear prosthesis that \
+allows people with severe hearing loss to hear. However, while speech can be \
+understood, CI users cannot fully enjoy music or feel aversion to it. The \
+Musi-CI programme aims to reduce this music aversion to ultimately improve \
+music enjoyment and social participation. The development of the Musi-CI \
+programme was supported by a consortium of professionals in CI rehabilitation \
+and research. The aim of this paper is to describe and evaluate the Musi-CI \
+programme development process and its impact on professional CI \
+rehabilitation and research. METHODS: Programme development was described \
+using a 3-layered process model of action research, distinguishing the CI \
+user process, the healthcare professional process and the research process. \
+To evaluate perceptions on the programme development process, consortium \
+partners provided written comments and participated in a reflexive evaluation \
+session that was video-recorded. Reflexive evaluation aims for collective \
+learning and strengthening collaboration among participants. Written comments \
+and video data were analysed using template analysis. RESULTS: The \
+involvement of an expert by experience was perceived as challenging but \
+rewarding for all consortium partners, opening up new perspectives on \
+CI-rehabilitation practice and research. Data analysis revealed two themes on \
+the programme development process, professional space and acknowledgement, \
+and two themes on the outcomes on CI rehabilitation and research: critical \
+reflection and paradigm shift. CONCLUSION: Experts by experience represent a \
+different knowledge domain that may contribute to change in rehabilitation \
+and research. PATIENT OR PUBLIC CONTRIBUTION: The development of the \
+programme was initiated by a professional musician and CI user who organized \
+the funding, had a leading role throughout the research process, including \
+the write-up of the results, and co-authored this paper.\"\>"}], "}"}]}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"DB\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"DB\"\>", "\[Rule]", "\<\"Embase\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"T1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"T1\"\>", 
+        "\[Rule]", "\<\"Effects of Musical Training in Music Therapy \
+Following Cochlear Implantation\[LongDash]A Case Report\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"A1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Magele, A.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Wirthner, B.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Schoerg, P.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Sprinzl, G.M.\"\>"}]}], "}"}]}],
+      ",", 
+     RowBox[{"\<\"Y1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Y1\"\>", "\[Rule]", "\<\"2024\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"LA\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"LA\"\>", "\[Rule]", "\<\"English\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"JF\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"JF\"\>", "\[Rule]", "\<\"Audiology Research\"\>"}], 
+       "}"}]}], ",", 
+     RowBox[{"\<\"TY\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"TY\"\>", "\[Rule]", "\<\"JOUR\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"L2\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"L2\"\>", 
+        "\[Rule]", "\<\"http://dx.doi.org/10.3390/audiolres14020020\"\>"}], 
+       "}"}]}], ",", 
+     RowBox[{"\<\"U2\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"U2\"\>", "\[Rule]", "\<\"L2029584511\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"AB\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"AB\"\>", 
+        "\[Rule]", "\<\"The most prevalent sensory impairment impacting the \
+elderly is age-related hearing loss (HL), which affects around 65% of \
+individuals over the age of 60 years. This bilateral, symmetrical \
+sensorineural impairment profoundly affects auditory perception, speech \
+discrimination, and the overall understanding of auditory signals. Influenced \
+by diverse factors, age-related HL can substantially influence an individual\
+\[CloseCurlyQuote]s quality of life and mental health and can lead to \
+depression. Cochlear implantation (CI) stands as a standard intervention, yet \
+despite advancements, music perception challenges persist, which can be \
+addressed with individualized music therapy. This case report describes the \
+journey of an 81-year-old musician through profound sensorineural hearing \
+loss, cochlear implantation, and rehabilitative music therapy. Auditory \
+evaluations, musical exercises, and quality of life assessments highlighted \
+meaningful improvements in music perception, auditory skills, and overall \
+satisfaction post-implantation. Music therapy facilitated emotional, \
+functional, and musical levels of engagement, notably enhancing his ability \
+to perceive melody, rhythm, and different instruments. Moreover, subjective \
+assessments and audiograms indicated marked improvements in auditory \
+differentiation, music enjoyment, and overall hearing thresholds. This \
+comprehensive approach integrating bilateral CIs and music therapy showcased \
+audiological and quality of life enhancements in an elderly individual with \
+profound hearing loss, emphasizing the efficacy of this combined treatment \
+approach.\"\>"}], "}"}]}]}], "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"DB\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"DB\"\>", "\[Rule]", "\<\"Embase\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"T1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"T1\"\>", 
+        "\[Rule]", "\<\"Does experience of music enhance olfaction: music as \
+a potential nutrition intervention?\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"A1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Ellender, G.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Moynihan, P.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Koehne, G.\"\>"}]}], "}"}]}], 
+     ",", 
+     RowBox[{"\<\"Y1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Y1\"\>", "\[Rule]", "\<\"2024\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"LA\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"LA\"\>", "\[Rule]", "\<\"English\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"JF\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"JF\"\>", 
+        "\[Rule]", "\<\"Proceedings of the Nutrition Society\"\>"}], "}"}]}], 
+     ",", 
+     RowBox[{"\<\"TY\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"TY\"\>", "\[Rule]", "\<\"JOUR\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"L2\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"L2\"\>", 
+        "\[Rule]", "\<\"http://dx.doi.org/10.1017/S002966512400096X\"\>"}], 
+       "}"}]}], ",", 
+     RowBox[{"\<\"U2\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"U2\"\>", "\[Rule]", "\<\"L644291715\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"AB\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"AB\"\>", 
+        "\[Rule]", "\<\"Olfaction, the sense of smell, is under recognised \
+and underappreciated despite being vital in wellbeing. It confers a major \
+influence on the feeding process being the major contributor of flavour and \
+has a direct involvement in the cephalic phase responses. Along with its \
+influence on food and nutrition, olfaction is directly associated with \
+cognitive function and impacts social communication and safety(1). Loss of \
+olfactory acuity, commonly occurring in aging and frailty, significantly \
+influences dietary behaviour and food selection(2). Unlike the senses of \
+vision and audition, interventions are lacking. We propose in a \
+proof-of-concept that cross modal integration of olfaction and audition could \
+inhibit olfactory decline in lifelong musicians through encouraging \
+neuroplasticity of the olfactory brain centres. Ethical approval was obtained \
+from The University of Adelaide Human Research Ethics Committee. Male \
+musicians with a lifetime experience of music (ME) and na\[IDoubleDot]ve \
+non-musicians (NM) aged 55 years and over were recruited through music \
+organisations and controls through the Australian Men's Shed network. The \
+initial target sample size was twenty per cohort. Olfactory acuity was \
+assessed with Sniffin' sticks\[RegisteredTrademark] (Odofin, Groningen, The \
+Netherlands), a well validated system of a battery of three tests regimes. \
+Sniffin' sticks represent 'felt tipped pens' impregnated with odourants \
+presented 20mm below the nose of participants who were then prompted to \
+'sniff'. Assays determined participant 'Threshold', 'Discrimination' and \
+'Identification' of test odours (3). Measurement of Threshold and \
+Discrimination were undertaken in triplet fifteen seconds apart with eyes \
+closed; measurement of Threshold being conducted in an ascending 'staircase' \
+to detect lowest odour concentration detectable, whereas measurement of \
+Discrimination selected the 'odd-manout' of a triplet comprising two \
+identical and one different odour. Measurement of Identification, with eyes \
+open, selected the odour of a single 'pen' from a prompt list of four. All \
+tests demanded selection. Each of the test batteries were scored out of \
+sixteen along with total aggregate of Threshold, Discrimination, and \
+Identification (TDI). Twenty-six participants completed the study (18 ME and \
+8 NM); numbers were limited owing to active COVID-19. Mean and standard \
+deviations (SD) of Threshold, Discrimination, Identification and TDI were \
+derived and compared between groups using 't'-test. For ME, Threshold, \
+Discrimination, and Identification values were 6.2 (SD \[PlusMinus] 3.7), \
+10.6 (SD \[PlusMinus] 1.9), and 12.9 (SD \[PlusMinus] 1.6). The respective \
+values for NM were 5.0 (SD \[PlusMinus] 2.3), 8.8(SD \[PlusMinus] 2.9), and \
+10.8 (SD \[PlusMinus] 2.5). The ME group showed a significantly higher \
+Discrimination (p = 0.164). Significant differences were not seen for \
+Threshold, Identification, and overall TDI scores, however the small sample \
+size may have accounted for this. Based on this proof-of-concept, further \
+exploration of music is warranted as an intervention to enhance olfactory \
+acuity to potentially improve the intake of food and nutrition, and enrich \
+pleasure of eating and drinking, and quality of life.\"\>"}], "}"}]}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"DB\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"DB\"\>", "\[Rule]", "\<\"Embase\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"T1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"T1\"\>", 
+        "\[Rule]", "\<\"Right MCA Stroke Presenting with Receptive \
+Amusia\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"A1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Kumar, S.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Kelly, S.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Rethana, M.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Rostanski, S.\"\>"}]}], "}"}]}],
+      ",", 
+     RowBox[{"\<\"Y1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Y1\"\>", "\[Rule]", "\<\"2024\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"LA\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"LA\"\>", "\[Rule]", "\<\"English\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"JF\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"JF\"\>", "\[Rule]", "\<\"Neurology\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"TY\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"TY\"\>", "\[Rule]", "\<\"JOUR\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"L2\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"L2\"\>", 
+        "\[Rule]", "\<\"http://dx.doi.org/10.1212/WNL.0000000000205856\"\>"}],
+        "}"}]}], ",", 
+     RowBox[{"\<\"U2\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"U2\"\>", "\[Rule]", "\<\"L645418049\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"AB\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"AB\"\>", 
+        "\[Rule]", "\<\"Objective: To review a rarely identified acute \
+presentation of right middle cerebral artery (MCA) ischemic stroke causing \
+receptive amusia. Background: Historically, receptive amusia refers to a \
+pathologic inability to distinguish melodies, timbre, and pitch, which may \
+result in ensembles of acoustic sounds being perceived as discordant. Though \
+rarely appreciated in clinical evaluation of stroke patients, voxel-based \
+symptom lesion mapping (VSLM) studies show that acquired amusia in stroke is \
+specifically associated with infarcts in the superior temporal gyrus, \
+Heschl's gyrus, insula, and striatum of the right hemisphere. Design/Methods: \
+Case report Results: A 62-year-old male with right bundle branch block and \
+moderate mitral valve regurgitation presented to the emergency department \
+with a vague transient binocular visual disturbance, followed by two days of \
+difficulty with the auditory processing of music, first noticed while playing \
+the drums. There was no difficulty with physically playing the drums, \
+coordinating his movements, or reading sheet music, however he could not \
+process harmonies or stay synchronized with his bandmates. No deficits on \
+neurologic exam. MRI brain without contrast showed a late acute right \
+inferior division MCA territory infarct involving the parietal, temporal, and \
+posterior insular regions. Vessel imaging showed no significant stenosis or \
+large vessel occlusion. Further workup revealed a large patent foramen ovale \
+(PFO) and an episode of atrial ibrillation. One month later, the patient \
+still had difficulty processing music and also endorsed that environmental \
+sounds were bothersome to him. Conclusions: We report a case of a musician \
+presenting with isolated receptive amusia in the setting of an acute embolic \
+right MCA stroke. We suggest that this subtle sign is under-recognized as a \
+possible presentation of cortical infarct in this territory, especially in \
+non-musically inclined patients, and careful assessment for amusia could \
+facilitate the appropriate diagnosis and management of stroke patients with \
+infarcts in the right hemisphere.\"\>"}], "}"}]}]}], "\[RightAssociation]"}], 
+   ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"DB\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"DB\"\>", "\[Rule]", "\<\"Embase\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"T1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"T1\"\>", 
+        "\[Rule]", "\<\"Exploring the role of singing, semantics, and amusia \
+screening in speech-in-noise perception in musicians and non-musicians\"\>"}],
+        "}"}]}], ",", 
+     RowBox[{"\<\"A1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Loutrari, A.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Alqadi, A.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Jiang, C.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Liu, F.\"\>"}]}], "}"}]}], ",", 
+     RowBox[{"\<\"Y1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Y1\"\>", "\[Rule]", "\<\"2024\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"LA\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"LA\"\>", "\[Rule]", "\<\"English\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"JF\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"JF\"\>", "\[Rule]", "\<\"Cognitive Processing\"\>"}], 
+       "}"}]}], ",", 
+     RowBox[{"\<\"TY\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"TY\"\>", "\[Rule]", "\<\"JOUR\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"L2\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"L2\"\>", 
+        "\[Rule]", "\<\"http://dx.doi.org/10.1007/s10339-023-01165-x\"\>"}], 
+       "}"}]}], ",", 
+     RowBox[{"\<\"U2\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"U2\"\>", "\[Rule]", "\<\"L2026203573\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"AB\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"AB\"\>", 
+        "\[Rule]", "\<\"Sentence repetition has been the focus of extensive \
+psycholinguistic research. The notion that music training can bolster speech \
+perception in adverse auditory conditions has been met with mixed results. In \
+this work, we sought to gauge the effect of babble noise on immediate \
+repetition of spoken and sung phrases of varying semantic content \
+(expository, narrative, and anomalous), initially in 100 English-speaking \
+monolinguals with and without music training. The two cohorts also completed \
+some non-musical cognitive tests and the Montreal Battery of Evaluation of \
+Amusia (MBEA). When disregarding MBEA results, musicians were found to \
+significantly outperform non-musicians in terms of overall repetition \
+accuracy. Sung targets were recalled significantly better than spoken ones \
+across groups in the presence of babble noise. Sung expository targets were \
+recalled better than spoken expository ones, and semantically anomalous \
+content was recalled more poorly in noise. Rerunning the analysis after \
+eliminating thirteen participants who were diagnosed with amusia showed no \
+significant group differences. This suggests that the notion of enhanced \
+speech perception\[LongDash]in noise or otherwise\[LongDash]in musicians \
+needs to be evaluated with caution. Musicianship aside, this study showed for \
+the first time that sung targets presented in babble noise seem to be \
+recalled better than spoken ones. We discuss the present design and the \
+methodological approach of screening for amusia as factors which may \
+partially account for some of the mixed results in the field.\"\>"}], 
+       "}"}]}]}], "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"DB\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"DB\"\>", "\[Rule]", "\<\"Embase\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"T1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"T1\"\>", 
+        "\[Rule]", "\<\"Heightened OAEs in young adult musicians: Influence \
+of current noise exposure and training recency\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"A1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Main, M.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Skoe, E.\"\>"}]}], "}"}]}], ",", 
+     RowBox[{"\<\"Y1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Y1\"\>", "\[Rule]", "\<\"2024\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"LA\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"LA\"\>", "\[Rule]", "\<\"English\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"JF\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"JF\"\>", "\[Rule]", "\<\"Hearing Research\"\>"}], "}"}]}],
+      ",", 
+     RowBox[{"\<\"TY\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"TY\"\>", "\[Rule]", "\<\"JOUR\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"L2\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"L2\"\>", 
+        "\[Rule]", "\<\"http://dx.doi.org/10.1016/j.heares.2023.108925\"\>"}],
+        "}"}]}], ",", 
+     RowBox[{"\<\"U2\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"U2\"\>", "\[Rule]", "\<\"L2029258981\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"AB\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"AB\"\>", 
+        "\[Rule]", "\<\"Otoacoustic emissions (OAEs) are a non-invasive \
+metric of cochlear function. Studies of OAEs in musicians have yielded mixed \
+results, ranging from evidence of diminished OAEs in \
+musicians\[LongDash]suggesting noise-induced hearing loss\[LongDash]to no \
+difference when compared to non-musicians, or even a trend for stronger OAEs \
+in musicians. The goal of this study was to use a large sample of college \
+students with normal hearing (n = 160) to compare OAE SNRs in musicians and \
+non-musicians and to explore potential effects of training recency and noise \
+exposure on OAEs in these cohorts. The musician cohort included both active \
+musicians (who at the time of enrollment practiced at least weekly) and past \
+musicians (who had at least 6 years of training). All participants completed \
+a questionnaire about recent noise exposure (previous 12 months), and a \
+subset of participants (71 musicians and 15 non-musicians) wore a personal \
+noise dosimeter for one week to obtain a more nuanced and objective measure \
+of exposure to assess how different exposure levels may affect OAEs before \
+the emergence of a clinically significant hearing loss. OAEs were tested \
+using both transient-evoked OAEs (TEOAEs) and distortion-product OAEs \
+(DPOAEs). As predicted from the literature, musicians experienced \
+significantly higher noise levels than non-musicians based on both subjective \
+(self-reported) and objective measures. Yet we found stronger TEOAEs and \
+DPOAEs in musicians compared to non-musicians in the \[Tilde]1\[Dash]5 kHz \
+range. Comparisons between past and active musicians suggest that enhanced \
+cochlear function in young adult musicians does not require active, ongoing \
+musical practice. Although there were no significant relations between OAEs \
+and noise exposure as measured by dosimetry or questionnaire, active \
+musicians had weaker DPOAEs than past musicians when the entire DPOAE \
+frequency range was considered (up to \[Tilde]16 kHz), consistent with a \
+subclinical noise-induced hearing loss that only becomes apparent when active \
+musicians are contrasted with a cohort of individuals with comparable \
+training but without the ongoing risks of noise exposure. Our findings \
+suggest, therefore, that separate norms should be developed for musicians for \
+earlier detection of incipient hearing loss. Potential explanations for \
+enhanced cochlear function in musicians include pre-existing (inborn or \
+demographic) differences, training-related enhancements of cochlear function \
+(e.g., upregulation of prestin, stronger efferent feedback mechanisms), or a \
+combination thereof. Further studies are needed to determine if OAE \
+enhancements offer musicians protection against damage caused by noise \
+exposure.\"\>"}], "}"}]}]}], "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"DB\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"DB\"\>", "\[Rule]", "\<\"Embase\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"T1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"T1\"\>", 
+        "\[Rule]", "\<\"Tribute to the Flute: A Literature Review of \
+Playing-Related Problems in Flautists\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"A1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Winkler, S.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Lohs, A.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Caffier, P.P.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Zinn-Kirchner, Z.M.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Alotaibi, M.\"\>"}]}], "}"}]}], 
+     ",", 
+     RowBox[{"\<\"Y1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Y1\"\>", "\[Rule]", "\<\"2024\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"LA\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"LA\"\>", "\[Rule]", "\<\"English\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"JF\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"JF\"\>", 
+        "\[Rule]", "\<\"Journal of Multidisciplinary Healthcare\"\>"}], 
+       "}"}]}], ",", 
+     RowBox[{"\<\"TY\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"TY\"\>", "\[Rule]", "\<\"JOUR\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"L2\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"L2\"\>", 
+        "\[Rule]", "\<\"http://dx.doi.org/10.2147/JMDH.S448301\"\>"}], 
+       "}"}]}], ",", 
+     RowBox[{"\<\"U2\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"U2\"\>", "\[Rule]", "\<\"L2028095162\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"AB\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"AB\"\>", 
+        "\[Rule]", "\<\"Playing musical instruments places unusually high \
+demands on specific parts of the human body. Relative to the instruments they \
+play, musicians may experience instrument-related symptoms, as recorded in \
+flute players. The objective was to provide an overview of the study findings \
+addressing medical problems in flautists to better understand their \
+complaints and pave the way for more personalized healthcare. Several \
+electronic databases (PubMed, Embase, Cochrane Library) were systematically \
+searched in July 2022. Furthermore, the references of all included articles \
+were reviewed for additionally relevant sources. The resulting set of studies \
+was summarized in a table, with quality assessment according to the SIGN \
+grading system. From an initial 433 hits, the search yielded 95 studies with \
+a total of 32,600 musicians, including at least 2134 flautists. Among the \
+latter, evidence was found for musculoskeletal, neurological, dermatological, \
+temporomandibular, and hearing complaints, overuse and reflux symptoms, \
+velopharyngeal insufficiency, as well as upper and lower airway impairment. \
+Other specialists may be consulted equally often and should be sensitive to \
+the particular medical problems in flautists. Future studies would ideally \
+contain specific outcome analyses on an international scale and consider \
+flautists as an individual subgroup within a larger number of total \
+participants.\"\>"}], "}"}]}]}], "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"DB\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"DB\"\>", "\[Rule]", "\<\"Embase\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"T1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"T1\"\>", 
+        "\[Rule]", "\<\"Acquired amusia after a right middle cerebral artery \
+infarction\[Dash]a case study\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"A1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Sun, Y.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Oxenham, V.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Lo, C.Y.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Walsh, J.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Martens, W.L.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Cremer, P.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Thompson, W.F.\"\>"}]}], 
+       "}"}]}], ",", 
+     RowBox[{"\<\"Y1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Y1\"\>", "\[Rule]", "\<\"2024\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"LA\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"LA\"\>", "\[Rule]", "\<\"English\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"JF\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"JF\"\>", "\[Rule]", "\<\"Neurocase\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"TY\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"TY\"\>", "\[Rule]", "\<\"JOUR\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"L2\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"L2\"\>", 
+        "\[Rule]", \
+"\<\"http://dx.doi.org/10.1080/13554794.2024.2350104\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"U2\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"U2\"\>", "\[Rule]", "\<\"L2029823138\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"AB\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"AB\"\>", 
+        "\[Rule]", "\<\"A 62-year-old \
+musician\[LongDash]MM\[LongDash]developed amusia after a right \
+middle-cerebral-artery infarction. Initially, MM showed melodic deficits \
+while discriminating pitch-related differences in melodies, musical memory \
+problems, and impaired sensitivity to tonal structures, but normal pitch \
+discrimination and spectral resolution thresholds, and normal cognitive and \
+language abilities. His rhythmic processing was intact when pitch variations \
+were removed. After 3 months, MM showed a large improvement in his \
+sensitivity to tonality, but persistent melodic deficits and a decline in \
+perceiving the metric structure of rhythmic sequences. We also found visual \
+cues aided melodic processing, which is novel and beneficial for future \
+rehabilitation practice.\"\>"}], "}"}]}]}], "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"DB\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"DB\"\>", "\[Rule]", "\<\"Embase\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"T1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"T1\"\>", 
+        "\[Rule]", "\<\"A professional musician with progressive visuospatial \
+concerns: a case study and review of musical alexia\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"A1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Ficek-Tani, B.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Tun, S.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Frolov, A.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Sharp, E.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Fredericks, C.A.\"\>"}]}], 
+       "}"}]}], ",", 
+     RowBox[{"\<\"Y1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Y1\"\>", "\[Rule]", "\<\"2024\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"LA\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"LA\"\>", "\[Rule]", "\<\"English\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"JF\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"JF\"\>", "\[Rule]", "\<\"Neurocase\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"TY\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"TY\"\>", "\[Rule]", "\<\"JOUR\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"L2\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"L2\"\>", 
+        "\[Rule]", \
+"\<\"http://dx.doi.org/10.1080/13554794.2024.2438413\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"U2\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"U2\"\>", "\[Rule]", "\<\"L2032558095\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"AB\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"AB\"\>", 
+        "\[Rule]", "\<\"This case report presents the story of Mr. S, a \
+professional orchestral musician with declining musical sight-reading \
+ability, followed by progressive visuospatial and language deficits. Our \
+novel musical assessment battery revealed deficits in music-reading (musical \
+alexia) and music-writing (musical agraphia), with spared auditory perception \
+and expression. Taken with neuropsychological testing, clinical history, and \
+imaging, we conclude that his symptoms evolved from musical alexia to a \
+multidomain, neurodegenerative process centered in the dominant inferior \
+parietal lobe and temporoparietal junction. We suspect a primary TDP-opathy \
+with comorbid preclinical Alzheimer\[CloseCurlyQuote]s disease. Mr. S\
+\[CloseCurlyQuote]s case highlights musical symptoms as meaningful, early \
+indicators of neurodegeneration.\"\>"}], "}"}]}]}], "\[RightAssociation]"}], 
+   ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"DB\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"DB\"\>", "\[Rule]", "\<\"Embase\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"T1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"T1\"\>", 
+        "\[Rule]", "\<\"Knowledge, Attitude and Practices (KAP) regarding \
+hearing health and noise-induced hearing loss among folk/light music \
+professionals from Chennai\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"A1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Leelavathi, T.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Roopa, N.\"\>"}]}], "}"}]}], 
+     ",", 
+     RowBox[{"\<\"Y1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Y1\"\>", "\[Rule]", "\<\"2024\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"LA\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"LA\"\>", "\[Rule]", "\<\"English\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"JF\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"JF\"\>", 
+        "\[Rule]", "\<\"International Journal of Occupational Safety and \
+Health\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"TY\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"TY\"\>", "\[Rule]", "\<\"JOUR\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"L2\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"L2\"\>", 
+        "\[Rule]", "\<\"http://dx.doi.org/10.3126/ijosh.v14i3.44651\"\>"}], 
+       "}"}]}], ",", 
+     RowBox[{"\<\"U2\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"U2\"\>", "\[Rule]", "\<\"L2033109139\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"AB\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"AB\"\>", 
+        "\[Rule]", "\<\"Introduction: Musicians are exposed to music at high \
+intensities and are at risk for developing noise-induced hearing loss (NIHL). \
+Since hearing is so important to their career, they deserve special \
+consideration. To avoid the deleterious effects of loud music, professionals \
+should be sensitized to noise exposure and the use of strategies to prevent \
+NIHL. The current study aimed to assess the knowledge and attitude towards \
+noise-induced hearing disorders and hearing-conservative practices among \
+professional musicians. Methods: A Knowledge, Attitude and Practice (KAP) \
+questionnaire was developed and administered among 136 professional musicians \
+belonging to the folk/ light music genre in Chennai between March & April \
+2021. The participants were 115 males and 21 females, ranging in age from 18 \
+to 75 years, with a mean age of 29 \[PlusMinus]11 years. Results: 80% of \
+musicians were aware of the nature and cause of NIHL, but knowledge of NIHL \
+prevention and treatment was limited to a few (16%). The majority (84%) had a \
+misconception that using cotton or fingers to plug the ears is a protective \
+strategy against NIHL. Only 15% of participants reported having used Ear \
+Protective Devices (EPDs). Conclusion: Although musicians are aware of the \
+risks of exposure to loud noise, they seldom use hearing protection. It is, \
+therefore, vital to provide crucial information regarding NIHL and its \
+prevention and promote musicians for better hearing preservation practices.\"\
+\>"}], "}"}]}]}], "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"DB\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"DB\"\>", "\[Rule]", "\<\"Embase\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"T1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"T1\"\>", 
+        "\[Rule]", "\<\"A Pilot Dashboard System to Track Cumulative Exposure \
+to Sound Levels during Music Instruction: A Technical Report\"\>"}], "}"}]}], 
+     ",", 
+     RowBox[{"\<\"A1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Goel, A.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Joshi, E.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Kwee-Bintoro, T.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Gopal, K.V.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Chesky, K.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Champlin, S.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Albert, M.V.\"\>"}]}], "}"}]}], 
+     ",", 
+     RowBox[{"\<\"Y1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Y1\"\>", "\[Rule]", "\<\"2024\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"LA\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"LA\"\>", "\[Rule]", "\<\"English\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"JF\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"JF\"\>", 
+        "\[Rule]", "\<\"Journal of the American Academy of Audiology\"\>"}], 
+       "}"}]}], ",", 
+     RowBox[{"\<\"TY\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"TY\"\>", "\[Rule]", "\<\"JOUR\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"L2\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"L2\"\>", 
+        "\[Rule]", "\<\"http://dx.doi.org/10.1055/s-0044-1791210\"\>"}], 
+       "}"}]}], ",", 
+     RowBox[{"\<\"U2\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"U2\"\>", "\[Rule]", "\<\"L2036562201\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"AB\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"AB\"\>", 
+        "\[Rule]", "\<\"Background Music-induced hearing loss (MIHL) is a \
+critical public health issue. During music instruction, students and teachers \
+are at risk of developing hearing loss due to exposure to loud and unsafe \
+sound levels that can exceed 100 dBA. Prevention of MIHL in music students \
+must be a desired action of all music educators. Purpose To promote \
+deliberate changes in music instruction and encourage more moderate sound \
+creation and exposure during music education, it is essential to equip the \
+instructors with live dynamic tools to monitor the overall sound intensities \
+during music instruction. Equally important data to convey to the instructors \
+are information regarding the intensity and duration of sounds at specific \
+frequency regions in the music they are generating. Unfortunately, there are \
+no feasible techniques to track cumulative live music exposures at various \
+frequencies nor are there any guidelines for safe music exposure. Research \
+Design We created a visually appealing, user-friendly dashboard prototype \
+system to display the accumulated time and intensity of sound exposure during \
+live classes/rehearsals categorized into three frequency ranges. These \
+visuals can be easily understood at a glance allowing musicians and \
+instructors to make informed decisions about how to play music safely. \
+Experimental Approach and Results The dashboard included a collection of \
+circular dial graphs that displayed in real time the accumulated sound \
+exposure in the instructor\[CloseCurlyQuote]s selected frequency range and \
+showed the percentage of the maximum daily sound exposure based on the \
+National Institute for Occupational Safety and Health Standards (NIOSH, \
+1998). Although NIOSH standards are not widely applied for music exposure, we \
+propose that these standards can be used to provide initial guidelines to \
+develop critical levels of music exposure. Additionally, the dashboard \
+included a color-coded equalizer that displayed the instantaneous frequency \
+distribution of sounds to indicate if sound levels at specific frequencies \
+were too high even for short-term exposure. Conclusion Less expensive than \
+existing technology and more convenient to use, this dashboard will enable \
+music instructors to make informed decisions on how to best adapt their \
+teaching approaches to protect the hearing health of their students.\"\>"}], 
+       "}"}]}]}], "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"DB\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"DB\"\>", "\[Rule]", "\<\"Embase\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"T1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"T1\"\>", 
+        "\[Rule]", "\<\"Development of Novel Musical Stimuli to Investigate \
+the Perception of Musical Emotions in Individuals With Hearing Loss\"\>"}], 
+       "}"}]}], ",", 
+     RowBox[{"\<\"A1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Lee, J.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Han, J.-H.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Lee, H.-J.\"\>"}]}], "}"}]}], 
+     ",", 
+     RowBox[{"\<\"Y1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Y1\"\>", "\[Rule]", "\<\"2023\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"LA\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"LA\"\>", "\[Rule]", "\<\"English\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"JF\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"JF\"\>", 
+        "\[Rule]", "\<\"Journal of Korean medical science\"\>"}], "}"}]}], 
+     ",", 
+     RowBox[{"\<\"TY\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"TY\"\>", "\[Rule]", "\<\"JOUR\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"L2\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"L2\"\>", 
+        "\[Rule]", "\<\"http://dx.doi.org/10.3346/jkms.2023.38.e82\"\>"}], 
+       "}"}]}], ",", 
+     RowBox[{"\<\"U2\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"U2\"\>", "\[Rule]", "\<\"L640883113\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"AB\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"AB\"\>", 
+        "\[Rule]", "\<\"BACKGROUND: Many studies have examined the perception \
+of musical emotion using excerpts from familiar music that includes highly \
+expressed emotions to classify emotional choices. However, using familiar \
+music to study musical emotions in people with acquired hearing loss could \
+produce ambiguous results as to whether the emotional perception is due to \
+previous experiences or listening to the current musical stimuli. To overcome \
+this limitation, we developed new musical stimuli to study emotional \
+perception without the effects of episodic memory. METHODS: A musician was \
+instructed to compose five melodies with evenly distributed pitches around 1 \
+kHz. The melodies were created to express the emotions of happy, sad, angry, \
+tender, and neutral. To evaluate whether these melodies expressed the \
+intended emotions, two methods were applied. First, we classified the \
+expressed emotions of melodies with selected musical features from 60 \
+features using genetic algorithm-based k-nearest neighbors. Second, \
+forty-four people with normal hearing participated in an online survey \
+regarding the emotional perception of music based on dimensional and discrete \
+approaches to evaluate the musical stimuli set. RESULTS: Twenty-four selected \
+musical features produced classification for intended emotions with an \
+accuracy of 76%. The results of the online survey in the normal hearing (NH) \
+group showed that the intended emotions were selected significantly more \
+often than the others. K-means clustering analysis revealed that melodies \
+with arousal and valence ratings corresponded to representative quadrants of \
+interest. Additionally, the applicability of the stimuli was tested in 4 \
+individuals with high-frequency hearing loss. CONCLUSION: By applying the \
+individuals with NH, the musical stimuli were shown to classify emotions with \
+high accuracy, as expressed. These results confirm that the set of musical \
+stimuli can be used to study the perceived emotion in music, demonstrating \
+the validity of the musical stimuli, independent of innate musical bias such \
+as due to episodic memory. Furthermore, musical stimuli could be helpful for \
+further studying perceived musical emotion in people with hearing loss \
+because of the controlled pitch for each emotion.\"\>"}], "}"}]}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"DB\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"DB\"\>", "\[Rule]", "\<\"Embase\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"T1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"T1\"\>", 
+        "\[Rule]", "\<\"Music as a unique source of noise-induced hearing \
+loss\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"A1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Reynolds, A.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Bielefeld, E.C.\"\>"}]}], 
+       "}"}]}], ",", 
+     RowBox[{"\<\"Y1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Y1\"\>", "\[Rule]", "\<\"2023\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"LA\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"LA\"\>", "\[Rule]", "\<\"English\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"JF\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"JF\"\>", "\[Rule]", "\<\"Hearing Research\"\>"}], "}"}]}],
+      ",", 
+     RowBox[{"\<\"TY\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"TY\"\>", "\[Rule]", "\<\"JOUR\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"L2\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"L2\"\>", 
+        "\[Rule]", "\<\"http://dx.doi.org/10.1016/j.heares.2023.108706\"\>"}],
+        "}"}]}], ",", 
+     RowBox[{"\<\"U2\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"U2\"\>", "\[Rule]", "\<\"L2022445357\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"AB\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"AB\"\>", 
+        "\[Rule]", "\<\"Music is among the most important artistic, cultural, \
+and entertainment modalities in any society. With the proliferation of music \
+genres and the technological advances that allow people to consume music in \
+any location and at any time, music over-exposure has become a significant \
+public health issue. Music-induced hearing loss has a great deal in common \
+with noise-induced hearing loss. However, there are important differences \
+that make music a unique insult to the auditory system and a unique threat to \
+public health. Its unique properties also make it a potentially valuable \
+asset in sound conditioning paradigms. This review discusses hearing loss \
+from noise and music, comparing and contrasting the two. Recent research on \
+music-induced hearing loss is reviewed, followed by discussion of the \
+differences in music-induced hearing loss between performers and consumers. \
+The review concludes with a discussion of the potential of music as a sound \
+conditioning stimulus to protect against acquired hearing loss.\"\>"}], 
+       "}"}]}]}], "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"DB\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"DB\"\>", "\[Rule]", "\<\"Embase\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"T1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"T1\"\>", 
+        "\[Rule]", "\<\"Prevalence of hearing protection use and subjective \
+auditory symptoms among Spanish classical orchestral musicians\"\>"}], 
+       "}"}]}], ",", 
+     RowBox[{"\<\"A1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Alcal\[AAcute] Rueda, I.\"\>"}],
+         ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Fajardo Ramos, A.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", 
+         "\[Rule]", "\<\"Fern\[AAcute]ndez de las Heras, J.A.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Mu\[NTilde]oz Salido, P.\"\>"}],
+         ",", 
+        RowBox[{"\<\"A1\"\>", 
+         "\[Rule]", "\<\"Villacampa Aub\[AAcute], J.M.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Cubillos del Toro, L.\"\>"}], 
+        ",", 
+        RowBox[{"\<\"A1\"\>", 
+         "\[Rule]", "\<\"S\[AAcute]nchez Barrueco, \[CapitalAAcute].\"\>"}], 
+        ",", 
+        RowBox[{"\<\"A1\"\>", 
+         "\[Rule]", "\<\"Gonz\[AAcute]lez Gal\[AAcute]n, F.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", 
+         "\[Rule]", "\<\"Cenjor Espa\[NTilde]ol, C.\"\>"}]}], "}"}]}], ",", 
+     RowBox[{"\<\"Y1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Y1\"\>", "\[Rule]", "\<\"2023\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"LA\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"\<\"LA\"\>", "\[Rule]", "\<\"English\"\>"}], ",", 
+        RowBox[{"\<\"LA\"\>", "\[Rule]", "\<\"Spanish\"\>"}]}], "}"}]}], ",", 
+     RowBox[{"\<\"JF\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"JF\"\>", 
+        "\[Rule]", "\<\"Acta Otorrinolaringologica Espanola\"\>"}], "}"}]}], 
+     ",", 
+     RowBox[{"\<\"TY\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"TY\"\>", "\[Rule]", "\<\"JOUR\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"L2\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"L2\"\>", 
+        "\[Rule]", "\<\"http://dx.doi.org/10.1016/j.otorri.2021.10.002\"\>"}],
+        "}"}]}], ",", 
+     RowBox[{"\<\"U2\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"U2\"\>", "\[Rule]", "\<\"L2017847189\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"AB\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"AB\"\>", 
+        "\[Rule]", "\<\"Introduction: Sensorineural hearing loss caused by \
+exposure to noise is one of the most frequent causes of deafness. \
+Professional musicians have significant occupational exposure to high levels \
+of noise. Use of hearing protection among musicians could substantially \
+prevent hearing damage, though the rate of use is quite low. Methods and \
+material: A questionnaire on the use of protective hearing devices, hearing \
+care, and subjective judgments of hearing difficulties was completed by a \
+group of classical musicians from Spain. We analysed the frequency of device \
+use by instrument based on contingency tables analysed by \[Chi]2 tests. \
+Results: One hundred and ninety-four Spanish classical orchestral musicians \
+voluntarily completed the questionnaire. The percentage of musicians who \
+reported using hearing protection in our survey was very low and varied with \
+the type of instrument played. However, we found a high prevalence of \
+subjective auditory disorders within this group. Conclusion: Few Spanish \
+musicians use hearing protection. Training on hearing-loss prevention in this \
+field and better protective devices could increase device use and improve the \
+auditory health of this group.\"\>"}], "}"}]}]}], "\[RightAssociation]"}], 
+   ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"DB\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"DB\"\>", "\[Rule]", "\<\"Embase\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"T1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"T1\"\>", 
+        "\[Rule]", "\<\"Auditory Electrophysiological and Perceptual Measures \
+in Student Musicians with High Sound Exposure\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"A1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Washnik, N.J.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Bhatt, I.S.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Sergeev, A.V.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Prabhu, P.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Suresh, C.\"\>"}]}], "}"}]}], 
+     ",", 
+     RowBox[{"\<\"Y1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Y1\"\>", "\[Rule]", "\<\"2023\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"LA\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"LA\"\>", "\[Rule]", "\<\"English\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"JF\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"JF\"\>", "\[Rule]", "\<\"Diagnostics\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"TY\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"TY\"\>", "\[Rule]", "\<\"JOUR\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"L2\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"L2\"\>", 
+        "\[Rule]", "\<\"http://dx.doi.org/10.3390/diagnostics13050934\"\>"}], 
+       "}"}]}], ",", 
+     RowBox[{"\<\"U2\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"U2\"\>", "\[Rule]", "\<\"L2022027130\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"AB\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"AB\"\>", 
+        "\[Rule]", "\<\"This study aimed to determine (a) the influence of \
+noise exposure background (NEB) on the peripheral and central auditory system \
+functioning and (b) the influence of NEB on speech recognition in noise \
+abilities in student musicians. Twenty non-musician students with \
+self-reported low NEB and 18 student musicians with self-reported high NEB \
+completed a battery of tests that consisted of physiological measures, \
+including auditory brainstem responses (ABRs) at three different stimulus \
+rates (11.3 Hz, 51.3 Hz, and 81.3 Hz), and P300, and behavioral measures \
+including conventional and extended high-frequency audiometry, consonant\
+\[Dash]vowel nucleus\[Dash]consonant (CNC) word test and AzBio sentence test \
+for assessing speech perception in noise abilities at \[Minus]9, \[Minus]6, \
+\[Minus]3, 0, and +3 dB signal to noise ratios (SNRs). The NEB was negatively \
+associated with performance on the CNC test at all five SNRs. A negative \
+association was found between NEB and performance on the AzBio test at 0 dB \
+SNR. No effect of NEB was found on the amplitude and latency of P300 and the \
+ABR wave I amplitude. More investigations of larger datasets with different \
+NEB and longitudinal measurements are needed to investigate the influence of \
+NEB on word recognition in noise and to understand the specific cognitive \
+processes contributing to the impact of NEB on word recognition in \
+noise.\"\>"}], "}"}]}]}], "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"DB\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"DB\"\>", "\[Rule]", "\<\"Embase\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"T1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"T1\"\>", 
+        "\[Rule]", "\<\"Differential effects of ageing on the neural \
+processing of speech and singing production\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"A1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Moisseinen, N.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", 
+         "\[Rule]", "\<\"S\[ADoubleDot]rk\[ADoubleDot]m\[ODoubleDot], \
+T.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", 
+         "\[Rule]", "\<\"Kauram\[ADoubleDot]ki, J.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Kleber, B.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Sihvonen, A.J.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", 
+         "\[Rule]", "\<\"Mart\[IAcute]nez-Molina, N.\"\>"}]}], "}"}]}], ",", 
+     RowBox[{"\<\"Y1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Y1\"\>", "\[Rule]", "\<\"2023\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"LA\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"LA\"\>", "\[Rule]", "\<\"English\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"JF\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"JF\"\>", 
+        "\[Rule]", "\<\"Frontiers in Aging Neuroscience\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"TY\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"TY\"\>", "\[Rule]", "\<\"JOUR\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"L2\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"L2\"\>", 
+        "\[Rule]", "\<\"http://dx.doi.org/10.3389/fnagi.2023.1236971\"\>"}], 
+       "}"}]}], ",", 
+     RowBox[{"\<\"U2\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"U2\"\>", "\[Rule]", "\<\"L2025457519\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"AB\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"AB\"\>", 
+        "\[Rule]", "\<\"Background: Understanding healthy brain ageing has \
+become vital as populations are ageing rapidly and age-related brain diseases \
+are becoming more common. In normal brain ageing, speech processing undergoes \
+functional reorganisation involving reductions of hemispheric asymmetry and \
+overactivation in the prefrontal regions. However, little is known about how \
+these changes generalise to other vocal production, such as singing, and how \
+they are affected by associated cognitive demands. Methods: The present \
+cross-sectional fMRI study systematically maps the neural correlates of vocal \
+production across adulthood (N=100, age 21\[Dash]88 years) using a balanced \
+2x3 design where tasks varied in modality (speech: proverbs / singing: song \
+phrases) and cognitive demand (repetition / completion from memory / \
+improvisation). Results: In speech production, ageing was associated with \
+decreased left pre- and postcentral activation across tasks and increased \
+bilateral angular and right inferior temporal and fusiform activation in the \
+improvisation task. In singing production, ageing was associated with \
+increased activation in medial and bilateral prefrontal and parietal regions \
+in the completion task, whereas other tasks showed no ageing effects. Direct \
+comparisons between the modalities showed larger age-related activation \
+changes in speech than singing across tasks, including a larger left-to-right \
+shift in lateral prefrontal regions in the improvisation task. Conclusion: \
+The present results suggest that the brains\[CloseCurlyQuote] singing network \
+undergoes differential functional reorganisation in normal ageing compared to \
+the speech network, particularly during a task with high executive demand. \
+These findings are relevant for understanding the effects of ageing on vocal \
+production as well as how singing can support communication in healthy ageing \
+and neurological rehabilitation.\"\>"}], "}"}]}]}], "\[RightAssociation]"}], 
+   ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"DB\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"DB\"\>", "\[Rule]", "\<\"Embase\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"T1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"T1\"\>", 
+        "\[Rule]", "\<\"Injuries and Factors Associated with Injuries Among \
+U.S. Army Band Musicians\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"A1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Schuh-Renner, A.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Grier, T.L.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Rappole, C.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Jones, B.H.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"McCoskey, K.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Canham-Chervak, M.\"\>"}]}], 
+       "}"}]}], ",", 
+     RowBox[{"\<\"Y1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Y1\"\>", "\[Rule]", "\<\"2023\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"LA\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"LA\"\>", "\[Rule]", "\<\"English\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"JF\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"JF\"\>", 
+        "\[Rule]", "\<\"Medical Problems of Performing Artists\"\>"}], 
+       "}"}]}], ",", 
+     RowBox[{"\<\"TY\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"TY\"\>", "\[Rule]", "\<\"JOUR\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"L2\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"L2\"\>", 
+        "\[Rule]", "\<\"http://dx.doi.org/10.21091/mppa.2023.4027\"\>"}], 
+       "}"}]}], ",", 
+     RowBox[{"\<\"U2\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"U2\"\>", "\[Rule]", "\<\"L2029241350\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"AB\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"AB\"\>", 
+        "\[Rule]", "\<\"The Department of Defense is the largest employer of \
+full-time musicians. In the U.S. military, many musicians experience unique \
+occupational exposures such as extended periods of standing, sitting, and \
+marching for rehearsals and performances, static and non-neutral postures, \
+and a variety of repetitive motions while playing instruments. These \
+exposures are in addition to physical training and fitness standards required \
+of U.S. Army soldiers. METHODS: An electronic survey was administered to \
+active-duty U.S. Army Band musicians. The survey collected demographics, \
+personal characteristics, Army Physical Fitness Test performance, \
+occupational demands, health behaviors, and injuries from October 2017 to \
+December 2018. Survey responses were combined with medical and physical \
+fitness performance records. Descriptive statistics were reported and factors \
+associated with injuries were investigated. RESULTS: There were 465 Army Band \
+members in this population, with approximately half (49%) completing the \
+survey. Most survey respondents (81%) reported an injury in the past year, \
+which they predominantly attributed to overuse (54%). Leading reported \
+activities resulting in injury included running for physical training (21%), \
+repetitive movements while playing an instrument (11%), and standing while \
+playing (11%). A majority of survey respondents (60%) also had a medical \
+encounter for an injury. Factors significantly associated with injury among \
+men were lower aerobic fitness and higher body fat percentage; additional \
+unadjusted factors associated with injury among all Army Band soldiers \
+included female sex, older age, and longer periods of marching and standing \
+while playing. CONCLUSIONS: Injury prevention initiatives for Army Band \
+musicians should focus on the reduction of overuse and repetitive motion \
+injuries. Suggested prevention strategies include balanced physical training, \
+ergonomic adjustments, rehearsal breaks, and leadership support for injury \
+prevention efforts.\"\>"}], "}"}]}]}], "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"DB\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"DB\"\>", "\[Rule]", "\<\"Embase\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"T1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"T1\"\>", 
+        "\[Rule]", "\<\"Development of the Musi-CI Training, A Musical \
+Listening Training for Cochlear Implant Users: A Participatory Action \
+Research Approach\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"A1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Veltman, J.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Maas, M.J.M.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Beijk, C.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Groenhuis, A.Y.M.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Versnel, H.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Vissers, C.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Huinck, W.J.\"\>"}], ",", 
+        RowBox[{"\<\"A1\"\>", "\[Rule]", "\<\"Hoetink, A.E.\"\>"}]}], "}"}]}],
+      ",", 
+     RowBox[{"\<\"Y1\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"Y1\"\>", "\[Rule]", "\<\"2023\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"LA\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"LA\"\>", "\[Rule]", "\<\"English\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"JF\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"JF\"\>", "\[Rule]", "\<\"Trends in hearing\"\>"}], 
+       "}"}]}], ",", 
+     RowBox[{"\<\"TY\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"TY\"\>", "\[Rule]", "\<\"JOUR\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"L2\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"L2\"\>", 
+        "\[Rule]", "\<\"http://dx.doi.org/10.1177/23312165231198368\"\>"}], 
+       "}"}]}], ",", 
+     RowBox[{"\<\"U2\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"U2\"\>", "\[Rule]", "\<\"L642245195\"\>"}], "}"}]}], ",", 
+     RowBox[{"\<\"AB\"\>", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\<\"AB\"\>", 
+        "\[Rule]", "\<\"A cochlear implant (CI) is a prosthesis that allows \
+people with severe to profound hearing loss to understand speech in quiet \
+settings. However, listening to music presents a challenge to most CI users; \
+they often do not enjoy music or avoid it altogether. The Musi-CI training \
+course was developed for CI users with the goal of reducing music aversion \
+and improving music enjoyment. A consortium was established consisting of a \
+professional musician with CI, CI rehabilitation professionals and \
+researchers. Participatory action research (PAR) was applied to develop and \
+evaluate the training experiences, collaborating with 37 CI users during \
+three cycles of eight training sessions, each held over a period of 3 months. \
+Input and feedback were collected after each training session using \
+questionnaires, observations and focus group interviews. Almost all \
+participants (86%) completed the training. After completing the training a \
+large majority of participants reported increased music appreciation, \
+increased social participation in musical settings and a positive impact on \
+general auditory perception. The resulting Musi-CI training programme focuses \
+on music listening skills, self-efficacy, and self-motivation. It consists of \
+exercises intended to strengthen attention and working memory, to improve \
+beat and rhythm perception (with online rhythm exercises) and exercises to \
+distinguish timbre of instruments and emotion in music. A Melody Game was \
+developed to improve pitch and melodic contour discrimination.\"\>"}], 
+       "}"}]}]}], "\[RightAssociation]"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.944797275805191*^9, 3.944797303832716*^9}},
+ CellLabel->"Out[48]=",ExpressionUUID->"333fb199-6b66-bb42-8dbc-8c435b9f4258"]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Cochrane Library", "Title",
+ CellChangeTimes->{{3.90034613136802*^9, 3.9003461327152367`*^9}, {
+  3.9006904553676653`*^9, 3.9006904577830544`*^9}, {3.900691909504736*^9, 
+  3.9006919141673293`*^9}},ExpressionUUID->"c42ebb31-2841-4189-9193-\
+2d96b34c38df"],
+
+Cell[CellGroupData[{
+
+Cell["no results!", "Subsubsection",
+ CellChangeTimes->{{3.944797331585758*^9, 
+  3.9447973380592384`*^9}},ExpressionUUID->"203e4350-7be3-6e49-aec5-\
+96acae99d189"],
+
+Cell["\<\
+dcochrane =.
+dcochrane = \
+Import[\"H:\\\\Projekte\\\\Musikermedizin\\\\L\[ADoubleDot]rmschwerh\
+\[ODoubleDot]rigkeit Review\\\\Literatur\\\\Cochrane Library Hearing Loss \
+Musician RIS.txt\"];
+
+dcochrane = StringSplit[dcochrane, \"\\n\\n\\n\"];
+
+dcochranelist = Table[StringCases[#, i ~~ WhitespaceCharacter .. ~~ \"-  \" \
+~~ Shortest[a__] ~~ \"\\n\" -> i -> a] & /@ dcochrane, {i, {\"T1\", \"A1\", \
+\"PY\", \"JF\", \"TY\", \"UR\"}}];
+
+PrependTo[dcochranelist, Table[{\"DB\" -> \"Cochrane\"}, (Length[#] & /@ \
+dcochranelist)[[1]]]];
+
+Clear[a]
+AppendTo[dcochranelist, If[StringContainsQ[#, \"N2  -\"], StringCases[#, \"N2\
+\" ~~ WhitespaceCharacter .. ~~ \"- \" ~~ Shortest[a__] ~~ \".\\n\" ~~ \
+LetterCharacter .. ~~ WhitespaceCharacter .. ~~ \"- \" -> \"AB\" -> a ~~ \
+\".\"], \"AB\" -> \"no abstract available\"] & /@ dcochrane];
+
+
+dcochranelist = Flatten /@ Transpose@dcochranelist;
+
+
+dcochranelist = Select[dcochranelist, If[{} === \
+StringContainsQ[ToLowerCase[Values[KeyTake[#, {\"AB\"}]]], ___ ~~ \"hearing\" \
+~~ ___ ~~ \"musician\" ~~ ___ | ___ ~~ \"musician\" ~~ ___ ~~ \"hearing\" ~~ \
+___], False, StringContainsQ[ToLowerCase[Values[KeyTake[#, {\"AB\"}]]], ___ \
+~~ \"hearing\" ~~ ___ ~~ \"musician\" ~~ ___ | ___ ~~ \"musician\" ~~ ___ ~~ \
+\"hearing\" ~~ ___][[1]]] &];
+
+dcochranelist = GroupBy[#, Keys] & /@ dcochranelist;\
+\>", "Text",
+ CellChangeTimes->{{3.9004234698805566`*^9, 3.9004234927142277`*^9}, {
+   3.900425503792076*^9, 3.9004255217253237`*^9}, {3.900580116437453*^9, 
+   3.90058011891181*^9}, 3.900580196225269*^9, 3.9005818804596653`*^9, {
+   3.900582068232548*^9, 3.900582096343481*^9}, {3.9005821583042493`*^9, 
+   3.9005821810886106`*^9}, {3.9005823076411953`*^9, 3.900582308041994*^9}, {
+   3.9005825955104427`*^9, 3.900582636249279*^9}, {3.9005826765640044`*^9, 
+   3.900582690339573*^9}, {3.90058284148328*^9, 3.9005828416795235`*^9}, {
+   3.9005828752356358`*^9, 3.9005828759531183`*^9}, {3.900583193412427*^9, 
+   3.900583225608962*^9}, 3.9005832710747375`*^9, 3.900583310779331*^9, 
+   3.900583365105712*^9, {3.9005834061104393`*^9, 3.9005835052492976`*^9}, {
+   3.9005836047757096`*^9, 3.90058360614745*^9}, {3.9005836538674145`*^9, 
+   3.9005836622667427`*^9}, {3.900689685273755*^9, 3.9006896920981407`*^9}, {
+   3.9006906185669293`*^9, 3.9006906192210183`*^9}, {3.90069070598011*^9, 
+   3.900690706766465*^9}, {3.9006907911294622`*^9, 3.9006907978435717`*^9}, {
+   3.900691118985097*^9, 3.9006911222381916`*^9}, {3.9006919372181063`*^9, 
+   3.9006919831425467`*^9}, {3.900692083229185*^9, 3.9006920841554756`*^9}, {
+   3.9006923016795826`*^9, 3.900692302561144*^9}, {3.9006926602172422`*^9, 
+   3.9006926659189215`*^9}, {3.9006927215548124`*^9, 3.900692721753873*^9}, {
+   3.9006927887897153`*^9, 3.900692818936105*^9}, {3.9006928891024013`*^9, 
+   3.9006928898704176`*^9}, {3.900692979360318*^9, 3.900693004609904*^9}, {
+   3.9006930437045336`*^9, 3.900693067492227*^9}, {3.900861716807192*^9, 
+   3.9008617310795975`*^9}, {3.9010360233750205`*^9, 3.901036044577139*^9}, {
+   3.9010363445825834`*^9, 3.9010363479427977`*^9}, {3.9011160569528704`*^9, 
+   3.9011160636453176`*^9}, {3.9011161288220663`*^9, 3.9011161485511045`*^9}, 
+   3.901116415902238*^9, 3.9012029697630796`*^9, 3.901203018961754*^9, 
+   3.9447973281654415`*^9},
+ CellLabel->
+  "In[189]:=",ExpressionUUID->"9d4ca270-7cd8-4c32-af31-29380ec23e8b"]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Output", "Title",
+ CellChangeTimes->{{3.900773553633887*^9, 
+  3.900773554304985*^9}},ExpressionUUID->"bad5483f-188a-40b4-85c5-\
+02afc5ac2395"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"exportlist", "=."}], "\[IndentingNewLine]", 
+ RowBox[{"exportlist", "=", "head"}]}], "Input",
+ CellChangeTimes->{{3.900774931273627*^9, 3.9007749617027597`*^9}, 
+   3.9019010541629567`*^9},
+ CellLabel->"In[79]:=",ExpressionUUID->"ffa89a97-d499-486a-8c8c-95b451cc32f4"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"\<\"Database\"\>", 
+    ",", "\<\"Date of Retrieval [year/month/day]\"\>", ",", "\<\"Title\"\>", 
+    ",", "\<\"Authors\"\>", ",", "\<\"Year\"\>", ",", "\<\"Language\"\>", 
+    ",", "\<\"Journal Title\"\>", ",", "\<\"Publication Type\"\>", 
+    ",", "\<\"DOI/Hyperlink\"\>", ",", "\<\"Abstract\"\>", 
+    ",", "\<\"Included [1], Excluded [0], To be discussed [2]\"\>", 
+    ",", "\<\"Comment\"\>"}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.9012119313987055`*^9, 3.9012120758417606`*^9, 3.901212585403697*^9, 
+   3.9012136649133797`*^9, 3.9016439687763186`*^9, 3.90190081521024*^9, {
+   3.901901040080643*^9, 3.9019010556001053`*^9}, 3.9447987489648113`*^9},
+ CellLabel->"Out[80]=",ExpressionUUID->"551150b5-3a40-9945-b43f-9f228efc838f"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"Put", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"listpubmed", ",", "dembaselist", ",", "dgooglescholar"}], "}"}], 
+   ",", 
+   RowBox[{"outpath", "~~", "\"\<temp_literature reading.m\>\""}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.900944942146536*^9, 3.900944974570879*^9}, {
+   3.9009450654669027`*^9, 3.9009451117005606`*^9}, 3.9009453637666235`*^9, {
+   3.944798753689665*^9, 3.9447987649170628`*^9}},
+ CellLabel->"In[81]:=",ExpressionUUID->"2eea9e40-2941-4253-8a0e-e293f76f4b01"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"dgooglescholar", "=", 
+    RowBox[{
+     RowBox[{
+     "Get", "[", 
+      "\"\<H:\\\\Projekte\\\\Musikermedizin\\\\L\[ADoubleDot]rmschwerh\
+\[ODoubleDot]rigkeit Review\\\\Literatur\\\\Screening List Data.m\>\"", "]"}],
+      "[", 
+     RowBox[{"[", "4", "]"}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.901644004108618*^9, 3.9016440481373625`*^9}},
+ CellLabel->
+  "In[149]:=",ExpressionUUID->"88487ca7-f9f1-4d14-9246-f18b0dd06998"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", "Pubmed", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<DB\>\"", ",", "\"\<TI\>\"", ",", "\"\<AU\>\"", ",", 
+          "\"\<DP\>\"", ",", "\"\<LA\>\"", ",", "\"\<JT\>\"", ",", 
+          "\"\<PT\>\"", ",", "\"\<AID\>\"", ",", "\"\<AB\>\""}], "}"}], "/.", 
+        "#"}], "&"}], "/@", "listpubmed"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{"Map", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Head", "[", "#", "]"}], "===", "String"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"#", "->", "\"\<\>\""}], "}"}], ",", "#"}], "]"}], "&"}], 
+       ",", "temp", ",", 
+       RowBox[{"{", "2", "}"}]}], "]"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{"Map", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Values", "[", "#", "]"}], "&"}], ",", "temp", ",", 
+       RowBox[{"{", "2", "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"temp", "[", 
+      RowBox[{"[", 
+       RowBox[{"All", ",", "8"}], "]"}], "]"}], "=", 
+     RowBox[{"Map", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{"StringContainsQ", "[", 
+           RowBox[{"#", ",", "\"\<doi\>\""}], "]"}], ",", 
+          RowBox[{"StringCases", "[", 
+           RowBox[{"#", ",", 
+            RowBox[{
+             RowBox[{"\"\<10\>\"", "~~", "a__", "~~", "\"\< \>\""}], "->", 
+             RowBox[{"\"\<https://doi.org/10\>\"", "~~", "a"}]}]}], "]"}], 
+          ",", "#"}], "]"}], "&"}], ",", 
+       RowBox[{"temp", "[", 
+        RowBox[{"[", 
+         RowBox[{"All", ",", "8"}], "]"}], "]"}], ",", 
+       RowBox[{"{", "2", "}"}]}], "]"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{"Map", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Length", "@", "#"}], ">", "1"}], ",", 
+          RowBox[{"Riffle", "[", 
+           RowBox[{"#", ",", "\"\<; \>\""}], "]"}], ",", "#"}], "]"}], "&"}], 
+       ",", "temp", ",", 
+       RowBox[{"{", "2", "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{"Map", "[", 
+      RowBox[{"StringJoin", ",", "temp", ",", 
+       RowBox[{"{", "2", "}"}]}], "]"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{"Flatten", "/@", "temp"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Insert", "[", 
+        RowBox[{"#", ",", "dateret", ",", "2"}], "]"}], "&"}], "/@", 
+      "temp"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Insert", "[", 
+        RowBox[{"#", ",", "\"\< \>\"", ",", 
+         RowBox[{"-", "1"}]}], "]"}], "&"}], "/@", "temp"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Insert", "[", 
+        RowBox[{"#", ",", "\"\< \>\"", ",", 
+         RowBox[{"-", "1"}]}], "]"}], "&"}], "/@", "temp"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"exportlist", "=", 
+     RowBox[{"Join", "[", 
+      RowBox[{"exportlist", ",", "temp"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\n", 
+   RowBox[{"(*", "Embase", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<DB\>\"", ",", "\"\<T1\>\"", ",", "\"\<A1\>\"", ",", 
+          "\"\<Y1\>\"", ",", "\"\<LA\>\"", ",", "\"\<JF\>\"", ",", 
+          "\"\<TY\>\"", ",", "\"\<L2\>\"", ",", "\"\<AB\>\""}], "}"}], "/.", 
+        "#"}], "&"}], "/@", "dembaselist"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{"Map", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Head", "[", "#", "]"}], "===", "String"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"#", "->", "\"\<\>\""}], "}"}], ",", "#"}], "]"}], "&"}], 
+       ",", "temp", ",", 
+       RowBox[{"{", "2", "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{"Map", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Values", "[", "#", "]"}], "&"}], ",", "temp", ",", 
+       RowBox[{"{", "2", "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{"Map", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Length", "@", "#"}], ">", "1"}], ",", 
+          RowBox[{"Riffle", "[", 
+           RowBox[{"#", ",", "\"\<; \>\""}], "]"}], ",", "#"}], "]"}], "&"}], 
+       ",", "temp", ",", 
+       RowBox[{"{", "2", "}"}]}], "]"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{"Map", "[", 
+      RowBox[{"StringJoin", ",", "temp", ",", 
+       RowBox[{"{", "2", "}"}]}], "]"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{"Flatten", "/@", "temp"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Insert", "[", 
+        RowBox[{"#", ",", "dateret", ",", "2"}], "]"}], "&"}], "/@", 
+      "temp"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Insert", "[", 
+        RowBox[{"#", ",", "\"\< \>\"", ",", 
+         RowBox[{"-", "1"}]}], "]"}], "&"}], "/@", "temp"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Insert", "[", 
+        RowBox[{"#", ",", "\"\< \>\"", ",", 
+         RowBox[{"-", "1"}]}], "]"}], "&"}], "/@", "temp"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"exportlist", "=", 
+     RowBox[{"Join", "[", 
+      RowBox[{"exportlist", ",", "temp"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"Google", " ", "Scholar"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<DB\>\"", ",", "\"\<TI\>\"", ",", "\"\<AU\>\"", ",", 
+          "\"\<DP\>\"", ",", "\"\<LA\>\"", ",", "\"\<JT\>\"", ",", 
+          "\"\<PT\>\"", ",", "\"\<AID\>\"", ",", "\"\<AB\>\""}], "}"}], "/.", 
+        "#"}], "&"}], "/@", "dgooglescholar"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"StringReplace", "[", 
+        RowBox[{"#", ",", 
+         RowBox[{"\"\<&#39;\>\"", "->", "\"\<'\>\""}]}], "]"}], "&"}], "/@", 
+      "temp"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Insert", "[", 
+        RowBox[{"#", ",", "\"\<2023/08/15\>\"", ",", "2"}], "]"}], "&"}], "/@",
+       "temp"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Insert", "[", 
+        RowBox[{"#", ",", "\"\< \>\"", ",", 
+         RowBox[{"-", "1"}]}], "]"}], "&"}], "/@", "temp"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"temp", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Insert", "[", 
+        RowBox[{"#", ",", "\"\< \>\"", ",", 
+         RowBox[{"-", "1"}]}], "]"}], "&"}], "/@", "temp"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"exportlist", "=", 
+     RowBox[{"Join", "[", 
+      RowBox[{"exportlist", ",", "temp"}], "]"}]}], ";"}]}]}]], "Input",
+ CellChangeTimes->{{3.9007751901726236`*^9, 3.9007752438042035`*^9}, {
+   3.9007752738109255`*^9, 3.900775274547058*^9}, {3.900777222116623*^9, 
+   3.900777229358697*^9}, {3.9007774993674746`*^9, 3.9007775136374884`*^9}, {
+   3.900777842499962*^9, 3.9007778440781746`*^9}, {3.9007778999656534`*^9, 
+   3.90077790076612*^9}, {3.9007781344264116`*^9, 3.9007781514210234`*^9}, {
+   3.9007783084088516`*^9, 3.900778311488804*^9}, {3.900778428838235*^9, 
+   3.9007784302657814`*^9}, {3.9007789959916153`*^9, 3.900779045028552*^9}, {
+   3.900779623138741*^9, 3.900779679746335*^9}, {3.900779713896635*^9, 
+   3.9007797199154005`*^9}, {3.9007798162538977`*^9, 
+   3.9007798228961415`*^9}, {3.9007799795469055`*^9, 3.900780005125017*^9}, {
+   3.900780042783801*^9, 3.900780048023735*^9}, 3.9007806310278425`*^9, 
+   3.90078108709562*^9, {3.9008618717333803`*^9, 3.900861881739576*^9}, {
+   3.9012032531428256`*^9, 3.901203260683546*^9}, {3.901205430413491*^9, 
+   3.9012054331755257`*^9}, {3.944798776886978*^9, 3.9447987779262943`*^9}},
+ CellLabel->"In[82]:=",ExpressionUUID->"d7ad0640-d3f3-45fe-9c83-eaaf9f379350"],
+
+Cell[BoxData["dcochranelist"], "Input",
+ CellChangeTimes->{{3.9012054554280744`*^9, 3.901205458445044*^9}},
+ CellLabel->
+  "In[571]:=",ExpressionUUID->"4e00205c-42d0-48c3-8fda-d291b40717a4"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"exportSearchResults", "=", 
+    RowBox[{"{", "}"}]}], ";"}], "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Length", "@", "exportlist"}], "-", "1"}], " ", 
+  RowBox[{"(*", 
+   RowBox[{"Row", " ", "1", " ", "as", " ", "Description"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{"AppendTo", "[", 
+  RowBox[{"exportSearchResults", ",", 
+   RowBox[{"{", 
+    RowBox[{"\"\<update total number\>\"", ",", "%"}], "}"}]}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.944798992763687*^9, 3.944799002218851*^9}, {
+  3.944799123819418*^9, 3.944799127969984*^9}},
+ CellLabel->
+  "In[138]:=",ExpressionUUID->"373ab57f-f331-c343-b1d0-a7057534821a"],
+
+Cell[BoxData["150"], "Output",
+ CellChangeTimes->{
+  3.90086197132388*^9, 3.9009454406790266`*^9, 3.9009477436898093`*^9, 
+   3.900952105422501*^9, 3.901203286699437*^9, 3.9012055298372946`*^9, 
+   3.9012119434202795`*^9, 3.9012120901172776`*^9, 3.90121259420804*^9, 
+   3.9012136757916684`*^9, 3.9016440724164057`*^9, 3.9019008383899007`*^9, {
+   3.9019009375070953`*^9, 3.9019009558517427`*^9}, 3.901901065276827*^9, 
+   3.944798789241228*^9, 3.944798962352066*^9, 3.9447990330460815`*^9, 
+   3.944799128433712*^9},
+ CellLabel->
+  "Out[139]=",ExpressionUUID->"b46603e4-a67b-0748-b814-a0ca95ad46bf"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"\<\"update total number\"\>", ",", "150"}], "}"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{
+  3.90086197132388*^9, 3.9009454406790266`*^9, 3.9009477436898093`*^9, 
+   3.900952105422501*^9, 3.901203286699437*^9, 3.9012055298372946`*^9, 
+   3.9012119434202795`*^9, 3.9012120901172776`*^9, 3.90121259420804*^9, 
+   3.9012136757916684`*^9, 3.9016440724164057`*^9, 3.9019008383899007`*^9, {
+   3.9019009375070953`*^9, 3.9019009558517427`*^9}, 3.901901065276827*^9, 
+   3.944798789241228*^9, 3.944798962352066*^9, 3.9447990330460815`*^9, 
+   3.944799128440769*^9},
+ CellLabel->
+  "Out[140]=",ExpressionUUID->"a48a5d0d-cc19-264b-a835-15dc73c116bf"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Tally", "[", 
+   RowBox[{"Rest", "[", 
+    RowBox[{"exportlist", "[", 
+     RowBox[{"[", 
+      RowBox[{"All", ",", "1"}], "]"}], "]"}], "]"}], "]"}], "//", 
+  "TableForm"}], "\[IndentingNewLine]", 
+ RowBox[{"AppendTo", "[", 
+  RowBox[{"exportSearchResults", ",", "%"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.901203657104031*^9, 3.9012036856129284`*^9}, {
+  3.944798818452408*^9, 3.944798849556328*^9}, {3.9447989741336613`*^9, 
+  3.9447989871744843`*^9}, {3.944799039267523*^9, 3.944799043488325*^9}},
+ CellLabel->
+  "In[141]:=",ExpressionUUID->"db2f3bf2-de81-4a3e-96fa-107ac70c5484"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"\<\"MEDLINE\"\>", "19"},
+    {"\<\"Embase\"\>", "22"},
+    {"\<\"Google Scholar\"\>", "109"}
+   },
+   GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[2.0999999999999996`]}, 
+       Offset[0.27999999999999997`]}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}}],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{{3.90120366532362*^9, 3.901203686147646*^9}, 
+   3.90120552761174*^9, 3.901211945632437*^9, 3.901212093446618*^9, 
+   3.901212609285536*^9, 3.901213677574254*^9, 3.901644076708417*^9, 
+   3.901900977832059*^9, 3.901901069874136*^9, 3.9447987917523365`*^9, 
+   3.944798850578417*^9, 3.944799044216936*^9, {3.9447991182940903`*^9, 
+   3.9447991294906635`*^9}},
+ CellLabel->
+  "Out[141]//TableForm=",ExpressionUUID->"76b7ba70-9c82-3a43-ba71-\
+0865e255c9ea"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"\<\"update total number\"\>", ",", "150"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\<\"MEDLINE\"\>", ",", "19"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\<\"Embase\"\>", ",", "22"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\<\"Google Scholar\"\>", ",", "109"}], "}"}]}], "}"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.90120366532362*^9, 3.901203686147646*^9}, 
+   3.90120552761174*^9, 3.901211945632437*^9, 3.901212093446618*^9, 
+   3.901212609285536*^9, 3.901213677574254*^9, 3.901644076708417*^9, 
+   3.901900977832059*^9, 3.901901069874136*^9, 3.9447987917523365`*^9, 
+   3.944798850578417*^9, 3.944799044216936*^9, {3.9447991182940903`*^9, 
+   3.94479912949695*^9}},
+ CellLabel->
+  "Out[142]=",ExpressionUUID->"df3bfb20-9c86-8c4c-b3e8-e14e9d2219e6"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Export", "[", 
+  RowBox[{
+  "\"\<D:\\\\Daten\\\\b1464\\\\Downloads\\\\pubmed export update results.xlsx\
+\>\"", ",", "exportlist"}], "]"}]], "Input",
+ CellChangeTimes->{{3.900775254586752*^9, 3.9007753071535053`*^9}, 
+   3.9007768905034676`*^9, {3.900777086207363*^9, 3.900777089254266*^9}, {
+   3.9007771338350887`*^9, 3.9007771413991585`*^9}, 3.9007790037506466`*^9, 
+   3.900779785643615*^9, {3.912103112744712*^9, 3.912103118758533*^9}, {
+   3.944798801572912*^9, 3.944798807565031*^9}},
+ CellLabel->
+  "In[113]:=",ExpressionUUID->"73510aa1-0601-43ef-a917-9b6030a49c2d"],
+
+Cell[BoxData["\<\"D:\\\\Daten\\\\b1464\\\\Downloads\\\\pubmed export update \
+results.xlsx\"\>"], "Output",
+ CellChangeTimes->{
+  3.900775261352415*^9, 3.900775311008686*^9, {3.900776901791634*^9, 
+   3.9007769098520045`*^9}, {3.900777086377942*^9, 3.90077709978622*^9}, 
+   3.9007771668942895`*^9, 3.9007775246663566`*^9, 3.900778159487629*^9, 
+   3.900778315525424*^9, 3.9007784412645288`*^9, 3.9007797390718503`*^9, 
+   3.9007797906310425`*^9, 3.9007798442757325`*^9, 3.9007800705816507`*^9, 
+   3.900780758271437*^9, 3.900780936349161*^9, {3.9007810635027103`*^9, 
+   3.9007810912964735`*^9}, 3.9008602657972383`*^9, {3.900861589373973*^9, 
+   3.900861599964301*^9}, 3.900861748177574*^9, 3.900861886727676*^9, 
+   3.944798885188616*^9},
+ CellLabel->
+  "Out[113]=",ExpressionUUID->"fd08756d-233a-4645-99fc-cdd951b4a49c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"dupl", "=", 
+   RowBox[{"Select", "[", 
+    RowBox[{
+     RowBox[{"GroupBy", "[", 
+      RowBox[{"exportlist", ",", 
+       RowBox[{
+        RowBox[{"ToLowerCase", "[", 
+         RowBox[{"#", "[", 
+          RowBox[{"[", "3", "]"}], "]"}], "]"}], "&"}]}], "]"}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Length", " ", "[", "#", "]"}], ">", "1"}], "&"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"duplpos", "=", 
+   RowBox[{"Map", "[", 
+    RowBox[{"Flatten", ",", 
+     RowBox[{"Map", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Position", "[", 
+         RowBox[{"exportlist", ",", "#"}], "]"}], "&"}], ",", 
+       RowBox[{"Values", "[", "dupl", "]"}], ",", 
+       RowBox[{"{", "2", "}"}]}], "]"}], ",", 
+     RowBox[{"{", "1", "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"duplpos", "=", 
+   RowBox[{"Union", "/@", "duplpos"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"duplpos", "=", 
+   RowBox[{"duplpos", "[", 
+    RowBox[{"[", 
+     RowBox[{"All", ",", 
+      RowBox[{"2", ";;", 
+       RowBox[{"-", "1"}]}]}], "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"exportlistWOdupl", "=", 
+   RowBox[{"Delete", "[", 
+    RowBox[{"exportlist", ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"{", "#", "}"}], "&"}], "/@", 
+      RowBox[{"Flatten", "[", "duplpos", "]"}]}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Length", "@", "exportlistWOdupl"}], "-", "1"}], 
+  RowBox[{"(*", 
+   RowBox[{"Row", " ", "1", " ", "as", " ", "Description"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"AppendTo", "[", 
+    RowBox[{"exportSearchResults", ",", 
+     RowBox[{"{", 
+      RowBox[{"\"\<total number without duplicates\>\"", ",", "%"}], "}"}]}], 
+    "]"}], ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"Row", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Length", "@", "exportlist"}], "-", 
+     RowBox[{"Length", "@", "exportlistWOdupl"}]}], ",", 
+    "\"\< duplicates\>\""}], "}"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"AppendTo", "[", 
+  RowBox[{"exportSearchResults", ",", 
+   RowBox[{"{", 
+    RowBox[{"\"\<duplicates\>\"", ",", 
+     RowBox[{
+      RowBox[{"Length", "@", "exportlist"}], "-", 
+      RowBox[{"Length", "@", "exportlistWOdupl"}]}]}], "}"}]}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.9009505754834538`*^9, 3.900950576149313*^9}, {
+   3.900950632029991*^9, 3.9009506876387568`*^9}, {3.900950734133417*^9, 
+   3.900950883199953*^9}, {3.9009510412292876`*^9, 3.9009510599400167`*^9}, {
+   3.90095114585839*^9, 3.900951153965886*^9}, {3.900951195291498*^9, 
+   3.9009512137105775`*^9}, {3.900951383411194*^9, 3.9009515722217517`*^9}, {
+   3.90095160245695*^9, 3.900951622626151*^9}, 3.900951664227354*^9, {
+   3.900951701982849*^9, 3.9009518114708705`*^9}, {3.900951841476715*^9, 
+   3.900951847684972*^9}, {3.900952095173895*^9, 3.9009520959446154`*^9}, {
+   3.900952351853082*^9, 3.9009523601408606`*^9}, {3.9447990529955406`*^9, 
+   3.944799139298151*^9}},ExpressionUUID->"a76dd2db-3911-444f-8c93-\
+5f2e85ff22ef"],
+
+Cell[BoxData["142"], "Output",
+ CellChangeTimes->{
+  3.900950884335352*^9, 3.9009510612351832`*^9, 3.9009511576963944`*^9, {
+   3.900951209252805*^9, 3.9009512144970913`*^9}, {3.900951542025525*^9, 
+   3.9009515730924797`*^9}, {3.9009516065551624`*^9, 3.9009516241760883`*^9}, 
+   3.900951665685582*^9, {3.900951728596354*^9, 3.900951790112731*^9}, {
+   3.900951827164146*^9, 3.9009518488095727`*^9}, 3.9009520966446905`*^9, 
+   3.9009523821481414`*^9, 3.901203353926519*^9, {3.901205503111373*^9, 
+   3.9012055330246363`*^9}, 3.9012119483681927`*^9, 3.9012121094401636`*^9, 
+   3.9012126406530237`*^9, 3.9012136806729975`*^9, 3.9016440976902175`*^9, 
+   3.944798935518797*^9, 3.944799086305401*^9, 3.944799132191841*^9},
+ CellLabel->
+  "Out[148]=",ExpressionUUID->"43455594-e0e6-3a42-a3f9-0e1f3078be6f"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"\<\"update total number\"\>", ",", "150"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\<\"MEDLINE\"\>", ",", "19"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\<\"Embase\"\>", ",", "22"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\<\"Google Scholar\"\>", ",", "109"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"total number without duplicates\"\>", ",", "142"}], "}"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{
+  3.900950884335352*^9, 3.9009510612351832`*^9, 3.9009511576963944`*^9, {
+   3.900951209252805*^9, 3.9009512144970913`*^9}, {3.900951542025525*^9, 
+   3.9009515730924797`*^9}, {3.9009516065551624`*^9, 3.9009516241760883`*^9}, 
+   3.900951665685582*^9, {3.900951728596354*^9, 3.900951790112731*^9}, {
+   3.900951827164146*^9, 3.9009518488095727`*^9}, 3.9009520966446905`*^9, 
+   3.9009523821481414`*^9, 3.901203353926519*^9, {3.901205503111373*^9, 
+   3.9012055330246363`*^9}, 3.9012119483681927`*^9, 3.9012121094401636`*^9, 
+   3.9012126406530237`*^9, 3.9012136806729975`*^9, 3.9016440976902175`*^9, 
+   3.944798935518797*^9, 3.944799086305401*^9, 3.944799132197258*^9},
+ CellLabel->
+  "Out[149]=",ExpressionUUID->"b25f73d6-8b37-8b4b-89a9-e52c60af711e"],
+
+Cell[BoxData[
+ TemplateBox[{"8", "\" duplicates\""},
+  "RowDefault"]], "Output",
+ CellChangeTimes->{
+  3.900950884335352*^9, 3.9009510612351832`*^9, 3.9009511576963944`*^9, {
+   3.900951209252805*^9, 3.9009512144970913`*^9}, {3.900951542025525*^9, 
+   3.9009515730924797`*^9}, {3.9009516065551624`*^9, 3.9009516241760883`*^9}, 
+   3.900951665685582*^9, {3.900951728596354*^9, 3.900951790112731*^9}, {
+   3.900951827164146*^9, 3.9009518488095727`*^9}, 3.9009520966446905`*^9, 
+   3.9009523821481414`*^9, 3.901203353926519*^9, {3.901205503111373*^9, 
+   3.9012055330246363`*^9}, 3.9012119483681927`*^9, 3.9012121094401636`*^9, 
+   3.9012126406530237`*^9, 3.9012136806729975`*^9, 3.9016440976902175`*^9, 
+   3.944798935518797*^9, 3.944799086305401*^9, 3.9447991322033787`*^9},
+ CellLabel->
+  "Out[150]=",ExpressionUUID->"2c49a7fb-5646-524f-8188-707544e9f6cc"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"\<\"update total number\"\>", ",", "150"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\<\"MEDLINE\"\>", ",", "19"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\<\"Embase\"\>", ",", "22"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\<\"Google Scholar\"\>", ",", "109"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"total number without duplicates\"\>", ",", "142"}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"duplicates\"\>", ",", "8"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.900950884335352*^9, 3.9009510612351832`*^9, 3.9009511576963944`*^9, {
+   3.900951209252805*^9, 3.9009512144970913`*^9}, {3.900951542025525*^9, 
+   3.9009515730924797`*^9}, {3.9009516065551624`*^9, 3.9009516241760883`*^9}, 
+   3.900951665685582*^9, {3.900951728596354*^9, 3.900951790112731*^9}, {
+   3.900951827164146*^9, 3.9009518488095727`*^9}, 3.9009520966446905`*^9, 
+   3.9009523821481414`*^9, 3.901203353926519*^9, {3.901205503111373*^9, 
+   3.9012055330246363`*^9}, 3.9012119483681927`*^9, 3.9012121094401636`*^9, 
+   3.9012126406530237`*^9, 3.9012136806729975`*^9, 3.9016440976902175`*^9, 
+   3.944798935518797*^9, 3.944799086305401*^9, 3.9447991322094727`*^9},
+ CellLabel->
+  "Out[151]=",ExpressionUUID->"fab47abe-e897-5c43-b772-53a37fb24f06"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Export", "[", 
+  RowBox[{
+   RowBox[{"outpath", "~~", "\"\<results update search.txt\>\""}], ",", 
+   "exportSearchResults"}], "]"}]], "Input",
+ CellChangeTimes->{3.944799147801882*^9},
+ CellLabel->
+  "In[153]:=",ExpressionUUID->"7c0a7754-e715-bf42-87bc-e118bc83160b"],
+
+Cell[BoxData["\<\"D:\\\\Daten\\\\b1464\\\\Desktop\\\\Hearing Loss \
+Update\\\\results update search.txt\"\>"], "Output",
+ CellChangeTimes->{{3.9447991482895813`*^9, 3.944799168428362*^9}},
+ CellLabel->
+  "Out[153]=",ExpressionUUID->"54aec72b-c22e-1f40-97bf-284765fa5c59"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+die Exportliste sollte noch nach Titeln alphabetisch sortiert werden, was \
+doppelte Titel schneller erkennen l\[ADoubleDot]sst\
+\>", "Subsubsection",
+ CellChangeTimes->{{3.9093349688323236`*^9, 3.9093349900308676`*^9}, 
+   3.9093351606200266`*^9},ExpressionUUID->"86550be3-445a-4c22-9de7-\
+453cbb7dfb20"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Export", "[", 
+  RowBox[{
+   RowBox[{"outpath", "~~", "\"\<update search results.xlsx\>\""}], ",", 
+   "exportlistWOdupl"}], "]"}]], "Input",
+ CellChangeTimes->{{3.900775254586752*^9, 3.9007753071535053`*^9}, 
+   3.9007768905034676`*^9, {3.900777086207363*^9, 3.900777089254266*^9}, {
+   3.9007771338350887`*^9, 3.9007771413991585`*^9}, 3.9007790037506466`*^9, 
+   3.900779785643615*^9, {3.90095196680763*^9, 3.900952019126034*^9}, {
+   3.901205544106884*^9, 3.901205544348647*^9}, {3.90121196504842*^9, 
+   3.901211965390863*^9}, {3.901213728317908*^9, 3.9012137286476808`*^9}, {
+   3.90125406778373*^9, 3.9012540824588623`*^9}, {3.9121031290550776`*^9, 
+   3.91210313277962*^9}, {3.944799189714216*^9, 3.9447992033299656`*^9}},
+ CellLabel->
+  "In[154]:=",ExpressionUUID->"d4a8ff57-d55e-4898-a747-524689ffbe78"],
+
+Cell[BoxData["\<\"D:\\\\Daten\\\\b1464\\\\Desktop\\\\Hearing Loss \
+Update\\\\update search results.xlsx\"\>"], "Output",
+ CellChangeTimes->{
+  3.900775261352415*^9, 3.900775311008686*^9, {3.900776901791634*^9, 
+   3.9007769098520045`*^9}, {3.900777086377942*^9, 3.90077709978622*^9}, 
+   3.9007771668942895`*^9, 3.9007775246663566`*^9, 3.900778159487629*^9, 
+   3.900778315525424*^9, 3.9007784412645288`*^9, 3.9007797390718503`*^9, 
+   3.9007797906310425`*^9, 3.9007798442757325`*^9, 3.9007800705816507`*^9, 
+   3.900780758271437*^9, 3.900780936349161*^9, {3.9007810635027103`*^9, 
+   3.9007810912964735`*^9}, 3.9008602657972383`*^9, {3.900861589373973*^9, 
+   3.900861599964301*^9}, 3.900861748177574*^9, 3.900861886727676*^9, 
+   3.9009520275908775`*^9, 3.9009524072180924`*^9, 3.9012046053331213`*^9, {
+   3.9012055383621883`*^9, 3.9012055456180763`*^9}, 3.9012119665598817`*^9, 
+   3.9012121123508005`*^9, 3.9012126536425843`*^9, 3.9012137299858227`*^9, 
+   3.901644282206189*^9, 3.944799208710287*^9},
+ CellLabel->
+  "Out[154]=",ExpressionUUID->"8b471c65-ee37-3044-899d-611448c42a1b"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["previous functions", "Title",
+ CellChangeTimes->{{3.9003434671138864`*^9, 
+  3.9003434833285933`*^9}},ExpressionUUID->"45f519fb-2232-4fb0-9aab-\
+dcc761baa14b"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"If", "[", 
+    RowBox[{
+     RowBox[{"StringContainsQ", "[", 
+      RowBox[{"#", ",", 
+       RowBox[{"\"\<Abstract\>\"", "|", "\"\<ABSTRACT\>\""}]}], "]"}], ",", 
+     RowBox[{"StringCases", "[", 
+      RowBox[{"#", ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"\"\<Abstract\>\"", "|", "\"\<ABSTRACT\>\""}], "~~", 
+         RowBox[{"Shortest", "[", "a__", "]"}], "~~", 
+         RowBox[{
+         "\"\<Keywords\>\"", "|", "\"\<KEYWORDS\>\"", "|", 
+          "\"\<Introduction\>\"", "|", "\"\<INTRODUCTION\>\""}]}], "->", 
+        "a"}]}], "]"}], ",", "\"\<no abstract\>\""}], "]"}], "&"}], "/@", 
+  "ex"}]], "Input",
+ CellChangeTimes->{{3.9002981540094156`*^9, 3.9002981593682966`*^9}, {
+  3.900298195133037*^9, 3.9002982271663275`*^9}, {3.9002983517261076`*^9, 
+  3.9002984839901066`*^9}, {3.9002986600642505`*^9, 3.9002986990505404`*^9}, {
+  3.900301586290871*^9, 3.900301586576188*^9}, {3.9003016907505736`*^9, 
+  3.900301734469242*^9}, {3.9003018345127687`*^9, 3.900301855453084*^9}, {
+  3.9003018965268717`*^9, 3.900301919647251*^9}, {3.900319384283012*^9, 
+  3.900319390280663*^9}, {3.900319963854498*^9, 3.900319970065778*^9}},
+ CellLabel->"In[75]:=",ExpressionUUID->"104c94f9-ffa8-4a6d-a6a5-10aa4652b301"],
+
+Cell[BoxData[
+ RowBox[{"Export", "[", 
+  RowBox[{"\"\<formula.html\>\"", ",", 
+   RowBox[{"Sqrt", "[", 
+    RowBox[{"a", " ", "-", " ", 
+     RowBox[{"b", "/", "4"}]}], "]"}]}], "]"}]], "Input",ExpressionUUID->\
+"9aa407fd-7747-443b-847d-c2a59c610812"],
+
+Cell[BoxData[
+ RowBox[{"Flatten", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"StringTake", "[", 
+       RowBox[{
+        RowBox[{"StringReplace", "[", 
+         RowBox[{"#", ",", 
+          RowBox[{"\"\<\\n\>\"", "->", "\"\<    \>\""}]}], "]"}], ",", 
+        "2000"}], "]"}], "&"}], "/@", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{"StringContainsQ", "[", 
+        RowBox[{"#", ",", 
+         RowBox[{"\"\<Abstract\>\"", "|", "\"\<ABSTRACT\>\""}]}], "]"}], ",", 
+       RowBox[{"StringCases", "[", 
+        RowBox[{"#", ",", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"\"\<Abstract\>\"", "|", "\"\<ABSTRACT\>\""}], "~~", 
+           "a__"}], "->", "a"}]}], "]"}], ",", "\"\<no abstract\>\""}], 
+      "]"}]}], "&"}], "/@", "ex"}], "]"}]], "Input",
+ CellChangeTimes->{3.900343400007786*^9},
+ CellLabel->"In[99]:=",ExpressionUUID->"9ddd42f5-f2c3-4df1-ba9f-6716d5eb5bbb"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "@", "%"}]], "Input",
+ CellChangeTimes->{{3.9002970720946054`*^9, 3.900297074095186*^9}},
+ CellLabel->"In[52]:=",ExpressionUUID->"68c2a04b-6112-4712-9f94-e4b08ec21f74"],
+
+Cell[RawData["\<\
+\\[AGrave]\.96\\[Section]\.9f\\[NTilde]\.01\.01\.00\.00\.00\.00\.00\.00\.00\
+\.00\.00\.00\.00\.00\.00\.00\.00\.00\.00\.00$H\\[CCedilla]z\\[ODoubleDot]\.7f\
+\.00\.00\\[CapitalODoubleDot]\.00\.00\.00\.00\.00\.00\.00@\.00\.00\.00\.00\.00\
+\.00\.00\.00\.00\\[AAcute]\.8f\\[NTilde]\.01\.01\.00\.00\.195\\[SZ]3\\[AE]\.00\
+\.00\.00\.0e\.00\.00\.00\.00\.00\.00\.00\\[CapitalCCedilla]\.b3\.8f[\\[\
+UDoubleDot]\.7f\.00\.00\.00\.00\\[CapitalUAcute]\.8f\\[NTilde]\.01\.01\.00\.00\
+\.03\.00\.00\.00\.00\.00\.00\.00\.01\.01\.00\.00\.00\.00\.00\.00\.00\.00\.00\
+\.00\.00\\[AE]\.00\.00\.00\.0e\.00\.00\.00\.00\.00\.00\.00\\[CapitalCCedilla]\
+\.b3\.8f[\\[UDoubleDot]\.7f\.00\.00\.00\.00\\[CapitalUAcute]\.8f\.02\.00\.00\
+\.00\.03\.00\.00\.00\.00\.00\.00\.00\\[CapitalOHat]\.00\.00\.00\.00\.00\.00\
+\.00\.00\.00\.00\.00\.00\.00\.00\.00\.00\.00\.00\.00\.00\.00\.00\.00\.00\.00\
+\.00\.00\.00\.00\.00\.000\\[CapitalUDoubleDot]\\[DiscretionaryHyphen]\.af\\[\
+NTilde]\.01\.01\.00\.00\.00\.00\\[CapitalUAcute]\.8f\\[NTilde]\.01\.01\.00\.00\
+\\[CapitalIGrave]\.02\\[CapitalUAcute]\.8f\\[NTilde]\.01\.01\.00\.00\\[\
+CapitalCCedilla]\.b3\.8f\
+\>"], "Output"]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{"dpubmed", "=."}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dpubmed", "=", 
+   RowBox[{
+   "Import", "[", 
+    "\"\<D:\\\\Daten\\\\b1464\\\\Desktop\\\\Pubmed Search Result.txt\>\"", 
+    "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"dpubmed", "=", 
+   RowBox[{"StringSplit", "[", 
+    RowBox[{"dpubmed", ",", "\"\<\\n\\n\>\""}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"listpubmed", "=", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"StringCases", "[", 
+         RowBox[{"#", ",", 
+          RowBox[{
+           RowBox[{"i", "~~", 
+            RowBox[{"WhitespaceCharacter", ".."}], "~~", "\"\<- \>\"", "~~", 
+            RowBox[{"Shortest", "[", "a__", "]"}], "~~", "\"\<\\n\>\""}], "->", 
+           RowBox[{"i", "->", 
+            RowBox[{"StringReplace", "[", 
+             RowBox[{"a", ",", 
+              RowBox[{"\"\<\\n      \>\"", "->", "\"\<\>\""}]}], "]"}]}]}]}], 
+         "]"}], "&"}], "/@", "dpubmed"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<TI\>\"", ",", "\"\<AU\>\"", ",", "\"\<DP\>\"", ",", 
+          "\"\<LA\>\"", ",", "\"\<JT\>\"", ",", "\"\<PT\>\"", ",", 
+          "\"\<AID\>\""}], "}"}]}], "}"}]}], "]"}]}], ";"}], 
+  "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"PrependTo", "[", 
+   RowBox[{"listpubmed", ",", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"\"\<DB\>\"", "->", "\"\<PubMed\>\""}], "}"}], ",", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Length", "[", "#", "]"}], "&"}], "/@", "listpubmed"}], 
+        ")"}], "[", 
+       RowBox[{"[", "1", "]"}], "]"}]}], "]"}]}], "]"}], ";"}], "\n", 
+ RowBox[{"Clear", "[", "a", "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"AppendTo", "[", 
+   RowBox[{"listpubmed", ",", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"StringContainsQ", "[", 
+         RowBox[{"#", ",", "\"\<AB  -\>\""}], "]"}], ",", 
+        RowBox[{"StringCases", "[", 
+         RowBox[{"#", ",", 
+          RowBox[{
+           RowBox[{"\"\<AB\>\"", "~~", 
+            RowBox[{"WhitespaceCharacter", ".."}], "~~", " ", "\"\<- \>\"", "~~", 
+            RowBox[{"Shortest", "[", "a__", "]"}], "~~", "\"\<.\\n\>\"", "~~", 
+            RowBox[{"LetterCharacter", ".."}], "~~", 
+            RowBox[{"WhitespaceCharacter", ".."}], "~~", "\"\<- \>\""}], "->", 
+           RowBox[{"\"\<AB\>\"", "->", 
+            RowBox[{"StringReplace", "[", 
+             RowBox[{"a", ",", 
+              RowBox[{"\"\<\\n      \>\"", "->", "\"\<\>\""}]}], "]"}]}]}]}], 
+         "]"}], ",", 
+        RowBox[{"\"\<AB\>\"", "->", "\"\<no abstract available\>\""}]}], 
+       "]"}], "&"}], "/@", "dpubmed"}]}], "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"listpubmed", "=", 
+  RowBox[{"Flatten", "/@", 
+   RowBox[{"Transpose", "@", "listpubmed"}]}]}]}], "Input",
+ CellChangeTimes->{{3.9004234698805566`*^9, 3.9004234927142277`*^9}, {
+   3.900425503792076*^9, 3.9004255217253237`*^9}, {3.900580116437453*^9, 
+   3.90058011891181*^9}, 3.900580196225269*^9, 3.9005818804596653`*^9, {
+   3.900582068232548*^9, 3.900582096343481*^9}, {3.9005821583042493`*^9, 
+   3.9005821810886106`*^9}, {3.9005823076411953`*^9, 3.900582308041994*^9}, {
+   3.9005825955104427`*^9, 3.900582636249279*^9}, {3.9005826765640044`*^9, 
+   3.900582690339573*^9}, {3.90058284148328*^9, 3.9005828416795235`*^9}, {
+   3.9005828752356358`*^9, 3.9005828759531183`*^9}, {3.900583193412427*^9, 
+   3.900583225608962*^9}, 3.9005832710747375`*^9, 3.900583310779331*^9, 
+   3.900583365105712*^9},
+ CellLabel->
+  "In[301]:=",ExpressionUUID->"bebd429f-1f8a-44a4-b94a-dbb727a1baef"]
+}, Open  ]]
+},
+WindowSize->{937.5, 729.75},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+Magnification:>0.8 Inherited,
+FrontEndVersion->"14.2 for Microsoft Windows (64-bit) (March 14, 2025)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"a427489a-a856-4c1e-a7e0-5cda3881ce86"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[422, 15, 173, 3, 77, "Title",ExpressionUUID->"9263053e-f879-3743-8ede-0c62926ee559"],
+Cell[598, 20, 2342, 46, 159, "Input",ExpressionUUID->"236d011b-3778-4448-bb76-e2d03c15f665"],
+Cell[2943, 68, 614, 15, 53, "Input",ExpressionUUID->"97481b95-34cc-46c4-9ef6-d0962febf1ae"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3594, 88, 156, 3, 77, "Title",ExpressionUUID->"a4434970-fd74-4d48-bac4-6d2b1f7c5593"],
+Cell[3753, 93, 1447, 37, 68, "Input",ExpressionUUID->"a478bfd4-f894-47d8-8100-9c60e4bbc7dd"],
+Cell[5203, 132, 1908, 38, 98, "Input",ExpressionUUID->"dea9b66b-5168-401f-b5fb-5f05859a718e"],
+Cell[7114, 172, 13894, 338, 814, "Input",ExpressionUUID->"637867cd-f9f1-493b-8685-d32cf5848379"],
+Cell[21011, 512, 1024, 17, 22, "Input",ExpressionUUID->"a6b6358d-0a28-ff44-ac4f-85c198e4700a"],
+Cell[22038, 531, 2462, 57, 68, "Input",ExpressionUUID->"aeb193d5-6934-4471-b364-43064751ec24"],
+Cell[24503, 590, 291, 4, 22, "Input",ExpressionUUID->"8ab312df-2b80-460b-8caf-f7e759681bbf"],
+Cell[24797, 596, 1138, 27, 83, "Input",ExpressionUUID->"25263113-43d1-48a3-b6e9-b8c7f1c38dc7"],
+Cell[25938, 625, 2510, 62, 159, "Input",ExpressionUUID->"90da5275-308a-4fab-b7f3-cb6e04aa24c8"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[28485, 692, 150, 3, 57, "Title",ExpressionUUID->"fffbbe86-5350-48ac-8c8f-88a67cd6c7b0"],
+Cell[28638, 697, 10242, 263, 570, "Input",ExpressionUUID->"9f9efd55-241e-48e5-8ed7-34d483fee98f"],
+Cell[CellGroupData[{
+Cell[38905, 964, 440, 8, 53, "Input",ExpressionUUID->"61342174-0782-4c04-9a5d-68bd8cb6a257"],
+Cell[39348, 974, 2959, 54, 223, "Output",ExpressionUUID->"63f44f00-4880-934c-b5ef-611dd0545489"],
+Cell[42310, 1030, 3426, 66, 238, "Output",ExpressionUUID->"9a4e3442-7d1d-e941-819b-19f5c912ad14"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[45785, 1102, 203, 4, 57, "Title",ExpressionUUID->"fffae688-7bc9-478c-a873-e8cf7292a7a0"],
+Cell[CellGroupData[{
+Cell[46013, 1110, 6688, 167, 372, "Input",ExpressionUUID->"859bc055-4697-48d1-8056-ac75dc766fa5"],
+Cell[52704, 1279, 80895, 1504, 9322, "Output",ExpressionUUID->"333fb199-6b66-bb42-8dbc-8c435b9f4258"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[133648, 2789, 261, 4, 57, "Title",ExpressionUUID->"c42ebb31-2841-4189-9193-2d96b34c38df"],
+Cell[CellGroupData[{
+Cell[133934, 2797, 164, 3, 35, "Subsubsection",ExpressionUUID->"203e4350-7be3-6e49-aec5-96acae99d189"],
+Cell[134101, 2802, 3370, 62, 394, "Text",ExpressionUUID->"9d4ca270-7cd8-4c32-af31-29380ec23e8b"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[137520, 2870, 149, 3, 57, "Title",ExpressionUUID->"bad5483f-188a-40b4-85c5-02afc5ac2395"],
+Cell[CellGroupData[{
+Cell[137694, 2877, 293, 5, 37, "Input",ExpressionUUID->"ffa89a97-d499-486a-8c8c-95b451cc32f4"],
+Cell[137990, 2884, 802, 14, 40, "Output",ExpressionUUID->"551150b5-3a40-9945-b43f-9f228efc838f"]
+}, Open  ]],
+Cell[138807, 2901, 515, 11, 22, "Input",ExpressionUUID->"2eea9e40-2941-4253-8a0e-e293f76f4b01"],
+Cell[139325, 2914, 512, 14, 37, "Input",ExpressionUUID->"88487ca7-f9f1-4d14-9246-f18b0dd06998"],
+Cell[139840, 2930, 8889, 249, 494, "Input",ExpressionUUID->"d7ad0640-d3f3-45fe-9c83-eaaf9f379350"],
+Cell[148732, 3181, 190, 3, 22, "Input",ExpressionUUID->"4e00205c-42d0-48c3-8fda-d291b40717a4"],
+Cell[CellGroupData[{
+Cell[148947, 3188, 703, 19, 68, "Input",ExpressionUUID->"373ab57f-f331-c343-b1d0-a7057534821a"],
+Cell[149653, 3209, 600, 10, 25, "Output",ExpressionUUID->"b46603e4-a67b-0748-b814-a0ca95ad46bf"],
+Cell[150256, 3221, 698, 14, 25, "Output",ExpressionUUID->"a48a5d0d-cc19-264b-a835-15dc73c116bf"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[150991, 3240, 623, 14, 37, "Input",ExpressionUUID->"db2f3bf2-de81-4a3e-96fa-107ac70c5484"],
+Cell[151617, 3256, 975, 24, 61, "Output",ExpressionUUID->"76b7ba70-9c82-3a43-ba71-0865e255c9ea"],
+Cell[152595, 3282, 881, 21, 25, "Output",ExpressionUUID->"df3bfb20-9c86-8c4c-b3e8-e14e9d2219e6"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[153513, 3308, 598, 11, 22, "Input",ExpressionUUID->"73510aa1-0601-43ef-a917-9b6030a49c2d"],
+Cell[154114, 3321, 824, 13, 25, "Output",ExpressionUUID->"fd08756d-233a-4645-99fc-cdd951b4a49c"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[154975, 3339, 3171, 84, 159, "Input",ExpressionUUID->"a76dd2db-3911-444f-8c93-5f2e85ff22ef"],
+Cell[158149, 3425, 804, 12, 25, "Output",ExpressionUUID->"43455594-e0e6-3a42-a3f9-0e1f3078be6f"],
+Cell[158956, 3439, 1296, 27, 25, "Output",ExpressionUUID->"b25f73d6-8b37-8b4b-89a9-e52c60af711e"],
+Cell[160255, 3468, 856, 14, 25, "Output",ExpressionUUID->"2c49a7fb-5646-524f-8188-707544e9f6cc"],
+Cell[161114, 3484, 1375, 29, 25, "Output",ExpressionUUID->"fab47abe-e897-5c43-b772-53a37fb24f06"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[162526, 3518, 292, 7, 22, "Input",ExpressionUUID->"7c0a7754-e715-bf42-87bc-e118bc83160b"],
+Cell[162821, 3527, 271, 4, 25, "Output",ExpressionUUID->"54aec72b-c22e-1f40-97bf-284765fa5c59"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[163129, 3536, 315, 6, 35, "Subsubsection",ExpressionUUID->"86550be3-445a-4c22-9de7-453cbb7dfb20"],
+Cell[CellGroupData[{
+Cell[163469, 3546, 836, 14, 22, "Input",ExpressionUUID->"d4a8ff57-d55e-4898-a747-524689ffbe78"],
+Cell[164308, 3562, 1090, 16, 25, "Output",ExpressionUUID->"8b471c65-ee37-3044-899d-611448c42a1b"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[165459, 3585, 165, 3, 77, "Title",ExpressionUUID->"45f519fb-2232-4fb0-9aab-dcc761baa14b"],
+Cell[165627, 3590, 1272, 26, 53, "Input",ExpressionUUID->"104c94f9-ffa8-4a6d-a6a5-10aa4652b301"],
+Cell[166902, 3618, 251, 6, 22, "Input",ExpressionUUID->"9aa407fd-7747-443b-847d-c2a59c610812"],
+Cell[167156, 3626, 923, 25, 53, "Input",ExpressionUUID->"9ddd42f5-f2c3-4df1-ba9f-6716d5eb5bbb"],
+Cell[CellGroupData[{
+Cell[168104, 3655, 201, 3, 22, "Input",ExpressionUUID->"68c2a04b-6112-4712-9f94-e4b08ec21f74"],
+Cell[168308, 3660, 1149, 16, 18, "Output",ExpressionUUID->"1269e8ea-6621-4407-9038-acac117b54d2"]
+}, Open  ]],
+Cell[169472, 3679, 3746, 91, 205, "Input",ExpressionUUID->"bebd429f-1f8a-44a4-b94a-dbb727a1baef"]
+}, Open  ]]
+}
+]
+*)
+

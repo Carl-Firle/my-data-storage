@@ -1,4 +1,4 @@
-the numbers are the `year` of start, the rest is the short name of the study `_` 
+the numbers are the `year` of project start, the rest is the short name of the study `_` 
 
 + __2024_effects-mask-wearing__ is data from the study `Effects of mask wearing on human particle emission`<br>The data are from a test that measures the air cleaner activity and the distribution of particle containing air of the laboratory into the cabins over night
 + __2020_aerosol-speaking-masks__ is data from the study `Aerosol emission rates from breathing, speaking, and speaking with a surgical mask`... to be published<br>All raw data and Mathematica evaluations sheets are online. Data refers also to data from __20250731-01__.

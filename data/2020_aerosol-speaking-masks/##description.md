@@ -8,4 +8,7 @@ The order is prescribed by the starting index number.
 + __02_Aerosol 0180__ = task plots for particle emission rate
 + __03_Aerosol 0112__ = export of all task and correlation plots (no wall loss correction)
 + __04_EmissionRates 0006 ... 0008__ = Likelihood analysis and lognormal fit
++ __05_Proportionality 0002__ = Likelihood between speaking with and without mask
++ __06_Spectra 0217__ = Particle size distribution, histogram
++ __07_Group characteristics__ = Report of participants characteristics
 

@@ -3,10 +3,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[         0,          0]
-NotebookDataLength[     82112,       2044]
-NotebookOptionsPosition[     77608,       1961]
-NotebookOutlinePosition[     78042,       1978]
-CellTagsIndexPosition[     77999,       1975]
+NotebookDataLength[     82282,       2047]
+NotebookOptionsPosition[     77777,       1964]
+NotebookOutlinePosition[     78210,       1981]
+CellTagsIndexPosition[     78167,       1978]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -693,8 +693,8 @@ Cell[BoxData[{
     RowBox[{
     "Import", 
      "[", "\"\<https://github.com/Carl-Firle/my-data-storage/raw/refs/heads/\
-main/data/20231221-01/Pubmed%20Hearing%20Loss%20Musician%20PubMed%20format.\
-txt\>\"", "]"}]}], ";"}], "\n"}], "\[IndentingNewLine]", 
+main/data/2023_review-musicians-hearing-loss/Pubmed%20Hearing%20Loss%\
+20Musician%20PubMed%20format.txt\>\"", "]"}]}], ";"}], "\n"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"dpubmed", "=", 
    RowBox[{"StringReplace", "[", 
@@ -726,11 +726,12 @@ txt\>\"", "]"}]}], ";"}], "\n"}], "\[IndentingNewLine]",
           " ", "\"\<DP  \>\"", ",", " ", "\"\<LA  \>\"", ",", 
           " ", "\"\<JT  \>\"", ",", " ", "\"\<PT  \>\"", ",", 
           " ", "\"\<AID \>\"", ",", " ", "\"\<PMID\>\""}], "}"}]}], "}"}]}], 
-     "]"}]}], ";"}], "\[IndentingNewLine]", "\n", "\[IndentingNewLine]", 
+     "]"}]}], ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
   RowBox[{"(*", 
    RowBox[{
    "Titles", " ", "in", " ", "PubMed", " ", "end", " ", "with", " ", "a", " ",
-     "dot"}], "*)"}]}], "\[IndentingNewLine]", 
+     "dot"}], "*)"}]}], "\n", 
  RowBox[{
   RowBox[{
    RowBox[{
@@ -753,10 +754,10 @@ txt\>\"", "]"}]}], ";"}], "\n"}], "\[IndentingNewLine]",
      RowBox[{"listpubmed", "[", 
       RowBox[{"[", 
        RowBox[{"1", ",", "All", ",", "1", ",", "2"}], "]"}], "]"}]}]}], ";"}],
-   "\n", "\n", 
+   "\[IndentingNewLine]", "\n", 
   RowBox[{"(*", 
    RowBox[{"Titles", " ", "in", " ", "PubMed", " ", "in", " ", "brackets"}], 
-   "*)"}]}], "\[IndentingNewLine]", 
+   "*)"}]}], "\n", 
  RowBox[{
   RowBox[{
    RowBox[{
@@ -784,7 +785,7 @@ txt\>\"", "]"}]}], ";"}], "\n"}], "\[IndentingNewLine]",
      RowBox[{"listpubmed", "[", 
       RowBox[{"[", 
        RowBox[{"1", ",", "All", ",", "1", ",", "2"}], "]"}], "]"}]}]}], ";"}],
-   "\n", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", "\n", 
   RowBox[{"(*", 
    RowBox[{
    "missing", " ", "AID", " ", "are", " ", "replaced", " ", "with", " ", 
@@ -870,7 +871,7 @@ txt\>\"", "]"}]}], ";"}], "\n"}], "\[IndentingNewLine]",
            RowBox[{"\"\<PubMed PMID          Abstract\>\"", "~~", 
             RowBox[{"Shortest", "[", "a__", "]"}], 
             "~~", "\"\<Similar articles\>\""}], "->", "a"}]}], "]"}]}]}]}], 
-     "]"}]}], "\[IndentingNewLine]", "*)"}], "\[IndentingNewLine]"}], "\n", 
+     "]"}]}], "\[IndentingNewLine]", "*)"}], "\n"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"PrependTo", "[", 
    RowBox[{"listpubmed", ",", 
@@ -983,8 +984,8 @@ Cell[BoxData[{
     RowBox[{
     "Import", 
      "[", "\"\<https://github.com/Carl-Firle/my-data-storage/raw/refs/heads/\
-main/data/20231221-01/Embase%20Hearing%20Loss%20Musician%20Embase%20RIS.txt\>\
-\"", "]"}]}], ";"}], "\n"}], "\[IndentingNewLine]", 
+main/data/2023_review-musicians-hearing-loss/Embase%20Hearing%20Loss%\
+20Musician%20Embase%20RIS.txt\>\"", "]"}]}], ";"}], "\n"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"dembase", "=", 
    RowBox[{"StringSplit", "[", 
@@ -1011,11 +1012,11 @@ main/data/20231221-01/Embase%20Hearing%20Loss%20Musician%20Embase%20RIS.txt\>\
           " ", "\"\<Y1  \>\"", ",", " ", "\"\<LA  \>\"", ",", 
           " ", "\"\<JF  \>\"", ",", " ", "\"\<TY  \>\"", ",", 
           " ", "\"\<L2  \>\"", ",", " ", "\"\<U2  \>\""}], "}"}]}], "}"}]}], 
-     "]"}]}], ";"}], "\[IndentingNewLine]", "\n", 
+     "]"}]}], ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
   RowBox[{"(*", 
    RowBox[{
    "missing", " ", "AID", " ", "are", " ", "replaced", " ", "with", " ", 
-    "Embase", " ", "ID", " ", "and", " ", "Embse", " ", "URL"}], "*)"}]}], "\[IndentingNewLine]", 
+    "Embase", " ", "ID", " ", "and", " ", "Embse", " ", "URL"}], "*)"}]}], "\n", 
  RowBox[{
   RowBox[{
    RowBox[{"newAID", "=", 
@@ -1159,8 +1160,8 @@ Cell[BoxData[{
     RowBox[{
     "Import", 
      "[", "\"\<https://github.com/Carl-Firle/my-data-storage/raw/refs/heads/\
-main/data/20231221-01/Cochrane%20Library%20Hearing%20Loss%20Musician%20RIS.\
-txt\>\"", "]"}]}], ";"}], "\[IndentingNewLine]"}], "\n", 
+main/data/2023_review-musicians-hearing-loss/Cochrane%20Library%20Hearing%\
+20Loss%20Musician%20RIS.txt\>\"", "]"}]}], ";"}], "\[IndentingNewLine]"}], "\n", 
  RowBox[{
   RowBox[{
    RowBox[{"dcochrane", "=", 
@@ -1232,7 +1233,7 @@ txt\>\"", "]"}]}], ";"}], "\[IndentingNewLine]"}], "\n",
    RowBox[{"dcochranelist", "=", 
     RowBox[{"Flatten", "/@", 
      RowBox[{"Transpose", "@", "dcochranelist"}]}]}], ";"}], 
-  "\[IndentingNewLine]", "\n"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", "\[IndentingNewLine]"}], "\n", 
  RowBox[{
   RowBox[{
    RowBox[{"dcochranelist", "=", 
@@ -1368,12 +1369,14 @@ Cell[BoxData[
      RowBox[{
      "Get", "[", \
 "\"\<https://github.com/Carl-Firle/my-data-storage/raw/refs/heads/main/data/\
-20231221-01/Screening%20List%20Data.m\>\"", "]"}], "[", 
+2023_review-musicians-hearing-loss/Screening%20List%20Data.m\>\"", "]"}], "[", 
      RowBox[{"[", "4", "]"}], "]"}]}], ";"}], 
   "\[IndentingNewLine]"}]], "Input",
  CellChangeTimes->{{3.901644004108618*^9, 3.9016440481373625`*^9}, {
   3.9637386612495594`*^9, 3.963738684198534*^9}},
- Background->None,ExpressionUUID->"88487ca7-f9f1-4d14-9246-f18b0dd06998"],
+ Background->None,
+ CellLabel->
+  "In[226]:=",ExpressionUUID->"88487ca7-f9f1-4d14-9246-f18b0dd06998"],
 
 Cell[BoxData[
  RowBox[{
@@ -1951,16 +1954,16 @@ Cell[BoxData["\<\"H:\\\\Projekte\\\\Musikermedizin\\\\L\[ADoubleDot]rmschwerh\
 
 Cell["\<\
 for output see
-https://github.com/Carl-Firle/my-data-storage/raw/refs/heads/main/data/\
-20231221-01/Screening%20List.xlsx\
+https://github.com/Carl-Firle/my-data-storage/raw/refs/heads/main/data/2023_\
+review-musicians-hearing-loss/Screening%20List.xlsx\
 \>", "Subsection",
- CellChangeTimes->{{3.963587437323147*^9, 
-  3.9635874469497833`*^9}},ExpressionUUID->"b970a12a-4db5-3f48-a618-\
+ CellChangeTimes->{{3.963587437323147*^9, 3.9635874469497833`*^9}, 
+   3.964278035482971*^9},ExpressionUUID->"b970a12a-4db5-3f48-a618-\
 f092a95c3c06"]
 }, Open  ]]
 },
-WindowSize->{747, 729.75},
-WindowMargins->{{12, Automatic}, {Automatic, 22.5}},
+WindowSize->{718.5, 735},
+WindowMargins->{{Automatic, -5.25}, {Automatic, 0}},
 Magnification:>0.8 Inherited,
 FrontEndVersion->"14.2 for Microsoft Windows (64-bit) (March 14, 2025)",
 StyleDefinitions->"Default.nb",
@@ -1984,7 +1987,7 @@ Cell[CellGroupData[{
 Cell[3670, 91, 156, 3, 77, "Title",ExpressionUUID->"a4434970-fd74-4d48-bac4-6d2b1f7c5593"],
 Cell[3829, 96, 1429, 38, 83, "Input",ExpressionUUID->"a478bfd4-f894-47d8-8100-9c60e4bbc7dd"],
 Cell[5261, 136, 1920, 39, 129, "Input",ExpressionUUID->"dea9b66b-5168-401f-b5fb-5f05859a718e"],
-Cell[7184, 177, 14094, 342, 951, "Input",ExpressionUUID->"637867cd-f9f1-493b-8685-d32cf5848379"],
+Cell[7184, 177, 14094, 342, 1027, "Input",ExpressionUUID->"637867cd-f9f1-493b-8685-d32cf5848379"],
 Cell[21281, 521, 2488, 58, 98, "Input",ExpressionUUID->"aeb193d5-6934-4471-b364-43064751ec24"],
 Cell[23772, 581, 295, 5, 22, "Input",ExpressionUUID->"8ab312df-2b80-460b-8caf-f7e759681bbf"],
 Cell[24070, 588, 1138, 27, 83, "Input",ExpressionUUID->"25263113-43d1-48a3-b6e9-b8c7f1c38dc7"],
@@ -1992,52 +1995,52 @@ Cell[25211, 617, 2498, 60, 174, "Input",ExpressionUUID->"90da5275-308a-4fab-b7f3
 }, Closed]],
 Cell[CellGroupData[{
 Cell[27746, 682, 150, 3, 57, "Title",ExpressionUUID->"fffbbe86-5350-48ac-8c8f-88a67cd6c7b0"],
-Cell[27899, 687, 10225, 261, 692, "Input",ExpressionUUID->"9f9efd55-241e-48e5-8ed7-34d483fee98f"],
-Cell[38127, 950, 665, 16, 68, "Input",ExpressionUUID->"61342174-0782-4c04-9a5d-68bd8cb6a257"]
+Cell[27899, 687, 10251, 262, 692, "Input",ExpressionUUID->"9f9efd55-241e-48e5-8ed7-34d483fee98f"],
+Cell[38153, 951, 665, 16, 68, "Input",ExpressionUUID->"61342174-0782-4c04-9a5d-68bd8cb6a257"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[38829, 971, 203, 4, 57, "Title",ExpressionUUID->"fffae688-7bc9-478c-a873-e8cf7292a7a0"],
-Cell[39035, 977, 6738, 165, 433, "Input",ExpressionUUID->"859bc055-4697-48d1-8056-ac75dc766fa5"]
+Cell[38855, 972, 203, 4, 57, "Title",ExpressionUUID->"fffae688-7bc9-478c-a873-e8cf7292a7a0"],
+Cell[39061, 978, 6761, 165, 433, "Input",ExpressionUUID->"859bc055-4697-48d1-8056-ac75dc766fa5"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[45810, 1147, 261, 4, 57, "Title",ExpressionUUID->"c42ebb31-2841-4189-9193-2d96b34c38df"],
-Cell[46074, 1153, 6885, 155, 494, "Input",ExpressionUUID->"9d4ca270-7cd8-4c32-af31-29380ec23e8b"]
+Cell[45859, 1148, 261, 4, 57, "Title",ExpressionUUID->"c42ebb31-2841-4189-9193-2d96b34c38df"],
+Cell[46123, 1154, 6908, 155, 494, "Input",ExpressionUUID->"9d4ca270-7cd8-4c32-af31-29380ec23e8b"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[52996, 1313, 149, 3, 57, "Title",ExpressionUUID->"bad5483f-188a-40b4-85c5-02afc5ac2395"],
+Cell[53068, 1314, 149, 3, 57, "Title",ExpressionUUID->"bad5483f-188a-40b4-85c5-02afc5ac2395"],
 Cell[CellGroupData[{
-Cell[53170, 1320, 297, 6, 37, "Input",ExpressionUUID->"ffa89a97-d499-486a-8c8c-95b451cc32f4"],
-Cell[53470, 1328, 782, 15, 40, "Output",ExpressionUUID->"14bc01eb-2d91-4d89-96c4-23c629ea602f"]
+Cell[53242, 1321, 297, 6, 37, "Input",ExpressionUUID->"ffa89a97-d499-486a-8c8c-95b451cc32f4"],
+Cell[53542, 1329, 782, 15, 40, "Output",ExpressionUUID->"14bc01eb-2d91-4d89-96c4-23c629ea602f"]
 }, Open  ]],
-Cell[54267, 1346, 563, 14, 22, "Input",ExpressionUUID->"2eea9e40-2941-4253-8a0e-e293f76f4b01"],
-Cell[54833, 1362, 527, 13, 83, "Input",ExpressionUUID->"88487ca7-f9f1-4d14-9246-f18b0dd06998"],
-Cell[55363, 1377, 11476, 319, 707, "Input",ExpressionUUID->"d7ad0640-d3f3-45fe-9c83-eaaf9f379350"],
-Cell[66842, 1698, 190, 3, 22, "Input",ExpressionUUID->"4e00205c-42d0-48c3-8fda-d291b40717a4"],
+Cell[54339, 1347, 563, 14, 37, "Input",ExpressionUUID->"2eea9e40-2941-4253-8a0e-e293f76f4b01"],
+Cell[54905, 1363, 578, 15, 136, "Input",ExpressionUUID->"88487ca7-f9f1-4d14-9246-f18b0dd06998"],
+Cell[55486, 1380, 11476, 319, 707, "Input",ExpressionUUID->"d7ad0640-d3f3-45fe-9c83-eaaf9f379350"],
+Cell[66965, 1701, 190, 3, 22, "Input",ExpressionUUID->"4e00205c-42d0-48c3-8fda-d291b40717a4"],
 Cell[CellGroupData[{
-Cell[67057, 1705, 433, 10, 22, "Input",ExpressionUUID->"8776309a-eca4-4f77-bf99-e510f59f8071"],
-Cell[67493, 1717, 502, 8, 25, "Output",ExpressionUUID->"783b9929-cb73-4a2c-9f99-21d2f7372ede"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[68032, 1730, 370, 10, 22, "Input",ExpressionUUID->"db2f3bf2-de81-4a3e-96fa-107ac70c5484"],
-Cell[68405, 1742, 882, 23, 74, "Output",ExpressionUUID->"17d1fa4c-810a-4f96-b57b-8291f0fabada"]
+Cell[67180, 1708, 433, 10, 22, "Input",ExpressionUUID->"8776309a-eca4-4f77-bf99-e510f59f8071"],
+Cell[67616, 1720, 502, 8, 25, "Output",ExpressionUUID->"783b9929-cb73-4a2c-9f99-21d2f7372ede"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[69324, 1770, 634, 13, 22, "Input",ExpressionUUID->"73510aa1-0601-43ef-a917-9b6030a49c2d"],
-Cell[69961, 1785, 783, 12, 25, "Output",ExpressionUUID->"59c2c08e-429b-4697-ae1b-b8ccb76b7daa"]
+Cell[68155, 1733, 370, 10, 22, "Input",ExpressionUUID->"db2f3bf2-de81-4a3e-96fa-107ac70c5484"],
+Cell[68528, 1745, 882, 23, 74, "Output",ExpressionUUID->"17d1fa4c-810a-4f96-b57b-8291f0fabada"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[70781, 1802, 2622, 68, 129, "Input",ExpressionUUID->"a76dd2db-3911-444f-8c93-5f2e85ff22ef"],
-Cell[73406, 1872, 734, 11, 25, "Output",ExpressionUUID->"80469039-4fc5-464b-bed6-65e4cc0cc70e"],
-Cell[74143, 1885, 786, 13, 25, "Output",ExpressionUUID->"4f37c93b-6600-4f60-a88e-abb3baadc81c"]
+Cell[69447, 1773, 634, 13, 22, "Input",ExpressionUUID->"73510aa1-0601-43ef-a917-9b6030a49c2d"],
+Cell[70084, 1788, 783, 12, 25, "Output",ExpressionUUID->"59c2c08e-429b-4697-ae1b-b8ccb76b7daa"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[74966, 1903, 315, 6, 55, "Subsubsection",ExpressionUUID->"86550be3-445a-4c22-9de7-453cbb7dfb20"],
+Cell[70904, 1805, 2622, 68, 129, "Input",ExpressionUUID->"a76dd2db-3911-444f-8c93-5f2e85ff22ef"],
+Cell[73529, 1875, 734, 11, 25, "Output",ExpressionUUID->"80469039-4fc5-464b-bed6-65e4cc0cc70e"],
+Cell[74266, 1888, 786, 13, 25, "Output",ExpressionUUID->"4f37c93b-6600-4f60-a88e-abb3baadc81c"]
+}, Open  ]],
 Cell[CellGroupData[{
-Cell[75306, 1913, 884, 16, 22, "Input",ExpressionUUID->"d4a8ff57-d55e-4898-a747-524689ffbe78"],
-Cell[76193, 1931, 1093, 16, 25, "Output",ExpressionUUID->"a2d64f8c-bc43-45c6-b535-4d86cb60aeee"]
+Cell[75089, 1906, 315, 6, 55, "Subsubsection",ExpressionUUID->"86550be3-445a-4c22-9de7-453cbb7dfb20"],
+Cell[CellGroupData[{
+Cell[75429, 1916, 884, 16, 22, "Input",ExpressionUUID->"d4a8ff57-d55e-4898-a747-524689ffbe78"],
+Cell[76316, 1934, 1093, 16, 25, "Output",ExpressionUUID->"a2d64f8c-bc43-45c6-b535-4d86cb60aeee"]
 }, Open  ]]
 }, Open  ]],
-Cell[77313, 1951, 279, 7, 84, "Subsection",ExpressionUUID->"b970a12a-4db5-3f48-a618-f092a95c3c06"]
+Cell[77436, 1954, 325, 7, 84, "Subsection",ExpressionUUID->"b970a12a-4db5-3f48-a618-f092a95c3c06"]
 }, Open  ]]
 }
 ]

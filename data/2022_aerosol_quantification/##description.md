@@ -1,5 +1,5 @@
-# This is the repository for the data evaluation files of <br><br> `Quantification of human aerosol emission`
-## https://doi.org/
+# This is the repository for the data evaluation files of <br><br> `Quantification of Human Aerosol Emission by Measuring Different Breathing Patterns`
+## https://doi.org/10.1016/j.jaerosci.2025.106680
 
 The Wolfram Mathematica files are created with the Version 13.0.1 and 14.1.
 The order is prescribed by the index number.

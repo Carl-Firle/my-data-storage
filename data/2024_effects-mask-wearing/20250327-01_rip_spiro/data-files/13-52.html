@@ -1,0 +1,693 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0016)http://localhost -->
+<html>
+<head>
+	<title>nddReportSvc</title>
+	<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8"/>
+	<style type="text/css">
+		.cs1641DC4 {color:#000000;background-color:#FFFFFF;border-left-style: none;border-top-style: none;border-right-style: none;border-bottom-style: none;font-family:Arial; font-size:9px; font-weight:normal; font-style:normal; }
+		.cs5B67F9F8 {color:#0000FF;background-color:#E2EEFA;border-left-style: none;border-top-style: none;border-right-style: none;border-bottom-style: none;font-family:'Segoe UI'; font-size:9px; font-weight:bold; font-style:normal; }
+		.csDACCFF58 {color:#0000FF;background-color:#FFFFFF;border-left-style: none;border-top-style: none;border-right-style: none;border-bottom-style: none;font-family:Arial; font-size:9px; font-weight:bold; font-style:normal; }
+		.cs5B0FAC7C {color:#0000FF;background-color:#FFFFFF;border-left-style: none;border-top-style: none;border-right-style: none;border-bottom-style: none;font-family:'Segoe UI'; font-size:9px; font-weight:bold; font-style:normal; }
+		.cs8F05A429 {color:#336699;background-color:transparent;border-left-style: none;border-top-style: none;border-right-style: none;border-bottom-style: none;font-family:'Segoe UI Semibold'; font-size:9px; font-weight:normal; font-style:normal; }
+		.csB5928145 {color:#336699;background-color:transparent;border-left-style: none;border-top-style: none;border-right-style: none;border-bottom-style: none;font-family:'Segoe UI Semibold'; font-size:9px; font-weight:normal; font-style:normal; padding-left:7px;}
+		.csE0649787 {color:#336699;background-color:transparent;border-left-style: none;border-top-style: none;border-right-style: none;border-bottom-style: none;font-family:'Segoe UI'; font-size:13px; font-weight:bold; font-style:normal; }
+		.cs21756D53 {color:#336699;background-color:transparent;border-left-style: none;border-top-style: none;border-right-style: none;border-bottom-style: none;font-family:'Segoe UI'; font-size:16px; font-weight:bold; font-style:normal; }
+		.cs812E223D {color:#404040;background-color:#E2EEFA;border-left-style: none;border-top-style: none;border-right-style: none;border-bottom-style: none;font-family:'Segoe UI'; font-size:9px; font-weight:bold; font-style:normal; }
+		.cs3775BB5E {color:#404040;background-color:#E2EEFA;border-left-style: none;border-top-style: none;border-right-style: none;border-bottom-style: none;font-family:'Segoe UI'; font-size:9px; font-weight:bold; font-style:normal; text-decoration: line-through;}
+		.csB9D33425 {color:#404040;background-color:#FFFFFF;border-left-style: none;border-top-style: none;border-right-style: none;border-bottom-style: none;font-family:Arial; font-size:9px; font-weight:normal; font-style:normal; }
+		.cs7F28D5E9 {color:#404040;background-color:#FFFFFF;border-left-style: none;border-top-style: none;border-right-style: none;border-bottom-style: none;font-family:'Segoe UI Semibold'; font-size:9px; font-weight:normal; font-style:normal; }
+		.cs64C391FA {color:#404040;background-color:#FFFFFF;border-left-style: none;border-top-style: none;border-right-style: none;border-bottom-style: none;font-family:'Segoe UI'; font-size:9px; font-weight:bold; font-style:normal; }
+		.cs5CD2FE1D {color:#404040;background-color:transparent;border-left-style: none;border-top-style: none;border-right-style: none;border-bottom-style: none;font-family:Arial; font-size:9px; font-weight:normal; font-style:normal; }
+		.csAFABC9C6 {color:#404040;background-color:transparent;border-left-style: none;border-top-style: none;border-right-style: none;border-bottom-style: none;font-family:'Segoe UI Semibold'; font-size:11px; font-weight:normal; font-style:normal; }
+		.csC6C78BC6 {color:#404040;background-color:transparent;border-left-style: none;border-top-style: none;border-right-style: none;border-bottom-style: none;font-family:'Segoe UI Semibold'; font-size:7px; font-weight:normal; font-style:normal; padding-left:2px;}
+		.cs101C97B6 {color:#404040;background-color:transparent;border-left-style: none;border-top-style: none;border-right-style: none;border-bottom-style: none;font-family:'Segoe UI Semibold'; font-size:7px; font-weight:normal; font-style:normal; padding-left:2px;padding-right:2px;}
+		.cs19AFE9B5 {color:#404040;background-color:transparent;border-left-style: none;border-top-style: none;border-right-style: none;border-bottom-style: none;font-family:'Segoe UI Semibold'; font-size:9px; font-weight:normal; font-style:normal; }
+		.cs8C6B0BAD {color:#404040;background-color:transparent;border-left-style: none;border-top-style: none;border-right-style: none;border-bottom-style: none;font-family:'Segoe UI'; font-size:9px; font-weight:bold; font-style:normal; }
+		.cs85F0A40A {color:#96CCCC;background-color:#96CCCC;border-left-style: none;border-top-style: none;border-right-style: none;border-bottom-style: none;font-family:'Segoe UI Semibold'; font-size:7px; font-weight:normal; font-style:normal; }
+		.csFDEEF29A {color:#96CCCC;background-color:#96CCCC;border-left-style: none;border-top-style: none;border-right-style: none;border-bottom-style: none;font-family:'Segoe UI Semibold'; font-size:9px; font-weight:normal; font-style:normal; }
+		.cs17E16D43 {color:#96CCCC;background-color:transparent;border-left-style: none;border-top-style: none;border-right-style: none;border-bottom-style: none;font-family:'Segoe UI Semibold'; font-size:7px; font-weight:normal; font-style:normal; }
+		.cs372BAF38 {color:#96CCCC;background-color:transparent;border-left-style: none;border-top-style: none;border-right-style: none;border-bottom-style: none;font-family:'Segoe UI Semibold'; font-size:9px; font-weight:normal; font-style:normal; }
+		.csF7D3565D {height:0px;width:0px;overflow:hidden;font-size:0px;line-height:0px;}
+	</style>
+</head>
+<body leftMargin=10 topMargin=10 rightMargin=10 bottomMargin=10 style="background-color:#FFFFFF">
+<table cellpadding="0" cellspacing="0" border="0" style="border-width:0px;empty-cells:show;width:691px;height:673px;position:relative;">
+	<tr>
+		<td style="width:0px;height:0px;"></td>
+		<td style="height:0px;width:25px;"></td>
+		<td style="height:0px;width:34px;"></td>
+		<td style="height:0px;width:35px;"></td>
+		<td style="height:0px;width:3px;"></td>
+		<td style="height:0px;width:32px;"></td>
+		<td style="height:0px;width:7px;"></td>
+		<td style="height:0px;width:39px;"></td>
+		<td style="height:0px;width:6px;"></td>
+		<td style="height:0px;width:33px;"></td>
+		<td style="height:0px;width:13px;"></td>
+		<td style="height:0px;width:5px;"></td>
+		<td style="height:0px;width:21px;"></td>
+		<td style="height:0px;width:31px;"></td>
+		<td style="height:0px;width:8px;"></td>
+		<td style="height:0px;width:34px;"></td>
+		<td style="height:0px;width:5px;"></td>
+		<td style="height:0px;width:32px;"></td>
+		<td style="height:0px;width:29px;"></td>
+		<td style="height:0px;width:5px;"></td>
+		<td style="height:0px;width:5px;"></td>
+		<td style="height:0px;width:8px;"></td>
+		<td style="height:0px;width:1px;"></td>
+		<td style="height:0px;width:48px;"></td>
+		<td style="height:0px;width:6px;"></td>
+		<td style="height:0px;width:65px;"></td>
+		<td style="height:0px;width:29px;"></td>
+		<td style="height:0px;width:8px;"></td>
+		<td style="height:0px;width:93px;"></td>
+		<td style="height:0px;width:8px;"></td>
+		<td style="height:0px;width:12px;"></td>
+		<td style="height:0px;width:11px;"></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:22px;"></td>
+		<td class="cs21756D53" colspan="18" rowspan="2" style="width:392px;height:23px;line-height:22px;text-align:left;vertical-align:top;"><nobr>BAuA</nobr></td>
+		<td></td>
+		<td class="cs19AFE9B5" colspan="12" rowspan="5" style="width:294px;height:61px;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:1px;"></td>
+		<td class="csAFABC9C6" colspan="18" rowspan="2" style="width:392px;height:14px;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:13px;"></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:15px;"></td>
+		<td class="csAFABC9C6" colspan="18" style="width:392px;height:15px;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:10px;"></td>
+		<td class="csAFABC9C6" colspan="18" rowspan="2" style="width:392px;height:14px;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:4px;"></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:20px;"></td>
+		<td class="csE0649787" colspan="15" style="width:327px;height:20px;line-height:18px;text-align:left;vertical-align:bottom;"><nobr>Firle,&nbsp;Carl</nobr></td>
+		<td class="csE0649787" colspan="16" style="width:364px;height:20px;line-height:18px;text-align:left;vertical-align:bottom;"><nobr>ID:&nbsp;#0050&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Alter:&nbsp;34&nbsp;(03.05.1990)</nobr></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:1px;"></td>
+		<td class="csFDEEF29A" colspan="31" style="width:691px;height:1px;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:1px;"></td>
+		<td class="cs372BAF38" colspan="31" style="width:691px;height:1px;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:4px;"></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:15px;"></td>
+		<td class="cs19AFE9B5" colspan="3" style="width:94px;height:15px;line-height:12px;text-align:left;vertical-align:top;"><nobr>Geschlecht&nbsp;bei&nbsp;Geburt</nobr></td>
+		<td class="cs8F05A429" colspan="7" style="width:133px;height:15px;line-height:12px;text-align:left;vertical-align:top;"><nobr>M&#228;nnlich</nobr></td>
+		<td></td>
+		<td class="cs19AFE9B5" colspan="4" style="width:95px;height:15px;line-height:12px;text-align:left;vertical-align:top;"><nobr>Gr&#246;&#223;e</nobr></td>
+		<td class="cs8F05A429" colspan="8" style="width:132px;height:15px;line-height:12px;text-align:left;vertical-align:top;"><nobr>174&nbsp;cm</nobr></td>
+		<td></td>
+		<td class="cs19AFE9B5" colspan="2" style="width:94px;height:15px;line-height:12px;text-align:left;vertical-align:top;"><nobr>Asthma</nobr></td>
+		<td class="cs8F05A429" colspan="5" style="width:132px;height:15px;line-height:12px;text-align:left;vertical-align:top;"><nobr>--</nobr></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:15px;"></td>
+		<td class="cs19AFE9B5" colspan="3" style="width:94px;height:15px;line-height:12px;text-align:left;vertical-align:top;"><nobr>Ethnie</nobr></td>
+		<td class="cs8F05A429" colspan="7" style="width:133px;height:15px;line-height:12px;text-align:left;vertical-align:top;"><nobr>Europ&#228;er</nobr></td>
+		<td></td>
+		<td class="cs19AFE9B5" colspan="4" style="width:95px;height:15px;line-height:12px;text-align:left;vertical-align:top;"><nobr>Gewicht</nobr></td>
+		<td class="cs8F05A429" colspan="2" style="width:36px;height:15px;line-height:12px;text-align:left;vertical-align:top;"><nobr>66&nbsp;kg</nobr></td>
+		<td class="cs19AFE9B5" colspan="3" style="width:39px;height:15px;line-height:12px;text-align:right;vertical-align:top;"><nobr>BMI</nobr></td>
+		<td class="csB5928145" colspan="3" style="width:50px;height:15px;line-height:12px;text-align:left;vertical-align:top;"><nobr>21.8</nobr></td>
+		<td></td>
+		<td class="cs19AFE9B5" colspan="2" style="width:94px;height:15px;line-height:12px;text-align:left;vertical-align:top;"><nobr>COPD</nobr></td>
+		<td class="cs8F05A429" colspan="5" style="width:132px;height:15px;line-height:12px;text-align:left;vertical-align:top;"><nobr>--</nobr></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:4px;"></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:20px;"></td>
+		<td class="csE0649787" style="width:25px;height:20px;line-height:18px;text-align:left;vertical-align:bottom;"><nobr>SVC</nobr></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:2px;"></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:1px;"></td>
+		<td class="csFDEEF29A" colspan="31" style="width:691px;height:1px;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:1px;"></td>
+		<td class="cs372BAF38" colspan="31" style="width:691px;height:1px;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:4px;"></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:14px;"></td>
+		<td class="cs19AFE9B5" colspan="3" style="width:94px;height:14px;line-height:12px;text-align:left;vertical-align:top;"><nobr>Testdatum</nobr></td>
+		<td class="cs8F05A429" colspan="7" style="width:133px;height:14px;line-height:12px;text-align:left;vertical-align:top;"><nobr>27.03.2025&nbsp;13:20:14</nobr></td>
+		<td></td>
+		<td class="cs19AFE9B5" colspan="4" style="width:94px;height:14px;line-height:12px;text-align:left;vertical-align:top;"><nobr>Interpretation</nobr></td>
+		<td class="cs8F05A429" colspan="8" style="width:133px;height:14px;line-height:12px;text-align:left;vertical-align:top;"><nobr>--</nobr></td>
+		<td></td>
+		<td class="cs19AFE9B5" colspan="3" rowspan="2" style="width:102px;height:17px;line-height:12px;text-align:left;vertical-align:top;"><nobr>BTPS&nbsp;(IN/EX)</nobr></td>
+		<td class="cs8F05A429" colspan="4" rowspan="2" style="width:124px;height:17px;line-height:12px;text-align:left;vertical-align:top;"><nobr>1,11/1,02</nobr></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:3px;"></td>
+		<td class="cs19AFE9B5" colspan="3" rowspan="2" style="width:94px;height:15px;line-height:12px;text-align:left;vertical-align:top;"><nobr>Post-Zeit</nobr></td>
+		<td class="cs8F05A429" colspan="7" rowspan="2" style="width:133px;height:15px;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td></td>
+		<td class="cs19AFE9B5" colspan="4" rowspan="2" style="width:94px;height:15px;line-height:12px;text-align:left;vertical-align:top;"><nobr>Sollwert</nobr></td>
+		<td class="cs8F05A429" colspan="8" rowspan="2" style="width:133px;height:15px;line-height:12px;text-align:left;vertical-align:top;"><nobr>Quanjer&nbsp;(GLI),&nbsp;2012</nobr></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:12px;"></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:8px;"></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:14px;"></td>
+		<td class="cs64C391FA" colspan="2" style="width:59px;height:14px;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td class="cs5B0FAC7C" colspan="2" style="width:38px;height:14px;line-height:12px;text-align:right;vertical-align:middle;"><nobr>Pre</nobr></td>
+		<td class="cs64C391FA" colspan="2" style="width:39px;height:14px;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td class="cs64C391FA" style="width:39px;height:14px;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td class="cs64C391FA" colspan="2" style="width:39px;height:14px;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td class="cs64C391FA" colspan="3" style="width:39px;height:14px;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td class="cs64C391FA" colspan="2" style="width:39px;height:14px;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td class="cs64C391FA" colspan="2" style="width:39px;height:14px;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td class="cs8C6B0BAD" colspan="14" style="width:349px;height:14px;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:15px;"></td>
+		<td class="cs812E223D" colspan="2" style="width:59px;height:15px;line-height:12px;text-align:left;vertical-align:middle;"><nobr>Parameter</nobr></td>
+		<td class="cs5B67F9F8" colspan="2" style="width:38px;height:15px;line-height:12px;text-align:right;vertical-align:middle;"><nobr>Bester</nobr></td>
+		<td class="cs812E223D" colspan="2" style="width:39px;height:15px;line-height:12px;text-align:right;vertical-align:middle;"><nobr>UGW</nobr></td>
+		<td class="cs812E223D" style="width:39px;height:15px;line-height:12px;text-align:right;vertical-align:middle;"><nobr>Z-Score</nobr></td>
+		<td class="cs812E223D" colspan="2" style="width:39px;height:15px;line-height:12px;text-align:right;vertical-align:middle;"><nobr>%Soll</nobr></td>
+		<td class="cs812E223D" colspan="3" style="width:39px;height:15px;line-height:12px;text-align:right;vertical-align:middle;"><nobr>Soll</nobr></td>
+		<td class="cs3775BB5E" colspan="2" style="width:39px;height:15px;line-height:12px;text-align:right;vertical-align:middle;"><nobr>Vers.&nbsp;2</nobr></td>
+		<td class="cs3775BB5E" colspan="2" style="width:39px;height:15px;line-height:12px;text-align:right;vertical-align:middle;"><nobr>Vers.&nbsp;1</nobr></td>
+		<td class="cs8C6B0BAD" colspan="14" style="width:349px;height:15px;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:13px;"></td>
+		<td class="cs1641DC4" colspan="2" style="width:59px;height:13px;line-height:10px;text-align:left;vertical-align:middle;"><nobr>VC&nbsp;[L]</nobr></td>
+		<td class="csDACCFF58" colspan="2" style="width:38px;height:13px;line-height:10px;text-align:right;vertical-align:middle;"><nobr>4,07</nobr></td>
+		<td class="cs1641DC4" colspan="2" style="width:39px;height:13px;line-height:10px;text-align:right;vertical-align:middle;"><nobr>4,07</nobr></td>
+		<td class="cs1641DC4" style="width:39px;height:13px;line-height:10px;text-align:right;vertical-align:middle;"><nobr>-1,64</nobr></td>
+		<td class="cs1641DC4" colspan="2" style="width:39px;height:13px;line-height:10px;text-align:right;vertical-align:middle;"><nobr>80</nobr></td>
+		<td class="cs1641DC4" colspan="3" style="width:39px;height:13px;line-height:10px;text-align:right;vertical-align:middle;"><nobr>5,08</nobr></td>
+		<td class="cs1641DC4" colspan="2" style="width:39px;height:13px;line-height:10px;text-align:right;vertical-align:middle;"><nobr>4,07</nobr></td>
+		<td class="cs1641DC4" colspan="2" style="width:39px;height:13px;line-height:10px;text-align:right;vertical-align:middle;"><nobr>0,97*</nobr></td>
+		<td class="cs5CD2FE1D" colspan="14" style="width:349px;height:13px;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:12px;"></td>
+		<td class="cs1641DC4" colspan="2" style="width:59px;height:12px;line-height:10px;text-align:left;vertical-align:middle;"><nobr>VCex&nbsp;[L]</nobr></td>
+		<td class="csDACCFF58" colspan="2" style="width:38px;height:12px;line-height:10px;text-align:right;vertical-align:middle;"><nobr>-</nobr></td>
+		<td class="cs1641DC4" colspan="2" style="width:39px;height:12px;line-height:10px;text-align:right;vertical-align:middle;"><nobr>4,07</nobr></td>
+		<td class="cs1641DC4" style="width:39px;height:12px;line-height:10px;text-align:right;vertical-align:middle;"><nobr>-</nobr></td>
+		<td class="cs1641DC4" colspan="2" style="width:39px;height:12px;line-height:10px;text-align:right;vertical-align:middle;"><nobr>-</nobr></td>
+		<td class="cs1641DC4" colspan="3" style="width:39px;height:12px;line-height:10px;text-align:right;vertical-align:middle;"><nobr>5,08</nobr></td>
+		<td class="cs1641DC4" colspan="2" style="width:39px;height:12px;line-height:10px;text-align:right;vertical-align:middle;"><nobr>-</nobr></td>
+		<td class="cs1641DC4" colspan="2" style="width:39px;height:12px;line-height:10px;text-align:right;vertical-align:middle;"><nobr>-</nobr></td>
+		<td class="cs5CD2FE1D" colspan="14" style="width:349px;height:12px;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:13px;"></td>
+		<td class="cs1641DC4" colspan="2" style="width:59px;height:13px;line-height:10px;text-align:left;vertical-align:middle;"><nobr>VCin&nbsp;[L]</nobr></td>
+		<td class="csDACCFF58" colspan="2" style="width:38px;height:13px;line-height:10px;text-align:right;vertical-align:middle;"><nobr>4,07</nobr></td>
+		<td class="cs1641DC4" colspan="2" style="width:39px;height:13px;line-height:10px;text-align:right;vertical-align:middle;"><nobr>4,07</nobr></td>
+		<td class="cs1641DC4" style="width:39px;height:13px;line-height:10px;text-align:right;vertical-align:middle;"><nobr>-1,64</nobr></td>
+		<td class="cs1641DC4" colspan="2" style="width:39px;height:13px;line-height:10px;text-align:right;vertical-align:middle;"><nobr>80</nobr></td>
+		<td class="cs1641DC4" colspan="3" style="width:39px;height:13px;line-height:10px;text-align:right;vertical-align:middle;"><nobr>5,08</nobr></td>
+		<td class="cs1641DC4" colspan="2" style="width:39px;height:13px;line-height:10px;text-align:right;vertical-align:middle;"><nobr>4,07</nobr></td>
+		<td class="cs1641DC4" colspan="2" style="width:39px;height:13px;line-height:10px;text-align:right;vertical-align:middle;"><nobr>0,97*</nobr></td>
+		<td class="cs5CD2FE1D" colspan="14" style="width:349px;height:13px;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:12px;"></td>
+		<td class="cs1641DC4" colspan="2" style="width:59px;height:12px;line-height:10px;text-align:left;vertical-align:middle;"><nobr>IRV&nbsp;[L]</nobr></td>
+		<td class="csDACCFF58" colspan="2" style="width:38px;height:12px;line-height:10px;text-align:right;vertical-align:middle;"><nobr>1,13</nobr></td>
+		<td class="cs1641DC4" colspan="2" style="width:39px;height:12px;line-height:10px;text-align:right;vertical-align:middle;"><nobr>-</nobr></td>
+		<td class="cs1641DC4" style="width:39px;height:12px;line-height:10px;text-align:right;vertical-align:middle;"><nobr>-</nobr></td>
+		<td class="cs1641DC4" colspan="2" style="width:39px;height:12px;line-height:10px;text-align:right;vertical-align:middle;"><nobr>-</nobr></td>
+		<td class="cs1641DC4" colspan="3" style="width:39px;height:12px;line-height:10px;text-align:right;vertical-align:middle;"><nobr>-</nobr></td>
+		<td class="cs1641DC4" colspan="2" style="width:39px;height:12px;line-height:10px;text-align:right;vertical-align:middle;"><nobr>1,88</nobr></td>
+		<td class="cs1641DC4" colspan="2" style="width:39px;height:12px;line-height:10px;text-align:right;vertical-align:middle;"><nobr>0,37</nobr></td>
+		<td class="cs5CD2FE1D" colspan="14" style="width:349px;height:12px;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:12px;"></td>
+		<td class="cs1641DC4" colspan="2" style="width:59px;height:12px;line-height:10px;text-align:left;vertical-align:middle;"><nobr>IC&nbsp;[L]</nobr></td>
+		<td class="csDACCFF58" colspan="2" style="width:38px;height:12px;line-height:10px;text-align:right;vertical-align:middle;"><nobr>1,80*</nobr></td>
+		<td class="cs1641DC4" colspan="2" style="width:39px;height:12px;line-height:10px;text-align:right;vertical-align:middle;"><nobr>2,65</nobr></td>
+		<td class="cs1641DC4" style="width:39px;height:12px;line-height:10px;text-align:right;vertical-align:middle;"><nobr>-2,98</nobr></td>
+		<td class="cs1641DC4" colspan="2" style="width:39px;height:12px;line-height:10px;text-align:right;vertical-align:middle;"><nobr>49</nobr></td>
+		<td class="cs1641DC4" colspan="3" style="width:39px;height:12px;line-height:10px;text-align:right;vertical-align:middle;"><nobr>3,68</nobr></td>
+		<td class="cs1641DC4" colspan="2" style="width:39px;height:12px;line-height:10px;text-align:right;vertical-align:middle;"><nobr>2,82</nobr></td>
+		<td class="cs1641DC4" colspan="2" style="width:39px;height:12px;line-height:10px;text-align:right;vertical-align:middle;"><nobr>0,78*</nobr></td>
+		<td class="cs5CD2FE1D" colspan="14" style="width:349px;height:12px;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:13px;"></td>
+		<td class="cs1641DC4" colspan="2" style="width:59px;height:13px;line-height:10px;text-align:left;vertical-align:middle;"><nobr>VT&nbsp;[L]</nobr></td>
+		<td class="csDACCFF58" colspan="2" style="width:38px;height:13px;line-height:10px;text-align:right;vertical-align:middle;"><nobr>0,67</nobr></td>
+		<td class="cs1641DC4" colspan="2" style="width:39px;height:13px;line-height:10px;text-align:right;vertical-align:middle;"><nobr>-</nobr></td>
+		<td class="cs1641DC4" style="width:39px;height:13px;line-height:10px;text-align:right;vertical-align:middle;"><nobr>-</nobr></td>
+		<td class="cs1641DC4" colspan="2" style="width:39px;height:13px;line-height:10px;text-align:right;vertical-align:middle;"><nobr>-</nobr></td>
+		<td class="cs1641DC4" colspan="3" style="width:39px;height:13px;line-height:10px;text-align:right;vertical-align:middle;"><nobr>-</nobr></td>
+		<td class="cs1641DC4" colspan="2" style="width:39px;height:13px;line-height:10px;text-align:right;vertical-align:middle;"><nobr>0,94</nobr></td>
+		<td class="cs1641DC4" colspan="2" style="width:39px;height:13px;line-height:10px;text-align:right;vertical-align:middle;"><nobr>0,41</nobr></td>
+		<td class="cs5CD2FE1D" colspan="14" style="width:349px;height:13px;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:12px;"></td>
+		<td class="cs1641DC4" colspan="2" style="width:59px;height:12px;line-height:10px;text-align:left;vertical-align:middle;"><nobr>Rf&nbsp;[1/min]</nobr></td>
+		<td class="csDACCFF58" colspan="2" style="width:38px;height:12px;line-height:10px;text-align:right;vertical-align:middle;"><nobr>14,4</nobr></td>
+		<td class="cs1641DC4" colspan="2" style="width:39px;height:12px;line-height:10px;text-align:right;vertical-align:middle;"><nobr>-</nobr></td>
+		<td class="cs1641DC4" style="width:39px;height:12px;line-height:10px;text-align:right;vertical-align:middle;"><nobr>-</nobr></td>
+		<td class="cs1641DC4" colspan="2" style="width:39px;height:12px;line-height:10px;text-align:right;vertical-align:middle;"><nobr>-</nobr></td>
+		<td class="cs1641DC4" colspan="3" style="width:39px;height:12px;line-height:10px;text-align:right;vertical-align:middle;"><nobr>-</nobr></td>
+		<td class="cs1641DC4" colspan="2" style="width:39px;height:12px;line-height:10px;text-align:right;vertical-align:middle;"><nobr>14,4</nobr></td>
+		<td class="cs1641DC4" colspan="2" style="width:39px;height:12px;line-height:10px;text-align:right;vertical-align:middle;"><nobr>23,3</nobr></td>
+		<td class="cs5CD2FE1D" colspan="14" style="width:349px;height:12px;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:13px;"></td>
+		<td class="cs1641DC4" colspan="30" style="width:680px;height:13px;line-height:10px;text-align:left;vertical-align:middle;"><nobr>Vorsicht:&nbsp;Testqualit&#228;t&nbsp;-&nbsp;sichere&nbsp;Interpretation&nbsp;ben&#246;tigt&nbsp;weiteren&nbsp;g&#252;ltigen&nbsp;Test</nobr></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:12px;"></td>
+		<td class="cs1641DC4" colspan="30" style="width:680px;height:12px;line-height:10px;text-align:left;vertical-align:middle;"><nobr>*&nbsp;bedeutet:&nbsp;Grenzwert&nbsp;&#252;berschritten&nbsp;oder&nbsp;signifikante&nbsp;Post-&#196;nderung.</nobr></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:13px;"></td>
+		<td class="csB9D33425" colspan="5" style="width:129px;height:13px;line-height:10px;text-align:left;vertical-align:middle;"><nobr>Qualit&#228;tsbewertung</nobr></td>
+		<td class="csB9D33425" colspan="3" style="width:52px;height:13px;line-height:10px;text-align:left;vertical-align:middle;"><nobr>Pre</nobr></td>
+		<td class="csB9D33425" colspan="22" style="width:499px;height:13px;line-height:10px;text-align:left;vertical-align:middle;"><nobr>F</nobr></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:7px;"></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:80px;"></td>
+		<td class="cs19AFE9B5" colspan="13" style="width:284px;height:80px;text-align:left;vertical-align:top;"><div style="overflow:hidden;width:284px;height:80px;">
+			<!--[if lt IE 7]><img alt="" src="13-52_files/4133685977.gif" style="width:284px;height:80px;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='13-52_files/3962311322.png',sizingMethod='scale');" /><div style="display:none"><![endif]--><img alt="" src="13-52_files/3962311322.png" style="width:284px;height:80px;" /><!--[if lt IE 7]></div><![endif]--></div>
+		</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:19px;"></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:204px;"></td>
+		<td class="cs7F28D5E9" colspan="25" style="width:530px;height:204px;text-align:left;vertical-align:top;"><div style="overflow:hidden;width:530px;height:204px;">
+			<!--[if lt IE 7]><img alt="" src="13-52_files/4133685977.gif" style="width:530px;height:204px;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='13-52_files/1044169497.png',sizingMethod='scale');" /><div style="display:none"><![endif]--><img alt="" src="13-52_files/1044169497.png" style="width:530px;height:204px;" /><!--[if lt IE 7]></div><![endif]--></div>
+		</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:2px;"></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:2px;"></td>
+		<td class="cs17E16D43" colspan="31" style="width:691px;height:2px;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:1px;"></td>
+		<td class="cs85F0A40A" colspan="31" style="width:691px;height:1px;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:3px;"></td>
+		<td class="cs17E16D43" colspan="31" style="width:691px;height:3px;"><!--[if lte IE 7]><div class="csF7D3565D"></div><![endif]--></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:9px;"></td>
+		<td class="csC6C78BC6" colspan="21" rowspan="2" style="width:408px;height:11px;line-height:8px;text-align:left;vertical-align:top;"><nobr>&nbsp;ndd&nbsp;Medizintechnik&nbsp;AG&nbsp;&nbsp;&nbsp;EasyOne&nbsp;Connect&nbsp;[3.9.4.9]&nbsp;(de)&nbsp;/&nbsp;PC-Sensor&nbsp;[2.0.2.0]&nbsp;&nbsp;&nbsp;SN&nbsp;264338</nobr></td>
+		<td></td>
+		<td class="cs101C97B6" colspan="6" rowspan="2" style="width:245px;height:11px;line-height:8px;text-align:right;vertical-align:top;"><nobr>nddReportSvc</nobr></td>
+		<td></td>
+		<td class="cs101C97B6" colspan="2" style="width:19px;height:9px;line-height:8px;text-align:right;vertical-align:top;"><nobr>1/1</nobr></td>
+	</tr>
+	<tr style="vertical-align:top;">
+		<td style="width:0px;height:2px;"></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+</table>
+</body>
+</html>

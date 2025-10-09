@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[     32286,        817]
-NotebookOptionsPosition[     31538,        799]
-NotebookOutlinePosition[     31939,        815]
-CellTagsIndexPosition[     31896,        812]
+NotebookDataLength[     33064,        818]
+NotebookOptionsPosition[     32413,        801]
+NotebookOutlinePosition[     32814,        817]
+CellTagsIndexPosition[     32771,        814]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -61,9 +61,8 @@ Cell[BoxData[{
        RowBox[{"Keys", "[", "#", "]"}], ",", "varName"}], "]"}], "&"}]}], 
    "]"}]}]}], "Input",
  CellChangeTimes->{{3.9689886561494102`*^9, 3.968988660213396*^9}, {
-  3.9689886949051876`*^9, 
-  3.9689886951539803`*^9}},ExpressionUUID->"71927a28-be0e-db45-8bb0-\
-feb158927f26"],
+  3.9689886949051876`*^9, 3.9689886951539803`*^9}},
+ CellLabel->"In[42]:=",ExpressionUUID->"71927a28-be0e-db45-8bb0-feb158927f26"],
 
 Cell[BoxData[
  RowBox[{
@@ -88,8 +87,9 @@ pdf", "HyperlinkActionRecycled", {"HyperlinkActive"},
     RowBox[{"Module", "[", 
      RowBox[{
       RowBox[{"{", 
-       RowBox[{"dGrimm", ",", "dGrimmVarNames"}], "}"}], 
-      "\[IndentingNewLine]", ",", 
+       RowBox[{
+       "dGrimm", ",", "dGrimmVarNames", ",", "model", ",", "rowVarNames", ",",
+         "rowStartData"}], "}"}], "\[IndentingNewLine]", ",", 
       RowBox[{
        RowBox[{"dGrimm", "=", 
         RowBox[{"Import", "[", 
@@ -105,17 +105,32 @@ pdf", "HyperlinkActionRecycled", {"HyperlinkActive"},
           RowBox[{"{", 
            RowBox[{"\"\<\\n\>\"", ",", "\"\<\\t\>\""}], "}"}]}], "]"}]}], 
        "\[IndentingNewLine]", ";", 
+       RowBox[{"model", "=", 
+        RowBox[{"dGrimm", "[", 
+         RowBox[{"[", 
+          RowBox[{"5", ",", "1"}], "]"}], "]"}]}], "\[IndentingNewLine]", ";", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"StringContainsQ", "[", 
+          RowBox[{"model", ",", "\"\<11-D\>\""}], "]"}], ",", 
+         RowBox[{
+          RowBox[{"rowVarNames", "=", "15"}], ";", " ", 
+          RowBox[{"rowStartData", "=", "16"}]}], ",", 
+         RowBox[{
+          RowBox[{"rowVarNames", "=", "14"}], ";", " ", 
+          RowBox[{"rowStartData", "=", "15"}]}]}], "]"}], 
+       "\[IndentingNewLine]", ";", 
        RowBox[{"dGrimmVarNames", "=", 
         RowBox[{
          RowBox[{
           RowBox[{"asName", "~~", "\"\<_\>\"", "~~", "#"}], "&"}], "/@", 
          RowBox[{"dGrimm", "[", 
-          RowBox[{"[", "15", "]"}], "]"}]}]}], "\[IndentingNewLine]", ";", 
-       "\[IndentingNewLine]", 
+          RowBox[{"[", "rowVarNames", "]"}], "]"}]}]}], "\[IndentingNewLine]",
+        ";", "\[IndentingNewLine]", 
        RowBox[{
         RowBox[{"dGrimm", "[", 
          RowBox[{"[", 
-          RowBox[{"16", ";;", 
+          RowBox[{"rowStartData", ";;", 
            RowBox[{"-", "1"}]}], "]"}], "]"}], "=", 
         RowBox[{
          RowBox[{
@@ -124,8 +139,14 @@ pdf", "HyperlinkActionRecycled", {"HyperlinkActive"},
             RowBox[{
              RowBox[{"UnixTime", "[", 
               RowBox[{"FromDateString", "[", 
-               RowBox[{"#", "[", 
-                RowBox[{"[", "1", "]"}], "]"}], "]"}], "]"}], ",", 
+               RowBox[{
+                RowBox[{"#", "[", 
+                 RowBox[{"[", "1", "]"}], "]"}], ",", 
+                RowBox[{"{", 
+                 
+                 RowBox[{"\"\<Day\>\"", ",", "\"\<.\>\"", ",", "\"\<Month\>\"",
+                   ",", "\"\<.\>\"", ",", "\"\<Year\>\"", ",", "\"\< \>\"", 
+                  ",", "\"\<Time\>\""}], "}"}]}], "]"}], "]"}], ",", 
              RowBox[{"ToExpression", "[", 
               RowBox[{"#", "[", 
                RowBox[{"[", 
@@ -134,20 +155,20 @@ pdf", "HyperlinkActionRecycled", {"HyperlinkActive"},
           "&"}], "/@", 
          RowBox[{"dGrimm", "[", 
           RowBox[{"[", 
-           RowBox[{"16", ";;", 
+           RowBox[{"rowStartData", ";;", 
             RowBox[{"-", "1"}]}], "]"}], "]"}]}]}], "\[IndentingNewLine]", ";", 
        RowBox[{"dGrimm", "=", 
         RowBox[{"synchronize", "[", 
          RowBox[{
           RowBox[{"dGrimm", "[", 
            RowBox[{"[", 
-            RowBox[{"16", ";;", 
+            RowBox[{"rowStartData", ";;", 
              RowBox[{"-", "1"}]}], "]"}], "]"}], ",", "1", ",", 
           RowBox[{"Max", "[", 
            RowBox[{
             RowBox[{"dGrimm", "[", 
              RowBox[{"[", 
-              RowBox[{"16", ";;", 
+              RowBox[{"rowStartData", ";;", 
                RowBox[{"-", "1"}]}], "]"}], "]"}], "[", 
             RowBox[{"[", 
              RowBox[{"All", ",", "1"}], "]"}], "]"}], "]"}], ",", 
@@ -187,11 +208,14 @@ pdf", "HyperlinkActionRecycled", {"HyperlinkActive"},
         RowBox[{"dGrimmVarNames", ",", "dGrimm"}], "}"}]}]}], 
      "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]"}]}]], "Input",
  CellChangeTimes->{{3.968988338080694*^9, 3.968988412494753*^9}, {
-  3.9689885176783447`*^9, 3.9689886205345726`*^9}, {3.968988685341675*^9, 
-  3.968988698076929*^9}, {3.9689891635774155`*^9, 3.9689892347110004`*^9}, {
-  3.968989556573515*^9, 
-  3.968989573324728*^9}},ExpressionUUID->"735f81c5-6930-1041-aea3-\
-35b9bbe1004c"],
+   3.9689885176783447`*^9, 3.9689886205345726`*^9}, {3.968988685341675*^9, 
+   3.968988698076929*^9}, {3.9689891635774155`*^9, 3.9689892347110004`*^9}, {
+   3.968989556573515*^9, 3.968989573324728*^9}, {3.9690017277900295`*^9, 
+   3.969001856942358*^9}, {3.969001916693424*^9, 3.969002012701111*^9}, {
+   3.969002140526083*^9, 3.969002140775984*^9}, {3.969002425466316*^9, 
+   3.969002459016657*^9}, 3.9690025525941105`*^9},
+ CellLabel->
+  "In[225]:=",ExpressionUUID->"735f81c5-6930-1041-aea3-35b9bbe1004c"],
 
 Cell[BoxData[
  RowBox[{
@@ -380,10 +404,11 @@ specification", "HyperlinkActionRecycled", {"HyperlinkActive"},
          "dErrorSensirion"}], "}"}], ",", 
       RowBox[{
        RowBox[{
-        RowBox[{"Import", "[", 
-         RowBox[{
-          RowBox[{"urlHead", " ", "~~", "filename"}], ",", "\"\<Text\>\""}], 
-         "]"}], ";", "\[IndentingNewLine]", 
+        RowBox[{"dSensirion", "=", 
+         RowBox[{"Import", "[", 
+          RowBox[{
+           RowBox[{"urlHead", " ", "~~", "filename"}], ",", "\"\<Text\>\""}], 
+          "]"}]}], ";", "\[IndentingNewLine]", 
         RowBox[{"dSensirion", "=", 
          RowBox[{"myStringSplit", "[", 
           RowBox[{"dSensirion", ",", 
@@ -533,7 +558,8 @@ specification", "HyperlinkActionRecycled", {"HyperlinkActive"},
                   RowBox[{"#", ",", "\"\<_\>\""}], "]"}], "[", 
                  RowBox[{"[", 
                   RowBox[{"1", ";;", "2"}], "]"}], "]"}]}], "}"}], "]"}], 
-             "]"}]}], ")"}], "&"}], "/@", "sensirionVarNamesMassNum"}]}], 
+             "]"}]}], ")"}], "&"}], "/@", 
+         RowBox[{"Flatten", "[", "sensirionVarNamesMassNum", "]"}]}]}], 
        "\[IndentingNewLine]", "\[IndentingNewLine]", ";", 
        "\[IndentingNewLine]", 
        RowBox[{"dErrorSensirion", "=", 
@@ -587,9 +613,11 @@ specification", "HyperlinkActionRecycled", {"HyperlinkActive"},
    3.9689890350898952`*^9}, {3.9689893590313473`*^9, 3.968989391830351*^9}, {
    3.968989450517023*^9, 3.968989499548237*^9}, {3.9689896979705334`*^9, 
    3.9689897074395046`*^9}, 3.9689904672015076`*^9, {3.968990515820141*^9, 
-   3.9689905616472473`*^9}, {3.968990633248165*^9, 
-   3.968990647806431*^9}},ExpressionUUID->"9c47a7e3-977b-0647-8515-\
-0c9c9f763b10"],
+   3.9689905616472473`*^9}, {3.968990633248165*^9, 3.968990647806431*^9}, {
+   3.9690009161603317`*^9, 3.9690009165655212`*^9}, {3.9690010283828526`*^9, 
+   3.9690010538024387`*^9}},
+ CellLabel->
+  "In[116]:=",ExpressionUUID->"9c47a7e3-977b-0647-8515-0c9c9f763b10"],
 
 Cell[BoxData[
  RowBox[{
@@ -651,151 +679,125 @@ pdf", "HyperlinkActionRecycled", {"HyperlinkActive"},
       RowBox[{"Around", "[", 
        RowBox[{"v", ",", "2"}], "]"}]}], "\[IndentingNewLine]", "]"}]}], 
    "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"dtestoImport", "=."}], "\[IndentingNewLine]", 
    RowBox[{
-    RowBox[{
-     RowBox[{"dtesto", "[", 
-      RowBox[{"[", 
-       RowBox[{"All", ",", "2"}], "]"}], "]"}], "=", 
-     RowBox[{"testoCO2", "/@", 
-      RowBox[{"dtesto", "[", 
-       RowBox[{"[", 
-        RowBox[{"All", ",", "2"}], "]"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{
-     RowBox[{"dtesto", "[", 
-      RowBox[{"[", 
-       RowBox[{"All", ",", "3"}], "]"}], "]"}], "=", 
-     RowBox[{"testoPressure", "/@", 
-      RowBox[{"dtesto", "[", 
-       RowBox[{"[", 
-        RowBox[{"All", ",", "3"}], "]"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{
-     RowBox[{"dtesto", "[", 
-      RowBox[{"[", 
-       RowBox[{"All", ",", "4"}], "]"}], "]"}], "=", 
-     RowBox[{"testoTemperature", "/@", 
-      RowBox[{"dtesto", "[", 
-       RowBox[{"[", 
-        RowBox[{"All", ",", "4"}], "]"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{
-     RowBox[{"dtesto", "[", 
-      RowBox[{"[", 
-       RowBox[{"All", ",", "5"}], "]"}], "]"}], "=", 
-     RowBox[{"testoHumidity", "/@", 
-      RowBox[{"dtesto", "[", 
-       RowBox[{"[", 
-        RowBox[{"All", ",", "5"}], "]"}], "]"}]}]}], ";"}], 
-   "\[IndentingNewLine]"}]}]], "Input",
- CellChangeTimes->{{3.9689866526046867`*^9, 
-  3.9689868069140415`*^9}},ExpressionUUID->"d091ce4a-bf3b-4f4f-aefb-\
-2f411e347bb9"],
-
-Cell[BoxData[{
- RowBox[{"dtestoImport", "=."}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"dtestoImport", "[", "filename_String", "]"}], ":=", " ", 
-  RowBox[{"Module", "[", 
-   RowBox[{
-    RowBox[{"{", 
-     RowBox[{"dtesto", ",", "varNames"}], "}"}], ",", 
-    RowBox[{
-     RowBox[{"dtesto", "=", 
-      RowBox[{"Import", "[", 
-       RowBox[{
-        RowBox[{"urlHead", " ", "~~", "filename"}], ",", "\"\<Text\>\""}], 
-       "]"}]}], "\[IndentingNewLine]", ";", 
-     RowBox[{"dtesto", "=", 
-      RowBox[{"myStringSplit", "[", 
-       RowBox[{
-        RowBox[{"StringReplace", "[", 
-         RowBox[{"dtesto", ",", 
-          RowBox[{"\"\<,\>\"", "->", "\"\<.\>\""}]}], "]"}], ",", 
-        RowBox[{"{", 
-         RowBox[{"\"\<\\n\>\"", ",", "\"\<;\>\""}], "}"}]}], "]"}]}], 
-     "\[IndentingNewLine]", ";", 
-     RowBox[{"varNames", "=", 
+    RowBox[{"dtestoImport", "[", "filename_String", "]"}], ":=", " ", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"dtesto", ",", "varNames"}], "}"}], "\[IndentingNewLine]", ",", 
       RowBox[{
-       RowBox[{"dtesto", "[", 
-        RowBox[{"[", "1", "]"}], "]"}], "[", 
-       RowBox[{"[", 
-        RowBox[{"4", ";;", 
-         RowBox[{"-", "1"}]}], "]"}], "]"}]}], "\[IndentingNewLine]", ";", 
-     RowBox[{"dtesto", "=", " ", 
-      RowBox[{
-       RowBox[{
-        RowBox[{"Flatten", "[", 
-         RowBox[{"{", 
-          RowBox[{
-           RowBox[{"UnixTime", "[", 
-            RowBox[{"FromDateString", "[", 
+       RowBox[{"dtesto", "=", 
+        RowBox[{"Import", "[", 
+         RowBox[{
+          RowBox[{"urlHead", " ", "~~", "filename"}], ",", "\"\<Text\>\""}], 
+         "]"}]}], "\[IndentingNewLine]", ";", 
+       RowBox[{"dtesto", "=", 
+        RowBox[{"myStringSplit", "[", 
+         RowBox[{
+          RowBox[{"StringReplace", "[", 
+           RowBox[{"dtesto", ",", 
+            RowBox[{"\"\<,\>\"", "->", "\"\<.\>\""}]}], "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"\"\<\\n\>\"", ",", "\"\<;\>\""}], "}"}]}], "]"}]}], 
+       "\[IndentingNewLine]", ";", 
+       RowBox[{"varNames", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"\"\<testo435_\>\"", "~~", "#"}], "&"}], "/@", 
+         RowBox[{"(", 
+          RowBox[{"Prepend", "[", 
+           RowBox[{
+            RowBox[{"StringReplace", "[", 
              RowBox[{
+              RowBox[{
+               RowBox[{"dtesto", "[", 
+                RowBox[{"[", "1", "]"}], "]"}], "[", 
+               RowBox[{"[", 
+                RowBox[{"4", ";;", 
+                 RowBox[{"-", "1"}]}], "]"}], "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"\"\<\\\"\>\"", "->", "\"\<\>\""}], ",", 
+                RowBox[{"\"\<rF\>\"", "->", "\"\<rH\>\""}]}], "}"}]}], "]"}], 
+            ",", "\"\<time\>\""}], "]"}], ")"}]}]}], "\[IndentingNewLine]", ";", 
+       RowBox[{"dtesto", "=", " ", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Flatten", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"UnixTime", "[", 
+              RowBox[{"FromDateString", "[", 
+               RowBox[{
+                RowBox[{"#", "[", 
+                 RowBox[{"[", "2", "]"}], "]"}], "~~", " ", "\"\< \>\"", " ", 
+                "~~", " ", 
+                RowBox[{"#", "[", 
+                 RowBox[{"[", "3", "]"}], "]"}]}], "]"}], "]"}], ",", 
+             RowBox[{"ToExpression", "[", 
               RowBox[{"#", "[", 
-               RowBox[{"[", "2", "]"}], "]"}], "~~", " ", "\"\< \>\"", " ", "~~",
-               " ", 
-              RowBox[{"#", "[", 
-               RowBox[{"[", "3", "]"}], "]"}]}], "]"}], "]"}], ",", 
-           RowBox[{"ToExpression", "[", 
-            RowBox[{"#", "[", 
-             RowBox[{"[", 
-              RowBox[{"4", ";;", 
-               RowBox[{"-", "1"}]}], "]"}], "]"}], "]"}]}], "}"}], "]"}], 
-        "&"}], "/@", 
-       RowBox[{"dtesto", "[", 
-        RowBox[{"[", 
-         RowBox[{"2", ";;", 
-          RowBox[{"-", "2"}]}], "]"}], "]"}]}]}], "\[IndentingNewLine]", ";", 
-     RowBox[{
-      RowBox[{"dtesto", "[", 
-       RowBox[{"[", 
-        RowBox[{"All", ",", "2"}], "]"}], "]"}], "=", 
-      RowBox[{"testoCO2", "/@", 
-       RowBox[{"dtesto", "[", 
-        RowBox[{"[", 
-         RowBox[{"All", ",", "2"}], "]"}], "]"}]}]}], "\[IndentingNewLine]", ";", 
-     RowBox[{
-      RowBox[{"dtesto", "[", 
-       RowBox[{"[", 
-        RowBox[{"All", ",", "3"}], "]"}], "]"}], "=", 
-      RowBox[{"testoPressure", "/@", 
-       RowBox[{"dtesto", "[", 
-        RowBox[{"[", 
-         RowBox[{"All", ",", "3"}], "]"}], "]"}]}]}], "\[IndentingNewLine]", ";", 
-     RowBox[{
-      RowBox[{"dtesto", "[", 
-       RowBox[{"[", 
-        RowBox[{"All", ",", "4"}], "]"}], "]"}], "=", 
-      RowBox[{"testoTemperature", "/@", 
-       RowBox[{"dtesto", "[", 
-        RowBox[{"[", 
-         RowBox[{"All", ",", "4"}], "]"}], "]"}]}]}], "\[IndentingNewLine]", ";", 
-     RowBox[{
-      RowBox[{"dtesto", "[", 
-       RowBox[{"[", 
-        RowBox[{"All", ",", "5"}], "]"}], "]"}], "=", 
-      RowBox[{"testoHumidity", "/@", 
-       RowBox[{"dtesto", "[", 
-        RowBox[{"[", 
-         RowBox[{"All", ",", "5"}], "]"}], "]"}]}]}], "\[IndentingNewLine]", ";", 
-     RowBox[{"synchronize", "[", 
-      RowBox[{"dtesto", ",", "1", ",", 
-       RowBox[{"Max", "[", 
+               RowBox[{"[", 
+                RowBox[{"4", ";;", 
+                 RowBox[{"-", "1"}]}], "]"}], "]"}], "]"}]}], "}"}], "]"}], 
+          "&"}], "/@", 
+         RowBox[{"dtesto", "[", 
+          RowBox[{"[", 
+           RowBox[{"2", ";;", 
+            RowBox[{"-", "2"}]}], "]"}], "]"}]}]}], "\[IndentingNewLine]", ";", 
+       RowBox[{
         RowBox[{"dtesto", "[", 
          RowBox[{"[", 
-          RowBox[{"All", ",", "1"}], "]"}], "]"}], "]"}], ",", 
-       RowBox[{"UnitConvert", "[", 
-        RowBox[{
-         RowBox[{"\"\<roomAirCondition_end\>\"", "/.", " ", "protocol"}], 
-         ",", "\"\<Seconds\>\""}], "]"}]}], "]"}], "\[IndentingNewLine]", ";", 
-     RowBox[{"{", 
-      RowBox[{"varNames", ",", "dtesto"}], "}"}]}]}], 
-   "]"}]}], "\[IndentingNewLine]"}], "Input",
- CellChangeTimes->{{3.9689868306808968`*^9, 3.9689868727086296`*^9}, {
-  3.968987236264879*^9, 3.968987251113209*^9}, {3.9689872901938457`*^9, 
-  3.968987296655739*^9}},
- CellLabel->
-  "In[144]:=",ExpressionUUID->"88c303d0-09cf-2a46-9ff9-2d78fbb4fce2"]
+          RowBox[{"All", ",", "2"}], "]"}], "]"}], "=", 
+        RowBox[{"testoCO2", "/@", 
+         RowBox[{"dtesto", "[", 
+          RowBox[{"[", 
+           RowBox[{"All", ",", "2"}], "]"}], "]"}]}]}], "\[IndentingNewLine]",
+        ";", 
+       RowBox[{
+        RowBox[{"dtesto", "[", 
+         RowBox[{"[", 
+          RowBox[{"All", ",", "3"}], "]"}], "]"}], "=", 
+        RowBox[{"testoPressure", "/@", 
+         RowBox[{"dtesto", "[", 
+          RowBox[{"[", 
+           RowBox[{"All", ",", "3"}], "]"}], "]"}]}]}], "\[IndentingNewLine]",
+        ";", 
+       RowBox[{
+        RowBox[{"dtesto", "[", 
+         RowBox[{"[", 
+          RowBox[{"All", ",", "4"}], "]"}], "]"}], "=", 
+        RowBox[{"testoTemperature", "/@", 
+         RowBox[{"dtesto", "[", 
+          RowBox[{"[", 
+           RowBox[{"All", ",", "4"}], "]"}], "]"}]}]}], "\[IndentingNewLine]",
+        ";", 
+       RowBox[{
+        RowBox[{"dtesto", "[", 
+         RowBox[{"[", 
+          RowBox[{"All", ",", "5"}], "]"}], "]"}], "=", 
+        RowBox[{"testoHumidity", "/@", 
+         RowBox[{"dtesto", "[", 
+          RowBox[{"[", 
+           RowBox[{"All", ",", "5"}], "]"}], "]"}]}]}], "\[IndentingNewLine]",
+        ";", 
+       RowBox[{"synchronize", "[", 
+        RowBox[{"dtesto", ",", "1", ",", 
+         RowBox[{"Max", "[", 
+          RowBox[{"dtesto", "[", 
+           RowBox[{"[", 
+            RowBox[{"All", ",", "1"}], "]"}], "]"}], "]"}], ",", 
+         RowBox[{"UnitConvert", "[", 
+          RowBox[{
+           RowBox[{"\"\<roomAirCondition_end\>\"", "/.", " ", "protocol"}], 
+           ",", "\"\<Seconds\>\""}], "]"}]}], "]"}], "\[IndentingNewLine]", ";", 
+       RowBox[{"{", 
+        RowBox[{"varNames", ",", "dtesto"}], "}"}]}]}], "]"}]}], 
+   "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.9689866526046867`*^9, 3.9689868069140415`*^9}, 
+   3.9690012611167545`*^9, {3.9690015498738556`*^9, 
+   3.9690015522208652`*^9}},ExpressionUUID->"d091ce4a-bf3b-4f4f-aefb-\
+2f411e347bb9"]
 },
 WindowSize->{718.5, 735},
 WindowMargins->{{Automatic, -5.25}, {Automatic, 0}},
@@ -814,11 +816,10 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[554, 20, 1691, 45, 218, "Input",ExpressionUUID->"71927a28-be0e-db45-8bb0-feb158927f26"],
-Cell[2248, 67, 4953, 126, 446, "Input",ExpressionUUID->"735f81c5-6930-1041-aea3-35b9bbe1004c"],
-Cell[7204, 195, 16684, 396, 1517, "Input",ExpressionUUID->"9c47a7e3-977b-0647-8515-0c9c9f763b10"],
-Cell[23891, 593, 3726, 99, 522, "Input",ExpressionUUID->"d091ce4a-bf3b-4f4f-aefb-2f411e347bb9"],
-Cell[27620, 694, 3914, 103, 351, "Input",ExpressionUUID->"88c303d0-09cf-2a46-9ff9-2d78fbb4fce2"]
+Cell[554, 20, 1710, 44, 218, "Input",ExpressionUUID->"71927a28-be0e-db45-8bb0-feb158927f26"],
+Cell[2267, 66, 6216, 151, 606, "Input",ExpressionUUID->"735f81c5-6930-1041-aea3-35b9bbe1004c"],
+Cell[8486, 219, 16897, 400, 1517, "Input",ExpressionUUID->"9c47a7e3-977b-0647-8515-0c9c9f763b10"],
+Cell[25386, 621, 7023, 178, 808, "Input",ExpressionUUID->"d091ce4a-bf3b-4f4f-aefb-2f411e347bb9"]
 }
 ]
 *)

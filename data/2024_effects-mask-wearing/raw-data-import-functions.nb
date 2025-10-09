@@ -1,0 +1,825 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[     32286,        817]
+NotebookOptionsPosition[     31538,        799]
+NotebookOutlinePosition[     31939,        815]
+CellTagsIndexPosition[     31896,        812]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{"synchronize", "=."}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"synchronize", "[", 
+    RowBox[{
+    "l_List", ",", "timePosition_Integer", ",", "maxTime_", ",", 
+     "timeStamp_"}], "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", "l2", "}"}], "\[IndentingNewLine]", ",", 
+     RowBox[{
+      RowBox[{"l2", "=", "l"}], "\[IndentingNewLine]", ";", 
+      RowBox[{
+       RowBox[{"l2", "[", 
+        RowBox[{"[", 
+         RowBox[{"All", ",", "timePosition"}], "]"}], "]"}], "=", 
+       RowBox[{"Map", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Round", "[", 
+           RowBox[{
+            RowBox[{"timeStamp", "-", 
+             RowBox[{"Quantity", "[", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"maxTime", "-", "#"}], ")"}], 
+               ",", "\"\<Seconds\>\""}], "]"}]}], ",", ".5"}], "]"}], "&"}], ",", 
+         RowBox[{"l2", "[", 
+          RowBox[{"[", 
+           RowBox[{"All", ",", "timePosition"}], "]"}], "]"}]}], "]"}]}], ";",
+       "\[IndentingNewLine]", "l2"}]}], "]"}]}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"protocolSelect", "=."}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"protocolSelect", "[", "varName_String", "]"}], ":=", 
+  RowBox[{"Select", "[", 
+   RowBox[{"protocol", ",", 
+    RowBox[{
+     RowBox[{"StringContainsQ", "[", 
+      RowBox[{
+       RowBox[{"Keys", "[", "#", "]"}], ",", "varName"}], "]"}], "&"}]}], 
+   "]"}]}]}], "Input",
+ CellChangeTimes->{{3.9689886561494102`*^9, 3.968988660213396*^9}, {
+  3.9689886949051876`*^9, 
+  3.9689886951539803`*^9}},ExpressionUUID->"71927a28-be0e-db45-8bb0-\
+feb158927f26"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Device", " ", "specification", 
+    TemplateBox[{
+      RowBox[{" ", 
+        RowBox[{
+          RowBox[{"Grimm", " ", "11"}], "-", "D"}]}], {
+       URL[
+       "https://grimm-aerosol.ca/data/documents/Grimm-11-D-Datasheet.pdf"], 
+       None}, "https://grimm-aerosol.ca/data/documents/Grimm-11-D-Datasheet.\
+pdf", "HyperlinkActionRecycled", {"HyperlinkActive"}, 
+      BaseStyle -> {"Hyperlink"}, HyperlinkAction -> "Recycled"},
+     "HyperlinkTemplate"]}], "*)"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"dGrimmImport", "=."}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"dGrimmImport", "[", 
+     RowBox[{"filename_String", ",", "asName_String"}], "]"}], ":=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"dGrimm", ",", "dGrimmVarNames"}], "}"}], 
+      "\[IndentingNewLine]", ",", 
+      RowBox[{
+       RowBox[{"dGrimm", "=", 
+        RowBox[{"Import", "[", 
+         RowBox[{
+          RowBox[{"urlHead", " ", "~~", "filename"}], ",", "\"\<Text\>\""}], 
+         "]"}]}], "\[IndentingNewLine]", ";", "\[IndentingNewLine]", 
+       RowBox[{"dGrimm", "=", 
+        RowBox[{"myStringSplit", "[", 
+         RowBox[{
+          RowBox[{"StringReplace", "[", 
+           RowBox[{"dGrimm", ",", 
+            RowBox[{"\"\<,\>\"", "->", "\"\<.\>\""}]}], "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"\"\<\\n\>\"", ",", "\"\<\\t\>\""}], "}"}]}], "]"}]}], 
+       "\[IndentingNewLine]", ";", 
+       RowBox[{"dGrimmVarNames", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"asName", "~~", "\"\<_\>\"", "~~", "#"}], "&"}], "/@", 
+         RowBox[{"dGrimm", "[", 
+          RowBox[{"[", "15", "]"}], "]"}]}]}], "\[IndentingNewLine]", ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"dGrimm", "[", 
+         RowBox[{"[", 
+          RowBox[{"16", ";;", 
+           RowBox[{"-", "1"}]}], "]"}], "]"}], "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Flatten", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"UnixTime", "[", 
+              RowBox[{"FromDateString", "[", 
+               RowBox[{"#", "[", 
+                RowBox[{"[", "1", "]"}], "]"}], "]"}], "]"}], ",", 
+             RowBox[{"ToExpression", "[", 
+              RowBox[{"#", "[", 
+               RowBox[{"[", 
+                RowBox[{"2", ";;", 
+                 RowBox[{"-", "1"}]}], "]"}], "]"}], "]"}]}], "}"}], "]"}], 
+          "&"}], "/@", 
+         RowBox[{"dGrimm", "[", 
+          RowBox[{"[", 
+           RowBox[{"16", ";;", 
+            RowBox[{"-", "1"}]}], "]"}], "]"}]}]}], "\[IndentingNewLine]", ";", 
+       RowBox[{"dGrimm", "=", 
+        RowBox[{"synchronize", "[", 
+         RowBox[{
+          RowBox[{"dGrimm", "[", 
+           RowBox[{"[", 
+            RowBox[{"16", ";;", 
+             RowBox[{"-", "1"}]}], "]"}], "]"}], ",", "1", ",", 
+          RowBox[{"Max", "[", 
+           RowBox[{
+            RowBox[{"dGrimm", "[", 
+             RowBox[{"[", 
+              RowBox[{"16", ";;", 
+               RowBox[{"-", "1"}]}], "]"}], "]"}], "[", 
+            RowBox[{"[", 
+             RowBox[{"All", ",", "1"}], "]"}], "]"}], "]"}], ",", 
+          RowBox[{"UnitConvert", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"asName", "~~", "\"\<_end\>\""}], "/.", " ", 
+             "protocol"}], ",", "\"\<Seconds\>\""}], "]"}]}], "]"}]}], 
+       "\[IndentingNewLine]", ";", 
+       RowBox[{"dGrimm", "=", 
+        RowBox[{"myFlatten", "[", 
+         RowBox[{
+          RowBox[{"Transpose", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"dGrimm", "[", 
+              RowBox[{"[", 
+               RowBox[{"All", ",", "1"}], "]"}], "]"}], ",", 
+             RowBox[{"Map", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"Around", "[", 
+                 RowBox[{"#", ",", 
+                  RowBox[{"#", ".1"}]}], "]"}], "&"}], ",", 
+               RowBox[{"(", 
+                RowBox[{"dGrimm", "[", 
+                 RowBox[{"[", 
+                  RowBox[{"All", ",", 
+                   RowBox[{"2", ";;", 
+                    RowBox[{"-", "1"}]}]}], "]"}], "]"}], ")"}], ",", 
+               RowBox[{"{", "2", "}"}]}], "]"}]}], "}"}], "]"}], " ", ",", 
+          "1"}], "]"}]}], 
+       RowBox[{"(*", 
+        RowBox[{"error", " ", "of", " ", "10", " ", "%"}], "*)"}], 
+       "\[IndentingNewLine]", ";", 
+       RowBox[{"{", 
+        RowBox[{"dGrimmVarNames", ",", "dGrimm"}], "}"}]}]}], 
+     "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.968988338080694*^9, 3.968988412494753*^9}, {
+  3.9689885176783447`*^9, 3.9689886205345726`*^9}, {3.968988685341675*^9, 
+  3.968988698076929*^9}, {3.9689891635774155`*^9, 3.9689892347110004`*^9}, {
+  3.968989556573515*^9, 
+  3.968989573324728*^9}},ExpressionUUID->"735f81c5-6930-1041-aea3-\
+35b9bbe1004c"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"data", " ", "sheet", " ", 
+    TemplateBox[{
+      RowBox[{
+        RowBox[{"https", ":"}], "//", 
+        RowBox[{
+          RowBox[{
+            RowBox[{
+              RowBox[{
+                RowBox[{"sensirion", ".", "com"}], "/", "media"}], "/", 
+              "documents"}], "/", "8600"}], 
+          RowBox[{"FF88", "/", "64"}], 
+          RowBox[{"A3B8D6", "/", "Sensirion_PM"}], "_Sensors", "_Datasheet", 
+          RowBox[{"_SPS30", ".", "pdf"}], " ", "and", " ", "statement"}]}], {
+       URL[
+       "https://sensirion.com/media/documents/8600FF88/64A3B8D6/Sensirion_PM_\
+Sensors_Datasheet_SPS30.pdf"], None}, 
+      "https://sensirion.com/media/documents/8600FF88/64A3B8D6/Sensirion_PM_\
+Sensors_Datasheet_SPS30.pdf", "HyperlinkActionRecycled", {"HyperlinkActive"}, 
+      BaseStyle -> {"Hyperlink"}, HyperlinkAction -> "Recycled"},
+     "HyperlinkTemplate"], " ", "and", " ", "precision", "\[IndentingNewLine]",
+     " ", 
+    TemplateBox[{
+      RowBox[{
+        RowBox[{"https", ":"}], "//", 
+        RowBox[{
+          RowBox[{
+            RowBox[{
+              RowBox[{
+                RowBox[{"sensirion", ".", "com"}], "/", "resource"}], "/", 
+              "application_note"}], "/", "pm"}], "/", 
+          "sensor_specification"}]}], {
+       URL[
+       "https://sensirion.com/resource/application_note/pm/sensor_\
+specification"], None}, 
+      "https://sensirion.com/resource/application_note/pm/sensor_\
+specification", "HyperlinkActionRecycled", {"HyperlinkActive"}, 
+      BaseStyle -> {"Hyperlink"}, HyperlinkAction -> "Recycled"},
+     "HyperlinkTemplate"]}], "*)"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"errorMassConcSensirionLowPM", "=."}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"errorMassConcSensirionLowPM", "[", "n_Real", "]"}], ":=", 
+    RowBox[{"Which", "[", 
+     RowBox[{
+      RowBox[{"0", "<", "n", "<=", "100"}], ",", 
+      RowBox[{"Around", "[", 
+       RowBox[{"n", ",", 
+        RowBox[{
+         RowBox[{"n", " ", ".05"}], " ", "+", " ", "5"}]}], "]"}], ",", 
+      RowBox[{"100", "<", "n", "<=", "1000"}], ",", 
+      RowBox[{"Around", "[", 
+       RowBox[{"n", ",", 
+        RowBox[{"n", " ", "0.10"}]}], "]"}], ",", "True", ",", "n"}], "]"}]}],
+    "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"errorMassConcSensirionHighPM", "=."}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"errorMassConcSensirionHighPM", "[", "n_Real", "]"}], ":=", 
+    RowBox[{"Which", "[", 
+     RowBox[{
+      RowBox[{"0", "<", "n", "<=", "100"}], ",", 
+      RowBox[{"Around", "[", 
+       RowBox[{"n", ",", "25"}], "]"}], ",", 
+      RowBox[{"100", "<", "n", "<=", "1000"}], ",", 
+      RowBox[{"Around", "[", 
+       RowBox[{"n", ",", 
+        RowBox[{"n", " ", "0.25"}]}], "]"}], ",", "True", ",", "n"}], "]"}]}],
+    "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"errorNumConcSensirionLowPM", "=."}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"errorNumConcSensirionLowPM", "[", "n_Real", "]"}], ":=", 
+    RowBox[{"Which", "[", 
+     RowBox[{
+      RowBox[{"n", "<=", "1000"}], ",", 
+      RowBox[{"Around", "[", 
+       RowBox[{"n", ",", "100"}], "]"}], ",", 
+      RowBox[{"1000", "<", "n", "<=", "3000"}], ",", 
+      RowBox[{"Around", "[", 
+       RowBox[{"n", ",", 
+        RowBox[{"n", " ", "0.10"}]}], "]"}], ",", "True", ",", "n"}], "]"}]}],
+    "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"errorNumConcSensirionHighPM", "=."}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"errorNumConcSensirionHighPM", "[", "n_Real", "]"}], ":=", 
+    RowBox[{"Which", "[", 
+     RowBox[{
+      RowBox[{"n", "<=", "1000"}], ",", 
+      RowBox[{"Around", "[", 
+       RowBox[{"n", ",", "250"}], "]"}], ",", 
+      RowBox[{"1000", "<", "n", "<=", "3000"}], ",", 
+      RowBox[{"Around", "[", 
+       RowBox[{"n", ",", 
+        RowBox[{"n", " ", "0.25"}]}], "]"}], ",", "True", ",", "n"}], "]"}]}],
+    "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"errorSensirion", "=."}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"errorSensirion", "[", 
+     RowBox[{"l_List", "/;", 
+      RowBox[{
+       RowBox[{"Length", "[", "l", "]"}], "==", "4"}]}], "]"}], ":=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"errorMassConcSensirionLowPM", "[", 
+         RowBox[{"#", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], "]"}], ",", 
+        RowBox[{
+         RowBox[{"errorMassConcSensirionLowPM", "[", 
+          RowBox[{"#", "[", 
+           RowBox[{"[", "2", "]"}], "]"}], "]"}], "-", 
+         RowBox[{"errorMassConcSensirionLowPM", "[", 
+          RowBox[{"#", "[", 
+           RowBox[{"[", "1", "]"}], "]"}], "]"}]}], ",", 
+        RowBox[{
+         RowBox[{"errorMassConcSensirionHighPM", "[", 
+          RowBox[{"#", "[", 
+           RowBox[{"[", "3", "]"}], "]"}], "]"}], "-", 
+         RowBox[{"errorMassConcSensirionLowPM", "[", 
+          RowBox[{"#", "[", 
+           RowBox[{"[", "2", "]"}], "]"}], "]"}]}], ",", 
+        RowBox[{
+         RowBox[{"errorMassConcSensirionHighPM", "[", 
+          RowBox[{"#", "[", 
+           RowBox[{"[", "4", "]"}], "]"}], "]"}], "-", 
+         RowBox[{"errorMassConcSensirionHighPM", "[", 
+          RowBox[{"#", "[", 
+           RowBox[{"[", "3", "]"}], "]"}], "]"}]}]}], "}"}], "&"}], "@", 
+     "l"}]}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"errorSensirion", "[", 
+     RowBox[{"l_List", "/;", 
+      RowBox[{
+       RowBox[{"Length", "[", "l", "]"}], "==", "5"}]}], "]"}], ":=", 
+    "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"errorNumConcSensirionLowPM", "[", 
+         RowBox[{"#", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], "]"}], ",", 
+        RowBox[{
+         RowBox[{"errorNumConcSensirionLowPM", "[", 
+          RowBox[{"#", "[", 
+           RowBox[{"[", "2", "]"}], "]"}], "]"}], "-", 
+         RowBox[{"errorNumConcSensirionLowPM", "[", 
+          RowBox[{"#", "[", 
+           RowBox[{"[", "1", "]"}], "]"}], "]"}]}], ",", 
+        RowBox[{
+         RowBox[{"errorNumConcSensirionLowPM", "[", 
+          RowBox[{"#", "[", 
+           RowBox[{"[", "3", "]"}], "]"}], "]"}], "-", 
+         RowBox[{"errorNumConcSensirionLowPM", "[", 
+          RowBox[{"#", "[", 
+           RowBox[{"[", "2", "]"}], "]"}], "]"}]}], ",", 
+        RowBox[{
+         RowBox[{"errorNumConcSensirionHighPM", "[", 
+          RowBox[{"#", "[", 
+           RowBox[{"[", "4", "]"}], "]"}], "]"}], "-", 
+         RowBox[{"errorNumConcSensirionLowPM", "[", 
+          RowBox[{"#", "[", 
+           RowBox[{"[", "3", "]"}], "]"}], "]"}]}], ",", 
+        RowBox[{
+         RowBox[{"errorNumConcSensirionHighPM", "[", 
+          RowBox[{"#", "[", 
+           RowBox[{"[", "5", "]"}], "]"}], "]"}], "-", 
+         RowBox[{"errorNumConcSensirionHighPM", "[", 
+          RowBox[{"#", "[", 
+           RowBox[{"[", "4", "]"}], "]"}], "]"}]}]}], "}"}], "&"}], "@", 
+     "l"}]}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"dSensirionImport", "=."}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"dSensirionImport", "[", 
+     RowBox[{"filename_String", ",", "asName_String"}], "]"}], ":=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+       "dSensirion", ",", "dSensirionVarNames", ",", "dSensirionSync", ",", 
+        "sensirionPositionList", ",", "sensirionVarNamesMassNum", ",", "id", ",",
+         "dErrorSensirion"}], "}"}], ",", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Import", "[", 
+         RowBox[{
+          RowBox[{"urlHead", " ", "~~", "filename"}], ",", "\"\<Text\>\""}], 
+         "]"}], ";", "\[IndentingNewLine]", 
+        RowBox[{"dSensirion", "=", 
+         RowBox[{"myStringSplit", "[", 
+          RowBox[{"dSensirion", ",", 
+           RowBox[{"{", 
+            RowBox[{"\"\<\\n\>\"", ",", "\"\<\\t\>\""}], "}"}]}], "]"}]}], ";",
+         "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"dSensirion", "[", 
+          RowBox[{"[", 
+           RowBox[{"11", ";;", 
+            RowBox[{"-", "1"}]}], "]"}], "]"}], "=", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Flatten", "[", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"ToExpression", "[", 
+               RowBox[{"#", "[", 
+                RowBox[{"[", "1", "]"}], "]"}], "]"}], ",", 
+              RowBox[{"FromDateString", "[", 
+               RowBox[{"#", "[", 
+                RowBox[{"[", "2", "]"}], "]"}], "]"}], ",", 
+              RowBox[{"ToExpression", "[", 
+               RowBox[{"#", "[", 
+                RowBox[{"[", 
+                 RowBox[{"3", ";;", 
+                  RowBox[{"-", "1"}]}], "]"}], "]"}], "]"}]}], "}"}], "]"}], 
+           "&"}], "/@", 
+          RowBox[{"dSensirion", "[", 
+           RowBox[{"[", 
+            RowBox[{"11", ";;", 
+             RowBox[{"-", "1"}]}], "]"}], "]"}]}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"dSensirionVarNames", "=", 
+         RowBox[{"Delete", "[", 
+          RowBox[{
+           RowBox[{"dSensirion", "[", 
+            RowBox[{"[", "10", "]"}], "]"}], ",", "2"}], "]"}]}], ";"}], "\n",
+        "\[IndentingNewLine]", ";", 
+       RowBox[{"dSensirionSync", "=", 
+        RowBox[{"synchronize", "[", 
+         RowBox[{
+          RowBox[{"dSensirion", "[", 
+           RowBox[{"[", 
+            RowBox[{"11", ";;", 
+             RowBox[{"-", "1"}]}], "]"}], "]"}], ",", "1", ",", 
+          RowBox[{"Max", "[", 
+           RowBox[{
+            RowBox[{"dSensirion", "[", 
+             RowBox[{"[", 
+              RowBox[{"11", ";;", 
+               RowBox[{"-", "1"}]}], "]"}], "]"}], "[", 
+            RowBox[{"[", 
+             RowBox[{"All", ",", "1"}], "]"}], "]"}], "]"}], ",", 
+          RowBox[{"UnitConvert", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"asName", "~~", "\"\<_end\>\""}], "/.", " ", 
+             "protocol"}], ",", "\"\<Seconds\>\""}], "]"}]}], "]"}]}], 
+       "\[IndentingNewLine]", ";", "\[IndentingNewLine]", 
+       RowBox[{"dSensirionSync", "=", 
+        RowBox[{"myFlatten", "[", 
+         RowBox[{
+          RowBox[{"Transpose", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"Delete", "[", 
+              RowBox[{
+               RowBox[{"Union", "/@", 
+                RowBox[{"(", 
+                 RowBox[{"Transpose", "/@", 
+                  RowBox[{
+                   RowBox[{"GatherBy", "[", 
+                    RowBox[{"dSensirionSync", ",", "First"}], "]"}], "[", 
+                   RowBox[{"[", 
+                    RowBox[{"All", ",", "All", ",", "1"}], "]"}], "]"}]}], 
+                 ")"}]}], ",", 
+               RowBox[{"-", "1"}]}], "]"}], ",", 
+             RowBox[{"Delete", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{"Transpose", "/@", 
+                  RowBox[{
+                   RowBox[{"GatherBy", "[", 
+                    RowBox[{"dSensirionSync", ",", "First"}], "]"}], "[", 
+                   RowBox[{"[", 
+                    RowBox[{"All", ",", "All", ",", 
+                    RowBox[{"3", ";;", 
+                    RowBox[{"-", "1"}]}]}], "]"}], "]"}]}], ")"}], " ", "/.", 
+                " ", 
+                RowBox[{"Null", "->", "Nothing"}]}], ",", 
+               RowBox[{"-", "1"}]}], "]"}]}], "}"}], "]"}], ",", "1"}], 
+         "]"}]}], "\[IndentingNewLine]", "\[IndentingNewLine]", ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"sensirionPositionList", "=", 
+        RowBox[{"Map", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"dSensirionVarNames", ",", "#"}], "]"}], "[", 
+            RowBox[{"[", 
+             RowBox[{"1", ",", "1"}], "]"}], "]"}], "&"}], ",", 
+          RowBox[{"sensirionVarNamesMassNum", "=", 
+           RowBox[{"SplitBy", "[", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"Select", "[", 
+               RowBox[{"dSensirionVarNames", ",", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"StringContainsQ", "[", 
+                   RowBox[{"#", ",", 
+                    RowBox[{"Union", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Last", "[", 
+                    RowBox[{"StringSplit", "[", 
+                    RowBox[{"#", ",", "\"\<_\>\""}], "]"}], "]"}], "&"}], "/@", 
+                    RowBox[{"Rest", "@", "dSensirionVarNames"}]}], "]"}]}], 
+                   "]"}], "&&", 
+                  RowBox[{
+                   RowBox[{"StringContainsQ", "[", 
+                    RowBox[{"#", ",", "\"\<TypPartSize\>\""}], "]"}], "==", 
+                   "False"}]}], "&"}]}], "]"}], ")"}], ",", 
+             RowBox[{
+              RowBox[{"StringContainsQ", "[", 
+               RowBox[{"#", ",", "\"\<Mass\>\""}], "]"}], "&"}]}], "]"}]}], ",", 
+          RowBox[{"{", "2", "}"}]}], "]"}]}], "\[IndentingNewLine]", ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"sensirionVarNamesMassNum", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"id", "=", 
+             RowBox[{"StringTake", "[", 
+              RowBox[{"#", ",", 
+               RowBox[{"-", "5"}]}], "]"}]}], ";", 
+            RowBox[{"StringJoin", "[", 
+             RowBox[{"Flatten", "[", 
+              RowBox[{"{", 
+               RowBox[{"\"\<AS_\>\"", ",", "id", ",", "\"\<_\>\"", ",", 
+                RowBox[{
+                 RowBox[{"StringSplit", "[", 
+                  RowBox[{"#", ",", "\"\<_\>\""}], "]"}], "[", 
+                 RowBox[{"[", 
+                  RowBox[{"1", ";;", "2"}], "]"}], "]"}]}], "}"}], "]"}], 
+             "]"}]}], ")"}], "&"}], "/@", "sensirionVarNamesMassNum"}]}], 
+       "\[IndentingNewLine]", "\[IndentingNewLine]", ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"dErrorSensirion", "=", 
+        RowBox[{"Map", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"errorSensirion", "[", "#", "]"}], "&"}], ",", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"dSensirionSync", "[", 
+             RowBox[{"[", 
+              RowBox[{"All", ",", 
+               RowBox[{
+                RowBox[{"First", "[", "#", "]"}], ";;", 
+                RowBox[{"Last", "[", "#", "]"}]}]}], "]"}], "]"}], "&"}], "/@",
+            "sensirionPositionList"}], ",", 
+          RowBox[{"{", "2", "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+       "\[IndentingNewLine]", 
+       RowBox[{"dErrorSensirion", "=", 
+        RowBox[{"Prepend", "[", 
+         RowBox[{
+          RowBox[{"myFlatten", "[", 
+           RowBox[{
+            RowBox[{"Transpose", "[", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"dSensirionSync", "[", 
+                RowBox[{"[", 
+                 RowBox[{"All", ",", "1"}], "]"}], "]"}], ",", 
+               RowBox[{"Transpose", "[", "dErrorSensirion", "]"}]}], "}"}], 
+             "]"}], ",", "1"}], "]"}], ",", 
+          RowBox[{"Prepend", "[", 
+           RowBox[{
+            RowBox[{"Flatten", "[", "sensirionVarNamesMassNum", "]"}], ",", 
+            RowBox[{"dSensirionVarNames", "[", 
+             RowBox[{"[", "1", "]"}], "]"}]}], "]"}]}], "]"}]}]}]}], 
+     "]"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.961234649737253*^9, 3.9612346514071865`*^9}, {
+   3.9612347180215073`*^9, 3.961234719173357*^9}, {3.96123481519643*^9, 
+   3.9612348912403297`*^9}, {3.961235397680155*^9, 3.9612354270446987`*^9}, {
+   3.9612360738371468`*^9, 3.961236207317606*^9}, {3.961236600711149*^9, 
+   3.9612367686534405`*^9}, {3.961236801667244*^9, 3.961236875893587*^9}, {
+   3.9614013656417465`*^9, 3.961401365727566*^9}, {3.9614017127631836`*^9, 
+   3.9614017192330074`*^9}, {3.961401912250828*^9, 3.9614020409158726`*^9}, {
+   3.9614021832238407`*^9, 3.9614023702614536`*^9}, {3.96140241247814*^9, 
+   3.9614024268587704`*^9}, {3.9614059448802586`*^9, 
+   3.9614060332156963`*^9}, {3.961406098592169*^9, 3.9614061031445065`*^9}, {
+   3.9614061736152515`*^9, 3.961406175822462*^9}, 3.9614063195124016`*^9, 
+   3.9614072691909657`*^9, {3.961407412586212*^9, 3.9614074276632767`*^9}, {
+   3.9689889342310276`*^9, 3.9689890020755043`*^9}, {3.9689890348963013`*^9, 
+   3.9689890350898952`*^9}, {3.9689893590313473`*^9, 3.968989391830351*^9}, {
+   3.968989450517023*^9, 3.968989499548237*^9}, {3.9689896979705334`*^9, 
+   3.9689897074395046`*^9}, 3.9689904672015076`*^9, {3.968990515820141*^9, 
+   3.9689905616472473`*^9}, {3.968990633248165*^9, 
+   3.968990647806431*^9}},ExpressionUUID->"9c47a7e3-977b-0647-8515-\
+0c9c9f763b10"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Device", " ", "specification", " ", 
+    TemplateBox[{"testo435", {
+       URL[
+       "https://static.testo.com/image/upload/HQ/testo-435-data-sheet.pdf"], 
+       None}, "https://static.testo.com/image/upload/HQ/testo-435-data-sheet.\
+pdf", "HyperlinkActionRecycled", {"HyperlinkActive"}, 
+      BaseStyle -> {"Hyperlink"}, HyperlinkAction -> "Recycled"},
+     "HyperlinkTemplate"]}], "*)"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"testoCO2", "=."}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"testoCO2", "[", "v_Real", "]"}], ":=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", 
+      RowBox[{"Which", "[", 
+       RowBox[{
+        RowBox[{"0", "<=", "v", "<=", "5000"}], ",", 
+        RowBox[{"Around", "[", 
+         RowBox[{"v", ",", 
+          RowBox[{"75", "+", 
+           RowBox[{"0.03", "*", "v"}]}]}], "]"}], ",", 
+        RowBox[{"5001", "<=", "v", "<=", "10000"}], ",", 
+        RowBox[{"Around", "[", 
+         RowBox[{"v", ",", 
+          RowBox[{"150", "+", 
+           RowBox[{"0.05", "*", "v"}]}]}], "]"}], ",", "True", 
+        ",", "\"\<not in measurement range\>\""}], "]"}]}], "]"}]}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"testoPressure", "=."}], "\n", 
+   RowBox[{
+    RowBox[{"testoPressure", "[", "v_Real", "]"}], ":=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"Around", "[", 
+       RowBox[{"v", ",", "10"}], "]"}]}], "\[IndentingNewLine]", "]"}]}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"testoTemperature", "=."}], "\n", 
+   RowBox[{
+    RowBox[{"testoTemperature", "[", "v_Real", "]"}], ":=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"Around", "[", 
+       RowBox[{"v", ",", "0.3"}], "]"}]}], "\[IndentingNewLine]", "]"}]}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"testoHumidity", "=."}], "\n", 
+   RowBox[{
+    RowBox[{"testoHumidity", "[", "v_Real", "]"}], ":=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"Around", "[", 
+       RowBox[{"v", ",", "2"}], "]"}]}], "\[IndentingNewLine]", "]"}]}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"dtesto", "[", 
+      RowBox[{"[", 
+       RowBox[{"All", ",", "2"}], "]"}], "]"}], "=", 
+     RowBox[{"testoCO2", "/@", 
+      RowBox[{"dtesto", "[", 
+       RowBox[{"[", 
+        RowBox[{"All", ",", "2"}], "]"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"dtesto", "[", 
+      RowBox[{"[", 
+       RowBox[{"All", ",", "3"}], "]"}], "]"}], "=", 
+     RowBox[{"testoPressure", "/@", 
+      RowBox[{"dtesto", "[", 
+       RowBox[{"[", 
+        RowBox[{"All", ",", "3"}], "]"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"dtesto", "[", 
+      RowBox[{"[", 
+       RowBox[{"All", ",", "4"}], "]"}], "]"}], "=", 
+     RowBox[{"testoTemperature", "/@", 
+      RowBox[{"dtesto", "[", 
+       RowBox[{"[", 
+        RowBox[{"All", ",", "4"}], "]"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"dtesto", "[", 
+      RowBox[{"[", 
+       RowBox[{"All", ",", "5"}], "]"}], "]"}], "=", 
+     RowBox[{"testoHumidity", "/@", 
+      RowBox[{"dtesto", "[", 
+       RowBox[{"[", 
+        RowBox[{"All", ",", "5"}], "]"}], "]"}]}]}], ";"}], 
+   "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.9689866526046867`*^9, 
+  3.9689868069140415`*^9}},ExpressionUUID->"d091ce4a-bf3b-4f4f-aefb-\
+2f411e347bb9"],
+
+Cell[BoxData[{
+ RowBox[{"dtestoImport", "=."}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dtestoImport", "[", "filename_String", "]"}], ":=", " ", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"dtesto", ",", "varNames"}], "}"}], ",", 
+    RowBox[{
+     RowBox[{"dtesto", "=", 
+      RowBox[{"Import", "[", 
+       RowBox[{
+        RowBox[{"urlHead", " ", "~~", "filename"}], ",", "\"\<Text\>\""}], 
+       "]"}]}], "\[IndentingNewLine]", ";", 
+     RowBox[{"dtesto", "=", 
+      RowBox[{"myStringSplit", "[", 
+       RowBox[{
+        RowBox[{"StringReplace", "[", 
+         RowBox[{"dtesto", ",", 
+          RowBox[{"\"\<,\>\"", "->", "\"\<.\>\""}]}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"\"\<\\n\>\"", ",", "\"\<;\>\""}], "}"}]}], "]"}]}], 
+     "\[IndentingNewLine]", ";", 
+     RowBox[{"varNames", "=", 
+      RowBox[{
+       RowBox[{"dtesto", "[", 
+        RowBox[{"[", "1", "]"}], "]"}], "[", 
+       RowBox[{"[", 
+        RowBox[{"4", ";;", 
+         RowBox[{"-", "1"}]}], "]"}], "]"}]}], "\[IndentingNewLine]", ";", 
+     RowBox[{"dtesto", "=", " ", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Flatten", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"UnixTime", "[", 
+            RowBox[{"FromDateString", "[", 
+             RowBox[{
+              RowBox[{"#", "[", 
+               RowBox[{"[", "2", "]"}], "]"}], "~~", " ", "\"\< \>\"", " ", "~~",
+               " ", 
+              RowBox[{"#", "[", 
+               RowBox[{"[", "3", "]"}], "]"}]}], "]"}], "]"}], ",", 
+           RowBox[{"ToExpression", "[", 
+            RowBox[{"#", "[", 
+             RowBox[{"[", 
+              RowBox[{"4", ";;", 
+               RowBox[{"-", "1"}]}], "]"}], "]"}], "]"}]}], "}"}], "]"}], 
+        "&"}], "/@", 
+       RowBox[{"dtesto", "[", 
+        RowBox[{"[", 
+         RowBox[{"2", ";;", 
+          RowBox[{"-", "2"}]}], "]"}], "]"}]}]}], "\[IndentingNewLine]", ";", 
+     RowBox[{
+      RowBox[{"dtesto", "[", 
+       RowBox[{"[", 
+        RowBox[{"All", ",", "2"}], "]"}], "]"}], "=", 
+      RowBox[{"testoCO2", "/@", 
+       RowBox[{"dtesto", "[", 
+        RowBox[{"[", 
+         RowBox[{"All", ",", "2"}], "]"}], "]"}]}]}], "\[IndentingNewLine]", ";", 
+     RowBox[{
+      RowBox[{"dtesto", "[", 
+       RowBox[{"[", 
+        RowBox[{"All", ",", "3"}], "]"}], "]"}], "=", 
+      RowBox[{"testoPressure", "/@", 
+       RowBox[{"dtesto", "[", 
+        RowBox[{"[", 
+         RowBox[{"All", ",", "3"}], "]"}], "]"}]}]}], "\[IndentingNewLine]", ";", 
+     RowBox[{
+      RowBox[{"dtesto", "[", 
+       RowBox[{"[", 
+        RowBox[{"All", ",", "4"}], "]"}], "]"}], "=", 
+      RowBox[{"testoTemperature", "/@", 
+       RowBox[{"dtesto", "[", 
+        RowBox[{"[", 
+         RowBox[{"All", ",", "4"}], "]"}], "]"}]}]}], "\[IndentingNewLine]", ";", 
+     RowBox[{
+      RowBox[{"dtesto", "[", 
+       RowBox[{"[", 
+        RowBox[{"All", ",", "5"}], "]"}], "]"}], "=", 
+      RowBox[{"testoHumidity", "/@", 
+       RowBox[{"dtesto", "[", 
+        RowBox[{"[", 
+         RowBox[{"All", ",", "5"}], "]"}], "]"}]}]}], "\[IndentingNewLine]", ";", 
+     RowBox[{"synchronize", "[", 
+      RowBox[{"dtesto", ",", "1", ",", 
+       RowBox[{"Max", "[", 
+        RowBox[{"dtesto", "[", 
+         RowBox[{"[", 
+          RowBox[{"All", ",", "1"}], "]"}], "]"}], "]"}], ",", 
+       RowBox[{"UnitConvert", "[", 
+        RowBox[{
+         RowBox[{"\"\<roomAirCondition_end\>\"", "/.", " ", "protocol"}], 
+         ",", "\"\<Seconds\>\""}], "]"}]}], "]"}], "\[IndentingNewLine]", ";", 
+     RowBox[{"{", 
+      RowBox[{"varNames", ",", "dtesto"}], "}"}]}]}], 
+   "]"}]}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.9689868306808968`*^9, 3.9689868727086296`*^9}, {
+  3.968987236264879*^9, 3.968987251113209*^9}, {3.9689872901938457`*^9, 
+  3.968987296655739*^9}},
+ CellLabel->
+  "In[144]:=",ExpressionUUID->"88c303d0-09cf-2a46-9ff9-2d78fbb4fce2"]
+},
+WindowSize->{718.5, 735},
+WindowMargins->{{Automatic, -5.25}, {Automatic, 0}},
+FrontEndVersion->"14.3 for Microsoft Windows (64-bit) (July 8, 2025)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"ecb341a5-ca65-d74f-b55c-794d4d84b01a"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[554, 20, 1691, 45, 218, "Input",ExpressionUUID->"71927a28-be0e-db45-8bb0-feb158927f26"],
+Cell[2248, 67, 4953, 126, 446, "Input",ExpressionUUID->"735f81c5-6930-1041-aea3-35b9bbe1004c"],
+Cell[7204, 195, 16684, 396, 1517, "Input",ExpressionUUID->"9c47a7e3-977b-0647-8515-0c9c9f763b10"],
+Cell[23891, 593, 3726, 99, 522, "Input",ExpressionUUID->"d091ce4a-bf3b-4f4f-aefb-2f411e347bb9"],
+Cell[27620, 694, 3914, 103, 351, "Input",ExpressionUUID->"88c303d0-09cf-2a46-9ff9-2d78fbb4fce2"]
+}
+]
+*)
+

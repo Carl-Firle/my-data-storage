@@ -1,0 +1,343 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[     15569,        335]
+NotebookOptionsPosition[     14891,        316]
+NotebookOutlinePosition[     15292,        332]
+CellTagsIndexPosition[     15249,        329]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{"dProtocolImporttest", "=."}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"dProtocolImporttest", "[", "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"dProtocol", ",", "timeline", ",", "var"}], "}"}], ",", 
+     RowBox[{
+      RowBox[{"dProtocol", "=", "dProtocoltest"}], "\[IndentingNewLine]", ";", 
+      RowBox[{"dProtocol", "=", 
+       RowBox[{"StringReplace", "[", 
+        RowBox[{"dProtocol", ",", "stringFix"}], "]"}]}], 
+      "\[IndentingNewLine]", ";", 
+      RowBox[{"protocol", "=", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"#", "[", 
+           RowBox[{"[", "1", "]"}], "]"}], "->", 
+          RowBox[{"Quantity", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"ToExpression", "[", 
+              RowBox[{"#", "[", 
+               RowBox[{"[", "2", "]"}], "]"}], "]"}], " ", "/", "1000."}], 
+            ",", "\"\<Seconds\>\""}], "]"}]}], "&"}], "/@", 
+        RowBox[{"myStringSplit", "[", 
+         RowBox[{"dProtocol", ",", 
+          RowBox[{"{", 
+           RowBox[{"\"\< --- \>\"", ",", "\"\< :: \>\""}], "}"}]}], "]"}]}]}],
+       "\[IndentingNewLine]", ";", 
+      RowBox[{"protocol", "=", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"#", "[", 
+           RowBox[{"[", "1", "]"}], "]"}], "->", 
+          RowBox[{
+           RowBox[{"#", "[", 
+            RowBox[{"[", "2", "]"}], "]"}], "-", 
+           RowBox[{"Min", "[", 
+            RowBox[{"Values", "@", "protocol"}], "]"}]}]}], "&"}], "/@", 
+        "protocol"}]}], "\[IndentingNewLine]", ";", 
+      RowBox[{"startEndTimes", "=", 
+       RowBox[{"Select", "[", 
+        RowBox[{"protocol", ",", 
+         RowBox[{
+          RowBox[{"StringContainsQ", "[", 
+           RowBox[{
+            RowBox[{"#", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], ",", 
+            RowBox[{"\"\<_start\>\"", "|", "\"\<_end\>\""}]}], "]"}], "&"}]}],
+         "]"}]}], "\[IndentingNewLine]", ";", 
+      RowBox[{
+       RowBox[{"startEndTimes", "[", 
+        RowBox[{"[", 
+         RowBox[{"All", ",", "1"}], "]"}], "]"}], "=", 
+       RowBox[{"ToLowerCase", "/@", 
+        RowBox[{"startEndTimes", "[", 
+         RowBox[{"[", 
+          RowBox[{"All", ",", "1"}], "]"}], "]"}]}]}], "\[IndentingNewLine]", 
+      ";", 
+      RowBox[{"var", "=", 
+       RowBox[{"Union", "[", 
+        RowBox[{"ToLowerCase", "/@", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"StringReplace", "[", 
+             RowBox[{"#", ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"\"\<_start\>\"", "->", "\"\<\>\""}], ",", 
+                RowBox[{"\"\<_end\>\"", "->", "\"\<\>\""}]}], "}"}]}], "]"}], 
+            "&"}], "/@", 
+           RowBox[{"startEndTimes", "[", 
+            RowBox[{"[", 
+             RowBox[{"All", ",", "1"}], "]"}], "]"}]}], ")"}]}], "]"}]}], 
+      "\[IndentingNewLine]", ";", 
+      RowBox[{"startEndTimes", "=", 
+       RowBox[{"GatherBy", "[", 
+        RowBox[{"startEndTimes", ",", 
+         RowBox[{
+          RowBox[{"strContQ", "[", 
+           RowBox[{"#", ",", "var"}], "]"}], "&"}]}], "]"}]}], 
+      "\[IndentingNewLine]", ";", 
+      RowBox[{"startEndTimes", "=", " ", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"GatherBy", "[", 
+          RowBox[{"#", ",", "First"}], "]"}], "&"}], "/@", 
+        "startEndTimes"}]}], "\[IndentingNewLine]", ";", 
+      RowBox[{"startEndTimes", "=", 
+       RowBox[{"startEndTimes", "[", 
+        RowBox[{"[", 
+         RowBox[{"All", ",", "All", ",", 
+          RowBox[{"-", "1"}]}], "]"}], "]"}]}], "\[IndentingNewLine]", ";", 
+      RowBox[{"Print", "[", "startEndTimes", "]"}], "\[IndentingNewLine]", ";", 
+      RowBox[{"timeline", "=", 
+       RowBox[{"Range", "[", 
+        RowBox[{"0", ",", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"Values", "[", 
+              RowBox[{"protocolSelect", "[", "\"\<end of protocol\>\"", "]"}],
+               "]"}], "-", 
+             RowBox[{"Values", "[", 
+              RowBox[{"protocolSelect", "[", "\"\<start time\>\"", "]"}], 
+              "]"}]}], ")"}], " ", "[", 
+           RowBox[{"[", "1", "]"}], "]"}], "[", 
+          RowBox[{"[", "1", "]"}], "]"}], ",", ".5"}], "]"}]}], 
+      "\[IndentingNewLine]", ";", 
+      RowBox[{"varNames", "=", 
+       RowBox[{"{", "\"\<elapsed time\>\"", "}"}]}], "\[IndentingNewLine]", ";", 
+      RowBox[{"oneTable", "=", 
+       RowBox[{"{", "timeline", "}"}]}]}]}], "]"}]}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dProtocolImporttest", "[", "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.970409133638479*^9, 3.9704091812284794`*^9}, 
+   3.970409254319866*^9, {3.970409284561802*^9, 3.970409296964834*^9}, 
+   3.970499104646742*^9},
+ CellLabel->
+  "In[1196]:=",ExpressionUUID->"4b4d10a5-1865-4341-9282-640a20f29b80"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\<\"countdown_start***10***min\"\>", "\[Rule]", 
+      TemplateBox[{"36854.03699994087`", "\"s\"", "seconds", "\"Seconds\""},
+       "Quantity"]}], ",", 
+     RowBox[{"\<\"load_start***25***watt\"\>", "\[Rule]", 
+      TemplateBox[{"36833.19900012016`", "\"s\"", "seconds", "\"Seconds\""},
+       "Quantity"]}], ",", 
+     RowBox[{"\<\"load_start***50***watt\"\>", "\[Rule]", 
+      TemplateBox[{"36851.30900001526`", "\"s\"", "seconds", "\"Seconds\""},
+       "Quantity"]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"exercise_end\"\>", "\[Rule]", 
+     TemplateBox[{"601.9900000095367`", "\"s\"", "seconds", "\"Seconds\""},
+      "Quantity"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"randomise_start\"\>", "\[Rule]", 
+     TemplateBox[{"36829.25999999046`", "\"s\"", "seconds", "\"Seconds\""},
+      "Quantity"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\<\"measurement_start***none***30\"\>", "\[Rule]", 
+      TemplateBox[{"36831.266000032425`", "\"s\"", "seconds", "\"Seconds\""},
+       "Quantity"]}], ",", 
+     RowBox[{"\<\"measurement_end\"\>", "\[Rule]", 
+      TemplateBox[{"36856.09400010109`", "\"s\"", "seconds", "\"Seconds\""},
+       "Quantity"]}], ",", 
+     RowBox[{"\<\"measurement_start***ffp2 mask***30\"\>", "\[Rule]", 
+      TemplateBox[{"36846.05400013924`", "\"s\"", "seconds", "\"Seconds\""},
+       "Quantity"]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\<\"aircleaner_cabin_end\"\>", "\[Rule]", 
+      TemplateBox[{"36851.117000103`", "\"s\"", "seconds", "\"Seconds\""},
+       "Quantity"]}], ",", 
+     RowBox[{"\<\"aircleaner_cabin_start\"\>", "\[Rule]", 
+      TemplateBox[{"36861.71700000763`", "\"s\"", "seconds", "\"Seconds\""},
+       "Quantity"]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\<\"pexa_start\"\>", "\[Rule]", 
+      TemplateBox[{"36854.24500012398`", "\"s\"", "seconds", "\"Seconds\""},
+       "Quantity"]}], ",", 
+     RowBox[{"\<\"pexa_end\"\>", "\[Rule]", 
+      TemplateBox[{"36855.90199995041`", "\"s\"", "seconds", "\"Seconds\""},
+       "Quantity"]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\<\"pexa_sample_start\"\>", "\[Rule]", 
+      TemplateBox[{"36837.53900003433`", "\"s\"", "seconds", "\"Seconds\""},
+       "Quantity"]}], ",", 
+     RowBox[{"\<\"pexa_sample_end\"\>", "\[Rule]", 
+      TemplateBox[{"36854.671000003815`", "\"s\"", "seconds", "\"Seconds\""},
+       "Quantity"]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\<\"aircleaner_airlock_end\"\>", "\[Rule]", 
+      TemplateBox[{"36858.54200005531`", "\"s\"", "seconds", "\"Seconds\""},
+       "Quantity"]}], ",", 
+     RowBox[{"\<\"aircleaner_airlock_start\"\>", "\[Rule]", 
+      TemplateBox[{"36861.046000003815`", "\"s\"", "seconds", "\"Seconds\""},
+       "Quantity"]}]}], "}"}]}], "}"}]], "Print",
+ CellChangeTimes->{3.970409298011183*^9, 3.970409352744053*^9, 
+  3.970409406479765*^9, 3.970411658014971*^9, 3.970499106358244*^9},
+ CellLabel->
+  "During evaluation of \
+In[1196]:=",ExpressionUUID->"d6568861-e828-4746-938d-852835e4b23b"]
+}, Open  ]],
+
+Cell[BoxData["protocol"], "Input",
+ CellChangeTimes->{{3.970409239554966*^9, 3.970409240413637*^9}},
+ CellLabel->
+  "In[779]:=",ExpressionUUID->"2d3f0288-d708-b541-9454-d35c8a10af2b"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+  "dProtocoltest", 
+   "=", "\"\<start time***Sat Oct 25 2025 11:09:28 GMT+0200 (Mitteleurop\
+\[ADoubleDot]ische Sommerzeit) :: 1761383372000 --- \
+countdown_start***10***min :: 1761383373034 --- exercise_end :: 1761383973990 \
+--- mask_order***none,30, ,surgical mask,30, ,surgical mask,50, ,FFP2 \
+mask,50, ,none,50, ,FFP2 mask,30,  :: 1761420149945 --- randomise_start :: \
+1761420149945 --- mask_type***none***- :: 1761420150835 --- \
+target_respMinVol***30***l/min :: 1761420151655 --- \
+measurement_start***none***30 :: 1761420152390 --- next_measurement :: \
+1761420179945 --- mask_order***FFP2 mask,50, ,none,30, ,FFP2 mask,30, \
+,surgical mask,30, ,none,50, ,surgical mask,50,  :: 1761420201260 --- \
+randomise_start :: 1761420201260 --- mask_type***none***- :: 1761420202365 \
+--- target_respMinVol***30***l/min :: 1761420202787 --- \
+measurement_start***none***30 :: 1761420203266 --- door_airlock_open :: \
+1761420203595 --- door_airlock_closed :: 1761420203818 --- door_cabin_open :: \
+1761420204035 --- subject_in_position :: 1761420204217 --- door_cabin_closed \
+:: 1761420204408 --- door_airlock_open :: 1761420204594 --- \
+door_airlock_closed :: 1761420204793 --- airCleaner_cabin_end :: \
+1761420204985 --- load_total***50 :: 1761420205199 --- load_start***25***Watt \
+:: 1761420205199 --- load_total***75 :: 1761420205730 --- \
+load_increase***25***Watt :: 1761420205730 --- load_total***100 :: \
+1761420206138 --- load_increase***25***Watt :: 1761420206138 --- \
+countdown_start***10***min :: 1761420208649 --- pexa_start :: 1761420209230 \
+--- pexa_sample_start :: 1761420209539 --- pexa_sample_end :: 1761420209766 \
+--- load_total***75 :: 1761420210056 --- load_decrease***25***Watt :: \
+1761420210056 --- load_total***50 :: 1761420210726 --- \
+load_decrease***25***Watt :: 1761420210726 --- load_total***25 :: \
+1761420210914 --- load_decrease***25***Watt :: 1761420210914 --- \
+load_total***0 :: 1761420211094 --- load_decrease***25***Watt :: \
+1761420211094 --- pexa_end :: 1761420211526 --- measurement_end :: \
+1761420211718 --- door_cabin_exit_open :: 1761420211918 --- subject_exits :: \
+1761420212246 --- airCleaner_airlock_end :: 1761420212559 --- \
+door_airlock_open :: 1761420213358 --- door_cabin_open :: 1761420213542 --- \
+window_opening :: 1761420213727 --- window_closing :: 1761420213917 --- \
+door_cabin_closed :: 1761420214070 --- door_airlock_closed :: 1761420214255 \
+--- door_cabin_exit_closed :: 1761420214406 --- airCleaner_airlock_start :: \
+1761420214574 --- airCleaner_cabin_start :: 1761420215014 --- \
+next_measurement :: 1761420215445 --- target_respMinVol***30***l/min :: \
+1761420217663 --- measurement_start***FFP2 mask***30 :: 1761420218054 --- \
+door_airlock_closed :: 1761420218806 --- door_cabin_open :: 1761420219110 --- \
+subject_in_position :: 1761420219438 --- door_cabin_closed :: 1761420219742 \
+--- door_airlock_open :: 1761420221888 --- door_airlock_open :: 1761420222634 \
+--- door_airlock_closed :: 1761420222887 --- airCleaner_cabin_end :: \
+1761420223117 --- load_total***50 :: 1761420223309 --- load_start***50***Watt \
+:: 1761420223309 --- load_total***75 :: 1761420224084 --- \
+load_increase***25***Watt :: 1761420224084 --- load_total***100 :: \
+1761420224470 --- load_increase***25***Watt :: 1761420224470 --- \
+load_total***125 :: 1761420224782 --- load_increase***25***Watt :: \
+1761420224783 --- countdown_start***10***min :: 1761420226037 --- pexa_start \
+:: 1761420226245 --- pexa_sample_end :: 1761420226671 --- load_total***100 :: \
+1761420226871 --- load_decrease***25***Watt :: 1761420226871 --- \
+load_total***75 :: 1761420227517 --- load_decrease***25***Watt :: \
+1761420227518 --- pexa_end :: 1761420227902 --- measurement_end :: \
+1761420228094 --- door_cabin_exit_open :: 1761420228278 --- subject_exits :: \
+1761420228494 --- airCleaner_airlock_end :: 1761420230542 --- \
+door_airlock_open :: 1761420231349 --- door_cabin_open :: 1761420231686 --- \
+window_opening :: 1761420231878 --- window_closing :: 1761420232070 --- \
+door_cabin_closed :: 1761420232269 --- door_airlock_closed :: 1761420232486 \
+--- door_cabin_exit_closed :: 1761420232686 --- airCleaner_airlock_start :: \
+1761420233046 --- airCleaner_cabin_start :: 1761420233717 --- \
+next_measurement :: 1761420234199 --- AS_01_name*** :: 1761420534526 --- \
+AS_02_name*** :: 1761420534526 --- AS_03_name*** :: 1761420534526 --- \
+yearOfBirth***19 :: 1761420534526 --- gender***female :: 1761420534527 --- \
+height*** :: 1761420534527 --- weight*** :: 1761420534527 --- healthy***1 :: \
+1761420534527 --- fever***0 :: 1761420534527 --- illness***0 :: 1761420534527 \
+--- surgeries***0 :: 1761420534527 --- cardiovascular***0 :: 1761420534527 \
+--- infarction***0 :: 1761420534527 --- aneurysma***0 :: 1761420534527 --- \
+pneumothorax***0 :: 1761420534527 --- dizziness***0 :: 1761420534527 --- \
+respDisease***0 :: 1761420534527 --- acuteRespDisease***0 :: 1761420534528 \
+--- allergies***0 :: 1761420534528 --- nicotineAbuse***0 :: 1761420534528 --- \
+medication***0 :: 1761420534528 --- auscultationHeart***distinct and clear \
+sounds, regular rhythm, normal heart rate, no abnormal sounds :: \
+1761420534528 --- heartRate*** :: 1761420534528 --- rhythm***SA node :: \
+1761420534528 --- cardiacAxis***normal :: 1761420534528 --- heartBlock***none \
+:: 1761420534528 --- rWave***regular R-wave progression :: 1761420534528 --- \
+repolarisation***none :: 1761420534528 --- auscultationLung***vesicular \
+sound, normopnoea, no pathological breath sound :: 1761420534528 --- end of \
+protocol :: 1761420534528\>\""}], ";"}]], "Input",
+ CellChangeTimes->{{3.9704091195539055`*^9, 3.970409128420105*^9}, {
+   3.970409172601862*^9, 3.9704091726783657`*^9}, {3.9704093483769646`*^9, 
+   3.9704093493103275`*^9}, 3.9704094021018505`*^9, {3.9704116498848286`*^9, 
+   3.970411652797552*^9}, {3.970499090416273*^9, 3.970499096247326*^9}},
+ CellLabel->
+  "In[1195]:=",ExpressionUUID->"d77592dd-c424-1c4a-a346-4da432505501"]
+},
+WindowSize->{718.5, 735},
+WindowMargins->{{Automatic, -5.25}, {Automatic, 0}},
+FrontEndVersion->"14.3 for Microsoft Windows (64-bit) (July 8, 2025)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"37b9c916-73e5-a54f-bf3b-9233476dbfdb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[576, 22, 4954, 127, 522, "Input",ExpressionUUID->"4b4d10a5-1865-4341-9282-640a20f29b80"],
+Cell[5533, 151, 3154, 69, 164, "Print",ExpressionUUID->"d6568861-e828-4746-938d-852835e4b23b"]
+}, Open  ]],
+Cell[8702, 223, 183, 3, 28, "Input",ExpressionUUID->"2d3f0288-d708-b541-9454-d35c8a10af2b"],
+Cell[8888, 228, 5999, 86, 1588, "Input",ExpressionUUID->"d77592dd-c424-1c4a-a346-4da432505501"]
+}
+]
+*)
+

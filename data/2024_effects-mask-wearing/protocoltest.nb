@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[     15569,        335]
-NotebookOptionsPosition[     14891,        316]
-NotebookOutlinePosition[     15292,        332]
-CellTagsIndexPosition[     15249,        329]
+NotebookDataLength[     27887,        534]
+NotebookOptionsPosition[     27199,        515]
+NotebookOutlinePosition[     27605,        531]
+CellTagsIndexPosition[     27562,        528]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -147,78 +147,152 @@ Cell[BoxData[{
    3.970409254319866*^9, {3.970409284561802*^9, 3.970409296964834*^9}, 
    3.970499104646742*^9},
  CellLabel->
-  "In[1196]:=",ExpressionUUID->"4b4d10a5-1865-4341-9282-640a20f29b80"],
+  "In[478]:=",ExpressionUUID->"4b4d10a5-1865-4341-9282-640a20f29b80"],
 
 Cell[BoxData[
  RowBox[{"{", 
   RowBox[{
    RowBox[{"{", 
     RowBox[{
-     RowBox[{"\<\"countdown_start***10***min\"\>", "\[Rule]", 
-      TemplateBox[{"36854.03699994087`", "\"s\"", "seconds", "\"Seconds\""},
+     RowBox[{"\<\"aircleaner_airlock_start\"\>", "\[Rule]", 
+      TemplateBox[{"677.2799999713898`", "\"s\"", "seconds", "\"Seconds\""},
        "Quantity"]}], ",", 
-     RowBox[{"\<\"load_start***25***watt\"\>", "\[Rule]", 
-      TemplateBox[{"36833.19900012016`", "\"s\"", "seconds", "\"Seconds\""},
-       "Quantity"]}], ",", 
-     RowBox[{"\<\"load_start***50***watt\"\>", "\[Rule]", 
-      TemplateBox[{"36851.30900001526`", "\"s\"", "seconds", "\"Seconds\""},
+     RowBox[{"\<\"aircleaner_airlock_end\"\>", "\[Rule]", 
+      TemplateBox[{"734.9189999103546`", "\"s\"", "seconds", "\"Seconds\""},
        "Quantity"]}]}], "}"}], ",", 
    RowBox[{"{", 
-    RowBox[{"\<\"exercise_end\"\>", "\[Rule]", 
-     TemplateBox[{"601.9900000095367`", "\"s\"", "seconds", "\"Seconds\""},
+    RowBox[{
+     RowBox[{"\<\"aircleaner_cabin_start\"\>", "\[Rule]", 
+      TemplateBox[{"677.9909999370575`", "\"s\"", "seconds", "\"Seconds\""},
+       "Quantity"]}], ",", 
+     RowBox[{"\<\"aircleaner_cabin_end\"\>", "\[Rule]", 
+      TemplateBox[{"695.0709998607635`", "\"s\"", "seconds", "\"Seconds\""},
+       "Quantity"]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\<\"roomaircondition_start\"\>", "\[Rule]", 
+      TemplateBox[{"16.205999851226807`", "\"s\"", "seconds", "\"Seconds\""},
+       "Quantity"]}], ",", 
+     RowBox[{"\<\"roomaircondition_end\"\>", "\[Rule]", 
+      TemplateBox[{"736.7039999961853`", "\"s\"", "seconds", "\"Seconds\""},
+       "Quantity"]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\<\"as_01_start\"\>", "\[Rule]", 
+      TemplateBox[{"21.26099991798401`", "\"s\"", "seconds", "\"Seconds\""},
+       "Quantity"]}], ",", 
+     RowBox[{"\<\"as_01_end\"\>", "\[Rule]", 
+      TemplateBox[{"737.8309998512268`", "\"s\"", "seconds", "\"Seconds\""},
+       "Quantity"]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\<\"as_02_start\"\>", "\[Rule]", 
+      TemplateBox[{"30.62999987602234`", "\"s\"", "seconds", "\"Seconds\""},
+       "Quantity"]}], ",", 
+     RowBox[{"\<\"as_02_end\"\>", "\[Rule]", 
+      TemplateBox[{"738.4339997768402`", "\"s\"", "seconds", "\"Seconds\""},
+       "Quantity"]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\<\"as_03_start\"\>", "\[Rule]", 
+      TemplateBox[{"35.0939998626709`", "\"s\"", "seconds", "\"Seconds\""},
+       "Quantity"]}], ",", 
+     RowBox[{"\<\"as_03_end\"\>", "\[Rule]", 
+      TemplateBox[{"740.0069999694824`", "\"s\"", "seconds", "\"Seconds\""},
+       "Quantity"]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"spirometry_fev1_end\"\>", "\[Rule]", 
+     TemplateBox[{"70.20499992370605`", "\"s\"", "seconds", "\"Seconds\""},
       "Quantity"]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\<\"rip_1_start\"\>", "\[Rule]", 
+      TemplateBox[{"73.22099995613098`", "\"s\"", "seconds", "\"Seconds\""},
+       "Quantity"]}], ",", 
+     RowBox[{"\<\"rip_1_end\"\>", "\[Rule]", 
+      TemplateBox[{"732.9909999370575`", "\"s\"", "seconds", "\"Seconds\""},
+       "Quantity"]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\<\"rip_2_start\"\>", "\[Rule]", 
+      TemplateBox[{"73.58899998664856`", "\"s\"", "seconds", "\"Seconds\""},
+       "Quantity"]}], ",", 
+     RowBox[{"\<\"rip_2_end\"\>", "\[Rule]", 
+      TemplateBox[{"75.02199983596802`", "\"s\"", "seconds", "\"Seconds\""},
+       "Quantity"]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\<\"spiro_start\"\>", "\[Rule]", 
+      TemplateBox[{"74.07799983024597`", "\"s\"", "seconds", "\"Seconds\""},
+       "Quantity"]}], ",", 
+     RowBox[{"\<\"spiro_end\"\>", "\[Rule]", 
+      TemplateBox[{"74.50899982452393`", "\"s\"", "seconds", "\"Seconds\""},
+       "Quantity"]}]}], "}"}], ",", 
    RowBox[{"{", 
     RowBox[{"\<\"randomise_start\"\>", "\[Rule]", 
-     TemplateBox[{"36829.25999999046`", "\"s\"", "seconds", "\"Seconds\""},
+     TemplateBox[{"76.66199994087219`", "\"s\"", "seconds", "\"Seconds\""},
       "Quantity"]}], "}"}], ",", 
    RowBox[{"{", 
     RowBox[{
-     RowBox[{"\<\"measurement_start***none***30\"\>", "\[Rule]", 
-      TemplateBox[{"36831.266000032425`", "\"s\"", "seconds", "\"Seconds\""},
+     RowBox[{"\<\"measurement_start***ffp2 mask***50\"\>", "\[Rule]", 
+      TemplateBox[{"80.22099995613098`", "\"s\"", "seconds", "\"Seconds\""},
        "Quantity"]}], ",", 
      RowBox[{"\<\"measurement_end\"\>", "\[Rule]", 
-      TemplateBox[{"36856.09400010109`", "\"s\"", "seconds", "\"Seconds\""},
+      TemplateBox[{"719.2239999771118`", "\"s\"", "seconds", "\"Seconds\""},
+       "Quantity"]}], ",", 
+     RowBox[{"\<\"measurement_start***none***50\"\>", "\[Rule]", 
+      TemplateBox[{"535.8629999160767`", "\"s\"", "seconds", "\"Seconds\""},
        "Quantity"]}], ",", 
      RowBox[{"\<\"measurement_start***ffp2 mask***30\"\>", "\[Rule]", 
-      TemplateBox[{"36846.05400013924`", "\"s\"", "seconds", "\"Seconds\""},
+      TemplateBox[{"568.9659998416901`", "\"s\"", "seconds", "\"Seconds\""},
+       "Quantity"]}], ",", 
+     RowBox[{"\<\"measurement_start***surgical mask***30\"\>", "\[Rule]", 
+      TemplateBox[{"600.7349998950958`", "\"s\"", "seconds", "\"Seconds\""},
+       "Quantity"]}], ",", 
+     RowBox[{"\<\"measurement_start***surgical mask***50\"\>", "\[Rule]", 
+      TemplateBox[{"648.2059998512268`", "\"s\"", "seconds", "\"Seconds\""},
+       "Quantity"]}], ",", 
+     RowBox[{"\<\"measurement_start***none***30\"\>", "\[Rule]", 
+      TemplateBox[{"689.2069997787476`", "\"s\"", "seconds", "\"Seconds\""},
        "Quantity"]}]}], "}"}], ",", 
    RowBox[{"{", 
     RowBox[{
-     RowBox[{"\<\"aircleaner_cabin_end\"\>", "\[Rule]", 
-      TemplateBox[{"36851.117000103`", "\"s\"", "seconds", "\"Seconds\""},
+     RowBox[{"\<\"load_start***50***watt\"\>", "\[Rule]", 
+      TemplateBox[{"695.8719999790192`", "\"s\"", "seconds", "\"Seconds\""},
        "Quantity"]}], ",", 
-     RowBox[{"\<\"aircleaner_cabin_start\"\>", "\[Rule]", 
-      TemplateBox[{"36861.71700000763`", "\"s\"", "seconds", "\"Seconds\""},
+     RowBox[{"\<\"countdown_start***1***min\"\>", "\[Rule]", 
+      TemplateBox[{"101.56499981880188`", "\"s\"", "seconds", "\"Seconds\""},
+       "Quantity"]}], ",", 
+     RowBox[{"\<\"countdown_start***0.1***min\"\>", "\[Rule]", 
+      TemplateBox[{"701.1589999198914`", "\"s\"", "seconds", "\"Seconds\""},
        "Quantity"]}]}], "}"}], ",", 
    RowBox[{"{", 
     RowBox[{
      RowBox[{"\<\"pexa_start\"\>", "\[Rule]", 
-      TemplateBox[{"36854.24500012398`", "\"s\"", "seconds", "\"Seconds\""},
+      TemplateBox[{"713.1269998550415`", "\"s\"", "seconds", "\"Seconds\""},
        "Quantity"]}], ",", 
      RowBox[{"\<\"pexa_end\"\>", "\[Rule]", 
-      TemplateBox[{"36855.90199995041`", "\"s\"", "seconds", "\"Seconds\""},
+      TemplateBox[{"718.6659998893738`", "\"s\"", "seconds", "\"Seconds\""},
        "Quantity"]}]}], "}"}], ",", 
    RowBox[{"{", 
     RowBox[{
      RowBox[{"\<\"pexa_sample_start\"\>", "\[Rule]", 
-      TemplateBox[{"36837.53900003433`", "\"s\"", "seconds", "\"Seconds\""},
+      TemplateBox[{"713.5499999523163`", "\"s\"", "seconds", "\"Seconds\""},
        "Quantity"]}], ",", 
      RowBox[{"\<\"pexa_sample_end\"\>", "\[Rule]", 
-      TemplateBox[{"36854.671000003815`", "\"s\"", "seconds", "\"Seconds\""},
+      TemplateBox[{"714.0309998989105`", "\"s\"", "seconds", "\"Seconds\""},
        "Quantity"]}]}], "}"}], ",", 
    RowBox[{"{", 
-    RowBox[{
-     RowBox[{"\<\"aircleaner_airlock_end\"\>", "\[Rule]", 
-      TemplateBox[{"36858.54200005531`", "\"s\"", "seconds", "\"Seconds\""},
-       "Quantity"]}], ",", 
-     RowBox[{"\<\"aircleaner_airlock_start\"\>", "\[Rule]", 
-      TemplateBox[{"36861.046000003815`", "\"s\"", "seconds", "\"Seconds\""},
-       "Quantity"]}]}], "}"}]}], "}"}]], "Print",
+    RowBox[{"\<\"exercise_end\"\>", "\[Rule]", 
+     TemplateBox[{"707.6859998703003`", "\"s\"", "seconds", "\"Seconds\""},
+      "Quantity"]}], "}"}]}], "}"}]], "Print",
  CellChangeTimes->{3.970409298011183*^9, 3.970409352744053*^9, 
-  3.970409406479765*^9, 3.970411658014971*^9, 3.970499106358244*^9},
+  3.970409406479765*^9, 3.970411658014971*^9, 3.970499106358244*^9, 
+  3.9708072912116776`*^9, 3.970808028293457*^9, 3.970808397893862*^9, 
+  3.970808548980644*^9, 3.9708099378127365`*^9, 3.970817325311224*^9},
  CellLabel->
   "During evaluation of \
-In[1196]:=",ExpressionUUID->"d6568861-e828-4746-938d-852835e4b23b"]
+In[478]:=",ExpressionUUID->"93935ba4-4ae6-9648-a66e-93c7dd02fc78"]
 }, Open  ]],
 
 Cell[BoxData["protocol"], "Input",
@@ -230,93 +304,218 @@ Cell[BoxData[
  RowBox[{
   RowBox[{
   "dProtocoltest", 
-   "=", "\"\<start time***Sat Oct 25 2025 11:09:28 GMT+0200 (Mitteleurop\
-\[ADoubleDot]ische Sommerzeit) :: 1761383372000 --- \
-countdown_start***10***min :: 1761383373034 --- exercise_end :: 1761383973990 \
---- mask_order***none,30, ,surgical mask,30, ,surgical mask,50, ,FFP2 \
-mask,50, ,none,50, ,FFP2 mask,30,  :: 1761420149945 --- randomise_start :: \
-1761420149945 --- mask_type***none***- :: 1761420150835 --- \
-target_respMinVol***30***l/min :: 1761420151655 --- \
-measurement_start***none***30 :: 1761420152390 --- next_measurement :: \
-1761420179945 --- mask_order***FFP2 mask,50, ,none,30, ,FFP2 mask,30, \
-,surgical mask,30, ,none,50, ,surgical mask,50,  :: 1761420201260 --- \
-randomise_start :: 1761420201260 --- mask_type***none***- :: 1761420202365 \
---- target_respMinVol***30***l/min :: 1761420202787 --- \
-measurement_start***none***30 :: 1761420203266 --- door_airlock_open :: \
-1761420203595 --- door_airlock_closed :: 1761420203818 --- door_cabin_open :: \
-1761420204035 --- subject_in_position :: 1761420204217 --- door_cabin_closed \
-:: 1761420204408 --- door_airlock_open :: 1761420204594 --- \
-door_airlock_closed :: 1761420204793 --- airCleaner_cabin_end :: \
-1761420204985 --- load_total***50 :: 1761420205199 --- load_start***25***Watt \
-:: 1761420205199 --- load_total***75 :: 1761420205730 --- \
-load_increase***25***Watt :: 1761420205730 --- load_total***100 :: \
-1761420206138 --- load_increase***25***Watt :: 1761420206138 --- \
-countdown_start***10***min :: 1761420208649 --- pexa_start :: 1761420209230 \
---- pexa_sample_start :: 1761420209539 --- pexa_sample_end :: 1761420209766 \
---- load_total***75 :: 1761420210056 --- load_decrease***25***Watt :: \
-1761420210056 --- load_total***50 :: 1761420210726 --- \
-load_decrease***25***Watt :: 1761420210726 --- load_total***25 :: \
-1761420210914 --- load_decrease***25***Watt :: 1761420210914 --- \
-load_total***0 :: 1761420211094 --- load_decrease***25***Watt :: \
-1761420211094 --- pexa_end :: 1761420211526 --- measurement_end :: \
-1761420211718 --- door_cabin_exit_open :: 1761420211918 --- subject_exits :: \
-1761420212246 --- airCleaner_airlock_end :: 1761420212559 --- \
-door_airlock_open :: 1761420213358 --- door_cabin_open :: 1761420213542 --- \
-window_opening :: 1761420213727 --- window_closing :: 1761420213917 --- \
-door_cabin_closed :: 1761420214070 --- door_airlock_closed :: 1761420214255 \
---- door_cabin_exit_closed :: 1761420214406 --- airCleaner_airlock_start :: \
-1761420214574 --- airCleaner_cabin_start :: 1761420215014 --- \
-next_measurement :: 1761420215445 --- target_respMinVol***30***l/min :: \
-1761420217663 --- measurement_start***FFP2 mask***30 :: 1761420218054 --- \
-door_airlock_closed :: 1761420218806 --- door_cabin_open :: 1761420219110 --- \
-subject_in_position :: 1761420219438 --- door_cabin_closed :: 1761420219742 \
---- door_airlock_open :: 1761420221888 --- door_airlock_open :: 1761420222634 \
---- door_airlock_closed :: 1761420222887 --- airCleaner_cabin_end :: \
-1761420223117 --- load_total***50 :: 1761420223309 --- load_start***50***Watt \
-:: 1761420223309 --- load_total***75 :: 1761420224084 --- \
-load_increase***25***Watt :: 1761420224084 --- load_total***100 :: \
-1761420224470 --- load_increase***25***Watt :: 1761420224470 --- \
-load_total***125 :: 1761420224782 --- load_increase***25***Watt :: \
-1761420224783 --- countdown_start***10***min :: 1761420226037 --- pexa_start \
-:: 1761420226245 --- pexa_sample_end :: 1761420226671 --- load_total***100 :: \
-1761420226871 --- load_decrease***25***Watt :: 1761420226871 --- \
-load_total***75 :: 1761420227517 --- load_decrease***25***Watt :: \
-1761420227518 --- pexa_end :: 1761420227902 --- measurement_end :: \
-1761420228094 --- door_cabin_exit_open :: 1761420228278 --- subject_exits :: \
-1761420228494 --- airCleaner_airlock_end :: 1761420230542 --- \
-door_airlock_open :: 1761420231349 --- door_cabin_open :: 1761420231686 --- \
-window_opening :: 1761420231878 --- window_closing :: 1761420232070 --- \
-door_cabin_closed :: 1761420232269 --- door_airlock_closed :: 1761420232486 \
---- door_cabin_exit_closed :: 1761420232686 --- airCleaner_airlock_start :: \
-1761420233046 --- airCleaner_cabin_start :: 1761420233717 --- \
-next_measurement :: 1761420234199 --- AS_01_name*** :: 1761420534526 --- \
-AS_02_name*** :: 1761420534526 --- AS_03_name*** :: 1761420534526 --- \
-yearOfBirth***19 :: 1761420534526 --- gender***female :: 1761420534527 --- \
-height*** :: 1761420534527 --- weight*** :: 1761420534527 --- healthy***1 :: \
-1761420534527 --- fever***0 :: 1761420534527 --- illness***0 :: 1761420534527 \
---- surgeries***0 :: 1761420534527 --- cardiovascular***0 :: 1761420534527 \
---- infarction***0 :: 1761420534527 --- aneurysma***0 :: 1761420534527 --- \
-pneumothorax***0 :: 1761420534527 --- dizziness***0 :: 1761420534527 --- \
-respDisease***0 :: 1761420534527 --- acuteRespDisease***0 :: 1761420534528 \
---- allergies***0 :: 1761420534528 --- nicotineAbuse***0 :: 1761420534528 --- \
-medication***0 :: 1761420534528 --- auscultationHeart***distinct and clear \
-sounds, regular rhythm, normal heart rate, no abnormal sounds :: \
-1761420534528 --- heartRate*** :: 1761420534528 --- rhythm***SA node :: \
-1761420534528 --- cardiacAxis***normal :: 1761420534528 --- heartBlock***none \
-:: 1761420534528 --- rWave***regular R-wave progression :: 1761420534528 --- \
-repolarisation***none :: 1761420534528 --- auscultationLung***vesicular \
-sound, normopnoea, no pathological breath sound :: 1761420534528 --- end of \
-protocol :: 1761420534528\>\""}], ";"}]], "Input",
+   "=", "\"\<start time***Thu Oct 30 2025 11:22:56 GMT+0100 (Mitteleurop\
+\[ADoubleDot]ische Normalzeit) :: 1761819776465 --- airCleaner_airlock_start \
+:: 1761819791760 --- airCleaner_cabin_start :: 1761819792216 --- \
+roomAirCondition_start :: 1761819792671 --- AS_01_start :: 1761819797726 --- \
+AS_02_start :: 1761819807095 --- AS_03_start :: 1761819811559 --- \
+spirometry_FEV1_end :: 1761819846670 --- RIP_1_start :: 1761819849686 --- \
+RIP_2_start :: 1761819850054 --- spiro_start :: 1761819850543 --- spiro_end \
+:: 1761819850974 --- RIP_2_end :: 1761819851487 --- mask_order***FFP2 \
+mask,50, ,none,50, ,FFP2 mask,30, ,surgical mask,30, ,surgical mask,50, \
+,none,30,  :: 1761819853127 --- randomise_start :: 1761819853127 --- \
+mask_type***FFP2 mask***- :: 1761819854286 --- target_respMinVol***50***l/min \
+:: 1761819855991 --- measurement_start***FFP2 mask***50 :: 1761819856686 --- \
+door_airlock_open :: 1761819857352 --- door_airlock_closed :: 1761819857703 \
+--- door_cabin_open :: 1761819858073 --- subject_in_position :: 1761819858431 \
+--- door_cabin_closed :: 1761819858758 --- door_airlock_open :: 1761819859110 \
+--- door_airlock_closed :: 1761819859438 --- airCleaner_cabin_end :: \
+1761819859823 --- load_total***50 :: 1761819868767 --- load_start***50***Watt \
+:: 1761819868767 --- load_total***75 :: 1761819870288 --- \
+load_increase***25***Watt :: 1761819870288 --- load_total***100 :: \
+1761819871135 --- load_increase***25***Watt :: 1761819871135 --- \
+load_total***125 :: 1761819875136 --- load_increase***25***Watt :: \
+1761819875136 --- countdown_start***1***min :: 1761819878030 --- pexa_start \
+:: 1761819880614 --- pexa_sample_start :: 1761819881294 --- pexa_sample_end \
+:: 1761819883127 --- load_total***100 :: 1761819897335 --- \
+load_decrease***25***Watt :: 1761819897335 --- load_total***75 :: \
+1761819898694 --- load_decrease***25***Watt :: 1761819898694 --- \
+load_total***50 :: 1761819899919 --- load_decrease***25***Watt :: \
+1761819899919 --- pexa_end :: 1761819904319 --- exercise_end :: 1761819938827 \
+--- measurement_end :: 1761820301430 --- door_cabin_exit_open :: \
+1761820302088 --- subject_exits :: 1761820302447 --- airCleaner_airlock_end \
+:: 1761820302798 --- door_airlock_open :: 1761820304160 --- door_cabin_open \
+:: 1761820304401 --- window_opening :: 1761820304626 --- window_closing :: \
+1761820304888 --- door_cabin_closed :: 1761820305127 --- door_airlock_closed \
+:: 1761820305400 --- door_cabin_exit_closed :: 1761820307422 --- \
+airCleaner_airlock_start :: 1761820307798 --- airCleaner_cabin_start :: \
+1761820308086 --- next_measurement :: 1761820308471 --- mask_type***none***- \
+:: 1761820310089 --- target_respMinVol***50***l/min :: 1761820310855 --- \
+measurement_start***none***50 :: 1761820312328 --- door_airlock_open :: \
+1761820313287 --- door_airlock_closed :: 1761820314086 --- door_cabin_open :: \
+1761820315351 --- subject_in_position :: 1761820315735 --- door_cabin_closed \
+:: 1761820316454 --- door_airlock_open :: 1761820316823 --- \
+door_airlock_closed :: 1761820317720 --- airCleaner_cabin_end :: \
+1761820318263 --- load_total***50 :: 1761820320319 --- load_start***50***Watt \
+:: 1761820320319 --- load_total***75 :: 1761820321783 --- \
+load_increase***25***Watt :: 1761820321783 --- load_total***100 :: \
+1761820323151 --- load_increase***25***Watt :: 1761820323151 --- \
+countdown_start***0.1***min :: 1761820325431 --- exercise_end :: \
+1761820331484 --- pexa_start :: 1761820331943 --- pexa_sample_start :: \
+1761820332607 --- pexa_sample_end :: 1761820333104 --- load_total***75 :: \
+1761820334232 --- load_decrease***25***Watt :: 1761820334232 --- \
+load_total***50 :: 1761820334583 --- load_decrease***25***Watt :: \
+1761820334583 --- pexa_end :: 1761820336519 --- measurement_end :: \
+1761820338847 --- door_cabin_exit_open :: 1761820339334 --- subject_exits :: \
+1761820339566 --- airCleaner_airlock_end :: 1761820339758 --- \
+door_airlock_open :: 1761820339934 --- door_cabin_open :: 1761820340120 --- \
+window_opening :: 1761820340286 --- window_closing :: 1761820340455 --- \
+door_cabin_closed :: 1761820340630 --- door_airlock_closed :: 1761820340832 \
+--- door_cabin_exit_closed :: 1761820341031 --- airCleaner_airlock_start :: \
+1761820341863 --- airCleaner_cabin_start :: 1761820342111 --- \
+next_measurement :: 1761820342535 --- mask_type***FFP2 mask***- :: \
+1761820343503 --- target_respMinVol***30***l/min :: 1761820344063 --- \
+measurement_start***FFP2 mask***30 :: 1761820345431 --- door_airlock_open :: \
+1761820345974 --- door_airlock_closed :: 1761820346182 --- door_cabin_open :: \
+1761820346864 --- subject_in_position :: 1761820347230 --- door_cabin_closed \
+:: 1761820348063 --- door_airlock_open :: 1761820348424 --- \
+door_airlock_closed :: 1761820348847 --- airCleaner_cabin_end :: \
+1761820349198 --- load_total***50 :: 1761820351003 --- load_start***50***Watt \
+:: 1761820351003 --- load_total***75 :: 1761820351576 --- \
+load_increase***25***Watt :: 1761820351577 --- load_total***100 :: \
+1761820351783 --- load_increase***25***Watt :: 1761820351784 --- \
+load_total***125 :: 1761820352712 --- load_increase***25***Watt :: \
+1761820352712 --- countdown_start***0.1***min :: 1761820354064 --- \
+exercise_end :: 1761820360122 --- pexa_start :: 1761820360633 --- \
+pexa_sample_start :: 1761820361088 --- pexa_sample_end :: 1761820362882 --- \
+load_total***100 :: 1761820363319 --- load_decrease***25***Watt :: \
+1761820363321 --- load_total***75 :: 1761820363712 --- \
+load_decrease***25***Watt :: 1761820363712 --- load_total***50 :: \
+1761820364384 --- load_decrease***25***Watt :: 1761820364384 --- \
+load_total***25 :: 1761820364568 --- load_decrease***25***Watt :: \
+1761820364568 --- load_total***0 :: 1761820364960 --- \
+load_decrease***25***Watt :: 1761820364960 --- pexa_end :: 1761820366072 --- \
+measurement_end :: 1761820367258 --- door_cabin_exit_open :: 1761820367903 \
+--- subject_exits :: 1761820368200 --- airCleaner_airlock_end :: \
+1761820368399 --- door_airlock_open :: 1761820368576 --- door_cabin_open :: \
+1761820369073 --- window_opening :: 1761820369255 --- window_closing :: \
+1761820369432 --- door_cabin_closed :: 1761820369592 --- door_airlock_closed \
+:: 1761820369768 --- door_cabin_exit_closed :: 1761820369969 --- \
+airCleaner_airlock_start :: 1761820370503 --- airCleaner_cabin_start :: \
+1761820370792 --- next_measurement :: 1761820371184 --- mask_type***surgical \
+mask***- :: 1761820372216 --- target_respMinVol***30***l/min :: 1761820372871 \
+--- measurement_start***surgical mask***30 :: 1761820377200 --- \
+door_airlock_open :: 1761820389608 --- door_airlock_closed :: 1761820390240 \
+--- door_cabin_open :: 1761820390447 --- subject_in_position :: 1761820390633 \
+--- door_cabin_closed :: 1761820390792 --- door_airlock_open :: 1761820390959 \
+--- door_airlock_closed :: 1761820391328 --- airCleaner_cabin_end :: \
+1761820391760 --- load_total***50 :: 1761820392690 --- load_start***50***Watt \
+:: 1761820392691 --- load_total***75 :: 1761820393448 --- \
+load_increase***25***Watt :: 1761820393448 --- load_total***100 :: \
+1761820394784 --- load_increase***25***Watt :: 1761820394784 --- \
+load_total***125 :: 1761820395727 --- load_increase***25***Watt :: \
+1761820395728 --- load_total***150 :: 1761820396399 --- \
+load_increase***25***Watt :: 1761820396400 --- load_total***175 :: \
+1761820397144 --- load_increase***25***Watt :: 1761820397144 --- \
+countdown_start***0.1***min :: 1761820398474 --- exercise_end :: \
+1761820404596 --- pexa_start :: 1761820405449 --- pexa_sample_start :: \
+1761820405976 --- pexa_sample_end :: 1761820406799 --- load_total***150 :: \
+1761820408384 --- load_decrease***25***Watt :: 1761820408384 --- \
+load_total***125 :: 1761820410111 --- load_decrease***25***Watt :: \
+1761820410113 --- load_total***100 :: 1761820410632 --- \
+load_decrease***25***Watt :: 1761820410632 --- load_total***75 :: \
+1761820411529 --- load_decrease***25***Watt :: 1761820411529 --- \
+load_total***50 :: 1761820412303 --- load_decrease***25***Watt :: \
+1761820412303 --- load_total***25 :: 1761820412984 --- \
+load_decrease***25***Watt :: 1761820412984 --- pexa_end :: 1761820414272 --- \
+measurement_end :: 1761820415392 --- door_cabin_exit_open :: 1761820415991 \
+--- subject_exits :: 1761820416472 --- airCleaner_airlock_end :: \
+1761820416888 --- door_airlock_open :: 1761820417288 --- door_cabin_open :: \
+1761820417688 --- window_opening :: 1761820418072 --- window_closing :: \
+1761820418408 --- door_cabin_closed :: 1761820418752 --- door_airlock_closed \
+:: 1761820419096 --- door_cabin_exit_closed :: 1761820419471 --- \
+airCleaner_airlock_start :: 1761820420297 --- airCleaner_cabin_start :: \
+1761820420762 --- next_measurement :: 1761820421704 --- mask_type***surgical \
+mask***- :: 1761820422824 --- target_respMinVol***50***l/min :: 1761820423377 \
+--- measurement_start***surgical mask***50 :: 1761820424671 --- \
+door_airlock_open :: 1761820426073 --- door_airlock_closed :: 1761820426784 \
+--- door_cabin_open :: 1761820427640 --- subject_in_position :: 1761820427991 \
+--- door_cabin_closed :: 1761820428296 --- door_airlock_open :: 1761820428674 \
+--- door_airlock_closed :: 1761820429505 --- airCleaner_cabin_end :: \
+1761820430017 --- load_total***50 :: 1761820431407 --- load_start***50***Watt \
+:: 1761820431408 --- load_total***75 :: 1761820432632 --- \
+load_increase***25***Watt :: 1761820432633 --- load_total***100 :: \
+1761820433336 --- load_increase***25***Watt :: 1761820433337 --- \
+load_total***125 :: 1761820433936 --- load_increase***25***Watt :: \
+1761820433936 --- load_total***150 :: 1761820435280 --- \
+load_increase***25***Watt :: 1761820435280 --- countdown_start***0.1***min :: \
+1761820436063 --- pexa_start :: 1761820441512 --- exercise_end :: \
+1761820442151 --- pexa_sample_start :: 1761820442159 --- pexa_sample_end :: \
+1761820442840 --- load_total***125 :: 1761820443992 --- \
+load_decrease***25***Watt :: 1761820443992 --- load_total***100 :: \
+1761820445200 --- load_decrease***25***Watt :: 1761820445200 --- \
+load_total***75 :: 1761820446600 --- load_decrease***25***Watt :: \
+1761820446600 --- load_total***50 :: 1761820447281 --- \
+load_decrease***25***Watt :: 1761820447281 --- pexa_end :: 1761820447976 --- \
+measurement_end :: 1761820448784 --- door_cabin_exit_open :: 1761820449282 \
+--- subject_exits :: 1761820449864 --- RIP_1_end :: 1761820450320 --- \
+airCleaner_airlock_end :: 1761820450320 --- door_airlock_open :: \
+1761820450968 --- door_cabin_open :: 1761820451384 --- window_opening :: \
+1761820451879 --- window_closing :: 1761820452256 --- door_cabin_closed :: \
+1761820452640 --- door_airlock_closed :: 1761820453032 --- \
+door_cabin_exit_closed :: 1761820453394 --- airCleaner_airlock_start :: \
+1761820453745 --- airCleaner_cabin_start :: 1761820454456 --- \
+next_measurement :: 1761820455504 --- mask_type***none***- :: 1761820463638 \
+--- target_respMinVol***30***l/min :: 1761820464690 --- \
+measurement_start***none***30 :: 1761820465672 --- door_airlock_open :: \
+1761820467032 --- door_airlock_closed :: 1761820468015 --- door_cabin_open :: \
+1761820469152 --- subject_in_position :: 1761820469608 --- door_cabin_closed \
+:: 1761820470176 --- door_airlock_open :: 1761820470472 --- \
+door_airlock_closed :: 1761820471328 --- airCleaner_cabin_end :: \
+1761820471536 --- load_total***50 :: 1761820472336 --- load_start***50***Watt \
+:: 1761820472337 --- load_total***75 :: 1761820473001 --- \
+load_increase***25***Watt :: 1761820473001 --- load_total***100 :: \
+1761820473977 --- load_increase***25***Watt :: 1761820473977 --- \
+load_total***125 :: 1761820474776 --- load_increase***25***Watt :: \
+1761820474776 --- load_total***150 :: 1761820475568 --- \
+load_increase***25***Watt :: 1761820475568 --- load_total***175 :: \
+1761820476344 --- load_increase***25***Watt :: 1761820476345 --- \
+countdown_start***0.1***min :: 1761820477624 --- exercise_end :: \
+1761820484151 --- pexa_start :: 1761820489592 --- pexa_sample_start :: \
+1761820490015 --- pexa_sample_end :: 1761820490496 --- load_total***150 :: \
+1761820491336 --- load_decrease***25***Watt :: 1761820491336 --- \
+load_total***125 :: 1761820492200 --- load_decrease***25***Watt :: \
+1761820492200 --- load_total***100 :: 1761820493009 --- \
+load_decrease***25***Watt :: 1761820493009 --- load_total***75 :: \
+1761820493696 --- load_decrease***25***Watt :: 1761820493697 --- \
+load_total***50 :: 1761820494377 --- load_decrease***25***Watt :: \
+1761820494378 --- pexa_end :: 1761820495131 --- measurement_end :: \
+1761820495689 --- door_cabin_exit_open :: 1761820501440 --- subject_exits :: \
+1761820502056 --- RIP_1_end :: 1761820504424 --- RIP_1_end :: 1761820508625 \
+--- RIP_1_end :: 1761820509272 --- RIP_1_end :: 1761820509456 --- \
+airCleaner_airlock_end :: 1761820511384 --- roomAirCondition_end :: \
+1761820513169 --- AS_01_end :: 1761820514296 --- AS_02_end :: 1761820514899 \
+--- AS_03_end :: 1761820516472 --- AS_01_name***11d :: 1761820519226 --- \
+AS_02_name***1.109_lab :: 1761820519227 --- AS_03_name***1.109_airlock :: \
+1761820519227 --- yearOfBirth***1911 :: 1761820519227 --- gender***female :: \
+1761820519227 --- height***111 :: 1761820519227 --- weight***111 :: \
+1761820519227 --- healthy***1 :: 1761820519227 --- fever***0 :: 1761820519227 \
+--- illness***0 :: 1761820519227 --- surgeries***0 :: 1761820519227 --- \
+cardiovascular***0 :: 1761820519228 --- infarction***0 :: 1761820519228 --- \
+aneurysma***0 :: 1761820519228 --- pneumothorax***0 :: 1761820519228 --- \
+dizziness***0 :: 1761820519228 --- respDisease***0 :: 1761820519228 --- \
+acuteRespDisease***0 :: 1761820519228 --- allergies***0 :: 1761820519228 --- \
+nicotineAbuse***0 :: 1761820519228 --- medication***0 :: 1761820519228 --- \
+auscultationHeart***distinct and clear sounds, regular rhythm, normal heart \
+rate, no abnormal sounds :: 1761820519229 --- heartRate***111 :: \
+1761820519229 --- rhythm***SA node :: 1761820519229 --- cardiacAxis***normal \
+:: 1761820519229 --- heartBlock***none :: 1761820519229 --- rWave***regular \
+R-wave progression :: 1761820519229 --- repolarisation***none :: \
+1761820519229 --- auscultationLung***vesicular sound, normopnoea, no \
+pathological breath sound :: 1761820519229 --- end of protocol :: \
+1761820519229\>\""}], ";"}]], "Input",
  CellChangeTimes->{{3.9704091195539055`*^9, 3.970409128420105*^9}, {
    3.970409172601862*^9, 3.9704091726783657`*^9}, {3.9704093483769646`*^9, 
    3.9704093493103275`*^9}, 3.9704094021018505`*^9, {3.9704116498848286`*^9, 
-   3.970411652797552*^9}, {3.970499090416273*^9, 3.970499096247326*^9}},
+   3.970411652797552*^9}, {3.970499090416273*^9, 3.970499096247326*^9}, 
+   3.9708080235554943`*^9, {3.970808365828493*^9, 3.9708083928893433`*^9}, {
+   3.970809930522463*^9, 3.9708099318238087`*^9}},
  CellLabel->
-  "In[1195]:=",ExpressionUUID->"d77592dd-c424-1c4a-a346-4da432505501"]
+  "In[477]:=",ExpressionUUID->"d77592dd-c424-1c4a-a346-4da432505501"]
 },
-WindowSize->{718.5, 735},
-WindowMargins->{{Automatic, -5.25}, {Automatic, 0}},
-FrontEndVersion->"14.3 for Microsoft Windows (64-bit) (July 8, 2025)",
+WindowSize->{718.5, 825},
+WindowMargins->{{-5.25, Automatic}, {Automatic, 0}},
+FrontEndVersion->"14.2 for Microsoft Windows (64-bit) (December 26, 2024)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"37b9c916-73e5-a54f-bf3b-9233476dbfdb"
 ]
@@ -332,11 +531,11 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[576, 22, 4954, 127, 522, "Input",ExpressionUUID->"4b4d10a5-1865-4341-9282-640a20f29b80"],
-Cell[5533, 151, 3154, 69, 164, "Print",ExpressionUUID->"d6568861-e828-4746-938d-852835e4b23b"]
+Cell[576, 22, 4953, 127, 522, "Input",ExpressionUUID->"4b4d10a5-1865-4341-9282-640a20f29b80"],
+Cell[5532, 151, 6611, 143, 425, "Print",ExpressionUUID->"93935ba4-4ae6-9648-a66e-93c7dd02fc78"]
 }, Open  ]],
-Cell[8702, 223, 183, 3, 28, "Input",ExpressionUUID->"2d3f0288-d708-b541-9454-d35c8a10af2b"],
-Cell[8888, 228, 5999, 86, 1588, "Input",ExpressionUUID->"d77592dd-c424-1c4a-a346-4da432505501"]
+Cell[12158, 297, 183, 3, 28, "Input",ExpressionUUID->"2d3f0288-d708-b541-9454-d35c8a10af2b"],
+Cell[12344, 302, 14851, 211, 4157, "Input",ExpressionUUID->"d77592dd-c424-1c4a-a346-4da432505501"]
 }
 ]
 *)

@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[     28010,        536]
-NotebookOptionsPosition[     27322,        517]
-NotebookOutlinePosition[     27728,        533]
-CellTagsIndexPosition[     27685,        530]
+NotebookDataLength[     28178,        539]
+NotebookOptionsPosition[     27498,        520]
+NotebookOutlinePosition[     27896,        536]
+CellTagsIndexPosition[     27853,        533]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -125,17 +125,19 @@ Cell[BoxData[{
         RowBox[{"0", ",", 
          RowBox[{
           RowBox[{
-           RowBox[{"(", 
-            RowBox[{
-             RowBox[{"Values", "[", 
-              RowBox[{"protocolSelect", "[", "\"\<end of protocol\>\"", "]"}],
-               "]"}], "-", 
-             RowBox[{"Values", "[", 
-              RowBox[{"protocolSelect", "[", "\"\<start time\>\"", "]"}], 
-              "]"}]}], ")"}], " ", "[", 
-           RowBox[{"[", "1", "]"}], "]"}], "[", 
-          RowBox[{"[", "1", "]"}], "]"}], ",", ".5"}], "]"}]}], 
-      "\[IndentingNewLine]", ";", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"Values", "[", 
+               RowBox[{
+               "protocolSelect", "[", "\"\<end of protocol\>\"", "]"}], "]"}],
+               "-", 
+              RowBox[{"Values", "[", 
+               RowBox[{"protocolSelect", "[", "\"\<start time\>\"", "]"}], 
+               "]"}]}], ")"}], " ", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], "[", 
+           RowBox[{"[", "1", "]"}], "]"}], "+", "0.5"}], ",", ".5"}], "]"}]}],
+       "\[IndentingNewLine]", ";", 
       RowBox[{"varNames", "=", 
        RowBox[{"{", "\"\<elapsed time\>\"", "}"}]}], "\[IndentingNewLine]", ";", 
       RowBox[{"oneTable", "=", 
@@ -145,9 +147,9 @@ Cell[BoxData[{
   RowBox[{"dProtocolImporttest", "[", "]"}], ";"}]}], "Input",
  CellChangeTimes->{{3.970409133638479*^9, 3.9704091812284794`*^9}, 
    3.970409254319866*^9, {3.970409284561802*^9, 3.970409296964834*^9}, 
-   3.970499104646742*^9},
+   3.970499104646742*^9, 3.971407340069721*^9},
  CellLabel->
-  "In[248]:=",ExpressionUUID->"4b4d10a5-1865-4341-9282-640a20f29b80"],
+  "In[607]:=",ExpressionUUID->"4b4d10a5-1865-4341-9282-640a20f29b80"],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -290,10 +292,11 @@ Cell[BoxData[
   3.970409406479765*^9, 3.970411658014971*^9, 3.970499106358244*^9, 
   3.9708072912116776`*^9, 3.970808028293457*^9, 3.970808397893862*^9, 
   3.970808548980644*^9, 3.9708099378127365`*^9, 3.970817325311224*^9, 
-  3.9712781892816544`*^9},
+  3.9712781892816544`*^9, 3.9714073422330723`*^9, 3.971409530275738*^9, 
+  3.9714099471029854`*^9, 3.971410848910488*^9},
  CellLabel->
   "During evaluation of \
-In[248]:=",ExpressionUUID->"483eb8c9-8356-4142-9ac3-15425309bd8b"]
+In[607]:=",ExpressionUUID->"d278ab18-acbf-8142-bc3f-346dd678c013"]
 }, Open  ]],
 
 Cell[BoxData["protocol"], "Input",
@@ -515,8 +518,8 @@ pathological breath sound :: 1761820519229 --- end of protocol :: \
  CellLabel->
   "In[247]:=",ExpressionUUID->"d77592dd-c424-1c4a-a346-4da432505501"]
 },
-WindowSize->{718.5, 729.75},
-WindowMargins->{{-18, Automatic}, {Automatic, 23.25}},
+WindowSize->{693, 729.75},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
 FrontEndVersion->"14.3 for Microsoft Windows (64-bit) (July 8, 2025)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"37b9c916-73e5-a54f-bf3b-9233476dbfdb"
@@ -533,11 +536,11 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[576, 22, 4953, 127, 522, "Input",ExpressionUUID->"4b4d10a5-1865-4341-9282-640a20f29b80"],
-Cell[5532, 151, 6638, 144, 297, "Print",ExpressionUUID->"483eb8c9-8356-4142-9ac3-15425309bd8b"]
+Cell[576, 22, 5034, 129, 541, "Input",ExpressionUUID->"4b4d10a5-1865-4341-9282-640a20f29b80"],
+Cell[5613, 153, 6733, 145, 337, "Print",ExpressionUUID->"d278ab18-acbf-8142-bc3f-346dd678c013"]
 }, Open  ]],
-Cell[12185, 298, 183, 3, 28, "Input",ExpressionUUID->"2d3f0288-d708-b541-9454-d35c8a10af2b"],
-Cell[12371, 303, 14947, 212, 4080, "Input",ExpressionUUID->"d77592dd-c424-1c4a-a346-4da432505501"]
+Cell[12361, 301, 183, 3, 28, "Input",ExpressionUUID->"2d3f0288-d708-b541-9454-d35c8a10af2b"],
+Cell[12547, 306, 14947, 212, 4271, "Input",ExpressionUUID->"d77592dd-c424-1c4a-a346-4da432505501"]
 }
 ]
 *)

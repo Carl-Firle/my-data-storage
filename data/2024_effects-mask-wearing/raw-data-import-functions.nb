@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[     45894,       1114]
-NotebookOptionsPosition[     45048,       1095]
-NotebookOutlinePosition[     45446,       1111]
-CellTagsIndexPosition[     45403,       1108]
+NotebookDataLength[     78566,       1968]
+NotebookOptionsPosition[     77608,       1948]
+NotebookOutlinePosition[     78015,       1964]
+CellTagsIndexPosition[     77972,       1961]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -23,12 +23,22 @@ Cell[BoxData[{
  RowBox[{
   RowBox[{
    RowBox[{"protocolSelect", "[", "varName_String", "]"}], ":=", 
-   RowBox[{"Select", "[", 
-    RowBox[{"protocol", ",", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", "check", "}"}], ",", 
      RowBox[{
-      RowBox[{"StringContainsQ", "[", 
+      RowBox[{"check", "=", 
+       RowBox[{"Select", "[", 
+        RowBox[{"protocol", ",", 
+         RowBox[{
+          RowBox[{"StringContainsQ", "[", 
+           RowBox[{
+            RowBox[{"Keys", "[", "#", "]"}], ",", "varName"}], "]"}], "&"}]}],
+         "]"}]}], "\[IndentingNewLine]", ";", 
+      RowBox[{"If", "[", 
        RowBox[{
-        RowBox[{"Keys", "[", "#", "]"}], ",", "varName"}], "]"}], "&"}]}], 
+        RowBox[{"check", "==", 
+         RowBox[{"{", "}"}]}], ",", "Nothing", ",", "check"}], "]"}]}]}], 
     "]"}]}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{"strContQ", "=."}], "\[IndentingNewLine]", 
  RowBox[{
@@ -149,17 +159,19 @@ Cell[BoxData[{
         RowBox[{"0", ",", 
          RowBox[{
           RowBox[{
-           RowBox[{"(", 
-            RowBox[{
-             RowBox[{"Values", "[", 
-              RowBox[{"protocolSelect", "[", "\"\<end of protocol\>\"", "]"}],
-               "]"}], "-", 
-             RowBox[{"Values", "[", 
-              RowBox[{"protocolSelect", "[", "\"\<start time\>\"", "]"}], 
-              "]"}]}], ")"}], " ", "[", 
-           RowBox[{"[", "1", "]"}], "]"}], "[", 
-          RowBox[{"[", "1", "]"}], "]"}], ",", ".5"}], "]"}]}], 
-      "\[IndentingNewLine]", ";", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"Values", "[", 
+               RowBox[{
+               "protocolSelect", "[", "\"\<end of protocol\>\"", "]"}], "]"}],
+               "-", 
+              RowBox[{"Values", "[", 
+               RowBox[{"protocolSelect", "[", "\"\<start time\>\"", "]"}], 
+               "]"}]}], ")"}], " ", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], "[", 
+           RowBox[{"[", "1", "]"}], "]"}], "+", "0.5"}], ",", ".5"}], "]"}]}],
+       "\[IndentingNewLine]", ";", 
       RowBox[{"varNames", "=", 
        RowBox[{"{", "\"\<elapsed time\>\"", "}"}]}], "\[IndentingNewLine]", ";", 
       RowBox[{"oneTable", "=", 
@@ -180,8 +192,11 @@ Cell[BoxData[{
    3.969289609159582*^9, 3.9692896183561287`*^9}, {3.969289794182703*^9, 
    3.9692898032832355`*^9}, {3.9695901150745506`*^9, 3.969590116021841*^9}, {
    3.9696869247320747`*^9, 3.9696869486856346`*^9}, {3.970209002041628*^9, 
-   3.9702090071853447`*^9}, 3.9702101702394276`*^9},
- CellLabel->"In[48]:=",ExpressionUUID->"428067d6-8328-be4f-afb6-dfadc733d23f"],
+   3.9702090071853447`*^9}, 3.9702101702394276`*^9, {3.971407297220274*^9, 
+   3.971407299424801*^9}, {3.971410014236431*^9, 3.971410070732271*^9}, 
+   3.971412567929905*^9},
+ CellLabel->
+  "In[601]:=",ExpressionUUID->"428067d6-8328-be4f-afb6-dfadc733d23f"],
 
 Cell[BoxData[{
  RowBox[{"positionInTimeline", "=."}], "\[IndentingNewLine]", 
@@ -389,6 +404,844 @@ Cell[BoxData[{
   3.969589669004488*^9}, {3.969589724554701*^9, 3.96958972687426*^9}, {
   3.9695897846709385`*^9, 3.9695897908233433`*^9}},
  CellLabel->"In[54]:=",ExpressionUUID->"71927a28-be0e-db45-8bb0-feb158927f26"],
+
+Cell[BoxData[{
+ RowBox[{"descrDataProtocolImport", "=."}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"descrDataProtocolImport", "[", "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "descrDataProtocolPos", ",", "temp", ",", "newVarNames", ",", 
+       "newColumn"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"descrDataProtocolPos", "=", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Flatten", "[", 
+           RowBox[{"Position", "[", 
+            RowBox[{"protocol", ",", 
+             RowBox[{
+              RowBox[{"protocolSelect", "[", "\"\<yearOfBirth\>\"", "]"}], "[", 
+              RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "]"}], "[", 
+          RowBox[{"[", "1", "]"}], "]"}], ";;", 
+         RowBox[{"-", "2"}]}], ")"}]}], "\[IndentingNewLine]", ";", 
+      RowBox[{"temp", "=", 
+       RowBox[{"protocol", "[", 
+        RowBox[{"[", "descrDataProtocolPos", "]"}], "]"}]}], 
+      "\[IndentingNewLine]", ";", 
+      RowBox[{"temp", "=", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"StringSplit", "[", 
+          RowBox[{"#", ",", "\"\<***\>\""}], "]"}], "&"}], "/@", 
+        RowBox[{"temp", "[", 
+         RowBox[{"[", 
+          RowBox[{"All", ",", "1"}], "]"}], "]"}]}]}], "\[IndentingNewLine]", 
+      ";", 
+      RowBox[{"newVarNames", "=", 
+       RowBox[{"temp", "[", 
+        RowBox[{"[", 
+         RowBox[{"All", ",", "1"}], "]"}], "]"}]}], "\[IndentingNewLine]", ";", 
+      RowBox[{"newColumn", "=", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"PadRight", "[", 
+          RowBox[{
+           RowBox[{"{", "#", "}"}], ",", 
+           RowBox[{"Length", "[", 
+            RowBox[{"oneTable", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], "]"}], ",", "\"\<n.a.\>\""}], 
+          "]"}], "&"}], "/@", 
+        RowBox[{"temp", "[", 
+         RowBox[{"[", 
+          RowBox[{"All", ",", "2"}], "]"}], "]"}]}]}], "\[IndentingNewLine]", 
+      ";", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"AppendTo", "[", 
+         RowBox[{"oneTable", ",", "#"}], "]"}], "&"}], "/@", "newColumn"}], 
+      "\[IndentingNewLine]", ";", 
+      RowBox[{"AppendTo", "[", 
+       RowBox[{"varNames", ",", "newVarNames"}], "]"}], "\[IndentingNewLine]",
+       ";"}]}], "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"singlePointsImport", "=."}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"singlePointsImport", "[", "l_List", "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "temp", ",", "newVarNames", ",", "timepoints", ",", "newColumn"}], 
+      "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"temp", "=", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"protocolSelect", "[", "#", "]"}], "&"}], "/@", "l"}]}], ";",
+       "\[IndentingNewLine]", 
+      RowBox[{"temp", "=", 
+       RowBox[{"GroupBy", "[", 
+        RowBox[{"temp", ",", 
+         RowBox[{
+          RowBox[{"#", "[", 
+           RowBox[{"[", 
+            RowBox[{"1", ",", "1"}], "]"}], "]"}], "&"}]}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"newVarNames", "=", 
+       RowBox[{"Keys", "[", "temp", "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"temp", "=", 
+       RowBox[{"Flatten", "[", 
+        RowBox[{
+         RowBox[{"Values", "[", "temp", "]"}], ",", "1"}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"temp", "[", 
+        RowBox[{"[", 
+         RowBox[{"All", ",", "All", ",", "2"}], "]"}], "]"}], "=", 
+       RowBox[{"Map", "[", 
+        RowBox[{"positionInTimeline", ",", 
+         RowBox[{"temp", "[", 
+          RowBox[{"[", 
+           RowBox[{"All", ",", "All", ",", "2"}], "]"}], "]"}], ",", 
+         RowBox[{"{", "2", "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"temp", "=", 
+       RowBox[{
+        RowBox[{"Map", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"newColumn", "=", 
+              RowBox[{"Table", "[", 
+               RowBox[{"\"\<n.a.\>\"", ",", 
+                RowBox[{"Length", "[", 
+                 RowBox[{"oneTable", "[", 
+                  RowBox[{"[", "1", "]"}], "]"}], "]"}]}], "]"}]}], ";", 
+             "\[IndentingNewLine]", 
+             RowBox[{"newColumn", "=", 
+              RowBox[{"ReplacePart", "[", 
+               RowBox[{"newColumn", ",", 
+                RowBox[{"Map", "[", 
+                 RowBox[{"Reverse", ",", "#"}], "]"}]}], "]"}]}], ";", 
+             "\[IndentingNewLine]", 
+             RowBox[{"AppendTo", "[", 
+              RowBox[{"oneTable", ",", "newColumn"}], "]"}]}], ")"}], "&"}], 
+          "\[IndentingNewLine]", ",", "temp", ",", 
+          RowBox[{"{", "1", "}"}]}], "]"}], "[", 
+        RowBox[{"[", 
+         RowBox[{"-", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"AppendTo", "[", 
+       RowBox[{"varNames", ",", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"StringSplit", "[", 
+            RowBox[{"#", ",", "\"\<***\>\""}], "]"}], "[", 
+           RowBox[{"[", "1", "]"}], "]"}], "&"}], "/@", "newVarNames"}]}], 
+       "]"}], ";"}]}], "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"singlePointsImport", "[", 
+    RowBox[{"{", 
+     RowBox[{"\"\<mask_order\>\"", ",", "\"\<subject_in_position\>\"", 
+      ",", "\"\<subject_exits\>\""}], "}"}], "]"}], "*)"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"windowsTimesImport", "=."}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"windowsTimesImport", "[", "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "temp", ",", "timepoints", ",", "rangePositions", ",", "newColumn"}], 
+      "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"temp", "=", 
+       RowBox[{"Select", "[", 
+        RowBox[{"protocol", ",", 
+         RowBox[{
+          RowBox[{"StringContainsQ", "[", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"#", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], ",", "\"\<window\>\""}], "]"}], 
+          "&"}]}], "]"}]}], "\[IndentingNewLine]", ";", 
+      RowBox[{"timepoints", "=", 
+       RowBox[{"GatherBy", "[", 
+        RowBox[{"temp", ",", 
+         RowBox[{
+          RowBox[{"#", "[", 
+           RowBox[{"[", "1", "]"}], "]"}], "&"}]}], "]"}]}], 
+      "\[IndentingNewLine]", ";", 
+      RowBox[{"timepoints", "=", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Length", "[", "#1", "]"}], "==", 
+            RowBox[{"Length", "[", "#2", "]"}]}], ",", 
+           RowBox[{"Transpose", "[", 
+            RowBox[{"{", 
+             RowBox[{"#1", ",", "#2"}], "}"}], "]"}], ",", 
+           RowBox[{"ConstantArray", "[", 
+            RowBox[{"\"\<n.a.\>\"", ",", 
+             RowBox[{"Length", "[", 
+              RowBox[{"oneTable", "[", 
+               RowBox[{"[", "1", "]"}], "]"}], "]"}]}], "]"}]}], "]"}], "&"}],
+         "@@", "timepoints"}]}], "\[IndentingNewLine]", ";", 
+      RowBox[{"rangePositions", "=", 
+       RowBox[{"Map", "[", 
+        RowBox[{"positionInTimeline", ",", 
+         RowBox[{"timepoints", "[", 
+          RowBox[{"[", 
+           RowBox[{"All", ",", "All", ",", "2"}], "]"}], "]"}], ",", 
+         RowBox[{"{", "2", "}"}]}], "]"}]}], "\[IndentingNewLine]", ";", 
+      RowBox[{"newColumn", "=", 
+       RowBox[{"Table", "[", 
+        RowBox[{"\"\<closed\>\"", ",", 
+         RowBox[{"Length", "[", 
+          RowBox[{"oneTable", "[", 
+           RowBox[{"[", "1", "]"}], "]"}], "]"}]}], "]"}]}], 
+      "\[IndentingNewLine]", ";", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"newColumn", "[", 
+           RowBox[{"[", 
+            RowBox[{"#1", ";;", "#2"}], "]"}], "]"}], "=", 
+          RowBox[{"Table", "[", 
+           RowBox[{"\"\<open\>\"", ",", 
+            RowBox[{"Length", "[", 
+             RowBox[{"newColumn", "[", 
+              RowBox[{"[", 
+               RowBox[{"#1", ";;", "#2"}], "]"}], "]"}], "]"}]}], "]"}]}], 
+         ")"}], "&"}], "@@@", "rangePositions"}], "\[IndentingNewLine]", ";", 
+      RowBox[{"AppendTo", "[", 
+       RowBox[{"varNames", ",", "\"\<window\>\""}], "]"}], 
+      "\[IndentingNewLine]", ";", 
+      RowBox[{"AppendTo", "[", 
+       RowBox[{"oneTable", ",", "newColumn"}], "]"}], ";"}]}], "]"}]}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"doorTimesImport", "=."}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"doorTimesImport", "[", "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "temp", ",", "timepoints", ",", "orderPositions", ",", "doorTimes", ",",
+        "rangePositions", ",", "newColumn"}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"temp", "=", 
+       RowBox[{"Select", "[", 
+        RowBox[{"protocol", ",", 
+         RowBox[{
+          RowBox[{"StringContainsQ", "[", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"#", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], ",", "\"\<door\>\""}], "]"}], 
+          "&"}]}], "]"}]}], "\[IndentingNewLine]", ";", 
+      RowBox[{"temp", "=", 
+       RowBox[{"Append", "[", 
+        RowBox[{"temp", ",", 
+         RowBox[{"\"\<door_cabin_exit_closed\>\"", "\[Rule]", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"\"\<end of protocol\>\"", " ", "/.", " ", "protocol"}], 
+             ")"}], "-", 
+            RowBox[{"Quantity", "[", 
+             RowBox[{".5", ",", "\"\<Seconds\>\""}], "]"}]}], ")"}]}]}], 
+        "]"}]}], "\[IndentingNewLine]", ";", 
+      RowBox[{"timepoints", "=", 
+       RowBox[{"GatherBy", "[", 
+        RowBox[{"temp", ",", 
+         RowBox[{
+          RowBox[{"StringReplace", "[", 
+           RowBox[{
+            RowBox[{"#", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"\"\<_start\>\"", "->", "\"\<\>\""}], ",", 
+              RowBox[{"\"\<_end\>\"", "->", "\"\<\>\""}]}], "}"}]}], "]"}], 
+          "&"}]}], "]"}]}], "\[IndentingNewLine]", ";", 
+      RowBox[{"doorTimes", "=", 
+       RowBox[{"GroupBy", "[", 
+        RowBox[{"timepoints", ",", 
+         RowBox[{
+          RowBox[{"StringReplace", "[", 
+           RowBox[{
+            RowBox[{"#", "[", 
+             RowBox[{"[", 
+              RowBox[{"1", ",", "1"}], "]"}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"\"\<_open\>\"", "->", "\"\<\>\""}], ",", 
+              RowBox[{"\"\<_closed\>\"", "->", "\"\<\>\""}]}], "}"}]}], "]"}],
+           "&"}]}], "]"}]}], "\[IndentingNewLine]", ";", 
+      RowBox[{"timepoints", "=", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{"Equal", "@@", 
+            RowBox[{"(", 
+             RowBox[{"Length", "/@", "#"}], ")"}]}], ",", 
+           RowBox[{"Transpose", "[", "#", "]"}], ",", "#"}], "]"}], "&"}], "/@",
+         "doorTimes"}]}], "\[IndentingNewLine]", ";", 
+      RowBox[{"rangePositions", "=", 
+       RowBox[{"Map", "[", 
+        RowBox[{"positionInTimeline", ",", 
+         RowBox[{"timepoints", "[", 
+          RowBox[{"[", 
+           RowBox[{"All", ",", "All", ",", "All", ",", "2"}], "]"}], "]"}], ",", 
+         RowBox[{"{", "3", "}"}]}], "]"}]}], "\[IndentingNewLine]", ";", 
+      RowBox[{"newColumn", "=", 
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"Table", "[", 
+          RowBox[{"\"\<n.a.\>\"", ",", 
+           RowBox[{"Length", "[", 
+            RowBox[{"oneTable", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], "]"}]}], "]"}], ",", 
+         RowBox[{"Length", "[", "timepoints", "]"}]}], "]"}]}], 
+      "\[IndentingNewLine]", ";", 
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"newColumn", "[", 
+             RowBox[{"[", 
+              RowBox[{"i", ",", 
+               RowBox[{"#1", ";;", "#2"}]}], "]"}], "]"}], 
+            "=", "\"\<open\>\""}], ")"}], "&"}], "@@@", 
+         RowBox[{"rangePositions", "[", 
+          RowBox[{"[", "i", "]"}], "]"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{"i", ",", 
+          RowBox[{"Length", "[", "rangePositions", "]"}]}], "}"}]}], "]"}], 
+      "\[IndentingNewLine]", ";", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"AppendTo", "[", 
+         RowBox[{"oneTable", ",", "#"}], "]"}], "&"}], "/@", "newColumn"}], 
+      "\[IndentingNewLine]", ";", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"AppendTo", "[", 
+         RowBox[{"varNames", ",", "#"}], "]"}], "&"}], "/@", 
+       RowBox[{"(", 
+        RowBox[{"Keys", "[", "doorTimes", "]"}], ")"}]}]}]}], 
+    "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"airCleanerTimesImport", "=."}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"airCleanerTimesImport", "[", "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"temp", ",", "timepoints", ",", "orderPositions"}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"temp", "=", 
+       RowBox[{"Select", "[", 
+        RowBox[{"protocol", ",", 
+         RowBox[{
+          RowBox[{"StringContainsQ", "[", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"#", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], ",", "\"\<airCleaner\>\""}], 
+           "]"}], "&"}]}], "]"}]}], "\[IndentingNewLine]", ";", 
+      RowBox[{"timepoints", "=", 
+       RowBox[{"GatherBy", "[", 
+        RowBox[{"temp", ",", 
+         RowBox[{
+          RowBox[{"StringReplace", "[", 
+           RowBox[{
+            RowBox[{"#", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"\"\<_start\>\"", "->", "\"\<\>\""}], ",", 
+              RowBox[{"\"\<_end\>\"", "->", "\"\<\>\""}]}], "}"}]}], "]"}], 
+          "&"}]}], "]"}]}], "\[IndentingNewLine]", ";", 
+      RowBox[{"orderPositions", "=", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"PositionIndex", "[", 
+          RowBox[{"#", "[", 
+           RowBox[{"[", 
+            RowBox[{"All", ",", "1"}], "]"}], "]"}], "]"}], "&"}], "/@", 
+        "timepoints"}]}], "\[IndentingNewLine]", ";", 
+      RowBox[{"temp", "=", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Length", "[", "#", "]"}], "==", "2"}], ",", 
+           RowBox[{"If", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"Length", "[", 
+               RowBox[{"#", "[", 
+                RowBox[{"[", "1", "]"}], "]"}], "]"}], "==", 
+              RowBox[{"Length", "[", 
+               RowBox[{"#", "[", 
+                RowBox[{"[", "2", "]"}], "]"}], "]"}]}], ",", 
+             RowBox[{"Transpose", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"#", "[", 
+                 RowBox[{"[", "1", "]"}], "]"}], ",", 
+                RowBox[{"#", "[", 
+                 RowBox[{"[", "2", "]"}], "]"}]}], "}"}], "]"}], ",", 
+             RowBox[{"ConstantArray", "[", 
+              RowBox[{"\"\<off\>\"", ",", 
+               RowBox[{"Length", "[", 
+                RowBox[{"oneTable", "[", 
+                 RowBox[{"[", "1", "]"}], "]"}], "]"}]}], "]"}]}], "]"}], ",", 
+           RowBox[{"ConstantArray", "[", 
+            RowBox[{"\"\<off\>\"", ",", 
+             RowBox[{"Length", "[", 
+              RowBox[{"oneTable", "[", 
+               RowBox[{"[", "1", "]"}], "]"}], "]"}]}], "]"}]}], "]"}], "&"}],
+         "/@", "orderPositions"}]}], "\[IndentingNewLine]", ";", 
+      RowBox[{"temp", "=", 
+       RowBox[{"Transpose", "[", 
+        RowBox[{"{", 
+         RowBox[{"timepoints", ",", "temp"}], "}"}], "]"}]}], 
+      "\[IndentingNewLine]", ";", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"oneTableAppend", "[", 
+         RowBox[{"#", ",", "\"\<off\>\"", ",", "\"\<on\>\"", ",", 
+          RowBox[{"StringReplace", "[", 
+           RowBox[{
+            RowBox[{"#", "[", 
+             RowBox[{"[", 
+              RowBox[{"1", ",", "1", ",", "1"}], "]"}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"\"\<_start\>\"", "->", "\"\<\>\""}], ",", 
+              RowBox[{"\"\<_end\>\"", "->", "\"\<\>\""}]}], "}"}]}], "]"}]}], 
+         "]"}], "&"}], "/@", "temp"}]}]}], "\[IndentingNewLine]", "]"}]}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"measurementTimesImport", "=."}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"measurementTimesImport", "[", "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "temp", ",", "timepoints", ",", "values", ",", "rangePositions", ",", 
+       "newColumn", ",", "valueRangePositionList"}], "}"}], 
+     "\[IndentingNewLine]", ",", 
+     RowBox[{
+      RowBox[{"temp", "=", 
+       RowBox[{"Select", "[", 
+        RowBox[{
+         StyleBox["protocol",
+          FontColor->GrayLevel[0]], ",", 
+         RowBox[{
+          RowBox[{"StringContainsQ", "[", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"#", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], ",", "\"\<measurement\>\""}], 
+           "]"}], "&"}]}], "]"}]}], "\[IndentingNewLine]", ";", 
+      RowBox[{"temp", "=", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"StringSplit", "[", 
+           RowBox[{
+            RowBox[{"#", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], ",", "\"\<***\>\""}], "]"}], "->", 
+          RowBox[{"#", "[", 
+           RowBox[{"[", "2", "]"}], "]"}]}], "&"}], "/@", 
+        RowBox[{"Normal", "[", "temp", "]"}]}]}], "\[IndentingNewLine]", ";", 
+      RowBox[{"timepoints", "=", 
+       RowBox[{"GatherBy", "[", 
+        RowBox[{"temp", ",", 
+         RowBox[{
+          RowBox[{"#", "[", 
+           RowBox[{"[", 
+            RowBox[{"1", ",", "1"}], "]"}], "]"}], "&"}]}], "]"}]}], 
+      "\[IndentingNewLine]", ";", 
+      RowBox[{"timepoints", "=", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Select", "[", 
+            RowBox[{"#", ",", 
+             RowBox[{
+              RowBox[{"StringContainsQ", "[", 
+               RowBox[{
+                RowBox[{"#", "[", 
+                 RowBox[{"[", 
+                  RowBox[{"1", ",", "1"}], "]"}], "]"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<_start\>\"", ",", "\"\<_end\>\""}], "}"}]}], 
+               "]"}], "&"}]}], "]"}], "&"}], "/@", "timepoints"}], ")"}], " ",
+         "/.", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"{", "}"}], "->", "Nothing"}], ")"}]}]}], 
+      "\[IndentingNewLine]", ";", 
+      RowBox[{"temp", "=", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Length", "[", 
+             RowBox[{"#", "[", 
+              RowBox[{"[", "1", "]"}], "]"}], "]"}], "==", 
+            RowBox[{"Length", "[", 
+             RowBox[{"#", "[", 
+              RowBox[{"[", "2", "]"}], "]"}], "]"}]}], ",", 
+           RowBox[{"Transpose", "[", "#", "]"}], ",", 
+           RowBox[{"Transpose", "[", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"#", "[", 
+               RowBox[{"[", "1", "]"}], "]"}], ",", 
+              RowBox[{"Append", "[", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"#", "[", 
+                  RowBox[{"[", "1", "]"}], "]"}], "[", 
+                 RowBox[{"[", 
+                  RowBox[{"2", ";;", 
+                   RowBox[{"-", "1"}]}], "]"}], "]"}], ",", 
+                RowBox[{
+                 RowBox[{"{", "\"\<measurement_end\>\"", "}"}], "->", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"\"\<end of protocol\>\"", "/.", "protocol"}], 
+                   ")"}], "-", 
+                  RowBox[{"Quantity", "[", 
+                   RowBox[{"1", ",", "\"\<Seconds\>\""}], "]"}]}]}]}], 
+               "]"}]}], "}"}], "]"}]}], "]"}], "&"}], "@", "timepoints"}]}], 
+      "\[IndentingNewLine]", ";", 
+      RowBox[{"values", "=", 
+       RowBox[{"StringRiffle", "/@", 
+        RowBox[{
+         RowBox[{"temp", "[", 
+          RowBox[{"[", 
+           RowBox[{"All", ",", "1", ",", "1"}], "]"}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"All", ",", 
+           RowBox[{"2", ";;", 
+            RowBox[{"-", "1"}]}]}], "]"}], "]"}]}]}], "\[IndentingNewLine]", ";", 
+      RowBox[{"rangePositions", "=", 
+       RowBox[{"Map", "[", 
+        RowBox[{"positionInTimeline", ",", 
+         RowBox[{"temp", "[", 
+          RowBox[{"[", 
+           RowBox[{"All", ",", "All", ",", 
+            RowBox[{"-", "1"}]}], "]"}], "]"}], ",", 
+         RowBox[{"{", "2", "}"}]}], "]"}]}], "\[IndentingNewLine]", ";", 
+      RowBox[{"newColumn", "=", 
+       RowBox[{"Table", "[", 
+        RowBox[{"\"\<n.a.\>\"", ",", 
+         RowBox[{"Length", "[", 
+          RowBox[{"oneTable", "[", 
+           RowBox[{"[", "1", "]"}], "]"}], "]"}]}], "]"}]}], 
+      "\[IndentingNewLine]", ";", 
+      RowBox[{"valueRangePositionList", "=", 
+       RowBox[{"Transpose", "[", 
+        RowBox[{"{", 
+         RowBox[{"values", ",", "rangePositions"}], "}"}], "]"}]}], 
+      "\[IndentingNewLine]", ";", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"newColumn", "[", 
+           RowBox[{"[", 
+            RowBox[{
+             RowBox[{"#2", "[", 
+              RowBox[{"[", "1", "]"}], "]"}], ";;", 
+             RowBox[{"#2", "[", 
+              RowBox[{"[", "2", "]"}], "]"}]}], "]"}], "]"}], "=", 
+          RowBox[{"Table", "[", 
+           RowBox[{"#1", ",", 
+            RowBox[{"Length", "[", 
+             RowBox[{"newColumn", "[", 
+              RowBox[{"[", 
+               RowBox[{
+                RowBox[{"#2", "[", 
+                 RowBox[{"[", "1", "]"}], "]"}], ";;", 
+                RowBox[{"#2", "[", 
+                 RowBox[{"[", "2", "]"}], "]"}]}], "]"}], "]"}], "]"}]}], 
+           "]"}]}], ")"}], "&"}], "@@@", "valueRangePositionList"}], 
+      "\[IndentingNewLine]", ";", 
+      RowBox[{"AppendTo", "[", 
+       RowBox[{"varNames", ",", "\"\<measurement task\>\""}], "]"}], 
+      "\[IndentingNewLine]", ";", 
+      RowBox[{"AppendTo", "[", 
+       RowBox[{"oneTable", ",", "newColumn"}], "]"}]}]}], 
+    "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"measurementCountdownImport", "=."}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"measurementCountdownImport", "[", "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "temp", ",", "tempStart", ",", "tempEnd", ",", "countdownTime", ",", 
+       "rangePositions", ",", "newColumn"}], "}"}], "\[IndentingNewLine]", ",", 
+     RowBox[{
+      RowBox[{"temp", "=", 
+       RowBox[{"Select", "[", 
+        RowBox[{
+         StyleBox["protocol",
+          FontColor->GrayLevel[0]], ",", 
+         RowBox[{
+          RowBox[{"StringContainsQ", "[", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"#", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], ",", 
+            RowBox[{"{", "\"\<countdown\>\"", "}"}]}], "]"}], "&"}]}], 
+        "]"}]}], "\[IndentingNewLine]", ";", 
+      RowBox[{"tempStart", "=", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"StringSplit", "[", 
+           RowBox[{
+            RowBox[{"#", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], ",", "\"\<***\>\""}], "]"}], "->", 
+          RowBox[{"#", "[", 
+           RowBox[{"[", "2", "]"}], "]"}]}], "&"}], "/@", "temp"}]}], 
+      "\[IndentingNewLine]", ";", 
+      RowBox[{"tempEnd", "=", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"StringReplace", "[", 
+            RowBox[{
+             RowBox[{"#", "[", 
+              RowBox[{"[", "1", "]"}], "]"}], ",", 
+             RowBox[{"\"\<start\>\"", "->", "\"\<end\>\""}]}], "]"}], "->", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"#", "[", 
+              RowBox[{"[", "2", "]"}], "]"}], "+", 
+             RowBox[{"(", 
+              RowBox[{"countdownTime", "=", 
+               RowBox[{"Quantity", "[", 
+                RowBox[{
+                 RowBox[{"ToExpression", "[", 
+                  RowBox[{"#", "[", 
+                   RowBox[{"[", 
+                    RowBox[{"1", ",", "2"}], "]"}], "]"}], "]"}], 
+                 ",", "\"\<Minutes\>\""}], "]"}]}], ")"}]}], ")"}]}], ")"}], 
+         "&"}], "/@", "tempStart"}]}], "\[IndentingNewLine]", ";", 
+      RowBox[{"temp", "=", 
+       RowBox[{"Transpose", "[", 
+        RowBox[{"{", 
+         RowBox[{"tempStart", ",", "tempEnd"}], "}"}], "]"}]}], 
+      "\[IndentingNewLine]", ";", 
+      RowBox[{"rangePositions", "=", 
+       RowBox[{"Map", "[", 
+        RowBox[{"positionInTimeline", ",", 
+         RowBox[{"temp", "[", 
+          RowBox[{"[", 
+           RowBox[{"All", ",", "All", ",", 
+            RowBox[{"-", "1"}]}], "]"}], "]"}], ",", 
+         RowBox[{"{", "2", "}"}]}], "]"}]}], "\[IndentingNewLine]", ";", 
+      RowBox[{"newColumn", "=", 
+       RowBox[{"Table", "[", 
+        RowBox[{"\"\<n.a.\>\"", ",", 
+         RowBox[{"Length", "[", 
+          RowBox[{"oneTable", "[", 
+           RowBox[{"[", "1", "]"}], "]"}], "]"}]}], "]"}]}], 
+      "\[IndentingNewLine]", ";", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"newColumn", "[", 
+           RowBox[{"[", 
+            RowBox[{"#1", ";;", "#2"}], "]"}], "]"}], "=", 
+          RowBox[{"Range", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"#2", "-", "#1"}], ")"}], "/", "2"}], ",", "0", ",", 
+            RowBox[{"-", ".5"}]}], "]"}]}], ")"}], "&"}], "@@@", 
+       "rangePositions"}], "\[IndentingNewLine]", ";", 
+      RowBox[{"AppendTo", "[", 
+       RowBox[{"varNames", ",", "\"\<countdown\>\""}], "]"}], 
+      "\[IndentingNewLine]", ";", 
+      RowBox[{"AppendTo", "[", 
+       RowBox[{"oneTable", ",", "newColumn"}], "]"}]}]}], 
+    "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"loadTimesImport", "=."}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"loadTimesImport", "[", "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"temp", ",", "timepoints", ",", "orderPositions"}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"temp", "=", 
+       RowBox[{"Select", "[", 
+        RowBox[{"protocol", ",", 
+         RowBox[{
+          RowBox[{"StringContainsQ", "[", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"#", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], ",", 
+            RowBox[{"{", 
+             
+             RowBox[{"\"\<load_start\>\"", ",", "\"\<load_total\>\"", 
+              ",", "\"\<measurement_end\>\""}], "}"}]}], "]"}], "&"}]}], 
+        "]"}]}], "\[IndentingNewLine]", ";", 
+      RowBox[{"search", "=", 
+       RowBox[{"Union", "[", 
+        RowBox[{
+         RowBox[{"Select", "[", 
+          RowBox[{"temp", ",", 
+           RowBox[{
+            RowBox[{"StringContainsQ", "[", 
+             RowBox[{
+              RowBox[{"#", "[", 
+               RowBox[{"[", "1", "]"}], "]"}], ",", "\"\<load_start\>\""}], 
+             "]"}], "&"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"All", ",", "1"}], "]"}], "]"}], "]"}]}], 
+      "\[IndentingNewLine]", ";", 
+      RowBox[{"startTimes", "=", 
+       RowBox[{"Flatten", "[", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"temp", ",", "#"}], "]"}], "&"}], "/@", "search"}], 
+          ")"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"All", ",", "All", ",", "1"}], "]"}], "]"}], "]"}]}], 
+      "\[IndentingNewLine]", ";", 
+      RowBox[{"endTimes", "=", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"Position", "[", 
+          RowBox[{"temp", ",", "\"\<measurement_end\>\""}], "]"}], ")"}], "[", 
+        RowBox[{"[", 
+         RowBox[{"All", ",", "1"}], "]"}], "]"}]}], "\[IndentingNewLine]", ";", 
+      RowBox[{"periods", "=", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Length", "[", "startTimes", "]"}], "==", 
+          RowBox[{"Length", "[", "endTimes", "]"}]}], ",", 
+         RowBox[{"Transpose", "[", 
+          RowBox[{"{", 
+           RowBox[{"startTimes", ",", "endTimes"}], "}"}], "]"}], 
+         ",", "\"\<load periods are not determined\>\""}], "]"}]}], 
+      "\[IndentingNewLine]", ";", 
+      RowBox[{"temp", "=", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"temp", "[", 
+          RowBox[{"[", 
+           RowBox[{"#1", ";;", "#2"}], "]"}], "]"}], "&"}], "@@@", 
+        "periods"}]}], "\[IndentingNewLine]", ";", 
+      RowBox[{"temp", "=", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Map", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{"StringSplit", "[", 
+              RowBox[{
+               RowBox[{"#", "[", 
+                RowBox[{"[", "1", "]"}], "]"}], ",", "\"\<***\>\""}], "]"}], "->", 
+             RowBox[{"#", "[", 
+              RowBox[{"[", "2", "]"}], "]"}]}], "&"}], ",", 
+           RowBox[{"Partition", "[", 
+            RowBox[{"#", ",", "2", ",", "1"}], "]"}], ",", 
+           RowBox[{"{", "2", "}"}]}], "]"}], "&"}], "/@", "temp"}]}], ";"}], 
+     "\[IndentingNewLine]", ";", 
+     RowBox[{"loadValues", "=", 
+      RowBox[{"temp", "[", 
+       RowBox[{"[", 
+        RowBox[{"1", ",", "All", ",", "1", ",", "1", ",", "2"}], "]"}], 
+       "]"}]}], "\[IndentingNewLine]", ";", 
+     RowBox[{"loadTimes", "=", 
+      RowBox[{"Map", "[", 
+       RowBox[{"positionInTimeline", ",", 
+        RowBox[{"temp", "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "All", ",", "All", ",", "2"}], "]"}], "]"}], ",", 
+        RowBox[{"{", "2", "}"}]}], "]"}]}], "\[IndentingNewLine]", ";", 
+     RowBox[{"valueRangePositionList", "=", 
+      RowBox[{"Transpose", "[", 
+       RowBox[{"{", 
+        RowBox[{"loadValues", ",", "loadTimes"}], "}"}], "]"}]}], 
+     "\[IndentingNewLine]", ";", 
+     RowBox[{"newColumn", "=", 
+      RowBox[{"Table", "[", 
+       RowBox[{"\"\<n.a.\>\"", ",", 
+        RowBox[{"Length", "[", 
+         RowBox[{"oneTable", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], "]"}]}], "]"}]}], 
+     "\[IndentingNewLine]", ";", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"newColumn", "[", 
+          RowBox[{"[", 
+           RowBox[{
+            RowBox[{"#2", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], ";;", 
+            RowBox[{"#2", "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}], "]"}], "]"}], "=", 
+         RowBox[{"Table", "[", 
+          RowBox[{"#1", ",", 
+           RowBox[{"Length", "[", 
+            RowBox[{"newColumn", "[", 
+             RowBox[{"[", 
+              RowBox[{
+               RowBox[{"#2", "[", 
+                RowBox[{"[", "1", "]"}], "]"}], ";;", 
+               RowBox[{"#2", "[", 
+                RowBox[{"[", "2", "]"}], "]"}]}], "]"}], "]"}], "]"}]}], 
+          "]"}]}], ")"}], "&"}], "@@@", "valueRangePositionList"}], 
+     "\[IndentingNewLine]", ";", 
+     RowBox[{"AppendTo", "[", 
+      RowBox[{"varNames", ",", "\"\<load of exercise\>\""}], "]"}], 
+     "\[IndentingNewLine]", ";", 
+     RowBox[{"AppendTo", "[", 
+      RowBox[{"oneTable", ",", "newColumn"}], "]"}]}]}], 
+   "\[IndentingNewLine]", "]"}]}]}], "Input",
+ CellChangeTimes->{{3.971412591644888*^9, 
+  3.9714126764919777`*^9}},ExpressionUUID->"763104e3-1363-1041-b160-\
+9f93a317622d"],
 
 Cell[BoxData[
  RowBox[{
@@ -1093,8 +1946,8 @@ pdf", "HyperlinkActionRecycled", {"HyperlinkActive"},
    3.9692892166873455`*^9, {3.969589962448601*^9, 3.9695900229988537`*^9}},
  CellLabel->"In[71]:=",ExpressionUUID->"d091ce4a-bf3b-4f4f-aefb-2f411e347bb9"]
 },
-WindowSize->{582, 729.75},
-WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowSize->{639.75, 729.75},
+WindowMargins->{{44.25, Automatic}, {Automatic, 4.5}},
 FrontEndVersion->"14.3 for Microsoft Windows (64-bit) (July 8, 2025)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"ecb341a5-ca65-d74f-b55c-794d4d84b01a"
@@ -1110,12 +1963,13 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[554, 20, 6760, 163, 770, "Input",ExpressionUUID->"428067d6-8328-be4f-afb6-dfadc733d23f"],
-Cell[7317, 185, 4373, 106, 492, "Input",ExpressionUUID->"36021481-2eaa-6945-abbd-343797993971"],
-Cell[11693, 293, 4216, 97, 541, "Input",ExpressionUUID->"71927a28-be0e-db45-8bb0-feb158927f26"],
-Cell[15912, 392, 5781, 138, 580, "Input",ExpressionUUID->"735f81c5-6930-1041-aea3-35b9bbe1004c"],
-Cell[21696, 532, 16466, 387, 1940, "Input",ExpressionUUID->"9c47a7e3-977b-0647-8515-0c9c9f763b10"],
-Cell[38165, 921, 6879, 172, 865, "Input",ExpressionUUID->"d091ce4a-bf3b-4f4f-aefb-2f411e347bb9"]
+Cell[554, 20, 7287, 178, 770, "Input",ExpressionUUID->"428067d6-8328-be4f-afb6-dfadc733d23f"],
+Cell[7844, 200, 4373, 106, 465, "Input",ExpressionUUID->"36021481-2eaa-6945-abbd-343797993971"],
+Cell[12220, 308, 4216, 97, 465, "Input",ExpressionUUID->"71927a28-be0e-db45-8bb0-feb158927f26"],
+Cell[16439, 407, 32030, 836, 3338, "Input",ExpressionUUID->"763104e3-1363-1041-b160-9f93a317622d"],
+Cell[48472, 1245, 5781, 138, 560, "Input",ExpressionUUID->"735f81c5-6930-1041-aea3-35b9bbe1004c"],
+Cell[54256, 1385, 16466, 387, 1688, "Input",ExpressionUUID->"9c47a7e3-977b-0647-8515-0c9c9f763b10"],
+Cell[70725, 1774, 6879, 172, 808, "Input",ExpressionUUID->"d091ce4a-bf3b-4f4f-aefb-2f411e347bb9"]
 }
 ]
 *)

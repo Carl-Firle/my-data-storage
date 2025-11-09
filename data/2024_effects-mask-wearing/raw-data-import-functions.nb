@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[     82549,       2067]
-NotebookOptionsPosition[     81597,       2047]
-NotebookOutlinePosition[     81998,       2063]
-CellTagsIndexPosition[     81955,       2060]
+NotebookDataLength[     83797,       2100]
+NotebookOptionsPosition[     82845,       2080]
+NotebookOutlinePosition[     83246,       2096]
+CellTagsIndexPosition[     83203,       2093]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1812,17 +1812,6 @@ specification", "HyperlinkActionRecycled", {"HyperlinkActive"},
                RowBox[{"[", 
                 RowBox[{"-", "1"}], "]"}], "]"}], "]"}], "-", "1"}]}], 
            "}"}]}], "]"}]}], "\[IndentingNewLine]", ";", 
-       RowBox[{
-        RowBox[{
-         RowBox[{
-          RowBox[{"positionInTimeline", "[", 
-           RowBox[{"#", "[", 
-            RowBox[{"[", "1", "]"}], "]"}], "]"}], "->", 
-          RowBox[{"#", "[", 
-           RowBox[{"[", 
-            RowBox[{"2", ";;", 
-             RowBox[{"-", "1"}]}], "]"}], "]"}]}], "&"}], "/@", 
-        "dErrorSensirion"}], "\[IndentingNewLine]", ";", 
        RowBox[{"newColumn", "=", 
         RowBox[{"ReplacePart", "[", 
          RowBox[{"newColumn", ",", 
@@ -1867,8 +1856,9 @@ specification", "HyperlinkActionRecycled", {"HyperlinkActive"},
    3.9690009161603317`*^9, 3.9690009165655212`*^9}, {3.9690010283828526`*^9, 
    3.9690010538024387`*^9}, 3.969289200535618*^9, {3.969589908801092*^9, 
    3.969589942847336*^9}, 3.971625321127102*^9, {3.9716270983460903`*^9, 
-   3.971627251529293*^9}, {3.971627286650076*^9, 
-   3.971627287150263*^9}},ExpressionUUID->"9c47a7e3-977b-0647-8515-\
+   3.971627251529293*^9}, {3.971627286650076*^9, 3.971627287150263*^9}, {
+   3.9717120180018826`*^9, 
+   3.9717120191235275`*^9}},ExpressionUUID->"9c47a7e3-977b-0647-8515-\
 0c9c9f763b10"],
 
 Cell[BoxData[
@@ -1937,7 +1927,8 @@ pdf", "HyperlinkActionRecycled", {"HyperlinkActive"},
     RowBox[{"Module", "[", 
      RowBox[{
       RowBox[{"{", 
-       RowBox[{"dtesto", ",", "varNames"}], "}"}], "\[IndentingNewLine]", ",", 
+       RowBox[{"dtesto", ",", "varNamesTesto"}], "}"}], "\[IndentingNewLine]",
+       ",", 
       RowBox[{
        RowBox[{"dtesto", "=", 
         RowBox[{"Import", "[", 
@@ -1953,7 +1944,7 @@ pdf", "HyperlinkActionRecycled", {"HyperlinkActive"},
           RowBox[{"{", 
            RowBox[{"\"\<\\n\>\"", ",", "\"\<;\>\""}], "}"}]}], "]"}]}], 
        "\[IndentingNewLine]", ";", 
-       RowBox[{"varNames", "=", 
+       RowBox[{"varNamesTesto", "=", 
         RowBox[{
          RowBox[{
           RowBox[{"\"\<testo435_\>\"", "~~", "#"}], "&"}], "/@", 
@@ -2037,13 +2028,55 @@ pdf", "HyperlinkActionRecycled", {"HyperlinkActive"},
         RowBox[{"synchronize", "[", 
          RowBox[{"dtesto", ",", "1", ",", "\"\<roomAirCondition\>\""}], 
          "]"}]}], "\[IndentingNewLine]", ";", 
-       RowBox[{"{", 
-        RowBox[{"varNames", ",", "dtesto"}], "}"}]}]}], "]"}]}], 
-   "\[IndentingNewLine]", "\[IndentingNewLine]"}]}]], "Input",
+       RowBox[{"newColumn", "=", 
+        RowBox[{"ConstantArray", "[", 
+         RowBox[{"\"\<n.a.\>\"", ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Length", "[", 
+             RowBox[{"oneTable", "[", 
+              RowBox[{"[", "1", "]"}], "]"}], "]"}], ",", 
+            RowBox[{
+             RowBox[{"Length", "[", 
+              RowBox[{"dtesto", "[", 
+               RowBox[{"[", 
+                RowBox[{"-", "1"}], "]"}], "]"}], "]"}], "-", "1"}]}], 
+           "}"}]}], "]"}]}], "\[IndentingNewLine]", ";", 
+       RowBox[{"newColumn", "=", 
+        RowBox[{"ReplacePart", "[", 
+         RowBox[{"newColumn", ",", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{"positionInTimeline", "[", 
+              RowBox[{"#", "[", 
+               RowBox[{"[", "1", "]"}], "]"}], "]"}], "->", 
+             RowBox[{"#", "[", 
+              RowBox[{"[", 
+               RowBox[{"2", ";;", 
+                RowBox[{"-", "1"}]}], "]"}], "]"}]}], "&"}], "/@", 
+           "dtesto"}]}], "]"}]}], "\[IndentingNewLine]", ";", 
+       RowBox[{"oneTable", "=", 
+        RowBox[{"Flatten", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"oneTable", ",", 
+            RowBox[{"Transpose", "[", "newColumn", "]"}]}], "}"}], ",", "1"}],
+          "]"}]}], "\[IndentingNewLine]", ";", 
+       RowBox[{"AppendTo", "[", 
+        RowBox[{"varNames", ",", 
+         RowBox[{"varNamesTesto", "[", 
+          RowBox[{"[", 
+           RowBox[{"2", ";;", 
+            RowBox[{"-", "1"}]}], "]"}], "]"}]}], "]"}], 
+       "\[IndentingNewLine]", ";"}]}], "]"}]}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]"}]}]], "Input",
  CellChangeTimes->{{3.9689866526046867`*^9, 3.9689868069140415`*^9}, 
    3.9690012611167545`*^9, {3.9690015498738556`*^9, 3.9690015522208652`*^9}, 
-   3.9692892166873455`*^9, {3.969589962448601*^9, 3.9695900229988537`*^9}},
- CellLabel->"In[64]:=",ExpressionUUID->"d091ce4a-bf3b-4f4f-aefb-2f411e347bb9"]
+   3.9692892166873455`*^9, {3.969589962448601*^9, 3.9695900229988537`*^9}, {
+   3.9717125927626057`*^9, 
+   3.9717126669626484`*^9}},ExpressionUUID->"d091ce4a-bf3b-4f4f-aefb-\
+2f411e347bb9"]
 },
 WindowSize->{639.75, 729.75},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
@@ -2067,8 +2100,8 @@ Cell[7840, 199, 4373, 106, 465, "Input",ExpressionUUID->"36021481-2eaa-6945-abbd
 Cell[12216, 307, 4301, 99, 465, "Input",ExpressionUUID->"71927a28-be0e-db45-8bb0-feb158927f26"],
 Cell[16520, 408, 32256, 840, 3396, "Input",ExpressionUUID->"763104e3-1363-1041-b160-9f93a317622d"],
 Cell[48779, 1250, 8054, 196, 884, "Input",ExpressionUUID->"735f81c5-6930-1041-aea3-35b9bbe1004c"],
-Cell[56836, 1448, 17875, 423, 1840, "Input",ExpressionUUID->"9c47a7e3-977b-0647-8515-0c9c9f763b10"],
-Cell[74714, 1873, 6879, 172, 808, "Input",ExpressionUUID->"d091ce4a-bf3b-4f4f-aefb-2f411e347bb9"]
+Cell[56836, 1448, 17535, 413, 1821, "Input",ExpressionUUID->"9c47a7e3-977b-0647-8515-0c9c9f763b10"],
+Cell[74374, 1863, 8467, 215, 960, "Input",ExpressionUUID->"d091ce4a-bf3b-4f4f-aefb-2f411e347bb9"]
 }
 ]
 *)

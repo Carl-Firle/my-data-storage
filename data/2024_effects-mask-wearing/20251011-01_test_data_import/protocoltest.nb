@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[     28191,        537]
-NotebookOptionsPosition[     27511,        518]
-NotebookOutlinePosition[     27909,        534]
-CellTagsIndexPosition[     27866,        531]
+NotebookDataLength[     28274,        540]
+NotebookOptionsPosition[     27565,        520]
+NotebookOutlinePosition[     27965,        536]
+CellTagsIndexPosition[     27922,        533]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -292,10 +292,11 @@ Cell[BoxData[
   3.9708072912116776`*^9, 3.970808028293457*^9, 3.970808397893862*^9, 
   3.970808548980644*^9, 3.9708099378127365`*^9, 3.970817325311224*^9, 
   3.9712781892816544`*^9, 3.9714073422330723`*^9, 3.971409530275738*^9, 
-  3.9714099471029854`*^9, 3.971410848910488*^9, 3.971494857599045*^9},
+  3.9714099471029854`*^9, 3.971410848910488*^9, 3.971494857599045*^9, 
+  3.9723144673165035`*^9},
  CellLabel->
   "During evaluation of \
-In[75]:=",ExpressionUUID->"7271c8a8-5c2a-194f-8ae5-048416c452cd"]
+In[75]:=",ExpressionUUID->"d710e212-5d41-c94a-85fb-5b1464ac060c"]
 }, Open  ]],
 
 Cell[BoxData["protocol"], "Input",
@@ -507,6 +508,7 @@ R-wave progression :: 1761820519229 --- repolarisation***none :: \
 1761820519229 --- auscultationLung***vesicular sound, normopnoea, no \
 pathological breath sound :: 1761820519229 --- end of protocol :: \
 1761820519229\>\""}], ";"}]], "Input",
+ InitializationCell->True,
  CellChangeTimes->{{3.9704091195539055`*^9, 3.970409128420105*^9}, {
    3.970409172601862*^9, 3.9704091726783657`*^9}, {3.9704093483769646`*^9, 
    3.9704093493103275`*^9}, 3.9704094021018505`*^9, {3.9704116498848286`*^9, 
@@ -516,7 +518,7 @@ pathological breath sound :: 1761820519229 --- end of protocol :: \
    3.971278036508093*^9, 3.9712781161165504`*^9, 3.9712781671068897`*^9},
  CellLabel->"In[74]:=",ExpressionUUID->"d77592dd-c424-1c4a-a346-4da432505501"]
 },
-WindowSize->{693, 729.75},
+WindowSize->{718.5, 729.75},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
 FrontEndVersion->"14.3 for Microsoft Windows (64-bit) (July 8, 2025)",
 StyleDefinitions->"Default.nb",
@@ -534,11 +536,12 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[576, 22, 5030, 128, 541, "Input",ExpressionUUID->"4b4d10a5-1865-4341-9282-640a20f29b80"],
-Cell[5609, 152, 6754, 145, 337, "Print",ExpressionUUID->"7271c8a8-5c2a-194f-8ae5-048416c452cd"]
+Cell[576, 22, 5030, 128, 522, "Input",ExpressionUUID->"4b4d10a5-1865-4341-9282-640a20f29b80"],
+Cell[5609, 152, 6781, 146, 297, "Print",ExpressionUUID->"d710e212-5d41-c94a-85fb-5b1464ac060c"]
 }, Open  ]],
-Cell[12378, 300, 183, 3, 28, "Input",ExpressionUUID->"2d3f0288-d708-b541-9454-d35c8a10af2b"],
-Cell[12564, 305, 14943, 211, 4271, "Input",ExpressionUUID->"d77592dd-c424-1c4a-a346-4da432505501"]
+Cell[12405, 301, 183, 3, 28, "Input",ExpressionUUID->"2d3f0288-d708-b541-9454-d35c8a10af2b"],
+Cell[12591, 306, 14970, 212, 4249, "Input",ExpressionUUID->"d77592dd-c424-1c4a-a346-4da432505501",
+ InitializationCell->True]
 }
 ]
 *)

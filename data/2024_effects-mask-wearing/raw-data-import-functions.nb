@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[     83797,       2100]
-NotebookOptionsPosition[     82845,       2080]
-NotebookOutlinePosition[     83246,       2096]
-CellTagsIndexPosition[     83203,       2093]
+NotebookDataLength[     83989,       2099]
+NotebookOptionsPosition[     83032,       2079]
+NotebookOutlinePosition[     83437,       2095]
+CellTagsIndexPosition[     83394,       2092]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -403,8 +403,7 @@ Cell[BoxData[{
   3.9695897846709385`*^9, 3.9695897908233433`*^9}, {3.97162244624798*^9, 
   3.971622452219307*^9}, {3.9716227361755047`*^9, 3.9716227379890594`*^9}, {
   3.9716228180820675`*^9, 3.9716228448448505`*^9}},
- CellLabel->
-  "In[375]:=",ExpressionUUID->"71927a28-be0e-db45-8bb0-feb158927f26"],
+ CellLabel->"In[31]:=",ExpressionUUID->"71927a28-be0e-db45-8bb0-feb158927f26"],
 
 Cell[BoxData[{
  RowBox[{"descrDataProtocolImport", "=."}], "\[IndentingNewLine]", 
@@ -1238,14 +1237,14 @@ Cell[BoxData[{
           "]"}]}], ")"}], "&"}], "@@@", "valueRangePositionList"}], 
      "\[IndentingNewLine]", ";", 
      RowBox[{"AppendTo", "[", 
-      RowBox[{"varNames", ",", "\"\<load of exercise\>\""}], "]"}], 
+      RowBox[{"varNames", ",", "\"\<load of exercise [Watt]\>\""}], "]"}], 
      "\[IndentingNewLine]", ";", 
      RowBox[{"AppendTo", "[", 
       RowBox[{"oneTable", ",", "newColumn"}], "]"}]}]}], 
    "\[IndentingNewLine]", "]"}]}]}], "Input",
  CellChangeTimes->{{3.971412591644888*^9, 3.9714126764919777`*^9}, {
-  3.9714949633804264`*^9, 
-  3.9714949960396614`*^9}},ExpressionUUID->"763104e3-1363-1041-b160-\
+  3.9714949633804264`*^9, 3.9714949960396614`*^9}, {3.972314776334444*^9, 
+  3.9723147791733036`*^9}},ExpressionUUID->"763104e3-1363-1041-b160-\
 9f93a317622d"],
 
 Cell[BoxData[
@@ -1392,8 +1391,9 @@ pdf", "HyperlinkActionRecycled", {"HyperlinkActive"},
                RowBox[{"{", "2", "}"}]}], "]"}]}], "}"}], "]"}], " ", ",", 
           "1"}], "]"}]}], " ", 
        RowBox[{"(*", 
-        RowBox[{"error", " ", "of", " ", "10", " ", "%"}], "*)"}], "\n", 
-       "\[IndentingNewLine]", ";", 
+        RowBox[{
+         RowBox[{"error", " ", "of", " ", "10", " ", "%"}], ",", " ", 
+         "compare"}], " ", "*)"}], "\n", "\[IndentingNewLine]", ";", 
        RowBox[{"newColumn", "=", 
         RowBox[{"ConstantArray", "[", 
          RowBox[{"\"\<n.a.\>\"", ",", 
@@ -1443,7 +1443,8 @@ pdf", "HyperlinkActionRecycled", {"HyperlinkActive"},
    3.969589872948635*^9, 3.969589893701107*^9}, {3.9714990293467464`*^9, 
    3.971499135578417*^9}, {3.971626396365713*^9, 3.9716263965462017`*^9}, {
    3.971626842403034*^9, 3.9716268499200153`*^9}, {3.9717113007472057`*^9, 
-   3.97171131945718*^9}},ExpressionUUID->"735f81c5-6930-1041-aea3-\
+   3.97171131945718*^9}, {3.972315427069233*^9, 
+   3.9723154292545547`*^9}},ExpressionUUID->"735f81c5-6930-1041-aea3-\
 35b9bbe1004c"],
 
 Cell[BoxData[
@@ -1857,9 +1858,8 @@ specification", "HyperlinkActionRecycled", {"HyperlinkActive"},
    3.9690010538024387`*^9}, 3.969289200535618*^9, {3.969589908801092*^9, 
    3.969589942847336*^9}, 3.971625321127102*^9, {3.9716270983460903`*^9, 
    3.971627251529293*^9}, {3.971627286650076*^9, 3.971627287150263*^9}, {
-   3.9717120180018826`*^9, 
-   3.9717120191235275`*^9}},ExpressionUUID->"9c47a7e3-977b-0647-8515-\
-0c9c9f763b10"],
+   3.9717120180018826`*^9, 3.9717120191235275`*^9}},
+ CellLabel->"In[51]:=",ExpressionUUID->"9c47a7e3-977b-0647-8515-0c9c9f763b10"],
 
 Cell[BoxData[
  RowBox[{
@@ -2074,12 +2074,11 @@ pdf", "HyperlinkActionRecycled", {"HyperlinkActive"},
  CellChangeTimes->{{3.9689866526046867`*^9, 3.9689868069140415`*^9}, 
    3.9690012611167545`*^9, {3.9690015498738556`*^9, 3.9690015522208652`*^9}, 
    3.9692892166873455`*^9, {3.969589962448601*^9, 3.9695900229988537`*^9}, {
-   3.9717125927626057`*^9, 
-   3.9717126669626484`*^9}},ExpressionUUID->"d091ce4a-bf3b-4f4f-aefb-\
-2f411e347bb9"]
+   3.9717125927626057`*^9, 3.9717126669626484`*^9}},
+ CellLabel->"In[64]:=",ExpressionUUID->"d091ce4a-bf3b-4f4f-aefb-2f411e347bb9"]
 },
-WindowSize->{639.75, 729.75},
-WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowSize->{560.25, 729.75},
+WindowMargins->{{Automatic, 358.5}, {Automatic, 0}},
 FrontEndVersion->"14.3 for Microsoft Windows (64-bit) (July 8, 2025)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"ecb341a5-ca65-d74f-b55c-794d4d84b01a"
@@ -2095,13 +2094,13 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[554, 20, 7283, 177, 770, "Input",ExpressionUUID->"428067d6-8328-be4f-afb6-dfadc733d23f"],
-Cell[7840, 199, 4373, 106, 465, "Input",ExpressionUUID->"36021481-2eaa-6945-abbd-343797993971"],
-Cell[12216, 307, 4301, 99, 465, "Input",ExpressionUUID->"71927a28-be0e-db45-8bb0-feb158927f26"],
-Cell[16520, 408, 32256, 840, 3396, "Input",ExpressionUUID->"763104e3-1363-1041-b160-9f93a317622d"],
-Cell[48779, 1250, 8054, 196, 884, "Input",ExpressionUUID->"735f81c5-6930-1041-aea3-35b9bbe1004c"],
-Cell[56836, 1448, 17535, 413, 1821, "Input",ExpressionUUID->"9c47a7e3-977b-0647-8515-0c9c9f763b10"],
-Cell[74374, 1863, 8467, 215, 960, "Input",ExpressionUUID->"d091ce4a-bf3b-4f4f-aefb-2f411e347bb9"]
+Cell[554, 20, 7283, 177, 827, "Input",ExpressionUUID->"428067d6-8328-be4f-afb6-dfadc733d23f"],
+Cell[7840, 199, 4373, 106, 484, "Input",ExpressionUUID->"36021481-2eaa-6945-abbd-343797993971"],
+Cell[12216, 307, 4297, 98, 465, "Input",ExpressionUUID->"71927a28-be0e-db45-8bb0-feb158927f26"],
+Cell[16516, 407, 32311, 840, 4023, "Input",ExpressionUUID->"763104e3-1363-1041-b160-9f93a317622d"],
+Cell[48830, 1249, 8154, 198, 941, "Input",ExpressionUUID->"735f81c5-6930-1041-aea3-35b9bbe1004c"],
+Cell[56987, 1449, 17553, 412, 2014, "Input",ExpressionUUID->"9c47a7e3-977b-0647-8515-0c9c9f763b10"],
+Cell[74543, 1863, 8485, 214, 1017, "Input",ExpressionUUID->"d091ce4a-bf3b-4f4f-aefb-2f411e347bb9"]
 }
 ]
 *)

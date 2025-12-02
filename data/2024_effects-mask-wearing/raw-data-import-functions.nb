@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[     96260,       2392]
-NotebookOptionsPosition[     95008,       2369]
-NotebookOutlinePosition[     95416,       2385]
-CellTagsIndexPosition[     95373,       2382]
+NotebookDataLength[     99186,       2458]
+NotebookOptionsPosition[     97935,       2435]
+NotebookOutlinePosition[     98340,       2451]
+CellTagsIndexPosition[     98297,       2448]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -2353,22 +2353,88 @@ Cell[BoxData[{
  RowBox[{"createTabular", "=."}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"createTabular", "[", "]"}], ":=", 
-  RowBox[{"ToTabular", "[", 
+  RowBox[{"Module", "[", 
    RowBox[{
+    RowBox[{"{", 
+     RowBox[{"temp", ",", "quantities"}], "}"}], "\[IndentingNewLine]", ",", 
     RowBox[{
-     RowBox[{"Transpose", "[", "oneTable", "]"}], "/.", " ", 
-     RowBox[{"\"\<n.a.\>\"", "->", 
-      RowBox[{"Missing", "[", "]"}]}]}], ",", "\"\<Rows\>\"", ",", 
-    RowBox[{"<|", 
-     RowBox[{"\"\<ColumnKeys\>\"", "->", 
-      RowBox[{"Flatten", "[", "varNames", "]"}]}], "|>"}]}], 
-   "]"}]}], "\[IndentingNewLine]"}], "Input",
- CellChangeTimes->{{3.9730937040703907`*^9, 3.973093752514805*^9}},
- CellLabel->
-  "In[111]:=",ExpressionUUID->"dc9dae67-d705-d44d-ad1f-462b42d4d474"]
+     RowBox[{"Clear", "[", 
+      RowBox[{
+      "s", ",", "L", ",", "l", ",", "ug", ",", "cm3", ",", "m3", ",", "Watt", 
+       ",", "ppm", ",", "mbar", ",", "Celsius", ",", "percent"}], "]"}], 
+     "\[IndentingNewLine]", ";", 
+     RowBox[{"quantities", "=", 
+      RowBox[{
+       RowBox[{"ToExpression", "[", 
+        RowBox[{"Flatten", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"StringCases", "[", 
+            RowBox[{"#", ",", 
+             RowBox[{
+              RowBox[{"\"\<[\>\"", "~~", "a__", "~~", "\"\<]\>\""}], "->", 
+              "a"}]}], "]"}], "&"}], "/@", 
+          RowBox[{"Flatten", "[", "varNames", "]"}]}], "]"}], "]"}], " ", "/.",
+        " ", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"s", "->", "\"\<Seconds\>\""}], ",", 
+         RowBox[{"L", "->", "\"\<Liters\>\""}], ",", 
+         RowBox[{"l", "->", "\"\<Liters\>\""}], ",", 
+         RowBox[{"ug", "->", "\"\<Micrograms\>\""}], ",", 
+         RowBox[{"cm3", "->", 
+          RowBox[{"(", 
+           RowBox[{"\"\<Centimeters\>\"", "^", "3"}], ")"}]}], ",", 
+         RowBox[{"m3", "->", 
+          RowBox[{"(", 
+           RowBox[{"\"\<Meters\>\"", "^", "3"}], ")"}]}], ",", 
+         RowBox[{"Watt", "->", "\"\<Watts\>\""}], ",", 
+         RowBox[{"ppm", "->", "\"\<PartsPerMillion\>\""}], ",", 
+         RowBox[{"mbar", "->", "\"\<Millibars\>\""}], ",", 
+         RowBox[{"Celsius", "->", "\"\<DegreesCelsius\>\""}], ",", 
+         RowBox[{"percent", "->", "\"\<Percent\>\""}]}], "}"}]}]}], 
+     "\[IndentingNewLine]", ";", 
+     RowBox[{"temp", "=", 
+      RowBox[{"oneTable", "/.", " ", 
+       RowBox[{"\"\<n.a.\>\"", "->", 
+        RowBox[{"Missing", "[", "]"}]}]}]}], "\[IndentingNewLine]", ";", 
+     RowBox[{"temp", "=", 
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"temp", "[", 
+          RowBox[{"[", "i", "]"}], "]"}], "=", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Quantity", "[", 
+            RowBox[{"#", ",", 
+             RowBox[{"quantities", "[", 
+              RowBox[{"[", "i", "]"}], "]"}]}], "]"}], "&"}], "/@", 
+          RowBox[{"temp", "[", 
+           RowBox[{"[", "i", "]"}], "]"}]}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{"i", ",", 
+          RowBox[{"Length", "[", "quantities", "]"}]}], "}"}]}], "]"}]}], 
+     "\[IndentingNewLine]", ";", 
+     RowBox[{"oneTableTab", "=", 
+      RowBox[{"ToTabular", "[", 
+       RowBox[{
+        RowBox[{"Transpose", "[", "temp", "]"}], ",", "\"\<Rows\>\"", ",", 
+        RowBox[{"<|", 
+         RowBox[{"\"\<ColumnKeys\>\"", "->", 
+          RowBox[{"Flatten", "[", "varNames", "]"}]}], "|>"}]}], "]"}]}]}]}], 
+   "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.9730937040703907`*^9, 3.973093752514805*^9}, {
+  3.9734883356802826`*^9, 3.9734883430413895`*^9}, {3.9734883802410507`*^9, 
+  3.973488384738682*^9}, {3.9734884287947445`*^9, 3.973488572857382*^9}, {
+  3.9734886089880085`*^9, 3.9734886137170486`*^9}, {3.9734887127222614`*^9, 
+  3.973488758046074*^9}, {3.973488838993664*^9, 3.973488850589386*^9}, {
+  3.973488958239746*^9, 3.973488958797676*^9}, {3.973489009695263*^9, 
+  3.9734890185510387`*^9}, {3.973658783625847*^9, 3.97365881662167*^9}},
+ CellLabel->"In[81]:=",ExpressionUUID->"dc9dae67-d705-d44d-ad1f-462b42d4d474"]
 },
 WindowSize->{632.25, 729.75},
-WindowMargins->{{27.75, Automatic}, {Automatic, 2.25}},
+WindowMargins->{{27.75, Automatic}, {Automatic, 0}},
 FrontEndVersion->"14.3 for Microsoft Windows (64-bit) (July 8, 2025)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"ecb341a5-ca65-d74f-b55c-794d4d84b01a"
@@ -2393,7 +2459,7 @@ Cell[58361, 1473, 17868, 417, 1859, "Input",ExpressionUUID->"9c47a7e3-977b-0647-
 Cell[76232, 1892, 9133, 226, 998, "Input",ExpressionUUID->"d091ce4a-bf3b-4f4f-aefb-2f411e347bb9"],
 Cell[85368, 2120, 5439, 139, 560, "Input",ExpressionUUID->"238e8eb6-5742-af4e-b536-7deac132983d"],
 Cell[90810, 2261, 3523, 88, 351, "Input",ExpressionUUID->"c350515d-5347-4e4e-ac17-445c4880aaad"],
-Cell[94336, 2351, 668, 16, 85, "Input",ExpressionUUID->"dc9dae67-d705-d44d-ad1f-462b42d4d474"]
+Cell[94336, 2351, 3595, 82, 415, "Input",ExpressionUUID->"dc9dae67-d705-d44d-ad1f-462b42d4d474"]
 }
 ]
 *)

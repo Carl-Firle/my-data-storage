@@ -11,4 +11,4 @@ The order is prescribed by the starting index number.
 + __05_Proportionality 0002__ = Likelihood between speaking with and without mask
 + __06_Spectra 0217__ = Particle size distribution, histogram
 + __07_Group characteristics__ = Report of participants characteristics
-
++ __08_Room Conditions__ = Room Environment Conditions

@@ -11,6 +11,7 @@ The order is prescribed by the date format `year - month - day`, the index numbe
 + __20250814-01_dilution_leakage_01__ = all doors are closed and the air cleaners in airlock and laboratory are on. In cabin is normal ambient aerosol. The air in cabin is beeing washed out (dilution effect).
 + __20250814-02_dilution_leakage_02__ = all doors are closed. All air cleaners are running until baseline is reached. then, air cleaner in cabin is stopped. The other two are running. How constant is the baseline in cabin, i.e., how high is the dilution from leakage?
 + __20250911-01_room-conditions-subject-cycling__ = first test with a young man cycling. Cicra 10 minutes of moderate load. Room conditions (CO2, humidity...) and aerosol particle concentrations were measured. respiratory inductance plethysmography was not used.
++ __20260703-01_probe_cabin_3d__ = 3d visualization of the laboratory and the cabin
 
 # file names
 the file names have standard format:

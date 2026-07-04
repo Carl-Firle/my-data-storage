@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Messprotokoll – Raum & Objekte</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    label { display: inline-block; width: 80px; margin-bottom: 6px; }
+    input { margin-bottom: 6px; }
+    table { border-collapse: collapse; margin-top: 20px; width: 100%; }
+    th, td { border: 1px solid #444; padding: 6px; text-align: center; }
+    th { background: #eee; }
+    .row-form { margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+
+  <h2>Messprotokoll – Objektkoordinaten</h2>
+
+  <!-- Eingabeformular -->
+  <div class="row-form">
+    <div>
+      <label for="objekt">Objekt</label>
+      <input type="text" id="objekt" placeholder="z.B. Schrank">
+    </div>
+    <div>
+      <label for="x">X (cm)</label>
+      <input type="number" id="x" step="0.01">
+    </div>
+    <div>
+      <label for="y">Y (cm)</label>
+      <input type="number" id="y" step="0.01">
+    </div>
+    <div>
+      <label for="z">Z (cm)</label>
+      <input type="number" id="z" step="0.01">
+    </div>
+    <div>
+      <label for="l">L (cm)</label>
+      <input type="number" id="l" step="0.01">
+    </div>
+    <div>
+      <label for="b">B (cm)</label>
+      <input type="number" id="b" step="0.01">
+    </div>
+    <div>
+      <label for="h">H (cm)</label>
+      <input type="number" id="h" step="0.01">
+    </div>
+
+    <button id="addRowBtn">Zeile hinzufügen</button>
+    <button id="downloadCsvBtn">CSV herunterladen</button>
+  </div>
+
+  <!-- Tabelle -->
+  <table id="messTabelle">
+    <thead>
+      <tr>
+        <th>Objekt</th>
+        <th>X (cm)</th>
+        <th>Y (cm)</th>
+        <th>Z (cm)</th>
+        <th>L (cm)</th>
+        <th>B (cm)</th>
+        <th>H (cm)</th>
+        <th>Uhrzeit</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script>
+    function getCurrentTimeString() {
+      const now = new Date();
+      const pad = n => String(n).padStart(2, '0');
+      return `${pad(now.getDate())}.${pad(now.getMonth()+1)}.${now.getFullYear()} `
+           + `${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())}`;
+    }
+
+    document.getElementById('addRowBtn').addEventListener('click', function () {
+      const objekt = document.getElementById('objekt').value.trim();
+      const x = document.getElementById('x').value;
+      const y = document.getElementById('y').value;
+      const z = document.getElementById('z').value;
+      const l = document.getElementById('l').value;
+      const b = document.getElementById('b').value;
+      const h = document.getElementById('h').value;
+
+      if (!objekt) {
+        alert('Bitte einen Objektnamen eingeben.');
+        return;
+      }
+
+      const tbody = document.getElementById('messTabelle').querySelector('tbody');
+      const tr = document.createElement('tr');
+
+      const values = [objekt, x, y, z, l, b, h, getCurrentTimeString()];
+
+      values.forEach(val => {
+        const td = document.createElement('td');
+        td.textContent = val;
+        tr.appendChild(td);
+      });
+
+      tbody.appendChild(tr);
+
+      document.getElementById('objekt').value = '';
+      document.getElementById('x').value = '';
+      document.getElementById('y').value = '';
+      document.getElementById('z').value = '';
+      document.getElementById('l').value = '';
+      document.getElementById('b').value = '';
+      document.getElementById('h').value = '';
+      document.getElementById('objekt').focus();
+    });
+
+    document.getElementById('downloadCsvBtn').addEventListener('click', function () {
+      const table = document.getElementById('messTabelle');
+      let csv = [];
+
+      const rows = table.querySelectorAll('tr');
+      rows.forEach(row => {
+        const cols = row.querySelectorAll('th, td');
+        const rowData = [];
+        cols.forEach(col => rowData.push(col.textContent));
+        csv.push(rowData.join(';'));
+      });
+
+      const csvContent = csv.join('\n');
+      const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+
+      const link = document.createElement('a');
+      link.setAttribute('href', url);
+      link.setAttribute('download', 'messprotokoll.csv');
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
+  </script>
+
+</body>
+</html>

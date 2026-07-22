@@ -3,17 +3,17 @@
 (*** Wolfram Notebook File ***)
 (* http://www.wolfram.com/nb *)
 
-(* CreatedBy='Wolfram 14.2' *)
+(* CreatedBy='Wolfram 15.0' *)
 
 (*CacheID: 234*)
 (* Internal cache information:
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[    428677,       8046]
-NotebookOptionsPosition[    427116,       8020]
-NotebookOutlinePosition[    427517,       8036]
-CellTagsIndexPosition[    427474,       8033]
+NotebookDataLength[    428688,       8047]
+NotebookOptionsPosition[    427138,       8021]
+NotebookOutlinePosition[    427539,       8037]
+CellTagsIndexPosition[    427496,       8034]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -57,9 +57,9 @@ Cell[BoxData[{
    RowBox[{"stringFix", "=", 
     RowBox[{
     "Import", 
-     "[", "\"\<https://raw.githubusercontent.com/Carl-Firle/effects-of-mask-\
-wearing-on-human-particle-formation/refs/heads/main/methods/stringFix_for_\
-protocol.m\>\"", "]"}]}], ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+     "[", "\"\<https://github.com/Carl-Firle/effects-of-mask-wearing-on-human-\
+particle-formation/raw/refs/heads/main/methods/stringFix_for_protocol.m\>\"", 
+     "]"}]}], ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{"dProtocolImport", "=."}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
@@ -269,8 +269,9 @@ protocol.m\>\"", "]"}]}], ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]",
    3.9775390386612873`*^9}, 3.977584678914274*^9, 3.978077341003105*^9, {
    3.9796599507474957`*^9, 3.9796599513428574`*^9}, {3.979660473160532*^9, 
    3.979660478940716*^9}, {3.979660964492649*^9, 3.979660967090927*^9}, {
-   3.9796611050921135`*^9, 3.979661106653036*^9}},
- CellLabel->"In[21]:=",ExpressionUUID->"428067d6-8328-be4f-afb6-dfadc733d23f"],
+   3.9796611050921135`*^9, 3.979661106653036*^9}, {3.99347847147118*^9, 
+   3.9934784723805656`*^9}},ExpressionUUID->"428067d6-8328-be4f-afb6-\
+dfadc733d23f"],
 
 Cell[BoxData[{
  RowBox[{"positionInTimeline", "=."}], "\[IndentingNewLine]", 
@@ -8020,7 +8021,7 @@ Cell[BoxData[{
 },
 WindowSize->{718.5, 735},
 WindowMargins->{{-5.25, Automatic}, {Automatic, 0}},
-FrontEndVersion->"14.3 for Microsoft Windows (64-bit) (July 8, 2025)",
+FrontEndVersion->"15.0 for Microsoft Windows (64-bit) (May 19, 2026)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"ecb341a5-ca65-d74f-b55c-794d4d84b01a"
 ]
@@ -8035,20 +8036,22 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[554, 20, 10281, 252, 1017, "Input",ExpressionUUID->"428067d6-8328-be4f-afb6-dfadc733d23f"],
-Cell[10838, 274, 5053, 117, 446, "Input",ExpressionUUID->"36021481-2eaa-6945-abbd-343797993971"],
-Cell[15894, 393, 4346, 99, 408, "Input",ExpressionUUID->"71927a28-be0e-db45-8bb0-feb158927f26"],
-Cell[20243, 494, 32387, 840, 2996, "Input",ExpressionUUID->"763104e3-1363-1041-b160-9f93a317622d"],
-Cell[52633, 1336, 109809, 1870, 829, "Input",ExpressionUUID->"250651bb-0156-6949-9799-3678238f7915"],
-Cell[162445, 3208, 166, 2, 47, "Input",ExpressionUUID->"d349b7db-add2-1e4a-9735-2204f0e3aa84"],
-Cell[162614, 3212, 111799, 1904, 868, "Input",ExpressionUUID->"735f81c5-6930-1041-aea3-35b9bbe1004c"],
-Cell[274416, 5118, 17868, 417, 1631, "Input",ExpressionUUID->"9c47a7e3-977b-0647-8515-0c9c9f763b10"],
-Cell[292287, 5537, 9133, 226, 922, "Input",ExpressionUUID->"d091ce4a-bf3b-4f4f-aefb-2f411e347bb9"],
-Cell[301423, 5765, 5439, 139, 465, "Input",ExpressionUUID->"238e8eb6-5742-af4e-b536-7deac132983d"],
-Cell[306865, 5906, 3727, 92, 294, "Input",ExpressionUUID->"c350515d-5347-4e4e-ac17-445c4880aaad"],
-Cell[310595, 6000, 110155, 1875, 810, "Input",ExpressionUUID->"c196d4a3-1c66-0446-af16-19cbf385d1d0"],
-Cell[420753, 7877, 6359, 141, 503, "Input",ExpressionUUID->"dc9dae67-d705-d44d-ad1f-462b42d4d474"]
+Cell[554, 20, 10303, 253, 1017, "Input",ExpressionUUID->"428067d6-8328-be4f-afb6-dfadc733d23f"],
+Cell[10860, 275, 5053, 117, 446, "Input",ExpressionUUID->"36021481-2eaa-6945-abbd-343797993971"],
+Cell[15916, 394, 4346, 99, 408, "Input",ExpressionUUID->"71927a28-be0e-db45-8bb0-feb158927f26"],
+Cell[20265, 495, 32387, 840, 70, "Input",ExpressionUUID->"763104e3-1363-1041-b160-9f93a317622d"],
+Cell[52655, 1337, 109809, 1870, 70, "Input",ExpressionUUID->"250651bb-0156-6949-9799-3678238f7915"],
+Cell[162467, 3209, 166, 2, 70, "Input",ExpressionUUID->"d349b7db-add2-1e4a-9735-2204f0e3aa84"],
+Cell[162636, 3213, 111799, 1904, 70, "Input",ExpressionUUID->"735f81c5-6930-1041-aea3-35b9bbe1004c"],
+Cell[274438, 5119, 17868, 417, 70, "Input",ExpressionUUID->"9c47a7e3-977b-0647-8515-0c9c9f763b10"],
+Cell[292309, 5538, 9133, 226, 70, "Input",ExpressionUUID->"d091ce4a-bf3b-4f4f-aefb-2f411e347bb9"],
+Cell[301445, 5766, 5439, 139, 70, "Input",ExpressionUUID->"238e8eb6-5742-af4e-b536-7deac132983d"],
+Cell[306887, 5907, 3727, 92, 70, "Input",ExpressionUUID->"c350515d-5347-4e4e-ac17-445c4880aaad"],
+Cell[310617, 6001, 110155, 1875, 70, "Input",ExpressionUUID->"c196d4a3-1c66-0446-af16-19cbf385d1d0"],
+Cell[420775, 7878, 6359, 141, 70, "Input",ExpressionUUID->"dc9dae67-d705-d44d-ad1f-462b42d4d474"]
 }
 ]
 *)
+
+(* End of internal cache information *)
 

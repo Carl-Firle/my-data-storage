@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[    651138,      11736]
-NotebookOptionsPosition[    649582,      11710]
-NotebookOutlinePosition[    649983,      11726]
-CellTagsIndexPosition[    649940,      11723]
+NotebookDataLength[    652598,      11767]
+NotebookOptionsPosition[    651042,      11741]
+NotebookOutlinePosition[    651443,      11757]
+CellTagsIndexPosition[    651400,      11754]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -3184,7 +3184,37 @@ hBBCCCGEEEIIIYQQQgghhBBCHFv+F3hxU24=
        "constantly", " ", "200", " ", 
        RowBox[{"ml", "/", "s"}], " ", "not", " ", "250", " ", 
        RowBox[{"ml", "/", 
-        RowBox[{"s", ".", "\[IndentingNewLine]", 
+        RowBox[{"s", ".", " ", "See"}]}], " ", 
+       RowBox[{"also", ":", " ", 
+        RowBox[{
+         TemplateBox[{
+           RowBox[{
+             RowBox[{"https", ":"}], "//", 
+             RowBox[{
+               RowBox[{
+                 RowBox[{"github", ".", "com"}], "/", "Carl"}], "-", 
+               RowBox[{"Firle", "/", "my"}], "-", "data", "-", 
+               RowBox[{
+                 RowBox[{
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"storage", "/", "raw"}], "/", "refs"}], "/", 
+                    "heads"}], "/", "main"}], "/", "data"}], "/", "2024"}], 
+                 "_effects"}], "-", "mask", "-", 
+               RowBox[{"wearing", "/", "20251127"}], "-", 
+               RowBox[{"01", "_rip", 
+                 RowBox[{"_spiro", "/", "rip"}]}], "-", "spiro", "-", 
+               RowBox[{"cal", ".", "nb"}]}]}], {
+            URL[
+            "https://github.com/Carl-Firle/my-data-storage/raw/refs/heads/\
+main/data/2024_effects-mask-wearing/20251127-01_rip_spiro/rip-spiro-cal.nb"], 
+            None}, "https://github.com/Carl-Firle/my-data-storage/raw/refs/\
+heads/main/data/2024_effects-mask-wearing/20251127-01_rip_spiro/rip-spiro-cal.\
+nb", "HyperlinkActionRecycled", {"HyperlinkActive"}, 
+           BaseStyle -> {"Hyperlink"}, HyperlinkAction -> "Recycled"},
+          "HyperlinkTemplate"], "\[IndentingNewLine]", 
          GraphicsBox[{{}, {{}, {}, 
             TagBox[
              {RGBColor[0.24, 0.6, 0.8], PointSize[
@@ -6889,8 +6919,9 @@ LOZOY+albFKzn8uD6d7/9/8DDaNOhg==
      ";"}]}], "\[IndentingNewLine]", "]"}]}]}], "Input",
  CellChangeTimes->{{3.978081995472471*^9, 3.978082269887596*^9}, {
   3.9940840561920033`*^9, 3.9940840569320927`*^9}, {3.9940841202938232`*^9, 
-  3.9940841923739243`*^9}, {3.994084975917925*^9, 
-  3.99408498103055*^9}},ExpressionUUID->"250651bb-0156-6949-9799-\
+  3.9940841923739243`*^9}, {3.994084975917925*^9, 3.99408498103055*^9}, {
+  3.994085149057266*^9, 
+  3.9940851635449257`*^9}},ExpressionUUID->"250651bb-0156-6949-9799-\
 3678238f7915"],
 
 Cell[BoxData["\[IndentingNewLine]"], "Input",
@@ -11729,15 +11760,15 @@ Cell[554, 20, 10325, 253, 1082, "Input",ExpressionUUID->"428067d6-8328-be4f-afb6
 Cell[10882, 275, 5053, 117, 484, "Input",ExpressionUUID->"36021481-2eaa-6945-abbd-343797993971"],
 Cell[15938, 394, 4346, 99, 446, "Input",ExpressionUUID->"71927a28-be0e-db45-8bb0-feb158927f26"],
 Cell[20287, 495, 32387, 840, 2996, "Input",ExpressionUUID->"763104e3-1363-1041-b160-9f93a317622d"],
-Cell[52677, 1337, 331952, 5556, 1195, "Input",ExpressionUUID->"250651bb-0156-6949-9799-3678238f7915"],
-Cell[384632, 6895, 166, 2, 47, "Input",ExpressionUUID->"d349b7db-add2-1e4a-9735-2204f0e3aa84"],
-Cell[384801, 6899, 111799, 1904, 868, "Input",ExpressionUUID->"735f81c5-6930-1041-aea3-35b9bbe1004c"],
-Cell[496603, 8805, 17868, 417, 70, "Input",ExpressionUUID->"9c47a7e3-977b-0647-8515-0c9c9f763b10"],
-Cell[514474, 9224, 9133, 226, 70, "Input",ExpressionUUID->"d091ce4a-bf3b-4f4f-aefb-2f411e347bb9"],
-Cell[523610, 9452, 5439, 139, 70, "Input",ExpressionUUID->"238e8eb6-5742-af4e-b536-7deac132983d"],
-Cell[529052, 9593, 3966, 96, 70, "Input",ExpressionUUID->"c350515d-5347-4e4e-ac17-445c4880aaad"],
-Cell[533021, 9691, 110177, 1875, 70, "Input",ExpressionUUID->"c196d4a3-1c66-0446-af16-19cbf385d1d0"],
-Cell[643201, 11568, 6377, 140, 70, "Input",ExpressionUUID->"dc9dae67-d705-d44d-ad1f-462b42d4d474"]
+Cell[52677, 1337, 333412, 5587, 1242, "Input",ExpressionUUID->"250651bb-0156-6949-9799-3678238f7915"],
+Cell[386092, 6926, 166, 2, 47, "Input",ExpressionUUID->"d349b7db-add2-1e4a-9735-2204f0e3aa84"],
+Cell[386261, 6930, 111799, 1904, 868, "Input",ExpressionUUID->"735f81c5-6930-1041-aea3-35b9bbe1004c"],
+Cell[498063, 8836, 17868, 417, 70, "Input",ExpressionUUID->"9c47a7e3-977b-0647-8515-0c9c9f763b10"],
+Cell[515934, 9255, 9133, 226, 70, "Input",ExpressionUUID->"d091ce4a-bf3b-4f4f-aefb-2f411e347bb9"],
+Cell[525070, 9483, 5439, 139, 70, "Input",ExpressionUUID->"238e8eb6-5742-af4e-b536-7deac132983d"],
+Cell[530512, 9624, 3966, 96, 70, "Input",ExpressionUUID->"c350515d-5347-4e4e-ac17-445c4880aaad"],
+Cell[534481, 9722, 110177, 1875, 70, "Input",ExpressionUUID->"c196d4a3-1c66-0446-af16-19cbf385d1d0"],
+Cell[644661, 11599, 6377, 140, 70, "Input",ExpressionUUID->"dc9dae67-d705-d44d-ad1f-462b42d4d474"]
 }
 ]
 *)

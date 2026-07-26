@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[   4698254,      89134]
-NotebookOptionsPosition[   4677096,      88801]
-NotebookOutlinePosition[   4677542,      88819]
-CellTagsIndexPosition[   4677499,      88816]
+NotebookDataLength[   4698377,      89135]
+NotebookOptionsPosition[   4677220,      88802]
+NotebookOutlinePosition[   4677665,      88820]
+CellTagsIndexPosition[   4677622,      88817]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -7853,7 +7853,7 @@ Cell[BoxData[
          FrontEnd`TabularReference[
          "Tabular-45d98338-0284-4cb0-aac7-5bf38954f235"]], Expression, 
         AppearanceElements -> {"RowHeaders", "ColumnHeaders", "ResizeArea"}, 
-        HeaderSize -> {3, Automatic}, 
+        HeaderSize -> {3, Automatic}, ScrollPosition -> {0., 360.}, 
         TableViewBoxAlignment -> <|
          "ColumnsIndexed" -> {
            1 -> Left, 2 -> Right, 3 -> Right, 4 -> Right, 5 -> Right, 6 -> 
@@ -7942,10 +7942,10 @@ Cell[BoxData[
             10, 29 -> 10, 30 -> 10, 31 -> 10, 32 -> 10, 33 -> 10, 34 -> 10, 
             35 -> 8}|>], "Snapshot" -> {{
          RawBoxes[
-          ToBoxes["2026-01-08 11:13:32.00", StandardForm]], 
+          ToBoxes["2026-01-08 11:13:32.11", StandardForm]], 
          RawBoxes[
           ToBoxes[
-           NumberForm[0., {
+           NumberForm[0.11, {
              DirectedInfinity[1], 2}, ScientificNotationThreshold -> {
               DirectedInfinity[-1], 
               DirectedInfinity[1]}, 
@@ -7958,87 +7958,7 @@ Cell[BoxData[
               DirectedInfinity[1]}], StandardForm]], 
          RawBoxes[
           ToBoxes[
-           NumberForm[201.306781, {
-             DirectedInfinity[1], 2}, ScientificNotationThreshold -> {
-              DirectedInfinity[-1], 
-              DirectedInfinity[1]}, 
-            NumberFormat -> (
-             Tabular`Typesetting`NumberFormat`Private`NumberFormatFunction[
-             None, False, True, Identity, #, #2, #3]& ), ExponentFunction -> 
-            Automatic, DigitBlock -> DirectedInfinity[1], 
-            NumberSeparator -> {" ", ""}, ScientificNotationThreshold -> {
-              DirectedInfinity[-1], 
-              DirectedInfinity[1]}], StandardForm]], 
-         RawBoxes[
-          ToBoxes[
-           NumberForm[1.003814, {
-             DirectedInfinity[1], 2}, ScientificNotationThreshold -> {
-              DirectedInfinity[-1], 
-              DirectedInfinity[1]}, 
-            NumberFormat -> (
-             Tabular`Typesetting`NumberFormat`Private`NumberFormatFunction[
-             None, False, True, Identity, #, #2, #3]& ), ExponentFunction -> 
-            Automatic, DigitBlock -> DirectedInfinity[1], 
-            NumberSeparator -> {" ", ""}, ScientificNotationThreshold -> {
-              DirectedInfinity[-1], 
-              DirectedInfinity[1]}], StandardForm]], 
-         RawBoxes[
-          ToBoxes[
-           NumberForm[0., {
-             DirectedInfinity[1], 2}, ScientificNotationThreshold -> {
-              DirectedInfinity[-1], 
-              DirectedInfinity[1]}, 
-            NumberFormat -> (
-             Tabular`Typesetting`NumberFormat`Private`NumberFormatFunction[
-             None, False, True, Identity, #, #2, #3]& ), ExponentFunction -> 
-            Automatic, DigitBlock -> DirectedInfinity[1], 
-            NumberSeparator -> {" ", ""}, ScientificNotationThreshold -> {
-              DirectedInfinity[-1], 
-              DirectedInfinity[1]}], StandardForm]], 
-         RawBoxes[
-          ToBoxes[
-           NumberForm[0., {
-             DirectedInfinity[1], 2}, ScientificNotationThreshold -> {
-              DirectedInfinity[-1], 
-              DirectedInfinity[1]}, 
-            NumberFormat -> (
-             Tabular`Typesetting`NumberFormat`Private`NumberFormatFunction[
-             None, False, True, Identity, #, #2, #3]& ), ExponentFunction -> 
-            Automatic, DigitBlock -> DirectedInfinity[1], 
-            NumberSeparator -> {" ", ""}, ScientificNotationThreshold -> {
-              DirectedInfinity[-1], 
-              DirectedInfinity[1]}], StandardForm]], 
-         RawBoxes[
-          ToBoxes[
-           NumberForm[0., {
-             DirectedInfinity[1], 2}, ScientificNotationThreshold -> {
-              DirectedInfinity[-1], 
-              DirectedInfinity[1]}, 
-            NumberFormat -> (
-             Tabular`Typesetting`NumberFormat`Private`NumberFormatFunction[
-             None, False, True, Identity, #, #2, #3]& ), ExponentFunction -> 
-            Automatic, DigitBlock -> DirectedInfinity[1], 
-            NumberSeparator -> {" ", ""}, ScientificNotationThreshold -> {
-              DirectedInfinity[-1], 
-              DirectedInfinity[1]}], StandardForm]]}, {
-         RawBoxes[
-          ToBoxes["2026-01-08 11:13:32.01", StandardForm]], 
-         RawBoxes[
-          ToBoxes[
-           NumberForm[0.01, {
-             DirectedInfinity[1], 2}, ScientificNotationThreshold -> {
-              DirectedInfinity[-1], 
-              DirectedInfinity[1]}, 
-            NumberFormat -> (
-             Tabular`Typesetting`NumberFormat`Private`NumberFormatFunction[
-             None, False, True, Identity, #, #2, #3]& ), ExponentFunction -> 
-            Automatic, DigitBlock -> DirectedInfinity[1], 
-            NumberSeparator -> {" ", ""}, ScientificNotationThreshold -> {
-              DirectedInfinity[-1], 
-              DirectedInfinity[1]}], StandardForm]], 
-         RawBoxes[
-          ToBoxes[
-           NumberForm[200.400549, {
+           NumberForm[201.531897, {
              DirectedInfinity[1], 2}, ScientificNotationThreshold -> {
               DirectedInfinity[-1], 
               DirectedInfinity[1]}, 
@@ -8102,10 +8022,10 @@ Cell[BoxData[
               DirectedInfinity[-1], 
               DirectedInfinity[1]}], StandardForm]]}, {
          RawBoxes[
-          ToBoxes["2026-01-08 11:13:32.02", StandardForm]], 
+          ToBoxes["2026-01-08 11:13:32.12", StandardForm]], 
          RawBoxes[
           ToBoxes[
-           NumberForm[0.02, {
+           NumberForm[0.12, {
              DirectedInfinity[1], 2}, ScientificNotationThreshold -> {
               DirectedInfinity[-1], 
               DirectedInfinity[1]}, 
@@ -8118,87 +8038,7 @@ Cell[BoxData[
               DirectedInfinity[1]}], StandardForm]], 
          RawBoxes[
           ToBoxes[
-           NumberForm[200.400549, {
-             DirectedInfinity[1], 2}, ScientificNotationThreshold -> {
-              DirectedInfinity[-1], 
-              DirectedInfinity[1]}, 
-            NumberFormat -> (
-             Tabular`Typesetting`NumberFormat`Private`NumberFormatFunction[
-             None, False, True, Identity, #, #2, #3]& ), ExponentFunction -> 
-            Automatic, DigitBlock -> DirectedInfinity[1], 
-            NumberSeparator -> {" ", ""}, ScientificNotationThreshold -> {
-              DirectedInfinity[-1], 
-              DirectedInfinity[1]}], StandardForm]], 
-         RawBoxes[
-          ToBoxes[
-           NumberForm[0., {
-             DirectedInfinity[1], 2}, ScientificNotationThreshold -> {
-              DirectedInfinity[-1], 
-              DirectedInfinity[1]}, 
-            NumberFormat -> (
-             Tabular`Typesetting`NumberFormat`Private`NumberFormatFunction[
-             None, False, True, Identity, #, #2, #3]& ), ExponentFunction -> 
-            Automatic, DigitBlock -> DirectedInfinity[1], 
-            NumberSeparator -> {" ", ""}, ScientificNotationThreshold -> {
-              DirectedInfinity[-1], 
-              DirectedInfinity[1]}], StandardForm]], 
-         RawBoxes[
-          ToBoxes[
-           NumberForm[0., {
-             DirectedInfinity[1], 2}, ScientificNotationThreshold -> {
-              DirectedInfinity[-1], 
-              DirectedInfinity[1]}, 
-            NumberFormat -> (
-             Tabular`Typesetting`NumberFormat`Private`NumberFormatFunction[
-             None, False, True, Identity, #, #2, #3]& ), ExponentFunction -> 
-            Automatic, DigitBlock -> DirectedInfinity[1], 
-            NumberSeparator -> {" ", ""}, ScientificNotationThreshold -> {
-              DirectedInfinity[-1], 
-              DirectedInfinity[1]}], StandardForm]], 
-         RawBoxes[
-          ToBoxes[
-           NumberForm[0., {
-             DirectedInfinity[1], 2}, ScientificNotationThreshold -> {
-              DirectedInfinity[-1], 
-              DirectedInfinity[1]}, 
-            NumberFormat -> (
-             Tabular`Typesetting`NumberFormat`Private`NumberFormatFunction[
-             None, False, True, Identity, #, #2, #3]& ), ExponentFunction -> 
-            Automatic, DigitBlock -> DirectedInfinity[1], 
-            NumberSeparator -> {" ", ""}, ScientificNotationThreshold -> {
-              DirectedInfinity[-1], 
-              DirectedInfinity[1]}], StandardForm]], 
-         RawBoxes[
-          ToBoxes[
-           NumberForm[0., {
-             DirectedInfinity[1], 2}, ScientificNotationThreshold -> {
-              DirectedInfinity[-1], 
-              DirectedInfinity[1]}, 
-            NumberFormat -> (
-             Tabular`Typesetting`NumberFormat`Private`NumberFormatFunction[
-             None, False, True, Identity, #, #2, #3]& ), ExponentFunction -> 
-            Automatic, DigitBlock -> DirectedInfinity[1], 
-            NumberSeparator -> {" ", ""}, ScientificNotationThreshold -> {
-              DirectedInfinity[-1], 
-              DirectedInfinity[1]}], StandardForm]]}, {
-         RawBoxes[
-          ToBoxes["2026-01-08 11:13:32.03", StandardForm]], 
-         RawBoxes[
-          ToBoxes[
-           NumberForm[0.03, {
-             DirectedInfinity[1], 2}, ScientificNotationThreshold -> {
-              DirectedInfinity[-1], 
-              DirectedInfinity[1]}, 
-            NumberFormat -> (
-             Tabular`Typesetting`NumberFormat`Private`NumberFormatFunction[
-             None, False, True, Identity, #, #2, #3]& ), ExponentFunction -> 
-            Automatic, DigitBlock -> DirectedInfinity[1], 
-            NumberSeparator -> {" ", ""}, ScientificNotationThreshold -> {
-              DirectedInfinity[-1], 
-              DirectedInfinity[1]}], StandardForm]], 
-         RawBoxes[
-          ToBoxes[
-           NumberForm[200.400549, {
+           NumberForm[201.531897, {
              DirectedInfinity[1], 2}, ScientificNotationThreshold -> {
               DirectedInfinity[-1], 
               DirectedInfinity[1]}, 
@@ -8262,10 +8102,10 @@ Cell[BoxData[
               DirectedInfinity[-1], 
               DirectedInfinity[1]}], StandardForm]]}, {
          RawBoxes[
-          ToBoxes["2026-01-08 11:13:32.04", StandardForm]], 
+          ToBoxes["2026-01-08 11:13:32.13", StandardForm]], 
          RawBoxes[
           ToBoxes[
-           NumberForm[0.04, {
+           NumberForm[0.13, {
              DirectedInfinity[1], 2}, ScientificNotationThreshold -> {
               DirectedInfinity[-1], 
               DirectedInfinity[1]}, 
@@ -8278,87 +8118,7 @@ Cell[BoxData[
               DirectedInfinity[1]}], StandardForm]], 
          RawBoxes[
           ToBoxes[
-           NumberForm[200.400549, {
-             DirectedInfinity[1], 2}, ScientificNotationThreshold -> {
-              DirectedInfinity[-1], 
-              DirectedInfinity[1]}, 
-            NumberFormat -> (
-             Tabular`Typesetting`NumberFormat`Private`NumberFormatFunction[
-             None, False, True, Identity, #, #2, #3]& ), ExponentFunction -> 
-            Automatic, DigitBlock -> DirectedInfinity[1], 
-            NumberSeparator -> {" ", ""}, ScientificNotationThreshold -> {
-              DirectedInfinity[-1], 
-              DirectedInfinity[1]}], StandardForm]], 
-         RawBoxes[
-          ToBoxes[
-           NumberForm[0., {
-             DirectedInfinity[1], 2}, ScientificNotationThreshold -> {
-              DirectedInfinity[-1], 
-              DirectedInfinity[1]}, 
-            NumberFormat -> (
-             Tabular`Typesetting`NumberFormat`Private`NumberFormatFunction[
-             None, False, True, Identity, #, #2, #3]& ), ExponentFunction -> 
-            Automatic, DigitBlock -> DirectedInfinity[1], 
-            NumberSeparator -> {" ", ""}, ScientificNotationThreshold -> {
-              DirectedInfinity[-1], 
-              DirectedInfinity[1]}], StandardForm]], 
-         RawBoxes[
-          ToBoxes[
-           NumberForm[0., {
-             DirectedInfinity[1], 2}, ScientificNotationThreshold -> {
-              DirectedInfinity[-1], 
-              DirectedInfinity[1]}, 
-            NumberFormat -> (
-             Tabular`Typesetting`NumberFormat`Private`NumberFormatFunction[
-             None, False, True, Identity, #, #2, #3]& ), ExponentFunction -> 
-            Automatic, DigitBlock -> DirectedInfinity[1], 
-            NumberSeparator -> {" ", ""}, ScientificNotationThreshold -> {
-              DirectedInfinity[-1], 
-              DirectedInfinity[1]}], StandardForm]], 
-         RawBoxes[
-          ToBoxes[
-           NumberForm[0., {
-             DirectedInfinity[1], 2}, ScientificNotationThreshold -> {
-              DirectedInfinity[-1], 
-              DirectedInfinity[1]}, 
-            NumberFormat -> (
-             Tabular`Typesetting`NumberFormat`Private`NumberFormatFunction[
-             None, False, True, Identity, #, #2, #3]& ), ExponentFunction -> 
-            Automatic, DigitBlock -> DirectedInfinity[1], 
-            NumberSeparator -> {" ", ""}, ScientificNotationThreshold -> {
-              DirectedInfinity[-1], 
-              DirectedInfinity[1]}], StandardForm]], 
-         RawBoxes[
-          ToBoxes[
-           NumberForm[0., {
-             DirectedInfinity[1], 2}, ScientificNotationThreshold -> {
-              DirectedInfinity[-1], 
-              DirectedInfinity[1]}, 
-            NumberFormat -> (
-             Tabular`Typesetting`NumberFormat`Private`NumberFormatFunction[
-             None, False, True, Identity, #, #2, #3]& ), ExponentFunction -> 
-            Automatic, DigitBlock -> DirectedInfinity[1], 
-            NumberSeparator -> {" ", ""}, ScientificNotationThreshold -> {
-              DirectedInfinity[-1], 
-              DirectedInfinity[1]}], StandardForm]]}, {
-         RawBoxes[
-          ToBoxes["2026-01-08 11:13:32.05", StandardForm]], 
-         RawBoxes[
-          ToBoxes[
-           NumberForm[0.05, {
-             DirectedInfinity[1], 2}, ScientificNotationThreshold -> {
-              DirectedInfinity[-1], 
-              DirectedInfinity[1]}, 
-            NumberFormat -> (
-             Tabular`Typesetting`NumberFormat`Private`NumberFormatFunction[
-             None, False, True, Identity, #, #2, #3]& ), ExponentFunction -> 
-            Automatic, DigitBlock -> DirectedInfinity[1], 
-            NumberSeparator -> {" ", ""}, ScientificNotationThreshold -> {
-              DirectedInfinity[-1], 
-              DirectedInfinity[1]}], StandardForm]], 
-         RawBoxes[
-          ToBoxes[
-           NumberForm[201.734397, {
+           NumberForm[201.531897, {
              DirectedInfinity[1], 2}, ScientificNotationThreshold -> {
               DirectedInfinity[-1], 
               DirectedInfinity[1]}, 
@@ -8422,10 +8182,10 @@ Cell[BoxData[
               DirectedInfinity[-1], 
               DirectedInfinity[1]}], StandardForm]]}, {
          RawBoxes[
-          ToBoxes["2026-01-08 11:13:32.06", StandardForm]], 
+          ToBoxes["2026-01-08 11:13:32.14", StandardForm]], 
          RawBoxes[
           ToBoxes[
-           NumberForm[0.06, {
+           NumberForm[0.14, {
              DirectedInfinity[1], 2}, ScientificNotationThreshold -> {
               DirectedInfinity[-1], 
               DirectedInfinity[1]}, 
@@ -8438,7 +8198,7 @@ Cell[BoxData[
               DirectedInfinity[1]}], StandardForm]], 
          RawBoxes[
           ToBoxes[
-           NumberForm[201.734397, {
+           NumberForm[202.276345, {
              DirectedInfinity[1], 2}, ScientificNotationThreshold -> {
               DirectedInfinity[-1], 
               DirectedInfinity[1]}, 
@@ -8502,10 +8262,10 @@ Cell[BoxData[
               DirectedInfinity[-1], 
               DirectedInfinity[1]}], StandardForm]]}, {
          RawBoxes[
-          ToBoxes["2026-01-08 11:13:32.07", StandardForm]], 
+          ToBoxes["2026-01-08 11:13:32.15", StandardForm]], 
          RawBoxes[
           ToBoxes[
-           NumberForm[0.07, {
+           NumberForm[0.15, {
              DirectedInfinity[1], 2}, ScientificNotationThreshold -> {
               DirectedInfinity[-1], 
               DirectedInfinity[1]}, 
@@ -8518,7 +8278,247 @@ Cell[BoxData[
               DirectedInfinity[1]}], StandardForm]], 
          RawBoxes[
           ToBoxes[
-           NumberForm[201.734397, {
+           NumberForm[202.276345, {
+             DirectedInfinity[1], 2}, ScientificNotationThreshold -> {
+              DirectedInfinity[-1], 
+              DirectedInfinity[1]}, 
+            NumberFormat -> (
+             Tabular`Typesetting`NumberFormat`Private`NumberFormatFunction[
+             None, False, True, Identity, #, #2, #3]& ), ExponentFunction -> 
+            Automatic, DigitBlock -> DirectedInfinity[1], 
+            NumberSeparator -> {" ", ""}, ScientificNotationThreshold -> {
+              DirectedInfinity[-1], 
+              DirectedInfinity[1]}], StandardForm]], 
+         RawBoxes[
+          ToBoxes[
+           NumberForm[0., {
+             DirectedInfinity[1], 2}, ScientificNotationThreshold -> {
+              DirectedInfinity[-1], 
+              DirectedInfinity[1]}, 
+            NumberFormat -> (
+             Tabular`Typesetting`NumberFormat`Private`NumberFormatFunction[
+             None, False, True, Identity, #, #2, #3]& ), ExponentFunction -> 
+            Automatic, DigitBlock -> DirectedInfinity[1], 
+            NumberSeparator -> {" ", ""}, ScientificNotationThreshold -> {
+              DirectedInfinity[-1], 
+              DirectedInfinity[1]}], StandardForm]], 
+         RawBoxes[
+          ToBoxes[
+           NumberForm[0., {
+             DirectedInfinity[1], 2}, ScientificNotationThreshold -> {
+              DirectedInfinity[-1], 
+              DirectedInfinity[1]}, 
+            NumberFormat -> (
+             Tabular`Typesetting`NumberFormat`Private`NumberFormatFunction[
+             None, False, True, Identity, #, #2, #3]& ), ExponentFunction -> 
+            Automatic, DigitBlock -> DirectedInfinity[1], 
+            NumberSeparator -> {" ", ""}, ScientificNotationThreshold -> {
+              DirectedInfinity[-1], 
+              DirectedInfinity[1]}], StandardForm]], 
+         RawBoxes[
+          ToBoxes[
+           NumberForm[0., {
+             DirectedInfinity[1], 2}, ScientificNotationThreshold -> {
+              DirectedInfinity[-1], 
+              DirectedInfinity[1]}, 
+            NumberFormat -> (
+             Tabular`Typesetting`NumberFormat`Private`NumberFormatFunction[
+             None, False, True, Identity, #, #2, #3]& ), ExponentFunction -> 
+            Automatic, DigitBlock -> DirectedInfinity[1], 
+            NumberSeparator -> {" ", ""}, ScientificNotationThreshold -> {
+              DirectedInfinity[-1], 
+              DirectedInfinity[1]}], StandardForm]], 
+         RawBoxes[
+          ToBoxes[
+           NumberForm[0., {
+             DirectedInfinity[1], 2}, ScientificNotationThreshold -> {
+              DirectedInfinity[-1], 
+              DirectedInfinity[1]}, 
+            NumberFormat -> (
+             Tabular`Typesetting`NumberFormat`Private`NumberFormatFunction[
+             None, False, True, Identity, #, #2, #3]& ), ExponentFunction -> 
+            Automatic, DigitBlock -> DirectedInfinity[1], 
+            NumberSeparator -> {" ", ""}, ScientificNotationThreshold -> {
+              DirectedInfinity[-1], 
+              DirectedInfinity[1]}], StandardForm]]}, {
+         RawBoxes[
+          ToBoxes["2026-01-08 11:13:32.16", StandardForm]], 
+         RawBoxes[
+          ToBoxes[
+           NumberForm[0.16, {
+             DirectedInfinity[1], 2}, ScientificNotationThreshold -> {
+              DirectedInfinity[-1], 
+              DirectedInfinity[1]}, 
+            NumberFormat -> (
+             Tabular`Typesetting`NumberFormat`Private`NumberFormatFunction[
+             None, False, True, Identity, #, #2, #3]& ), ExponentFunction -> 
+            Automatic, DigitBlock -> DirectedInfinity[1], 
+            NumberSeparator -> {" ", ""}, ScientificNotationThreshold -> {
+              DirectedInfinity[-1], 
+              DirectedInfinity[1]}], StandardForm]], 
+         RawBoxes[
+          ToBoxes[
+           NumberForm[202.276345, {
+             DirectedInfinity[1], 2}, ScientificNotationThreshold -> {
+              DirectedInfinity[-1], 
+              DirectedInfinity[1]}, 
+            NumberFormat -> (
+             Tabular`Typesetting`NumberFormat`Private`NumberFormatFunction[
+             None, False, True, Identity, #, #2, #3]& ), ExponentFunction -> 
+            Automatic, DigitBlock -> DirectedInfinity[1], 
+            NumberSeparator -> {" ", ""}, ScientificNotationThreshold -> {
+              DirectedInfinity[-1], 
+              DirectedInfinity[1]}], StandardForm]], 
+         RawBoxes[
+          ToBoxes[
+           NumberForm[0., {
+             DirectedInfinity[1], 2}, ScientificNotationThreshold -> {
+              DirectedInfinity[-1], 
+              DirectedInfinity[1]}, 
+            NumberFormat -> (
+             Tabular`Typesetting`NumberFormat`Private`NumberFormatFunction[
+             None, False, True, Identity, #, #2, #3]& ), ExponentFunction -> 
+            Automatic, DigitBlock -> DirectedInfinity[1], 
+            NumberSeparator -> {" ", ""}, ScientificNotationThreshold -> {
+              DirectedInfinity[-1], 
+              DirectedInfinity[1]}], StandardForm]], 
+         RawBoxes[
+          ToBoxes[
+           NumberForm[0., {
+             DirectedInfinity[1], 2}, ScientificNotationThreshold -> {
+              DirectedInfinity[-1], 
+              DirectedInfinity[1]}, 
+            NumberFormat -> (
+             Tabular`Typesetting`NumberFormat`Private`NumberFormatFunction[
+             None, False, True, Identity, #, #2, #3]& ), ExponentFunction -> 
+            Automatic, DigitBlock -> DirectedInfinity[1], 
+            NumberSeparator -> {" ", ""}, ScientificNotationThreshold -> {
+              DirectedInfinity[-1], 
+              DirectedInfinity[1]}], StandardForm]], 
+         RawBoxes[
+          ToBoxes[
+           NumberForm[0., {
+             DirectedInfinity[1], 2}, ScientificNotationThreshold -> {
+              DirectedInfinity[-1], 
+              DirectedInfinity[1]}, 
+            NumberFormat -> (
+             Tabular`Typesetting`NumberFormat`Private`NumberFormatFunction[
+             None, False, True, Identity, #, #2, #3]& ), ExponentFunction -> 
+            Automatic, DigitBlock -> DirectedInfinity[1], 
+            NumberSeparator -> {" ", ""}, ScientificNotationThreshold -> {
+              DirectedInfinity[-1], 
+              DirectedInfinity[1]}], StandardForm]], 
+         RawBoxes[
+          ToBoxes[
+           NumberForm[0., {
+             DirectedInfinity[1], 2}, ScientificNotationThreshold -> {
+              DirectedInfinity[-1], 
+              DirectedInfinity[1]}, 
+            NumberFormat -> (
+             Tabular`Typesetting`NumberFormat`Private`NumberFormatFunction[
+             None, False, True, Identity, #, #2, #3]& ), ExponentFunction -> 
+            Automatic, DigitBlock -> DirectedInfinity[1], 
+            NumberSeparator -> {" ", ""}, ScientificNotationThreshold -> {
+              DirectedInfinity[-1], 
+              DirectedInfinity[1]}], StandardForm]]}, {
+         RawBoxes[
+          ToBoxes["2026-01-08 11:13:32.17", StandardForm]], 
+         RawBoxes[
+          ToBoxes[
+           NumberForm[0.17, {
+             DirectedInfinity[1], 2}, ScientificNotationThreshold -> {
+              DirectedInfinity[-1], 
+              DirectedInfinity[1]}, 
+            NumberFormat -> (
+             Tabular`Typesetting`NumberFormat`Private`NumberFormatFunction[
+             None, False, True, Identity, #, #2, #3]& ), ExponentFunction -> 
+            Automatic, DigitBlock -> DirectedInfinity[1], 
+            NumberSeparator -> {" ", ""}, ScientificNotationThreshold -> {
+              DirectedInfinity[-1], 
+              DirectedInfinity[1]}], StandardForm]], 
+         RawBoxes[
+          ToBoxes[
+           NumberForm[202.276345, {
+             DirectedInfinity[1], 2}, ScientificNotationThreshold -> {
+              DirectedInfinity[-1], 
+              DirectedInfinity[1]}, 
+            NumberFormat -> (
+             Tabular`Typesetting`NumberFormat`Private`NumberFormatFunction[
+             None, False, True, Identity, #, #2, #3]& ), ExponentFunction -> 
+            Automatic, DigitBlock -> DirectedInfinity[1], 
+            NumberSeparator -> {" ", ""}, ScientificNotationThreshold -> {
+              DirectedInfinity[-1], 
+              DirectedInfinity[1]}], StandardForm]], 
+         RawBoxes[
+          ToBoxes[
+           NumberForm[0., {
+             DirectedInfinity[1], 2}, ScientificNotationThreshold -> {
+              DirectedInfinity[-1], 
+              DirectedInfinity[1]}, 
+            NumberFormat -> (
+             Tabular`Typesetting`NumberFormat`Private`NumberFormatFunction[
+             None, False, True, Identity, #, #2, #3]& ), ExponentFunction -> 
+            Automatic, DigitBlock -> DirectedInfinity[1], 
+            NumberSeparator -> {" ", ""}, ScientificNotationThreshold -> {
+              DirectedInfinity[-1], 
+              DirectedInfinity[1]}], StandardForm]], 
+         RawBoxes[
+          ToBoxes[
+           NumberForm[0., {
+             DirectedInfinity[1], 2}, ScientificNotationThreshold -> {
+              DirectedInfinity[-1], 
+              DirectedInfinity[1]}, 
+            NumberFormat -> (
+             Tabular`Typesetting`NumberFormat`Private`NumberFormatFunction[
+             None, False, True, Identity, #, #2, #3]& ), ExponentFunction -> 
+            Automatic, DigitBlock -> DirectedInfinity[1], 
+            NumberSeparator -> {" ", ""}, ScientificNotationThreshold -> {
+              DirectedInfinity[-1], 
+              DirectedInfinity[1]}], StandardForm]], 
+         RawBoxes[
+          ToBoxes[
+           NumberForm[0., {
+             DirectedInfinity[1], 2}, ScientificNotationThreshold -> {
+              DirectedInfinity[-1], 
+              DirectedInfinity[1]}, 
+            NumberFormat -> (
+             Tabular`Typesetting`NumberFormat`Private`NumberFormatFunction[
+             None, False, True, Identity, #, #2, #3]& ), ExponentFunction -> 
+            Automatic, DigitBlock -> DirectedInfinity[1], 
+            NumberSeparator -> {" ", ""}, ScientificNotationThreshold -> {
+              DirectedInfinity[-1], 
+              DirectedInfinity[1]}], StandardForm]], 
+         RawBoxes[
+          ToBoxes[
+           NumberForm[0., {
+             DirectedInfinity[1], 2}, ScientificNotationThreshold -> {
+              DirectedInfinity[-1], 
+              DirectedInfinity[1]}, 
+            NumberFormat -> (
+             Tabular`Typesetting`NumberFormat`Private`NumberFormatFunction[
+             None, False, True, Identity, #, #2, #3]& ), ExponentFunction -> 
+            Automatic, DigitBlock -> DirectedInfinity[1], 
+            NumberSeparator -> {" ", ""}, ScientificNotationThreshold -> {
+              DirectedInfinity[-1], 
+              DirectedInfinity[1]}], StandardForm]]}, {
+         RawBoxes[
+          ToBoxes["2026-01-08 11:13:32.18", StandardForm]], 
+         RawBoxes[
+          ToBoxes[
+           NumberForm[0.18, {
+             DirectedInfinity[1], 2}, ScientificNotationThreshold -> {
+              DirectedInfinity[-1], 
+              DirectedInfinity[1]}, 
+            NumberFormat -> (
+             Tabular`Typesetting`NumberFormat`Private`NumberFormatFunction[
+             None, False, True, Identity, #, #2, #3]& ), ExponentFunction -> 
+            Automatic, DigitBlock -> DirectedInfinity[1], 
+            NumberSeparator -> {" ", ""}, ScientificNotationThreshold -> {
+              DirectedInfinity[-1], 
+              DirectedInfinity[1]}], StandardForm]], 
+         RawBoxes[
+          ToBoxes[
+           NumberForm[199.74175, {
              DirectedInfinity[1], 2}, ScientificNotationThreshold -> {
               DirectedInfinity[-1], 
               DirectedInfinity[1]}, 
@@ -8581,7 +8581,7 @@ Cell[BoxData[
             NumberSeparator -> {" ", ""}, ScientificNotationThreshold -> {
               DirectedInfinity[-1], 
               DirectedInfinity[1]}], StandardForm]]}}, "RegionSnapshot" -> {
-        Span[1, 8], 
+        Span[12, 19], 
         Span[1, 7]}, "DimensionsSnapshot" -> {20428, 35}|>, 
      "TabularReferenceWrapper"], 
    "ItemSizeConstraints" -> <|
@@ -17923,11 +17923,12 @@ there is a constant circuit flow in PExA with 250 ml/s. That shifts the \
 \[OpenCurlyDoubleQuote]Exhale Airflow\[CloseCurlyDoubleQuote] but not the \
 \[OpenCurlyDoubleQuote]Inhale Airflow\[CloseCurlyDoubleQuote]! PExA output \
 for \[OpenCurlyDoubleQuote]Inhale Exhale Airflow [ml/s]\
-\[CloseCurlyDoubleQuote] is misleading!\
+\[CloseCurlyDoubleQuote] is misleading!  The shift is constantly 200 ml/s not \
+250 ml/s.\
 \>", "Text",
  CellChangeTimes->{{3.99399666701635*^9, 3.9939967033287296`*^9}, {
-  3.9939969435532036`*^9, 
-  3.993996987892956*^9}},ExpressionUUID->"98b56e26-9e18-4942-8215-\
+  3.9939969435532036`*^9, 3.993996987892956*^9}, {3.9940840157326527`*^9, 
+  3.99408404144536*^9}},ExpressionUUID->"98b56e26-9e18-4942-8215-\
 45aed996e113"],
 
 Cell[BoxData[
@@ -88799,8 +88800,8 @@ Cell[BoxData[
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{754.5, 735},
-WindowMargins->{{Automatic, -5.25}, {Automatic, 0}},
+WindowSize->{754.5, 729.75},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
 Visible->True,
 Magnification:>0.8 Inherited,
 FrontEndVersion->"15.0 for Microsoft Windows (64-bit) (July 2, 2026)",
@@ -88894,244 +88895,244 @@ Cell[310713, 6365, 77487, 1420, 312, "Output",ExpressionUUID->"484cf298-d05c-424
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[388237, 7790, 740, 14, 68, "Input",ExpressionUUID->"9e6c1d97-a012-e14f-919a-a48177a82565"],
-Cell[388980, 7806, 39338, 797, 251, "Output",ExpressionUUID->"034f66d2-44db-5846-b95d-7e039c588724"]
+Cell[388980, 7806, 39365, 797, 251, "Output",ExpressionUUID->"034f66d2-44db-5846-b95d-7e039c588724"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[428355, 8608, 681, 15, 37, "Input",ExpressionUUID->"0ad1bd39-b9dd-aa4c-8b4d-a33879736bca"],
-Cell[429039, 8625, 327053, 5412, 299, "Output",ExpressionUUID->"8c530357-ecd0-4e4a-9570-d58fc5eba41b"]
+Cell[428382, 8608, 681, 15, 37, "Input",ExpressionUUID->"0ad1bd39-b9dd-aa4c-8b4d-a33879736bca"],
+Cell[429066, 8625, 327053, 5412, 299, "Output",ExpressionUUID->"8c530357-ecd0-4e4a-9570-d58fc5eba41b"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[756129, 14042, 610, 14, 22, "Input",ExpressionUUID->"57bb48c4-faf7-c94e-b8c7-653b3dca656f"],
-Cell[756742, 14058, 220056, 3655, 299, "Output",ExpressionUUID->"7a072ee4-42d7-c04d-843f-e7dd2f4d9945"]
+Cell[756156, 14042, 610, 14, 22, "Input",ExpressionUUID->"57bb48c4-faf7-c94e-b8c7-653b3dca656f"],
+Cell[756769, 14058, 220056, 3655, 299, "Output",ExpressionUUID->"7a072ee4-42d7-c04d-843f-e7dd2f4d9945"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[976835, 17718, 393, 8, 22, "Input",ExpressionUUID->"39c5a6a0-18f3-2740-9843-f86bf9a7c473"],
-Cell[977231, 17728, 9302, 189, 87, "Output",ExpressionUUID->"4a85561d-3047-7742-bd17-7a74477c7b81"]
+Cell[976862, 17718, 393, 8, 22, "Input",ExpressionUUID->"39c5a6a0-18f3-2740-9843-f86bf9a7c473"],
+Cell[977258, 17728, 9302, 189, 87, "Output",ExpressionUUID->"4a85561d-3047-7742-bd17-7a74477c7b81"]
 }, Open  ]],
-Cell[986548, 17920, 525, 10, 44, "Text",ExpressionUUID->"98b56e26-9e18-4942-8215-45aed996e113"],
-Cell[987076, 17932, 139695, 2297, 271, "Text",ExpressionUUID->"7011df87-b8d0-2548-902f-b3f2a110bc72"],
+Cell[986575, 17920, 622, 11, 44, "Text",ExpressionUUID->"98b56e26-9e18-4942-8215-45aed996e113"],
+Cell[987200, 17933, 139695, 2297, 271, "Text",ExpressionUUID->"7011df87-b8d0-2548-902f-b3f2a110bc72"],
 Cell[CellGroupData[{
-Cell[1126796, 20233, 212, 4, 35, "Subsubsection",ExpressionUUID->"08c9d104-fc6f-c842-92b9-c9328caed897"],
+Cell[1126920, 20234, 212, 4, 35, "Subsubsection",ExpressionUUID->"08c9d104-fc6f-c842-92b9-c9328caed897"],
 Cell[CellGroupData[{
-Cell[1127033, 20241, 1065, 28, 53, "Input",ExpressionUUID->"e111a17f-2c03-934a-a97e-37c2491a2259"],
-Cell[1128101, 20271, 2165, 48, 71, "Output",ExpressionUUID->"b189fee8-6137-8643-bb10-a6277c46363b"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[1130303, 20324, 1059, 27, 37, "Input",ExpressionUUID->"94434e89-d2e7-a140-81a4-f49bfcff6949"],
-Cell[1131365, 20353, 53684, 1349, 1639, "Output",ExpressionUUID->"5f1787ca-807c-ab43-928a-e5f2932499e1"]
+Cell[1127157, 20242, 1065, 28, 53, "Input",ExpressionUUID->"e111a17f-2c03-934a-a97e-37c2491a2259"],
+Cell[1128225, 20272, 2165, 48, 71, "Output",ExpressionUUID->"b189fee8-6137-8643-bb10-a6277c46363b"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1185086, 21707, 441, 10, 22, "Input",ExpressionUUID->"90a931e1-747b-9841-b9fa-28304a0624ba",
+Cell[1130427, 20325, 1059, 27, 37, "Input",ExpressionUUID->"94434e89-d2e7-a140-81a4-f49bfcff6949"],
+Cell[1131489, 20354, 53684, 1349, 1639, "Output",ExpressionUUID->"5f1787ca-807c-ab43-928a-e5f2932499e1"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1185210, 21708, 441, 10, 22, "Input",ExpressionUUID->"90a931e1-747b-9841-b9fa-28304a0624ba",
  CellID->57251204],
-Cell[1185530, 21719, 1257, 22, 20, "Message",ExpressionUUID->"d2a7fa54-2c28-ea43-a4fb-a79f1034042e"],
-Cell[1186790, 21743, 17643, 319, 232, "Output",ExpressionUUID->"606a5170-2196-d943-a817-3117aa9ab1cb"]
+Cell[1185654, 21720, 1257, 22, 20, "Message",ExpressionUUID->"d2a7fa54-2c28-ea43-a4fb-a79f1034042e"],
+Cell[1186914, 21744, 17643, 319, 232, "Output",ExpressionUUID->"606a5170-2196-d943-a817-3117aa9ab1cb"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1204470, 22067, 1301, 29, 68, "Input",ExpressionUUID->"9d60e4ec-692f-fc4a-8ce0-7e366bd69874"],
-Cell[1205774, 22098, 25702, 465, 232, "Output",ExpressionUUID->"0f1ecc5d-bfdd-1c4e-b1f1-32e432e68d53"]
+Cell[1204594, 22068, 1301, 29, 68, "Input",ExpressionUUID->"9d60e4ec-692f-fc4a-8ce0-7e366bd69874"],
+Cell[1205898, 22099, 25702, 465, 232, "Output",ExpressionUUID->"0f1ecc5d-bfdd-1c4e-b1f1-32e432e68d53"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1231525, 22569, 164, 3, 35, "Subsubsection",ExpressionUUID->"4b80a604-9c6c-b843-9891-e5afb930e6f4"],
+Cell[1231649, 22570, 164, 3, 35, "Subsubsection",ExpressionUUID->"4b80a604-9c6c-b843-9891-e5afb930e6f4"],
 Cell[CellGroupData[{
-Cell[1231714, 22576, 1115, 21, 53, "Input",ExpressionUUID->"315f963e-a298-3c41-918d-27e89983050c"],
-Cell[1232832, 22599, 4789, 126, 62, "Output",ExpressionUUID->"a37a94e1-ddff-4947-882e-26984f8a0169"]
+Cell[1231838, 22577, 1115, 21, 53, "Input",ExpressionUUID->"315f963e-a298-3c41-918d-27e89983050c"],
+Cell[1232956, 22600, 4789, 126, 62, "Output",ExpressionUUID->"a37a94e1-ddff-4947-882e-26984f8a0169"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1237658, 22730, 1113, 22, 53, "Input",ExpressionUUID->"4546ca72-c1b1-1f43-bdc1-6b1338888a60"],
-Cell[1238774, 22754, 4794, 126, 62, "Output",ExpressionUUID->"de4013f2-819b-364b-8f49-bf6a7ced1556"]
+Cell[1237782, 22731, 1113, 22, 53, "Input",ExpressionUUID->"4546ca72-c1b1-1f43-bdc1-6b1338888a60"],
+Cell[1238898, 22755, 4794, 126, 62, "Output",ExpressionUUID->"de4013f2-819b-364b-8f49-bf6a7ced1556"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1243605, 22885, 3432, 94, 174, "Input",ExpressionUUID->"7f8a1b79-407d-f643-acb0-079c703ac3b0"],
-Cell[1247040, 22981, 67257, 1267, 312, "Output",ExpressionUUID->"e8391f4a-785c-af4d-a313-2e812aba59dd"]
+Cell[1243729, 22886, 3432, 94, 174, "Input",ExpressionUUID->"7f8a1b79-407d-f643-acb0-079c703ac3b0"],
+Cell[1247164, 22982, 67257, 1267, 312, "Output",ExpressionUUID->"e8391f4a-785c-af4d-a313-2e812aba59dd"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1314334, 24253, 1413, 39, 98, "Input",ExpressionUUID->"9c455ec3-925b-a945-ae01-cab8c12574f9"],
-Cell[1315750, 24294, 66714, 1259, 307, "Output",ExpressionUUID->"3f2223cc-0a77-914a-9f7b-b535b599eb1b"]
+Cell[1314458, 24254, 1413, 39, 98, "Input",ExpressionUUID->"9c455ec3-925b-a945-ae01-cab8c12574f9"],
+Cell[1315874, 24295, 66714, 1259, 307, "Output",ExpressionUUID->"3f2223cc-0a77-914a-9f7b-b535b599eb1b"]
 }, Open  ]],
-Cell[1382479, 25556, 181, 3, 22, "Input",ExpressionUUID->"2596b150-5806-1945-a12f-7dbf8284677e"],
+Cell[1382603, 25557, 181, 3, 22, "Input",ExpressionUUID->"2596b150-5806-1945-a12f-7dbf8284677e"],
 Cell[CellGroupData[{
-Cell[1382685, 25563, 309, 8, 22, "Input",ExpressionUUID->"4df38a54-e3fd-d340-af27-78ecc106fdf9"],
-Cell[1382997, 25573, 1123, 35, 40, "Output",ExpressionUUID->"f89fde3c-91cc-f74f-bde6-c2399b85e9a7"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[1384157, 25613, 314, 8, 22, "Input",ExpressionUUID->"4adf172f-695a-1e49-8578-03bf5c316868"],
-Cell[1384474, 25623, 7520, 154, 96, "Output",ExpressionUUID->"8c30e407-4cde-534c-a78f-40dfa866fb30"]
+Cell[1382809, 25564, 309, 8, 22, "Input",ExpressionUUID->"4df38a54-e3fd-d340-af27-78ecc106fdf9"],
+Cell[1383121, 25574, 1123, 35, 40, "Output",ExpressionUUID->"f89fde3c-91cc-f74f-bde6-c2399b85e9a7"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1392031, 25782, 1656, 37, 53, "Input",ExpressionUUID->"4e68adaa-5fbc-2d49-8d71-280d3c389e16"],
-Cell[1393690, 25821, 124971, 2484, 1706, "Output",ExpressionUUID->"c2af22fb-c294-514b-b6dc-8c23fac4f955"],
-Cell[1518664, 28307, 423, 7, 25, "Output",ExpressionUUID->"e956547d-648b-d44d-ae86-48494dce7cb6"]
+Cell[1384281, 25614, 314, 8, 22, "Input",ExpressionUUID->"4adf172f-695a-1e49-8578-03bf5c316868"],
+Cell[1384598, 25624, 7520, 154, 96, "Output",ExpressionUUID->"8c30e407-4cde-534c-a78f-40dfa866fb30"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1519124, 28319, 1490, 33, 53, "Input",ExpressionUUID->"c580e4f6-81f0-ee48-a5d1-cc057a2eafd3"],
-Cell[1520617, 28354, 1497, 37, 27, "Output",ExpressionUUID->"9115383f-3f61-3946-99bf-a6113a9b70d5"],
-Cell[1522117, 28393, 3824, 97, 44, "Output",ExpressionUUID->"cadfa640-6a63-7f48-9d07-8619065b4fa4"]
+Cell[1392155, 25783, 1656, 37, 53, "Input",ExpressionUUID->"4e68adaa-5fbc-2d49-8d71-280d3c389e16"],
+Cell[1393814, 25822, 124971, 2484, 1706, "Output",ExpressionUUID->"c2af22fb-c294-514b-b6dc-8c23fac4f955"],
+Cell[1518788, 28308, 423, 7, 25, "Output",ExpressionUUID->"e956547d-648b-d44d-ae86-48494dce7cb6"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1525978, 28495, 3650, 100, 266, "Input",ExpressionUUID->"609d8f16-5194-7948-96f3-e1993380a480"],
-Cell[1529631, 28597, 3050, 79, 44, "Output",ExpressionUUID->"6273a33e-e711-a84a-acff-cdf201911a96"],
-Cell[1532684, 28678, 285, 5, 25, "Output",ExpressionUUID->"88095a22-663a-ab4d-9c46-d739dbed70c8"],
-Cell[1532972, 28685, 3108, 82, 44, "Output",ExpressionUUID->"f98e9b20-1272-1240-aabb-5d9e83748333"],
-Cell[1536083, 28769, 281, 5, 25, "Output",ExpressionUUID->"1f6b2abf-3d28-e248-af7a-f50018c5caaf"]
+Cell[1519248, 28320, 1490, 33, 53, "Input",ExpressionUUID->"c580e4f6-81f0-ee48-a5d1-cc057a2eafd3"],
+Cell[1520741, 28355, 1497, 37, 27, "Output",ExpressionUUID->"9115383f-3f61-3946-99bf-a6113a9b70d5"],
+Cell[1522241, 28394, 3824, 97, 44, "Output",ExpressionUUID->"cadfa640-6a63-7f48-9d07-8619065b4fa4"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1526102, 28496, 3650, 100, 266, "Input",ExpressionUUID->"609d8f16-5194-7948-96f3-e1993380a480"],
+Cell[1529755, 28598, 3050, 79, 44, "Output",ExpressionUUID->"6273a33e-e711-a84a-acff-cdf201911a96"],
+Cell[1532808, 28679, 285, 5, 25, "Output",ExpressionUUID->"88095a22-663a-ab4d-9c46-d739dbed70c8"],
+Cell[1533096, 28686, 3108, 82, 44, "Output",ExpressionUUID->"f98e9b20-1272-1240-aabb-5d9e83748333"],
+Cell[1536207, 28770, 281, 5, 25, "Output",ExpressionUUID->"1f6b2abf-3d28-e248-af7a-f50018c5caaf"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1536425, 28781, 159, 3, 42, "Subsection",ExpressionUUID->"9eca0e2e-611f-ac4b-a3eb-b34924e6af0b"],
-Cell[1536587, 28786, 7067, 194, 464, "Input",ExpressionUUID->"bb4e8517-1f67-7641-b823-73e9f5fe5331"]
+Cell[1536549, 28782, 159, 3, 42, "Subsection",ExpressionUUID->"9eca0e2e-611f-ac4b-a3eb-b34924e6af0b"],
+Cell[1536711, 28787, 7067, 194, 464, "Input",ExpressionUUID->"bb4e8517-1f67-7641-b823-73e9f5fe5331"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1543691, 28985, 158, 3, 42, "Subsection",ExpressionUUID->"f69e3c86-7bc5-794c-a986-d31f0fbe7f8f"],
+Cell[1543815, 28986, 158, 3, 42, "Subsection",ExpressionUUID->"f69e3c86-7bc5-794c-a986-d31f0fbe7f8f"],
 Cell[CellGroupData[{
-Cell[1543874, 28992, 200, 3, 35, "Subsubsection",ExpressionUUID->"42b7181c-1a63-df47-aaa6-093de54d68bc"],
+Cell[1543998, 28993, 200, 3, 35, "Subsubsection",ExpressionUUID->"42b7181c-1a63-df47-aaa6-093de54d68bc"],
 Cell[CellGroupData[{
-Cell[1544099, 28999, 2417, 59, 205, "Input",ExpressionUUID->"3f37b3b2-856e-2348-bbf6-1928e32f403a"],
-Cell[1546519, 29060, 230, 4, 25, "Output",ExpressionUUID->"df5d71f3-15de-2844-8446-048129646db8"],
-Cell[1546752, 29066, 17598, 317, 232, "Output",ExpressionUUID->"1c3b6d31-ea8b-6a4d-b34d-c46d7d29329c"],
-Cell[1564353, 29385, 7905, 160, 174, "Output",ExpressionUUID->"ce54e848-3ae2-d545-a210-13d914d1c652"],
-Cell[1572261, 29547, 7483, 152, 70, "Output",ExpressionUUID->"2425c325-d5c7-ac4e-a932-2e7b07732b81"]
+Cell[1544223, 29000, 2417, 59, 205, "Input",ExpressionUUID->"3f37b3b2-856e-2348-bbf6-1928e32f403a"],
+Cell[1546643, 29061, 230, 4, 25, "Output",ExpressionUUID->"df5d71f3-15de-2844-8446-048129646db8"],
+Cell[1546876, 29067, 17598, 317, 232, "Output",ExpressionUUID->"1c3b6d31-ea8b-6a4d-b34d-c46d7d29329c"],
+Cell[1564477, 29386, 7905, 160, 174, "Output",ExpressionUUID->"ce54e848-3ae2-d545-a210-13d914d1c652"],
+Cell[1572385, 29548, 7483, 152, 70, "Output",ExpressionUUID->"2425c325-d5c7-ac4e-a932-2e7b07732b81"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1579781, 29704, 2347, 69, 98, "Input",ExpressionUUID->"25199365-113c-ed47-90cb-119590be8028"],
-Cell[1582131, 29775, 56882, 1060, 312, "Output",ExpressionUUID->"0cc95c59-98cf-f34b-bfe8-b5d4eb5dc5e8"]
+Cell[1579905, 29705, 2347, 69, 98, "Input",ExpressionUUID->"25199365-113c-ed47-90cb-119590be8028"],
+Cell[1582255, 29776, 56882, 1060, 312, "Output",ExpressionUUID->"0cc95c59-98cf-f34b-bfe8-b5d4eb5dc5e8"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1639050, 30840, 1090, 23, 83, "Input",ExpressionUUID->"eac3be32-c495-2643-892c-0319f28aedff"],
-Cell[1640143, 30865, 303, 5, 25, "Output",ExpressionUUID->"b48c5037-81c8-6d46-a854-d9b46c711634"],
-Cell[1640449, 30872, 301, 5, 25, "Output",ExpressionUUID->"f46541d6-d745-aa43-b8cd-88d4026d1e77"],
-Cell[1640753, 30879, 512, 9, 25, "Output",ExpressionUUID->"4f7148b0-c8cc-1848-817c-370d783c87d3"],
-Cell[1641268, 30890, 535, 10, 25, "Output",ExpressionUUID->"e9e8472a-a756-8f46-8c4a-fe644afd4983"],
-Cell[1641806, 30902, 440, 8, 25, "Output",ExpressionUUID->"cf1a6209-bb4f-9242-aa0c-0ac304948421"]
+Cell[1639174, 30841, 1090, 23, 83, "Input",ExpressionUUID->"eac3be32-c495-2643-892c-0319f28aedff"],
+Cell[1640267, 30866, 303, 5, 25, "Output",ExpressionUUID->"b48c5037-81c8-6d46-a854-d9b46c711634"],
+Cell[1640573, 30873, 301, 5, 25, "Output",ExpressionUUID->"f46541d6-d745-aa43-b8cd-88d4026d1e77"],
+Cell[1640877, 30880, 512, 9, 25, "Output",ExpressionUUID->"4f7148b0-c8cc-1848-817c-370d783c87d3"],
+Cell[1641392, 30891, 535, 10, 25, "Output",ExpressionUUID->"e9e8472a-a756-8f46-8c4a-fe644afd4983"],
+Cell[1641930, 30903, 440, 8, 25, "Output",ExpressionUUID->"cf1a6209-bb4f-9242-aa0c-0ac304948421"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1642283, 30915, 1186, 27, 98, "Input",ExpressionUUID->"e4f57352-7ac5-6d42-8933-67180ae39b1b"],
-Cell[1643472, 30944, 245, 4, 25, "Output",ExpressionUUID->"9446f473-74c5-5440-bcbd-00b9cf66badf"]
+Cell[1642407, 30916, 1186, 27, 98, "Input",ExpressionUUID->"e4f57352-7ac5-6d42-8933-67180ae39b1b"],
+Cell[1643596, 30945, 245, 4, 25, "Output",ExpressionUUID->"9446f473-74c5-5440-bcbd-00b9cf66badf"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1643754, 30953, 3385, 90, 113, "Input",ExpressionUUID->"ab69cba5-3536-2b4b-8425-d0cf447ae3f1"],
-Cell[1647142, 31045, 364064, 6555, 1797, "Output",ExpressionUUID->"4464b0fd-e066-2744-8a8b-7e101f08aa39"]
+Cell[1643878, 30954, 3385, 90, 113, "Input",ExpressionUUID->"ab69cba5-3536-2b4b-8425-d0cf447ae3f1"],
+Cell[1647266, 31046, 364064, 6555, 1797, "Output",ExpressionUUID->"4464b0fd-e066-2744-8a8b-7e101f08aa39"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2011243, 37605, 1063, 28, 37, "Input",ExpressionUUID->"d6e06d0e-ca1d-8c46-83a7-ea4271700850"],
-Cell[2012309, 37635, 4494, 84, 109, "Output",ExpressionUUID->"eca52f26-d8aa-e842-bb1e-5a5b3940596f"]
+Cell[2011367, 37606, 1063, 28, 37, "Input",ExpressionUUID->"d6e06d0e-ca1d-8c46-83a7-ea4271700850"],
+Cell[2012433, 37636, 4494, 84, 109, "Output",ExpressionUUID->"eca52f26-d8aa-e842-bb1e-5a5b3940596f"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2016840, 37724, 7067, 194, 464, "Input",ExpressionUUID->"a2cdf166-bc6d-c04e-b0cb-edaa305518ac"],
-Cell[2023910, 37920, 2649, 77, 71, "Output",ExpressionUUID->"f7104e95-fb03-4b48-8f71-dee4a20414ed"],
-Cell[2026562, 37999, 5758, 116, 232, "Output",ExpressionUUID->"50fbf2af-dc77-fa40-9aa0-5524185ef05d"],
-Cell[2032323, 38117, 44330, 811, 199, "Output",ExpressionUUID->"0f59b8ff-8329-c549-811a-c20207e1a718"]
+Cell[2016964, 37725, 7067, 194, 464, "Input",ExpressionUUID->"a2cdf166-bc6d-c04e-b0cb-edaa305518ac"],
+Cell[2024034, 37921, 2649, 77, 71, "Output",ExpressionUUID->"f7104e95-fb03-4b48-8f71-dee4a20414ed"],
+Cell[2026686, 38000, 5758, 116, 232, "Output",ExpressionUUID->"50fbf2af-dc77-fa40-9aa0-5524185ef05d"],
+Cell[2032447, 38118, 44330, 811, 199, "Output",ExpressionUUID->"0f59b8ff-8329-c549-811a-c20207e1a718"]
 }, Open  ]],
-Cell[2076668, 38931, 204, 3, 31, "Text",ExpressionUUID->"7edadeab-6806-f54e-87a5-76cf723bfff9"],
+Cell[2076792, 38932, 204, 3, 31, "Text",ExpressionUUID->"7edadeab-6806-f54e-87a5-76cf723bfff9"],
 Cell[CellGroupData[{
-Cell[2076897, 38938, 7703, 188, 540, "Input",ExpressionUUID->"f0ab9b3f-d943-3a46-9e03-84701c0afd3d"],
-Cell[2084603, 39128, 273258, 5149, 2966, "Output",ExpressionUUID->"71dfb8f5-1809-0647-9387-7267b5e3834b"]
+Cell[2077021, 38939, 7703, 188, 540, "Input",ExpressionUUID->"f0ab9b3f-d943-3a46-9e03-84701c0afd3d"],
+Cell[2084727, 39129, 273258, 5149, 2966, "Output",ExpressionUUID->"71dfb8f5-1809-0647-9387-7267b5e3834b"]
 }, Open  ]],
-Cell[2357876, 44280, 195, 3, 31, "Text",ExpressionUUID->"b2e5a19e-72b7-394a-9638-ec63cd1a56cf"],
+Cell[2358000, 44281, 195, 3, 31, "Text",ExpressionUUID->"b2e5a19e-72b7-394a-9638-ec63cd1a56cf"],
 Cell[CellGroupData[{
-Cell[2358096, 44287, 10563, 261, 692, "Input",ExpressionUUID->"a4692931-bff3-6840-af03-11a05e73ee4f"],
-Cell[2368662, 44550, 381161, 7513, 5888, "Output",ExpressionUUID->"00ea72e1-66fc-c942-a774-f44f3f36506c"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[2749860, 52068, 615, 15, 70, "Input",ExpressionUUID->"cee0a756-fb65-bb4f-b761-2dd91c315871"],
-Cell[2750478, 52085, 562882, 10915, 70, "Output",ExpressionUUID->"933f2ca9-cacd-3942-838a-9c60e732481f"]
+Cell[2358220, 44288, 10563, 261, 692, "Input",ExpressionUUID->"a4692931-bff3-6840-af03-11a05e73ee4f"],
+Cell[2368786, 44551, 381161, 7513, 5888, "Output",ExpressionUUID->"00ea72e1-66fc-c942-a774-f44f3f36506c"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[3313397, 63005, 797, 19, 70, "Input",ExpressionUUID->"5e3adb99-339e-9840-95da-31de0ad7c5da"],
-Cell[3314197, 63026, 89600, 1721, 70, "Output",ExpressionUUID->"ed611010-c69c-0a47-8c48-a468b1609be0"]
-}, Open  ]],
-Cell[3403812, 64750, 1012, 23, 70, "Input",ExpressionUUID->"fabcb891-be19-6640-b714-070caf5ecd11"],
-Cell[CellGroupData[{
-Cell[3404849, 64777, 265, 6, 70, "Input",ExpressionUUID->"edc01420-9ed2-3f42-9548-9f00c66174af"],
-Cell[3405117, 64785, 49687, 936, 70, "Output",ExpressionUUID->"97064b66-9db9-5444-9398-0dd921dab764"]
-}, Open  ]],
-Cell[3454819, 65724, 765, 16, 70, "Input",ExpressionUUID->"6ea0b87d-5c60-e149-b096-9b597cd8579d"],
-Cell[CellGroupData[{
-Cell[3455609, 65744, 644, 14, 70, "Input",ExpressionUUID->"3048a7e3-2009-684f-9317-0c0cb4ea688d"],
-Cell[3456256, 65760, 1023, 23, 70, "Output",ExpressionUUID->"e20f3ba0-b655-264c-8bb3-5249ad8a160d"]
+Cell[2749984, 52069, 615, 15, 70, "Input",ExpressionUUID->"cee0a756-fb65-bb4f-b761-2dd91c315871"],
+Cell[2750602, 52086, 562882, 10915, 70, "Output",ExpressionUUID->"933f2ca9-cacd-3942-838a-9c60e732481f"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[3457316, 65788, 427, 9, 70, "Input",ExpressionUUID->"4def2bcc-e9f4-e441-9d49-ec90bf29e6f2"],
-Cell[3457746, 65799, 1168, 32, 70, "Output",ExpressionUUID->"ed274d8e-6d37-a447-92ef-41a42f725ea1"]
+Cell[3313521, 63006, 797, 19, 70, "Input",ExpressionUUID->"5e3adb99-339e-9840-95da-31de0ad7c5da"],
+Cell[3314321, 63027, 89600, 1721, 70, "Output",ExpressionUUID->"ed611010-c69c-0a47-8c48-a468b1609be0"]
+}, Open  ]],
+Cell[3403936, 64751, 1012, 23, 70, "Input",ExpressionUUID->"fabcb891-be19-6640-b714-070caf5ecd11"],
+Cell[CellGroupData[{
+Cell[3404973, 64778, 265, 6, 70, "Input",ExpressionUUID->"edc01420-9ed2-3f42-9548-9f00c66174af"],
+Cell[3405241, 64786, 49687, 936, 70, "Output",ExpressionUUID->"97064b66-9db9-5444-9398-0dd921dab764"]
+}, Open  ]],
+Cell[3454943, 65725, 765, 16, 70, "Input",ExpressionUUID->"6ea0b87d-5c60-e149-b096-9b597cd8579d"],
+Cell[CellGroupData[{
+Cell[3455733, 65745, 644, 14, 70, "Input",ExpressionUUID->"3048a7e3-2009-684f-9317-0c0cb4ea688d"],
+Cell[3456380, 65761, 1023, 23, 70, "Output",ExpressionUUID->"e20f3ba0-b655-264c-8bb3-5249ad8a160d"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[3458951, 65836, 4364, 113, 70, "Input",ExpressionUUID->"f315ae10-cdd1-1643-908f-7cef2fdbce8a"],
-Cell[3463318, 65951, 1024, 16, 70, "Output",ExpressionUUID->"d6c8c8d6-bd3e-b049-bcd0-8dcf14a237b3"],
-Cell[3464345, 65969, 4114, 113, 70, "Output",ExpressionUUID->"782d3d87-c55f-a14d-8fcd-7da95440c414"],
-Cell[3468462, 66084, 4682, 90, 70, "Output",ExpressionUUID->"c73fd78f-b610-ad4f-b49c-fdefc3525e5f"],
-Cell[3473147, 66176, 1773, 32, 70, "Output",ExpressionUUID->"cdd0f005-88ee-9f4e-be1b-dce26f0222da"],
-Cell[3474923, 66210, 109502, 2011, 70, "Output",ExpressionUUID->"7aeb25db-918e-8048-968b-88c798896d70"],
-Cell[3584428, 68223, 78928, 1450, 70, "Output",ExpressionUUID->"0acd69a5-e6c3-bb4b-9a66-211861363eb4"]
-}, Open  ]],
-Cell[3663371, 69676, 511, 14, 70, "Text",ExpressionUUID->"ea61bf57-070c-9c4c-86c6-32c72314ea9e"],
-Cell[CellGroupData[{
-Cell[3663907, 69694, 190, 3, 70, "Input",ExpressionUUID->"e7bec149-5093-cc4c-b965-c7291eaec85f"],
-Cell[3664100, 69699, 316, 6, 70, "Output",ExpressionUUID->"28861fee-cacc-e347-808b-78066400290f"]
+Cell[3457440, 65789, 427, 9, 70, "Input",ExpressionUUID->"4def2bcc-e9f4-e441-9d49-ec90bf29e6f2"],
+Cell[3457870, 65800, 1168, 32, 70, "Output",ExpressionUUID->"ed274d8e-6d37-a447-92ef-41a42f725ea1"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[3664453, 69710, 1817, 46, 70, "Input",ExpressionUUID->"7009bdd5-6ba1-bb4e-be81-5497771873dd"],
-Cell[3666273, 69758, 656, 17, 70, "Output",ExpressionUUID->"5febb495-26c5-824a-ae2d-bc82519d4811"]
+Cell[3459075, 65837, 4364, 113, 70, "Input",ExpressionUUID->"f315ae10-cdd1-1643-908f-7cef2fdbce8a"],
+Cell[3463442, 65952, 1024, 16, 70, "Output",ExpressionUUID->"d6c8c8d6-bd3e-b049-bcd0-8dcf14a237b3"],
+Cell[3464469, 65970, 4114, 113, 70, "Output",ExpressionUUID->"782d3d87-c55f-a14d-8fcd-7da95440c414"],
+Cell[3468586, 66085, 4682, 90, 70, "Output",ExpressionUUID->"c73fd78f-b610-ad4f-b49c-fdefc3525e5f"],
+Cell[3473271, 66177, 1773, 32, 70, "Output",ExpressionUUID->"cdd0f005-88ee-9f4e-be1b-dce26f0222da"],
+Cell[3475047, 66211, 109502, 2011, 70, "Output",ExpressionUUID->"7aeb25db-918e-8048-968b-88c798896d70"],
+Cell[3584552, 68224, 78928, 1450, 70, "Output",ExpressionUUID->"0acd69a5-e6c3-bb4b-9a66-211861363eb4"]
+}, Open  ]],
+Cell[3663495, 69677, 511, 14, 70, "Text",ExpressionUUID->"ea61bf57-070c-9c4c-86c6-32c72314ea9e"],
+Cell[CellGroupData[{
+Cell[3664031, 69695, 190, 3, 70, "Input",ExpressionUUID->"e7bec149-5093-cc4c-b965-c7291eaec85f"],
+Cell[3664224, 69700, 316, 6, 70, "Output",ExpressionUUID->"28861fee-cacc-e347-808b-78066400290f"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[3666966, 69780, 6054, 143, 70, "Input",ExpressionUUID->"2326a7c0-f459-2743-aceb-74d874ad6b2a"],
-Cell[3673023, 69925, 4796, 97, 70, "Output",ExpressionUUID->"f6c0e617-8962-6844-9f69-9a36973f5318"],
-Cell[3677822, 70024, 4703, 96, 70, "Output",ExpressionUUID->"9f2af58e-2e61-a04b-a3ad-f5568c880aff"],
-Cell[3682528, 70122, 637, 12, 70, "Output",ExpressionUUID->"98d1e58f-b2f3-6e4b-acc2-2e052d3468e5"],
-Cell[3683168, 70136, 572, 9, 70, "Output",ExpressionUUID->"b0de6d81-609f-1544-8648-82593d9face5"],
-Cell[3683743, 70147, 125440, 2349, 70, "Output",ExpressionUUID->"6a41688d-f3cc-cf4c-828d-9b9ba9264602"],
-Cell[3809186, 72498, 167487, 3108, 70, "Output",ExpressionUUID->"ce403520-b39c-1640-bc56-6a585996e8d9"],
-Cell[3976676, 75608, 78984, 1457, 70, "Output",ExpressionUUID->"ee85bde3-6625-4c42-be7a-fc280ff13be3"],
-Cell[4055663, 77067, 11990, 268, 70, "Output",ExpressionUUID->"1c611bc4-7baf-a940-96de-20d9cd14c09c"]
+Cell[3664577, 69711, 1817, 46, 70, "Input",ExpressionUUID->"7009bdd5-6ba1-bb4e-be81-5497771873dd"],
+Cell[3666397, 69759, 656, 17, 70, "Output",ExpressionUUID->"5febb495-26c5-824a-ae2d-bc82519d4811"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[4067690, 77340, 219, 6, 70, "Input",ExpressionUUID->"126ea174-bec7-7145-bd59-c28795aed749"],
-Cell[4067912, 77348, 172, 3, 70, "Output",ExpressionUUID->"64e5e5fa-0ee3-5f40-a52a-d92ffa578f95"]
+Cell[3667090, 69781, 6054, 143, 70, "Input",ExpressionUUID->"2326a7c0-f459-2743-aceb-74d874ad6b2a"],
+Cell[3673147, 69926, 4796, 97, 70, "Output",ExpressionUUID->"f6c0e617-8962-6844-9f69-9a36973f5318"],
+Cell[3677946, 70025, 4703, 96, 70, "Output",ExpressionUUID->"9f2af58e-2e61-a04b-a3ad-f5568c880aff"],
+Cell[3682652, 70123, 637, 12, 70, "Output",ExpressionUUID->"98d1e58f-b2f3-6e4b-acc2-2e052d3468e5"],
+Cell[3683292, 70137, 572, 9, 70, "Output",ExpressionUUID->"b0de6d81-609f-1544-8648-82593d9face5"],
+Cell[3683867, 70148, 125440, 2349, 70, "Output",ExpressionUUID->"6a41688d-f3cc-cf4c-828d-9b9ba9264602"],
+Cell[3809310, 72499, 167487, 3108, 70, "Output",ExpressionUUID->"ce403520-b39c-1640-bc56-6a585996e8d9"],
+Cell[3976800, 75609, 78984, 1457, 70, "Output",ExpressionUUID->"ee85bde3-6625-4c42-be7a-fc280ff13be3"],
+Cell[4055787, 77068, 11990, 268, 70, "Output",ExpressionUUID->"1c611bc4-7baf-a940-96de-20d9cd14c09c"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[4068121, 77356, 4912, 111, 70, "Input",ExpressionUUID->"7fdc5010-e9e2-774b-9049-c31340c6f476"],
-Cell[4073036, 77469, 4586, 94, 70, "Output",ExpressionUUID->"beb5bde3-8d43-2a4a-8b11-54f9e9cdac00"],
-Cell[4077625, 77565, 4468, 92, 70, "Output",ExpressionUUID->"f9e8d54e-b920-ae45-96d0-39fb70e91926"],
-Cell[4082096, 77659, 442, 9, 70, "Output",ExpressionUUID->"a39d2c02-2517-f947-b3ba-a30f2d004a75"],
-Cell[4082541, 77670, 375, 6, 70, "Output",ExpressionUUID->"8ee39fd2-b829-c147-b5cd-2ece3416be6a"],
-Cell[4082919, 77678, 125141, 2347, 70, "Output",ExpressionUUID->"8103e803-3af3-b94b-984a-7dd648cb43ca"],
-Cell[4208063, 80027, 167189, 3100, 70, "Output",ExpressionUUID->"910a4d4e-9bdc-c046-bc73-b4a56dd9a7c7"],
-Cell[4375255, 83129, 78864, 1457, 70, "Output",ExpressionUUID->"941b39ae-5a3e-cb4e-95a4-d0a4479e6422"],
-Cell[4454122, 84588, 11788, 263, 70, "Output",ExpressionUUID->"cf1be0af-60a0-a341-a407-b5922e11f30f"]
+Cell[4067814, 77341, 219, 6, 70, "Input",ExpressionUUID->"126ea174-bec7-7145-bd59-c28795aed749"],
+Cell[4068036, 77349, 172, 3, 70, "Output",ExpressionUUID->"64e5e5fa-0ee3-5f40-a52a-d92ffa578f95"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[4465947, 84856, 1586, 37, 70, "Input",ExpressionUUID->"2109e49b-2811-3946-88be-1594b0dfffdf"],
-Cell[4467536, 84895, 390, 11, 70, "Output",ExpressionUUID->"ec6aa2c6-6d04-fa4f-ae63-b38f7c236bbb"]
+Cell[4068245, 77357, 4912, 111, 70, "Input",ExpressionUUID->"7fdc5010-e9e2-774b-9049-c31340c6f476"],
+Cell[4073160, 77470, 4586, 94, 70, "Output",ExpressionUUID->"beb5bde3-8d43-2a4a-8b11-54f9e9cdac00"],
+Cell[4077749, 77566, 4468, 92, 70, "Output",ExpressionUUID->"f9e8d54e-b920-ae45-96d0-39fb70e91926"],
+Cell[4082220, 77660, 442, 9, 70, "Output",ExpressionUUID->"a39d2c02-2517-f947-b3ba-a30f2d004a75"],
+Cell[4082665, 77671, 375, 6, 70, "Output",ExpressionUUID->"8ee39fd2-b829-c147-b5cd-2ece3416be6a"],
+Cell[4083043, 77679, 125141, 2347, 70, "Output",ExpressionUUID->"8103e803-3af3-b94b-984a-7dd648cb43ca"],
+Cell[4208187, 80028, 167189, 3100, 70, "Output",ExpressionUUID->"910a4d4e-9bdc-c046-bc73-b4a56dd9a7c7"],
+Cell[4375379, 83130, 78864, 1457, 70, "Output",ExpressionUUID->"941b39ae-5a3e-cb4e-95a4-d0a4479e6422"],
+Cell[4454246, 84589, 11788, 263, 70, "Output",ExpressionUUID->"cf1be0af-60a0-a341-a407-b5922e11f30f"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[4467963, 84911, 1599, 37, 70, "Input",ExpressionUUID->"ecbfd663-a1a3-0b4c-a678-66c9a2c2579a"],
-Cell[4469565, 84950, 529, 15, 70, "Output",ExpressionUUID->"aba17f06-4825-534e-8b5a-e868456d4011"]
-}, Open  ]],
-Cell[4470109, 84968, 116828, 1934, 70, "Text",ExpressionUUID->"3c6c923e-cde3-b74b-a93a-16d99b75cecb"],
-Cell[CellGroupData[{
-Cell[4586962, 86906, 417, 9, 70, "Input",ExpressionUUID->"4892409f-dddd-0346-8e2d-f79ae2c976f8"],
-Cell[4587382, 86917, 429, 9, 70, "Output",ExpressionUUID->"085daff3-9992-7e43-9f7a-f064c281dcd6"]
+Cell[4466071, 84857, 1586, 37, 70, "Input",ExpressionUUID->"2109e49b-2811-3946-88be-1594b0dfffdf"],
+Cell[4467660, 84896, 390, 11, 70, "Output",ExpressionUUID->"ec6aa2c6-6d04-fa4f-ae63-b38f7c236bbb"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[4587848, 86931, 1034, 24, 70, "Input",ExpressionUUID->"f0633c68-0954-a440-96d6-5c8b242a3ff6"],
-Cell[4588885, 86957, 486, 14, 70, "Print",ExpressionUUID->"bb95c0a0-223f-154c-9753-49a41d679c36"],
-Cell[4589374, 86973, 3469, 94, 70, "Output",ExpressionUUID->"783f117d-6c7c-3544-a899-bbb1dfdffb6d"]
+Cell[4468087, 84912, 1599, 37, 70, "Input",ExpressionUUID->"ecbfd663-a1a3-0b4c-a678-66c9a2c2579a"],
+Cell[4469689, 84951, 529, 15, 70, "Output",ExpressionUUID->"aba17f06-4825-534e-8b5a-e868456d4011"]
+}, Open  ]],
+Cell[4470233, 84969, 116828, 1934, 70, "Text",ExpressionUUID->"3c6c923e-cde3-b74b-a93a-16d99b75cecb"],
+Cell[CellGroupData[{
+Cell[4587086, 86907, 417, 9, 70, "Input",ExpressionUUID->"4892409f-dddd-0346-8e2d-f79ae2c976f8"],
+Cell[4587506, 86918, 429, 9, 70, "Output",ExpressionUUID->"085daff3-9992-7e43-9f7a-f064c281dcd6"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[4592880, 87072, 1080, 24, 70, "Input",ExpressionUUID->"b3652fe4-ee4f-e548-b735-e6416803b842"],
-Cell[4593963, 87098, 488, 14, 70, "Print",ExpressionUUID->"f78cf388-d365-5b43-8aa6-7e2e1140141c"],
-Cell[4594454, 87114, 3288, 92, 70, "Output",ExpressionUUID->"f9a546f5-4fdd-fc46-bc15-f850440a144b"]
+Cell[4587972, 86932, 1034, 24, 70, "Input",ExpressionUUID->"f0633c68-0954-a440-96d6-5c8b242a3ff6"],
+Cell[4589009, 86958, 486, 14, 70, "Print",ExpressionUUID->"bb95c0a0-223f-154c-9753-49a41d679c36"],
+Cell[4589498, 86974, 3469, 94, 70, "Output",ExpressionUUID->"783f117d-6c7c-3544-a899-bbb1dfdffb6d"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[4597779, 87211, 3164, 76, 70, "Input",ExpressionUUID->"43a678b3-c9b7-f740-b10b-4024866ec47d"],
-Cell[4600946, 87289, 604, 16, 70, "Print",ExpressionUUID->"07d37ca8-86dd-0047-b19d-ef6833891952"],
-Cell[4601553, 87307, 777, 11, 70, "Output",ExpressionUUID->"b9312f09-564a-9145-959f-0df145435aac"],
-Cell[4602333, 87320, 35439, 685, 70, "Output",ExpressionUUID->"4ea5e6c3-2d7b-e046-b0fe-28563ec235bc"]
+Cell[4593004, 87073, 1080, 24, 70, "Input",ExpressionUUID->"b3652fe4-ee4f-e548-b735-e6416803b842"],
+Cell[4594087, 87099, 488, 14, 70, "Print",ExpressionUUID->"f78cf388-d365-5b43-8aa6-7e2e1140141c"],
+Cell[4594578, 87115, 3288, 92, 70, "Output",ExpressionUUID->"f9a546f5-4fdd-fc46-bc15-f850440a144b"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[4637809, 88010, 3174, 76, 70, "Input",ExpressionUUID->"e4054934-71b1-f246-954f-a41441ec6360"],
-Cell[4640986, 88088, 564, 15, 70, "Print",ExpressionUUID->"a143ef47-5547-4543-8cdd-ff6d8141cbd1"],
-Cell[4641553, 88105, 327, 5, 70, "Output",ExpressionUUID->"54323d24-c8e8-1840-83e9-b64ac5d634fa"],
-Cell[4641883, 88112, 35161, 683, 70, "Output",ExpressionUUID->"35d95d29-9797-c642-a06a-113c7047c6cd"]
+Cell[4597903, 87212, 3164, 76, 70, "Input",ExpressionUUID->"43a678b3-c9b7-f740-b10b-4024866ec47d"],
+Cell[4601070, 87290, 604, 16, 70, "Print",ExpressionUUID->"07d37ca8-86dd-0047-b19d-ef6833891952"],
+Cell[4601677, 87308, 777, 11, 70, "Output",ExpressionUUID->"b9312f09-564a-9145-959f-0df145435aac"],
+Cell[4602457, 87321, 35439, 685, 70, "Output",ExpressionUUID->"4ea5e6c3-2d7b-e046-b0fe-28563ec235bc"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4637933, 88011, 3174, 76, 70, "Input",ExpressionUUID->"e4054934-71b1-f246-954f-a41441ec6360"],
+Cell[4641110, 88089, 564, 15, 70, "Print",ExpressionUUID->"a143ef47-5547-4543-8cdd-ff6d8141cbd1"],
+Cell[4641677, 88106, 327, 5, 70, "Output",ExpressionUUID->"54323d24-c8e8-1840-83e9-b64ac5d634fa"],
+Cell[4642007, 88113, 35161, 683, 70, "Output",ExpressionUUID->"35d95d29-9797-c642-a06a-113c7047c6cd"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]

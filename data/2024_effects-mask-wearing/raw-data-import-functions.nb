@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[    652598,      11767]
-NotebookOptionsPosition[    651042,      11741]
-NotebookOutlinePosition[    651443,      11757]
-CellTagsIndexPosition[    651400,      11754]
+NotebookDataLength[    653806,      11779]
+NotebookOptionsPosition[    652244,      11753]
+NotebookOutlinePosition[    652645,      11769]
+CellTagsIndexPosition[    652602,      11766]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1335,141 +1335,143 @@ Cell[BoxData[{
   3.9723147791733036`*^9}, {3.9730073251678905`*^9, 3.9730073512550163`*^9}},
  CellLabel->"In[32]:=",ExpressionUUID->"763104e3-1363-1041-b160-9f93a317622d"],
 
-Cell[BoxData[{
- RowBox[{"dPexaImport", "=."}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"dPexaImport", "[", 
-   RowBox[{"filename_String", ",", "asName_String"}], "]"}], ":=", 
-  "\[IndentingNewLine]", 
-  RowBox[{"Module", "[", 
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"dPexaImport", "=."}], "\[IndentingNewLine]", 
    RowBox[{
-    RowBox[{"{", 
+    RowBox[{"dPexaImport", "[", 
+     RowBox[{"filename_String", ",", "asName_String"}], "]"}], ":=", 
+    "\[IndentingNewLine]", 
+    RowBox[{"Module", "[", 
      RowBox[{
-     "dPexa", ",", "dPexaVarNames", ",", "dPexaValues", ",", "dPexaSync", ",",
-       "dPexaSyncMeans", ",", "dPexaErrors", ",", "newColumn"}], "}"}], 
-    "\[IndentingNewLine]", ",", 
-    RowBox[{
-     RowBox[{
-      RowBox[{"dPexa", "=", 
-       RowBox[{"Import", "[", 
-        RowBox[{"urlHead", " ", "~~", "filename"}], "]"}]}], 
-      "\[IndentingNewLine]", ";", 
-      RowBox[{"dPexa", "=", 
-       RowBox[{"myStringSplit", "[", 
-        RowBox[{"dPexa", ",", 
-         RowBox[{"{", 
-          RowBox[{"\"\<\\n\>\"", ",", "\"\<\\t\>\""}], "}"}]}], "]"}]}], 
-      "\[IndentingNewLine]", ";", 
-      RowBox[{"dPexaVarNames", "=", 
+      RowBox[{"{", 
        RowBox[{
+       "dPexa", ",", "dPexaVarNames", ",", "dPexaValues", ",", "dPexaSync", ",",
+         "dPexaSyncMeans", ",", "dPexaErrors", ",", "newColumn"}], "}"}], 
+      "\[IndentingNewLine]", ",", 
+      RowBox[{
+       RowBox[{"dPexa", "=", 
+        RowBox[{"Import", "[", 
+         RowBox[{"urlHead", " ", "~~", "filename"}], "]"}]}], 
+       "\[IndentingNewLine]", ";", 
+       RowBox[{"dPexa", "=", 
+        RowBox[{"myStringSplit", "[", 
+         RowBox[{"dPexa", ",", 
+          RowBox[{"{", 
+           RowBox[{"\"\<\\n\>\"", ",", "\"\<\\t\>\""}], "}"}]}], "]"}]}], 
+       "\[IndentingNewLine]", ";", 
+       RowBox[{"dPexaVarNames", "=", 
         RowBox[{
-         RowBox[{"asName", "~~", "\"\<_\>\"", "~~", "#"}], "&"}], "/@", 
-        RowBox[{
-         RowBox[{"(", 
-          RowBox[{
+         RowBox[{
+          RowBox[{"asName", "~~", "\"\<_\>\"", "~~", "#"}], "&"}], "/@", 
+         RowBox[{
+          RowBox[{"(", 
            RowBox[{
-            RowBox[{"StringReplace", "[", 
-             RowBox[{"#", ",", 
-              RowBox[{"{", 
-               RowBox[{
-                RowBox[{"\"\<counts/l\>\"", "->", "\"\<1/L\>\""}], ",", 
-                RowBox[{"\"\<[n]\>\"", "->", "\"\<[1]\>\""}], ",", 
-                RowBox[{"\"\<\[Degree]C\>\"", "->", "\"\<Celsius\>\""}], ",", 
-                RowBox[{"\"\<%\>\"", "->", "\"\<percent\>\""}], ",", 
-                RowBox[{"\"\<Volume ml]\>\"", "->", "\"\<Volume [ml]\>\""}]}],
-                "}"}]}], "]"}], "&"}], "/@", 
-           RowBox[{"dPexa", "[", 
-            RowBox[{"[", "1", "]"}], "]"}]}], ")"}], "[", 
+            RowBox[{
+             RowBox[{"StringReplace", "[", 
+              RowBox[{"#", ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"\"\<counts/l\>\"", "->", "\"\<1/L\>\""}], ",", 
+                 RowBox[{"\"\<[n]\>\"", "->", "\"\<[1]\>\""}], ",", 
+                 RowBox[{"\"\<\[Degree]C\>\"", "->", "\"\<Celsius\>\""}], ",", 
+                 RowBox[{"\"\<%\>\"", "->", "\"\<percent\>\""}], ",", 
+                 
+                 RowBox[{"\"\<Volume ml]\>\"", 
+                  "->", "\"\<Volume [ml]\>\""}]}], "}"}]}], "]"}], "&"}], "/@", 
+            RowBox[{"dPexa", "[", 
+             RowBox[{"[", "1", "]"}], "]"}]}], ")"}], "[", 
+          RowBox[{"[", 
+           RowBox[{"2", ";;", 
+            RowBox[{"-", "1"}]}], "]"}], "]"}]}]}], "\[IndentingNewLine]", ";", 
+       RowBox[{"dPexaValues", "=", 
+        RowBox[{"dPexa", "[", 
          RowBox[{"[", 
           RowBox[{"2", ";;", 
-           RowBox[{"-", "1"}]}], "]"}], "]"}]}]}], "\[IndentingNewLine]", ";", 
-      RowBox[{"dPexaValues", "=", 
-       RowBox[{"dPexa", "[", 
-        RowBox[{"[", 
-         RowBox[{"2", ";;", 
-          RowBox[{"-", "15"}]}], "]"}], "]"}]}], "\[IndentingNewLine]", ";", 
-      RowBox[{
-       RowBox[{"dPexaValues", "[", 
-        RowBox[{"[", 
-         RowBox[{"All", ",", "1"}], "]"}], "]"}], "=", 
+           RowBox[{"-", "15"}]}], "]"}], "]"}]}], "\[IndentingNewLine]", ";", 
        RowBox[{
-        RowBox[{
-         RowBox[{"myUnixTime", "[", "#", "]"}], "&"}], "/@", 
         RowBox[{"dPexaValues", "[", 
          RowBox[{"[", 
-          RowBox[{"All", ",", "1"}], "]"}], "]"}]}]}], "\[IndentingNewLine]", 
-      ";", 
-      RowBox[{"dPexaSync", "=", 
-       RowBox[{"synchronize", "[", 
-        RowBox[{"dPexaValues", ",", "1", ",", "asName"}], "]"}]}], 
-      "\[IndentingNewLine]", ";", 
-      RowBox[{"dPexaSyncMeans", "=", 
-       RowBox[{
+          RowBox[{"All", ",", "1"}], "]"}], "]"}], "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"myUnixTime", "[", "#", "]"}], "&"}], "/@", 
+         RowBox[{"dPexaValues", "[", 
+          RowBox[{"[", 
+           RowBox[{"All", ",", "1"}], "]"}], "]"}]}]}], "\[IndentingNewLine]",
+        ";", 
+       RowBox[{"dPexaSync", "=", 
+        RowBox[{"synchronize", "[", 
+         RowBox[{"dPexaValues", ",", "1", ",", "asName"}], "]"}]}], 
+       "\[IndentingNewLine]", ";", 
+       RowBox[{"dPexaSyncMeans", "=", 
+        RowBox[{
+         RowBox[{"Map", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Mean", "[", 
+             RowBox[{
+              RowBox[{"ToExpression", "[", "#", "]"}], "/.", " ", 
+              RowBox[{"Null", "->", "Nothing"}]}], "]"}], "&"}], ",", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"Transpose", "[", "#", "]"}], "&"}], "/@", 
+              RowBox[{"GatherBy", "[", 
+               RowBox[{"dPexaSync", ",", "First"}], "]"}]}], ")"}], "[", 
+            RowBox[{"[", 
+             RowBox[{"All", ",", 
+              RowBox[{"2", ";;", 
+               RowBox[{"-", "1"}]}]}], "]"}], "]"}], ",", 
+           RowBox[{"{", "2", "}"}]}], "]"}], " ", "/.", 
+         RowBox[{"(", " ", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"Mean", "[", 
+             RowBox[{"{", "}"}], "]"}], ")"}], "->", "\"\<n.a.\>\""}], 
+          ")"}]}]}], "\[IndentingNewLine]", ";", "\n", 
+       RowBox[{"dPexaSyncMeans", "=", 
+        RowBox[{"myFlatten", "[", 
+         RowBox[{
+          RowBox[{"Transpose", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"Union", "@", 
+              RowBox[{"dPexaSync", "[", 
+               RowBox[{"[", 
+                RowBox[{"All", ",", "1"}], "]"}], "]"}]}], ",", 
+             "dPexaSyncMeans"}], "}"}], "]"}], ",", "1"}], "]"}]}], 
+       "\[IndentingNewLine]", ";", 
+       RowBox[{"dPexaErrors", "=", 
         RowBox[{"Map", "[", 
          RowBox[{
           RowBox[{
-           RowBox[{"Mean", "[", 
+           RowBox[{"If", "[", 
             RowBox[{
-             RowBox[{"ToExpression", "[", "#", "]"}], "/.", " ", 
-             RowBox[{"Null", "->", "Nothing"}]}], "]"}], "&"}], ",", 
-          RowBox[{
-           RowBox[{"(", 
-            RowBox[{
-             RowBox[{
-              RowBox[{"Transpose", "[", "#", "]"}], "&"}], "/@", 
-             RowBox[{"GatherBy", "[", 
-              RowBox[{"dPexaSync", ",", "First"}], "]"}]}], ")"}], "[", 
+             RowBox[{"NumberQ", "[", "#", "]"}], ",", 
+             RowBox[{"Around", "[", 
+              RowBox[{"#", ",", 
+               RowBox[{"#", ".1"}]}], "]"}], ",", "#"}], "]"}], "&"}], ",", 
+          RowBox[{"dPexaSyncMeans", "[", 
            RowBox[{"[", 
             RowBox[{"All", ",", 
-             RowBox[{"2", ";;", 
-              RowBox[{"-", "1"}]}]}], "]"}], "]"}], ",", 
-          RowBox[{"{", "2", "}"}]}], "]"}], " ", "/.", 
-        RowBox[{"(", " ", 
-         RowBox[{
-          RowBox[{"(", 
-           RowBox[{"Mean", "[", 
-            RowBox[{"{", "}"}], "]"}], ")"}], "->", "\"\<n.a.\>\""}], 
-         ")"}]}]}], "\[IndentingNewLine]", ";", "\n", 
-      RowBox[{"dPexaSyncMeans", "=", 
-       RowBox[{"myFlatten", "[", 
+             RowBox[{"3", ";;", "19"}]}], "]"}], "]"}], ",", 
+          RowBox[{"{", "2", "}"}]}], "]"}]}], "\[IndentingNewLine]", ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"dPexaSyncMeans", "[", 
+         RowBox[{"[", 
+          RowBox[{"All", ",", 
+           RowBox[{"3", ";;", "19"}]}], "]"}], "]"}], "=", "dPexaErrors"}], 
+       "\[IndentingNewLine]", 
+       RowBox[{"(*", 
         RowBox[{
-         RowBox[{"Transpose", "[", 
-          RowBox[{"{", 
-           RowBox[{
-            RowBox[{"Union", "@", 
-             RowBox[{"dPexaSync", "[", 
-              RowBox[{"[", 
-               RowBox[{"All", ",", "1"}], "]"}], "]"}]}], ",", 
-            "dPexaSyncMeans"}], "}"}], "]"}], ",", "1"}], "]"}]}], 
-      "\[IndentingNewLine]", ";", 
-      RowBox[{"dPexaErrors", "=", 
-       RowBox[{"Map", "[", 
-        RowBox[{
-         RowBox[{
-          RowBox[{"If", "[", 
-           RowBox[{
-            RowBox[{"NumberQ", "[", "#", "]"}], ",", 
-            RowBox[{"Around", "[", 
-             RowBox[{"#", ",", 
-              RowBox[{"#", ".1"}]}], "]"}], ",", "#"}], "]"}], "&"}], ",", 
-         RowBox[{"dPexaSyncMeans", "[", 
-          RowBox[{"[", 
-           RowBox[{"All", ",", 
-            RowBox[{"3", ";;", "19"}]}], "]"}], "]"}], ",", 
-         RowBox[{"{", "2", "}"}]}], "]"}]}], "\[IndentingNewLine]", ";", 
-      "\[IndentingNewLine]", 
-      RowBox[{
-       RowBox[{"dPexaSyncMeans", "[", 
-        RowBox[{"[", 
-         RowBox[{"All", ",", 
-          RowBox[{"3", ";;", "19"}]}], "]"}], "]"}], "=", "dPexaErrors"}], 
-      ";"}], 
-     RowBox[{"(*", 
-      RowBox[{
-       RowBox[{"error", " ", "of", " ", "10", " ", "%"}], ",", " ", 
-       RowBox[{"compare", " ", 
-        GraphicsBox[
-         TagBox[RasterBox[CompressedData["
+         RowBox[{"error", " ", "of", " ", "10", " ", "%"}], ",", " ", 
+         RowBox[{"compare", " ", 
+          GraphicsBox[
+           TagBox[RasterBox[CompressedData["
 1:eJzs3Ql0Vmd+53mqknQnqcl0TSqV5FTnpDJzTrq6zkx3V5aZTnL6VCfpM9Pu
 M12na6on04NsbKBsTHnB4LXKS5nBdqhUQTBONZQbA8IGbASIRRhhC7MKW7YB
 C5CNQAYhCSTQAtpeSWhB80hXurr6P/c+97nL+2rh+zn3+OBX73v3e9/n/t5n
@@ -3151,76 +3153,77 @@ hBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQggh
 hBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQggh
 hBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQggh
 hBBCCCGEEEIIIYQQQgghhBBCHFv+F3hxU24=
-           "], {{0, 735.75}, {1335.75, 0}}, {0, 255},
-           ColorFunction->RGBColor,
-           ImageResolution->{96., 96.},
-           RasterInterpolation->"High"],
-          BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
-          Selectable->False],
-         DefaultBaseStyle->"ImageGraphics",
-         ImageSize->{200.25, Automatic},
-         ImageSizeRaw->{1335.75, 735.75},
-         PlotRange->{{0, 1335.75}, {0, 735.75}}]}]}], "*)"}], 
-     "\[IndentingNewLine]", ";", 
-     RowBox[{
-      RowBox[{"dPexaSyncMeans", "[", 
-       RowBox[{"[", 
-        RowBox[{"All", ",", "2"}], "]"}], "]"}], "=", 
-      RowBox[{
-       RowBox[{"dPexaSyncMeans", "[", 
-        RowBox[{"[", 
-         RowBox[{"All", ",", "2"}], "]"}], "]"}], "-", "200"}]}], 
-     "\[IndentingNewLine]", 
-     RowBox[{"(*", 
-      RowBox[{
-      "there", " ", "is", " ", "a", " ", "constant", " ", "circuit", " ", 
-       "flow", " ", "in", " ", "PExA", " ", "with", " ", "250", " ", 
-       RowBox[{"ml", "/", 
-        RowBox[{"s", ".", " ", "That"}]}], " ", "shifts", " ", "the", 
-       " ", "\"\<Exhale Airflow\>\"", " ", "but", " ", "not", " ", "the", " ", 
-       RowBox[{"\"\<Inhale Airflow\>\"", "!"}], " ", "PExA", " ", "output", " ",
-        "for", " ", "\"\<Inhale Exhale Airflow [ml/s]\>\"", " ", "is", " ", 
-       RowBox[{"misleading", "!"}], " ", "The", " ", "shift", " ", "is", " ", 
-       "constantly", " ", "200", " ", 
-       RowBox[{"ml", "/", "s"}], " ", "not", " ", "250", " ", 
-       RowBox[{"ml", "/", 
-        RowBox[{"s", ".", " ", "See"}]}], " ", 
-       RowBox[{"also", ":", " ", 
+             "], {{0, 735.75}, {1335.75, 0}}, {0, 255},
+             ColorFunction->RGBColor,
+             ImageResolution->{96., 96.},
+             RasterInterpolation->"High"],
+            BoxForm`ImageTag[
+            "Byte", ColorSpace -> "RGB", Interleaving -> True],
+            Selectable->False],
+           DefaultBaseStyle->"ImageGraphics",
+           ImageSize->{200.25, Automatic},
+           ImageSizeRaw->{1335.75, 735.75},
+           PlotRange->{{0, 1335.75}, {0, 735.75}}]}]}], "*)"}], 
+       "\[IndentingNewLine]", ";", 
+       RowBox[{
+        RowBox[{"dPexaSyncMeans", "[", 
+         RowBox[{"[", 
+          RowBox[{"All", ",", "2"}], "]"}], "]"}], "=", 
         RowBox[{
-         TemplateBox[{
-           RowBox[{
-             RowBox[{"https", ":"}], "//", 
+         RowBox[{"dPexaSyncMeans", "[", 
+          RowBox[{"[", 
+           RowBox[{"All", ",", "2"}], "]"}], "]"}], "-", "200"}]}], " ", 
+       "\[IndentingNewLine]", 
+       RowBox[{"(*", 
+        RowBox[{
+        "there", " ", "is", " ", "a", " ", "constant", " ", "circuit", " ", 
+         "flow", " ", "in", " ", "PExA", " ", "with", " ", "250", " ", 
+         RowBox[{"ml", "/", 
+          RowBox[{"s", ".", " ", "That"}]}], " ", "shifts", " ", "the", 
+         " ", "\"\<Exhale Airflow\>\"", " ", "but", " ", "not", " ", "the", " ", 
+         RowBox[{"\"\<Inhale Airflow\>\"", "!"}], " ", "PExA", " ", "output", 
+         " ", "for", " ", "\"\<Inhale Exhale Airflow [ml/s]\>\"", " ", "is", " ", 
+         RowBox[{"misleading", "!"}], " ", "The", " ", "shift", " ", "is", " ",
+          "constantly", " ", "200", " ", 
+         RowBox[{"ml", "/", "s"}], " ", "not", " ", "250", " ", 
+         RowBox[{"ml", "/", 
+          RowBox[{"s", ".", " ", "See"}]}], " ", 
+         RowBox[{"also", ":", " ", 
+          RowBox[{
+           TemplateBox[{
              RowBox[{
+               RowBox[{"https", ":"}], "//", 
                RowBox[{
-                 RowBox[{"github", ".", "com"}], "/", "Carl"}], "-", 
-               RowBox[{"Firle", "/", "my"}], "-", "data", "-", 
-               RowBox[{
+                 RowBox[{
+                   RowBox[{"github", ".", "com"}], "/", "Carl"}], "-", 
+                 RowBox[{"Firle", "/", "my"}], "-", "data", "-", 
                  RowBox[{
                    RowBox[{
                     RowBox[{
                     RowBox[{
                     RowBox[{
+                    RowBox[{
                     RowBox[{"storage", "/", "raw"}], "/", "refs"}], "/", 
                     "heads"}], "/", "main"}], "/", "data"}], "/", "2024"}], 
-                 "_effects"}], "-", "mask", "-", 
-               RowBox[{"wearing", "/", "20251127"}], "-", 
-               RowBox[{"01", "_rip", 
-                 RowBox[{"_spiro", "/", "rip"}]}], "-", "spiro", "-", 
-               RowBox[{"cal", ".", "nb"}]}]}], {
-            URL[
-            "https://github.com/Carl-Firle/my-data-storage/raw/refs/heads/\
+                   "_effects"}], "-", "mask", "-", 
+                 RowBox[{"wearing", "/", "20251127"}], "-", 
+                 RowBox[{"01", "_rip", 
+                   RowBox[{"_spiro", "/", "rip"}]}], "-", "spiro", "-", 
+                 RowBox[{"cal", ".", "nb"}]}]}], {
+              URL[
+              "https://github.com/Carl-Firle/my-data-storage/raw/refs/heads/\
 main/data/2024_effects-mask-wearing/20251127-01_rip_spiro/rip-spiro-cal.nb"], 
-            None}, "https://github.com/Carl-Firle/my-data-storage/raw/refs/\
+              None}, "https://github.com/Carl-Firle/my-data-storage/raw/refs/\
 heads/main/data/2024_effects-mask-wearing/20251127-01_rip_spiro/rip-spiro-cal.\
 nb", "HyperlinkActionRecycled", {"HyperlinkActive"}, 
-           BaseStyle -> {"Hyperlink"}, HyperlinkAction -> "Recycled"},
-          "HyperlinkTemplate"], "\[IndentingNewLine]", 
-         GraphicsBox[{{}, {{}, {}, 
-            TagBox[
-             {RGBColor[0.24, 0.6, 0.8], PointSize[
-               NCache[
-                Rational[1, 360], 0.002777777777777778]], AbsoluteThickness[
-              2], LineBox[CompressedData["
+             BaseStyle -> {"Hyperlink"}, HyperlinkAction -> "Recycled"},
+            "HyperlinkTemplate"], "\[IndentingNewLine]", 
+           GraphicsBox[{{}, {{}, {}, 
+              TagBox[
+               {RGBColor[0.24, 0.6, 0.8], PointSize[
+                 NCache[
+                  Rational[1, 360], 0.002777777777777778]], AbsoluteThickness[
+                2], LineBox[CompressedData["
 1:eJxc3X1czef/wPEzC82axZo1i+Vm1qxZs1izxns0i4VYs1hIizULjUYIB7EQ
 O5IkySmpVOqUZs2anVmzWPONNWtGizVr9LNmRl8av77mfR6P89o/ezxdN6dz
 PjfX9XlfN59eYXMnzGhnMBiqxhkM//v/v/81D3N96a1+x594R+78gwy/1Dvg
@@ -4948,13 +4951,13 @@ Thb3+i8w/RzNYDG3Xfddlab++YPpYDSDxTx6+pAS8/39H4zvjw5B+2ABK5gO
 Q/tgASuYjsT3x2ABK5j+m+SMO49OftHXvwcLWMF0NMkn7vns8Z3e/wULWMF0
 LMkdZxxs+4bX34EFrGA6nuo/e/8dLGAF0y9Jfq3na5rt1w9gASuYTtjxftKZ
 3aN9/AUsYAXTySSvvGjw2mdqdeX/B4nNpeY=
-               "]]},
-             Annotation[#, "Charting`Private`Tag#1"]& ], 
-            TagBox[
-             {RGBColor[0.95, 0.627, 0.1425], PointSize[
-               NCache[
-                Rational[1, 360], 0.002777777777777778]], AbsoluteThickness[
-              2], LineBox[CompressedData["
+                 "]]},
+               Annotation[#, "Charting`Private`Tag#1"]& ], 
+              TagBox[
+               {RGBColor[0.95, 0.627, 0.1425], PointSize[
+                 NCache[
+                  Rational[1, 360], 0.002777777777777778]], AbsoluteThickness[
+                2], LineBox[CompressedData["
 1:eJxc3X9czef/+PEza9bMrNGstzVisWaxWCPWeKJZCM1CrBFCoxFCLByEEJIk
 SU4/pZKThWZ+HDRr1qxhNGs0M2vWrFmjWeyL8+x7+5xH/7jdXa/rOj9e53pd
 r9f143m1nzhzxOQmBoOhbLjB8OBf619t3x1x2w8Ufjehr/6H2NoedoAd5YvP
@@ -6769,159 +6772,168 @@ NTSDBazmv6f90CR/9Wfc878amsEC1qvh86Frofka1AcrmK7D878O9cEKphvw
 /M3L2ybZmbd3AVcfrGC6GZrN8atXjyvj128CK5huhWbze+NyVD5Wza8/CVYw
 3Q7NYLn9X/+wy4Ppt9AMFvPUpi3zRvP78U9guhOawWK+nCj+BNCvHwWmu6EZ
 LOZOY+albFKzn8uD6d7/9/8DDaNOhg==
-               "]]},
-             Annotation[#, "Charting`Private`Tag#2"]& ]}, {{}, {}}},
-          AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
-          Axes->{True, True},
-          AxesLabel->{None, None},
-          AxesOrigin->{0, 0},
-          DefaultBaseStyle->{"PlotGraphics", "Graphics"},
-          DisplayFunction->Identity,
-          Frame->{{True, True}, {True, True}},
-          FrameLabel->{{None, None}, {None, None}},
-          
-          FrameStyle->Directive[
-           FontSize -> 12, FontFamily -> "Lucida Sans Unicode", 
-            GrayLevel[0]],
-          FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
-          
-          FrameTicksStyle->Directive[
-           FontSize -> 12, FontFamily -> "Lucida Sans Unicode", 
-            GrayLevel[0]],
-          GridLines->{None, None},
-          GridLinesStyle->Directive[
-            GrayLevel[0.5, 0.4]],
-          ImageSize->{333.75, 206.85920266544457`},
-          
-          Method->{
-           "AxisPadding" -> Scaled[0.02], "DefaultBoundaryStyle" -> Automatic,
-             "DefaultGraphicsInteraction" -> {
-             "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
-              "Effects" -> {
-               "Highlight" -> {"ratio" -> 2}, 
-                "HighlightPoint" -> {"ratio" -> 2}, 
-                "Droplines" -> {
-                 "freeformCursorMode" -> True, 
-                  "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
-            "DefaultMeshStyle" -> AbsolutePointSize[6], "DefaultPlotStyle" -> {
-              Directive[
-               RGBColor[0.24, 0.6, 0.8], 
-               AbsoluteThickness[2]], 
-              Directive[
-               RGBColor[0.95, 0.627, 0.1425], 
-               AbsoluteThickness[2]], 
-              Directive[
-               RGBColor[0.455, 0.7, 0.21], 
-               AbsoluteThickness[2]], 
-              Directive[
-               RGBColor[0.922526, 0.385626, 0.209179], 
-               AbsoluteThickness[2]], 
-              Directive[
-               RGBColor[0.578, 0.51, 0.85], 
-               AbsoluteThickness[2]], 
-              Directive[
-               RGBColor[0.772079, 0.431554, 0.102387], 
-               AbsoluteThickness[2]], 
-              Directive[
-               RGBColor[0., 0.6, 0.6], 
-               AbsoluteThickness[2]], 
-              Directive[
-               RGBColor[0.9, 0.36, 0.684], 
-               AbsoluteThickness[2]], 
-              Directive[
-               RGBColor[0.56, 0.7, 0.], 
-               AbsoluteThickness[2]], 
-              Directive[
-               RGBColor[0.9, 0.54, 0.], 
-               AbsoluteThickness[2]], 
-              Directive[
-               RGBColor[0.585, 0.5976, 0.9], 
-               AbsoluteThickness[2]], 
-              Directive[
-               RGBColor[0.9, 0.45, 0.45], 
-               AbsoluteThickness[2]], 
-              Directive[
-               RGBColor[0.7632186717367253, 0.8174402144034898, 0.], 
-               AbsoluteThickness[2]], 
-              Directive[
-               RGBColor[
-               0.8554632469481959, 0.24885384718327969`, 0.833405387394855], 
-               AbsoluteThickness[2]], 
-              Directive[
-               RGBColor[
-               0.032972823413648836`, 0.7396719749139476, 0.534700104525218], 
-               AbsoluteThickness[2]]}, "DomainPadding" -> Scaled[0.02], 
-            "RangePadding" -> Scaled[0.05], "OptimizePlotMarkers" -> True, 
-            "IncludeHighlighting" -> Automatic, "HighlightStyle" -> Automatic,
-             "OptimizePlotMarkers" -> True, "IncludeHighlighting" -> 
-            "CurrentSet", "HighlightStyle" -> Automatic, 
-            "OptimizePlotMarkers" -> True, 
-            "CoordinatesToolOptions" -> {"DisplayFunction" -> ({
-                (Identity[#]& )[
-                 Part[#, 1]], 
-                (Identity[#]& )[
-                 Part[#, 2]]}& ), "CopiedValueFunction" -> ({
-                (Identity[#]& )[
-                 Part[#, 1]], 
-                (Identity[#]& )[
-                 Part[#, 2]]}& )}},
-          PlotInteractivity:>True,
-          PlotRange->{{0, 20428.}, {-1541.869629, 1384.408138}},
-          PlotRangeClipping->True,
-          PlotRangePadding->{{
-             Scaled[0.02], 
-             Scaled[0.02]}, {
-             Scaled[0.05], 
-             Scaled[0.05]}},
-          Ticks->{Automatic, Automatic}]}]}]}], "\[IndentingNewLine]", "*)"}],
-      "\[IndentingNewLine]", ";", 
-     RowBox[{"newColumn", "=", 
-      RowBox[{"ConstantArray", "[", 
-       RowBox[{"\"\<n.a.\>\"", ",", 
-        RowBox[{"{", 
-         RowBox[{
-          RowBox[{"Length", "[", 
-           RowBox[{"oneTable", "[", 
-            RowBox[{"[", "1", "]"}], "]"}], "]"}], ",", 
+                 "]]},
+               Annotation[#, "Charting`Private`Tag#2"]& ]}, {{}, {}}},
+            AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+            Axes->{True, True},
+            AxesLabel->{None, None},
+            AxesOrigin->{0, 0},
+            DefaultBaseStyle->{"PlotGraphics", "Graphics"},
+            DisplayFunction->Identity,
+            Frame->{{True, True}, {True, True}},
+            FrameLabel->{{None, None}, {None, None}},
+            
+            FrameStyle->Directive[
+             FontSize -> 12, FontFamily -> "Lucida Sans Unicode", 
+              GrayLevel[0]],
+            FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+            
+            FrameTicksStyle->Directive[
+             FontSize -> 12, FontFamily -> "Lucida Sans Unicode", 
+              GrayLevel[0]],
+            GridLines->{None, None},
+            GridLinesStyle->Directive[
+              GrayLevel[0.5, 0.4]],
+            ImageSize->{333.75, 206.85920266544457`},
+            
+            Method->{
+             "AxisPadding" -> Scaled[0.02], "DefaultBoundaryStyle" -> 
+              Automatic, 
+              "DefaultGraphicsInteraction" -> {
+               "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+                "Effects" -> {
+                 "Highlight" -> {"ratio" -> 2}, 
+                  "HighlightPoint" -> {"ratio" -> 2}, 
+                  "Droplines" -> {
+                   "freeformCursorMode" -> True, 
+                    "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+              "DefaultMeshStyle" -> AbsolutePointSize[6], "DefaultPlotStyle" -> {
+                Directive[
+                 RGBColor[0.24, 0.6, 0.8], 
+                 AbsoluteThickness[2]], 
+                Directive[
+                 RGBColor[0.95, 0.627, 0.1425], 
+                 AbsoluteThickness[2]], 
+                Directive[
+                 RGBColor[0.455, 0.7, 0.21], 
+                 AbsoluteThickness[2]], 
+                Directive[
+                 RGBColor[0.922526, 0.385626, 0.209179], 
+                 AbsoluteThickness[2]], 
+                Directive[
+                 RGBColor[0.578, 0.51, 0.85], 
+                 AbsoluteThickness[2]], 
+                Directive[
+                 RGBColor[0.772079, 0.431554, 0.102387], 
+                 AbsoluteThickness[2]], 
+                Directive[
+                 RGBColor[0., 0.6, 0.6], 
+                 AbsoluteThickness[2]], 
+                Directive[
+                 RGBColor[0.9, 0.36, 0.684], 
+                 AbsoluteThickness[2]], 
+                Directive[
+                 RGBColor[0.56, 0.7, 0.], 
+                 AbsoluteThickness[2]], 
+                Directive[
+                 RGBColor[0.9, 0.54, 0.], 
+                 AbsoluteThickness[2]], 
+                Directive[
+                 RGBColor[0.585, 0.5976, 0.9], 
+                 AbsoluteThickness[2]], 
+                Directive[
+                 RGBColor[0.9, 0.45, 0.45], 
+                 AbsoluteThickness[2]], 
+                Directive[
+                 RGBColor[0.7632186717367253, 0.8174402144034898, 0.], 
+                 AbsoluteThickness[2]], 
+                Directive[
+                 RGBColor[
+                 0.8554632469481959, 0.24885384718327969`, 0.833405387394855], 
+                 AbsoluteThickness[2]], 
+                Directive[
+                 RGBColor[
+                 0.032972823413648836`, 0.7396719749139476, 
+                  0.534700104525218], 
+                 AbsoluteThickness[2]]}, "DomainPadding" -> Scaled[0.02], 
+              "RangePadding" -> Scaled[0.05], "OptimizePlotMarkers" -> True, 
+              "IncludeHighlighting" -> Automatic, "HighlightStyle" -> 
+              Automatic, "OptimizePlotMarkers" -> True, "IncludeHighlighting" -> 
+              "CurrentSet", "HighlightStyle" -> Automatic, 
+              "OptimizePlotMarkers" -> True, 
+              "CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+                  (Identity[#]& )[
+                   Part[#, 1]], 
+                  (Identity[#]& )[
+                   Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+                  (Identity[#]& )[
+                   Part[#, 1]], 
+                  (Identity[#]& )[
+                   Part[#, 2]]}& )}},
+            PlotInteractivity:>True,
+            PlotRange->{{0, 20428.}, {-1541.869629, 1384.408138}},
+            PlotRangeClipping->True,
+            PlotRangePadding->{{
+               Scaled[0.02], 
+               Scaled[0.02]}, {
+               Scaled[0.05], 
+               Scaled[0.05]}},
+            Ticks->{Automatic, Automatic}]}]}]}], "\[IndentingNewLine]", 
+        "*)"}], "\[IndentingNewLine]", ";", 
+       RowBox[{"newColumn", "=", 
+        RowBox[{"ConstantArray", "[", 
+         RowBox[{"\"\<n.a.\>\"", ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Length", "[", 
+             RowBox[{"oneTable", "[", 
+              RowBox[{"[", "1", "]"}], "]"}], "]"}], ",", 
+            RowBox[{
+             RowBox[{"Length", "[", 
+              RowBox[{"dPexaSyncMeans", "[", 
+               RowBox[{"[", 
+                RowBox[{"-", "1"}], "]"}], "]"}], "]"}], "-", "1"}]}], 
+           "}"}]}], "]"}]}], "\[IndentingNewLine]", ";", 
+       RowBox[{"newColumn", "=", 
+        RowBox[{"ReplacePart", "[", 
+         RowBox[{"newColumn", ",", 
           RowBox[{
-           RowBox[{"Length", "[", 
-            RowBox[{"dPexaSyncMeans", "[", 
-             RowBox[{"[", 
-              RowBox[{"-", "1"}], "]"}], "]"}], "]"}], "-", "1"}]}], "}"}]}], 
-       "]"}]}], "\[IndentingNewLine]", ";", 
-     RowBox[{"newColumn", "=", 
-      RowBox[{"ReplacePart", "[", 
-       RowBox[{"newColumn", ",", 
-        RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{"positionInTimeline", "[", 
+              RowBox[{"#", "[", 
+               RowBox[{"[", "1", "]"}], "]"}], "]"}], "->", 
+             RowBox[{"#", "[", 
+              RowBox[{"[", 
+               RowBox[{"2", ";;", 
+                RowBox[{"-", "1"}]}], "]"}], "]"}]}], "&"}], "/@", 
+           "dPexaSyncMeans"}]}], "]"}]}], "\[IndentingNewLine]", ";", 
+       RowBox[{"oneTable", "=", 
+        RowBox[{"Flatten", "[", 
          RowBox[{
-          RowBox[{
-           RowBox[{"positionInTimeline", "[", 
-            RowBox[{"#", "[", 
-             RowBox[{"[", "1", "]"}], "]"}], "]"}], "->", 
-           RowBox[{"#", "[", 
-            RowBox[{"[", 
-             RowBox[{"2", ";;", 
-              RowBox[{"-", "1"}]}], "]"}], "]"}]}], "&"}], "/@", 
-         "dPexaSyncMeans"}]}], "]"}]}], "\[IndentingNewLine]", ";", 
-     RowBox[{"oneTable", "=", 
-      RowBox[{"Flatten", "[", 
-       RowBox[{
-        RowBox[{"{", 
-         RowBox[{"oneTable", ",", 
-          RowBox[{"Transpose", "[", "newColumn", "]"}]}], "}"}], ",", "1"}], 
-       "]"}]}], "\[IndentingNewLine]", ";", 
-     RowBox[{"AppendTo", "[", 
-      RowBox[{"varNames", ",", 
-       RowBox[{"dPexaVarNames", "[", 
-        RowBox[{"[", 
-         RowBox[{"2", ";;", 
-          RowBox[{"-", "1"}]}], "]"}], "]"}]}], "]"}], "\[IndentingNewLine]", 
-     ";"}]}], "\[IndentingNewLine]", "]"}]}]}], "Input",
+          RowBox[{"{", 
+           RowBox[{"oneTable", ",", 
+            RowBox[{"Transpose", "[", "newColumn", "]"}]}], "}"}], ",", "1"}],
+          "]"}]}], "\[IndentingNewLine]", ";", 
+       RowBox[{"AppendTo", "[", 
+        RowBox[{"varNames", ",", 
+         RowBox[{"dPexaVarNames", "[", 
+          RowBox[{"[", 
+           RowBox[{"1", ";;", 
+            RowBox[{"-", "1"}]}], "]"}], "]"}]}], "]"}], 
+       "\[IndentingNewLine]", ";"}]}], "\[IndentingNewLine]", 
+     "]"}]}]}]}]], "Input",
  CellChangeTimes->{{3.978081995472471*^9, 3.978082269887596*^9}, {
-  3.9940840561920033`*^9, 3.9940840569320927`*^9}, {3.9940841202938232`*^9, 
-  3.9940841923739243`*^9}, {3.994084975917925*^9, 3.99408498103055*^9}, {
-  3.994085149057266*^9, 
-  3.9940851635449257`*^9}},ExpressionUUID->"250651bb-0156-6949-9799-\
+   3.9940840561920033`*^9, 3.9940840569320927`*^9}, {3.9940841202938232`*^9, 
+   3.9940841923739243`*^9}, {3.994084975917925*^9, 3.99408498103055*^9}, {
+   3.994085149057266*^9, 3.9940851635449257`*^9}, 3.9940854360690727`*^9, {
+   3.994086815125923*^9, 3.9940868179771137`*^9}, {3.9940869080343113`*^9, 
+   3.9940869081149464`*^9}, {3.9940870267413197`*^9, 
+   3.9940870340727463`*^9}, {3.994087064312443*^9, 3.994087088935404*^9}, 
+   3.9940872603175545`*^9, {3.994087296703226*^9, 3.9940873027877254`*^9}, {
+   3.9940873603323307`*^9, 3.9940873648529396`*^9}, 3.9941235694995155`*^9, {
+   3.9941239411733265`*^9, 3.9941239450541325`*^9}, {3.994124030971979*^9, 
+   3.994124032643156*^9}},ExpressionUUID->"250651bb-0156-6949-9799-\
 3678238f7915"],
 
 Cell[BoxData["\[IndentingNewLine]"], "Input",
@@ -11739,8 +11751,8 @@ Cell[BoxData[{
    3.979746848915962*^9}, {3.979746885614897*^9, 3.979747005641945*^9}},
  CellLabel->"In[82]:=",ExpressionUUID->"dc9dae67-d705-d44d-ad1f-462b42d4d474"]
 },
-WindowSize->{718.5, 735},
-WindowMargins->{{-5.25, Automatic}, {Automatic, 0}},
+WindowSize->{1440, 741.75},
+WindowMargins->{{-6, Automatic}, {Automatic, -6}},
 FrontEndVersion->"15.0 for Microsoft Windows (64-bit) (July 2, 2026)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"ecb341a5-ca65-d74f-b55c-794d4d84b01a"
@@ -11756,19 +11768,19 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[554, 20, 10325, 253, 1082, "Input",ExpressionUUID->"428067d6-8328-be4f-afb6-dfadc733d23f"],
+Cell[554, 20, 10325, 253, 1055, "Input",ExpressionUUID->"428067d6-8328-be4f-afb6-dfadc733d23f"],
 Cell[10882, 275, 5053, 117, 484, "Input",ExpressionUUID->"36021481-2eaa-6945-abbd-343797993971"],
 Cell[15938, 394, 4346, 99, 446, "Input",ExpressionUUID->"71927a28-be0e-db45-8bb0-feb158927f26"],
-Cell[20287, 495, 32387, 840, 2996, "Input",ExpressionUUID->"763104e3-1363-1041-b160-9f93a317622d"],
-Cell[52677, 1337, 333412, 5587, 1242, "Input",ExpressionUUID->"250651bb-0156-6949-9799-3678238f7915"],
-Cell[386092, 6926, 166, 2, 47, "Input",ExpressionUUID->"d349b7db-add2-1e4a-9735-2204f0e3aa84"],
-Cell[386261, 6930, 111799, 1904, 868, "Input",ExpressionUUID->"735f81c5-6930-1041-aea3-35b9bbe1004c"],
-Cell[498063, 8836, 17868, 417, 70, "Input",ExpressionUUID->"9c47a7e3-977b-0647-8515-0c9c9f763b10"],
-Cell[515934, 9255, 9133, 226, 70, "Input",ExpressionUUID->"d091ce4a-bf3b-4f4f-aefb-2f411e347bb9"],
-Cell[525070, 9483, 5439, 139, 70, "Input",ExpressionUUID->"238e8eb6-5742-af4e-b536-7deac132983d"],
-Cell[530512, 9624, 3966, 96, 70, "Input",ExpressionUUID->"c350515d-5347-4e4e-ac17-445c4880aaad"],
-Cell[534481, 9722, 110177, 1875, 70, "Input",ExpressionUUID->"c196d4a3-1c66-0446-af16-19cbf385d1d0"],
-Cell[644661, 11599, 6377, 140, 70, "Input",ExpressionUUID->"dc9dae67-d705-d44d-ad1f-462b42d4d474"]
+Cell[20287, 495, 32387, 840, 2292, "Input",ExpressionUUID->"763104e3-1363-1041-b160-9f93a317622d"],
+Cell[52677, 1337, 334614, 5599, 914, "Input",ExpressionUUID->"250651bb-0156-6949-9799-3678238f7915"],
+Cell[387294, 6938, 166, 2, 47, "Input",ExpressionUUID->"d349b7db-add2-1e4a-9735-2204f0e3aa84"],
+Cell[387463, 6942, 111799, 1904, 601, "Input",ExpressionUUID->"735f81c5-6930-1041-aea3-35b9bbe1004c"],
+Cell[499265, 8848, 17868, 417, 1055, "Input",ExpressionUUID->"9c47a7e3-977b-0647-8515-0c9c9f763b10"],
+Cell[517136, 9267, 9133, 226, 998, "Input",ExpressionUUID->"d091ce4a-bf3b-4f4f-aefb-2f411e347bb9"],
+Cell[526272, 9495, 5439, 139, 560, "Input",ExpressionUUID->"238e8eb6-5742-af4e-b536-7deac132983d"],
+Cell[531714, 9636, 3966, 96, 370, "Input",ExpressionUUID->"c350515d-5347-4e4e-ac17-445c4880aaad"],
+Cell[535683, 9734, 110177, 1875, 848, "Input",ExpressionUUID->"c196d4a3-1c66-0446-af16-19cbf385d1d0"],
+Cell[645863, 11611, 6377, 140, 599, "Input",ExpressionUUID->"dc9dae67-d705-d44d-ad1f-462b42d4d474"]
 }
 ]
 *)

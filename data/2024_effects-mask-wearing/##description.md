@@ -12,6 +12,9 @@ The order is prescribed by the date format `year - month - day`, the index numbe
 + __20250814-02_dilution_leakage_02__ = all doors are closed. All air cleaners are running until baseline is reached. then, air cleaner in cabin is stopped. The other two are running. How constant is the baseline in cabin, i.e., how high is the dilution from leakage?
 + __20250911-01_room-conditions-subject-cycling__ = first test with a young man cycling. Cicra 10 minutes of moderate load. Room conditions (CO2, humidity...) and aerosol particle concentrations were measured. respiratory inductance plethysmography was not used.
 + __20260703-01_probe_cabin_3d__ = 3d visualization of the laboratory and the cabin
++ __20260827-01_dynamometer breathing and pexa__ = find correlation of breathing belts (dynamometer) and breathing volume using Pexa's airflow meter. There is also dynamometer raw data during intense cycling
++ __20260910-01.1_test aircleaner__ = standard aerosol concentrations are measured followed by circa 10 min usage of air cleaners and a circa 2 hours follow-up time with closed cabins
+
 
 # file names
 the file names have standard format:

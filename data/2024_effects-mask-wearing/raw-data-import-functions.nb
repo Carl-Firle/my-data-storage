@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[    320425,       6197]
-NotebookOptionsPosition[    318968,       6172]
-NotebookOutlinePosition[    319375,       6188]
-CellTagsIndexPosition[    319332,       6185]
+NotebookDataLength[    320897,       6209]
+NotebookOptionsPosition[    319442,       6184]
+NotebookOutlinePosition[    319847,       6200]
+CellTagsIndexPosition[    319804,       6197]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -128,6 +128,15 @@ particle-formation/raw/refs/heads/main/methods/stringFix_for_protocol.m\>\"",
        RowBox[{"StringReplace", "[", 
         RowBox[{"dProtocol", ",", "dProtocolRepl"}], "]"}]}], 
       "\[IndentingNewLine]", ";", 
+      RowBox[{"id", "=", " ", 
+       RowBox[{
+        RowBox[{"StringSplit", "[", 
+         RowBox[{"dProtocol", ",", 
+          RowBox[{"{", 
+           RowBox[{"\"\<subjectID***\>\"", ",", "\"\<::\>\""}], "}"}]}], 
+         "]"}], "[", 
+        RowBox[{"[", 
+         RowBox[{"-", "3"}], "]"}], "]"}]}], "\[IndentingNewLine]", ";", 
       RowBox[{"protocol", "=", 
        RowBox[{
         RowBox[{
@@ -270,8 +279,10 @@ particle-formation/raw/refs/heads/main/methods/stringFix_for_protocol.m\>\"",
    3.9796599507474957`*^9, 3.9796599513428574`*^9}, {3.979660473160532*^9, 
    3.979660478940716*^9}, {3.979660964492649*^9, 3.979660967090927*^9}, {
    3.9796611050921135`*^9, 3.979661106653036*^9}, {3.99347847147118*^9, 
-   3.9934784723805656`*^9}},
- CellLabel->"In[19]:=",ExpressionUUID->"428067d6-8328-be4f-afb6-dfadc733d23f"],
+   3.9934784723805656`*^9}, {3.998819587621811*^9, 3.998819594912554*^9}, {
+   3.9988197861408215`*^9, 3.9988198055930653`*^9}, {3.998819970011793*^9, 
+   3.9988199710077305`*^9}},ExpressionUUID->"428067d6-8328-be4f-afb6-\
+dfadc733d23f"],
 
 Cell[BoxData[{
  RowBox[{"positionInTimeline", "=."}], "\[IndentingNewLine]", 
@@ -516,7 +527,7 @@ Cell[BoxData[{
               RowBox[{"protocolSelect", "[", "\"\<yearOfBirth\>\"", "]"}], "[", 
               RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "]"}], "[", 
           RowBox[{"[", "1", "]"}], "]"}], ";;", 
-         RowBox[{"-", "2"}]}], ")"}]}], "\[IndentingNewLine]", ";", 
+         RowBox[{"-", "3"}]}], ")"}]}], "\[IndentingNewLine]", ";", 
       RowBox[{"temp", "=", 
        RowBox[{"protocol", "[", 
         RowBox[{"[", "descrDataProtocolPos", "]"}], "]"}]}], 
@@ -1331,9 +1342,10 @@ Cell[BoxData[{
       RowBox[{"oneTable", ",", "newColumn"}], "]"}]}]}], 
    "\[IndentingNewLine]", "]"}]}]}], "Input",
  CellChangeTimes->{{3.971412591644888*^9, 3.9714126764919777`*^9}, {
-  3.9714949633804264`*^9, 3.9714949960396614`*^9}, {3.972314776334444*^9, 
-  3.9723147791733036`*^9}, {3.9730073251678905`*^9, 3.9730073512550163`*^9}},
- CellLabel->"In[32]:=",ExpressionUUID->"763104e3-1363-1041-b160-9f93a317622d"],
+   3.9714949633804264`*^9, 3.9714949960396614`*^9}, {3.972314776334444*^9, 
+   3.9723147791733036`*^9}, {3.9730073251678905`*^9, 3.9730073512550163`*^9}, 
+   3.9988194547994785`*^9},ExpressionUUID->"763104e3-1363-1041-b160-\
+9f93a317622d"],
 
 Cell[BoxData[
  RowBox[{"\[IndentingNewLine]", 
@@ -6171,7 +6183,7 @@ Cell[BoxData[{
 462b42d4d474"]
 },
 WindowSize->{622.5, 729.75},
-WindowMargins->{{19.5, Automatic}, {Automatic, 17.25}},
+WindowMargins->{{Automatic, 192}, {Automatic, 3.75}},
 FrontEndVersion->"15.0 for Microsoft Windows (64-bit) (July 2, 2026)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"ecb341a5-ca65-d74f-b55c-794d4d84b01a"
@@ -6187,18 +6199,18 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[554, 20, 10325, 253, 1177, "Input",ExpressionUUID->"428067d6-8328-be4f-afb6-dfadc733d23f"],
-Cell[10882, 275, 5053, 117, 484, "Input",ExpressionUUID->"36021481-2eaa-6945-abbd-343797993971"],
-Cell[15938, 394, 4346, 99, 465, "Input",ExpressionUUID->"71927a28-be0e-db45-8bb0-feb158927f26"],
-Cell[20287, 495, 32387, 840, 70, "Input",ExpressionUUID->"763104e3-1363-1041-b160-9f93a317622d"],
-Cell[52677, 1337, 110952, 1886, 70, "Input",ExpressionUUID->"250651bb-0156-6949-9799-3678238f7915"],
-Cell[163632, 3225, 166, 2, 70, "Input",ExpressionUUID->"d349b7db-add2-1e4a-9735-2204f0e3aa84"],
-Cell[163801, 3229, 111799, 1904, 70, "Input",ExpressionUUID->"735f81c5-6930-1041-aea3-35b9bbe1004c"],
-Cell[275603, 5135, 17868, 417, 70, "Input",ExpressionUUID->"9c47a7e3-977b-0647-8515-0c9c9f763b10"],
-Cell[293474, 5554, 9133, 226, 70, "Input",ExpressionUUID->"d091ce4a-bf3b-4f4f-aefb-2f411e347bb9"],
-Cell[302610, 5782, 5439, 139, 560, "Input",ExpressionUUID->"238e8eb6-5742-af4e-b536-7deac132983d"],
-Cell[308052, 5923, 3986, 97, 408, "Input",ExpressionUUID->"c350515d-5347-4e4e-ac17-445c4880aaad"],
-Cell[312041, 6022, 6923, 148, 637, "Input",ExpressionUUID->"dc9dae67-d705-d44d-ad1f-462b42d4d474"]
+Cell[554, 20, 10791, 264, 1196, "Input",ExpressionUUID->"428067d6-8328-be4f-afb6-dfadc733d23f"],
+Cell[11348, 286, 5053, 117, 484, "Input",ExpressionUUID->"36021481-2eaa-6945-abbd-343797993971"],
+Cell[16404, 405, 4346, 99, 465, "Input",ExpressionUUID->"71927a28-be0e-db45-8bb0-feb158927f26"],
+Cell[20753, 506, 32395, 841, 3510, "Input",ExpressionUUID->"763104e3-1363-1041-b160-9f93a317622d"],
+Cell[53151, 1349, 110952, 1886, 886, "Input",ExpressionUUID->"250651bb-0156-6949-9799-3678238f7915"],
+Cell[164106, 3237, 166, 2, 70, "Input",ExpressionUUID->"d349b7db-add2-1e4a-9735-2204f0e3aa84"],
+Cell[164275, 3241, 111799, 1904, 70, "Input",ExpressionUUID->"735f81c5-6930-1041-aea3-35b9bbe1004c"],
+Cell[276077, 5147, 17868, 417, 70, "Input",ExpressionUUID->"9c47a7e3-977b-0647-8515-0c9c9f763b10"],
+Cell[293948, 5566, 9133, 226, 70, "Input",ExpressionUUID->"d091ce4a-bf3b-4f4f-aefb-2f411e347bb9"],
+Cell[303084, 5794, 5439, 139, 70, "Input",ExpressionUUID->"238e8eb6-5742-af4e-b536-7deac132983d"],
+Cell[308526, 5935, 3986, 97, 70, "Input",ExpressionUUID->"c350515d-5347-4e4e-ac17-445c4880aaad"],
+Cell[312515, 6034, 6923, 148, 70, "Input",ExpressionUUID->"dc9dae67-d705-d44d-ad1f-462b42d4d474"]
 }
 ]
 *)

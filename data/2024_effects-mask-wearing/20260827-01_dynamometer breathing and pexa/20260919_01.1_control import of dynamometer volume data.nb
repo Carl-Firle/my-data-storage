@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[     36672,        829]
-NotebookOptionsPosition[     34154,        785]
-NotebookOutlinePosition[     34551,        801]
-CellTagsIndexPosition[     34508,        798]
+NotebookDataLength[    167929,       3793]
+NotebookOptionsPosition[    164285,       3738]
+NotebookOutlinePosition[    164686,       3754]
+CellTagsIndexPosition[    164643,       3751]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -197,43 +197,27 @@ Cell[BoxData[{
  CellChangeTimes->{{3.98895722478401*^9, 3.9889572266724873`*^9}, {
   3.988957293280304*^9, 3.988957333214344*^9}, {3.988957456077276*^9, 
   3.988957464919777*^9}},
- CellLabel->"In[70]:=",ExpressionUUID->"8cd0f70d-e319-d64d-9377-e652012323c6"],
-
-Cell[BoxData[
- TemplateBox[{
-  "CloudObject", "cloudnf", "\"No CloudObject found at the given address\"", 
-   2, 71, 8, 30835516923460893651, "Local"},
-  "MessageTemplate",
-  BaseStyle->"MSG"]], "Message",
- CellChangeTimes->{{3.998837028839014*^9, 3.9988370443128395`*^9}, {
-  3.998837076328768*^9, 3.998837094747547*^9}},
- CellLabel->
-  "During evaluation of \
-In[70]:=",ExpressionUUID->"78cea850-e012-5843-9673-c14c46ab15a1"],
-
-Cell[BoxData["$Failed"], "Output",
- CellChangeTimes->{
-  3.998312817773617*^9, {3.9988370289875336`*^9, 3.998837044320938*^9}, {
-   3.998837076335861*^9, 3.99883709475634*^9}},
- CellLabel->"Out[71]=",ExpressionUUID->"b80eb139-059a-af4c-ac1a-9c99c1e73bdf"],
+ CellLabel->"In[20]:=",ExpressionUUID->"8cd0f70d-e319-d64d-9377-e652012323c6"],
 
 Cell[BoxData["\<\"Lucida Sans Unicode\"\>"], "Output",
  CellChangeTimes->{
   3.998312817773617*^9, {3.9988370289875336`*^9, 3.998837044320938*^9}, {
-   3.998837076335861*^9, 3.998837094759323*^9}},
- CellLabel->"Out[73]=",ExpressionUUID->"c06b4a76-4804-9543-b876-8df0aed60fe4"],
+   3.998837076335861*^9, 3.99883709475634*^9}, {3.9988373836970634`*^9, 
+   3.9988373905009956`*^9}},
+ CellLabel->"Out[23]=",ExpressionUUID->"0ab4e688-c182-db47-b938-0c9d9310382b"],
 
 Cell[BoxData[
- RowBox[{"myStyle", "[", 
-  RowBox[{"\<\"Wolfram Mathematica 15.0.1 for Microsoft Windows (64-bit) \
-(July 2, 2026)\"\>", ",", "22", ",", 
-   RowBox[{"Background", "\[Rule]", 
-    TemplateBox[<|"color" -> RGBColor[1, 1, 0]|>,
-     "RGBColorSwatchTemplate"]}]}], "]"}]], "Output",
+ StyleBox["\<\"Wolfram Mathematica 15.0.1 for Microsoft Windows (64-bit) \
+(July 2, 2026)\"\>",
+  StripOnInput->False,
+  FontFamily->"Lucida Sans Unicode",
+  FontSize->22,
+  Background->RGBColor[1, 1, 0]]], "Output",
  CellChangeTimes->{
   3.998312817773617*^9, {3.9988370289875336`*^9, 3.998837044320938*^9}, {
-   3.998837076335861*^9, 3.9988370947623425`*^9}},
- CellLabel->"Out[74]=",ExpressionUUID->"0dd19ba8-9df3-2f41-8ffb-ddad70f4aa1a"],
+   3.998837076335861*^9, 3.99883709475634*^9}, {3.9988373836970634`*^9, 
+   3.998837390503084*^9}},
+ CellLabel->"Out[24]=",ExpressionUUID->"1683c892-57fc-1d45-ba65-e3cad730c4fb"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -451,8 +435,9 @@ Cell[BoxData[
   Selectable->False]], "Output",
  CellChangeTimes->{
   3.998312817773617*^9, {3.9988370289875336`*^9, 3.998837044320938*^9}, {
-   3.998837076335861*^9, 3.998837094789194*^9}},
- CellLabel->"Out[75]=",ExpressionUUID->"ed0da581-5ad8-6443-9d8d-f345c47260ce"],
+   3.998837076335861*^9, 3.99883709475634*^9}, {3.9988373836970634`*^9, 
+   3.9988373905299416`*^9}},
+ CellLabel->"Out[25]=",ExpressionUUID->"6f26804f-0933-4546-b844-95037371f53d"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -662,78 +647,2849 @@ pLf9373/B1Yv4IU=
   Selectable->False]], "Output",
  CellChangeTimes->{
   3.998312817773617*^9, {3.9988370289875336`*^9, 3.998837044320938*^9}, {
-   3.998837076335861*^9, 3.9988370948256817`*^9}},
- CellLabel->"Out[76]=",ExpressionUUID->"fee4d929-e56e-5940-9b15-6a6fae7f2b53"],
+   3.998837076335861*^9, 3.99883709475634*^9}, {3.9988373836970634`*^9, 
+   3.9988373905610123`*^9}},
+ CellLabel->"Out[26]=",ExpressionUUID->"a006e77e-ce2c-9747-8b36-4c00423c28f0"],
 
 Cell[BoxData[
- RowBox[{"myCMYKColors", "[", "]"}]], "Output",
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[<|"color" -> CMYKColor[{0, 0, 1, 0}]|>,
+    "CMYKColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> CMYKColor[{
+        Rational[9, 10], 
+        Rational[1, 5], 
+        Rational[1, 2], 0}]|>,
+    "CMYKColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> CMYKColor[{0, 
+        Rational[3, 5], 1, 0}]|>,
+    "CMYKColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> CMYKColor[{1, 
+        Rational[11, 20], 0, 0}]|>,
+    "CMYKColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> CMYKColor[{0, 
+        Rational[9, 10], 1, 0}]|>,
+    "CMYKColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> CMYKColor[0, 0.09, 1, 0.03]|>,
+    "CMYKColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> CMYKColor[{
+        Rational[9, 20], 0, 
+        Rational[1, 5], 0}]|>,
+    "CMYKColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> CMYKColor[{
+        Rational[2, 5], 
+        Rational[9, 10], 1, 
+        Rational[1, 2]}]|>,
+    "CMYKColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> CMYKColor[{
+        Rational[9, 10], 
+        Rational[2, 5], 0, 0}]|>,
+    "CMYKColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> CMYKColor[{
+        Rational[1, 10], 
+        Rational[1, 10], 
+        Rational[9, 10], 0}]|>,
+    "CMYKColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> CMYKColor[{
+        Rational[7, 20], 
+        Rational[3, 10], 
+        Rational[1, 5], 
+        Rational[1, 5]}]|>,
+    "CMYKColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> CMYKColor[{
+        Rational[7, 10], 0, 
+        Rational[19, 20], 0}]|>,
+    "CMYKColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> CMYKColor[{0, 
+        Rational[1, 5], 
+        Rational[2, 5], 
+        Rational[1, 10]}]|>,
+    "CMYKColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> CMYKColor[{0, 
+        Rational[11, 20], 
+        Rational[1, 4], 0}]|>,
+    "CMYKColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> CMYKColor[{1, 
+        Rational[9, 10], 0, 
+        Rational[1, 2]}]|>,
+    "CMYKColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> CMYKColor[{0, 
+        Rational[3, 10], 1, 0}]|>,
+    "CMYKColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> CMYKColor[{
+        Rational[1, 5], 
+        Rational[1, 10], 
+        Rational[1, 5], 
+        Rational[2, 5]}]|>,
+    "CMYKColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> CMYKColor[{
+        Rational[1, 10], 1, 1, 
+        Rational[1, 5]}]|>,
+    "CMYKColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> CMYKColor[{
+        Rational[3, 5], 
+        Rational[9, 10], 0, 0}]|>,
+    "CMYKColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> CMYKColor[{0, 
+        Rational[1, 20], 
+        Rational[3, 20], 
+        Rational[1, 20]}]|>,
+    "CMYKColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> CMYKColor[{
+        Rational[4, 5], 
+        Rational[1, 10], 
+        Rational[4, 5], 
+        Rational[2, 5]}]|>,
+    "CMYKColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> CMYKColor[{0, 
+        Rational[9, 10], 
+        Rational[9, 10], 
+        Rational[1, 5]}]|>,
+    "CMYKColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> CMYKColor[{1, 
+        Rational[2, 5], 0, 0}]|>,
+    "CMYKColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> CMYKColor[{0, 
+        Rational[3, 5], 
+        Rational[1, 10], 0}]|>,
+    "CMYKColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> CMYKColor[{0, 
+        Rational[1, 5], 
+        Rational[1, 5], 
+        Rational[19, 20]}]|>,
+    "CMYKColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> CMYKColor[{0, 
+        Rational[9, 20], 1, 0}]|>,
+    "CMYKColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> CMYKColor[{
+        Rational[4, 5], 
+        Rational[9, 10], 0, 0}]|>,
+    "CMYKColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> CMYKColor[{0, 
+        Rational[1, 5], 
+        Rational[1, 2], 
+        Rational[1, 5]}]|>,
+    "CMYKColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> CMYKColor[{
+        Rational[1, 5], 1, 1, 
+        Rational[1, 10]}]|>,
+    "CMYKColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> CMYKColor[{
+        Rational[3, 10], 0, 
+        Rational[9, 10], 
+        Rational[2, 5]}]|>,
+    "CMYKColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> CMYKColor[{
+        Rational[99, 100], 
+        Rational[13, 25], 
+        Rational[1, 25], 0}]|>,
+    "CMYKColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> CMYKColor[{0, 
+        Rational[7, 10], 
+        Rational[9, 10], 0}]|>,
+    "CMYKColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> CMYKColor[{0, 1, 0, 0}]|>,
+    "CMYKColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> CMYKColor[{
+        Rational[1, 2], 
+        Rational[9, 10], 0, 
+        Rational[1, 20]}]|>,
+    "CMYKColorSwatchTemplate"]}], "}"}]], "Output",
  CellChangeTimes->{
   3.998312817773617*^9, {3.9988370289875336`*^9, 3.998837044320938*^9}, {
-   3.998837076335861*^9, 3.9988370948346825`*^9}},
- CellLabel->"Out[77]=",ExpressionUUID->"d57c1445-018d-e64d-8b2f-4e7cf0d3e537"],
+   3.998837076335861*^9, 3.99883709475634*^9}, {3.9988373836970634`*^9, 
+   3.9988373905662537`*^9}},
+ CellLabel->"Out[27]=",ExpressionUUID->"05399d59-09d1-9742-932f-23d5cc1cc4e8"],
 
 Cell[BoxData[
- RowBox[{"myBAUAColors", "[", "4", "]"}]], "Output",
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[<|
+    "color" -> RGBColor[
+      0.10196078431372549`, 0.4392156862745098, 0.7215686274509804]|>,
+    "RGBColorSwatchTemplate"], ",", 
+   TemplateBox[<|
+    "color" -> RGBColor[
+      0.38823529411764707`, 0.38823529411764707`, 0.3843137254901961]|>,
+    "RGBColorSwatchTemplate"], ",", 
+   TemplateBox[<|
+    "color" -> RGBColor[
+      0.9568627450980393, 0.9529411764705882, 0.9254901960784314]|>,
+    "RGBColorSwatchTemplate"], ",", 
+   TemplateBox[<|
+    "color" -> RGBColor[
+      0.8901960784313725, 0.8980392156862745, 0.8588235294117647]|>,
+    "RGBColorSwatchTemplate"], ",", 
+   TemplateBox[<|
+    "color" -> RGBColor[
+      0.6705882352941176, 0.8196078431372549, 0.5607843137254902]|>,
+    "RGBColorSwatchTemplate"], ",", 
+   TemplateBox[<|
+    "color" -> RGBColor[
+      0.4588235294117647, 0.7450980392156863, 0.9176470588235294]|>,
+    "RGBColorSwatchTemplate"], ",", 
+   TemplateBox[<|
+    "color" -> RGBColor[0.9254901960784314, 0.4, 0.09019607843137255]|>,
+    "RGBColorSwatchTemplate"], ",", 
+   TemplateBox[<|
+    "color" -> RGBColor[0.9450980392156862, 0.7019607843137254, 0.]|>,
+    "RGBColorSwatchTemplate"], ",", 
+   TemplateBox[<|
+    "color" -> RGBColor[
+      0.6705882352941176, 0.8196078431372549, 0.5607843137254902]|>,
+    "RGBColorSwatchTemplate"], ",", 
+   TemplateBox[<|
+    "color" -> RGBColor[
+      0.06666666666666667, 0.3058823529411765, 0.5058823529411764]|>,
+    "RGBColorSwatchTemplate"], ",", 
+   TemplateBox[<|
+    "color" -> RGBColor[
+      0.00392156862745098, 0.3607843137254902, 0.5764705882352941]|>,
+    "RGBColorSwatchTemplate"], ",", 
+   TemplateBox[<|
+    "color" -> RGBColor[
+      0.6509803921568628, 0.8196078431372549, 0.9450980392156862]|>,
+    "RGBColorSwatchTemplate"], ",", 
+   TemplateBox[<|
+    "color" -> RGBColor[
+      0.8117647058823529, 0.8980392156862745, 0.9725490196078431]|>,
+    "RGBColorSwatchTemplate"]}], "}"}]], "Output",
  CellChangeTimes->{
   3.998312817773617*^9, {3.9988370289875336`*^9, 3.998837044320938*^9}, {
-   3.998837076335861*^9, 3.998837094837681*^9}},
- CellLabel->"Out[78]=",ExpressionUUID->"4b5d047c-a30c-e44b-949d-4cb5f34c44e5"],
+   3.998837076335861*^9, 3.99883709475634*^9}, {3.9988373836970634`*^9, 
+   3.9988373905958023`*^9}},
+ CellLabel->"Out[28]=",ExpressionUUID->"bd7fdcaa-b66e-644e-9eb6-3032efb7f9eb"],
 
 Cell[BoxData[
- RowBox[{"myPureColors", "[", "]"}]], "Output",
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[<|"color" -> RGBColor[1, 0, 0]|>,
+    "RGBColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> RGBColor[0, 0, 1]|>,
+    "RGBColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> RGBColor[0, 1, 0]|>,
+    "RGBColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> RGBColor[1, 0.5, 0]|>,
+    "RGBColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> RGBColor[0, 1, 1]|>,
+    "RGBColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> RGBColor[1, 0, 1]|>,
+    "RGBColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> RGBColor[1, 1, 0]|>,
+    "RGBColorSwatchTemplate"], ",", 
+   TemplateBox[<|"color" -> GrayLevel[0]|>,
+    "GrayLevelColorSwatchTemplate"]}], "}"}]], "Output",
  CellChangeTimes->{
   3.998312817773617*^9, {3.9988370289875336`*^9, 3.998837044320938*^9}, {
-   3.998837076335861*^9, 3.9988370948396835`*^9}},
- CellLabel->"Out[79]=",ExpressionUUID->"e2a64a76-2c95-f544-b805-ac4aa2ef6a65"],
+   3.998837076335861*^9, 3.99883709475634*^9}, {3.9988373836970634`*^9, 
+   3.998837390608717*^9}},
+ CellLabel->"Out[29]=",ExpressionUUID->"44c3159f-ba39-c540-97a0-5402767b861a"],
 
 Cell[BoxData["\<\"C:\\\\Users\\\\mona_\\\\Desktop\\\\source\\\\\"\>"], \
 "Output",
  CellChangeTimes->{
   3.998312817773617*^9, {3.9988370289875336`*^9, 3.998837044320938*^9}, {
-   3.998837076335861*^9, 3.9988370948439064`*^9}},
- CellLabel->"Out[84]=",ExpressionUUID->"1d80cc09-9978-8f4e-a617-8191bb9c4c7b"],
+   3.998837076335861*^9, 3.99883709475634*^9}, {3.9988373836970634`*^9, 
+   3.998837390616537*^9}},
+ CellLabel->"Out[34]=",ExpressionUUID->"194ede0e-de49-a244-ace1-dae87536e15a"],
 
 Cell[BoxData["\<\"C:\\\\Users\\\\mona_\\\\Desktop\\\\output\\\\\"\>"], \
 "Output",
  CellChangeTimes->{
   3.998312817773617*^9, {3.9988370289875336`*^9, 3.998837044320938*^9}, {
-   3.998837076335861*^9, 3.9988370948469048`*^9}},
- CellLabel->"Out[85]=",ExpressionUUID->"b2ef5d77-cbfc-6646-aea3-adf213952e09"],
+   3.998837076335861*^9, 3.99883709475634*^9}, {3.9988373836970634`*^9, 
+   3.9988373906185284`*^9}},
+ CellLabel->"Out[35]=",ExpressionUUID->"16a49a50-1f80-374a-8734-a6c63485a53d"],
 
 Cell[BoxData["\<\"C:\\\\Users\\\\mona_\\\\Desktop\\\\backup\\\\\"\>"], \
 "Output",
  CellChangeTimes->{
   3.998312817773617*^9, {3.9988370289875336`*^9, 3.998837044320938*^9}, {
-   3.998837076335861*^9, 3.998837094849907*^9}},
- CellLabel->"Out[86]=",ExpressionUUID->"0590cf0d-9fc9-9946-b563-e42c8b647a9f"],
+   3.998837076335861*^9, 3.99883709475634*^9}, {3.9988373836970634`*^9, 
+   3.9988373906195316`*^9}},
+ CellLabel->"Out[36]=",ExpressionUUID->"5a5bfff8-4830-3f4e-9ed6-6c49a4257f50"],
 
 Cell[BoxData[
- TemplateBox[{
-  "CloudObjectInformation", "cloudnf", 
-   "\"No CloudObject found at the given address\"", 2, 87, 9, 
-   30835516923460893651, "Local"},
-  "MessageTemplate",
-  BaseStyle->"MSG"]], "Message",
- CellChangeTimes->{{3.998837028839014*^9, 3.9988370443128395`*^9}, {
-  3.998837076328768*^9, 3.998837094884617*^9}},
+ TemplateBox[<|
+  "obj" -> NotebookObject[
+    "93a8c5fc-d8c4-489e-b9b7-b1f5338e3ec0", 
+     "fbe35d18-4704-2948-b58b-51e7c4af0968"], "label" -> "\"myBackup.nb\"", 
+   "tooltip" -> InterpretationBox[
+     RowBox[{"CloudObject", "[", 
+       TemplateBox[{
+        "\"https://www.wolframcloud.com/obj/firlecarl/myBackup.nb\"", 
+         "https://www.wolframcloud.com/obj/firlecarl/myBackup.nb"}, 
+        "HyperlinkURL"], "]"}], 
+     CloudObject["https://www.wolframcloud.com/obj/firlecarl/myBackup.nb"], 
+     SelectWithContents -> True]|>,
+  "NotebookObjectUUIDs"]], "Output",
+ CellChangeTimes->{
+  3.998312817773617*^9, {3.9988370289875336`*^9, 3.998837044320938*^9}, {
+   3.998837076335861*^9, 3.99883709475634*^9}, {3.9988373836970634`*^9, 
+   3.998837390743044*^9}},
+ CellLabel->"Out[37]=",ExpressionUUID->"b8a8e164-cc1e-fa4c-a431-65cba3b88eae"],
+
+Cell[BoxData[
+ TagBox[
+  TagBox[GridBox[{
+     {
+      InterpretationBox[GridBox[{
+         {GridBox[{
+            {
+             RowBox[{
+              RowBox[{"myAroundString", "[", "l_", "]"}], ":=", 
+              RowBox[{"Module", "[", 
+               RowBox[{
+                RowBox[{"{", "}"}], ",", 
+                RowBox[{"If", "[", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"Head", "[", "l", "]"}], "===", "List"}], ",", 
+                  RowBox[{
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"StringJoin", "[", 
+                    RowBox[{
+                    RowBox[{"ToString", "[", 
+                    RowBox[{
+                    "#1", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}], "]"}], 
+                    "~~", "\<\"\[PlusMinus]\"\>", "~~", 
+                    RowBox[{"ToString", "[", 
+                    RowBox[{"#1", "\[LeftDoubleBracket]", 
+                    RowBox[{"-", "1"}], "\[RightDoubleBracket]"}], "]"}]}], 
+                    "]"}], "&"}], ")"}], "/@", "l"}], ",", 
+                  RowBox[{
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"StringJoin", "[", 
+                    RowBox[{
+                    RowBox[{"ToString", "[", 
+                    RowBox[{
+                    "#1", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}], "]"}], 
+                    "~~", "\<\"\[PlusMinus]\"\>", "~~", 
+                    RowBox[{"ToString", "[", 
+                    RowBox[{"#1", "\[LeftDoubleBracket]", 
+                    RowBox[{"-", "1"}], "\[RightDoubleBracket]"}], "]"}]}], 
+                    "]"}], "&"}], ")"}], "[", "l", "]"}]}], "]"}]}], "]"}]}]}
+           },
+           BaselinePosition->{Baseline, {1, 1}},
+           GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+           GridBoxItemSize->{"Columns" -> {{
+                Scaled[0.999]}}, "Rows" -> {{1.}}}]}
+        },
+        BaselinePosition->{Baseline, {1, 1}},
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}],
+       Definition[$CellContext`myAroundString],
+       Editable->False]},
+     {
+      InterpretationBox[GridBox[{
+         {GridBox[{
+            {
+             RowBox[{
+              RowBox[{"myAroundString202512", "[", 
+               RowBox[{"l_List", "/;", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"Dimensions", "[", "l", "]"}], "\[LeftDoubleBracket]",
+                   "2", "\[RightDoubleBracket]"}], "\[Equal]", "2"}]}], "]"}],
+               ":=", 
+              RowBox[{"Module", "[", 
+               RowBox[{
+                RowBox[{"{", "}"}], ",", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"StringJoin", "[", 
+                    RowBox[{
+                    RowBox[{"ToString", "[", 
+                    RowBox[{
+                    "#1", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}], "]"}], 
+                    "~~", "\<\" \[PlusMinus] \"\>", "~~", 
+                    RowBox[{"ToString", "[", 
+                    RowBox[{"#1", "\[LeftDoubleBracket]", 
+                    RowBox[{"-", "1"}], "\[RightDoubleBracket]"}], "]"}]}], 
+                    "]"}], "&"}], ")"}], "/@", "l"}]}], "]"}]}]}
+           },
+           BaselinePosition->{Baseline, {1, 1}},
+           GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+           GridBoxItemSize->{"Columns" -> {{
+                Scaled[0.999]}}, "Rows" -> {{1.}}}]}
+        },
+        BaselinePosition->{Baseline, {1, 1}},
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}],
+       Definition[$CellContext`myAroundString202512],
+       Editable->False]},
+     {
+      InterpretationBox[GridBox[{
+         {GridBox[{
+            {
+             RowBox[{
+              RowBox[{"myBAUAColors", "[", 
+               RowBox[{"a_Integer", ":", "5"}], "]"}], ":=", 
+              RowBox[{"Module", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                 "bauaMainColors", ",", "bauaHighlightColors", ",", 
+                  "bauaBlueColors", ",", "bauaAllColors", ",", 
+                  "bauaDesignColors", ",", "bauaCMYKColors"}], "}"}], ",", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"bauaMainColors", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"RGBColor", "[", "\<\"#1A70B8\"\>", "]"}], ",", 
+                    RowBox[{"RGBColor", "[", "\<\"#636362\"\>", "]"}], ",", 
+                    RowBox[{"RGBColor", "[", "\<\"#F4F3EC\"\>", "]"}], ",", 
+                    RowBox[{"RGBColor", "[", "\<\"#E3E5DB\"\>", "]"}], ",", 
+                    RowBox[{"RGBColor", "[", "\<\"#ABD18F\"\>", "]"}]}], 
+                    "}"}]}], ",", 
+                   RowBox[{"bauaHighlightColors", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"RGBColor", "[", "\<\"#EC6617\"\>", "]"}], ",", 
+                    RowBox[{"RGBColor", "[", "\<\"#75BEEA\"\>", "]"}], ",", 
+                    RowBox[{"RGBColor", "[", "\<\"#ABD18F\"\>", "]"}], ",", 
+                    RowBox[{"RGBColor", "[", "\<\"#F1B300\"\>", "]"}]}], 
+                    "}"}]}], ",", 
+                   RowBox[{"bauaBlueColors", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"RGBColor", "[", "\<\"#114e81\"\>", "]"}], ",", 
+                    RowBox[{"RGBColor", "[", "\<\"#015c93\"\>", "]"}], ",", 
+                    RowBox[{"RGBColor", "[", "\<\"#1770b8\"\>", "]"}], ",", 
+                    RowBox[{"RGBColor", "[", "\<\"#74bdea\"\>", "]"}], ",", 
+                    RowBox[{"RGBColor", "[", "\<\"#a6d1f1\"\>", "]"}], ",", 
+                    RowBox[{"RGBColor", "[", "\<\"#cfe5f8\"\>", "]"}]}], 
+                    "}"}], "}"}]}], ",", 
+                   RowBox[{"bauaAllColors", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"RGBColor", "[", "\<\"#1A70B8\"\>", "]"}], ",", 
+                    RowBox[{"RGBColor", "[", "\<\"#636362\"\>", "]"}], ",", 
+                    RowBox[{"RGBColor", "[", "\<\"#F4F3EC\"\>", "]"}], ",", 
+                    RowBox[{"RGBColor", "[", "\<\"#E3E5DB\"\>", "]"}], ",", 
+                    RowBox[{"RGBColor", "[", "\<\"#ABD18F\"\>", "]"}], ",", 
+                    RowBox[{"RGBColor", "[", "\<\"#75BEEA\"\>", "]"}], ",", 
+                    RowBox[{"RGBColor", "[", "\<\"#EC6617\"\>", "]"}], ",", 
+                    RowBox[{"RGBColor", "[", "\<\"#F1B300\"\>", "]"}], ",", 
+                    RowBox[{"RGBColor", "[", "\<\"#ABD18F\"\>", "]"}], ",", 
+                    RowBox[{"RGBColor", "[", "\<\"#114e81\"\>", "]"}], ",", 
+                    RowBox[{"RGBColor", "[", "\<\"#015c93\"\>", "]"}], ",", 
+                    RowBox[{"RGBColor", "[", "\<\"#a6d1f1\"\>", "]"}], ",", 
+                    RowBox[{"RGBColor", "[", "\<\"#cfe5f8\"\>", "]"}]}], 
+                    "}"}]}], ",", 
+                   RowBox[{"bauaDesignColors", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    
+                    TemplateBox[<|
+                    "color" -> 
+                    RGBColor[
+                    0.4588235294117647, 0.7450980392156863, 
+                    0.9176470588235294]|>,
+                    "RGBColorSwatchTemplate"], ",", 
+                    
+                    TemplateBox[<|
+                    "color" -> 
+                    RGBColor[0.9254901960784314, 0.4, 0.09019607843137255]|>,
+                    "RGBColorSwatchTemplate"], ",", 
+                    
+                    TemplateBox[<|
+                    "color" -> 
+                    RGBColor[
+                    0.6705882352941176, 0.8196078431372549, 
+                    0.5607843137254902]|>,
+                    "RGBColorSwatchTemplate"], ",", 
+                    
+                    TemplateBox[<|
+                    "color" -> 
+                    RGBColor[0.9450980392156862, 0.7019607843137254, 0.]|>,
+                    "RGBColorSwatchTemplate"], ",", 
+                    
+                    TemplateBox[<|
+                    "color" -> 
+                    RGBColor[
+                    0.10196078431372549`, 0.4392156862745098, 
+                    0.7215686274509804]|>,
+                    "RGBColorSwatchTemplate"], ",", 
+                    
+                    TemplateBox[<|
+                    "color" -> 
+                    RGBColor[
+                    0.38823529411764707`, 0.38823529411764707`, 
+                    0.3843137254901961]|>,
+                    "RGBColorSwatchTemplate"], ",", 
+                    
+                    TemplateBox[<|
+                    "color" -> 
+                    RGBColor[
+                    0.8901960784313725, 0.8980392156862745, 
+                    0.8588235294117647]|>,
+                    "RGBColorSwatchTemplate"], ",", 
+                    
+                    TemplateBox[<|
+                    "color" -> 
+                    RGBColor[
+                    0.8117647058823529, 0.8980392156862745, 
+                    0.9725490196078431]|>,
+                    "RGBColorSwatchTemplate"], ",", 
+                    
+                    TemplateBox[<|
+                    "color" -> 
+                    RGBColor[
+                    0.06666666666666667, 0.3058823529411765, 
+                    0.5058823529411764]|>,
+                    "RGBColorSwatchTemplate"]}], "}"}]}], ",", 
+                   RowBox[{"bauaCMYKColors", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    TemplateBox[<|"color" -> CMYKColor[0.85, 0.5, 0, 0]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[0.85, 0.5, 0, 0, 0.7]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[0.85, 0.5, 0, 0, 0.4]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[0.85, 0.45, 0, 0.3]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[0.85, 0.5, 0, 0.4]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    
+                    TemplateBox[<|
+                    "color" -> CMYKColor[0.85, 0.45, 0, 0.3, 0.7]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    
+                    TemplateBox[<|
+                    "color" -> CMYKColor[0.85, 0.45, 0, 0.3, 0.5]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    
+                    TemplateBox[<|
+                    "color" -> CMYKColor[0.85, 0.45, 0, 0.3, 0.3]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[0., 0., 0, 0.75]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[0., 0., 0.05, 0.06]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    
+                    TemplateBox[<|
+                    "color" -> CMYKColor[0.08, 0.03, 0.12, 0.07]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[0.62, 0.27, 0.92, 0.7]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[0.55, 0.1, 0, 0]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[0., 0.75, 1, 0]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[0., 0.3, 1, 0.05]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[0.4, 0., 0.55, 0]|>,
+                    "CMYKColorSwatchTemplate"]}], "}"}]}]}], "}"}], "\[LeftDoubleBracket]", 
+                 RowBox[{"a", ",", "2"}], "\[RightDoubleBracket]"}]}], "]"}]}]}
+           },
+           BaselinePosition->{Baseline, {1, 1}},
+           GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+           GridBoxItemSize->{"Columns" -> {{
+                Scaled[0.999]}}, "Rows" -> {{1.}}}]}
+        },
+        BaselinePosition->{Baseline, {1, 1}},
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}],
+       Definition[$CellContext`myBAUAColors],
+       Editable->False]},
+     {
+      InterpretationBox[GridBox[{
+         {GridBox[{
+            {
+             RowBox[{
+              RowBox[{"myCMYKColors", "[", 
+               RowBox[{"a_Integer", ":", "1"}], "]"}], ":=", 
+              RowBox[{"Module", "[", 
+               RowBox[{
+                RowBox[{"{", "}"}], ",", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{
+                    TemplateBox[<|"color" -> CMYKColor[{0, 0, 1, 0}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[9, 10], 
+                    Rational[1, 5], 
+                    Rational[1, 2], 0}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{0, 
+                    Rational[3, 5], 1, 0}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{1, 
+                    Rational[11, 20], 0, 0}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{0, 
+                    Rational[9, 10], 1, 0}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[0, 0.09, 1, 0.03]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[9, 20], 0, 
+                    Rational[1, 5], 0}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[2, 5], 
+                    Rational[9, 10], 1, 
+                    Rational[1, 2]}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[9, 10], 
+                    Rational[2, 5], 0, 0}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[1, 10], 
+                    Rational[1, 10], 
+                    Rational[9, 10], 0}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[7, 20], 
+                    Rational[3, 10], 
+                    Rational[1, 5], 
+                    Rational[1, 5]}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[7, 10], 0, 
+                    Rational[19, 20], 0}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{0, 
+                    Rational[1, 5], 
+                    Rational[2, 5], 
+                    Rational[1, 10]}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{0, 
+                    Rational[11, 20], 
+                    Rational[1, 4], 0}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{1, 
+                    Rational[9, 10], 0, 
+                    Rational[1, 2]}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{0, 
+                    Rational[3, 10], 1, 0}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[1, 5], 
+                    Rational[1, 10], 
+                    Rational[1, 5], 
+                    Rational[2, 5]}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[1, 10], 1, 1, 
+                    Rational[1, 5]}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[3, 5], 
+                    Rational[9, 10], 0, 0}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{0, 
+                    Rational[1, 20], 
+                    Rational[3, 20], 
+                    Rational[1, 20]}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[4, 5], 
+                    Rational[1, 10], 
+                    Rational[4, 5], 
+                    Rational[2, 5]}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{0, 
+                    Rational[9, 10], 
+                    Rational[9, 10], 
+                    Rational[1, 5]}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{1, 
+                    Rational[2, 5], 0, 0}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{0, 
+                    Rational[3, 5], 
+                    Rational[1, 10], 0}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{0, 
+                    Rational[1, 5], 
+                    Rational[1, 5], 
+                    Rational[19, 20]}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{0, 
+                    Rational[9, 20], 1, 0}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[4, 5], 
+                    Rational[9, 10], 0, 0}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{0, 
+                    Rational[1, 5], 
+                    Rational[1, 2], 
+                    Rational[1, 5]}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[1, 5], 1, 1, 
+                    Rational[1, 10]}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[3, 10], 0, 
+                    Rational[9, 10], 
+                    Rational[2, 5]}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[99, 100], 
+                    Rational[13, 25], 
+                    Rational[1, 25], 0}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{0, 
+                    Rational[7, 10], 
+                    Rational[9, 10], 0}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{0, 1, 0, 0}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[1, 2], 
+                    Rational[9, 10], 0, 
+                    Rational[1, 20]}]|>,
+                    "CMYKColorSwatchTemplate"]}], "}"}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"\<\"Leuchtgelb\"\>", "\[Rule]", 
+                    TemplateBox[<|"color" -> CMYKColor[{0, 0, 1, 0}]|>,
+                    "CMYKColorSwatchTemplate"]}], ",", 
+                    RowBox[{"\<\"Zitronengelb\"\>", "\[Rule]", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[1, 10], 
+                    Rational[1, 10], 
+                    Rational[9, 10], 0}]|>,
+                    "CMYKColorSwatchTemplate"]}], ",", 
+                    RowBox[{"\<\"Orange\"\>", "\[Rule]", 
+                    TemplateBox[<|"color" -> CMYKColor[{0, 
+                    Rational[11, 20], 1, 0}]|>,
+                    "CMYKColorSwatchTemplate"]}], ",", 
+                    RowBox[{"\<\"Hellrosa\"\>", "\[Rule]", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[1, 20], 
+                    Rational[2, 5], 
+                    Rational[1, 5], 0}]|>,
+                    "CMYKColorSwatchTemplate"]}], ",", 
+                    RowBox[{"\<\"Altrosa\"\>", "\[Rule]", 
+                    TemplateBox[<|"color" -> CMYKColor[{0, 
+                    Rational[3, 5], 
+                    Rational[1, 10], 0}]|>,
+                    "CMYKColorSwatchTemplate"]}], ",", 
+                    RowBox[{"\<\"Feuerrot\"\>", "\[Rule]", 
+                    TemplateBox[<|"color" -> CMYKColor[{0, 1, 1, 
+                    Rational[1, 5]}]|>,
+                    "CMYKColorSwatchTemplate"]}], ",", 
+                    RowBox[{"\<\"Signalrot\"\>", "\[Rule]", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[1, 5], 1, 1, 
+                    Rational[1, 10]}]|>,
+                    "CMYKColorSwatchTemplate"]}], ",", 
+                    RowBox[{"\<\"Korallenrot\"\>", "\[Rule]", 
+                    TemplateBox[<|"color" -> CMYKColor[{0, 
+                    Rational[9, 10], 
+                    Rational[9, 10], 
+                    Rational[1, 5]}]|>,
+                    "CMYKColorSwatchTemplate"]}], ",", 
+                    RowBox[{"\<\"Leuchtrot\"\>", "\[Rule]", 
+                    TemplateBox[<|"color" -> CMYKColor[{0, 
+                    Rational[9, 10], 1, 0}]|>,
+                    "CMYKColorSwatchTemplate"]}], ",", 
+                    RowBox[{"\<\"Reines Rot\"\>", "\[Rule]", 
+                    TemplateBox[<|"color" -> CMYKColor[{0, 1, 
+                    Rational[9, 10], 0}]|>,
+                    "CMYKColorSwatchTemplate"]}], ",", 
+                    RowBox[{"\<\"Weinrot\"\>", "\[Rule]", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[7, 20], 1, 
+                    Rational[13, 20], 0}]|>,
+                    "CMYKColorSwatchTemplate"]}], ",", 
+                    RowBox[{"\<\"Pink\"\>", "\[Rule]", 
+                    TemplateBox[<|"color" -> CMYKColor[{0, 1, 0, 0}]|>,
+                    "CMYKColorSwatchTemplate"]}], ",", 
+                    RowBox[{"\<\"Lila\"\>", "\[Rule]", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[1, 2], 
+                    Rational[3, 5], 0, 0}]|>,
+                    "CMYKColorSwatchTemplate"]}], ",", 
+                    RowBox[{"\<\"Violett\"\>", "\[Rule]", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[3, 5], 
+                    Rational[9, 10], 0, 
+                    Rational[1, 10]}]|>,
+                    "CMYKColorSwatchTemplate"]}], ",", 
+                    RowBox[{"\<\"Azurblau\"\>", "\[Rule]", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[99, 100], 
+                    Rational[13, 25], 
+                    Rational[1, 25], 0}]|>,
+                    "CMYKColorSwatchTemplate"]}], ",", 
+                    RowBox[{"\<\"Himmelblau\"\>", "\[Rule]", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[9, 10], 
+                    Rational[2, 5], 0, 0}]|>,
+                    "CMYKColorSwatchTemplate"]}], ",", 
+                    RowBox[{"\<\"Reines Blau\"\>", "\[Rule]", 
+                    TemplateBox[<|"color" -> CMYKColor[{1, 
+                    Rational[7, 10], 0, 0}]|>,
+                    "CMYKColorSwatchTemplate"]}], ",", 
+                    RowBox[{"\<\"Nachtblau\"\>", "\[Rule]", 
+                    TemplateBox[<|"color" -> CMYKColor[{1, 
+                    Rational[9, 10], 0, 
+                    Rational[1, 2]}]|>,
+                    "CMYKColorSwatchTemplate"]}], ",", 
+                    RowBox[{"\<\"Pastellt\[UDoubleDot]rkis\"\>", "\[Rule]", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[3, 5], 
+                    Rational[1, 10], 
+                    Rational[1, 2], 0}]|>,
+                    "CMYKColorSwatchTemplate"]}], ",", 
+                    RowBox[{"\<\"Mintt\[UDoubleDot]rkis\"\>", "\[Rule]", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[9, 10], 
+                    Rational[1, 5], 
+                    Rational[1, 2], 0}]|>,
+                    "CMYKColorSwatchTemplate"]}], ",", 
+                    RowBox[{"\<\"T\[UDoubleDot]rkis\"\>", "\[Rule]", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[9, 10], 
+                    Rational[1, 10], 
+                    Rational[2, 5], 
+                    Rational[1, 10]}]|>,
+                    "CMYKColorSwatchTemplate"]}], ",", 
+                    
+                    RowBox[{"\<\"Leuchtgr\[UDoubleDot]n/Gelbgr\[UDoubleDot]n\"\
+\>", "\[Rule]", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[7, 10], 0, 
+                    Rational[19, 20], 0}]|>,
+                    "CMYKColorSwatchTemplate"]}], ",", 
+                    RowBox[{"\<\"Gr\[UDoubleDot]n\"\>", "\[Rule]", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[9, 10], 0, 
+                    Rational[4, 5], 0}]|>,
+                    "CMYKColorSwatchTemplate"]}], ",", 
+                    RowBox[{"\<\"Grasgr\[UDoubleDot]n\"\>", "\[Rule]", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[9, 10], 
+                    Rational[1, 5], 1, 
+                    Rational[1, 4]}]|>,
+                    "CMYKColorSwatchTemplate"]}], ",", 
+                    RowBox[{"\<\"Maigr\[UDoubleDot]n\"\>", "\[Rule]", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[4, 5], 
+                    Rational[1, 5], 1, 
+                    Rational[1, 10]}]|>,
+                    "CMYKColorSwatchTemplate"]}], ",", 
+                    RowBox[{"\<\"Rotbraun\"\>", "\[Rule]", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[2, 5], 
+                    Rational[9, 10], 1, 
+                    Rational[1, 2]}]|>,
+                    "CMYKColorSwatchTemplate"]}], ",", 
+                    RowBox[{"\<\"Kastanienbraun\"\>", "\[Rule]", 
+                    TemplateBox[<|"color" -> CMYKColor[{0, 
+                    Rational[3, 5], 
+                    Rational[3, 5], 
+                    Rational[7, 10]}]|>,
+                    "CMYKColorSwatchTemplate"]}], ",", 
+                    RowBox[{"\<\"Schokobraun\"\>", "\[Rule]", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[2, 5], 
+                    Rational[9, 10], 1, 
+                    Rational[1, 2]}]|>,
+                    "CMYKColorSwatchTemplate"]}], ",", 
+                    RowBox[{"\<\"Cremewei\[SZ]\"\>", "\[Rule]", 
+                    TemplateBox[<|"color" -> CMYKColor[{0, 
+                    Rational[1, 20], 
+                    Rational[3, 20], 
+                    Rational[1, 20]}]|>,
+                    "CMYKColorSwatchTemplate"]}], ",", 
+                    RowBox[{"\<\"Beige\"\>", "\[Rule]", 
+                    TemplateBox[<|"color" -> CMYKColor[{0, 
+                    Rational[1, 5], 
+                    Rational[2, 5], 
+                    Rational[1, 10]}]|>,
+                    "CMYKColorSwatchTemplate"]}], ",", 
+                    RowBox[{"\<\"Silbergrau\"\>", "\[Rule]", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[1, 10], 0, 0, 
+                    Rational[2, 5]}]|>,
+                    "CMYKColorSwatchTemplate"]}], ",", 
+                    RowBox[{"\<\"Steingrau\"\>", "\[Rule]", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[1, 5], 
+                    Rational[1, 10], 
+                    Rational[1, 5], 
+                    Rational[2, 5]}]|>,
+                    "CMYKColorSwatchTemplate"]}], ",", 
+                    RowBox[{"\<\"Tiefschwarz\"\>", "\[Rule]", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[2, 5], 
+                    Rational[1, 5], 
+                    Rational[1, 5], 1}]|>,
+                    "CMYKColorSwatchTemplate"]}]}], "}"}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"\<\"Leuchtgelb\"\>", "\[Rule]", 
+                    RowBox[{"{", 
+                    TemplateBox[<|"color" -> CMYKColor[{0, 0, 1, 0}]|>,
+                    "CMYKColorSwatchTemplate"], "}"}]}], ",", 
+                    RowBox[{"\<\"Zitronengelb\"\>", "\[Rule]", 
+                    RowBox[{"{", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[1, 10], 
+                    Rational[1, 10], 
+                    Rational[9, 10], 0}]|>,
+                    "CMYKColorSwatchTemplate"], "}"}]}], ",", 
+                    RowBox[{"\<\"Orange\"\>", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    TemplateBox[<|"color" -> CMYKColor[{0, 
+                    Rational[3, 10], 1, 0}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{0, 
+                    Rational[9, 20], 1, 0}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{0, 
+                    Rational[1, 2], 1, 0}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{0, 
+                    Rational[11, 20], 1, 0}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{0, 
+                    Rational[3, 5], 1, 0}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{0, 
+                    Rational[13, 20], 1, 0}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{0, 
+                    Rational[7, 10], 
+                    Rational[9, 10], 0}]|>,
+                    "CMYKColorSwatchTemplate"]}], "}"}]}], ",", 
+                    RowBox[{"\<\"Hellrosa\"\>", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[1, 20], 
+                    Rational[2, 5], 
+                    Rational[1, 5], 0}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{0, 
+                    Rational[1, 2], 
+                    Rational[1, 5], 
+                    Rational[1, 10]}]|>,
+                    "CMYKColorSwatchTemplate"]}], "}"}]}], ",", 
+                    RowBox[{"\<\"Altrosa\"\>", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    TemplateBox[<|"color" -> CMYKColor[{0, 
+                    Rational[11, 20], 
+                    Rational[1, 4], 0}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{0, 
+                    Rational[3, 5], 
+                    Rational[1, 10], 0}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{0, 
+                    Rational[7, 10], 
+                    Rational[3, 10], 
+                    Rational[1, 10]}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{0, 
+                    Rational[13, 20], 
+                    Rational[2, 5], 
+                    Rational[1, 10]}]|>,
+                    "CMYKColorSwatchTemplate"]}], "}"}]}], ",", 
+                    RowBox[{"\<\"Feuerrot\"\>", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    TemplateBox[<|"color" -> CMYKColor[{0, 1, 1, 
+                    Rational[1, 5]}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[1, 10], 1, 1, 
+                    Rational[1, 5]}]|>,
+                    "CMYKColorSwatchTemplate"]}], "}"}]}], ",", 
+                    RowBox[{"\<\"Signalrot\"\>", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[1, 5], 1, 1, 
+                    Rational[1, 10]}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[1, 5], 1, 
+                    Rational[9, 10], 
+                    Rational[1, 10]}]|>,
+                    "CMYKColorSwatchTemplate"]}], "}"}]}], ",", 
+                    RowBox[{"\<\"Korallenrot\"\>", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    TemplateBox[<|"color" -> CMYKColor[{0, 
+                    Rational[9, 10], 
+                    Rational[9, 10], 
+                    Rational[1, 5]}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{0, 
+                    Rational[9, 10], 
+                    Rational[9, 10], 
+                    Rational[3, 10]}]|>,
+                    "CMYKColorSwatchTemplate"]}], "}"}]}], ",", 
+                    RowBox[{"\<\"Leuchtrot\"\>", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    TemplateBox[<|"color" -> CMYKColor[{0, 
+                    Rational[9, 10], 1, 0}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{0, 1, 1, 0}]|>,
+                    "CMYKColorSwatchTemplate"]}], "}"}]}], ",", 
+                    RowBox[{"\<\"Reines Rot\"\>", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    TemplateBox[<|"color" -> CMYKColor[{0, 1, 
+                    Rational[9, 10], 0}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{0, 1, 
+                    Rational[7, 10], 0}]|>,
+                    "CMYKColorSwatchTemplate"]}], "}"}]}], ",", 
+                    RowBox[{"\<\"Weinrot\"\>", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[1, 5], 1, 
+                    Rational[4, 5], 
+                    Rational[2, 5]}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[2, 5], 1, 
+                    Rational[3, 5], 
+                    Rational[2, 5]}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[7, 20], 1, 
+                    Rational[13, 20], 0}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[3, 5], 1, 
+                    Rational[4, 5], 0}]|>,
+                    "CMYKColorSwatchTemplate"]}], "}"}]}], ",", 
+                    RowBox[{"\<\"Pink\"\>", "\[Rule]", 
+                    RowBox[{"{", 
+                    TemplateBox[<|"color" -> CMYKColor[{0, 1, 0, 0}]|>,
+                    "CMYKColorSwatchTemplate"], "}"}]}], ",", 
+                    RowBox[{"\<\"Lila\"\>", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[1, 2], 
+                    Rational[3, 5], 0, 0}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[3, 5], 
+                    Rational[7, 10], 
+                    Rational[1, 20], 
+                    Rational[1, 10]}]|>,
+                    "CMYKColorSwatchTemplate"]}], "}"}]}], ",", 
+                    RowBox[{"\<\"Violett\"\>", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[1, 2], 
+                    Rational[9, 10], 0, 
+                    Rational[1, 20]}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[3, 5], 
+                    Rational[9, 10], 0, 0}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[3, 5], 
+                    Rational[9, 10], 0, 
+                    Rational[1, 10]}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[4, 5], 
+                    Rational[9, 10], 0, 0}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[3, 5], 
+                    Rational[9, 10], 0, 0}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[9, 10], 1, 0, 0}]|>,
+                    "CMYKColorSwatchTemplate"]}], "}"}]}], ",", 
+                    RowBox[{"\<\"Azurblau\"\>", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[9, 10], 
+                    Rational[3, 10], 
+                    Rational[1, 10], 
+                    Rational[2, 5]}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[9, 10], 
+                    Rational[2, 5], 0, 
+                    Rational[3, 10]}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[99, 100], 
+                    Rational[13, 25], 
+                    Rational[1, 25], 0}]|>,
+                    "CMYKColorSwatchTemplate"]}], "}"}]}], ",", 
+                    RowBox[{"\<\"Himmelblau\"\>", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[9, 10], 
+                    Rational[2, 5], 0, 0}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[9, 10], 
+                    Rational[1, 2], 0, 0}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{1, 
+                    Rational[3, 10], 0, 
+                    Rational[1, 10]}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{1, 
+                    Rational[2, 5], 0, 0}]|>,
+                    "CMYKColorSwatchTemplate"]}], "}"}]}], ",", 
+                    RowBox[{"\<\"Reines Blau\"\>", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    TemplateBox[<|"color" -> CMYKColor[{1, 
+                    Rational[2, 5], 0, 0}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{1, 
+                    Rational[11, 20], 0, 0}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{1, 
+                    Rational[7, 10], 0, 0}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{1, 
+                    Rational[4, 5], 0, 0}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[19, 20], 
+                    Rational[3, 5], 0, 
+                    Rational[1, 5]}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{1, 
+                    Rational[2, 5], 0, 
+                    Rational[2, 5]}]|>,
+                    "CMYKColorSwatchTemplate"]}], "}"}]}], ",", 
+                    RowBox[{"\<\"Nachtblau\"\>", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    TemplateBox[<|"color" -> CMYKColor[{1, 
+                    Rational[9, 10], 0, 
+                    Rational[1, 2]}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{1, 1, 
+                    Rational[2, 5], 
+                    Rational[2, 5]}]|>,
+                    "CMYKColorSwatchTemplate"]}], "}"}]}], ",", 
+                    RowBox[{"\<\"Pastellt\[UDoubleDot]rkis\"\>", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[9, 20], 0, 
+                    Rational[1, 5], 0}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[3, 5], 
+                    Rational[1, 10], 
+                    Rational[1, 2], 0}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[9, 20], 0, 
+                    Rational[1, 5], 
+                    Rational[1, 5]}]|>,
+                    "CMYKColorSwatchTemplate"]}], "}"}]}], ",", 
+                    RowBox[{"\<\"Mintt\[UDoubleDot]rkis\"\>", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[4, 5], 
+                    Rational[1, 5], 
+                    Rational[1, 2], 0}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[7, 10], 
+                    Rational[3, 20], 
+                    Rational[1, 2], 
+                    Rational[1, 5]}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[9, 10], 
+                    Rational[1, 5], 
+                    Rational[1, 2], 0}]|>,
+                    "CMYKColorSwatchTemplate"]}], "}"}]}], ",", 
+                    RowBox[{"\<\"T\[UDoubleDot]rkis\"\>", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[4, 5], 
+                    Rational[1, 10], 
+                    Rational[7, 20], 
+                    Rational[1, 5]}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[9, 10], 
+                    Rational[1, 10], 
+                    Rational[2, 5], 
+                    Rational[1, 10]}]|>,
+                    "CMYKColorSwatchTemplate"]}], "}"}]}], ",", 
+                    
+                    RowBox[{"\<\"Leuchtgr\[UDoubleDot]n/Gelbgr\[UDoubleDot]n\"\
+\>", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[7, 10], 0, 
+                    Rational[19, 20], 0}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[3, 5], 0, 
+                    Rational[19, 20], 0}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[7, 10], 0, 
+                    Rational[9, 10], 0}]|>,
+                    "CMYKColorSwatchTemplate"]}], "}"}]}], ",", 
+                    RowBox[{"\<\"Gr\[UDoubleDot]n\"\>", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[13, 20], 0, 
+                    Rational[4, 5], 0}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[9, 10], 0, 
+                    Rational[4, 5], 0}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[17, 20], 0, 1, 0}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[17, 20], 0, 1, 
+                    Rational[1, 10]}]|>,
+                    "CMYKColorSwatchTemplate"]}], "}"}]}], ",", 
+                    RowBox[{"\<\"Grasgr\[UDoubleDot]n\"\>", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[3, 5], 0, 
+                    Rational[9, 10], 
+                    Rational[1, 10]}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[3, 10], 0, 
+                    Rational[9, 10], 
+                    Rational[2, 5]}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[21, 25], 0, 1, 0}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[9, 10], 
+                    Rational[1, 5], 1, 
+                    Rational[1, 4]}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[7, 10], 
+                    Rational[1, 10], 
+                    Rational[4, 5], 
+                    Rational[2, 5]}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[4, 5], 
+                    Rational[1, 10], 
+                    Rational[4, 5], 
+                    Rational[2, 5]}]|>,
+                    "CMYKColorSwatchTemplate"]}], "}"}]}], ",", 
+                    RowBox[{"\<\"Maigr\[UDoubleDot]n\"\>", "\[Rule]", 
+                    RowBox[{"{", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[4, 5], 
+                    Rational[1, 5], 1, 
+                    Rational[1, 10]}]|>,
+                    "CMYKColorSwatchTemplate"], "}"}]}], ",", 
+                    RowBox[{"\<\"Rotbraun\"\>", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[2, 5], 
+                    Rational[9, 10], 1, 
+                    Rational[1, 2]}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[1, 20], 1, 1, 
+                    Rational[4, 5]}]|>,
+                    "CMYKColorSwatchTemplate"]}], "}"}]}], ",", 
+                    RowBox[{"\<\"Kastanienbraun\"\>", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    TemplateBox[<|"color" -> CMYKColor[{0, 
+                    Rational[3, 5], 
+                    Rational[3, 5], 
+                    Rational[7, 10]}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[1, 2], 1, 1, 
+                    Rational[1, 2]}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{0, 
+                    Rational[9, 10], 1, 
+                    Rational[4, 5]}]|>,
+                    "CMYKColorSwatchTemplate"]}], "}"}]}], ",", 
+                    RowBox[{"\<\"Schokobraun\"\>", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[2, 5], 
+                    Rational[9, 10], 1, 
+                    Rational[1, 2]}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{0, 
+                    Rational[3, 5], 
+                    Rational[9, 10], 
+                    Rational[4, 5]}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[2, 5], 
+                    Rational[7, 10], 
+                    Rational[3, 5], 
+                    Rational[4, 5]}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{0, 
+                    Rational[1, 5], 
+                    Rational[1, 5], 
+                    Rational[19, 20]}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[3, 5], 
+                    Rational[4, 5], 
+                    Rational[4, 5], 
+                    Rational[4, 5]}]|>,
+                    "CMYKColorSwatchTemplate"]}], "}"}]}], ",", 
+                    RowBox[{"\<\"Cremewei\[SZ]\"\>", "\[Rule]", 
+                    RowBox[{"{", 
+                    TemplateBox[<|"color" -> CMYKColor[{0, 
+                    Rational[1, 20], 
+                    Rational[3, 20], 
+                    Rational[1, 20]}]|>,
+                    "CMYKColorSwatchTemplate"], "}"}]}], ",", 
+                    RowBox[{"\<\"Beige\"\>", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    TemplateBox[<|"color" -> CMYKColor[{0, 
+                    Rational[1, 5], 
+                    Rational[2, 5], 
+                    Rational[1, 10]}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{0, 
+                    Rational[1, 5], 
+                    Rational[1, 2], 
+                    Rational[1, 5]}]|>,
+                    "CMYKColorSwatchTemplate"]}], "}"}]}], ",", 
+                    RowBox[{"\<\"Silbergrau\"\>", "\[Rule]", 
+                    RowBox[{"{", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[1, 10], 0, 0, 
+                    Rational[2, 5]}]|>,
+                    "CMYKColorSwatchTemplate"], "}"}]}], ",", 
+                    RowBox[{"\<\"Steingrau\"\>", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[1, 5], 
+                    Rational[1, 10], 
+                    Rational[1, 5], 
+                    Rational[2, 5]}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[7, 20], 
+                    Rational[3, 10], 
+                    Rational[1, 5], 
+                    Rational[1, 5]}]|>,
+                    "CMYKColorSwatchTemplate"]}], "}"}]}], ",", 
+                    RowBox[{"\<\"Tiefschwarz\"\>", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    TemplateBox[<|"color" -> CMYKColor[{1, 
+                    Rational[2, 5], 
+                    Rational[2, 5], 
+                    Rational[9, 10]}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[2, 5], 
+                    Rational[1, 5], 
+                    Rational[1, 5], 1}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{
+                    Rational[3, 10], 0, 0, 1}]|>,
+                    "CMYKColorSwatchTemplate"], ",", 
+                    TemplateBox[<|"color" -> CMYKColor[{0, 
+                    Rational[1, 2], 
+                    Rational[1, 5], 1}]|>,
+                    "CMYKColorSwatchTemplate"]}], "}"}]}]}], "}"}]}], "}"}], "\[LeftDoubleBracket]",
+                  "a", "\[RightDoubleBracket]"}]}], "]"}]}]}
+           },
+           BaselinePosition->{Baseline, {1, 1}},
+           GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+           GridBoxItemSize->{"Columns" -> {{
+                Scaled[0.999]}}, "Rows" -> {{1.}}}]}
+        },
+        BaselinePosition->{Baseline, {1, 1}},
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}],
+       Definition[$CellContext`myCMYKColors],
+       Editable->False]},
+     {
+      InterpretationBox[GridBox[{
+         {GridBox[{
+            {
+             RowBox[{
+              RowBox[{"myExcelAppend", "[", 
+               RowBox[{"s_String", ",", "l_"}], "]"}], ":=", 
+              RowBox[{"AppendTo", "[", 
+               RowBox[{"myExcelOutput", ",", 
+                RowBox[{"s", "\[Rule]", 
+                 RowBox[{"myPrepExcel", "[", "l", "]"}]}]}], "]"}]}]}
+           },
+           BaselinePosition->{Baseline, {1, 1}},
+           GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+           GridBoxItemSize->{"Columns" -> {{
+                Scaled[0.999]}}, "Rows" -> {{1.}}}]}
+        },
+        BaselinePosition->{Baseline, {1, 1}},
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}],
+       Definition[$CellContext`myExcelAppend],
+       Editable->False]},
+     {
+      InterpretationBox[GridBox[{
+         {GridBox[{
+            {
+             RowBox[{
+              RowBox[{"myExportEquations", "[", "l_List", "]"}], ":=", 
+              RowBox[{"Module", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"id", ",", "eq"}], "}"}], ",", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"id", "=", 
+                    RowBox[{
+                    "#1", "\[LeftDoubleBracket]", "2", 
+                    "\[RightDoubleBracket]"}]}], ";", 
+                    RowBox[{"eq", "=", 
+                    RowBox[{
+                    "#1", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}]}], ";", 
+                    RowBox[{"Export", "[", 
+                    RowBox[{
+                    RowBox[{
+                    "exPath", "~~", "\<\"\\\\equations\\\\\"\>", "~~", "id", 
+                    "~~", "\<\".txt\"\>"}], ",", 
+                    RowBox[{"ExportString", "[", 
+                    RowBox[{"eq", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"\<\"MathML\"\>", ",", "\<\"Expression\"\>"}], 
+                    "}"}]}], "]"}]}], "]"}], ";", 
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{"MemberQ", "[", 
+                    RowBox[{
+                    RowBox[{"myExportEquationList", "\[LeftDoubleBracket]", 
+                    RowBox[{"All", ",", "1"}], "\[RightDoubleBracket]"}], ",",
+                     "id"}], "]"}], ",", 
+                    RowBox[{
+                    RowBox[{"myExportEquationList", "=", 
+                    RowBox[{"ReplacePart", "[", 
+                    RowBox[{"myExportEquationList", ",", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"FirstPosition", "[", 
+                    RowBox[{
+                    RowBox[{"myExportEquationList", "\[LeftDoubleBracket]", 
+                    RowBox[{"All", ",", "1"}], "\[RightDoubleBracket]"}], ",",
+                     "id"}], "]"}], "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}], "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{"id", ",", "eq"}], "}"}]}]}], "]"}]}], ";"}], ",", 
+                    RowBox[{"AppendTo", "[", 
+                    RowBox[{"myExportEquationList", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"id", ",", "eq"}], "}"}]}], "]"}]}], "]"}], ";"}],
+                     ")"}], "&"}], ")"}], "/@", "l"}], " ", 
+                  RowBox[{"Export", "[", 
+                   RowBox[{
+                    RowBox[{
+                    "exPath", 
+                    "~~", "\<\"\\\\equations\\\\##1 equation IDs and \
+equations.pdf\"\>"}], ",", 
+                    RowBox[{"Column", "[", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"Row", "[", 
+                    RowBox[{"Riffle", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{
+                    "#1", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}], ",", 
+                    RowBox[{
+                    "#1", "\[LeftDoubleBracket]", "2", 
+                    "\[RightDoubleBracket]"}]}], "}"}], ",", "\<\"\\t\"\>"}], 
+                    "]"}], "]"}], "&"}], ")"}], "/@", 
+                    "myExportEquationList"}], "]"}]}], "]"}]}], ";", 
+                 RowBox[{"Export", "[", 
+                  RowBox[{
+                   RowBox[{
+                   "exPath", 
+                    "~~", "\<\"\\\\equations\\\\##2 equation IDs.rtf\"\>"}], ",", 
+                   RowBox[{"StringRiffle", "[", 
+                    RowBox[{
+                    RowBox[{"Prepend", "[", 
+                    RowBox[{
+                    RowBox[{"myExportEquationList", "\[LeftDoubleBracket]", 
+                    RowBox[{"All", ",", "1"}], "\[RightDoubleBracket]"}], ",", 
+                    RowBox[{"exPath", "~~", "\<\"\\\\equations\\\\\"\>"}]}], 
+                    "]"}], ",", "\<\"\\n\"\>"}], "]"}]}], "]"}], ";"}]}], 
+               "]"}]}]}
+           },
+           BaselinePosition->{Baseline, {1, 1}},
+           GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+           GridBoxItemSize->{"Columns" -> {{
+                Scaled[0.999]}}, "Rows" -> {{1.}}}]}
+        },
+        BaselinePosition->{Baseline, {1, 1}},
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}],
+       Definition[$CellContext`myExportEquations],
+       Editable->False]},
+     {
+      InterpretationBox[GridBox[{
+         {GridBox[{
+            {
+             RowBox[{
+              RowBox[{"myExportF", "[", "l_List", "]"}], ":=", 
+              RowBox[{"Module", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                 "r", ",", "g", ",", "nameID", ",", "name", ",", "icon"}], 
+                 "}"}], ",", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"g", "=", 
+                    RowBox[{
+                    "#1", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}]}], ";", 
+                    RowBox[{"nameID", "=", 
+                    RowBox[{
+                    "#1", "\[LeftDoubleBracket]", "2", 
+                    "\[RightDoubleBracket]"}]}], ";", 
+                    RowBox[{"name", "=", 
+                    RowBox[{
+                    "#1", "\[LeftDoubleBracket]", "3", 
+                    "\[RightDoubleBracket]"}]}], ";", 
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    "#1", "\[LeftDoubleBracket]", "5", 
+                    "\[RightDoubleBracket]"}], "\[Equal]", "True"}], ",", 
+                    RowBox[{
+                    RowBox[{"r", "=", "600"}], ";", 
+                    RowBox[{"Table", "[", 
+                    RowBox[{
+                    RowBox[{"Export", "[", 
+                    RowBox[{
+                    RowBox[{"exPath", "~~", "\<\"CMYK \"\>", "~~", 
+                    RowBox[{"ToString", "[", "r", "]"}], 
+                    "~~", "\<\" dpi\\\\\"\>", "~~", "nameID", 
+                    "~~", "\<\" _ \"\>", "~~", 
+                    RowBox[{"ToString", "[", "r", "]"}], 
+                    "~~", "\<\" dpi CMYK\"\>", "~~", "i"}], ",", 
+                    RowBox[{"ColorConvert", "[", 
+                    RowBox[{
+                    RowBox[{"Rasterize", "[", 
+                    RowBox[{"g", ",", 
+                    RowBox[{"ImageResolution", "\[Rule]", "r"}]}], "]"}], 
+                    ",", "\<\"CMYK\"\>"}], "]"}]}], "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"i", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"\<\".eps\"\>", ",", "\<\".png\"\>"}], "}"}]}], 
+                    "}"}]}], "]"}]}], ",", "Nothing"}], "]"}], ";", 
+                    RowBox[{"r", "=", "72"}], ";", 
+                    RowBox[{"icon", "=", 
+                    RowBox[{"Rasterize", "[", 
+                    RowBox[{"g", ",", 
+                    RowBox[{"ImageResolution", "\[Rule]", "r"}]}], "]"}]}], ";", 
+                    RowBox[{"Table", "[", 
+                    RowBox[{
+                    RowBox[{"Export", "[", 
+                    RowBox[{
+                    RowBox[{"exPath", "~~", 
+                    RowBox[{"StringReplace", "[", 
+                    RowBox[{
+                    RowBox[{"ToString", "[", "i", "]"}], ",", 
+                    RowBox[{"\<\".\"\>", "\[Rule]", "\<\"\"\>"}]}], "]"}], 
+                    "~~", "\<\" \"\>", "~~", 
+                    RowBox[{"ToString", "[", "r", "]"}], 
+                    "~~", "\<\" dpi\\\\\"\>", "~~", "nameID", 
+                    "~~", "\<\" _ \"\>", "~~", 
+                    RowBox[{"ToString", "[", "r", "]"}], "~~", "\<\" dpi\"\>",
+                     "~~", "i"}], ",", "icon"}], "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"i", ",", 
+                    RowBox[{"{", "\<\".png\"\>", "}"}]}], "}"}]}], "]"}], ";", 
+                    RowBox[{"r", "=", "150"}], ";", 
+                    RowBox[{"Table", "[", 
+                    RowBox[{
+                    RowBox[{"Export", "[", 
+                    RowBox[{
+                    RowBox[{"exPath", "~~", 
+                    RowBox[{"StringReplace", "[", 
+                    RowBox[{
+                    RowBox[{"ToString", "[", "i", "]"}], ",", 
+                    RowBox[{"\<\".\"\>", "\[Rule]", "\<\"\"\>"}]}], "]"}], 
+                    "~~", "\<\" \"\>", "~~", 
+                    RowBox[{"ToString", "[", "r", "]"}], 
+                    "~~", "\<\" dpi\\\\\"\>", "~~", "nameID", 
+                    "~~", "\<\" _ \"\>", "~~", 
+                    RowBox[{"ToString", "[", "r", "]"}], "~~", "\<\" dpi\"\>",
+                     "~~", "i"}], ",", 
+                    RowBox[{"Rasterize", "[", 
+                    RowBox[{"g", ",", 
+                    RowBox[{"ImageResolution", "\[Rule]", "r"}]}], "]"}]}], 
+                    "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"i", ",", 
+                    RowBox[{"{", "\<\".png\"\>", "}"}]}], "}"}]}], "]"}], ";", 
+                    RowBox[{"r", "=", 
+                    RowBox[{
+                    "#1", "\[LeftDoubleBracket]", "4", 
+                    "\[RightDoubleBracket]"}]}], ";", 
+                    RowBox[{"Table", "[", 
+                    RowBox[{
+                    RowBox[{"Export", "[", 
+                    RowBox[{
+                    RowBox[{"exPath", "~~", 
+                    RowBox[{"StringReplace", "[", 
+                    RowBox[{
+                    RowBox[{"ToString", "[", "i", "]"}], ",", 
+                    RowBox[{"\<\".\"\>", "\[Rule]", "\<\"\"\>"}]}], "]"}], 
+                    "~~", "\<\" \"\>", "~~", 
+                    RowBox[{"ToString", "[", "r", "]"}], 
+                    "~~", "\<\" dpi\\\\\"\>", "~~", "nameID", 
+                    "~~", "\<\" _ \"\>", "~~", 
+                    RowBox[{"ToString", "[", "r", "]"}], "~~", "\<\" dpi\"\>",
+                     "~~", "i"}], ",", 
+                    RowBox[{"Rasterize", "[", 
+                    RowBox[{"g", ",", 
+                    RowBox[{"ImageResolution", "\[Rule]", "r"}]}], "]"}]}], 
+                    "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"i", ",", 
+                    RowBox[{"{", "\<\".png\"\>", "}"}]}], "}"}]}], "]"}], ";", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"Table", "[", 
+                    RowBox[{
+                    RowBox[{"Export", "[", 
+                    RowBox[{
+                    RowBox[{"exPath", "~~", 
+                    RowBox[{"StringReplace", "[", 
+                    RowBox[{
+                    RowBox[{"ToString", "[", "i", "]"}], ",", 
+                    RowBox[{"\<\".\"\>", "\[Rule]", "\<\"\"\>"}]}], "]"}], 
+                    "~~", "\<\"\\\\\"\>", "~~", "nameID", "~~", "i"}], ",", 
+                    "g"}], "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"i", ",", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"\<\".svg\"\>", ",", "\<\".eps\"\>", 
+                    ",", "\<\".pdf\"\>"}], "}"}]}], "}"}]}], "]"}], "&"}], 
+                    ")"}], "/@", "#1"}], ";", 
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{"MemberQ", "[", 
+                    RowBox[{
+                    RowBox[{"myExportFigureList", "\[LeftDoubleBracket]", 
+                    RowBox[{"All", ",", "1"}], "\[RightDoubleBracket]"}], ",",
+                     "nameID"}], "]"}], ",", 
+                    RowBox[{
+                    RowBox[{"myExportFigureList", "=", 
+                    RowBox[{"ReplacePart", "[", 
+                    RowBox[{"myExportFigureList", ",", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"FirstPosition", "[", 
+                    RowBox[{
+                    RowBox[{"myExportFigureList", "\[LeftDoubleBracket]", 
+                    RowBox[{"All", ",", "1"}], "\[RightDoubleBracket]"}], ",",
+                     "nameID"}], "]"}], "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}], "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{"nameID", ",", "name", ",", 
+                    RowBox[{"Rasterize", "[", 
+                    RowBox[{"g", ",", 
+                    RowBox[{"ImageResolution", "\[Rule]", "20"}]}], "]"}]}], 
+                    "}"}]}]}], "]"}]}], ";"}], ",", 
+                    RowBox[{"AppendTo", "[", 
+                    RowBox[{"myExportFigureList", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"nameID", ",", "name", ",", "icon"}], "}"}]}], 
+                    "]"}]}], "]"}], ";"}], ")"}], "&"}], ")"}], "/@", "l"}], ";", 
+                 RowBox[{"Export", "[", 
+                  RowBox[{
+                   RowBox[{
+                   "exPath", 
+                    "~~", "\<\"##1 full names of figure IDs.pdf\"\>"}], ",", 
+                   RowBox[{"Grid", "[", 
+                    RowBox[{"Prepend", "[", 
+                    RowBox[{"myExportFigureList", ",", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{"\<\"ID \"\>", ",", "\<\"figure name\"\>", 
+                    ",", "\<\"preview\"\>"}], "}"}]}], "]"}], "]"}]}], "]"}], 
+                 ";", 
+                 RowBox[{"myExportFigureList", ">>", 
+                  RowBox[{"exPath", "~~", "\<\"myExportFigureList.m\"\>"}]}], 
+                 ";", 
+                 RowBox[{"Export", "[", 
+                  RowBox[{
+                   RowBox[{"exPath", "~~", "\<\"##2 figure IDs.rtf\"\>"}], ",", 
+                   RowBox[{"StringRiffle", "[", 
+                    RowBox[{
+                    RowBox[{"myExportFigureList", "\[LeftDoubleBracket]", 
+                    RowBox[{"All", ",", "1"}], "\[RightDoubleBracket]"}], 
+                    ",", "\<\"\\n\"\>"}], "]"}]}], "]"}], ";"}]}], "]"}]}]}
+           },
+           BaselinePosition->{Baseline, {1, 1}},
+           GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+           GridBoxItemSize->{"Columns" -> {{
+                Scaled[0.999]}}, "Rows" -> {{1.}}}]}
+        },
+        BaselinePosition->{Baseline, {1, 1}},
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}],
+       Definition[$CellContext`myExportF],
+       Editable->False]},
+     {
+      InterpretationBox[GridBox[{
+         {GridBox[{
+            {
+             RowBox[{
+              RowBox[{"myExportFPNG", "[", "l_List", "]"}], ":=", 
+              RowBox[{"Module", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"r", ",", "g", ",", "name"}], "}"}], ",", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"g", "=", 
+                    RowBox[{
+                    "#1", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}]}], ";", 
+                    RowBox[{"name", "=", 
+                    RowBox[{
+                    "#1", "\[LeftDoubleBracket]", "2", 
+                    "\[RightDoubleBracket]"}]}], ";", 
+                    RowBox[{"r", "=", 
+                    RowBox[{
+                    "#1", "\[LeftDoubleBracket]", "3", 
+                    "\[RightDoubleBracket]"}]}], ";", 
+                    RowBox[{"Table", "[", 
+                    RowBox[{
+                    RowBox[{"Export", "[", 
+                    RowBox[{
+                    RowBox[{"exPath", "~~", "name", "~~", "\<\" \"\>", "~~", 
+                    RowBox[{"ToString", "[", "r", "]"}], "~~", "\<\" dpi\"\>",
+                     "~~", "i"}], ",", 
+                    RowBox[{"Rasterize", "[", 
+                    RowBox[{"g", ",", 
+                    RowBox[{"ImageResolution", "\[Rule]", "r"}]}], "]"}]}], 
+                    "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"i", ",", 
+                    RowBox[{"{", "\<\".png\"\>", "}"}]}], "}"}]}], "]"}]}], 
+                    ")"}], "&"}], ")"}], "/@", "l"}]}], "]"}]}]}
+           },
+           BaselinePosition->{Baseline, {1, 1}},
+           GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+           GridBoxItemSize->{"Columns" -> {{
+                Scaled[0.999]}}, "Rows" -> {{1.}}}]}
+        },
+        BaselinePosition->{Baseline, {1, 1}},
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}],
+       Definition[$CellContext`myExportFPNG],
+       Editable->False]},
+     {
+      InterpretationBox[GridBox[{
+         {GridBox[{
+            {
+             RowBox[{
+              RowBox[{"myExportFSVG", "[", "l_List", "]"}], ":=", 
+              RowBox[{"Module", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"r", ",", "g", ",", "name"}], "}"}], ",", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"g", "=", 
+                    RowBox[{
+                    "#1", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}]}], ";", 
+                    RowBox[{"name", "=", 
+                    RowBox[{
+                    "#1", "\[LeftDoubleBracket]", "2", 
+                    "\[RightDoubleBracket]"}]}], ";", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"Table", "[", 
+                    RowBox[{
+                    RowBox[{"Export", "[", 
+                    RowBox[{
+                    RowBox[{"exPath", "~~", "name", "~~", "i"}], ",", "g"}], 
+                    "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"i", ",", 
+                    RowBox[{"{", "\<\".svg\"\>", "}"}]}], "}"}]}], "]"}], 
+                    "&"}], ")"}], "/@", "#1"}]}], ")"}], "&"}], ")"}], "/@", 
+                 "l"}]}], "]"}]}]}
+           },
+           BaselinePosition->{Baseline, {1, 1}},
+           GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+           GridBoxItemSize->{"Columns" -> {{
+                Scaled[0.999]}}, "Rows" -> {{1.}}}]}
+        },
+        BaselinePosition->{Baseline, {1, 1}},
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}],
+       Definition[$CellContext`myExportFSVG],
+       Editable->False]},
+     {
+      InterpretationBox[GridBox[{
+         {GridBox[{
+            {
+             RowBox[{
+              RowBox[{"myFigAppend", "[", "l_List", "]"}], ":=", 
+              RowBox[{"AppendTo", "[", 
+               RowBox[{"myExportFigureList", ",", "l"}], "]"}]}]}
+           },
+           BaselinePosition->{Baseline, {1, 1}},
+           GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+           GridBoxItemSize->{"Columns" -> {{
+                Scaled[0.999]}}, "Rows" -> {{1.}}}]}
+        },
+        BaselinePosition->{Baseline, {1, 1}},
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}],
+       Definition[$CellContext`myFigAppend],
+       Editable->False]},
+     {
+      InterpretationBox[GridBox[{
+         {GridBox[{
+            {
+             RowBox[{
+              RowBox[{"myFlatten", "[", 
+               RowBox[{"l_List", ",", "level_Integer"}], "]"}], ":=", 
+              RowBox[{"Module", "[", 
+               RowBox[{
+                RowBox[{"{", "}"}], ",", 
+                RowBox[{"Map", "[", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"Flatten", "[", "#1", "]"}], "&"}], ",", "l", ",", 
+                  RowBox[{"{", "level", "}"}]}], "]"}]}], "]"}]}]}
+           },
+           BaselinePosition->{Baseline, {1, 1}},
+           GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+           GridBoxItemSize->{"Columns" -> {{
+                Scaled[0.999]}}, "Rows" -> {{1.}}}]}
+        },
+        BaselinePosition->{Baseline, {1, 1}},
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}],
+       Definition[$CellContext`myFlatten],
+       Editable->False]},
+     {
+      InterpretationBox[GridBox[{
+         {GridBox[{
+            {
+             RowBox[{
+              RowBox[{"myFrameStyle", "[", 
+               RowBox[{
+                RowBox[{"fontsize_Integer", ":", "12"}], ",", 
+                RowBox[{
+                "fontfamily_String", ":", "\<\"Lucida Sans Unicode\"\>"}], ",", 
+                RowBox[{"color_", ":", 
+                 TemplateBox[<|"color" -> GrayLevel[0]|>,
+                  "GrayLevelColorSwatchTemplate"]}]}], "]"}], ":=", 
+              RowBox[{"Module", "[", 
+               RowBox[{
+                RowBox[{"{", "}"}], ",", 
+                RowBox[{"FrameStyle", "\[Rule]", 
+                 RowBox[{"Directive", "[", 
+                  RowBox[{
+                   RowBox[{"FontSize", "\[Rule]", "fontsize"}], ",", 
+                   RowBox[{"FontFamily", "\[Rule]", "fontfamily"}], ",", 
+                   "color"}], "]"}]}]}], "]"}]}]}
+           },
+           BaselinePosition->{Baseline, {1, 1}},
+           GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+           GridBoxItemSize->{"Columns" -> {{
+                Scaled[0.999]}}, "Rows" -> {{1.}}}]}
+        },
+        BaselinePosition->{Baseline, {1, 1}},
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}],
+       Definition[$CellContext`myFrameStyle],
+       Editable->False]},
+     {
+      InterpretationBox[GridBox[{
+         {GridBox[{
+            {
+             RowBox[{
+              RowBox[{"myFrameTickStyle", "[", 
+               RowBox[{
+                RowBox[{"fontsize_Integer", ":", "12"}], ",", 
+                RowBox[{
+                "fontfamily_String", ":", "\<\"Lucida Sans Unicode\"\>"}], ",", 
+                RowBox[{"color_", ":", 
+                 TemplateBox[<|"color" -> GrayLevel[0]|>,
+                  "GrayLevelColorSwatchTemplate"]}]}], "]"}], ":=", 
+              RowBox[{"Module", "[", 
+               RowBox[{
+                RowBox[{"{", "}"}], ",", 
+                RowBox[{"FrameTicksStyle", "\[Rule]", 
+                 RowBox[{"Directive", "[", 
+                  RowBox[{
+                   RowBox[{"FontSize", "\[Rule]", "fontsize"}], ",", 
+                   RowBox[{"FontFamily", "\[Rule]", "fontfamily"}], ",", 
+                   "color"}], "]"}]}]}], "]"}]}]}
+           },
+           BaselinePosition->{Baseline, {1, 1}},
+           GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+           GridBoxItemSize->{"Columns" -> {{
+                Scaled[0.999]}}, "Rows" -> {{1.}}}]}
+        },
+        BaselinePosition->{Baseline, {1, 1}},
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}],
+       Definition[$CellContext`myFrameTickStyle],
+       Editable->False]},
+     {
+      InterpretationBox[GridBox[{
+         {GridBox[{
+            {
+             RowBox[{
+              RowBox[{"myHolmBonferroni", "[", 
+               RowBox[{"pVals_List", ",", 
+                RowBox[{"alpha_", ":", "0.05`"}]}], "]"}], ":=", 
+              RowBox[{"Module", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                 "m", ",", "sorted", ",", "idx", ",", "pSorted", ",", "crit", 
+                  ",", "decisions", ",", "rejections"}], "}"}], ",", 
+                RowBox[{
+                 RowBox[{"m", "=", 
+                  RowBox[{"Length", "[", "pVals", "]"}]}], ";", 
+                 RowBox[{"sorted", "=", 
+                  RowBox[{"SortBy", "[", 
+                   RowBox[{
+                    TemplateBox[{
+                    RowBox[{"{", 
+                    RowBox[{"pVals", ",", 
+                    RowBox[{"Range", "[", "m", "]"}]}], "}"}]},
+                    "Transpose"], ",", "First"}], "]"}]}], ";", 
+                 RowBox[{"pSorted", "=", 
+                  RowBox[{"sorted", "\[LeftDoubleBracket]", 
+                   RowBox[{"All", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+                 RowBox[{"idx", "=", 
+                  RowBox[{"sorted", "\[LeftDoubleBracket]", 
+                   RowBox[{"All", ",", "2"}], "\[RightDoubleBracket]"}]}], ";", 
+                 RowBox[{"crit", "=", 
+                  RowBox[{"Table", "[", 
+                   RowBox[{
+                    FractionBox["alpha", 
+                    RowBox[{"m", "+", "1", "-", "k"}]], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"k", ",", "1", ",", "m"}], "}"}]}], "]"}]}], ";", 
+                 RowBox[{"decisions", "=", 
+                  RowBox[{"Table", "[", 
+                   RowBox[{
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    "pSorted", "\[LeftDoubleBracket]", "k", 
+                    "\[RightDoubleBracket]"}], "\[LessEqual]", 
+                    RowBox[{
+                    "crit", "\[LeftDoubleBracket]", "k", 
+                    "\[RightDoubleBracket]"}]}], ",", "True", ",", "False"}], 
+                    "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"k", ",", "1", ",", "m"}], "}"}]}], "]"}]}], ";", 
+                 RowBox[{"decisions", "=", 
+                  RowBox[{"decisions", "/.", "\[VeryThinSpace]", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"a___", ",", "False", ",", "___"}], "}"}], "\[RuleDelayed]", 
+                    RowBox[{"{", 
+                    RowBox[{"a", ",", "False", ",", 
+                    RowBox[{"Sequence", "@@", 
+                    RowBox[{"ConstantArray", "[", 
+                    RowBox[{"False", ",", 
+                    RowBox[{"m", "-", 
+                    RowBox[{"Length", "[", 
+                    RowBox[{"{", "a", "}"}], "]"}], "-", "1"}]}], "]"}]}]}], 
+                    "}"}]}]}]}], ";", 
+                 RowBox[{"rejections", "=", 
+                  RowBox[{"ConstantArray", "[", 
+                   RowBox[{"False", ",", "m"}], "]"}]}], ";", 
+                 RowBox[{"Do", "[", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"rejections", "\[LeftDoubleBracket]", 
+                    RowBox[{
+                    "idx", "\[LeftDoubleBracket]", "k", 
+                    "\[RightDoubleBracket]"}], "\[RightDoubleBracket]"}], "=", 
+                    RowBox[{
+                    "decisions", "\[LeftDoubleBracket]", "k", 
+                    "\[RightDoubleBracket]"}]}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{"k", ",", "1", ",", "m"}], "}"}]}], "]"}], ";", 
+                 RowBox[{"Association", "[", 
+                  RowBox[{
+                   
+                   RowBox[{"\<\"RejectionsBoolean\"\>", "\[Rule]", 
+                    "rejections"}], ",", 
+                   RowBox[{"\<\"RejectedIndices\"\>", "\[Rule]", 
+                    RowBox[{"Flatten", "[", 
+                    RowBox[{"Position", "[", 
+                    RowBox[{"rejections", ",", "True"}], "]"}], "]"}]}], ",", 
+                   RowBox[{"\<\"SortedTable\"\>", "\[Rule]", 
+                    RowBox[{"Table", "[", 
+                    RowBox[{
+                    RowBox[{"Association", "[", 
+                    RowBox[{
+                    RowBox[{"\<\"OriginalIndex\"\>", "\[Rule]", 
+                    RowBox[{
+                    "idx", "\[LeftDoubleBracket]", "k", 
+                    "\[RightDoubleBracket]"}]}], ",", 
+                    RowBox[{"\<\"pValue\"\>", "\[Rule]", 
+                    RowBox[{
+                    "pSorted", "\[LeftDoubleBracket]", "k", 
+                    "\[RightDoubleBracket]"}]}], ",", 
+                    RowBox[{"\<\"Critical\"\>", "\[Rule]", 
+                    RowBox[{
+                    "crit", "\[LeftDoubleBracket]", "k", 
+                    "\[RightDoubleBracket]"}]}], ",", 
+                    RowBox[{"\<\"Reject\"\>", "\[Rule]", 
+                    RowBox[{
+                    "decisions", "\[LeftDoubleBracket]", "k", 
+                    "\[RightDoubleBracket]"}]}]}], "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"k", ",", "1", ",", "m"}], "}"}]}], "]"}]}]}], 
+                  "]"}]}]}], "]"}]}]}
+           },
+           BaselinePosition->{Baseline, {1, 1}},
+           GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+           GridBoxItemSize->{"Columns" -> {{
+                Scaled[0.999]}}, "Rows" -> {{1.}}}]}
+        },
+        BaselinePosition->{Baseline, {1, 1}},
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}],
+       Definition[$CellContext`myHolmBonferroni],
+       Editable->False]},
+     {
+      InterpretationBox[GridBox[{
+         {GridBox[{
+            {
+             RowBox[{
+              RowBox[{"myLabelStyle", "[", 
+               RowBox[{
+                RowBox[{"fontsize_Integer", ":", "12"}], ",", 
+                RowBox[{
+                "fontfamily_String", ":", "\<\"Lucida Sans Unicode\"\>"}], ",", 
+                RowBox[{"color_", ":", 
+                 TemplateBox[<|"color" -> GrayLevel[0]|>,
+                  "GrayLevelColorSwatchTemplate"]}]}], "]"}], ":=", 
+              RowBox[{"Module", "[", 
+               RowBox[{
+                RowBox[{"{", "}"}], ",", 
+                RowBox[{"LabelStyle", "\[Rule]", 
+                 RowBox[{"Directive", "[", 
+                  RowBox[{
+                   RowBox[{"FontSize", "\[Rule]", "fontsize"}], ",", 
+                   RowBox[{"FontFamily", "\[Rule]", "fontfamily"}], ",", 
+                   "color"}], "]"}]}]}], "]"}]}]}
+           },
+           BaselinePosition->{Baseline, {1, 1}},
+           GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+           GridBoxItemSize->{"Columns" -> {{
+                Scaled[0.999]}}, "Rows" -> {{1.}}}]}
+        },
+        BaselinePosition->{Baseline, {1, 1}},
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}],
+       Definition[$CellContext`myLabelStyle],
+       Editable->False]},
+     {
+      InterpretationBox[GridBox[{
+         {GridBox[{
+            {
+             RowBox[{
+              RowBox[{"myLegendAppearance", "[", 
+               RowBox[{
+                RowBox[{"markersize_Integer", ":", "12"}], ",", 
+                RowBox[{
+                "fontfamily_String", ":", "\<\"Lucida Sans Unicode\"\>"}], ",", 
+                RowBox[{"color_", ":", 
+                 TemplateBox[<|"color" -> GrayLevel[0]|>,
+                  "GrayLevelColorSwatchTemplate"]}]}], "]"}], ":=", 
+              RowBox[{"Module", "[", 
+               RowBox[{
+                RowBox[{"{", "}"}], ",", 
+                RowBox[{"LegendAppearance", "\[Rule]", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"LegendMarkerSize", "\[Rule]", "markersize"}], ",", 
+                   RowBox[{"FontFamily", "\[Rule]", "fontfamily"}], ",", 
+                   "color"}], "}"}]}]}], "]"}]}]}
+           },
+           BaselinePosition->{Baseline, {1, 1}},
+           GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+           GridBoxItemSize->{"Columns" -> {{
+                Scaled[0.999]}}, "Rows" -> {{1.}}}]}
+        },
+        BaselinePosition->{Baseline, {1, 1}},
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}],
+       Definition[$CellContext`myLegendAppearance],
+       Editable->False]},
+     {
+      InterpretationBox[GridBox[{
+         {GridBox[{
+            {
+             RowBox[{
+              RowBox[{"myNormalColumnTab", "[", 
+               RowBox[{"t_Tabular", ",", "var_String"}], "]"}], ":=", 
+              RowBox[{
+               RowBox[{"Normal", "[", 
+                RowBox[{"t", "\[LeftDoubleBracket]", 
+                 RowBox[{"All", ",", "var"}], "\[RightDoubleBracket]"}], 
+                "]"}], "\[LeftDoubleBracket]", 
+               RowBox[{"All", ",", "1"}], "\[RightDoubleBracket]"}]}]}
+           },
+           BaselinePosition->{Baseline, {1, 1}},
+           GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+           GridBoxItemSize->{"Columns" -> {{
+                Scaled[0.999]}}, "Rows" -> {{1.}}}]}
+        },
+        BaselinePosition->{Baseline, {1, 1}},
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}],
+       Definition[$CellContext`myNormalColumnTab],
+       Editable->False]},
+     {
+      InterpretationBox[GridBox[{
+         {GridBox[{
+            {
+             RowBox[{
+              RowBox[{"myOutputAppend", "[", 
+               RowBox[{"s_String", ",", "l_"}], "]"}], ":=", 
+              RowBox[{"Module", "[", 
+               RowBox[{
+                RowBox[{"{", "}"}], ",", 
+                RowBox[{
+                 RowBox[{"AppendTo", "[", 
+                  RowBox[{"myOutput", ",", 
+                   RowBox[{"s", "\[Rule]", "l"}]}], "]"}], ";", 
+                 RowBox[{"AppendTo", "[", 
+                  RowBox[{"myExcelOutput", ",", 
+                   RowBox[{"s", "\[Rule]", 
+                    RowBox[{"myPrepExcel", "[", "l", "]"}]}]}], "]"}]}]}], 
+               "]"}]}]}
+           },
+           BaselinePosition->{Baseline, {1, 1}},
+           GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+           GridBoxItemSize->{"Columns" -> {{
+                Scaled[0.999]}}, "Rows" -> {{1.}}}]}
+        },
+        BaselinePosition->{Baseline, {1, 1}},
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}],
+       Definition[$CellContext`myOutputAppend],
+       Editable->False]},
+     {
+      InterpretationBox[GridBox[{
+         {GridBox[{
+            {
+             RowBox[{
+              RowBox[{"myPackageInputPrint", "[", "]"}], ":=", 
+              RowBox[{"Module", "[", 
+               RowBox[{
+                RowBox[{"{", "l", "}"}], ",", 
+                RowBox[{
+                 RowBox[{"l", "=", 
+                  RowBox[{"ToExpression", "/@", 
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"Select", "[", 
+                    RowBox[{
+                    RowBox[{"Names", "[", "\<\"Global`*\"\>", "]"}], ",", 
+                    RowBox[{"StringContainsQ", "[", 
+                    RowBox[{"\<\"my\"\>", "~~", "__"}], "]"}]}], "]"}], "/.", 
+                    "\[VeryThinSpace]", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    
+                    RowBox[{"\<\"myExportFunctionList\"\>", "\[Rule]", 
+                    "Nothing"}], ",", 
+                    
+                    RowBox[{"\<\"myExportFigureList\"\>", "\[Rule]", 
+                    "Nothing"}], ",", 
+                    
+                    RowBox[{"\<\"myExportEquationList\"\>", "\[Rule]", 
+                    "Nothing"}], ",", 
+                    RowBox[{"\<\"myExcelOutput\"\>", "\[Rule]", "Nothing"}], ",", 
+                    RowBox[{"\<\"myOutput\"\>", "\[Rule]", "Nothing"}], ",", 
+                    RowBox[{"\<\"myFontSize\"\>", "\[Rule]", "Nothing"}], ",", 
+                    RowBox[{"\<\"myFontStandard\"\>", "\[Rule]", "Nothing"}], 
+                    ",", 
+                    RowBox[{"\<\"myColors\"\>", "\[Rule]", "Nothing"}], ",", 
+                    RowBox[{"\<\"myFigureIDs\"\>", "\[Rule]", "Nothing"}], ",", 
+                    
+                    RowBox[{"\<\"myColorForGradient\"\>", "\[Rule]", 
+                    "Nothing"}], ",", 
+                    RowBox[{"\<\"myPlotColors\"\>", "\[Rule]", "Nothing"}], ",", 
+                    RowBox[{"\<\"myPackageURL\"\>", "\[Rule]", "Nothing"}]}], 
+                    "}"}]}], ")"}]}]}], ";", 
+                 RowBox[{"\<\"TableForm\"\>", "[", 
+                  RowBox[{"\<\"Definition\"\>", "/@", "l"}], "]"}]}]}], 
+               "]"}]}]}
+           },
+           BaselinePosition->{Baseline, {1, 1}},
+           GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+           GridBoxItemSize->{"Columns" -> {{
+                Scaled[0.999]}}, "Rows" -> {{1.}}}]}
+        },
+        BaselinePosition->{Baseline, {1, 1}},
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}],
+       Definition[$CellContext`myPackageInputPrint],
+       Editable->False]},
+     {
+      InterpretationBox[GridBox[{
+         {GridBox[{
+            {
+             RowBox[{
+              RowBox[{"myPlotSequence", "[", "]"}], ":=", 
+              RowBox[{"Sequence", "[", 
+               RowBox[{
+                RowBox[{"ImageSize", "\[Rule]", "Large"}], ",", 
+                RowBox[{"Frame", "\[Rule]", "True"}], ",", 
+                RowBox[{"myFrameStyle", "[", "]"}], ",", 
+                RowBox[{"myFrameTickStyle", "[", "]"}]}], "]"}]}]}
+           },
+           BaselinePosition->{Baseline, {1, 1}},
+           GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+           GridBoxItemSize->{"Columns" -> {{
+                Scaled[0.999]}}, "Rows" -> {{1.}}}]}
+        },
+        BaselinePosition->{Baseline, {1, 1}},
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}],
+       Definition[$CellContext`myPlotSequence],
+       Editable->False]},
+     {
+      InterpretationBox[GridBox[{
+         {GridBox[{
+            {
+             RowBox[{
+              RowBox[{"myPlotStyle", "[", 
+               RowBox[{
+                RowBox[{"opacity_", ":", "1"}], ",", 
+                RowBox[{"colorList_List", ":", "myPlotColors"}]}], "]"}], ":=", 
+              RowBox[{"Module", "[", 
+               RowBox[{
+                RowBox[{"{", "}"}], ",", 
+                RowBox[{"PlotStyle", "\[Rule]", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"Directive", "[", 
+                    RowBox[{
+                    RowBox[{"Opacity", "[", "opacity", "]"}], ",", "#1"}], 
+                    "]"}], "&"}], ")"}], "/@", "colorList"}]}]}], "]"}]}]}
+           },
+           BaselinePosition->{Baseline, {1, 1}},
+           GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+           GridBoxItemSize->{"Columns" -> {{
+                Scaled[0.999]}}, "Rows" -> {{1.}}}]}
+        },
+        BaselinePosition->{Baseline, {1, 1}},
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}],
+       Definition[$CellContext`myPlotStyle],
+       Editable->False]},
+     {
+      InterpretationBox[GridBox[{
+         {GridBox[{
+            {
+             RowBox[{
+              RowBox[{"myPrepExcel", "[", 
+               RowBox[{
+                RowBox[{"Blank", "[", "\<\"Graphics\"\>", "]"}], "|", 
+                RowBox[{"Blank", "[", "\<\"Graphics3D\"\>", "]"}]}], "]"}], ":=",
+               "Nothing"}]},
+            {" "},
+            {
+             RowBox[{
+              RowBox[{"myPrepExcel", "[", "l_List", "]"}], ":=", 
+              RowBox[{"Flatten", "[", 
+               RowBox[{
+                RowBox[{"Normal", "/@", 
+                 RowBox[{"Normal", "[", 
+                  RowBox[{"Select", "[", 
+                   RowBox[{"l", ",", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Head", "[", "#1", "]"}], 
+                    "=!=", "\<\"Graphics\"\>"}], "&&", 
+                    RowBox[{
+                    RowBox[{"Head", "[", "#1", "]"}], 
+                    "=!=", "\<\"Graphics3D\"\>"}]}], "&"}]}], "]"}], "]"}]}], 
+                "/.", "\[VeryThinSpace]", 
+                RowBox[{"Rule", "\[Rule]", "List"}]}], "]"}]}]},
+            {" "},
+            {
+             RowBox[{
+              RowBox[{"myPrepExcel", "[", "l_Association", "]"}], ":=", 
+              RowBox[{"Flatten", "[", 
+               RowBox[{
+                RowBox[{"Normal", "[", "l", "]"}], "/.", "\[VeryThinSpace]", 
+                RowBox[{"Rule", "\[Rule]", "List"}]}], "]"}]}]},
+            {" "},
+            {
+             RowBox[{
+              RowBox[{"myPrepExcel", "[", "l_", "]"}], ":=", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"Normal", "[", "l", "]"}], "/.", "\[VeryThinSpace]", 
+                RowBox[{"Rule", "\[Rule]", "List"}]}], "}"}]}]}
+           },
+           BaselinePosition->{Baseline, {1, 1}},
+           GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+           GridBoxItemSize->{"Columns" -> {{
+                Scaled[0.999]}}, "Rows" -> {{1.}}}]}
+        },
+        BaselinePosition->{Baseline, {1, 1}},
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}],
+       Definition[$CellContext`myPrepExcel],
+       Editable->False]},
+     {
+      InterpretationBox[GridBox[{
+         {GridBox[{
+            {
+             RowBox[{
+              RowBox[{"myPureColors", "[", "]"}], ":=", 
+              RowBox[{"{", 
+               RowBox[{
+               "Red", ",", "Blue", ",", "Green", ",", "Orange", ",", "Cyan", ",",
+                 "Magenta", ",", "Yellow", ",", "Black"}], "}"}]}]}
+           },
+           BaselinePosition->{Baseline, {1, 1}},
+           GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+           GridBoxItemSize->{"Columns" -> {{
+                Scaled[0.999]}}, "Rows" -> {{1.}}}]}
+        },
+        BaselinePosition->{Baseline, {1, 1}},
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}],
+       Definition[$CellContext`myPureColors],
+       Editable->False]},
+     {
+      InterpretationBox[GridBox[{
+         {GridBox[{
+            {
+             RowBox[{
+              RowBox[{"myReplaceList", "[", 
+               RowBox[{"lTarget_List", ",", "fReplace_"}], "]"}], ":=", 
+              RowBox[{"Module", "[", 
+               RowBox[{
+                RowBox[{"{", "}"}], ",", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"#1", "\[Rule]", "fReplace"}], "&"}], ")"}], "/@", 
+                 "lTarget"}]}], "]"}]}]}
+           },
+           BaselinePosition->{Baseline, {1, 1}},
+           GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+           GridBoxItemSize->{"Columns" -> {{
+                Scaled[0.999]}}, "Rows" -> {{1.}}}]}
+        },
+        BaselinePosition->{Baseline, {1, 1}},
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}],
+       Definition[$CellContext`myReplaceList],
+       Editable->False]},
+     {
+      InterpretationBox[GridBox[{
+         {GridBox[{
+            {
+             RowBox[{
+              RowBox[{"myStringJoin", "[", 
+               RowBox[{"l_List", ",", 
+                RowBox[{"deli_String", ":", "\<\"\"\>"}], ",", 
+                RowBox[{"start_Integer", ":", "2"}], ",", 
+                RowBox[{"end_Integer", ":", 
+                 RowBox[{"-", "2"}]}], ",", 
+                RowBox[{"step_Integer", ":", "2"}]}], "]"}], ":=", 
+              RowBox[{"Module", "[", 
+               RowBox[{
+                RowBox[{"{", "}"}], ",", 
+                RowBox[{"StringJoin", "[", 
+                 RowBox[{"Riffle", "[", 
+                  RowBox[{
+                   RowBox[{"ToString", "/@", "l"}], ",", "deli", ",", 
+                   RowBox[{"{", 
+                    RowBox[{"start", ",", "end", ",", "step"}], "}"}]}], 
+                  "]"}], "]"}]}], "]"}]}]}
+           },
+           BaselinePosition->{Baseline, {1, 1}},
+           GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+           GridBoxItemSize->{"Columns" -> {{
+                Scaled[0.999]}}, "Rows" -> {{1.}}}]}
+        },
+        BaselinePosition->{Baseline, {1, 1}},
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}],
+       Definition[$CellContext`myStringJoin],
+       Editable->False]},
+     {
+      InterpretationBox[GridBox[{
+         {GridBox[{
+            {
+             RowBox[{
+              RowBox[{"myStringSplit", "[", 
+               RowBox[{"s_String", ",", "deli_List"}], "]"}], ":=", 
+              RowBox[{"Module", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"i", ",", "out", ",", "j"}], "}"}], ",", 
+                RowBox[{
+                 RowBox[{"i", "=", "1"}], ";", 
+                 RowBox[{"out", "=", 
+                  RowBox[{"StringSplit", "[", 
+                   RowBox[{"s", ",", 
+                    RowBox[{
+                    "deli", "\[LeftDoubleBracket]", "i", 
+                    "\[RightDoubleBracket]"}], ",", "All"}], "]"}]}], ";", 
+                 RowBox[{"For", "[", 
+                  RowBox[{
+                   RowBox[{"j", "=", "1"}], ",", 
+                   RowBox[{"j", "<", 
+                    RowBox[{"Length", "[", "deli", "]"}]}], ",", 
+                   RowBox[{"j", "++"}], ",", 
+                   RowBox[{
+                    RowBox[{"i", "++"}], ";", 
+                    RowBox[{"out", "=", 
+                    RowBox[{"Map", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"StringSplit", "[", 
+                    RowBox[{"#1", ",", 
+                    RowBox[{
+                    "deli", "\[LeftDoubleBracket]", "i", 
+                    "\[RightDoubleBracket]"}], ",", "All"}], "]"}], "&"}], ",",
+                     "out", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"i", "-", "1"}], "}"}]}], "]"}]}]}]}], "]"}], ";",
+                  "out"}]}], "]"}]}]}
+           },
+           BaselinePosition->{Baseline, {1, 1}},
+           GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+           GridBoxItemSize->{"Columns" -> {{
+                Scaled[0.999]}}, "Rows" -> {{1.}}}]}
+        },
+        BaselinePosition->{Baseline, {1, 1}},
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}],
+       Definition[$CellContext`myStringSplit],
+       Editable->False]},
+     {
+      InterpretationBox[GridBox[{
+         {GridBox[{
+            {
+             RowBox[{
+              RowBox[{"myStringSplit202507", "[", 
+               RowBox[{"s_String", ",", "deli_List"}], "]"}], ":=", 
+              RowBox[{"Module", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"i", ",", "out", ",", "j"}], "}"}], ",", 
+                RowBox[{
+                 RowBox[{"i", "=", "1"}], ";", 
+                 RowBox[{"out", "=", 
+                  RowBox[{"StringSplit", "[", 
+                   RowBox[{"s", ",", 
+                    RowBox[{
+                    "deli", "\[LeftDoubleBracket]", "i", 
+                    "\[RightDoubleBracket]"}]}], "]"}]}], ";", 
+                 RowBox[{"For", "[", 
+                  RowBox[{
+                   RowBox[{"j", "=", "1"}], ",", 
+                   RowBox[{"j", "<", 
+                    RowBox[{"Length", "[", "deli", "]"}]}], ",", 
+                   RowBox[{"j", "++"}], ",", 
+                   RowBox[{
+                    RowBox[{"i", "++"}], ";", 
+                    RowBox[{"out", "=", 
+                    RowBox[{"Map", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"StringSplit", "[", 
+                    RowBox[{"#1", ",", 
+                    RowBox[{
+                    "deli", "\[LeftDoubleBracket]", "i", 
+                    "\[RightDoubleBracket]"}]}], "]"}], "&"}], ",", "out", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"i", "-", "1"}], "}"}]}], "]"}]}]}]}], "]"}], ";",
+                  "out"}]}], "]"}]}]}
+           },
+           BaselinePosition->{Baseline, {1, 1}},
+           GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+           GridBoxItemSize->{"Columns" -> {{
+                Scaled[0.999]}}, "Rows" -> {{1.}}}]}
+        },
+        BaselinePosition->{Baseline, {1, 1}},
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}],
+       Definition[$CellContext`myStringSplit202507],
+       Editable->False]},
+     {
+      InterpretationBox[GridBox[{
+         {GridBox[{
+            {
+             RowBox[{
+              RowBox[{"myStyle", "[", 
+               RowBox[{"s_", ",", 
+                RowBox[{"fontsize_Integer", ":", "12"}], ",", 
+                RowBox[{
+                "fontfamily_String", ":", "\<\"Lucida Sans Unicode\"\>"}], ",", 
+                RowBox[{"color_", ":", 
+                 TemplateBox[<|"color" -> GrayLevel[0]|>,
+                  "GrayLevelColorSwatchTemplate"]}]}], "]"}], ":=", 
+              RowBox[{"Module", "[", 
+               RowBox[{
+                RowBox[{"{", "}"}], ",", 
+                RowBox[{"Style", "[", 
+                 RowBox[{
+                  RowBox[{"If", "[", 
+                   RowBox[{
+                    RowBox[{"StringQ", "[", "s", "]"}], ",", "s", ",", 
+                    RowBox[{"ToString", "[", "s", "]"}]}], "]"}], ",", 
+                  RowBox[{"FontSize", "\[Rule]", "fontsize"}], ",", 
+                  RowBox[{"FontFamily", "\[Rule]", "fontfamily"}], ",", 
+                  "color"}], "]"}]}], "]"}]}]}
+           },
+           BaselinePosition->{Baseline, {1, 1}},
+           GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+           GridBoxItemSize->{"Columns" -> {{
+                Scaled[0.999]}}, "Rows" -> {{1.}}}]}
+        },
+        BaselinePosition->{Baseline, {1, 1}},
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}],
+       Definition[$CellContext`myStyle],
+       Editable->False]},
+     {
+      InterpretationBox[GridBox[{
+         {GridBox[{
+            {
+             RowBox[{
+              RowBox[{"mySubJoin", "[", 
+               RowBox[{"lTarget_List", ",", "lInsert_List", ",", 
+                RowBox[{"pos_Integer", ":", "1"}]}], "]"}], ":=", 
+              RowBox[{"Module", "[", 
+               RowBox[{
+                RowBox[{"{", "}"}], ",", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"Insert", "[", 
+                    RowBox[{
+                    RowBox[{"lTarget", "\[LeftDoubleBracket]", 
+                    RowBox[{
+                    "#1", "\[LeftDoubleBracket]", "2", 
+                    "\[RightDoubleBracket]"}], "\[RightDoubleBracket]"}], ",", 
+                    RowBox[{
+                    "#1", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}], ",", "pos"}], "]"}], "&"}], 
+                  ")"}], "/@", "lInsert"}]}], "]"}]}]}
+           },
+           BaselinePosition->{Baseline, {1, 1}},
+           GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+           GridBoxItemSize->{"Columns" -> {{
+                Scaled[0.999]}}, "Rows" -> {{1.}}}]}
+        },
+        BaselinePosition->{Baseline, {1, 1}},
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}],
+       Definition[$CellContext`mySubJoin],
+       Editable->False]},
+     {
+      InterpretationBox[GridBox[{
+         {GridBox[{
+            {
+             RowBox[{
+              RowBox[{"myT", "[", 
+               RowBox[{"l1_List", ",", "l2_List"}], "]"}], ":=", 
+              RowBox[{"Module", "[", 
+               RowBox[{
+                RowBox[{"{", "}"}], ",", 
+                TemplateBox[{
+                  RowBox[{"{", 
+                    RowBox[{"l1", ",", "l2"}], "}"}]},
+                 "Transpose"]}], "]"}]}]}
+           },
+           BaselinePosition->{Baseline, {1, 1}},
+           GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+           GridBoxItemSize->{"Columns" -> {{
+                Scaled[0.999]}}, "Rows" -> {{1.}}}]}
+        },
+        BaselinePosition->{Baseline, {1, 1}},
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}],
+       Definition[$CellContext`myT],
+       Editable->False]},
+     {
+      InterpretationBox[GridBox[{
+         {GridBox[{
+            {
+             RowBox[{
+              RowBox[{"myTabNormal", "[", "t_Tabular", "]"}], ":=", 
+              RowBox[{"Module", "[", 
+               RowBox[{
+                RowBox[{"{", "}"}], ",", 
+                RowBox[{"Values", "[", 
+                 RowBox[{
+                  RowBox[{"Normal", "[", "t", "]"}], "\[LeftDoubleBracket]", 
+                  RowBox[{"All", ",", "All", ",", "1"}], 
+                  "\[RightDoubleBracket]"}], "]"}]}], "]"}]}]}
+           },
+           BaselinePosition->{Baseline, {1, 1}},
+           GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+           GridBoxItemSize->{"Columns" -> {{
+                Scaled[0.999]}}, "Rows" -> {{1.}}}]}
+        },
+        BaselinePosition->{Baseline, {1, 1}},
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}],
+       Definition[$CellContext`myTabNormal],
+       Editable->False]},
+     {
+      InterpretationBox[GridBox[{
+         {GridBox[{
+            {
+             RowBox[{
+              RowBox[{"myTake", "[", 
+               RowBox[{"lData_List", ",", "lSort_List"}], "]"}], ":=", 
+              RowBox[{"Module", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"outList", ",", "dimensionQ"}], "}"}], ",", 
+                RowBox[{
+                 RowBox[{"If", "[", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"Length", "[", 
+                    RowBox[{"Dimensions", "[", "lData", "]"}], "]"}], ">", 
+                    "1"}], ",", 
+                   RowBox[{"dimensionQ", "=", "True"}], ",", 
+                   RowBox[{"dimensionQ", "=", "False"}]}], "]"}], ";", 
+                 RowBox[{"outList", "=", 
+                  RowBox[{"If", "[", 
+                   RowBox[{
+                    RowBox[{"dimensionQ", "===", "True"}], ",", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Head", "[", "#1", "]"}], "===", "Span"}], ",", 
+                    RowBox[{"lData", "\[LeftDoubleBracket]", 
+                    RowBox[{"All", ",", "#1"}], "\[RightDoubleBracket]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"lData", "\[LeftDoubleBracket]", 
+                    RowBox[{"All", ",", "#1"}], "\[RightDoubleBracket]"}], 
+                    "}"}]}], "]"}], "&"}], ")"}], "/@", "lSort"}], ",", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Head", "[", "#1", "]"}], "===", "Span"}], ",", 
+                    RowBox[{
+                    "lData", "\[LeftDoubleBracket]", "#1", 
+                    "\[RightDoubleBracket]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    "lData", "\[LeftDoubleBracket]", "#1", 
+                    "\[RightDoubleBracket]"}], "}"}]}], "]"}], "&"}], ")"}], "/@",
+                     "lSort"}]}], "]"}]}], ";", 
+                 RowBox[{"outList", "=", 
+                  RowBox[{
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Length", "[", "#1", "]"}], ">", "1"}], ",", 
+                    TemplateBox[{"#1"},
+                    "Transpose"], ",", "#1"}], "]"}], "&"}], ")"}], "/@", 
+                   "outList"}]}], ";", 
+                 RowBox[{"outList", "=", 
+                  TemplateBox[{
+                    RowBox[{"Flatten", "[", 
+                    RowBox[{"outList", ",", "1"}], "]"}]},
+                   "Transpose"]}]}]}], "]"}]}]}
+           },
+           BaselinePosition->{Baseline, {1, 1}},
+           GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+           GridBoxItemSize->{"Columns" -> {{
+                Scaled[0.999]}}, "Rows" -> {{1.}}}]}
+        },
+        BaselinePosition->{Baseline, {1, 1}},
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}],
+       Definition[$CellContext`myTake],
+       Editable->False]},
+     {
+      InterpretationBox[GridBox[{
+         {GridBox[{
+            {
+             RowBox[{
+              RowBox[{"myTickStyle", "[", 
+               RowBox[{
+                RowBox[{"fontsize_Integer", ":", "12"}], ",", 
+                RowBox[{
+                "fontfamily_String", ":", "\<\"Lucida Sans Unicode\"\>"}], ",", 
+                RowBox[{"color_", ":", 
+                 TemplateBox[<|"color" -> GrayLevel[0]|>,
+                  "GrayLevelColorSwatchTemplate"]}]}], "]"}], ":=", 
+              RowBox[{"Module", "[", 
+               RowBox[{
+                RowBox[{"{", "}"}], ",", 
+                RowBox[{"TicksStyle", "\[Rule]", 
+                 RowBox[{"Directive", "[", 
+                  RowBox[{
+                   RowBox[{"FontSize", "\[Rule]", "fontsize"}], ",", 
+                   RowBox[{"FontFamily", "\[Rule]", "fontfamily"}], ",", 
+                   "color"}], "]"}]}]}], "]"}]}]}
+           },
+           BaselinePosition->{Baseline, {1, 1}},
+           GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+           GridBoxItemSize->{"Columns" -> {{
+                Scaled[0.999]}}, "Rows" -> {{1.}}}]}
+        },
+        BaselinePosition->{Baseline, {1, 1}},
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}],
+       Definition[$CellContext`myTickStyle],
+       Editable->False]},
+     {
+      InterpretationBox[GridBox[{
+         {GridBox[{
+            {
+             RowBox[{
+              RowBox[{"myTranspose", "[", 
+               RowBox[{"lLong_List", ",", "lShort_List"}], "]"}], ":=", 
+              RowBox[{"Module", "[", 
+               RowBox[{
+                RowBox[{"{", "}"}], ",", 
+                TemplateBox[{
+                  RowBox[{"{", 
+                    RowBox[{"lLong", ",", 
+                    RowBox[{"Table", "[", 
+                    RowBox[{"lShort", ",", 
+                    RowBox[{"Length", "[", "lLong", "]"}]}], "]"}]}], "}"}]},
+                 "Transpose"]}], "]"}]}]}
+           },
+           BaselinePosition->{Baseline, {1, 1}},
+           GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+           GridBoxItemSize->{"Columns" -> {{
+                Scaled[0.999]}}, "Rows" -> {{1.}}}]}
+        },
+        BaselinePosition->{Baseline, {1, 1}},
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}],
+       Definition[$CellContext`myTranspose],
+       Editable->False]},
+     {
+      InterpretationBox[GridBox[{
+         {GridBox[{
+            {
+             RowBox[{
+              RowBox[{"myUnixTime", "[", "s_String", "]"}], ":=", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"Plus", "@@", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"UnixTime", "[", 
+                    RowBox[{"FromDateString", "[", "#1", "]"}], "]"}], ",", 
+                    RowBox[{"ToExpression", "[", 
+                    RowBox[{"\<\".\"\>", "~~", "#2"}], "]"}]}], "}"}]}], 
+                 "&"}], ")"}], "@@", 
+               RowBox[{"StringSplit", "[", 
+                RowBox[{"s", ",", "\<\".\"\>"}], "]"}]}]}]}
+           },
+           BaselinePosition->{Baseline, {1, 1}},
+           GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+           GridBoxItemSize->{"Columns" -> {{
+                Scaled[0.999]}}, "Rows" -> {{1.}}}]}
+        },
+        BaselinePosition->{Baseline, {1, 1}},
+        GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}],
+       Definition[$CellContext`myUnixTime],
+       Editable->False]}
+    },
+    GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.5599999999999999]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}}],
+   Column],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{
+  3.998312817773617*^9, {3.9988370289875336`*^9, 3.998837044320938*^9}, {
+   3.998837076335861*^9, 3.99883709475634*^9}, {3.9988373836970634`*^9, 
+   3.9988373908078823`*^9}},
  CellLabel->
-  "During evaluation of \
-In[70]:=",ExpressionUUID->"7ddb190f-9637-f347-a4fd-c77121fb9262"],
-
-Cell[BoxData["$Failed"], "Output",
- CellChangeTimes->{
-  3.998312817773617*^9, {3.9988370289875336`*^9, 3.998837044320938*^9}, {
-   3.998837076335861*^9, 3.9988370950687447`*^9}},
- CellLabel->"Out[87]=",ExpressionUUID->"709f7b2b-312f-1041-9999-8a9b5a43d957"],
-
-Cell[BoxData[
- RowBox[{"myPackageInputPrint", "[", "]"}]], "Output",
- CellChangeTimes->{
-  3.998312817773617*^9, {3.9988370289875336`*^9, 3.998837044320938*^9}, {
-   3.998837076335861*^9, 3.998837095071724*^9}},
- CellLabel->"Out[88]=",ExpressionUUID->"eceed9b6-2564-9a4a-9a60-1635fccbad56"]
+  "Out[38]//TableForm=",ExpressionUUID->"7639479f-0b58-7a45-8076-\
+25807311b796"]
 }, Open  ]]
-}, Open  ]],
+}, Closed]],
 
 Cell[CellGroupData[{
 
@@ -741,8 +3497,6 @@ Cell["control data evaluation dynamometer volume", "Section",
  CellChangeTimes->{{3.998836999738796*^9, 
   3.9988370104571457`*^9}},ExpressionUUID->"5aed68f0-ee16-6e44-af91-\
 d2335eb70de5"],
-
-Cell[CellGroupData[{
 
 Cell[BoxData[{
  RowBox[{
@@ -758,33 +3512,232 @@ main/data/2024_effects-mask-wearing/raw-data-import-functions.nb\>\"", "]"}],
    "=", "\"\<https://github.com/Carl-Firle/my-data-storage/raw/refs/heads/\
 main/data/2024_effects-mask-wearing/20260827-01_dynamometer%20breathing%20and%\
 20pexa/\>\""}], ";"}]}], "Input",
- CellLabel->"In[30]:=",ExpressionUUID->"ab5fadea-de0f-b14d-a80e-546d1f5c2d01"],
+ CellLabel->"In[42]:=",ExpressionUUID->"ab5fadea-de0f-b14d-a80e-546d1f5c2d01"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"evaluateVolumeDynamometerData", "[", 
+  RowBox[{"\"\<validation\>\"", ",", "\"\<20260827-01.2_protocol.txt\>\"", 
+   ",", "\"\<20260827-01.2_pexa.txt\>\"", ",", "\"\<pexa\>\"", 
+   ",", "\"\<20260827-01.2_dynamometer%20breathing.csv\>\"", 
+   ",", "\"\<dynamometer_abdomen\>\"", ",", "2", 
+   ",", "\"\<dynamometer_thorax\>\"", ",", "4"}], "]"}]], "Input",
+ CellChangeTimes->{{3.9988369761992855`*^9, 3.9988369762867737`*^9}, {
+   3.9988374482931194`*^9, 3.9988374533495846`*^9}, {3.998837489873829*^9, 
+   3.998837569760086*^9}, {3.998837786058836*^9, 3.998837789405203*^9}, {
+   3.998837837547249*^9, 3.998837842057064*^9}, {3.9988379551935062`*^9, 
+   3.9988379940772057`*^9}, 
+   3.9988382509318447`*^9},ExpressionUUID->"eedcae76-50ab-0948-a373-\
+b3a9de41a603"],
 
 Cell[BoxData[
  TemplateBox[{
   "Import", "nfurl", 
    "\"Unable to retrieve data from \
-\\!\\(\\*RowBox[{\\\"\\\\\\\"https://github.com/Carl-Firle/effects-of-mask-\
-wearing-on-human-particle-formation/raw/refs/heads/main/methods/stringFix_for_\
-protocol.m\\\\\\\"\\\"}]\\). Consult Internal`$LastInternalFailure for \
-potential information.\"", 2, 5, 3, 30835516923460893651, "Local"},
+\\!\\(\\*RowBox[{\\\"\\\\\\\"https://github.com/Carl-Firle/my-data-storage/\
+raw/refs/heads/main/data/2024_effects-mask-wearing/20260827-01_dynamometer%\
+20breathing%20and%20pexa/20260827-01.2_dynamometer \
+breathing.csv\\\\\\\"\\\"}]\\). Consult Internal`$LastInternalFailure for \
+potential information.\"", 2, 83, 1, 30835595989850427396, "Local"},
   "MessageTemplate",
   BaseStyle->"MSG"]], "Message",
- CellChangeTimes->{3.998837031312866*^9},
+ CellChangeTimes->{3.9988381164002094`*^9},
  CellLabel->
   "During evaluation of \
-In[1]:=",ExpressionUUID->"42696caa-d342-df41-988b-29260a29414e"]
-}, Open  ]],
+In[83]:=",ExpressionUUID->"05118e6c-268f-8248-a4c9-ce8bb628423a"],
 
 Cell[BoxData[
- RowBox[{"evaluateVolumeDynamometerData", "[", "]"}]], "Input",
- CellChangeTimes->{{3.9988369761992855`*^9, 
-  3.9988369762867737`*^9}},ExpressionUUID->"eedcae76-50ab-0948-a373-\
-b3a9de41a603"]
+ TemplateBox[{
+  "Symbol", "argx", 
+   "\"\\!\\(\\*RowBox[{\\\"Symbol\\\"}]\\) called with \\!\\(\\*RowBox[{\\\"0\
+\\\"}]\\) arguments; 1 argument is expected.\"", 2, 83, 2, 
+   30835595989850427396, "Local"},
+  "MessageTemplate",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.998838116449766*^9},
+ CellLabel->
+  "During evaluation of \
+In[83]:=",ExpressionUUID->"a69c33e0-55b6-404d-978e-e169b6046d57"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Rest", "norest", 
+   "\"Cannot take Rest of expression \\!\\(\\*RowBox[{\\\"Symbol\\\", \\\"[\\\
+\", \\\"]\\\"}]\\) with length zero.\"", 2, 83, 3, 30835595989850427396, 
+   "Local"},
+  "MessageTemplate",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.9988381165245266`*^9},
+ CellLabel->
+  "During evaluation of \
+In[83]:=",ExpressionUUID->"473c9b94-4202-f045-afbf-cb1306e2cf4e"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "GatherBy", "list", 
+   "\"List expected at position \\!\\(\\*RowBox[{\\\"1\\\"}]\\) in \
+\\!\\(\\*RowBox[{\\\"GatherBy\\\", \\\"[\\\", RowBox[{RowBox[{\\\"synchronize\
+\\\", \\\"[\\\", RowBox[{RowBox[{\\\"Rest\\\", \\\"[\\\", \
+RowBox[{\\\"Symbol\\\", \\\"[\\\", \\\"]\\\"}], \\\"]\\\"}], \\\",\\\", \\\"1\
+\\\", \\\",\\\", \\\"\\\\\\\"dynamometer_abdomen\\\\\\\"\\\"}], \\\"]\\\"}], \
+\\\",\\\", \\\"First\\\"}], \\\"]\\\"}]\\).\"", 2, 83, 4, 
+   30835595989850427396, "Local"},
+  "MessageTemplate",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.9988381165480824`*^9},
+ CellLabel->
+  "During evaluation of \
+In[83]:=",ExpressionUUID->"f8b14984-7473-3d43-bfb3-611db3fdfde5"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Part", "partw", 
+   "\"Part \\!\\(\\*RowBox[{\\\"2\\\"}]\\) of \\!\\(\\*RowBox[{\\\"Rest\\\", \
+\\\"[\\\", RowBox[{\\\"Symbol\\\", \\\"[\\\", \\\"]\\\"}], \\\"]\\\"}]\\) \
+does not exist.\"", 2, 83, 5, 30835595989850427396, "Local"},
+  "MessageTemplate",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.998838116586355*^9},
+ CellLabel->
+  "During evaluation of \
+In[83]:=",ExpressionUUID->"1d1a4ecf-8854-3e4d-a5e9-d8dfa7fb3e7d"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Part", "partd", 
+   "\"Part specification \\!\\(\\*RowBox[{\\\"First\\\", \\\"\
+\[LeftDoubleBracket]\\\", RowBox[{\\\"1\\\", \\\",\\\", \\\"1\\\"}], \\\"\
+\[RightDoubleBracket]\\\"}]\\) is longer than depth of object.\"", 2, 83, 6, 
+   30835595989850427396, "Local"},
+  "MessageTemplate",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.998838116661907*^9},
+ CellLabel->
+  "During evaluation of \
+In[83]:=",ExpressionUUID->"11684fda-ed09-7542-b76c-94c03cb163f6"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Symbol", "argx", 
+   "\"\\!\\(\\*RowBox[{\\\"Symbol\\\"}]\\) called with \\!\\(\\*RowBox[{\\\"0\
+\\\"}]\\) arguments; 1 argument is expected.\"", 2, 83, 7, 
+   30835595989850427396, "Local"},
+  "MessageTemplate",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.998838116672804*^9},
+ CellLabel->
+  "During evaluation of \
+In[83]:=",ExpressionUUID->"294c93ea-1dca-774b-9279-14ac69ad27d5"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Import", "nfurl", 
+   "\"Unable to retrieve data from \
+\\!\\(\\*RowBox[{\\\"\\\\\\\"https://github.com/Carl-Firle/my-data-storage/\
+raw/refs/heads/main/data/2024_effects-mask-wearing/20260827-01_dynamometer%\
+20breathing%20and%20pexa/20260827-01.2_dynamometer \
+breathing.csv\\\\\\\"\\\"}]\\). Consult Internal`$LastInternalFailure for \
+potential information.\"", 2, 83, 8, 30835595989850427396, "Local"},
+  "MessageTemplate",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.998838116789959*^9},
+ CellLabel->
+  "During evaluation of \
+In[83]:=",ExpressionUUID->"c8d6d647-99f5-9b4c-8705-49932af0f314"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Symbol", "argx", 
+   "\"\\!\\(\\*RowBox[{\\\"Symbol\\\"}]\\) called with \\!\\(\\*RowBox[{\\\"0\
+\\\"}]\\) arguments; 1 argument is expected.\"", 2, 83, 9, 
+   30835595989850427396, "Local"},
+  "MessageTemplate",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.998838116801178*^9},
+ CellLabel->
+  "During evaluation of \
+In[83]:=",ExpressionUUID->"ef0cd698-c411-8441-863d-72f30174e923"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General", "stop", 
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"Symbol\\\", \\\"::\\\", \
+\\\"argx\\\"}], \\\"MessageName\\\"]\\) will be suppressed during this \
+calculation.\"", 2, 83, 10, 30835595989850427396, "Local"},
+  "MessageTemplate",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.9988381168082905`*^9},
+ CellLabel->
+  "During evaluation of \
+In[83]:=",ExpressionUUID->"d1986ec9-82b2-004b-b228-fff01ff36100"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Rest", "norest", 
+   "\"Cannot take Rest of expression \\!\\(\\*RowBox[{\\\"Symbol\\\", \\\"[\\\
+\", \\\"]\\\"}]\\) with length zero.\"", 2, 83, 11, 30835595989850427396, 
+   "Local"},
+  "MessageTemplate",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.998838116816353*^9},
+ CellLabel->
+  "During evaluation of \
+In[83]:=",ExpressionUUID->"ac739717-1ed5-3640-8b7c-83e968275743"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "GatherBy", "list", 
+   "\"List expected at position \\!\\(\\*RowBox[{\\\"1\\\"}]\\) in \
+\\!\\(\\*RowBox[{\\\"GatherBy\\\", \\\"[\\\", RowBox[{RowBox[{\\\"synchronize\
+\\\", \\\"[\\\", RowBox[{RowBox[{\\\"Rest\\\", \\\"[\\\", \
+RowBox[{\\\"Symbol\\\", \\\"[\\\", \\\"]\\\"}], \\\"]\\\"}], \\\",\\\", \\\"1\
+\\\", \\\",\\\", \\\"\\\\\\\"dynamometer_thorax\\\\\\\"\\\"}], \\\"]\\\"}], \
+\\\",\\\", \\\"First\\\"}], \\\"]\\\"}]\\).\"", 2, 83, 12, 
+   30835595989850427396, "Local"},
+  "MessageTemplate",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.998838116821863*^9},
+ CellLabel->
+  "During evaluation of \
+In[83]:=",ExpressionUUID->"4df813ff-3f9a-654b-ab77-b9fed6781264"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Part", "partw", 
+   "\"Part \\!\\(\\*RowBox[{\\\"2\\\"}]\\) of \\!\\(\\*RowBox[{\\\"Rest\\\", \
+\\\"[\\\", RowBox[{\\\"Symbol\\\", \\\"[\\\", \\\"]\\\"}], \\\"]\\\"}]\\) \
+does not exist.\"", 2, 83, 13, 30835595989850427396, "Local"},
+  "MessageTemplate",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.998838116828377*^9},
+ CellLabel->
+  "During evaluation of \
+In[83]:=",ExpressionUUID->"d2e10c8e-3da7-3244-bd13-25a9ae023e21"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Part", "partd", 
+   "\"Part specification \\!\\(\\*RowBox[{\\\"First\\\", \\\"\
+\[LeftDoubleBracket]\\\", RowBox[{\\\"1\\\", \\\",\\\", \\\"1\\\"}], \\\"\
+\[RightDoubleBracket]\\\"}]\\) is longer than depth of object.\"", 2, 83, 14, 
+   30835595989850427396, "Local"},
+  "MessageTemplate",
+  BaseStyle->"MSG"]], "Message",
+ CellChangeTimes->{3.998838116833927*^9},
+ CellLabel->
+  "During evaluation of \
+In[83]:=",ExpressionUUID->"6873b396-9144-e04d-bc44-a98e2eaf4c8f"],
+
+Cell[BoxData["$Aborted"], "Output",
+ CellChangeTimes->{3.998837720401432*^9, 3.9988377902433243`*^9, 
+  3.99883784339686*^9, 3.998837975635742*^9, 3.998838116839903*^9},
+ CellLabel->"Out[83]=",ExpressionUUID->"a3482903-6e3a-1d48-8702-1156fedc6351"]
+}, Open  ]]
 }, Open  ]]
 },
 WindowSize->{718.5, 735},
-WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowMargins->{{Automatic, -5.25}, {Automatic, 0}},
 FrontEndVersion->"15.0 for Microsoft Windows (64-bit) (July 2, 2026)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"ad1cb68f-0dd4-dd46-8401-b8d91b37a778"
@@ -806,34 +3759,43 @@ Cell[735, 27, 500, 11, 82, "Abstract",ExpressionUUID->"7ea43c45-eb16-724c-bd04-2
 Cell[CellGroupData[{
 Cell[1260, 42, 5971, 157, 710, "Input",ExpressionUUID->"8cd0f70d-e319-d64d-9377-e652012323c6",
  InitializationCell->True],
-Cell[7234, 201, 427, 10, 26, "Message",ExpressionUUID->"78cea850-e012-5843-9673-c14c46ab15a1"],
-Cell[7664, 213, 255, 4, 32, "Output",ExpressionUUID->"b80eb139-059a-af4c-ac1a-9c99c1e73bdf"],
-Cell[7922, 219, 276, 4, 32, "Output",ExpressionUUID->"c06b4a76-4804-9543-b876-8df0aed60fe4"],
-Cell[8201, 225, 517, 10, 51, "Output",ExpressionUUID->"0dd19ba8-9df3-2f41-8ffb-ddad70f4aa1a"],
-Cell[8721, 237, 9856, 217, 59, "Output",ExpressionUUID->"ed0da581-5ad8-6443-9d8d-f345c47260ce"],
-Cell[18580, 456, 11104, 209, 59, "Output",ExpressionUUID->"fee4d929-e56e-5940-9b15-6a6fae7f2b53"],
-Cell[29687, 667, 285, 5, 32, "Output",ExpressionUUID->"d57c1445-018d-e64d-8b2f-4e7cf0d3e537"],
-Cell[29975, 674, 288, 5, 32, "Output",ExpressionUUID->"4b5d047c-a30c-e44b-949d-4cb5f34c44e5"],
-Cell[30266, 681, 285, 5, 32, "Output",ExpressionUUID->"e2a64a76-2c95-f544-b805-ac4aa2ef6a65"],
-Cell[30554, 688, 306, 5, 32, "Output",ExpressionUUID->"1d80cc09-9978-8f4e-a617-8191bb9c4c7b"],
-Cell[30863, 695, 306, 5, 32, "Output",ExpressionUUID->"b2ef5d77-cbfc-6646-aea3-adf213952e09"],
-Cell[31172, 702, 304, 5, 32, "Output",ExpressionUUID->"0590cf0d-9fc9-9946-b563-e42c8b647a9f"],
-Cell[31479, 709, 442, 11, 26, "Message",ExpressionUUID->"7ddb190f-9637-f347-a4fd-c77121fb9262"],
-Cell[31924, 722, 258, 4, 32, "Output",ExpressionUUID->"709f7b2b-312f-1041-9999-8a9b5a43d957"],
-Cell[32185, 728, 290, 5, 32, "Output",ExpressionUUID->"eceed9b6-2564-9a4a-9a60-1635fccbad56"]
+Cell[7234, 201, 329, 5, 32, "Output",ExpressionUUID->"0ab4e688-c182-db47-b938-0c9d9310382b"],
+Cell[7566, 208, 503, 11, 93, "Output",ExpressionUUID->"1683c892-57fc-1d45-ba65-e3cad730c4fb"],
+Cell[8072, 221, 9909, 218, 59, "Output",ExpressionUUID->"6f26804f-0933-4546-b844-95037371f53d"],
+Cell[17984, 441, 11155, 210, 59, "Output",ExpressionUUID->"a006e77e-ce2c-9747-8b36-4c00423c28f0"],
+Cell[29142, 653, 5147, 148, 51, "Output",ExpressionUUID->"05399d59-09d1-9742-932f-23d5cc1cc4e8"],
+Cell[34292, 803, 2229, 57, 32, "Output",ExpressionUUID->"bd7fdcaa-b66e-644e-9eb6-3032efb7f9eb"],
+Cell[36524, 862, 1017, 23, 32, "Output",ExpressionUUID->"44c3159f-ba39-c540-97a0-5402767b861a"],
+Cell[37544, 887, 355, 6, 32, "Output",ExpressionUUID->"194ede0e-de49-a244-ace1-dae87536e15a"],
+Cell[37902, 895, 357, 6, 32, "Output",ExpressionUUID->"16a49a50-1f80-374a-8734-a6c63485a53d"],
+Cell[38262, 903, 357, 6, 32, "Output",ExpressionUUID->"5a5bfff8-4830-3f4e-9ed6-6c49a4257f50"],
+Cell[38622, 911, 864, 18, 41, "Output",ExpressionUUID->"b8a8e164-cc1e-fa4c-a431-65cba3b88eae"],
+Cell[39489, 931, 115615, 2558, 3502, "Output",ExpressionUUID->"7639479f-0b58-7a45-8076-25807311b796"]
 }, Open  ]]
-}, Open  ]],
+}, Closed]],
 Cell[CellGroupData[{
-Cell[32524, 739, 189, 3, 66, "Section",ExpressionUUID->"5aed68f0-ee16-6e44-af91-d2335eb70de5"],
+Cell[155153, 3495, 189, 3, 52, "Section",ExpressionUUID->"5aed68f0-ee16-6e44-af91-d2335eb70de5"],
+Cell[155345, 3500, 590, 14, 142, "Input",ExpressionUUID->"ab5fadea-de0f-b14d-a80e-546d1f5c2d01"],
 Cell[CellGroupData[{
-Cell[32738, 746, 590, 14, 142, "Input",ExpressionUUID->"ab5fadea-de0f-b14d-a80e-546d1f5c2d01"],
-Cell[33331, 762, 585, 13, 81, "Message",ExpressionUUID->"42696caa-d342-df41-988b-29260a29414e"]
-}, Open  ]],
-Cell[33931, 778, 207, 4, 28, "Input",ExpressionUUID->"eedcae76-50ab-0948-a373-b3a9de41a603"]
+Cell[155960, 3518, 789, 13, 66, "Input",ExpressionUUID->"eedcae76-50ab-0948-a373-b3a9de41a603"],
+Cell[156752, 3533, 642, 14, 81, "Message",ExpressionUUID->"05118e6c-268f-8248-a4c9-ce8bb628423a"],
+Cell[157397, 3549, 424, 11, 26, "Message",ExpressionUUID->"a69c33e0-55b6-404d-978e-e169b6046d57"],
+Cell[157824, 3562, 418, 11, 26, "Message",ExpressionUUID->"473c9b94-4202-f045-afbf-cb1306e2cf4e"],
+Cell[158245, 3575, 714, 15, 26, "Message",ExpressionUUID->"f8b14984-7473-3d43-bfb3-611db3fdfde5"],
+Cell[158962, 3592, 466, 11, 26, "Message",ExpressionUUID->"1d1a4ecf-8854-3e4d-a5e9-d8dfa7fb3e7d"],
+Cell[159431, 3605, 500, 12, 26, "Message",ExpressionUUID->"11684fda-ed09-7542-b76c-94c03cb163f6"],
+Cell[159934, 3619, 424, 11, 26, "Message",ExpressionUUID->"294c93ea-1dca-774b-9279-14ac69ad27d5"],
+Cell[160361, 3632, 640, 14, 81, "Message",ExpressionUUID->"c8d6d647-99f5-9b4c-8705-49932af0f314"],
+Cell[161004, 3648, 424, 11, 26, "Message",ExpressionUUID->"ef0cd698-c411-8441-863d-72f30174e923"],
+Cell[161431, 3661, 466, 11, 26, "Message",ExpressionUUID->"d1986ec9-82b2-004b-b228-fff01ff36100"],
+Cell[161900, 3674, 417, 11, 26, "Message",ExpressionUUID->"ac739717-1ed5-3640-8b7c-83e968275743"],
+Cell[162320, 3687, 712, 15, 26, "Message",ExpressionUUID->"4df813ff-3f9a-654b-ab77-b9fed6781264"],
+Cell[163035, 3704, 467, 11, 26, "Message",ExpressionUUID->"d2e10c8e-3da7-3244-bd13-25a9ae023e21"],
+Cell[163505, 3717, 501, 12, 26, "Message",ExpressionUUID->"6873b396-9144-e04d-bc44-a98e2eaf4c8f"],
+Cell[164009, 3731, 248, 3, 32, "Output",ExpressionUUID->"a3482903-6e3a-1d48-8702-1156fedc6351"]
+}, Open  ]]
 }, Open  ]]
 }
 ]
 *)
-
-(* End of internal cache information *)
 

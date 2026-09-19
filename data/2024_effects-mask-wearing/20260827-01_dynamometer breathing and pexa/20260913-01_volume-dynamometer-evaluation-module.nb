@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[    235968,       5481]
-NotebookOptionsPosition[    233146,       5430]
-NotebookOutlinePosition[    233558,       5447]
-CellTagsIndexPosition[    233515,       5444]
+NotebookDataLength[    241001,       5515]
+NotebookOptionsPosition[    238045,       5462]
+NotebookOutlinePosition[    238489,       5480]
+CellTagsIndexPosition[    238446,       5477]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -34,8 +34,8 @@ Cell[TextData[{
   ButtonNote->"https://orcid.org/0000-0003-3233-178X"]
 }], "Abstract",
  CellChangeTimes->{{3.988957178323103*^9, 3.9889572107856274`*^9}, {
-  3.998312828004854*^9, 
-  3.998312834701977*^9}},ExpressionUUID->"e17ddef2-373f-ea4d-920b-\
+  3.998312828004854*^9, 3.998312834701977*^9}, {3.998838414963949*^9, 
+  3.998838414976467*^9}},ExpressionUUID->"e17ddef2-373f-ea4d-920b-\
 dc20af1d1e4c"],
 
 Cell[CellGroupData[{
@@ -196,8 +196,9 @@ Cell[BoxData[{
  InitializationCell->True,
  CellChangeTimes->{{3.98895722478401*^9, 3.9889572266724873`*^9}, {
   3.988957293280304*^9, 3.988957333214344*^9}, {3.988957456077276*^9, 
-  3.988957464919777*^9}},
- CellLabel->"In[1]:=",ExpressionUUID->"66c95249-6edd-5542-bce4-513215ac611e"],
+  3.988957464919777*^9}, {3.9988384149814663`*^9, 
+  3.9988384160587845`*^9}},ExpressionUUID->"66c95249-6edd-5542-bce4-\
+513215ac611e"],
 
 Cell[BoxData["\<\"Lucida Sans Unicode\"\>"], "Output",
  CellChangeTimes->{3.998312817773617*^9},
@@ -3457,9 +3458,10 @@ bfcad3cb87df"]
 
 Cell[CellGroupData[{
 
-Cell["myFigureIDs", "Section",
- CellChangeTimes->{{3.9523328095680523`*^9, 
-  3.9523328134640102`*^9}},ExpressionUUID->"3b9d5fc2-8d62-7649-be8a-\
+Cell["myFigureids", "Section",
+ CellChangeTimes->{{3.9523328095680523`*^9, 3.9523328134640102`*^9}, {
+  3.998838416063301*^9, 
+  3.998838416070307*^9}},ExpressionUUID->"3b9d5fc2-8d62-7649-be8a-\
 02dc8b35cb70"],
 
 Cell[BoxData[
@@ -3476,21 +3478,24 @@ Cell[BoxData[
     "make", " ", "the", " ", "next", " ", "output", " ", "cell", " ", "to", " ",
       "an", " ", "input", " ", "cell", " ", "with", " ", "the", " ", 
      "variable", " ", 
-     StyleBox["myFigureIDs",
+     StyleBox["myFigureids",
       FontSlant->"Italic"], 
      StyleBox[" ",
-      FontSlant->"Italic"], "myFigureIDs"}], "="}], "*)"}]}]], "Input",
+      FontSlant->"Italic"], "myFigureids"}], "="}], "*)"}]}]], "Input",
  CellChangeTimes->{{3.9465492772279587`*^9, 3.946549350820772*^9}, {
-  3.9523328335084953`*^9, 3.952332833761711*^9}, {3.998312884185644*^9, 
-  3.9983128878876953`*^9}},ExpressionUUID->"c8a70db7-8845-aa41-9e72-\
+   3.9523328335084953`*^9, 3.952332833761711*^9}, {3.998312884185644*^9, 
+   3.9983128878876953`*^9}, 
+   3.998838416081646*^9},ExpressionUUID->"c8a70db7-8845-aa41-9e72-\
 87004c67867e"],
 
 Cell[BoxData[
  RowBox[{
-  RowBox[{"myFigureIDs", "=", 
+  RowBox[{"myFigureids", "=", 
    RowBox[{"{", 
-    RowBox[{"\"\<085\>\"", "..."}], "}"}]}], ";"}]], "Input",ExpressionUUID->\
-"99fef761-cc61-474f-b7d1-c2aae76b3fc6"],
+    RowBox[{"\"\<085\>\"", "..."}], "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{
+  3.998838416086643*^9},ExpressionUUID->"99fef761-cc61-474f-b7d1-\
+c2aae76b3fc6"],
 
 Cell[CellGroupData[{
 
@@ -3543,1852 +3548,7 @@ main/data/2024_effects-mask-wearing/raw-data-import-functions.nb\>\"", "]"}],
 main/data/2024_effects-mask-wearing/20260827-01_dynamometer%20breathing%20and%\
 20pexa/\>\""}], ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{
-   RowBox[{"mode", "=", "\"\<validation\>\""}], ";"}], "\n"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"airflowToVolume", "=."}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{
-   RowBox[{
-    RowBox[{"airflowToVolume", "[", "data_", "]"}], ":=", 
-    RowBox[{"Module", "[", 
-     RowBox[{
-      RowBox[{"{", 
-       RowBox[{
-       "time", ",", "flow", ",", "deltaT", ",", "deltaV", ",", "volume"}], 
-       "}"}], "\[IndentingNewLine]", ",", 
-      RowBox[{
-       RowBox[{"time", "=", 
-        RowBox[{"data", "[", 
-         RowBox[{"[", 
-          RowBox[{"All", ",", "1"}], "]"}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"flow", "=", 
-        RowBox[{"data", "[", 
-         RowBox[{"[", 
-          RowBox[{"All", ",", "2"}], "]"}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"deltaT", "=", 
-        RowBox[{"Differences", "[", "time", "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"deltaV", "=", 
-        RowBox[{
-         RowBox[{"-", "deltaT"}], "*", 
-         RowBox[{"MovingAverage", "[", 
-          RowBox[{"flow", ",", "2"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"volume", "=", 
-        RowBox[{"Prepend", "[", 
-         RowBox[{
-          RowBox[{"Accumulate", "[", "deltaV", "]"}], ",", "0"}], "]"}]}], ";",
-        "\[IndentingNewLine]", 
-       RowBox[{"Transpose", "[", 
-        RowBox[{"{", 
-         RowBox[{"time", ",", "volume"}], "}"}], "]"}]}]}], "]"}]}], ";"}], 
-  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
- RowBox[{"extractInspPhase", "=."}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{
-   RowBox[{"extractInspPhase", "[", "l_List", "]"}], ":=", 
-   RowBox[{"Select", "[", 
-    RowBox[{"dExtrVolume", ",", 
-     RowBox[{"(", 
-      RowBox[{
-       RowBox[{
-        RowBox[{"(", 
-         RowBox[{
-          RowBox[{"l", "[", 
-           RowBox[{"[", "1", "]"}], "]"}], "-", 
-          RowBox[{"Quantity", "[", 
-           RowBox[{".5", ",", "\"\<Seconds\>\""}], "]"}]}], ")"}], "<=", 
-        "#\"elapsed time [s]\"", "<=", 
-        RowBox[{"(", 
-         RowBox[{
-          RowBox[{"l", "[", 
-           RowBox[{"[", "2", "]"}], "]"}], "+", 
-          RowBox[{"Quantity", "[", 
-           RowBox[{".5", ",", "\"\<Seconds\>\""}], "]"}]}], ")"}]}], "&"}], 
-      ")"}]}], "]"}]}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
-  RowBox[{"(*", 
-   RowBox[{
-    RowBox[{"created", " ", "with", " ", "GPT"}], "-", 
-    RowBox[{"5.6", " ", "Sol", " ", "start"}]}], " ", "*)"}]}], "\n", 
- RowBox[{"minMaxWithTime", "=."}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{
-   RowBox[{"minMaxWithTime", "[", 
-    RowBox[{"data_", ",", "col_"}], "]"}], ":=", 
-   RowBox[{"Module", "[", 
-    RowBox[{
-     RowBox[{"{", "x", "}"}], ",", 
-     RowBox[{
-      RowBox[{"x", "=", 
-       RowBox[{"Join", "[", 
-        RowBox[{
-         RowBox[{"MinimalBy", "[", 
-          RowBox[{"data", ",", 
-           RowBox[{
-            RowBox[{"#", "[", "col", "]"}], "&"}]}], "]"}], ",", 
-         RowBox[{"MaximalBy", "[", 
-          RowBox[{"data", ",", 
-           RowBox[{
-            RowBox[{"#", "[", "col", "]"}], "&"}]}], "]"}]}], "]"}]}], ";", 
-      "\[IndentingNewLine]", 
-      RowBox[{"Tabular", "[", 
-       RowBox[{
-        RowBox[{"{", 
-         RowBox[{
-          RowBox[{"{", 
-           RowBox[{"\"\<Min\>\"", ",", 
-            RowBox[{"QuantityMagnitude", "[", 
-             RowBox[{"x", "[", 
-              RowBox[{"1", ",", "\"\<elapsed time [s]\>\""}], "]"}], "]"}], ",", 
-            RowBox[{"QuantityMagnitude", "[", 
-             RowBox[{"x", "[", 
-              RowBox[{"1", ",", "col"}], "]"}], "]"}]}], "}"}], ",", 
-          RowBox[{"{", 
-           RowBox[{"\"\<Max\>\"", ",", 
-            RowBox[{"QuantityMagnitude", "[", 
-             RowBox[{"x", "[", 
-              RowBox[{"2", ",", "\"\<elapsed time [s]\>\""}], "]"}], "]"}], ",", 
-            RowBox[{"QuantityMagnitude", "[", 
-             RowBox[{"x", "[", 
-              RowBox[{"2", ",", "col"}], "]"}], "]"}]}], "}"}]}], "}"}], ",", 
-        RowBox[{"{", 
-         RowBox[{"\"\<type\>\"", ",", "\"\<elapsed time [s]\>\"", 
-          ",", "\"\<value\>\""}], "}"}]}], "]"}]}]}], "]"}]}], 
-  "\[IndentingNewLine]", 
-  RowBox[{"(*", 
-   RowBox[{
-    RowBox[{"created", " ", "with", " ", "GPT"}], "-", 
-    RowBox[{"5.6", " ", "Sol", " ", "end"}]}], "*)"}], 
-  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
- RowBox[{"inspiratoryPlots", "=."}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{
-   RowBox[{"inspiratoryPlots", "[", "t_Tabular", "]"}], ":=", 
-   RowBox[{"Module", "[", 
-    RowBox[{
-     RowBox[{"{", 
-      RowBox[{
-      "plotVolume", ",", "plotBoth", ",", "tExtr", ",", "minMaxVol", ",", 
-       "minMaxDyn1", ",", "minMaxDyn2", ",", "minMaxAll", ",", 
-       "plotMinMaxAll", ",", "dVt", ",", "tInspVD1D2", ",", "VolVD1D2"}], 
-      "}"}], ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     RowBox[{
-      RowBox[{"tExtr", "=", 
-       RowBox[{"t", "[", 
-        RowBox[{"All", ",", 
-         RowBox[{"{", 
-          
-          RowBox[{"\"\<elapsed time [s]\>\"", 
-           ",", "\"\<volume breathing baseline corrected [100 ml]\>\"", ",", 
-           RowBox[{"nameDynamometerProtocol1", "<>", "\"\< force [N]\>\""}], ",", 
-           RowBox[{"nameDynamometerProtocol2", "<>", "\"\< force [N]\>\""}]}],
-           "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
-      "\[IndentingNewLine]", 
-      RowBox[{"minMaxVol", "=", 
-       RowBox[{"minMaxWithTime", "[", 
-        RowBox[{
-        "tExtr", 
-         ",", "\"\<volume breathing baseline corrected [100 ml]\>\""}], 
-        "]"}]}], ";", "\n", 
-      RowBox[{"minMaxDyn1", "=", 
-       RowBox[{"minMaxWithTime", "[", 
-        RowBox[{"tExtr", ",", 
-         RowBox[{"nameDynamometerProtocol1", "<>", "\"\< force [N]\>\""}]}], 
-        "]"}]}], ";", 
-      RowBox[{"minMaxDyn2", "=", 
-       RowBox[{"minMaxWithTime", "[", 
-        RowBox[{"tExtr", ",", 
-         RowBox[{"nameDynamometerProtocol2", "<>", "\"\< force [N]\>\""}]}], 
-        "]"}]}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-      "\[IndentingNewLine]", 
-      RowBox[{"AppendTo", "[", 
-       RowBox[{"dMinMax", ",", 
-        RowBox[{"{", 
-         RowBox[{"minMaxVol", ",", "minMaxDyn1", ",", "minMaxDyn2"}], "}"}]}],
-        "]"}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-      RowBox[{"minMaxAll", "=", 
-       RowBox[{"Join", "@@", 
-        RowBox[{"{", 
-         RowBox[{"minMaxVol", ",", "minMaxDyn1", ",", "minMaxDyn2"}], 
-         "}"}]}]}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-      RowBox[{"plotMinMaxAll", "=", 
-       RowBox[{"ListPlot", "[", 
-        RowBox[{
-         RowBox[{"minMaxAll", "->", 
-          RowBox[{"{", 
-           RowBox[{"\"\<elapsed time [s]\>\"", ",", "\"\<value\>\""}], 
-           "}"}]}], ",", 
-         RowBox[{"PlotStyle", "->", 
-          RowBox[{"Directive", "[", 
-           RowBox[{
-            RowBox[{"PointSize", "[", "Large", "]"}], ",", "StandardGreen"}], 
-           "]"}]}], ",", 
-         RowBox[{"myPlotSequence", "[", "]"}]}], "]"}]}], ";", 
-      "\[IndentingNewLine]", "\[IndentingNewLine]", 
-      RowBox[{"plotVolume", "=", 
-       RowBox[{"ListLinePlot", "[", 
-        RowBox[{
-         RowBox[{"t", "->", 
-          RowBox[{"{", 
-           
-           RowBox[{"\"\<elapsed time [s]\>\"", 
-            ",", "\"\<volume breathing baseline corrected [100 ml]\>\""}], 
-           "}"}]}], ",", 
-         RowBox[{"myPlotSequence", "[", "]"}], ",", 
-         RowBox[{"PlotStyle", "->", "Black"}], ",", 
-         RowBox[{"PlotLegends", "->", 
-          RowBox[{
-          "{", "\"\<volume breathing baseline corrected [100 ml]\>\"", 
-           "}"}]}], ",", 
-         RowBox[{"FrameLabel", "->", 
-          RowBox[{"{", 
-           
-           RowBox[{"\"\<elapsed time [s]\>\"", ",", 
-            " ", "\"\<mixed scale, see legend\>\""}], "}"}]}]}], "]"}]}], ";",
-       "\[IndentingNewLine]", "\n", 
-      RowBox[{"plotBoth", "=", 
-       RowBox[{"Show", "[", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-        RowBox[{"plotVolume", "\[IndentingNewLine]", "\[IndentingNewLine]", ",", 
-         RowBox[{"ListLinePlot", "[", 
-          RowBox[{
-           RowBox[{"t", "->", 
-            RowBox[{"{", 
-             RowBox[{
-              RowBox[{"{", 
-               RowBox[{"\"\<elapsed time [s]\>\"", ",", 
-                RowBox[{
-                "nameDynamometerProtocol1", "<>", "\"\< force [N]\>\""}]}], 
-               "}"}], ",", 
-              RowBox[{"{", 
-               RowBox[{"\"\<elapsed time [s]\>\"", ",", 
-                RowBox[{
-                "nameDynamometerProtocol2", "<>", "\"\< force [N]\>\""}]}], 
-               "}"}]}], "}"}]}], "\[IndentingNewLine]", ",", 
-           RowBox[{"PlotLegends", "->", 
-            RowBox[{"{", 
-             RowBox[{"\"\<dynamometer_1 force thorax [N]\>\"", ",", 
-              RowBox[{
-              "nameDynamometerProtocol2", " ", "<>", 
-               " ", "\"\< force [N]\>\""}]}], "}"}]}], "\[IndentingNewLine]", 
-           ",", 
-           RowBox[{"myPlotSequence", "[", "]"}], ",", 
-           RowBox[{"PlotRange", "->", 
-            RowBox[{"{", 
-             RowBox[{"plotRangeX", ",", "All"}], "}"}]}]}], "]"}], 
-         "\[IndentingNewLine]", "\[IndentingNewLine]", ",", "plotMinMaxAll", 
-         "\[IndentingNewLine]", "\[IndentingNewLine]", ",", 
-         RowBox[{"PlotRange", "->", "All"}]}], "\[IndentingNewLine]", 
-        "]"}]}]}]}], "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", 
-  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
- RowBox[{"styleDescription", "=."}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{
-   RowBox[{"styleDescription", "[", "l_List", "]"}], ":=", 
-   RowBox[{"Module", "[", 
-    RowBox[{
-     RowBox[{"{", "}"}], ",", 
-     RowBox[{
-      RowBox[{
-       RowBox[{"Which", "[", "\[IndentingNewLine]", 
-        RowBox[{
-         RowBox[{"StringContainsQ", "[", 
-          RowBox[{
-           RowBox[{"Keys", "[", "#", "]"}], ",", "\"\<Vol\>\""}], "]"}], 
-         "\[IndentingNewLine]", ",", 
-         RowBox[{"Style", "[", 
-          RowBox[{
-           RowBox[{"Which", "[", 
-            RowBox[{
-             RowBox[{"StringContainsQ", "[", 
-              RowBox[{
-               RowBox[{"Keys", "[", "#", "]"}], 
-               ",", "\"\<\[CapitalDelta]t\>\""}], "]"}], ",", 
-             RowBox[{
-              RowBox[{"ToString", "[", "#", "]"}], "<>", "\"\< s\>\""}], ",", 
-             RowBox[{"StringContainsQ", "[", 
-              RowBox[{
-               RowBox[{"Keys", "[", "#", "]"}], 
-               ",", "\"\<\[CapitalDelta]V\>\""}], "]"}], ",", 
-             RowBox[{
-              RowBox[{"ToString", "[", "#", "]"}], "<>", "\"\< ml\>\""}]}], 
-            "]"}], ",", "Bold", ",", "Black", ",", " ", "myFontStandard", ",",
-            "14"}], "]"}], "\[IndentingNewLine]", "\[IndentingNewLine]", ",", 
-         RowBox[{"StringContainsQ", "[", 
-          RowBox[{
-           RowBox[{"Keys", "[", "#", "]"}], ",", "\"\<Dyn1\>\""}], "]"}], ",", 
-         RowBox[{"Style", "[", 
-          RowBox[{
-           RowBox[{"Which", "[", 
-            RowBox[{
-             RowBox[{"StringContainsQ", "[", 
-              RowBox[{
-               RowBox[{"Keys", "[", "#", "]"}], 
-               ",", "\"\<\[CapitalDelta]t\>\""}], "]"}], ",", 
-             RowBox[{
-              RowBox[{"ToString", "[", "#", "]"}], "<>", "\"\< s\>\""}], ",", 
-             RowBox[{"StringContainsQ", "[", 
-              RowBox[{
-               RowBox[{"Keys", "[", "#", "]"}], 
-               ",", "\"\<\[CapitalDelta]N\>\""}], "]"}], ",", 
-             RowBox[{
-              RowBox[{"ToString", "[", "#", "]"}], "<>", "\"\< N\>\""}]}], 
-            "]"}], ",", "Bold", ",", 
-           RowBox[{"RGBColor", "[", 
-            RowBox[{"0.24", ",", " ", "0.6", ",", " ", "0.8"}], "]"}], ",", 
-           " ", "myFontStandard", ",", "14"}], "]"}], "\[IndentingNewLine]", 
-         "\[IndentingNewLine]", ",", 
-         RowBox[{"StringContainsQ", "[", 
-          RowBox[{
-           RowBox[{"Keys", "[", "#", "]"}], ",", "\"\<Dyn2\>\""}], "]"}], ",", 
-         RowBox[{"Style", "[", 
-          RowBox[{
-           RowBox[{"Which", "[", 
-            RowBox[{
-             RowBox[{"StringContainsQ", "[", 
-              RowBox[{
-               RowBox[{"Keys", "[", "#", "]"}], 
-               ",", "\"\<\[CapitalDelta]t\>\""}], "]"}], ",", 
-             RowBox[{
-              RowBox[{"ToString", "[", "#", "]"}], "<>", "\"\< s\>\""}], ",", 
-             RowBox[{"StringContainsQ", "[", 
-              RowBox[{
-               RowBox[{"Keys", "[", "#", "]"}], 
-               ",", "\"\<\[CapitalDelta]N\>\""}], "]"}], ",", 
-             RowBox[{
-              RowBox[{"ToString", "[", "#", "]"}], "<>", "\"\< N\>\""}]}], 
-            "]"}], ",", "Bold", ",", 
-           RowBox[{"RGBColor", "[", 
-            RowBox[{"0.95", ",", "0.627", ",", "0.1425"}], "]"}], ",", " ", 
-           "myFontStandard", ",", "14"}], "]"}]}], "\[IndentingNewLine]", 
-        "\[IndentingNewLine]", "\[IndentingNewLine]", "]"}], "&"}], "/@", 
-      "l"}]}], "]"}]}], "\[IndentingNewLine]", "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
- RowBox[{"extractBreath", "=."}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{
-   RowBox[{"extractBreath", "[", "l_List", "]"}], ":=", 
-   RowBox[{"Select", "[", 
-    RowBox[{"dExtrVolume", ",", 
-     RowBox[{"(", 
-      RowBox[{
-       RowBox[{
-        RowBox[{"(", 
-         RowBox[{
-          RowBox[{"l", "[", 
-           RowBox[{"[", "1", "]"}], "]"}], "-", 
-          RowBox[{"Quantity", "[", 
-           RowBox[{".5", ",", "\"\<Seconds\>\""}], "]"}]}], ")"}], "<=", 
-        "#\"elapsed time [s]\"", "<=", 
-        RowBox[{"(", 
-         RowBox[{
-          RowBox[{"l", "[", 
-           RowBox[{"[", "2", "]"}], "]"}], "+", 
-          RowBox[{"Quantity", "[", 
-           RowBox[{"2", ",", "\"\<Seconds\>\""}], "]"}]}], ")"}]}], "&"}], 
-      ")"}]}], "]"}]}], "\[IndentingNewLine]", "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
- RowBox[{"stats", "=."}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{
-   RowBox[{"stats", "[", "fit_FittedModel", "]"}], ":=", 
-   RowBox[{"<|", 
-    RowBox[{
-     RowBox[{"\"\<R\.b2\>\"", "->", 
-      RowBox[{"fit", "[", "\"\<RSquared\>\"", "]"}]}], ",", 
-     RowBox[{"\"\<adjusted R\.b2\>\"", "->", 
-      RowBox[{"fit", "[", "\"\<AdjustedRSquared\>\"", "]"}]}], ",", 
-     RowBox[{"\"\<r\>\"", "->", 
-      RowBox[{"Sqrt", "[", 
-       RowBox[{"fit", "[", "\"\<RSquared\>\"", "]"}], "]"}]}], ",", 
-     RowBox[{"\"\<AIC\>\"", "->", 
-      RowBox[{"fit", "[", "\"\<AIC\>\"", "]"}]}], ",", 
-     RowBox[{"\"\<MAE\>\"", "->", 
-      RowBox[{"Mean", "[", 
-       RowBox[{"Abs", "[", 
-        RowBox[{"fit", "[", "\"\<FitResiduals\>\"", "]"}], "]"}], "]"}]}], ",", 
-     RowBox[{"\"\<RMSE\>\"", "->", 
-      RowBox[{"Sqrt", "[", 
-       RowBox[{"Mean", "[", 
-        RowBox[{
-         RowBox[{"fit", "[", "\"\<FitResiduals\>\"", "]"}], "^", "2"}], "]"}],
-        "]"}]}]}], "|>"}]}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
- RowBox[{"bands95", "=."}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{
-   RowBox[{
-    RowBox[{"bands95", "[", 
-     RowBox[{"l_", ",", "x_"}], "]"}], ":=", 
-    RowBox[{"l", "[", 
-     RowBox[{"\"\<MeanPredictionBands\>\"", ",", 
-      RowBox[{"ConfidenceLevel", "\[Rule]", ".95"}]}], "]"}]}], ";"}], 
-  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
- RowBox[{"lnm", "=."}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{
-   RowBox[{"lnm", "[", 
-    RowBox[{"l_List", ",", "frameLabelX_String", ",", "frameLabelY_String"}], 
-    "]"}], ":=", 
-   RowBox[{"Module", "[", 
-    RowBox[{
-     RowBox[{"{", "lnm", "}"}], ",", "\[IndentingNewLine]", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{"lnm", "=", 
-        RowBox[{"LinearModelFit", "[", 
-         RowBox[{"l", ",", "x", ",", "x"}], "]"}]}], "\[IndentingNewLine]", ",", 
-       RowBox[{"lnm", "[", 
-        RowBox[{"{", "\"\<ParameterEstimates\>\"", "}"}], "]"}], 
-       "\[IndentingNewLine]", ",", 
-       RowBox[{"stats", "[", "lnm", "]"}], "\[IndentingNewLine]", "\n", ",", 
-       RowBox[{"Show", "[", "\[IndentingNewLine]", 
-        RowBox[{
-         RowBox[{"ListPlot", "[", 
-          RowBox[{"l", ",", 
-           RowBox[{"FrameLabel", "->", 
-            RowBox[{"{", 
-             RowBox[{"frameLabelX", ",", " ", "frameLabelY"}], "}"}]}], ",", 
-           RowBox[{"myPlotSequence", "[", "]"}]}], "]"}], 
-         "\[IndentingNewLine]", ",", 
-         RowBox[{"Plot", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{
-             RowBox[{"lnm", "[", "x", "]"}], ",", 
-             RowBox[{"bands95", "[", 
-              RowBox[{"lnm", ",", "x"}], "]"}]}], "}"}], ",", 
-           RowBox[{"{", 
-            RowBox[{"x", ",", 
-             RowBox[{"Min", "@", 
-              RowBox[{"l", "[", 
-               RowBox[{"[", 
-                RowBox[{"All", ",", "1"}], "]"}], "]"}]}], ",", 
-             RowBox[{"Max", "@", 
-              RowBox[{"l", "[", 
-               RowBox[{"[", 
-                RowBox[{"All", ",", "1"}], "]"}], "]"}]}]}], "}"}], ",", 
-           RowBox[{"Filling", "\[Rule]", 
-            RowBox[{"{", 
-             RowBox[{"2", "\[Rule]", 
-              RowBox[{"{", "1", "}"}]}], "}"}]}]}], "]"}]}], 
-        "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", "}"}]}], 
-    "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
- RowBox[{"fitQuadratic", "=."}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{
-   RowBox[{"fitQuadratic", "[", "l_List", "]"}], ":=", 
-   RowBox[{"Module", "[", 
-    RowBox[{
-     RowBox[{"{", "fitQ", "}"}], ",", "\[IndentingNewLine]", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{"fitQ", "=", 
-        RowBox[{"LinearModelFit", "[", 
-         RowBox[{"l", ",", 
-          RowBox[{"{", 
-           RowBox[{"x", ",", 
-            RowBox[{"x", "^", "2"}]}], "}"}], ",", "x"}], "]"}]}], 
-       "\[IndentingNewLine]", ",", 
-       RowBox[{"stats", "[", "fitQ", "]"}], "\n", "\[IndentingNewLine]", ",", 
-       RowBox[{"Show", "[", "\[IndentingNewLine]", 
-        RowBox[{
-         RowBox[{"ListPlot", "[", 
-          RowBox[{"l", ",", 
-           RowBox[{"myPlotSequence", "[", "]"}]}], "]"}], 
-         "\[IndentingNewLine]", ",", 
-         RowBox[{"Plot", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{
-             RowBox[{"fitQ", "[", "x", "]"}], ",", 
-             RowBox[{"bands95", "[", 
-              RowBox[{"fitQ", ",", "x"}], "]"}]}], "}"}], ",", 
-           RowBox[{"{", 
-            RowBox[{"x", ",", 
-             RowBox[{"Min", "@", 
-              RowBox[{"l", "[", 
-               RowBox[{"[", 
-                RowBox[{"All", ",", "1"}], "]"}], "]"}]}], ",", 
-             RowBox[{"Max", "@", 
-              RowBox[{"l", "[", 
-               RowBox[{"[", 
-                RowBox[{"All", ",", "1"}], "]"}], "]"}]}]}], "}"}], ",", 
-           RowBox[{"Filling", "\[Rule]", 
-            RowBox[{"{", 
-             RowBox[{"2", "\[Rule]", 
-              RowBox[{"{", "1", "}"}]}], "}"}]}]}], "]"}]}], 
-        "\[IndentingNewLine]", "]"}]}], "}"}]}], "\[IndentingNewLine]", 
-    "]"}]}], "\[IndentingNewLine]", "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
- RowBox[{"lnm2param", "=."}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{
-   RowBox[{"lnm2param", "[", "l_List", "]"}], ":=", 
-   RowBox[{"Module", "[", 
-    RowBox[{
-     RowBox[{"{", "lnm2param", "}"}], ",", "\[IndentingNewLine]", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{"lnm2param", "=", 
-        RowBox[{"LinearModelFit", "[", 
-         RowBox[{"l", ",", 
-          RowBox[{"{", 
-           RowBox[{"abdomen", ",", " ", "thorax"}], "}"}], ",", 
-          RowBox[{"{", 
-           RowBox[{"abdomen", ",", " ", "thorax"}], "}"}]}], "]"}]}], 
-       "\[IndentingNewLine]", ",", 
-       RowBox[{"lnm2param", "[", 
-        RowBox[{"{", "\"\<ParameterEstimates\>\"", "}"}], "]"}], 
-       "\[IndentingNewLine]", ",", 
-       RowBox[{"dstat", "=", 
-        RowBox[{"Insert", "[", 
-         RowBox[{"dstat", ",", 
-          RowBox[{"stats", "[", "lnm2param", "]"}], ",", "3"}], "]"}]}], "\n",
-        "\[IndentingNewLine]", ",", 
-       RowBox[{"Show", "[", 
-        RowBox[{
-         RowBox[{"ListPointPlot3D", "[", "l", "]"}], ",", 
-         RowBox[{"Plot3D", "[", 
-          RowBox[{
-           RowBox[{"lnm2param", "[", 
-            RowBox[{"x", ",", "y"}], "]"}], ",", 
-           RowBox[{"{", 
-            RowBox[{"x", ",", 
-             RowBox[{"Min", "[", 
-              RowBox[{"l", "[", 
-               RowBox[{"[", 
-                RowBox[{"All", ",", "1"}], "]"}], "]"}], "]"}], ",", 
-             RowBox[{"Max", "[", 
-              RowBox[{"l", "[", 
-               RowBox[{"[", 
-                RowBox[{"All", ",", "1"}], "]"}], "]"}], "]"}]}], "}"}], ",", 
-           RowBox[{"{", 
-            RowBox[{"y", ",", 
-             RowBox[{"Min", "[", 
-              RowBox[{"l", "[", 
-               RowBox[{"[", 
-                RowBox[{"All", ",", "2"}], "]"}], "]"}], "]"}], ",", 
-             RowBox[{"Max", "[", 
-              RowBox[{"l", "[", 
-               RowBox[{"[", 
-                RowBox[{"All", ",", "2"}], "]"}], "]"}], "]"}]}], "}"}]}], 
-          "]"}], ",", 
-         RowBox[{"myPlotSequence", "[", "]"}]}], "]"}]}], 
-      "\[IndentingNewLine]", "}"}]}], "\[IndentingNewLine]", "]"}]}], 
-  "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"evaluateVolumeDynamometerData", "[", "\[IndentingNewLine]", 
-   RowBox[{"mode_String", "\[IndentingNewLine]", ",", 
-    RowBox[{"nameProtocol_String", ":", 
-     RowBox[{"\"\<protocol.txt\>\"", "\"\<protocol.txt\>\""}]}], 
-    "\[IndentingNewLine]", "\[IndentingNewLine]", ",", 
-    RowBox[{"namePexaData_String", ":", "\"\<pexa.txt\>\""}], 
-    "\[IndentingNewLine]", ",", 
-    RowBox[{"namePexaProtocol_String", ":", "\"\<pexa\>\""}], 
-    "\[IndentingNewLine]", "\[IndentingNewLine]", ",", 
-    RowBox[{"nameDynamometerData_String", ":", "\"\<dynamometer.csv\>\""}], 
-    "\[IndentingNewLine]", ",", "nameDynamometerProtocol1_String", 
-    "\[IndentingNewLine]", ",", "positionDynamometerCSV1_String", 
-    "\[IndentingNewLine]", ",", "nameDynamometerProtocol2_String", 
-    "\[IndentingNewLine]", ",", "positionDynamometerCSV2_String"}], 
-   "\[IndentingNewLine]", "\[IndentingNewLine]", "]"}], ":=", 
-  RowBox[{"Module", "[", 
-   RowBox[{
-    RowBox[{"{", "}"}], "\[IndentingNewLine]", ",", "\[IndentingNewLine]", 
-    RowBox[{"(*", 
-     RowBox[{"import", " ", "data"}], "*)"}], "\[IndentingNewLine]", 
-    RowBox[{
-     RowBox[{"dProtocolImport", "[", "nameProtocol", "]"}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{"dPexaImport", "[", 
-      RowBox[{"namePexaData", ",", "namePexaProtocol"}], "]"}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{"dDynamometerImport", "[", 
-      RowBox[{
-      "nameDynamometerData", ",", "nameDynamometerProtocol1", ",", 
-       "positionDynamometerCSV1"}], "]"}], ";", "\[IndentingNewLine]", 
-     RowBox[{"dDynamometerImport", "[", 
-      RowBox[{
-      "nameDynamometerData", ",", "nameDynamometerProtocol2", ",", 
-       "positionDynamometerCSV2"}], "]"}], " ", ";", "\[IndentingNewLine]", 
-     "\[IndentingNewLine]", 
-     RowBox[{"createTabular", "[", "]"}], ";", "\[IndentingNewLine]", 
-     "\[IndentingNewLine]", 
-     RowBox[{"Abort", "[", "]"}], ";", "\[IndentingNewLine]", 
-     "\[IndentingNewLine]", 
-     RowBox[{"(*", 
-      RowBox[{
-      "generate", " ", "raw", " ", "data", " ", "plot", " ", "with", " ", 
-       "pexa", " ", "airflow", " ", "data", " ", "and", " ", "dynamometer", " ",
-        "data"}], "*)"}], "\[IndentingNewLine]", 
-     RowBox[{"graphicCorrectionFactor", "=", "20"}], ";", 
-     "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     RowBox[{"oneTableTab", "=", 
-      RowBox[{"TransformColumns", "[", 
-       RowBox[{"oneTableTab", ",", 
-        RowBox[{"\"\<pexa_Inhale Exhale Airflow [ml/(20 s)]\>\"", "->", 
-         RowBox[{"(", 
-          RowBox[{
-           RowBox[{
-            RowBox[{
-            "QuantityMagnitude", "[", 
-             "#\"pexa_Inhale Exhale Airflow [ml/s]\"", "]"}], "/", "20"}], 
-           "&"}], ")"}]}]}], "]"}]}], ";", "\[IndentingNewLine]", 
-     RowBox[{"plotRangeX", "=", 
-      RowBox[{"MinMax", "[", 
-       RowBox[{
-        RowBox[{"Select", "[", 
-         RowBox[{"oneTableTab", ",", 
-          RowBox[{
-           RowBox[{"!", 
-            RowBox[{
-            "MissingQ", "[", "#\"pexa_Inhale Exhale Airflow [ml/s]\"", 
-             "]"}]}], "&"}]}], "]"}], "[", 
-        RowBox[{"[", 
-         RowBox[{"All", ",", "\"\<elapsed time [s]\>\""}], "]"}], "]"}], 
-       "]"}]}], ";", "\n", "\n", 
-     RowBox[{"measurementPlot", "=", 
-      RowBox[{"ListLinePlot", "[", 
-       RowBox[{
-        RowBox[{"oneTableTab", "->", 
-         RowBox[{"{", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"\"\<elapsed time [s]\>\"", ",", 
-             RowBox[{
-             "nameDynamometerProtocol1", "<>", "\"\< force [N]\>\""}]}], 
-            "}"}], ",", 
-           RowBox[{"{", 
-            RowBox[{"\"\<elapsed time [s]\>\"", ",", 
-             RowBox[{
-             "nameDynamometerProtocol2", "<>", "\"\< force [N]\>\""}]}], 
-            "}"}], ",", 
-           RowBox[{"{", 
-            
-            RowBox[{"\"\<elapsed time [s]\>\"", 
-             ",", "\"\<pexa_Inhale Exhale Airflow [ml/(20 s)]\>\""}], "}"}]}],
-           "}"}]}], "\[IndentingNewLine]", ",", 
-        RowBox[{"PlotLegends", "->", 
-         RowBox[{"{", 
-          RowBox[{
-           RowBox[{
-           "nameDynamometerProtocol1", " ", "<>", " ", "\"\< force [N]\>\""}],
-            ",", 
-           RowBox[{
-           "nameDynamometerProtocol2", " ", "<>", " ", "\"\< force [N]\>\""}],
-            ",", "\"\<pexa_Inhale Exhale Airflow [ml/(20 s)]\>\""}], "}"}]}], 
-        "\[IndentingNewLine]", ",", 
-        RowBox[{"FrameLabel", "->", 
-         RowBox[{"{", 
-          
-          RowBox[{"\"\<elapsed time [s]\>\"", ",", 
-           " ", "\"\<mixed scale, see legends\>\""}], "}"}]}], 
-        "\[IndentingNewLine]", "\[IndentingNewLine]", ",", 
-        RowBox[{"myPlotSequence", "[", "]"}], ",", 
-        RowBox[{"PlotRange", "->", 
-         RowBox[{"{", 
-          RowBox[{"plotRangeX", ",", "All"}], "}"}]}]}], "]"}]}], ";", 
-     "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     RowBox[{"myFigAppend", "[", 
-      RowBox[{"measurementPlot", ",", "\"\<001\>\"", ",", 
-       RowBox[{
-       "ID", "<>", "\"\< plot pexa airflow and dynamometer data\>\""}], ",", 
-       "300", ",", "True"}], "]"}], ";", "\[IndentingNewLine]", 
-     "\[IndentingNewLine]", 
-     RowBox[{"(*", 
-      RowBox[{
-      "calculate", " ", "breathing", " ", "volume", " ", "from", " ", 
-       "airflow"}], "*)"}], "\[IndentingNewLine]", 
-     RowBox[{"dExtr", "=", 
-      RowBox[{"Select", "[", 
-       RowBox[{"oneTableTab", ",", 
-        RowBox[{
-         RowBox[{
-          RowBox[{
-          "MissingQ", "[", "#\"pexa_Inhale Exhale Airflow [ml/s]\"", "]"}], "===",
-           "False"}], "&"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
-     "\[IndentingNewLine]", 
-     RowBox[{"timeFlowData", "=", 
-      RowBox[{"Transpose", "[", 
-       RowBox[{"{", 
-        RowBox[{
-         RowBox[{"myNormalColumnTab", "[", 
-          RowBox[{"dExtr", ",", "\"\<elapsed time [s]\>\""}], "]"}], ",", 
-         RowBox[{"myNormalColumnTab", "[", 
-          RowBox[{"dExtr", ",", "\"\<pexa_Inhale Exhale Airflow [ml/s]\>\""}],
-           "]"}]}], "}"}], "]"}]}], ";", "\n", "\[IndentingNewLine]", 
-     "\[IndentingNewLine]", 
-     RowBox[{"(*", 
-      RowBox[{
-       RowBox[{"created", " ", "with", " ", "GPT"}], "-", 
-       RowBox[{
-       "5.6", " ", "sol", " ", "except", " ", "comments", " ", "_", " ", 
-        "start"}]}], "*)"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     RowBox[{"volumeData", "=", 
-      RowBox[{"airflowToVolume", "[", "timeFlowData", "]"}]}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{"rawVolume", "=", 
-      RowBox[{"airflowToVolume", "[", "timeFlowData", "]"}]}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{"ListLinePlot", "[", 
-      RowBox[{"volumeData", ",", 
-       RowBox[{"myPlotSequence", "[", "]"}], ",", 
-       RowBox[{"FrameLabel", "->", 
-        RowBox[{"{", 
-         RowBox[{"\"\<elapsed time [s]\>\"", ",", 
-          " ", "\"\<volume [ml]\>\""}], "}"}]}]}], "]"}], 
-     "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     RowBox[{"(*", 
-      RowBox[{
-       RowBox[{
-       "find", " ", "positive", " ", "to", " ", "negative", " ", "sign", " ", 
-        "changes", " ", "and", " ", "replace", " ", "with", " ", "averaged", " ",
-         "value"}], " ", "=", "  ", 
-       RowBox[{
-        RowBox[{
-        "linear", " ", "interpolation", " ", "of", " ", "the", " ", "exact", " ",
-          "zero", " ", "crossing", " ", "at", " ", "the", " ", "end"}], "-", 
-        RowBox[{"expiratory", " ", "phase"}]}]}], "*)"}], ";", 
-     RowBox[{"endExpiration", "=", 
-      RowBox[{"Cases", "[", 
-       RowBox[{
-        RowBox[{"Partition", "[", 
-         RowBox[{"timeFlowData", ",", "2", ",", "1"}], "]"}], ",", 
-        RowBox[{
-         RowBox[{
-          RowBox[{"{", 
-           RowBox[{
-            RowBox[{"{", 
-             RowBox[{"t1_", ",", "q1_"}], "}"}], ",", 
-            RowBox[{"{", 
-             RowBox[{"t2_", ",", "q2_"}], "}"}]}], "}"}], "/;", 
-          RowBox[{
-           RowBox[{"q1", ">", "0"}], "&&", 
-           RowBox[{"q2", "<", "0"}]}]}], ":>", 
-         RowBox[{"t1", "-", 
-          RowBox[{"q1", " ", 
-           RowBox[{
-            RowBox[{"(", 
-             RowBox[{"t2", "-", "t1"}], ")"}], "/", 
-            RowBox[{"(", 
-             RowBox[{"q2", "-", "q1"}], ")"}]}]}]}]}]}], "]"}]}], ";", 
-     "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     RowBox[{"(*", 
-      RowBox[{
-       RowBox[{
-       "interpolate", " ", "raw", " ", "volume", " ", "data", " ", "and", " ",
-         "baseline", " ", "points", " ", "from", " ", "end"}], "-", 
-       RowBox[{"expiratory", " ", "phase"}]}], "*)"}], "\n", 
-     RowBox[{"volumeFunction", "=", 
-      RowBox[{"Interpolation", "[", 
-       RowBox[{"rawVolume", ",", 
-        RowBox[{"InterpolationOrder", "->", "1"}]}], "]"}]}], ";", "\n", 
-     RowBox[{"baselinePoints", "=", 
-      RowBox[{
-       RowBox[{
-        RowBox[{"{", 
-         RowBox[{"#", ",", 
-          RowBox[{"volumeFunction", "[", "#", "]"}]}], "}"}], "&"}], "/@", 
-       "endExpiration"}]}], ";", "\n", 
-     RowBox[{"baseline", "=", 
-      RowBox[{"Interpolation", "[", 
-       RowBox[{"baselinePoints", ",", 
-        RowBox[{"InterpolationOrder", "->", "1"}]}], "]"}]}], ";", 
-     "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     RowBox[{"(*", 
-      RowBox[{
-       RowBox[{
-       "correct", " ", "volume", " ", "with", " ", "interpolated", " ", 
-        "baseline", " ", "data"}], " ", "->", " ", 
-       RowBox[{"v", "-", 
-        RowBox[{"baseline", "[", "t", "]"}]}]}], "*)"}], 
-     RowBox[{"correctedVolume", "=", 
-      RowBox[{
-       RowBox[{"Select", "[", 
-        RowBox[{"rawVolume", ",", 
-         RowBox[{
-          RowBox[{
-           RowBox[{
-            RowBox[{"First", "[", "baselinePoints", "]"}], "[", 
-            RowBox[{"[", "1", "]"}], "]"}], "<=", 
-           RowBox[{"#", "[", 
-            RowBox[{"[", "1", "]"}], "]"}], "<=", 
-           RowBox[{
-            RowBox[{"Last", "[", "baselinePoints", "]"}], "[", 
-            RowBox[{"[", "1", "]"}], "]"}]}], "&"}]}], "]"}], "/.", " ", 
-       RowBox[{
-        RowBox[{"{", 
-         RowBox[{"t_", ",", "v_"}], "}"}], ":>", 
-        RowBox[{"{", 
-         RowBox[{"t", ",", 
-          RowBox[{"v", "-", 
-           RowBox[{"baseline", "[", "t", "]"}]}]}], "}"}]}]}]}], ";", "\n", 
-     "\[IndentingNewLine]", 
-     RowBox[{"(*", "plots", "*)"}], "\[IndentingNewLine]", 
-     RowBox[{"volumePlot", "=", 
-      RowBox[{"ListLinePlot", "[", 
-       RowBox[{"correctedVolume", ",", 
-        RowBox[{"PlotRange", "->", "All"}], ",", 
-        RowBox[{"myPlotSequence", "[", "]"}], ",", 
-        RowBox[{"FrameLabel", "->", 
-         RowBox[{"{", 
-          
-          RowBox[{"\"\<elapsed time [s]\>\"", ",", 
-           " ", "\"\<volume [ml]\>\""}], "}"}]}]}], "]"}]}], ";", "\n", 
-     "\[IndentingNewLine]", 
-     RowBox[{"plotVolumeRawVsCorrected", "=", 
-      RowBox[{"ListLinePlot", "[", 
-       RowBox[{
-        RowBox[{"{", 
-         RowBox[{"rawVolume", ",", "correctedVolume"}], "}"}], ",", 
-        RowBox[{"PlotRange", "->", "All"}], ",", 
-        RowBox[{"myPlotSequence", "[", "]"}], ",", 
-        RowBox[{"FrameLabel", "->", 
-         RowBox[{"{", 
-          
-          RowBox[{"\"\<elapsed time [s]\>\"", ",", 
-           " ", "\"\<volume [ml]\>\""}], "}"}]}]}], "]"}]}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{"myFigAppend", "[", 
-      RowBox[{"{", 
-       RowBox[{"plotVolumeRawVsCorrected", ",", "\"\<002\>\"", ",", 
-        RowBox[{
-        "ID", "<>", "\"\< plot interpolated volume baseline corrected vs raw \
-volume data\>\""}], ",", "300", ",", "True"}], "}"}], "]"}], ";", 
-     "\[IndentingNewLine]", "\n", 
-     RowBox[{"plotVolumeRawBaselineCorr", "=", 
-      RowBox[{"Show", "[", 
-       RowBox[{
-        RowBox[{"ListLinePlot", "[", 
-         RowBox[{"rawVolume", ",", 
-          RowBox[{"PlotRange", "->", "All"}], ",", 
-          RowBox[{"FrameLabel", "->", 
-           RowBox[{"{", 
-            
-            RowBox[{"\"\<elapsed time [s]\>\"", ",", 
-             " ", "\"\<volume [ml]\>\""}], "}"}]}]}], "]"}], ",", 
-        RowBox[{"ListPlot", "[", 
-         RowBox[{"baselinePoints", ",", 
-          RowBox[{"PlotStyle", "->", 
-           RowBox[{"Directive", "[", 
-            RowBox[{
-             RowBox[{"PointSize", "[", "Large", "]"}], ",", "Red"}], 
-            "]"}]}]}], "]"}], ",", 
-        RowBox[{"Plot", "[", 
-         RowBox[{
-          RowBox[{"baseline", "[", "t", "]"}], ",", 
-          RowBox[{"{", 
-           RowBox[{"t", ",", 
-            RowBox[{
-             RowBox[{"First", "[", "baselinePoints", "]"}], "[", 
-             RowBox[{"[", "1", "]"}], "]"}], ",", 
-            RowBox[{
-             RowBox[{"Last", "[", "baselinePoints", "]"}], "[", 
-             RowBox[{"[", "1", "]"}], "]"}]}], "}"}]}], "]"}], ",", 
-        RowBox[{"myPlotSequence", "[", "]"}]}], "]"}]}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{"myFigAppend", "[", 
-      RowBox[{"{", 
-       RowBox[{"plotVolumeRawBaselineCorr", ",", "\"\<003\>\"", ",", 
-        RowBox[{
-        "ID", "<>", "\"\< plot raw volume with baseline detection\>\""}], ",",
-         "300", ",", "True"}], "}"}], "]"}], ";", "\[IndentingNewLine]", 
-     RowBox[{"(*", 
-      RowBox[{
-       RowBox[{"created", " ", "with", " ", "GPT"}], "-", 
-       RowBox[{"5.6", " ", "sol", " ", "_", " ", "end"}]}], "*)"}], 
-     "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     RowBox[{"(*", 
-      RowBox[{
-      "calculate", " ", "volume", " ", "of", " ", "breathing", " ", "for", " ",
-        "the", " ", "original", " ", "dataset", " ", "but", " ", "with", " ", 
-       "interpolation", " ", "function"}], "*)"}], "\[IndentingNewLine]", 
-     RowBox[{"dExtrVolume", "=", 
-      RowBox[{"TransformColumns", "[", 
-       RowBox[{"dExtr", ",", 
-        RowBox[{"\"\<volume breathing [ml]\>\"", "->", 
-         RowBox[{"(", 
-          RowBox[{
-           RowBox[{"Quantity", "[", 
-            RowBox[{
-             RowBox[{"volumeFunction", "[", 
-              RowBox[{"QuantityMagnitude", "[", 
-               RowBox[{"#", "[", "\"\<elapsed time [s]\>\"", "]"}], "]"}], 
-              "]"}], ",", "\"\<Milliliters\>\""}], "]"}], "&"}], ")"}]}]}], 
-       "]"}]}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     RowBox[{"(*", 
-      RowBox[{
-      "calculate", " ", "the", " ", "baseline", " ", "corrected", " ", 
-       "breathing", " ", "volume", " ", "with", " ", "the", " ", "original", " ", 
-       RowBox[{"dataset", ".", " ", "The"}], " ", "data", " ", "extract", " ",
-        "has", " ", "to", " ", "size", " ", "the", " ", "baseline", " ", 
-       "interpolation", " ", 
-       RowBox[{"range", "."}]}], "*)"}], "\[IndentingNewLine]", 
-     RowBox[{"dExtrVolume", "=", 
-      RowBox[{"TransformColumns", "[", 
-       RowBox[{
-        RowBox[{"Select", "[", 
-         RowBox[{"dExtrVolume", ",", 
-          RowBox[{
-           RowBox[{
-            RowBox[{
-             RowBox[{"First", "[", "baselinePoints", "]"}], "[", 
-             RowBox[{"[", "1", "]"}], "]"}], "<=", 
-            RowBox[{"QuantityMagnitude", "[", 
-             RowBox[{"#", "[", "\"\<elapsed time [s]\>\"", "]"}], "]"}], "<=", 
-            RowBox[{
-             RowBox[{"Last", "[", "baselinePoints", "]"}], "[", 
-             RowBox[{"[", "1", "]"}], "]"}]}], "&"}]}], "]"}], ",", 
-        RowBox[{"\"\<volume breathing baseline corrected [ml]\>\"", "->", 
-         "\[IndentingNewLine]", 
-         RowBox[{"(", 
-          RowBox[{
-           RowBox[{"Quantity", "[", 
-            RowBox[{
-             RowBox[{
-              RowBox[{"QuantityMagnitude", "[", 
-               RowBox[{"#", "[", "\"\<volume breathing [ml]\>\"", "]"}], 
-               "]"}], "-", 
-              RowBox[{"baseline", "[", 
-               RowBox[{"QuantityMagnitude", "[", 
-                RowBox[{"#", "[", "\"\<elapsed time [s]\>\"", "]"}], "]"}], 
-               "]"}]}], ",", "\"\<Milliliters\>\""}], "]"}], "&"}], ")"}]}]}],
-        "]"}]}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     "\[IndentingNewLine]", 
-     RowBox[{"dExtrVolume", "=", 
-      RowBox[{"TransformColumns", "[", 
-       RowBox[{"dExtrVolume", ",", 
-        RowBox[{"\"\<volume breathing baseline corrected [100 ml]\>\"", "->", 
-         RowBox[{"(", 
-          RowBox[{
-           RowBox[{
-           "#\"volume breathing baseline corrected [ml]\"", "/", "100"}], 
-           "&"}], ")"}]}]}], "]"}]}], ";", "\[IndentingNewLine]", 
-     "\[IndentingNewLine]", 
-     RowBox[{"volumePlotCorrectedScaled", "=", 
-      RowBox[{"ListLinePlot", "[", 
-       RowBox[{
-        RowBox[{"dExtrVolume", "->", 
-         RowBox[{"{", 
-          
-          RowBox[{"\"\<elapsed time [s]\>\"", 
-           ",", "\"\<volume breathing baseline corrected [100 ml]\>\""}], 
-          "}"}]}], ",", 
-        RowBox[{"myPlotSequence", "[", "]"}], ",", 
-        RowBox[{"PlotStyle", "->", "Black"}], ",", 
-        RowBox[{"PlotLegends", "->", 
-         RowBox[{
-         "{", "\"\<volume breathing baseline corrected [100 ml]\>\"", "}"}]}],
-         ",", 
-        RowBox[{"FrameLabel", "->", 
-         RowBox[{"{", 
-          
-          RowBox[{"\"\<elapsed time [s]\>\"", ",", 
-           " ", "\"\<mixed scale, see legend\>\""}], "}"}]}]}], "]"}]}], ";", 
-     "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     RowBox[{"plotVolumeCorDynamometer", "=", 
-      RowBox[{"Show", "[", "\[IndentingNewLine]", 
-       RowBox[{"volumePlotCorrectedScaled", "\[IndentingNewLine]", ",", 
-        RowBox[{"ListLinePlot", "[", 
-         RowBox[{
-          RowBox[{"dExtrVolume", "->", 
-           RowBox[{"{", 
-            RowBox[{
-             RowBox[{"{", 
-              RowBox[{"\"\<elapsed time [s]\>\"", ",", 
-               RowBox[{
-               "nameDynamometerProtocol1", "<>", "\"\< force [N]\>\""}]}], 
-              "}"}], ",", 
-             RowBox[{"{", 
-              RowBox[{"\"\<elapsed time [s]\>\"", ",", 
-               RowBox[{
-               "nameDynamometerProtocol2", "<>", "\"\< force [N]\>\""}]}], 
-              "}"}]}], "}"}]}], "\[IndentingNewLine]", ",", 
-          RowBox[{"PlotLegends", "->", 
-           RowBox[{"{", 
-            RowBox[{
-             RowBox[{
-             "nameDynamometerProtocol1", " ", "<>", 
-              " ", "\"\< force [N]\>\""}], ",", 
-             RowBox[{
-             "nameDynamometerProtocol2", " ", "<>", 
-              " ", "\"\< force [N]\>\""}]}], "}"}]}], "\[IndentingNewLine]", 
-          "\[IndentingNewLine]", "\[IndentingNewLine]", ",", 
-          RowBox[{"myPlotSequence", "[", "]"}], ",", 
-          RowBox[{"PlotRange", "->", 
-           RowBox[{"{", 
-            RowBox[{"plotRangeX", ",", "All"}], "}"}]}]}], "]"}], 
-        "\[IndentingNewLine]", "\[IndentingNewLine]", ",", 
-        RowBox[{"PlotRange", "->", "All"}]}], "\[IndentingNewLine]", 
-       "\[IndentingNewLine]", "]"}]}], ";", "\[IndentingNewLine]", 
-     "\[IndentingNewLine]", 
-     RowBox[{"myFigAppend", "[", 
-      RowBox[{"{", 
-       RowBox[{"plotVolumeCorDynamometer", ",", "\"\<004\>\"", ",", 
-        RowBox[{
-        "ID", "<>", "\"\< plot dynamometer data and volume breathing baseline \
-corrected\>\""}], ",", "300", ",", "True"}], "}"}], "]"}], ";", 
-     "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     RowBox[{"(*", 
-      RowBox[{
-      "find", " ", "peaks", " ", "and", " ", "determine", " ", "inhale", " ", 
-       "breathing", " ", "phase"}], "*)"}], "\[IndentingNewLine]", 
-     RowBox[{"maxPosition", "=", 
-      RowBox[{"FindPeaks", "[", 
-       RowBox[{
-        RowBox[{"dExtrVolume", "[", 
-         RowBox[{"[", 
-          RowBox[{
-          "All", ",", "\"\<volume breathing baseline corrected [ml]\>\""}], 
-          "]"}], "]"}], ",", "2"}], "]"}]}], ";", "\[IndentingNewLine]", 
-     RowBox[{
-      RowBox[{"maxPosition", "[", 
-       RowBox[{"[", 
-        RowBox[{"All", ",", "2"}], "]"}], "]"}], "/=", "100"}], ";", 
-     RowBox[{"(*", 
-      RowBox[{"for", " ", "comprehensive", " ", "graphical", " ", "output"}], 
-      "*)"}], "\[IndentingNewLine]", 
-     RowBox[{"maxPositionTime", "=", 
-      RowBox[{
-       RowBox[{"dExtrVolume", "[", 
-        RowBox[{"[", 
-         RowBox[{"All", ",", "\"\<elapsed time [s]\>\""}], "]"}], "]"}], "[", 
-       RowBox[{"[", 
-        RowBox[{"maxPosition", "[", 
-         RowBox[{"[", 
-          RowBox[{"All", ",", "1"}], "]"}], "]"}], "]"}], "]"}]}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{"maxPosition", "=", 
-      RowBox[{"Transpose", "[", 
-       RowBox[{"{", 
-        RowBox[{"maxPositionTime", ",", 
-         RowBox[{"maxPosition", "[", 
-          RowBox[{"[", 
-           RowBox[{"All", ",", "2"}], "]"}], "]"}]}], "}"}], "]"}]}], ";", 
-     "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     RowBox[{"minPosition", "=", 
-      RowBox[{"FindPeaks", "[", 
-       RowBox[{
-        RowBox[{
-         RowBox[{"-", "1"}], "*", 
-         RowBox[{"dExtrVolume", "[", 
-          RowBox[{"[", 
-           RowBox[{
-           "All", ",", "\"\<volume breathing baseline corrected [ml]\>\""}], 
-           "]"}], "]"}]}], ",", "2"}], "]"}]}], ";", "\[IndentingNewLine]", 
-     RowBox[{
-      RowBox[{"minPosition", "[", 
-       RowBox[{"[", 
-        RowBox[{"All", ",", "2"}], "]"}], "]"}], "/=", "100"}], ";", " ", 
-     RowBox[{"(*", 
-      RowBox[{"for", " ", "comprehensive", " ", "graphical", " ", "output"}], 
-      "*)"}], "\[IndentingNewLine]", 
-     RowBox[{"minPositionTime", "=", 
-      RowBox[{
-       RowBox[{"dExtrVolume", "[", 
-        RowBox[{"[", 
-         RowBox[{"All", ",", "\"\<elapsed time [s]\>\""}], "]"}], "]"}], "[", 
-       RowBox[{"[", 
-        RowBox[{"minPosition", "[", 
-         RowBox[{"[", 
-          RowBox[{"All", ",", "1"}], "]"}], "]"}], "]"}], "]"}]}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{"minPosition", "=", 
-      RowBox[{"Transpose", "[", 
-       RowBox[{"{", 
-        RowBox[{"minPositionTime", ",", 
-         RowBox[{
-          RowBox[{"-", "1"}], "*", 
-          RowBox[{"minPosition", "[", 
-           RowBox[{"[", 
-            RowBox[{"All", ",", "2"}], "]"}], "]"}]}]}], "}"}], "]"}]}], ";", 
-     "\[IndentingNewLine]", "\n", 
-     RowBox[{"plotVolumeCorDynamometerMinMax", "=", 
-      RowBox[{"Show", "[", "\[IndentingNewLine]", 
-       RowBox[{"volumePlotCorrectedScaled", "\[IndentingNewLine]", ",", 
-        RowBox[{"ListLinePlot", "[", 
-         RowBox[{
-          RowBox[{"dExtrVolume", "->", 
-           RowBox[{"{", 
-            RowBox[{
-             RowBox[{"{", 
-              RowBox[{"\"\<elapsed time [s]\>\"", ",", 
-               RowBox[{
-               "nameDynamometerProtocol1", "<>", "\"\< force [N]\>\""}]}], 
-              "}"}], ",", 
-             RowBox[{"{", 
-              RowBox[{"\"\<elapsed time [s]\>\"", ",", 
-               RowBox[{
-               "nameDynamometerProtocol2", "<>", "\"\< force [N]\>\""}]}], 
-              "}"}]}], "}"}]}], "\[IndentingNewLine]", ",", 
-          RowBox[{"PlotLegends", "->", 
-           RowBox[{"{", 
-            RowBox[{
-             RowBox[{
-             "nameDynamometerProtocol1", " ", "<>", 
-              " ", "\"\< force [N]\>\""}], ",", 
-             RowBox[{
-             "nameDynamometerProtocol2", " ", "<>", 
-              " ", "\"\< force [N]\>\""}]}], "}"}]}], ",", 
-          RowBox[{"myPlotSequence", "[", "]"}], ",", 
-          RowBox[{"PlotRange", "->", 
-           RowBox[{"{", 
-            RowBox[{"plotRangeX", ",", "All"}], "}"}]}]}], "]"}], 
-        "\[IndentingNewLine]", "\[IndentingNewLine]", ",", 
-        RowBox[{"ListPlot", "[", 
-         RowBox[{
-          RowBox[{"{", 
-           RowBox[{"maxPosition", ",", "minPosition"}], "}"}], ",", 
-          RowBox[{"myPlotSequence", "[", "]"}], ",", 
-          RowBox[{"PlotStyle", "->", 
-           RowBox[{"Directive", "[", 
-            RowBox[{
-             RowBox[{"PointSize", "[", "Large", "]"}], ",", "StandardGreen"}],
-             "]"}]}]}], "]"}], "\[IndentingNewLine]", "\[IndentingNewLine]", ",", 
-        RowBox[{"PlotRange", "->", "All"}]}], "\[IndentingNewLine]", 
-       "\[IndentingNewLine]", "]"}]}], ";", "\[IndentingNewLine]", 
-     "\[IndentingNewLine]", 
-     RowBox[{"myFigAppend", "[", 
-      RowBox[{"{", 
-       RowBox[{"plotVolumeCorDynamometerMinMax", ",", "\"\<00\.085\>\"", ",", 
-        RowBox[{
-        "ID", "<>", "\"\< plot dynamometer data and volume breathing baseline \
-corrected with minima/maxima\>\""}], ",", "300", ",", "True"}], "}"}], "]"}], 
-     ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     RowBox[{"(*", 
-      RowBox[{
-       RowBox[{
-       "breathing", " ", "cycle", " ", "shall", " ", "allways", " ", "start", 
-        " ", "with", " ", "minimum"}], " ", "=", " ", 
-       RowBox[{"inspiration", " ", "phase"}]}], "*)"}], "\[IndentingNewLine]", 
-     RowBox[{"If", "[", 
-      RowBox[{
-       RowBox[{
-        RowBox[{"maxPosition", "[", 
-         RowBox[{"[", 
-          RowBox[{"1", ",", "1"}], "]"}], "]"}], "<", 
-        RowBox[{"minPosition", "[", 
-         RowBox[{"[", 
-          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ",", 
-       RowBox[{"Delete", "[", 
-        RowBox[{"maxPosition", ",", "1"}], "]"}], ",", "Nothing"}], "]"}], ";",
-      "\n", 
-     RowBox[{"n", "=", 
-      RowBox[{"Min", "[", 
-       RowBox[{
-        RowBox[{"Length", "[", "maxPosition", "]"}], ",", 
-        RowBox[{"Length", "[", "minPosition", "]"}]}], "]"}]}], ";", 
-     "\[IndentingNewLine]", "\n", 
-     RowBox[{"maxPosition", "=", 
-      RowBox[{"Take", "[", 
-       RowBox[{"maxPosition", ",", "n"}], "]"}]}], ";", " ", 
-     RowBox[{"(*", 
-      RowBox[{"equalize", " ", "length"}], "*)"}], "\n", 
-     RowBox[{"minPosition", "=", 
-      RowBox[{"Take", "[", 
-       RowBox[{"minPosition", ",", "n"}], "]"}]}], ";", "\[IndentingNewLine]",
-      "\[IndentingNewLine]", 
-     RowBox[{"minMaxRanges", "=", 
-      RowBox[{"Transpose", "/@", 
-       RowBox[{"Transpose", "[", 
-        RowBox[{"{", 
-         RowBox[{"minPosition", ",", "maxPosition"}], "}"}], "]"}]}]}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{"minMaxRanges", "[", 
-      RowBox[{"[", 
-       RowBox[{"All", ",", "1"}], "]"}], "]"}], ";", "\[IndentingNewLine]", 
-     RowBox[{"inspiratoryPhases", "=", 
-      RowBox[{"extractInspPhase", "/@", 
-       RowBox[{"minMaxRanges", "[", 
-        RowBox[{"[", 
-         RowBox[{"All", ",", "1"}], "]"}], "]"}]}]}], ";", 
-     "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     RowBox[{"dMinMax", "=", 
-      RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     RowBox[{"plotBreaths", "=", 
-      RowBox[{"inspiratoryPlots", "/@", "inspiratoryPhases"}]}], ";", 
-     "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     RowBox[{"(*", 
-      RowBox[{
-       RowBox[{"calculate", " ", "amplitude", " ", "and", " ", "delta"}], "-", 
-       RowBox[{
-       "time", " ", "for", " ", "all", " ", "parameters", " ", "in", " ", 
-        "each", " ", "breath"}]}], "*)"}], "\[IndentingNewLine]", 
-     RowBox[{"dTimeValue", "=", 
-      RowBox[{
-       RowBox[{"Values", "[", 
-        RowBox[{"Normal", "[", "dMinMax", "]"}], "]"}], "[", 
-       RowBox[{"[", 
-        RowBox[{"All", ",", "All", ",", "All", ",", 
-         RowBox[{"2", ";;", 
-          RowBox[{"-", "1"}]}]}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
-     RowBox[{"nMeasurements", "=", 
-      RowBox[{"Length", "[", "dTimeValue", "]"}]}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{"dTimeValue", "=", 
-      RowBox[{"Transpose", "[", "dTimeValue", "]"}]}], ";", 
-     "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     RowBox[{"If", "[", 
-      RowBox[{
-       RowBox[{
-        RowBox[{"maxPosition", "[", 
-         RowBox[{"[", 
-          RowBox[{
-           RowBox[{"-", "1"}], ",", "1"}], "]"}], "]"}], ">", 
-        RowBox[{"minPosition", "[", 
-         RowBox[{"[", 
-          RowBox[{
-           RowBox[{"-", "1"}], ",", "1"}], "]"}], "]"}]}], 
-       "\[IndentingNewLine]", ",", 
-       RowBox[{
-        RowBox[{"cExp", "=", "1"}], ";", 
-        RowBox[{"cInsp", "=", "0"}]}], "\[IndentingNewLine]", ",", 
-       RowBox[{
-        RowBox[{"cExp", "=", "0"}], ";", 
-        RowBox[{"cInsp", "=", "1"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
-     "\[IndentingNewLine]", 
-     RowBox[{"\[CapitalDelta]tInspVol", "=", 
-      RowBox[{"Table", "[", 
-       RowBox[{
-        RowBox[{"{", 
-         RowBox[{
-          RowBox[{"dTimeValue", "[", 
-           RowBox[{"[", 
-            RowBox[{"1", ",", "i", ",", "2", ",", "1"}], "]"}], "]"}], "-", 
-          RowBox[{"dTimeValue", "[", 
-           RowBox[{"[", 
-            RowBox[{"1", ",", "i", ",", "1", ",", "1"}], "]"}], "]"}]}], 
-         "}"}], ",", 
-        RowBox[{"{", 
-         RowBox[{"i", ",", 
-          RowBox[{"nMeasurements", "-", "cInsp"}]}], "}"}]}], "]"}]}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{"\[CapitalDelta]VInspVol", "=", 
-      RowBox[{"100", " ", 
-       RowBox[{"Table", "[", 
-        RowBox[{
-         RowBox[{"{", 
-          RowBox[{
-           RowBox[{"dTimeValue", "[", 
-            RowBox[{"[", 
-             RowBox[{"1", ",", "i", ",", "2", ",", "2"}], "]"}], "]"}], "-", 
-           RowBox[{"dTimeValue", "[", 
-            RowBox[{"[", 
-             RowBox[{"1", ",", "i", ",", "1", ",", "2"}], "]"}], "]"}]}], 
-          "}"}], ",", 
-         RowBox[{"{", 
-          RowBox[{"i", ",", 
-           RowBox[{"nMeasurements", "-", "cInsp"}]}], "}"}]}], "]"}]}]}], ";",
-      "\[IndentingNewLine]", 
-     RowBox[{"\[CapitalDelta]tExpVol", "=", 
-      RowBox[{"Table", "[", 
-       RowBox[{
-        RowBox[{"{", 
-         RowBox[{
-          RowBox[{"dTimeValue", "[", 
-           RowBox[{"[", 
-            RowBox[{"1", ",", 
-             RowBox[{"i", "+", "1"}], ",", "1", ",", "1"}], "]"}], "]"}], "-", 
-          RowBox[{"dTimeValue", "[", 
-           RowBox[{"[", 
-            RowBox[{"1", ",", "i", ",", "2", ",", "1"}], "]"}], "]"}]}], 
-         "}"}], ",", 
-        RowBox[{"{", 
-         RowBox[{"i", ",", 
-          RowBox[{"nMeasurements", "-", "cExp"}]}], "}"}]}], "]"}]}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{"\[CapitalDelta]VExpVol", "=", 
-      RowBox[{"100", " ", 
-       RowBox[{"Table", "[", 
-        RowBox[{
-         RowBox[{"{", 
-          RowBox[{
-           RowBox[{"dTimeValue", "[", 
-            RowBox[{"[", 
-             RowBox[{"1", ",", 
-              RowBox[{"i", "+", "1"}], ",", "1", ",", "2"}], "]"}], "]"}], "-", 
-           RowBox[{"dTimeValue", "[", 
-            RowBox[{"[", 
-             RowBox[{"1", ",", "i", ",", "2", ",", "2"}], "]"}], "]"}]}], 
-          "}"}], ",", 
-         RowBox[{"{", 
-          RowBox[{"i", ",", 
-           RowBox[{"nMeasurements", "-", "cExp"}]}], "}"}]}], "]"}]}]}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{"\[CapitalDelta]tVol", "=", 
-      RowBox[{"Table", "[", 
-       RowBox[{
-        RowBox[{"{", 
-         RowBox[{
-          RowBox[{"dTimeValue", "[", 
-           RowBox[{"[", 
-            RowBox[{"1", ",", 
-             RowBox[{"i", "+", "1"}], ",", "1", ",", "1"}], "]"}], "]"}], "-", 
-          RowBox[{"dTimeValue", "[", 
-           RowBox[{"[", 
-            RowBox[{"1", ",", "i", ",", "1", ",", "1"}], "]"}], "]"}]}], 
-         "}"}], ",", 
-        RowBox[{"{", 
-         RowBox[{"i", ",", 
-          RowBox[{"nMeasurements", "-", "cExp"}]}], "}"}]}], "]"}]}], ";", 
-     "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     RowBox[{"\[CapitalDelta]tInspDyn1", "=", 
-      RowBox[{"Table", "[", 
-       RowBox[{
-        RowBox[{"{", 
-         RowBox[{
-          RowBox[{"dTimeValue", "[", 
-           RowBox[{"[", 
-            RowBox[{"2", ",", "i", ",", "2", ",", "1"}], "]"}], "]"}], "-", 
-          RowBox[{"dTimeValue", "[", 
-           RowBox[{"[", 
-            RowBox[{"2", ",", "i", ",", "1", ",", "1"}], "]"}], "]"}]}], 
-         "}"}], ",", 
-        RowBox[{"{", 
-         RowBox[{"i", ",", 
-          RowBox[{"nMeasurements", "-", "cInsp"}]}], "}"}]}], "]"}]}], ";", 
-     "\n", 
-     RowBox[{"\[CapitalDelta]VInspDyn1", "=", " ", 
-      RowBox[{"Table", "[", 
-       RowBox[{
-        RowBox[{"{", 
-         RowBox[{
-          RowBox[{"dTimeValue", "[", 
-           RowBox[{"[", 
-            RowBox[{"2", ",", "i", ",", "2", ",", "2"}], "]"}], "]"}], "-", 
-          RowBox[{"dTimeValue", "[", 
-           RowBox[{"[", 
-            RowBox[{"2", ",", "i", ",", "1", ",", "2"}], "]"}], "]"}]}], 
-         "}"}], ",", 
-        RowBox[{"{", 
-         RowBox[{"i", ",", 
-          RowBox[{"nMeasurements", "-", "cInsp"}]}], "}"}]}], "]"}]}], ";", 
-     "\n", 
-     RowBox[{"\[CapitalDelta]tExpDyn1", "=", 
-      RowBox[{"Table", "[", 
-       RowBox[{
-        RowBox[{"{", 
-         RowBox[{
-          RowBox[{"dTimeValue", "[", 
-           RowBox[{"[", 
-            RowBox[{"2", ",", 
-             RowBox[{"i", "+", "1"}], ",", "1", ",", "1"}], "]"}], "]"}], "-", 
-          RowBox[{"dTimeValue", "[", 
-           RowBox[{"[", 
-            RowBox[{"2", ",", "i", ",", "2", ",", "1"}], "]"}], "]"}]}], 
-         "}"}], ",", 
-        RowBox[{"{", 
-         RowBox[{"i", ",", 
-          RowBox[{"nMeasurements", "-", "cExp"}]}], "}"}]}], "]"}]}], ";", 
-     "\n", 
-     RowBox[{"\[CapitalDelta]VExpDyn1", "=", " ", 
-      RowBox[{"Table", "[", 
-       RowBox[{
-        RowBox[{"{", 
-         RowBox[{
-          RowBox[{"dTimeValue", "[", 
-           RowBox[{"[", 
-            RowBox[{"2", ",", 
-             RowBox[{"i", "+", "1"}], ",", "1", ",", "2"}], "]"}], "]"}], "-", 
-          RowBox[{"dTimeValue", "[", 
-           RowBox[{"[", 
-            RowBox[{"2", ",", "i", ",", "2", ",", "2"}], "]"}], "]"}]}], 
-         "}"}], ",", 
-        RowBox[{"{", 
-         RowBox[{"i", ",", 
-          RowBox[{"nMeasurements", "-", "cExp"}]}], "}"}]}], "]"}]}], ";", 
-     "\n", 
-     RowBox[{"\[CapitalDelta]tDyn1", "=", 
-      RowBox[{"Table", "[", 
-       RowBox[{
-        RowBox[{"{", 
-         RowBox[{
-          RowBox[{"dTimeValue", "[", 
-           RowBox[{"[", 
-            RowBox[{"2", ",", 
-             RowBox[{"i", "+", "1"}], ",", "1", ",", "1"}], "]"}], "]"}], "-", 
-          RowBox[{"dTimeValue", "[", 
-           RowBox[{"[", 
-            RowBox[{"2", ",", "i", ",", "1", ",", "1"}], "]"}], "]"}]}], 
-         "}"}], ",", 
-        RowBox[{"{", 
-         RowBox[{"i", ",", 
-          RowBox[{"nMeasurements", "-", "cExp"}]}], "}"}]}], "]"}]}], ";", 
-     "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     RowBox[{"\[CapitalDelta]tInspDyn2", "=", 
-      RowBox[{"Table", "[", 
-       RowBox[{
-        RowBox[{"{", 
-         RowBox[{
-          RowBox[{"dTimeValue", "[", 
-           RowBox[{"[", 
-            RowBox[{"3", ",", "i", ",", "2", ",", "1"}], "]"}], "]"}], "-", 
-          RowBox[{"dTimeValue", "[", 
-           RowBox[{"[", 
-            RowBox[{"3", ",", "i", ",", "1", ",", "1"}], "]"}], "]"}]}], 
-         "}"}], ",", 
-        RowBox[{"{", 
-         RowBox[{"i", ",", 
-          RowBox[{"nMeasurements", "-", "cInsp"}]}], "}"}]}], "]"}]}], ";", 
-     "\n", 
-     RowBox[{"\[CapitalDelta]VInspDyn2", "=", " ", 
-      RowBox[{"Table", "[", 
-       RowBox[{
-        RowBox[{"{", 
-         RowBox[{
-          RowBox[{"dTimeValue", "[", 
-           RowBox[{"[", 
-            RowBox[{"3", ",", "i", ",", "2", ",", "2"}], "]"}], "]"}], "-", 
-          RowBox[{"dTimeValue", "[", 
-           RowBox[{"[", 
-            RowBox[{"3", ",", "i", ",", "1", ",", "2"}], "]"}], "]"}]}], 
-         "}"}], ",", 
-        RowBox[{"{", 
-         RowBox[{"i", ",", 
-          RowBox[{"nMeasurements", "-", "cInsp"}]}], "}"}]}], "]"}]}], ";", 
-     "\n", 
-     RowBox[{"\[CapitalDelta]tExpDyn2", "=", 
-      RowBox[{"Table", "[", 
-       RowBox[{
-        RowBox[{"{", 
-         RowBox[{
-          RowBox[{"dTimeValue", "[", 
-           RowBox[{"[", 
-            RowBox[{"3", ",", 
-             RowBox[{"i", "+", "1"}], ",", "1", ",", "1"}], "]"}], "]"}], "-", 
-          RowBox[{"dTimeValue", "[", 
-           RowBox[{"[", 
-            RowBox[{"3", ",", "i", ",", "2", ",", "1"}], "]"}], "]"}]}], 
-         "}"}], ",", 
-        RowBox[{"{", 
-         RowBox[{"i", ",", 
-          RowBox[{"nMeasurements", "-", "cExp"}]}], "}"}]}], "]"}]}], ";", 
-     "\n", 
-     RowBox[{"\[CapitalDelta]VExpDyn2", "=", " ", 
-      RowBox[{"Table", "[", 
-       RowBox[{
-        RowBox[{"{", 
-         RowBox[{
-          RowBox[{"dTimeValue", "[", 
-           RowBox[{"[", 
-            RowBox[{"3", ",", 
-             RowBox[{"i", "+", "1"}], ",", "1", ",", "2"}], "]"}], "]"}], "-", 
-          RowBox[{"dTimeValue", "[", 
-           RowBox[{"[", 
-            RowBox[{"3", ",", "i", ",", "2", ",", "2"}], "]"}], "]"}]}], 
-         "}"}], ",", 
-        RowBox[{"{", 
-         RowBox[{"i", ",", 
-          RowBox[{"nMeasurements", "-", "cExp"}]}], "}"}]}], "]"}]}], ";", 
-     "\n", 
-     RowBox[{"\[CapitalDelta]tDyn2", "=", 
-      RowBox[{"Table", "[", 
-       RowBox[{
-        RowBox[{"{", 
-         RowBox[{
-          RowBox[{"dTimeValue", "[", 
-           RowBox[{"[", 
-            RowBox[{"3", ",", 
-             RowBox[{"i", "+", "1"}], ",", "1", ",", "1"}], "]"}], "]"}], "-", 
-          RowBox[{"dTimeValue", "[", 
-           RowBox[{"[", 
-            RowBox[{"3", ",", "i", ",", "1", ",", "1"}], "]"}], "]"}]}], 
-         "}"}], ",", 
-        RowBox[{"{", 
-         RowBox[{"i", ",", 
-          RowBox[{"nMeasurements", "-", "cExp"}]}], "}"}]}], "]"}]}], ";", 
-     "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     RowBox[{"dBreathsValues", "=", 
-      RowBox[{"MapThread", "[", 
-       RowBox[{
-        RowBox[{
-         RowBox[{
-          RowBox[{"Function", "[", 
-           RowBox[{
-            RowBox[{"{", 
-             RowBox[{"name", ",", "values"}], "}"}], ",", 
-            RowBox[{
-             RowBox[{
-              RowBox[{"name", "->", "#"}], "&"}], "/@", "values"}]}], "]"}], "[", 
-          RowBox[{"#1", ",", 
-           RowBox[{"Flatten", "[", "#2", "]"}]}], "]"}], "&"}], ",", 
-        RowBox[{"{", 
-         RowBox[{
-          RowBox[{"{", 
-           
-           RowBox[{"\"\<\[CapitalDelta]tInspVol\>\"", 
-            ",", "\"\<\[CapitalDelta]VInspVol\>\"", 
-            ",", "\"\<\[CapitalDelta]tExpVol\>\"", 
-            ",", "\"\<\[CapitalDelta]VExpVol\>\"", 
-            ",", "\"\<\[CapitalDelta]tVol\>\"", 
-            ",", "\"\<\[CapitalDelta]tInspDyn1\>\"", 
-            ",", "\"\<\[CapitalDelta]NInspDyn1\>\"", 
-            ",", "\"\<\[CapitalDelta]tExpDyn1\>\"", 
-            ",", "\"\<\[CapitalDelta]NExpDyn1\>\"", 
-            ",", "\"\<\[CapitalDelta]tDyn1\>\"", 
-            ",", "\"\<\[CapitalDelta]tInspDyn2\>\"", 
-            ",", "\"\<\[CapitalDelta]NInspDyn2\>\"", 
-            ",", "\"\<\[CapitalDelta]tExpDyn2\>\"", 
-            ",", "\"\<\[CapitalDelta]NExpDyn2\>\"", 
-            ",", "\"\<\[CapitalDelta]tDyn2\>\""}], "}"}], ",", 
-          RowBox[{"{", 
-           RowBox[{
-           "\[CapitalDelta]tInspVol", ",", "\[CapitalDelta]VInspVol", ",", 
-            "\[CapitalDelta]tExpVol", ",", "\[CapitalDelta]VExpVol", ",", 
-            "\[CapitalDelta]tVol", ",", "\[CapitalDelta]tInspDyn1", ",", 
-            "\[CapitalDelta]VInspDyn1", ",", "\[CapitalDelta]tExpDyn1", ",", 
-            "\[CapitalDelta]VExpDyn1", ",", "\[CapitalDelta]tDyn1", ",", 
-            "\[CapitalDelta]tInspDyn2", ",", "\[CapitalDelta]VInspDyn2", ",", 
-            "\[CapitalDelta]tExpDyn2", ",", "\[CapitalDelta]VExpDyn2", ",", 
-            "\[CapitalDelta]tDyn2"}], "}"}]}], "}"}]}], "]"}]}], ";", 
-     "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     RowBox[{"(*", 
-      RowBox[{
-      "prepare", " ", "plot", " ", "for", " ", "each", " ", "breath"}], 
-      "*)"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     RowBox[{"dDesc", "=", 
-      RowBox[{"Transpose", "[", 
-       RowBox[{
-        RowBox[{
-         RowBox[{"#", "[", 
-          RowBox[{"[", 
-           RowBox[{"1", ";;", 
-            RowBox[{"Min", "[", 
-             RowBox[{"Length", "/@", "dBreathsValues"}], "]"}]}], "]"}], 
-          "]"}], "&"}], "/@", "dBreathsValues"}], "]"}]}], ";", "\n", 
-     RowBox[{"myOutputAppend", "[", 
-      RowBox[{"\"\<breath characteristic values\>\"", ",", "dDesc"}], "]"}], ";",
-      "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     RowBox[{"dDescStyled", "=", 
-      RowBox[{"styleDescription", "/@", "dDesc"}]}], ";", 
-     "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     RowBox[{"breaths", "=", 
-      RowBox[{"extractBreath", "/@", 
-       RowBox[{"Partition", "[", 
-        RowBox[{
-         RowBox[{"minPosition", "[", 
-          RowBox[{"[", 
-           RowBox[{"All", ",", "1"}], "]"}], "]"}], ",", "2", ",", "1"}], 
-        "]"}]}]}], ";", "\[IndentingNewLine]", "\n", 
-     RowBox[{"breathsPlotVolume", "=", 
-      RowBox[{
-       RowBox[{
-        RowBox[{"ListLinePlot", "[", 
-         RowBox[{
-          RowBox[{"#", "->", 
-           RowBox[{"{", 
-            
-            RowBox[{"\"\<elapsed time [s]\>\"", 
-             ",", "\"\<volume breathing baseline corrected [100 ml]\>\""}], 
-            "}"}]}], ",", 
-          RowBox[{"myPlotSequence", "[", "]"}], ",", 
-          RowBox[{"PlotStyle", "->", "Black"}], ",", 
-          RowBox[{"PlotLegends", "->", 
-           RowBox[{
-           "{", "\"\<volume breathing baseline corrected [100 ml]\>\"", 
-            "}"}]}], ",", 
-          RowBox[{"FrameLabel", "->", 
-           RowBox[{"{", 
-            
-            RowBox[{"\"\<elapsed time [s]\>\"", ",", 
-             " ", "\"\<mixed scale, see legend\>\""}], "}"}]}]}], "]"}], 
-        "&"}], "/@", "breaths"}]}], ";", "\n", "\[IndentingNewLine]", 
-     RowBox[{"breathsPlotDyn", "=", 
-      RowBox[{
-       RowBox[{
-        RowBox[{"ListLinePlot", "[", 
-         RowBox[{
-          RowBox[{"#", "->", 
-           RowBox[{"{", 
-            RowBox[{
-             RowBox[{"{", 
-              RowBox[{"\"\<elapsed time [s]\>\"", ",", 
-               RowBox[{
-               "nameDynamometerProtocol1", "<>", "\"\< force [N]\>\""}]}], 
-              "}"}], ",", 
-             RowBox[{"{", 
-              RowBox[{"\"\<elapsed time [s]\>\"", ",", 
-               RowBox[{
-               "nameDynamometerProtocol2", "<>", "\"\< force [N]\>\""}]}], 
-              "}"}]}], "}"}]}], "\[IndentingNewLine]", ",", 
-          RowBox[{"PlotLegends", "->", 
-           RowBox[{"{", 
-            
-            RowBox[{"\"\<dynamometer force abdomen [N]\>\"", 
-             ",", "\"\<dynamometer force thorax [N]\>\""}], "}"}]}], 
-          "\[IndentingNewLine]", ",", 
-          RowBox[{"myPlotSequence", "[", "]"}]}], "]"}], "&"}], "/@", 
-       "breaths"}]}], ";", "\n", "\[IndentingNewLine]", 
-     RowBox[{"breathsMinMaxMin", "=", 
-      RowBox[{
-       RowBox[{
-        RowBox[{"MapThread", "[", 
-         RowBox[{"Append", ",", 
-          RowBox[{"{", 
-           RowBox[{
-            RowBox[{"Most", "[", "#", "]"}], ",", 
-            RowBox[{
-             RowBox[{"Rest", "[", "#", "]"}], "[", 
-             RowBox[{"[", 
-              RowBox[{"All", ",", "1"}], "]"}], "]"}]}], "}"}]}], "]"}], 
-        "&"}], "/@", "dTimeValue"}]}], ";", "\[IndentingNewLine]", 
-     RowBox[{"breathsMinMaxMinPoints", "=", 
-      RowBox[{
-       RowBox[{
-        RowBox[{"Partition", "[", 
-         RowBox[{"#", ",", "2"}], "]"}], "&"}], "/@", 
-       RowBox[{"myFlatten", "[", 
-        RowBox[{
-         RowBox[{"Transpose", "[", "breathsMinMaxMin", "]"}], ",", "1"}], 
-        "]"}]}]}], ";", "\[IndentingNewLine]", 
-     RowBox[{"breathsMinMaxMinPlots", "=", 
-      RowBox[{
-       RowBox[{
-        RowBox[{"ListPlot", "[", 
-         RowBox[{"#", ",", 
-          RowBox[{"PlotStyle", "->", 
-           RowBox[{"Directive", "[", 
-            RowBox[{
-             RowBox[{"PointSize", "[", "Large", "]"}], ",", "StandardGreen"}],
-             "]"}]}], ",", 
-          RowBox[{"myPlotSequence", "[", "]"}]}], "]"}], "&"}], "/@", 
-       "breathsMinMaxMinPoints"}]}], ";", "\[IndentingNewLine]", "\n", 
-     RowBox[{"breathextracts", "=", 
-      RowBox[{"MapThread", "[", 
-       RowBox[{
-        RowBox[{
-         RowBox[{"Grid", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{
-             RowBox[{"{", 
-              RowBox[{"Show", "[", 
-               RowBox[{"#1", ",", "#2", ",", "#3", ",", 
-                RowBox[{"PlotRange", "->", "All"}]}], "]"}], "}"}], ",", 
-             RowBox[{"{", 
-              RowBox[{"Grid", "[", 
-               RowBox[{
-                RowBox[{"Transpose", "[", 
-                 RowBox[{"Partition", "[", 
-                  RowBox[{"#4", ",", "5"}], "]"}], "]"}], ",", 
-                RowBox[{"Alignment", "->", "Left"}], ",", 
-                RowBox[{"Spacings", "->", 
-                 RowBox[{"{", 
-                  RowBox[{"6", ",", ".5"}], "}"}]}]}], "]"}], "}"}]}], "}"}], 
-           ",", 
-           RowBox[{"Spacings", "->", 
-            RowBox[{"{", 
-             RowBox[{"1", ",", " ", "2"}], "}"}]}], ",", 
-           RowBox[{"Frame", "->", "True"}]}], "]"}], "&"}], ",", 
-        RowBox[{"{", 
-         RowBox[{
-         "breathsPlotVolume", ",", "breathsPlotDyn", ",", 
-          "breathsMinMaxMinPlots", ",", "dDescStyled"}], "}"}]}], "]"}]}], ";",
-      "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     RowBox[{"myFigAppend", "/@", 
-      RowBox[{"MapThread", "[", 
-       RowBox[{
-        RowBox[{
-         RowBox[{"{", 
-          RowBox[{"#1", ",", "#2", ",", 
-           RowBox[{
-           "ID", "<>", "\"\< plot single breath volume and dynamometer data \
-\>\"", "<>", "#2"}], ",", "300", ",", "True"}], "}"}], "&"}], ",", 
-        RowBox[{"{", 
-         RowBox[{"breathextracts", ",", 
-          RowBox[{"IntegerString", "[", 
-           RowBox[{
-            RowBox[{"Range", "[", 
-             RowBox[{"6", ",", 
-              RowBox[{
-               RowBox[{"Length", "[", "breathextracts", "]"}], "+", "5"}]}], 
-             "]"}], ",", "10", ",", "3"}], "]"}]}], "}"}]}], "]"}]}], ";", 
-     "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     RowBox[{"(*", 
-      RowBox[{"prepare", " ", "correlation"}], "*)"}], "\[IndentingNewLine]", 
-     RowBox[{"dCorrVInspVolDyn2", "=", 
-      RowBox[{"MapThread", "[", 
-       RowBox[{
-        RowBox[{
-         RowBox[{"Flatten", "[", 
-          RowBox[{"{", 
-           RowBox[{"#1", ",", "#2"}], "}"}], "]"}], "&"}], ",", 
-        RowBox[{"{", 
-         RowBox[{"\[CapitalDelta]VInspDyn2", ",", "\[CapitalDelta]VInspVol"}],
-          "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
-     RowBox[{"dCorrVInspVolDyn1", "=", 
-      RowBox[{"MapThread", "[", 
-       RowBox[{
-        RowBox[{
-         RowBox[{"Flatten", "[", 
-          RowBox[{"{", 
-           RowBox[{"#1", ",", "#2"}], "}"}], "]"}], "&"}], ",", 
-        RowBox[{"{", 
-         RowBox[{"\[CapitalDelta]VInspDyn1", ",", "\[CapitalDelta]VInspVol"}],
-          "}"}]}], "]"}]}], ";", "\n", 
-     RowBox[{"dCorrVInspVolDyn1Dyn2", "=", 
-      RowBox[{"myFlatten", "[", 
-       RowBox[{
-        RowBox[{"Transpose", "[", 
-         RowBox[{"{", 
-          RowBox[{
-          "\[CapitalDelta]VInspDyn1", ",", "\[CapitalDelta]VInspDyn2", ",", 
-           "\[CapitalDelta]VInspVol"}], "}"}], "]"}], ",", "1"}], "]"}]}], ";",
-      "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     RowBox[{"resCorrVInspVolDyn1Dyn2", "=", 
-      RowBox[{"lnm", "[", 
-       RowBox[{
-        RowBox[{"dCorrVInspVolDyn1Dyn2", "[", 
-         RowBox[{"[", 
-          RowBox[{"All", ",", 
-           RowBox[{"{", 
-            RowBox[{"1", ",", "2"}], "}"}]}], "]"}], "]"}], 
-        ",", "\"\<dynamometer abdomen [N]\>\"", 
-        ",", "\"\<dynamometer thorax [N]\>\""}], "]"}]}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{"myOutputAppend", "[", 
-      RowBox[{"\"\<correlation of both dynamometers\>\"", ",", 
-       "resCorrVInspVolDyn1Dyn2"}], "]"}], ";", "\[IndentingNewLine]", 
-     RowBox[{"myFigAppend", "[", 
-      RowBox[{"{", 
-       RowBox[{
-        RowBox[{"resCorrVInspVolDyn1Dyn2", "[", 
-         RowBox[{"[", "4", "]"}], "]"}], ",", "\"\<080\>\"", ",", 
-        RowBox[{
-        "ID", "<>", "\"\< scatter plot with correlation of dynamometer data \
-abdomen versus thorax\>\""}], ",", "300", ",", "True"}], "}"}], "]"}], ";", 
-     "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     RowBox[{
-      RowBox[{"{", 
-       RowBox[{"resCorrVInspVolDyn2", ",", "resCorrVInspVolDyn1"}], "}"}], "=", 
-      RowBox[{
-       RowBox[{
-        RowBox[{"lnm", "[", 
-         RowBox[{
-          RowBox[{"#", "[", 
-           RowBox[{"[", "1", "]"}], "]"}], ",", 
-          RowBox[{"#", "[", 
-           RowBox[{"[", "2", "]"}], "]"}], 
-          ",", "\"\<breathing volume [ml]\>\""}], "]"}], "&"}], "/@", 
-       RowBox[{"{", 
-        RowBox[{
-         RowBox[{"{", 
-          RowBox[{
-          "dCorrVInspVolDyn2", ",", "\"\<dynamometer thorax [N]\>\""}], "}"}],
-          ",", 
-         RowBox[{"{", 
-          RowBox[{
-          "dCorrVInspVolDyn1", ",", "\"\<dynamometer abdomen [N]\>\""}], 
-          "}"}]}], "}"}]}]}], ";", "\[IndentingNewLine]", 
-     "\[IndentingNewLine]", 
-     RowBox[{"dstat", "=", 
-      RowBox[{
-       RowBox[{"{", 
-        RowBox[{"resCorrVInspVolDyn2", ",", "resCorrVInspVolDyn1"}], "}"}], "[", 
-       RowBox[{"[", 
-        RowBox[{"All", ",", "3"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
-     RowBox[{"myOutputAppend", "[", 
-      RowBox[{"\"\<linear model fit breathing volume dynamometer thorax\>\"", 
-       ",", "resCorrVInspVolDyn2"}], "]"}], ";", "\[IndentingNewLine]", 
-     RowBox[{"myOutputAppend", "[", 
-      RowBox[{"\"\<linear model fit breathing volume dynamometer abdomen\>\"",
-        ",", "resCorrVInspVolDyn1"}], "]"}], ";", "\[IndentingNewLine]", 
-     "\[IndentingNewLine]", 
-     RowBox[{"myFigAppend", "[", 
-      RowBox[{"{", 
-       RowBox[{
-        RowBox[{"resCorrVInspVolDyn2", "[", 
-         RowBox[{"[", "4", "]"}], "]"}], ",", "\"\<081\>\"", ",", 
-        RowBox[{
-        "ID", "<>", "\"\< scatter plot with correlation of dynamometer data \
-thorax versus breathing volume\>\""}], ",", "300", ",", "True"}], "}"}], 
-      "]"}], ";", "\[IndentingNewLine]", 
-     RowBox[{"myFigAppend", "[", 
-      RowBox[{"{", 
-       RowBox[{
-        RowBox[{"resCorrVInspVolDyn1", "[", 
-         RowBox[{"[", "4", "]"}], "]"}], ",", "\"\<082\>\"", ",", 
-        RowBox[{
-        "ID", "<>", "\"\< scatter plot with correlation of dynamometer data \
-abdomen versus breathing volume\>\""}], ",", "300", ",", "True"}], "}"}], 
-      "]"}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     RowBox[{"(*", 
-      RowBox[{"try", " ", "quadratic", " ", "fit"}], "*)"}], 
-     "\[IndentingNewLine]", 
-     RowBox[{
-      RowBox[{"{", 
-       RowBox[{"resCorrQuadrVInspVolDyn2", ",", "resCorrQuadrVInspVolDyn1"}], 
-       "}"}], "=", 
-      RowBox[{"fitQuadratic", "/@", 
-       RowBox[{"{", 
-        RowBox[{"dCorrVInspVolDyn2", ",", "dCorrVInspVolDyn1"}], "}"}]}]}], ";",
-      "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     RowBox[{"myOutputAppend", "[", 
-      RowBox[{"\"\<quadratic model fit breathing volume dynamometer \
-thorax\>\"", ",", "resCorrQuadrVInspVolDyn2"}], "]"}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{"myOutputAppend", "[", 
-      RowBox[{"\"\<quadratic model fit breathing volume dynamometer abdomen\>\
-\"", ",", "resCorrQuadrVInspVolDyn1"}], "]"}], ";", "\[IndentingNewLine]", 
-     RowBox[{"myFigAppend", "[", 
-      RowBox[{"{", 
-       RowBox[{
-        RowBox[{"resCorrQuadrVInspVolDyn2", "[", 
-         RowBox[{"[", "3", "]"}], "]"}], ",", "\"\<083\>\"", ",", 
-        RowBox[{
-        "ID", "<>", "\"\< scatter plot with quadratic correlation of \
-dynamometer data thorax versus breathing volume\>\""}], ",", "300", ",", 
-        "True"}], "}"}], "]"}], ";", "\[IndentingNewLine]", 
-     RowBox[{"myFigAppend", "[", 
-      RowBox[{"{", 
-       RowBox[{
-        RowBox[{"resCorrQuadrVInspVolDyn1", "[", 
-         RowBox[{"[", "3", "]"}], "]"}], ",", "\"\<084\>\"", ",", 
-        RowBox[{
-        "ID", "<>", "\"\< scatter plot with quadratic correlation of \
-dynamometer data abdomen versus breathing volume\>\""}], ",", "300", ",", 
-        "True"}], "}"}], "]"}], ";", "\[IndentingNewLine]", 
-     "\[IndentingNewLine]", 
-     RowBox[{"dstat", "=", 
-      RowBox[{"Join", "[", 
-       RowBox[{"dstat", ",", 
-        RowBox[{
-         RowBox[{"{", 
-          RowBox[{
-          "resCorrQuadrVInspVolDyn2", ",", "resCorrQuadrVInspVolDyn1"}], 
-          "}"}], "[", 
-         RowBox[{"[", 
-          RowBox[{"All", ",", "2"}], "]"}], "]"}]}], "]"}]}], ";", 
-     "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     RowBox[{"dCorrVInspVolDyn1Dyn2", "=", 
-      RowBox[{"myFlatten", "[", 
-       RowBox[{
-        RowBox[{"Transpose", "[", 
-         RowBox[{"{", 
-          RowBox[{
-          "\[CapitalDelta]VInspDyn1", ",", "\[CapitalDelta]VInspDyn2", ",", 
-           "\[CapitalDelta]VInspVol"}], "}"}], "]"}], ",", "1"}], "]"}]}], ";",
-      "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     RowBox[{"resLNM2Param", "=", 
-      RowBox[{"lnm2param", "[", "dCorrVInspVolDyn1Dyn2", "]"}]}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{"myOutputAppend", "[", 
-      RowBox[{"\"\<linear model fit breathing volume dynamometer thorax and \
-abdomen\>\"", ",", "resLNM2Param"}], "]"}], ";", "\[IndentingNewLine]", 
-     "\[IndentingNewLine]", 
-     RowBox[{"myOutputAppend", "[", 
-      RowBox[{"\"\<all fit model statistics\>\"", ",", 
-       RowBox[{"Transpose", "[", 
-        RowBox[{"{", 
-         RowBox[{
-          RowBox[{"{", 
-           
-           RowBox[{"\"\<linear fit model dynamometer thorax\>\"", 
-            ",", "\"\<linear fit model dynamometer abdomen\>\"", 
-            ",", "\"\<linear fit model dynamometer thorax and abdomen\>\"", 
-            ",", "\"\<quadratic fit model dynamometer thorax\>\"", 
-            ",", "\"\<quadratic fit model dynamometer abdomen\>\""}], "}"}], ",",
-           "dstat"}], "}"}], "]"}]}], "]"}], ";"}]}], "\[IndentingNewLine]", 
-   "\[IndentingNewLine]", "]"}]}]}], "Input",
+  RowBox[{"mode", "=", "\"\<validation\>\""}], ";"}]}], "Input",
  CellChangeTimes->{{3.9983130434009075`*^9, 3.9983130531141033`*^9}, {
    3.998313086488371*^9, 3.99831312060598*^9}, {3.998313212164982*^9, 
    3.9983132843305798`*^9}, {3.9983133204217625`*^9, 
@@ -5405,8 +3565,1880 @@ abdomen\>\"", ",", "resLNM2Param"}], "]"}], ";", "\[IndentingNewLine]",
    3.998836415113388*^9, 3.998836426629814*^9}, {3.99883649438126*^9, 
    3.9988365039437504`*^9}, {3.9988368318051624`*^9, 
    3.9988368504988136`*^9}, {3.9988369240950775`*^9, 
-   3.9988369643956776`*^9}},ExpressionUUID->"6c7a35cc-6332-5c4c-8acc-\
-b1cc365ad17c"]
+   3.9988369643956776`*^9}, {3.998837468335148*^9, 3.998837469751562*^9}, {
+   3.998837543328087*^9, 3.9988375491654606`*^9}, 3.998837583965809*^9, 
+   3.998838416108692*^9},ExpressionUUID->"6c7a35cc-6332-5c4c-8acc-\
+b1cc365ad17c"],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"ClearAll", "[", "extractInspPhase", "]"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"extractInspPhase", "[", "l_List", "]"}], ":=", 
+    RowBox[{"Select", "[", 
+     RowBox[{"dExtrVolume", ",", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"l", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], "-", 
+           RowBox[{"Quantity", "[", 
+            RowBox[{".5", ",", "\"\<Seconds\>\""}], "]"}]}], ")"}], "<=", 
+         "#\"elapsed time [s]\"", "<=", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"l", "[", 
+            RowBox[{"[", "2", "]"}], "]"}], "+", 
+           RowBox[{"Quantity", "[", 
+            RowBox[{".5", ",", "\"\<Seconds\>\""}], "]"}]}], ")"}]}], "&"}], 
+       ")"}]}], "]"}]}], "\n", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"ClearAll", "[", "minMaxWithTime", "]"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"minMaxWithTime", "[", 
+     RowBox[{"data_", ",", "col_"}], "]"}], ":=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", "x", "}"}], ",", 
+      RowBox[{
+       RowBox[{"x", "=", 
+        RowBox[{"Join", "[", 
+         RowBox[{
+          RowBox[{"MinimalBy", "[", 
+           RowBox[{"data", ",", 
+            RowBox[{
+             RowBox[{"#", "[", "col", "]"}], "&"}]}], "]"}], ",", 
+          RowBox[{"MaximalBy", "[", 
+           RowBox[{"data", ",", 
+            RowBox[{
+             RowBox[{"#", "[", "col", "]"}], "&"}]}], "]"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"Tabular", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"\"\<Min\>\"", ",", 
+             RowBox[{"QuantityMagnitude", "[", 
+              RowBox[{"x", "[", 
+               RowBox[{"1", ",", "\"\<elapsed time [s]\>\""}], "]"}], "]"}], ",", 
+             RowBox[{"QuantityMagnitude", "[", 
+              RowBox[{"x", "[", 
+               RowBox[{"1", ",", "col"}], "]"}], "]"}]}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"\"\<Max\>\"", ",", 
+             RowBox[{"QuantityMagnitude", "[", 
+              RowBox[{"x", "[", 
+               RowBox[{"2", ",", "\"\<elapsed time [s]\>\""}], "]"}], "]"}], ",", 
+             RowBox[{"QuantityMagnitude", "[", 
+              RowBox[{"x", "[", 
+               RowBox[{"2", ",", "col"}], "]"}], "]"}]}], "}"}]}], "}"}], ",", 
+         RowBox[{"{", 
+          
+          RowBox[{"\"\<type\>\"", ",", "\"\<elapsed time [s]\>\"", 
+           ",", "\"\<value\>\""}], "}"}]}], "]"}]}]}], "]"}]}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"ClearAll", "[", "inspiratoryPlots", "]"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"inspiratoryPlots", "[", "t_Tabular", "]"}], ":=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+       "plotVolume", ",", "plotBoth", ",", "tExtr", ",", "minMaxVol", ",", 
+        "minMaxDyn1", ",", "minMaxDyn2", ",", "minMaxAll", ",", 
+        "plotMinMaxAll", ",", "dVt", ",", "tInspVD1D2", ",", "VolVD1D2"}], 
+       "}"}], ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"tExtr", "=", 
+        RowBox[{"t", "[", 
+         RowBox[{"All", ",", 
+          RowBox[{"{", 
+           
+           RowBox[{"\"\<elapsed time [s]\>\"", 
+            ",", "\"\<volume breathing baseline corrected [100 ml]\>\"", ",", 
+            RowBox[{"nameDynamometerProtocol1", "<>", "\"\< force [N]\>\""}], 
+            ",", 
+            RowBox[{
+            "nameDynamometerProtocol2", "<>", "\"\< force [N]\>\""}]}], 
+           "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+       "\[IndentingNewLine]", 
+       RowBox[{"minMaxVol", "=", 
+        RowBox[{"minMaxWithTime", "[", 
+         RowBox[{
+         "tExtr", 
+          ",", "\"\<volume breathing baseline corrected [100 ml]\>\""}], 
+         "]"}]}], ";", "\n", 
+       RowBox[{"minMaxDyn1", "=", 
+        RowBox[{"minMaxWithTime", "[", 
+         RowBox[{"tExtr", ",", 
+          RowBox[{"nameDynamometerProtocol1", "<>", "\"\< force [N]\>\""}]}], 
+         "]"}]}], ";", 
+       RowBox[{"minMaxDyn2", "=", 
+        RowBox[{"minMaxWithTime", "[", 
+         RowBox[{"tExtr", ",", 
+          RowBox[{"nameDynamometerProtocol2", "<>", "\"\< force [N]\>\""}]}], 
+         "]"}]}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       "\[IndentingNewLine]", 
+       RowBox[{"AppendTo", "[", 
+        RowBox[{"dMinMax", ",", 
+         RowBox[{"{", 
+          RowBox[{"minMaxVol", ",", "minMaxDyn1", ",", "minMaxDyn2"}], 
+          "}"}]}], "]"}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"minMaxAll", "=", 
+        RowBox[{"Join", "@@", 
+         RowBox[{"{", 
+          RowBox[{"minMaxVol", ",", "minMaxDyn1", ",", "minMaxDyn2"}], 
+          "}"}]}]}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"plotMinMaxAll", "=", 
+        RowBox[{"ListPlot", "[", 
+         RowBox[{
+          RowBox[{"minMaxAll", "->", 
+           RowBox[{"{", 
+            RowBox[{"\"\<elapsed time [s]\>\"", ",", "\"\<value\>\""}], 
+            "}"}]}], ",", 
+          RowBox[{"PlotStyle", "->", 
+           RowBox[{"Directive", "[", 
+            RowBox[{
+             RowBox[{"PointSize", "[", "Large", "]"}], ",", "StandardGreen"}],
+             "]"}]}], ",", 
+          RowBox[{"myPlotSequence", "[", "]"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"plotVolume", "=", 
+        RowBox[{"ListLinePlot", "[", 
+         RowBox[{
+          RowBox[{"t", "->", 
+           RowBox[{"{", 
+            
+            RowBox[{"\"\<elapsed time [s]\>\"", 
+             ",", "\"\<volume breathing baseline corrected [100 ml]\>\""}], 
+            "}"}]}], ",", 
+          RowBox[{"myPlotSequence", "[", "]"}], ",", 
+          RowBox[{"PlotStyle", "->", "Black"}], ",", 
+          RowBox[{"PlotLegends", "->", 
+           RowBox[{
+           "{", "\"\<volume breathing baseline corrected [100 ml]\>\"", 
+            "}"}]}], ",", 
+          RowBox[{"FrameLabel", "->", 
+           RowBox[{"{", 
+            
+            RowBox[{"\"\<elapsed time [s]\>\"", ",", 
+             " ", "\"\<mixed scale, see legend\>\""}], "}"}]}]}], "]"}]}], ";",
+        "\[IndentingNewLine]", "\n", 
+       RowBox[{"plotBoth", "=", 
+        RowBox[{"Show", "[", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         RowBox[{"plotVolume", "\[IndentingNewLine]", "\[IndentingNewLine]", ",", 
+          RowBox[{"ListLinePlot", "[", 
+           RowBox[{
+            RowBox[{"t", "->", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"\"\<elapsed time [s]\>\"", ",", 
+                 RowBox[{
+                 "nameDynamometerProtocol1", "<>", "\"\< force [N]\>\""}]}], 
+                "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"\"\<elapsed time [s]\>\"", ",", 
+                 RowBox[{
+                 "nameDynamometerProtocol2", "<>", "\"\< force [N]\>\""}]}], 
+                "}"}]}], "}"}]}], "\[IndentingNewLine]", ",", 
+            RowBox[{"PlotLegends", "->", 
+             RowBox[{"{", 
+              RowBox[{"\"\<dynamometer_1 force thorax [N]\>\"", ",", 
+               RowBox[{
+               "nameDynamometerProtocol2", " ", "<>", 
+                " ", "\"\< force [N]\>\""}]}], "}"}]}], "\[IndentingNewLine]",
+             ",", 
+            RowBox[{"myPlotSequence", "[", "]"}], ",", 
+            RowBox[{"PlotRange", "->", 
+             RowBox[{"{", 
+              RowBox[{"plotRangeX", ",", "All"}], "}"}]}]}], "]"}], 
+          "\[IndentingNewLine]", "\[IndentingNewLine]", ",", "plotMinMaxAll", 
+          "\[IndentingNewLine]", "\[IndentingNewLine]", ",", 
+          RowBox[{"PlotRange", "->", "All"}]}], "\[IndentingNewLine]", 
+         "]"}]}]}]}], "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"ClearAll", "[", "styleDescription", "]"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"styleDescription", "[", "l_List", "]"}], ":=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Which", "[", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"StringContainsQ", "[", 
+           RowBox[{
+            RowBox[{"Keys", "[", "#", "]"}], ",", "\"\<Vol\>\""}], "]"}], 
+          "\[IndentingNewLine]", ",", 
+          RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{"Which", "[", 
+             RowBox[{
+              RowBox[{"StringContainsQ", "[", 
+               RowBox[{
+                RowBox[{"Keys", "[", "#", "]"}], 
+                ",", "\"\<\[CapitalDelta]t\>\""}], "]"}], ",", 
+              RowBox[{
+               RowBox[{"ToString", "[", "#", "]"}], "<>", "\"\< s\>\""}], ",", 
+              RowBox[{"StringContainsQ", "[", 
+               RowBox[{
+                RowBox[{"Keys", "[", "#", "]"}], 
+                ",", "\"\<\[CapitalDelta]V\>\""}], "]"}], ",", 
+              RowBox[{
+               RowBox[{"ToString", "[", "#", "]"}], "<>", "\"\< ml\>\""}]}], 
+             "]"}], ",", "Bold", ",", "Black", ",", " ", "myFontStandard", ",",
+             "14"}], "]"}], "\[IndentingNewLine]", "\[IndentingNewLine]", ",", 
+          RowBox[{"StringContainsQ", "[", 
+           RowBox[{
+            RowBox[{"Keys", "[", "#", "]"}], ",", "\"\<Dyn1\>\""}], "]"}], ",", 
+          RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{"Which", "[", 
+             RowBox[{
+              RowBox[{"StringContainsQ", "[", 
+               RowBox[{
+                RowBox[{"Keys", "[", "#", "]"}], 
+                ",", "\"\<\[CapitalDelta]t\>\""}], "]"}], ",", 
+              RowBox[{
+               RowBox[{"ToString", "[", "#", "]"}], "<>", "\"\< s\>\""}], ",", 
+              RowBox[{"StringContainsQ", "[", 
+               RowBox[{
+                RowBox[{"Keys", "[", "#", "]"}], 
+                ",", "\"\<\[CapitalDelta]N\>\""}], "]"}], ",", 
+              RowBox[{
+               RowBox[{"ToString", "[", "#", "]"}], "<>", "\"\< N\>\""}]}], 
+             "]"}], ",", "Bold", ",", 
+            RowBox[{"RGBColor", "[", 
+             RowBox[{"0.24", ",", " ", "0.6", ",", " ", "0.8"}], "]"}], ",", 
+            " ", "myFontStandard", ",", "14"}], "]"}], "\[IndentingNewLine]", 
+          "\[IndentingNewLine]", ",", 
+          RowBox[{"StringContainsQ", "[", 
+           RowBox[{
+            RowBox[{"Keys", "[", "#", "]"}], ",", "\"\<Dyn2\>\""}], "]"}], ",", 
+          RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{"Which", "[", 
+             RowBox[{
+              RowBox[{"StringContainsQ", "[", 
+               RowBox[{
+                RowBox[{"Keys", "[", "#", "]"}], 
+                ",", "\"\<\[CapitalDelta]t\>\""}], "]"}], ",", 
+              RowBox[{
+               RowBox[{"ToString", "[", "#", "]"}], "<>", "\"\< s\>\""}], ",", 
+              RowBox[{"StringContainsQ", "[", 
+               RowBox[{
+                RowBox[{"Keys", "[", "#", "]"}], 
+                ",", "\"\<\[CapitalDelta]N\>\""}], "]"}], ",", 
+              RowBox[{
+               RowBox[{"ToString", "[", "#", "]"}], "<>", "\"\< N\>\""}]}], 
+             "]"}], ",", "Bold", ",", 
+            RowBox[{"RGBColor", "[", 
+             RowBox[{"0.95", ",", "0.627", ",", "0.1425"}], "]"}], ",", " ", 
+            "myFontStandard", ",", "14"}], "]"}]}], "\[IndentingNewLine]", 
+         "\[IndentingNewLine]", "\[IndentingNewLine]", "]"}], "&"}], "/@", 
+       "l"}]}], "]"}]}], "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"ClearAll", "[", "extractBreath", "]"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"extractBreath", "[", "l_List", "]"}], ":=", 
+    RowBox[{"Select", "[", 
+     RowBox[{"dExtrVolume", ",", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"l", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], "-", 
+           RowBox[{"Quantity", "[", 
+            RowBox[{".5", ",", "\"\<Seconds\>\""}], "]"}]}], ")"}], "<=", 
+         "#\"elapsed time [s]\"", "<=", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"l", "[", 
+            RowBox[{"[", "2", "]"}], "]"}], "+", 
+           RowBox[{"Quantity", "[", 
+            RowBox[{"2", ",", "\"\<Seconds\>\""}], "]"}]}], ")"}]}], "&"}], 
+       ")"}]}], "]"}]}], "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"ClearAll", "[", "stats", "]"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"stats", "[", "fit_FittedModel", "]"}], ":=", 
+    RowBox[{"<|", 
+     RowBox[{
+      RowBox[{"\"\<R\.b2\>\"", "->", 
+       RowBox[{"fit", "[", "\"\<RSquared\>\"", "]"}]}], ",", 
+      RowBox[{"\"\<adjusted R\.b2\>\"", "->", 
+       RowBox[{"fit", "[", "\"\<AdjustedRSquared\>\"", "]"}]}], ",", 
+      RowBox[{"\"\<r\>\"", "->", 
+       RowBox[{"Sqrt", "[", 
+        RowBox[{"fit", "[", "\"\<RSquared\>\"", "]"}], "]"}]}], ",", 
+      RowBox[{"\"\<AIC\>\"", "->", 
+       RowBox[{"fit", "[", "\"\<AIC\>\"", "]"}]}], ",", 
+      RowBox[{"\"\<MAE\>\"", "->", 
+       RowBox[{"Mean", "[", 
+        RowBox[{"Abs", "[", 
+         RowBox[{"fit", "[", "\"\<FitResiduals\>\"", "]"}], "]"}], "]"}]}], ",", 
+      RowBox[{"\"\<RMSE\>\"", "->", 
+       RowBox[{"Sqrt", "[", 
+        RowBox[{"Mean", "[", 
+         RowBox[{
+          RowBox[{"fit", "[", "\"\<FitResiduals\>\"", "]"}], "^", "2"}], 
+         "]"}], "]"}]}]}], "|>"}]}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"ClearAll", "[", "bands95", "]"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"bands95", "[", 
+      RowBox[{"l_", ",", "x_"}], "]"}], ":=", 
+     RowBox[{"l", "[", 
+      RowBox[{"\"\<MeanPredictionBands\>\"", ",", 
+       RowBox[{"ConfidenceLevel", "\[Rule]", ".95"}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"ClearAll", "[", "lnm", "]"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"lnm", "[", 
+     RowBox[{"l_List", ",", "frameLabelX_String", ",", "frameLabelY_String"}],
+      "]"}], ":=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", "lnm", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"lnm", "=", 
+         RowBox[{"LinearModelFit", "[", 
+          RowBox[{"l", ",", "x", ",", "x"}], "]"}]}], "\[IndentingNewLine]", ",", 
+        RowBox[{"lnm", "[", 
+         RowBox[{"{", "\"\<ParameterEstimates\>\"", "}"}], "]"}], 
+        "\[IndentingNewLine]", ",", 
+        RowBox[{"stats", "[", "lnm", "]"}], "\[IndentingNewLine]", "\n", ",", 
+        RowBox[{"Show", "[", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"ListPlot", "[", 
+           RowBox[{"l", ",", 
+            RowBox[{"FrameLabel", "->", 
+             RowBox[{"{", 
+              RowBox[{"frameLabelX", ",", " ", "frameLabelY"}], "}"}]}], ",", 
+            RowBox[{"myPlotSequence", "[", "]"}]}], "]"}], 
+          "\[IndentingNewLine]", ",", 
+          RowBox[{"Plot", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"lnm", "[", "x", "]"}], ",", 
+              RowBox[{"bands95", "[", 
+               RowBox[{"lnm", ",", "x"}], "]"}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"x", ",", 
+              RowBox[{"Min", "@", 
+               RowBox[{"l", "[", 
+                RowBox[{"[", 
+                 RowBox[{"All", ",", "1"}], "]"}], "]"}]}], ",", 
+              RowBox[{"Max", "@", 
+               RowBox[{"l", "[", 
+                RowBox[{"[", 
+                 RowBox[{"All", ",", "1"}], "]"}], "]"}]}]}], "}"}], ",", 
+            RowBox[{"Filling", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"2", "\[Rule]", 
+               RowBox[{"{", "1", "}"}]}], "}"}]}]}], "]"}]}], 
+         "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", "}"}]}], 
+     "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"ClearAll", "[", "fitQuadratic", "]"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"fitQuadratic", "[", "l_List", "]"}], ":=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", "fitQ", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"fitQ", "=", 
+         RowBox[{"LinearModelFit", "[", 
+          RowBox[{"l", ",", 
+           RowBox[{"{", 
+            RowBox[{"x", ",", 
+             RowBox[{"x", "^", "2"}]}], "}"}], ",", "x"}], "]"}]}], 
+        "\[IndentingNewLine]", ",", 
+        RowBox[{"stats", "[", "fitQ", "]"}], "\n", "\[IndentingNewLine]", ",", 
+        RowBox[{"Show", "[", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"ListPlot", "[", 
+           RowBox[{"l", ",", 
+            RowBox[{"myPlotSequence", "[", "]"}]}], "]"}], 
+          "\[IndentingNewLine]", ",", 
+          RowBox[{"Plot", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"fitQ", "[", "x", "]"}], ",", 
+              RowBox[{"bands95", "[", 
+               RowBox[{"fitQ", ",", "x"}], "]"}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"x", ",", 
+              RowBox[{"Min", "@", 
+               RowBox[{"l", "[", 
+                RowBox[{"[", 
+                 RowBox[{"All", ",", "1"}], "]"}], "]"}]}], ",", 
+              RowBox[{"Max", "@", 
+               RowBox[{"l", "[", 
+                RowBox[{"[", 
+                 RowBox[{"All", ",", "1"}], "]"}], "]"}]}]}], "}"}], ",", 
+            RowBox[{"Filling", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"2", "\[Rule]", 
+               RowBox[{"{", "1", "}"}]}], "}"}]}]}], "]"}]}], 
+         "\[IndentingNewLine]", "]"}]}], "}"}]}], "\[IndentingNewLine]", 
+     "]"}]}], "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"ClearAll", "[", "lnm2param", "]"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"lnm2param", "[", "l_List", "]"}], ":=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", "lnm2param", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"lnm2param", "=", 
+         RowBox[{"LinearModelFit", "[", 
+          RowBox[{"l", ",", 
+           RowBox[{"{", 
+            RowBox[{"abdomen", ",", " ", "thorax"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"abdomen", ",", " ", "thorax"}], "}"}]}], "]"}]}], 
+        "\[IndentingNewLine]", ",", 
+        RowBox[{"lnm2param", "[", 
+         RowBox[{"{", "\"\<ParameterEstimates\>\"", "}"}], "]"}], 
+        "\[IndentingNewLine]", ",", 
+        RowBox[{"dstat", "=", 
+         RowBox[{"Insert", "[", 
+          RowBox[{"dstat", ",", 
+           RowBox[{"stats", "[", "lnm2param", "]"}], ",", "3"}], "]"}]}], 
+        "\n", "\[IndentingNewLine]", ",", 
+        RowBox[{"Show", "[", 
+         RowBox[{
+          RowBox[{"ListPointPlot3D", "[", "l", "]"}], ",", 
+          RowBox[{"Plot3D", "[", 
+           RowBox[{
+            RowBox[{"lnm2param", "[", 
+             RowBox[{"x", ",", "y"}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"x", ",", 
+              RowBox[{"Min", "[", 
+               RowBox[{"l", "[", 
+                RowBox[{"[", 
+                 RowBox[{"All", ",", "1"}], "]"}], "]"}], "]"}], ",", 
+              RowBox[{"Max", "[", 
+               RowBox[{"l", "[", 
+                RowBox[{"[", 
+                 RowBox[{"All", ",", "1"}], "]"}], "]"}], "]"}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"y", ",", 
+              RowBox[{"Min", "[", 
+               RowBox[{"l", "[", 
+                RowBox[{"[", 
+                 RowBox[{"All", ",", "2"}], "]"}], "]"}], "]"}], ",", 
+              RowBox[{"Max", "[", 
+               RowBox[{"l", "[", 
+                RowBox[{"[", 
+                 RowBox[{"All", ",", "2"}], "]"}], "]"}], "]"}]}], "}"}]}], 
+           "]"}], ",", 
+          RowBox[{"myPlotSequence", "[", "]"}]}], "]"}]}], 
+       "\[IndentingNewLine]", "}"}]}], "\[IndentingNewLine]", "]"}]}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"ClearAll", "[", "evaluateVolumeDynamometerData", "]"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"evaluateVolumeDynamometerData", "[", "\[IndentingNewLine]", 
+     RowBox[{
+     "mode_String", "\[IndentingNewLine]", ",", "nameProtocol_String", 
+      "\[IndentingNewLine]", "\[IndentingNewLine]", ",", 
+      "namePexaData_String", "\[IndentingNewLine]", ",", 
+      "namePexaProtocol_String", "\[IndentingNewLine]", "\[IndentingNewLine]",
+       ",", "nameDynamometerData_String", "\[IndentingNewLine]", ",", 
+      "nameDynamometerProtocol1_String", "\[IndentingNewLine]", ",", 
+      "positionDynamometerCSV1_Integer", "\[IndentingNewLine]", ",", 
+      "nameDynamometerProtocol2_String", "\[IndentingNewLine]", ",", 
+      "positionDynamometerCSV2_Integer"}], "\[IndentingNewLine]", 
+     "\[IndentingNewLine]", "]"}], ":=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], "\[IndentingNewLine]", ",", "\[IndentingNewLine]", 
+      RowBox[{"(*", 
+       RowBox[{"import", " ", "data"}], "*)"}], "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"dProtocolImport", "[", "nameProtocol", "]"}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"dPexaImport", "[", 
+        RowBox[{"namePexaData", ",", "namePexaProtocol"}], "]"}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"dDynamometerImport", "[", 
+        RowBox[{
+        "nameDynamometerData", ",", "nameDynamometerProtocol1", ",", 
+         "positionDynamometerCSV1"}], "]"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"dDynamometerImport", "[", 
+        RowBox[{
+        "nameDynamometerData", ",", "nameDynamometerProtocol2", ",", 
+         "positionDynamometerCSV2"}], "]"}], " ", ";", "\[IndentingNewLine]", 
+       "\[IndentingNewLine]", 
+       RowBox[{"createTabular", "[", "]"}], ";", "\[IndentingNewLine]", 
+       "\[IndentingNewLine]", 
+       RowBox[{"Return", "[", "]"}], ";", "\[IndentingNewLine]", 
+       "\[IndentingNewLine]", 
+       RowBox[{"(*", 
+        RowBox[{
+        "generate", " ", "raw", " ", "data", " ", "plot", " ", "with", " ", 
+         "pexa", " ", "airflow", " ", "data", " ", "and", " ", "dynamometer", 
+         " ", "data"}], "*)"}], "\[IndentingNewLine]", 
+       RowBox[{"graphicCorrectionFactor", "=", "20"}], ";", 
+       "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"oneTableTab", "=", 
+        RowBox[{"TransformColumns", "[", 
+         RowBox[{"oneTableTab", ",", 
+          RowBox[{"\"\<pexa_Inhale Exhale Airflow [ml/(20 s)]\>\"", "->", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{
+              "QuantityMagnitude", "[", 
+               "#\"pexa_Inhale Exhale Airflow [ml/s]\"", "]"}], "/", "20"}], 
+             "&"}], ")"}]}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"plotRangeX", "=", 
+        RowBox[{"MinMax", "[", 
+         RowBox[{
+          RowBox[{"Select", "[", 
+           RowBox[{"oneTableTab", ",", 
+            RowBox[{
+             RowBox[{"!", 
+              RowBox[{
+              "MissingQ", "[", "#\"pexa_Inhale Exhale Airflow [ml/s]\"", 
+               "]"}]}], "&"}]}], "]"}], "[", 
+          RowBox[{"[", 
+           RowBox[{"All", ",", "\"\<elapsed time [s]\>\""}], "]"}], "]"}], 
+         "]"}]}], ";", "\n", "\n", 
+       RowBox[{"measurementPlot", "=", 
+        RowBox[{"ListLinePlot", "[", 
+         RowBox[{
+          RowBox[{"oneTableTab", "->", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"\"\<elapsed time [s]\>\"", ",", 
+               RowBox[{
+               "nameDynamometerProtocol1", "<>", "\"\< force [N]\>\""}]}], 
+              "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"\"\<elapsed time [s]\>\"", ",", 
+               RowBox[{
+               "nameDynamometerProtocol2", "<>", "\"\< force [N]\>\""}]}], 
+              "}"}], ",", 
+             RowBox[{"{", 
+              
+              RowBox[{"\"\<elapsed time [s]\>\"", 
+               ",", "\"\<pexa_Inhale Exhale Airflow [ml/(20 s)]\>\""}], 
+              "}"}]}], "}"}]}], "\[IndentingNewLine]", ",", 
+          RowBox[{"PlotLegends", "->", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{
+             "nameDynamometerProtocol1", " ", "<>", 
+              " ", "\"\< force [N]\>\""}], ",", 
+             RowBox[{
+             "nameDynamometerProtocol2", " ", "<>", 
+              " ", "\"\< force [N]\>\""}], 
+             ",", "\"\<pexa_Inhale Exhale Airflow [ml/(20 s)]\>\""}], "}"}]}],
+           "\[IndentingNewLine]", ",", 
+          RowBox[{"FrameLabel", "->", 
+           RowBox[{"{", 
+            
+            RowBox[{"\"\<elapsed time [s]\>\"", ",", 
+             " ", "\"\<mixed scale, see legends\>\""}], "}"}]}], 
+          "\[IndentingNewLine]", "\[IndentingNewLine]", ",", 
+          RowBox[{"myPlotSequence", "[", "]"}], ",", 
+          RowBox[{"PlotRange", "->", 
+           RowBox[{"{", 
+            RowBox[{"plotRangeX", ",", "All"}], "}"}]}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"myFigAppend", "[", 
+        RowBox[{"measurementPlot", ",", "\"\<001\>\"", ",", 
+         RowBox[{
+         "id", "<>", "\"\< plot pexa airflow and dynamometer data\>\""}], ",",
+          "300", ",", "True"}], "]"}], ";", "\[IndentingNewLine]", 
+       "\[IndentingNewLine]", 
+       RowBox[{"(*", 
+        RowBox[{
+        "calculate", " ", "breathing", " ", "volume", " ", "from", " ", 
+         "airflow"}], "*)"}], "\[IndentingNewLine]", 
+       RowBox[{"dExtr", "=", 
+        RowBox[{"Select", "[", 
+         RowBox[{"oneTableTab", ",", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+            "MissingQ", "[", "#\"pexa_Inhale Exhale Airflow [ml/s]\"", "]"}], 
+            "===", "False"}], "&"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+       "\[IndentingNewLine]", 
+       RowBox[{"timeFlowData", "=", 
+        RowBox[{"Transpose", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"myNormalColumnTab", "[", 
+            RowBox[{"dExtr", ",", "\"\<elapsed time [s]\>\""}], "]"}], ",", 
+           RowBox[{"myNormalColumnTab", "[", 
+            RowBox[{
+            "dExtr", ",", "\"\<pexa_Inhale Exhale Airflow [ml/s]\>\""}], 
+            "]"}]}], "}"}], "]"}]}], ";", "\n", "\[IndentingNewLine]", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ClearAll", "[", "airflowToVolume", "]"}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"airflowToVolume", "[", "data_", "]"}], ":=", 
+        RowBox[{"Module", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+           "time", ",", "flow", ",", "deltaT", ",", "deltaV", ",", "volume"}],
+            "}"}], "\[IndentingNewLine]", ",", 
+          RowBox[{
+           RowBox[{"time", "=", 
+            RowBox[{"data", "[", 
+             RowBox[{"[", 
+              RowBox[{"All", ",", "1"}], "]"}], "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"flow", "=", 
+            RowBox[{"data", "[", 
+             RowBox[{"[", 
+              RowBox[{"All", ",", "2"}], "]"}], "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"deltaT", "=", 
+            RowBox[{"Differences", "[", "time", "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"deltaV", "=", 
+            RowBox[{
+             RowBox[{"-", "deltaT"}], "*", 
+             RowBox[{"MovingAverage", "[", 
+              RowBox[{"flow", ",", "2"}], "]"}]}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"volume", "=", 
+            RowBox[{"Prepend", "[", 
+             RowBox[{
+              RowBox[{"Accumulate", "[", "deltaV", "]"}], ",", "0"}], "]"}]}],
+            ";", "\[IndentingNewLine]", 
+           RowBox[{"Transpose", "[", 
+            RowBox[{"{", 
+             RowBox[{"time", ",", "volume"}], "}"}], "]"}]}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"volumeData", "=", 
+        RowBox[{"airflowToVolume", "[", "timeFlowData", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"rawVolume", "=", 
+        RowBox[{"airflowToVolume", "[", "timeFlowData", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ListLinePlot", "[", 
+        RowBox[{"volumeData", ",", 
+         RowBox[{"myPlotSequence", "[", "]"}], ",", 
+         RowBox[{"FrameLabel", "->", 
+          RowBox[{"{", 
+           
+           RowBox[{"\"\<elapsed time [s]\>\"", ",", 
+            " ", "\"\<volume [ml]\>\""}], "}"}]}]}], "]"}], 
+       "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"(*", 
+        RowBox[{
+         RowBox[{
+         "find", " ", "positive", " ", "to", " ", "negative", " ", "sign", " ",
+           "changes", " ", "and", " ", "replace", " ", "with", " ", 
+          "averaged", " ", "value"}], " ", "=", "  ", 
+         RowBox[{
+          RowBox[{
+          "linear", " ", "interpolation", " ", "of", " ", "the", " ", "exact",
+            " ", "zero", " ", "crossing", " ", "at", " ", "the", " ", "end"}],
+           "-", 
+          RowBox[{"expiratory", " ", "phase"}]}]}], "*)"}], ";", 
+       RowBox[{"endExpiration", "=", 
+        RowBox[{"Cases", "[", 
+         RowBox[{
+          RowBox[{"Partition", "[", 
+           RowBox[{"timeFlowData", ",", "2", ",", "1"}], "]"}], ",", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"t1_", ",", "q1_"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"t2_", ",", "q2_"}], "}"}]}], "}"}], "/;", 
+            RowBox[{
+             RowBox[{"q1", ">", "0"}], "&&", 
+             RowBox[{"q2", "<", "0"}]}]}], ":>", 
+           RowBox[{"t1", "-", 
+            RowBox[{"q1", " ", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"t2", "-", "t1"}], ")"}], "/", 
+              RowBox[{"(", 
+               RowBox[{"q2", "-", "q1"}], ")"}]}]}]}]}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"(*", 
+        RowBox[{
+         RowBox[{
+         "interpolate", " ", "raw", " ", "volume", " ", "data", " ", "and", " ",
+           "baseline", " ", "points", " ", "from", " ", "end"}], "-", 
+         RowBox[{"expiratory", " ", "phase"}]}], "*)"}], "\n", 
+       RowBox[{"volumeFunction", "=", 
+        RowBox[{"Interpolation", "[", 
+         RowBox[{"rawVolume", ",", 
+          RowBox[{"InterpolationOrder", "->", "1"}]}], "]"}]}], ";", "\n", 
+       RowBox[{"baselinePoints", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"#", ",", 
+            RowBox[{"volumeFunction", "[", "#", "]"}]}], "}"}], "&"}], "/@", 
+         "endExpiration"}]}], ";", "\n", 
+       RowBox[{"baseline", "=", 
+        RowBox[{"Interpolation", "[", 
+         RowBox[{"baselinePoints", ",", 
+          RowBox[{"InterpolationOrder", "->", "1"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"(*", 
+        RowBox[{
+         RowBox[{
+         "correct", " ", "volume", " ", "with", " ", "interpolated", " ", 
+          "baseline", " ", "data"}], " ", "->", " ", 
+         RowBox[{"v", "-", 
+          RowBox[{"baseline", "[", "t", "]"}]}]}], "*)"}], 
+       RowBox[{"correctedVolume", "=", 
+        RowBox[{
+         RowBox[{"Select", "[", 
+          RowBox[{"rawVolume", ",", 
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              RowBox[{"First", "[", "baselinePoints", "]"}], "[", 
+              RowBox[{"[", "1", "]"}], "]"}], "<=", 
+             RowBox[{"#", "[", 
+              RowBox[{"[", "1", "]"}], "]"}], "<=", 
+             RowBox[{
+              RowBox[{"Last", "[", "baselinePoints", "]"}], "[", 
+              RowBox[{"[", "1", "]"}], "]"}]}], "&"}]}], "]"}], "/.", " ", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"t_", ",", "v_"}], "}"}], ":>", 
+          RowBox[{"{", 
+           RowBox[{"t", ",", 
+            RowBox[{"v", "-", 
+             RowBox[{"baseline", "[", "t", "]"}]}]}], "}"}]}]}]}], ";", "\n", 
+       "\[IndentingNewLine]", 
+       RowBox[{"(*", "plots", "*)"}], "\[IndentingNewLine]", 
+       RowBox[{"volumePlot", "=", 
+        RowBox[{"ListLinePlot", "[", 
+         RowBox[{"correctedVolume", ",", 
+          RowBox[{"PlotRange", "->", "All"}], ",", 
+          RowBox[{"myPlotSequence", "[", "]"}], ",", 
+          RowBox[{"FrameLabel", "->", 
+           RowBox[{"{", 
+            
+            RowBox[{"\"\<elapsed time [s]\>\"", ",", 
+             " ", "\"\<volume [ml]\>\""}], "}"}]}]}], "]"}]}], ";", "\n", 
+       "\[IndentingNewLine]", 
+       RowBox[{"plotVolumeRawVsCorrected", "=", 
+        RowBox[{"ListLinePlot", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"rawVolume", ",", "correctedVolume"}], "}"}], ",", 
+          RowBox[{"PlotRange", "->", "All"}], ",", 
+          RowBox[{"myPlotSequence", "[", "]"}], ",", 
+          RowBox[{"FrameLabel", "->", 
+           RowBox[{"{", 
+            
+            RowBox[{"\"\<elapsed time [s]\>\"", ",", 
+             " ", "\"\<volume [ml]\>\""}], "}"}]}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"myFigAppend", "[", 
+        RowBox[{"{", 
+         RowBox[{"plotVolumeRawVsCorrected", ",", "\"\<002\>\"", ",", 
+          RowBox[{
+          "id", "<>", "\"\< plot interpolated volume baseline corrected vs \
+raw volume data\>\""}], ",", "300", ",", "True"}], "}"}], "]"}], ";", 
+       "\[IndentingNewLine]", "\n", 
+       RowBox[{"plotVolumeRawBaselineCorr", "=", 
+        RowBox[{"Show", "[", 
+         RowBox[{
+          RowBox[{"ListLinePlot", "[", 
+           RowBox[{"rawVolume", ",", 
+            RowBox[{"PlotRange", "->", "All"}], ",", 
+            RowBox[{"FrameLabel", "->", 
+             RowBox[{"{", 
+              
+              RowBox[{"\"\<elapsed time [s]\>\"", ",", 
+               " ", "\"\<volume [ml]\>\""}], "}"}]}]}], "]"}], ",", 
+          RowBox[{"ListPlot", "[", 
+           RowBox[{"baselinePoints", ",", 
+            RowBox[{"PlotStyle", "->", 
+             RowBox[{"Directive", "[", 
+              RowBox[{
+               RowBox[{"PointSize", "[", "Large", "]"}], ",", "Red"}], 
+              "]"}]}]}], "]"}], ",", 
+          RowBox[{"Plot", "[", 
+           RowBox[{
+            RowBox[{"baseline", "[", "t", "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"t", ",", 
+              RowBox[{
+               RowBox[{"First", "[", "baselinePoints", "]"}], "[", 
+               RowBox[{"[", "1", "]"}], "]"}], ",", 
+              RowBox[{
+               RowBox[{"Last", "[", "baselinePoints", "]"}], "[", 
+               RowBox[{"[", "1", "]"}], "]"}]}], "}"}]}], "]"}], ",", 
+          RowBox[{"myPlotSequence", "[", "]"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"myFigAppend", "[", 
+        RowBox[{"{", 
+         RowBox[{"plotVolumeRawBaselineCorr", ",", "\"\<003\>\"", ",", 
+          RowBox[{
+          "id", "<>", "\"\< plot raw volume with baseline detection\>\""}], ",",
+           "300", ",", "True"}], "}"}], "]"}], ";", "\[IndentingNewLine]", 
+       "\[IndentingNewLine]", 
+       RowBox[{"(*", 
+        RowBox[{
+        "calculate", " ", "volume", " ", "of", " ", "breathing", " ", "for", " ",
+          "the", " ", "original", " ", "dataset", " ", "but", " ", "with", " ",
+          "interpolation", " ", "function"}], "*)"}], "\[IndentingNewLine]", 
+       RowBox[{"dExtrVolume", "=", 
+        RowBox[{"TransformColumns", "[", 
+         RowBox[{"dExtr", ",", 
+          RowBox[{"\"\<volume breathing [ml]\>\"", "->", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"Quantity", "[", 
+              RowBox[{
+               RowBox[{"volumeFunction", "[", 
+                RowBox[{"QuantityMagnitude", "[", 
+                 RowBox[{"#", "[", "\"\<elapsed time [s]\>\"", "]"}], "]"}], 
+                "]"}], ",", "\"\<Milliliters\>\""}], "]"}], "&"}], ")"}]}]}], 
+         "]"}]}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"(*", 
+        RowBox[{
+        "calculate", " ", "the", " ", "baseline", " ", "corrected", " ", 
+         "breathing", " ", "volume", " ", "with", " ", "the", " ", "original",
+          " ", 
+         RowBox[{"dataset", ".", " ", "The"}], " ", "data", " ", "extract", " ",
+          "has", " ", "to", " ", "size", " ", "the", " ", "baseline", " ", 
+         "interpolation", " ", 
+         RowBox[{"range", "."}]}], "*)"}], "\[IndentingNewLine]", 
+       RowBox[{"dExtrVolume", "=", 
+        RowBox[{"TransformColumns", "[", 
+         RowBox[{
+          RowBox[{"Select", "[", 
+           RowBox[{"dExtrVolume", ",", 
+            RowBox[{
+             RowBox[{
+              RowBox[{
+               RowBox[{"First", "[", "baselinePoints", "]"}], "[", 
+               RowBox[{"[", "1", "]"}], "]"}], "<=", 
+              RowBox[{"QuantityMagnitude", "[", 
+               RowBox[{"#", "[", "\"\<elapsed time [s]\>\"", "]"}], "]"}], "<=", 
+              RowBox[{
+               RowBox[{"Last", "[", "baselinePoints", "]"}], "[", 
+               RowBox[{"[", "1", "]"}], "]"}]}], "&"}]}], "]"}], ",", 
+          
+          RowBox[{"\"\<volume breathing baseline corrected [ml]\>\"", "->", 
+           "\[IndentingNewLine]", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"Quantity", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"QuantityMagnitude", "[", 
+                 RowBox[{"#", "[", "\"\<volume breathing [ml]\>\"", "]"}], 
+                 "]"}], "-", 
+                RowBox[{"baseline", "[", 
+                 RowBox[{"QuantityMagnitude", "[", 
+                  RowBox[{"#", "[", "\"\<elapsed time [s]\>\"", "]"}], "]"}], 
+                 "]"}]}], ",", "\"\<Milliliters\>\""}], "]"}], "&"}], 
+            ")"}]}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+       "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"dExtrVolume", "=", 
+        RowBox[{"TransformColumns", "[", 
+         RowBox[{"dExtrVolume", ",", 
+          RowBox[{"\"\<volume breathing baseline corrected [100 ml]\>\"", "->", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+             "#\"volume breathing baseline corrected [ml]\"", "/", "100"}], 
+             "&"}], ")"}]}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+       "\[IndentingNewLine]", 
+       RowBox[{"volumePlotCorrectedScaled", "=", 
+        RowBox[{"ListLinePlot", "[", 
+         RowBox[{
+          RowBox[{"dExtrVolume", "->", 
+           RowBox[{"{", 
+            
+            RowBox[{"\"\<elapsed time [s]\>\"", 
+             ",", "\"\<volume breathing baseline corrected [100 ml]\>\""}], 
+            "}"}]}], ",", 
+          RowBox[{"myPlotSequence", "[", "]"}], ",", 
+          RowBox[{"PlotStyle", "->", "Black"}], ",", 
+          RowBox[{"PlotLegends", "->", 
+           RowBox[{
+           "{", "\"\<volume breathing baseline corrected [100 ml]\>\"", 
+            "}"}]}], ",", 
+          RowBox[{"FrameLabel", "->", 
+           RowBox[{"{", 
+            
+            RowBox[{"\"\<elapsed time [s]\>\"", ",", 
+             " ", "\"\<mixed scale, see legend\>\""}], "}"}]}]}], "]"}]}], ";",
+        "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"plotVolumeCorDynamometer", "=", 
+        RowBox[{"Show", "[", "\[IndentingNewLine]", 
+         RowBox[{"volumePlotCorrectedScaled", "\[IndentingNewLine]", ",", 
+          RowBox[{"ListLinePlot", "[", 
+           RowBox[{
+            RowBox[{"dExtrVolume", "->", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"\"\<elapsed time [s]\>\"", ",", 
+                 RowBox[{
+                 "nameDynamometerProtocol1", "<>", "\"\< force [N]\>\""}]}], 
+                "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"\"\<elapsed time [s]\>\"", ",", 
+                 RowBox[{
+                 "nameDynamometerProtocol2", "<>", "\"\< force [N]\>\""}]}], 
+                "}"}]}], "}"}]}], "\[IndentingNewLine]", ",", 
+            RowBox[{"PlotLegends", "->", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{
+               "nameDynamometerProtocol1", " ", "<>", 
+                " ", "\"\< force [N]\>\""}], ",", 
+               RowBox[{
+               "nameDynamometerProtocol2", " ", "<>", 
+                " ", "\"\< force [N]\>\""}]}], "}"}]}], "\[IndentingNewLine]",
+             "\[IndentingNewLine]", "\[IndentingNewLine]", ",", 
+            RowBox[{"myPlotSequence", "[", "]"}], ",", 
+            RowBox[{"PlotRange", "->", 
+             RowBox[{"{", 
+              RowBox[{"plotRangeX", ",", "All"}], "}"}]}]}], "]"}], 
+          "\[IndentingNewLine]", "\[IndentingNewLine]", ",", 
+          RowBox[{"PlotRange", "->", "All"}]}], "\[IndentingNewLine]", 
+         "\[IndentingNewLine]", "]"}]}], ";", "\[IndentingNewLine]", 
+       "\[IndentingNewLine]", 
+       RowBox[{"myFigAppend", "[", 
+        RowBox[{"{", 
+         RowBox[{"plotVolumeCorDynamometer", ",", "\"\<004\>\"", ",", 
+          RowBox[{
+          "id", "<>", "\"\< plot dynamometer data and volume breathing \
+baseline corrected\>\""}], ",", "300", ",", "True"}], "}"}], "]"}], ";", 
+       "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"(*", 
+        RowBox[{
+        "find", " ", "peaks", " ", "and", " ", "determine", " ", "inhale", " ",
+          "breathing", " ", "phase"}], "*)"}], "\[IndentingNewLine]", 
+       RowBox[{"maxPosition", "=", 
+        RowBox[{"FindPeaks", "[", 
+         RowBox[{
+          RowBox[{"dExtrVolume", "[", 
+           RowBox[{"[", 
+            RowBox[{
+            "All", ",", "\"\<volume breathing baseline corrected [ml]\>\""}], 
+            "]"}], "]"}], ",", "2"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"maxPosition", "[", 
+         RowBox[{"[", 
+          RowBox[{"All", ",", "2"}], "]"}], "]"}], "/=", "100"}], ";", 
+       RowBox[{"(*", 
+        RowBox[{
+        "for", " ", "comprehensive", " ", "graphical", " ", "output"}], 
+        "*)"}], "\[IndentingNewLine]", 
+       RowBox[{"maxPositionTime", "=", 
+        RowBox[{
+         RowBox[{"dExtrVolume", "[", 
+          RowBox[{"[", 
+           RowBox[{"All", ",", "\"\<elapsed time [s]\>\""}], "]"}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"maxPosition", "[", 
+           RowBox[{"[", 
+            RowBox[{"All", ",", "1"}], "]"}], "]"}], "]"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"maxPosition", "=", 
+        RowBox[{"Transpose", "[", 
+         RowBox[{"{", 
+          RowBox[{"maxPositionTime", ",", 
+           RowBox[{"maxPosition", "[", 
+            RowBox[{"[", 
+             RowBox[{"All", ",", "2"}], "]"}], "]"}]}], "}"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"minPosition", "=", 
+        RowBox[{"FindPeaks", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"-", "1"}], "*", 
+           RowBox[{"dExtrVolume", "[", 
+            RowBox[{"[", 
+             RowBox[{
+             "All", ",", "\"\<volume breathing baseline corrected [ml]\>\""}],
+              "]"}], "]"}]}], ",", "2"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"minPosition", "[", 
+         RowBox[{"[", 
+          RowBox[{"All", ",", "2"}], "]"}], "]"}], "/=", "100"}], ";", " ", 
+       RowBox[{"(*", 
+        RowBox[{
+        "for", " ", "comprehensive", " ", "graphical", " ", "output"}], 
+        "*)"}], "\[IndentingNewLine]", 
+       RowBox[{"minPositionTime", "=", 
+        RowBox[{
+         RowBox[{"dExtrVolume", "[", 
+          RowBox[{"[", 
+           RowBox[{"All", ",", "\"\<elapsed time [s]\>\""}], "]"}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"minPosition", "[", 
+           RowBox[{"[", 
+            RowBox[{"All", ",", "1"}], "]"}], "]"}], "]"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"minPosition", "=", 
+        RowBox[{"Transpose", "[", 
+         RowBox[{"{", 
+          RowBox[{"minPositionTime", ",", 
+           RowBox[{
+            RowBox[{"-", "1"}], "*", 
+            RowBox[{"minPosition", "[", 
+             RowBox[{"[", 
+              RowBox[{"All", ",", "2"}], "]"}], "]"}]}]}], "}"}], "]"}]}], ";",
+        "\[IndentingNewLine]", "\n", 
+       RowBox[{"plotVolumeCorDynamometerMinMax", "=", 
+        RowBox[{"Show", "[", "\[IndentingNewLine]", 
+         RowBox[{"volumePlotCorrectedScaled", "\[IndentingNewLine]", ",", 
+          RowBox[{"ListLinePlot", "[", 
+           RowBox[{
+            RowBox[{"dExtrVolume", "->", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"\"\<elapsed time [s]\>\"", ",", 
+                 RowBox[{
+                 "nameDynamometerProtocol1", "<>", "\"\< force [N]\>\""}]}], 
+                "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"\"\<elapsed time [s]\>\"", ",", 
+                 RowBox[{
+                 "nameDynamometerProtocol2", "<>", "\"\< force [N]\>\""}]}], 
+                "}"}]}], "}"}]}], "\[IndentingNewLine]", ",", 
+            RowBox[{"PlotLegends", "->", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{
+               "nameDynamometerProtocol1", " ", "<>", 
+                " ", "\"\< force [N]\>\""}], ",", 
+               RowBox[{
+               "nameDynamometerProtocol2", " ", "<>", 
+                " ", "\"\< force [N]\>\""}]}], "}"}]}], ",", 
+            RowBox[{"myPlotSequence", "[", "]"}], ",", 
+            RowBox[{"PlotRange", "->", 
+             RowBox[{"{", 
+              RowBox[{"plotRangeX", ",", "All"}], "}"}]}]}], "]"}], 
+          "\[IndentingNewLine]", "\[IndentingNewLine]", ",", 
+          RowBox[{"ListPlot", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"maxPosition", ",", "minPosition"}], "}"}], ",", 
+            RowBox[{"myPlotSequence", "[", "]"}], ",", 
+            RowBox[{"PlotStyle", "->", 
+             RowBox[{"Directive", "[", 
+              RowBox[{
+               RowBox[{"PointSize", "[", "Large", "]"}], ",", 
+               "StandardGreen"}], "]"}]}]}], "]"}], "\[IndentingNewLine]", 
+          "\[IndentingNewLine]", ",", 
+          RowBox[{"PlotRange", "->", "All"}]}], "\[IndentingNewLine]", 
+         "\[IndentingNewLine]", "]"}]}], ";", "\[IndentingNewLine]", 
+       "\[IndentingNewLine]", 
+       RowBox[{"myFigAppend", "[", 
+        RowBox[{"{", 
+         RowBox[{"plotVolumeCorDynamometerMinMax", ",", "\"\<00\.085\>\"", ",", 
+          RowBox[{
+          "id", "<>", "\"\< plot dynamometer data and volume breathing \
+baseline corrected with minima/maxima\>\""}], ",", "300", ",", "True"}], 
+         "}"}], "]"}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"(*", 
+        RowBox[{
+         RowBox[{
+         "breathing", " ", "cycle", " ", "shall", " ", "allways", " ", 
+          "start", " ", "with", " ", "minimum"}], " ", "=", " ", 
+         RowBox[{"inspiration", " ", "phase"}]}], "*)"}], 
+       "\[IndentingNewLine]", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"maxPosition", "[", 
+           RowBox[{"[", 
+            RowBox[{"1", ",", "1"}], "]"}], "]"}], "<", 
+          RowBox[{"minPosition", "[", 
+           RowBox[{"[", 
+            RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ",", 
+         RowBox[{"Delete", "[", 
+          RowBox[{"maxPosition", ",", "1"}], "]"}], ",", "Nothing"}], "]"}], ";",
+        "\n", 
+       RowBox[{"n", "=", 
+        RowBox[{"Min", "[", 
+         RowBox[{
+          RowBox[{"Length", "[", "maxPosition", "]"}], ",", 
+          RowBox[{"Length", "[", "minPosition", "]"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", "\n", 
+       RowBox[{"maxPosition", "=", 
+        RowBox[{"Take", "[", 
+         RowBox[{"maxPosition", ",", "n"}], "]"}]}], ";", " ", 
+       RowBox[{"(*", 
+        RowBox[{"equalize", " ", "length"}], "*)"}], "\n", 
+       RowBox[{"minPosition", "=", 
+        RowBox[{"Take", "[", 
+         RowBox[{"minPosition", ",", "n"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"minMaxRanges", "=", 
+        RowBox[{"Transpose", "/@", 
+         RowBox[{"Transpose", "[", 
+          RowBox[{"{", 
+           RowBox[{"minPosition", ",", "maxPosition"}], "}"}], "]"}]}]}], ";",
+        "\[IndentingNewLine]", 
+       RowBox[{"minMaxRanges", "[", 
+        RowBox[{"[", 
+         RowBox[{"All", ",", "1"}], "]"}], "]"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"inspiratoryPhases", "=", 
+        RowBox[{"extractInspPhase", "/@", 
+         RowBox[{"minMaxRanges", "[", 
+          RowBox[{"[", 
+           RowBox[{"All", ",", "1"}], "]"}], "]"}]}]}], ";", 
+       "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"dMinMax", "=", 
+        RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
+       "\[IndentingNewLine]", 
+       RowBox[{"plotBreaths", "=", 
+        RowBox[{"inspiratoryPlots", "/@", "inspiratoryPhases"}]}], ";", 
+       "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"(*", 
+        RowBox[{
+         RowBox[{"calculate", " ", "amplitude", " ", "and", " ", "delta"}], "-", 
+         RowBox[{
+         "time", " ", "for", " ", "all", " ", "parameters", " ", "in", " ", 
+          "each", " ", "breath"}]}], "*)"}], "\[IndentingNewLine]", 
+       RowBox[{"dTimeValue", "=", 
+        RowBox[{
+         RowBox[{"Values", "[", 
+          RowBox[{"Normal", "[", "dMinMax", "]"}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"All", ",", "All", ",", "All", ",", 
+           RowBox[{"2", ";;", 
+            RowBox[{"-", "1"}]}]}], "]"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"nMeasurements", "=", 
+        RowBox[{"Length", "[", "dTimeValue", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"dTimeValue", "=", 
+        RowBox[{"Transpose", "[", "dTimeValue", "]"}]}], ";", 
+       "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"maxPosition", "[", 
+           RowBox[{"[", 
+            RowBox[{
+             RowBox[{"-", "1"}], ",", "1"}], "]"}], "]"}], ">", 
+          RowBox[{"minPosition", "[", 
+           RowBox[{"[", 
+            RowBox[{
+             RowBox[{"-", "1"}], ",", "1"}], "]"}], "]"}]}], 
+         "\[IndentingNewLine]", ",", 
+         RowBox[{
+          RowBox[{"cExp", "=", "1"}], ";", 
+          RowBox[{"cInsp", "=", "0"}]}], "\[IndentingNewLine]", ",", 
+         RowBox[{
+          RowBox[{"cExp", "=", "0"}], ";", 
+          RowBox[{"cInsp", "=", "1"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+       "\[IndentingNewLine]", 
+       RowBox[{"\[CapitalDelta]tInspVol", "=", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"dTimeValue", "[", 
+             RowBox[{"[", 
+              RowBox[{"1", ",", "i", ",", "2", ",", "1"}], "]"}], "]"}], "-", 
+            RowBox[{"dTimeValue", "[", 
+             RowBox[{"[", 
+              RowBox[{"1", ",", "i", ",", "1", ",", "1"}], "]"}], "]"}]}], 
+           "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", 
+            RowBox[{"nMeasurements", "-", "cInsp"}]}], "}"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"\[CapitalDelta]VInspVol", "=", 
+        RowBox[{"100", " ", 
+         RowBox[{"Table", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"dTimeValue", "[", 
+              RowBox[{"[", 
+               RowBox[{"1", ",", "i", ",", "2", ",", "2"}], "]"}], "]"}], "-", 
+             RowBox[{"dTimeValue", "[", 
+              RowBox[{"[", 
+               RowBox[{"1", ",", "i", ",", "1", ",", "2"}], "]"}], "]"}]}], 
+            "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"i", ",", 
+             RowBox[{"nMeasurements", "-", "cInsp"}]}], "}"}]}], "]"}]}]}], ";",
+        "\[IndentingNewLine]", 
+       RowBox[{"\[CapitalDelta]tExpVol", "=", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"dTimeValue", "[", 
+             RowBox[{"[", 
+              RowBox[{"1", ",", 
+               RowBox[{"i", "+", "1"}], ",", "1", ",", "1"}], "]"}], "]"}], "-", 
+            RowBox[{"dTimeValue", "[", 
+             RowBox[{"[", 
+              RowBox[{"1", ",", "i", ",", "2", ",", "1"}], "]"}], "]"}]}], 
+           "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", 
+            RowBox[{"nMeasurements", "-", "cExp"}]}], "}"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"\[CapitalDelta]VExpVol", "=", 
+        RowBox[{"100", " ", 
+         RowBox[{"Table", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"dTimeValue", "[", 
+              RowBox[{"[", 
+               RowBox[{"1", ",", 
+                RowBox[{"i", "+", "1"}], ",", "1", ",", "2"}], "]"}], "]"}], "-", 
+             RowBox[{"dTimeValue", "[", 
+              RowBox[{"[", 
+               RowBox[{"1", ",", "i", ",", "2", ",", "2"}], "]"}], "]"}]}], 
+            "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"i", ",", 
+             RowBox[{"nMeasurements", "-", "cExp"}]}], "}"}]}], "]"}]}]}], ";",
+        "\[IndentingNewLine]", 
+       RowBox[{"\[CapitalDelta]tVol", "=", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"dTimeValue", "[", 
+             RowBox[{"[", 
+              RowBox[{"1", ",", 
+               RowBox[{"i", "+", "1"}], ",", "1", ",", "1"}], "]"}], "]"}], "-", 
+            RowBox[{"dTimeValue", "[", 
+             RowBox[{"[", 
+              RowBox[{"1", ",", "i", ",", "1", ",", "1"}], "]"}], "]"}]}], 
+           "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", 
+            RowBox[{"nMeasurements", "-", "cExp"}]}], "}"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"\[CapitalDelta]tInspDyn1", "=", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"dTimeValue", "[", 
+             RowBox[{"[", 
+              RowBox[{"2", ",", "i", ",", "2", ",", "1"}], "]"}], "]"}], "-", 
+            RowBox[{"dTimeValue", "[", 
+             RowBox[{"[", 
+              RowBox[{"2", ",", "i", ",", "1", ",", "1"}], "]"}], "]"}]}], 
+           "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", 
+            RowBox[{"nMeasurements", "-", "cInsp"}]}], "}"}]}], "]"}]}], ";", 
+       "\n", 
+       RowBox[{"\[CapitalDelta]VInspDyn1", "=", " ", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"dTimeValue", "[", 
+             RowBox[{"[", 
+              RowBox[{"2", ",", "i", ",", "2", ",", "2"}], "]"}], "]"}], "-", 
+            RowBox[{"dTimeValue", "[", 
+             RowBox[{"[", 
+              RowBox[{"2", ",", "i", ",", "1", ",", "2"}], "]"}], "]"}]}], 
+           "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", 
+            RowBox[{"nMeasurements", "-", "cInsp"}]}], "}"}]}], "]"}]}], ";", 
+       "\n", 
+       RowBox[{"\[CapitalDelta]tExpDyn1", "=", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"dTimeValue", "[", 
+             RowBox[{"[", 
+              RowBox[{"2", ",", 
+               RowBox[{"i", "+", "1"}], ",", "1", ",", "1"}], "]"}], "]"}], "-", 
+            RowBox[{"dTimeValue", "[", 
+             RowBox[{"[", 
+              RowBox[{"2", ",", "i", ",", "2", ",", "1"}], "]"}], "]"}]}], 
+           "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", 
+            RowBox[{"nMeasurements", "-", "cExp"}]}], "}"}]}], "]"}]}], ";", 
+       "\n", 
+       RowBox[{"\[CapitalDelta]VExpDyn1", "=", " ", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"dTimeValue", "[", 
+             RowBox[{"[", 
+              RowBox[{"2", ",", 
+               RowBox[{"i", "+", "1"}], ",", "1", ",", "2"}], "]"}], "]"}], "-", 
+            RowBox[{"dTimeValue", "[", 
+             RowBox[{"[", 
+              RowBox[{"2", ",", "i", ",", "2", ",", "2"}], "]"}], "]"}]}], 
+           "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", 
+            RowBox[{"nMeasurements", "-", "cExp"}]}], "}"}]}], "]"}]}], ";", 
+       "\n", 
+       RowBox[{"\[CapitalDelta]tDyn1", "=", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"dTimeValue", "[", 
+             RowBox[{"[", 
+              RowBox[{"2", ",", 
+               RowBox[{"i", "+", "1"}], ",", "1", ",", "1"}], "]"}], "]"}], "-", 
+            RowBox[{"dTimeValue", "[", 
+             RowBox[{"[", 
+              RowBox[{"2", ",", "i", ",", "1", ",", "1"}], "]"}], "]"}]}], 
+           "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", 
+            RowBox[{"nMeasurements", "-", "cExp"}]}], "}"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"\[CapitalDelta]tInspDyn2", "=", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"dTimeValue", "[", 
+             RowBox[{"[", 
+              RowBox[{"3", ",", "i", ",", "2", ",", "1"}], "]"}], "]"}], "-", 
+            RowBox[{"dTimeValue", "[", 
+             RowBox[{"[", 
+              RowBox[{"3", ",", "i", ",", "1", ",", "1"}], "]"}], "]"}]}], 
+           "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", 
+            RowBox[{"nMeasurements", "-", "cInsp"}]}], "}"}]}], "]"}]}], ";", 
+       "\n", 
+       RowBox[{"\[CapitalDelta]VInspDyn2", "=", " ", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"dTimeValue", "[", 
+             RowBox[{"[", 
+              RowBox[{"3", ",", "i", ",", "2", ",", "2"}], "]"}], "]"}], "-", 
+            RowBox[{"dTimeValue", "[", 
+             RowBox[{"[", 
+              RowBox[{"3", ",", "i", ",", "1", ",", "2"}], "]"}], "]"}]}], 
+           "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", 
+            RowBox[{"nMeasurements", "-", "cInsp"}]}], "}"}]}], "]"}]}], ";", 
+       "\n", 
+       RowBox[{"\[CapitalDelta]tExpDyn2", "=", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"dTimeValue", "[", 
+             RowBox[{"[", 
+              RowBox[{"3", ",", 
+               RowBox[{"i", "+", "1"}], ",", "1", ",", "1"}], "]"}], "]"}], "-", 
+            RowBox[{"dTimeValue", "[", 
+             RowBox[{"[", 
+              RowBox[{"3", ",", "i", ",", "2", ",", "1"}], "]"}], "]"}]}], 
+           "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", 
+            RowBox[{"nMeasurements", "-", "cExp"}]}], "}"}]}], "]"}]}], ";", 
+       "\n", 
+       RowBox[{"\[CapitalDelta]VExpDyn2", "=", " ", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"dTimeValue", "[", 
+             RowBox[{"[", 
+              RowBox[{"3", ",", 
+               RowBox[{"i", "+", "1"}], ",", "1", ",", "2"}], "]"}], "]"}], "-", 
+            RowBox[{"dTimeValue", "[", 
+             RowBox[{"[", 
+              RowBox[{"3", ",", "i", ",", "2", ",", "2"}], "]"}], "]"}]}], 
+           "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", 
+            RowBox[{"nMeasurements", "-", "cExp"}]}], "}"}]}], "]"}]}], ";", 
+       "\n", 
+       RowBox[{"\[CapitalDelta]tDyn2", "=", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"dTimeValue", "[", 
+             RowBox[{"[", 
+              RowBox[{"3", ",", 
+               RowBox[{"i", "+", "1"}], ",", "1", ",", "1"}], "]"}], "]"}], "-", 
+            RowBox[{"dTimeValue", "[", 
+             RowBox[{"[", 
+              RowBox[{"3", ",", "i", ",", "1", ",", "1"}], "]"}], "]"}]}], 
+           "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", 
+            RowBox[{"nMeasurements", "-", "cExp"}]}], "}"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"dBreathsValues", "=", 
+        RowBox[{"MapThread", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"Function", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"name", ",", "values"}], "}"}], ",", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"name", "->", "#"}], "&"}], "/@", "values"}]}], "]"}],
+             "[", 
+            RowBox[{"#1", ",", 
+             RowBox[{"Flatten", "[", "#2", "]"}]}], "]"}], "&"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             
+             RowBox[{"\"\<\[CapitalDelta]tInspVol\>\"", 
+              ",", "\"\<\[CapitalDelta]VInspVol\>\"", 
+              ",", "\"\<\[CapitalDelta]tExpVol\>\"", 
+              ",", "\"\<\[CapitalDelta]VExpVol\>\"", 
+              ",", "\"\<\[CapitalDelta]tVol\>\"", 
+              ",", "\"\<\[CapitalDelta]tInspDyn1\>\"", 
+              ",", "\"\<\[CapitalDelta]NInspDyn1\>\"", 
+              ",", "\"\<\[CapitalDelta]tExpDyn1\>\"", 
+              ",", "\"\<\[CapitalDelta]NExpDyn1\>\"", 
+              ",", "\"\<\[CapitalDelta]tDyn1\>\"", 
+              ",", "\"\<\[CapitalDelta]tInspDyn2\>\"", 
+              ",", "\"\<\[CapitalDelta]NInspDyn2\>\"", 
+              ",", "\"\<\[CapitalDelta]tExpDyn2\>\"", 
+              ",", "\"\<\[CapitalDelta]NExpDyn2\>\"", 
+              ",", "\"\<\[CapitalDelta]tDyn2\>\""}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+             "\[CapitalDelta]tInspVol", ",", "\[CapitalDelta]VInspVol", ",", 
+              "\[CapitalDelta]tExpVol", ",", "\[CapitalDelta]VExpVol", ",", 
+              "\[CapitalDelta]tVol", ",", "\[CapitalDelta]tInspDyn1", ",", 
+              "\[CapitalDelta]VInspDyn1", ",", "\[CapitalDelta]tExpDyn1", ",",
+               "\[CapitalDelta]VExpDyn1", ",", "\[CapitalDelta]tDyn1", ",", 
+              "\[CapitalDelta]tInspDyn2", ",", "\[CapitalDelta]VInspDyn2", ",",
+               "\[CapitalDelta]tExpDyn2", ",", "\[CapitalDelta]VExpDyn2", ",",
+               "\[CapitalDelta]tDyn2"}], "}"}]}], "}"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"(*", 
+        RowBox[{
+        "prepare", " ", "plot", " ", "for", " ", "each", " ", "breath"}], 
+        "*)"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"dDesc", "=", 
+        RowBox[{"Transpose", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"#", "[", 
+            RowBox[{"[", 
+             RowBox[{"1", ";;", 
+              RowBox[{"Min", "[", 
+               RowBox[{"Length", "/@", "dBreathsValues"}], "]"}]}], "]"}], 
+            "]"}], "&"}], "/@", "dBreathsValues"}], "]"}]}], ";", "\n", 
+       RowBox[{"myOutputAppend", "[", 
+        RowBox[{"\"\<breath characteristic values\>\"", ",", "dDesc"}], "]"}],
+        ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"dDescStyled", "=", 
+        RowBox[{"styleDescription", "/@", "dDesc"}]}], ";", 
+       "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"breaths", "=", 
+        RowBox[{"extractBreath", "/@", 
+         RowBox[{"Partition", "[", 
+          RowBox[{
+           RowBox[{"minPosition", "[", 
+            RowBox[{"[", 
+             RowBox[{"All", ",", "1"}], "]"}], "]"}], ",", "2", ",", "1"}], 
+          "]"}]}]}], ";", "\[IndentingNewLine]", "\n", 
+       RowBox[{"breathsPlotVolume", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"ListLinePlot", "[", 
+           RowBox[{
+            RowBox[{"#", "->", 
+             RowBox[{"{", 
+              
+              RowBox[{"\"\<elapsed time [s]\>\"", 
+               ",", "\"\<volume breathing baseline corrected [100 ml]\>\""}], 
+              "}"}]}], ",", 
+            RowBox[{"myPlotSequence", "[", "]"}], ",", 
+            RowBox[{"PlotStyle", "->", "Black"}], ",", 
+            RowBox[{"PlotLegends", "->", 
+             RowBox[{
+             "{", "\"\<volume breathing baseline corrected [100 ml]\>\"", 
+              "}"}]}], ",", 
+            RowBox[{"FrameLabel", "->", 
+             RowBox[{"{", 
+              
+              RowBox[{"\"\<elapsed time [s]\>\"", ",", 
+               " ", "\"\<mixed scale, see legend\>\""}], "}"}]}]}], "]"}], 
+          "&"}], "/@", "breaths"}]}], ";", "\n", "\[IndentingNewLine]", 
+       RowBox[{"breathsPlotDyn", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"ListLinePlot", "[", 
+           RowBox[{
+            RowBox[{"#", "->", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"\"\<elapsed time [s]\>\"", ",", 
+                 RowBox[{
+                 "nameDynamometerProtocol1", "<>", "\"\< force [N]\>\""}]}], 
+                "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"\"\<elapsed time [s]\>\"", ",", 
+                 RowBox[{
+                 "nameDynamometerProtocol2", "<>", "\"\< force [N]\>\""}]}], 
+                "}"}]}], "}"}]}], "\[IndentingNewLine]", ",", 
+            RowBox[{"PlotLegends", "->", 
+             RowBox[{"{", 
+              
+              RowBox[{"\"\<dynamometer force abdomen [N]\>\"", 
+               ",", "\"\<dynamometer force thorax [N]\>\""}], "}"}]}], 
+            "\[IndentingNewLine]", ",", 
+            RowBox[{"myPlotSequence", "[", "]"}]}], "]"}], "&"}], "/@", 
+         "breaths"}]}], ";", "\n", "\[IndentingNewLine]", 
+       RowBox[{"breathsMinMaxMin", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"MapThread", "[", 
+           RowBox[{"Append", ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"Most", "[", "#", "]"}], ",", 
+              RowBox[{
+               RowBox[{"Rest", "[", "#", "]"}], "[", 
+               RowBox[{"[", 
+                RowBox[{"All", ",", "1"}], "]"}], "]"}]}], "}"}]}], "]"}], 
+          "&"}], "/@", "dTimeValue"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"breathsMinMaxMinPoints", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Partition", "[", 
+           RowBox[{"#", ",", "2"}], "]"}], "&"}], "/@", 
+         RowBox[{"myFlatten", "[", 
+          RowBox[{
+           RowBox[{"Transpose", "[", "breathsMinMaxMin", "]"}], ",", "1"}], 
+          "]"}]}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"breathsMinMaxMinPlots", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"ListPlot", "[", 
+           RowBox[{"#", ",", 
+            RowBox[{"PlotStyle", "->", 
+             RowBox[{"Directive", "[", 
+              RowBox[{
+               RowBox[{"PointSize", "[", "Large", "]"}], ",", 
+               "StandardGreen"}], "]"}]}], ",", 
+            RowBox[{"myPlotSequence", "[", "]"}]}], "]"}], "&"}], "/@", 
+         "breathsMinMaxMinPoints"}]}], ";", "\[IndentingNewLine]", "\n", 
+       RowBox[{"breathextracts", "=", 
+        RowBox[{"MapThread", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Grid", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"Show", "[", 
+                 RowBox[{"#1", ",", "#2", ",", "#3", ",", 
+                  RowBox[{"PlotRange", "->", "All"}]}], "]"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"Grid", "[", 
+                 RowBox[{
+                  RowBox[{"Transpose", "[", 
+                   RowBox[{"Partition", "[", 
+                    RowBox[{"#4", ",", "5"}], "]"}], "]"}], ",", 
+                  RowBox[{"Alignment", "->", "Left"}], ",", 
+                  RowBox[{"Spacings", "->", 
+                   RowBox[{"{", 
+                    RowBox[{"6", ",", ".5"}], "}"}]}]}], "]"}], "}"}]}], 
+              "}"}], ",", 
+             RowBox[{"Spacings", "->", 
+              RowBox[{"{", 
+               RowBox[{"1", ",", " ", "2"}], "}"}]}], ",", 
+             RowBox[{"Frame", "->", "True"}]}], "]"}], "&"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+           "breathsPlotVolume", ",", "breathsPlotDyn", ",", 
+            "breathsMinMaxMinPlots", ",", "dDescStyled"}], "}"}]}], "]"}]}], ";",
+        "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"myFigAppend", "/@", 
+        RowBox[{"MapThread", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"#1", ",", "#2", ",", 
+             RowBox[{
+             "id", "<>", "\"\< plot single breath volume and dynamometer data \
+\>\"", "<>", "#2"}], ",", "300", ",", "True"}], "}"}], "&"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"breathextracts", ",", 
+            RowBox[{"IntegerString", "[", 
+             RowBox[{
+              RowBox[{"Range", "[", 
+               RowBox[{"6", ",", 
+                RowBox[{
+                 RowBox[{"Length", "[", "breathextracts", "]"}], "+", "5"}]}],
+                "]"}], ",", "10", ",", "3"}], "]"}]}], "}"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"(*", 
+        RowBox[{"prepare", " ", "correlation"}], "*)"}], 
+       "\[IndentingNewLine]", 
+       RowBox[{"dCorrVInspVolDyn2", "=", 
+        RowBox[{"MapThread", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Flatten", "[", 
+            RowBox[{"{", 
+             RowBox[{"#1", ",", "#2"}], "}"}], "]"}], "&"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+           "\[CapitalDelta]VInspDyn2", ",", "\[CapitalDelta]VInspVol"}], 
+           "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"dCorrVInspVolDyn1", "=", 
+        RowBox[{"MapThread", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Flatten", "[", 
+            RowBox[{"{", 
+             RowBox[{"#1", ",", "#2"}], "}"}], "]"}], "&"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+           "\[CapitalDelta]VInspDyn1", ",", "\[CapitalDelta]VInspVol"}], 
+           "}"}]}], "]"}]}], ";", "\n", 
+       RowBox[{"dCorrVInspVolDyn1Dyn2", "=", 
+        RowBox[{"myFlatten", "[", 
+         RowBox[{
+          RowBox[{"Transpose", "[", 
+           RowBox[{"{", 
+            RowBox[{
+            "\[CapitalDelta]VInspDyn1", ",", "\[CapitalDelta]VInspDyn2", ",", 
+             "\[CapitalDelta]VInspVol"}], "}"}], "]"}], ",", "1"}], "]"}]}], ";",
+        "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"resCorrVInspVolDyn1Dyn2", "=", 
+        RowBox[{"lnm", "[", 
+         RowBox[{
+          RowBox[{"dCorrVInspVolDyn1Dyn2", "[", 
+           RowBox[{"[", 
+            RowBox[{"All", ",", 
+             RowBox[{"{", 
+              RowBox[{"1", ",", "2"}], "}"}]}], "]"}], "]"}], 
+          ",", "\"\<dynamometer abdomen [N]\>\"", 
+          ",", "\"\<dynamometer thorax [N]\>\""}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"myOutputAppend", "[", 
+        RowBox[{"\"\<correlation of both dynamometers\>\"", ",", 
+         "resCorrVInspVolDyn1Dyn2"}], "]"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"myFigAppend", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"resCorrVInspVolDyn1Dyn2", "[", 
+           RowBox[{"[", "4", "]"}], "]"}], ",", "\"\<080\>\"", ",", 
+          RowBox[{
+          "id", "<>", "\"\< scatter plot with correlation of dynamometer data \
+abdomen versus thorax\>\""}], ",", "300", ",", "True"}], "}"}], "]"}], ";", 
+       "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"resCorrVInspVolDyn2", ",", "resCorrVInspVolDyn1"}], "}"}], "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"lnm", "[", 
+           RowBox[{
+            RowBox[{"#", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], ",", 
+            RowBox[{"#", "[", 
+             RowBox[{"[", "2", "]"}], "]"}], 
+            ",", "\"\<breathing volume [ml]\>\""}], "]"}], "&"}], "/@", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+            "dCorrVInspVolDyn2", ",", "\"\<dynamometer thorax [N]\>\""}], 
+            "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+            "dCorrVInspVolDyn1", ",", "\"\<dynamometer abdomen [N]\>\""}], 
+            "}"}]}], "}"}]}]}], ";", "\[IndentingNewLine]", 
+       "\[IndentingNewLine]", 
+       RowBox[{"dstat", "=", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"resCorrVInspVolDyn2", ",", "resCorrVInspVolDyn1"}], "}"}], 
+         "[", 
+         RowBox[{"[", 
+          RowBox[{"All", ",", "3"}], "]"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"myOutputAppend", "[", 
+        RowBox[{"\"\<linear model fit breathing volume dynamometer thorax\>\"",
+          ",", "resCorrVInspVolDyn2"}], "]"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"myOutputAppend", "[", 
+        RowBox[{"\"\<linear model fit breathing volume dynamometer \
+abdomen\>\"", ",", "resCorrVInspVolDyn1"}], "]"}], ";", "\[IndentingNewLine]",
+        "\[IndentingNewLine]", 
+       RowBox[{"myFigAppend", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"resCorrVInspVolDyn2", "[", 
+           RowBox[{"[", "4", "]"}], "]"}], ",", "\"\<081\>\"", ",", 
+          RowBox[{
+          "id", "<>", "\"\< scatter plot with correlation of dynamometer data \
+thorax versus breathing volume\>\""}], ",", "300", ",", "True"}], "}"}], 
+        "]"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"myFigAppend", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"resCorrVInspVolDyn1", "[", 
+           RowBox[{"[", "4", "]"}], "]"}], ",", "\"\<082\>\"", ",", 
+          RowBox[{
+          "id", "<>", "\"\< scatter plot with correlation of dynamometer data \
+abdomen versus breathing volume\>\""}], ",", "300", ",", "True"}], "}"}], 
+        "]"}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"(*", 
+        RowBox[{"try", " ", "quadratic", " ", "fit"}], "*)"}], 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+         "resCorrQuadrVInspVolDyn2", ",", "resCorrQuadrVInspVolDyn1"}], "}"}],
+         "=", 
+        RowBox[{"fitQuadratic", "/@", 
+         RowBox[{"{", 
+          RowBox[{"dCorrVInspVolDyn2", ",", "dCorrVInspVolDyn1"}], "}"}]}]}], 
+       ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"myOutputAppend", "[", 
+        RowBox[{"\"\<quadratic model fit breathing volume dynamometer \
+thorax\>\"", ",", "resCorrQuadrVInspVolDyn2"}], "]"}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"myOutputAppend", "[", 
+        RowBox[{"\"\<quadratic model fit breathing volume dynamometer abdomen\
+\>\"", ",", "resCorrQuadrVInspVolDyn1"}], "]"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"myFigAppend", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"resCorrQuadrVInspVolDyn2", "[", 
+           RowBox[{"[", "3", "]"}], "]"}], ",", "\"\<083\>\"", ",", 
+          RowBox[{
+          "id", "<>", "\"\< scatter plot with quadratic correlation of \
+dynamometer data thorax versus breathing volume\>\""}], ",", "300", ",", 
+          "True"}], "}"}], "]"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"myFigAppend", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"resCorrQuadrVInspVolDyn1", "[", 
+           RowBox[{"[", "3", "]"}], "]"}], ",", "\"\<084\>\"", ",", 
+          RowBox[{
+          "id", "<>", "\"\< scatter plot with quadratic correlation of \
+dynamometer data abdomen versus breathing volume\>\""}], ",", "300", ",", 
+          "True"}], "}"}], "]"}], ";", "\[IndentingNewLine]", 
+       "\[IndentingNewLine]", 
+       RowBox[{"dstat", "=", 
+        RowBox[{"Join", "[", 
+         RowBox[{"dstat", ",", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+            "resCorrQuadrVInspVolDyn2", ",", "resCorrQuadrVInspVolDyn1"}], 
+            "}"}], "[", 
+           RowBox[{"[", 
+            RowBox[{"All", ",", "2"}], "]"}], "]"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"dCorrVInspVolDyn1Dyn2", "=", 
+        RowBox[{"myFlatten", "[", 
+         RowBox[{
+          RowBox[{"Transpose", "[", 
+           RowBox[{"{", 
+            RowBox[{
+            "\[CapitalDelta]VInspDyn1", ",", "\[CapitalDelta]VInspDyn2", ",", 
+             "\[CapitalDelta]VInspVol"}], "}"}], "]"}], ",", "1"}], "]"}]}], ";",
+        "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"resLNM2Param", "=", 
+        RowBox[{"lnm2param", "[", "dCorrVInspVolDyn1Dyn2", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"myOutputAppend", "[", 
+        RowBox[{"\"\<linear model fit breathing volume dynamometer thorax and \
+abdomen\>\"", ",", "resLNM2Param"}], "]"}], ";", "\[IndentingNewLine]", 
+       "\[IndentingNewLine]", 
+       RowBox[{"myOutputAppend", "[", 
+        RowBox[{"\"\<all fit model statistics\>\"", ",", 
+         RowBox[{"Transpose", "[", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             
+             RowBox[{"\"\<linear fit model dynamometer thorax\>\"", 
+              ",", "\"\<linear fit model dynamometer abdomen\>\"", 
+              ",", "\"\<linear fit model dynamometer thorax and abdomen\>\"", 
+              ",", "\"\<quadratic fit model dynamometer thorax\>\"", 
+              ",", "\"\<quadratic fit model dynamometer abdomen\>\""}], "}"}],
+             ",", "dstat"}], "}"}], "]"}]}], "]"}], ";"}]}], 
+     "\[IndentingNewLine]", "\[IndentingNewLine]", "]"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.9983130434009075`*^9, 3.9983130531141033`*^9}, {
+   3.998313086488371*^9, 3.99831312060598*^9}, {3.998313212164982*^9, 
+   3.9983132843305798`*^9}, {3.9983133204217625`*^9, 
+   3.9983134630414352`*^9}, {3.99831357302833*^9, 3.998313799981348*^9}, {
+   3.998313864126156*^9, 3.998314052515085*^9}, {3.9983140831701527`*^9, 
+   3.998314114783001*^9}, {3.9983141714540615`*^9, 3.9983141739598274`*^9}, {
+   3.9983142252220535`*^9, 3.9983145007904034`*^9}, {3.9983145315117416`*^9, 
+   3.998314755727108*^9}, {3.9983148494912376`*^9, 3.998314942627432*^9}, {
+   3.9988190894389553`*^9, 3.99881909879657*^9}, {3.998825353868471*^9, 
+   3.998825379985758*^9}, {3.9988355532714386`*^9, 3.998835615834614*^9}, {
+   3.99883569717152*^9, 3.9988357016830025`*^9}, {3.9988357929333897`*^9, 
+   3.9988359156148148`*^9}, {3.998836016933529*^9, 3.998836028353945*^9}, {
+   3.998836061121559*^9, 3.998836061932604*^9}, 3.998836107870329*^9, {
+   3.998836415113388*^9, 3.998836426629814*^9}, {3.99883649438126*^9, 
+   3.9988365039437504`*^9}, {3.9988368318051624`*^9, 
+   3.9988368504988136`*^9}, {3.9988369240950775`*^9, 
+   3.9988369643956776`*^9}, {3.998837468335148*^9, 3.998837469751562*^9}, {
+   3.998837543328087*^9, 3.9988375491654606`*^9}, {3.998837583965809*^9, 
+   3.998837705531189*^9}, {3.9988382919538193`*^9, 3.998838302892235*^9}, 
+   3.9988384171166058`*^9, {3.9988384825935726`*^9, 3.9988384830890827`*^9}, {
+   3.9988385201724815`*^9, 3.9988385271196175`*^9}, {3.998838570140316*^9, 
+   3.9988385744576283`*^9}, {3.998838659380577*^9, 3.998838669728401*^9}, {
+   3.99883878716465*^9, 
+   3.998838836544384*^9}},ExpressionUUID->"9b3bfd04-ca07-3940-88c7-\
+86ff19b6a0e6"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -5419,18 +5451,19 @@ a878e5d929c5"],
 
 Cell[BoxData[
  RowBox[{
-  RowBox[{"evaluateVolumeDynamometerData", "[", "ID", "]"}], "/@", " ", 
-  "allIDdata"}]], "Input",
+  RowBox[{"evaluateVolumeDynamometerData", "[", "id", "]"}], "/@", " ", 
+  "alliddata"}]], "Input",
  CellChangeTimes->{{3.9983129338029575`*^9, 3.9983129522396126`*^9}, {
    3.9983130214813023`*^9, 3.998313023264473*^9}, 3.998313125387598*^9, {
-   3.9983147239444904`*^9, 
-   3.9983147243125305`*^9}},ExpressionUUID->"95a0a24d-6767-8a48-9382-\
+   3.9983147239444904`*^9, 3.9983147243125305`*^9}, 
+   3.9988384171231174`*^9},ExpressionUUID->"95a0a24d-6767-8a48-9382-\
 89741947ead5"]
 }, Open  ]]
 },
-WindowSize->{718.5, 735},
+WindowSize->{718.5, 729.75},
 WindowMargins->{{Automatic, 0}, {Automatic, 0}},
 Visible->True,
+Magnification:>1. Inherited,
 FrontEndVersion->"15.0 for Microsoft Windows (64-bit) (July 2, 2026)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"16eaac22-9503-944d-8678-16628564ad0c"
@@ -5448,40 +5481,41 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[576, 22, 156, 3, 66, "Section",ExpressionUUID->"8ff1d82e-23b6-8946-b6f1-973388bf1be6"],
-Cell[735, 27, 476, 11, 70, "Abstract",ExpressionUUID->"e17ddef2-373f-ea4d-920b-dc20af1d1e4c"],
+Cell[735, 27, 522, 11, 70, "Abstract",ExpressionUUID->"e17ddef2-373f-ea4d-920b-dc20af1d1e4c"],
 Cell[CellGroupData[{
-Cell[1236, 42, 5970, 157, 70, "Input",ExpressionUUID->"66c95249-6edd-5542-bce4-513215ac611e",
+Cell[1282, 42, 6002, 158, 710, "Input",ExpressionUUID->"66c95249-6edd-5542-bce4-513215ac611e",
  InitializationCell->True],
-Cell[7209, 201, 174, 2, 70, "Output",ExpressionUUID->"60651a84-502b-294c-b24c-69640b22d6e7"],
-Cell[7386, 205, 352, 8, 70, "Output",ExpressionUUID->"068270a0-6ed0-8649-b1a5-b2ea4beac99b"],
-Cell[7741, 215, 9756, 215, 70, "Output",ExpressionUUID->"acbe73a9-654c-fe49-b412-a47adf24edb2"],
-Cell[17500, 432, 11002, 207, 70, "Output",ExpressionUUID->"c0aaa6d5-86ae-e148-b27c-33afd7cc7c2a"],
-Cell[28505, 641, 4992, 145, 70, "Output",ExpressionUUID->"3c0722cc-ad98-9b4b-a05d-14378536b133"],
-Cell[33500, 788, 2074, 54, 70, "Output",ExpressionUUID->"6572f6de-9b33-5447-a631-57ed75e74526"],
-Cell[35577, 844, 867, 20, 70, "Output",ExpressionUUID->"fc670448-ed70-8d4a-ae04-633402ecc9a7"],
-Cell[36447, 866, 203, 3, 70, "Output",ExpressionUUID->"4cc7828a-956e-2e48-b0d6-d749e0c1b4a7"],
-Cell[36653, 871, 203, 3, 70, "Output",ExpressionUUID->"6283d8b3-c3cc-124d-81c5-88d01e855b29"],
-Cell[36859, 876, 203, 3, 70, "Output",ExpressionUUID->"b951c970-47b7-234c-b455-6dfcc8c3cd15"],
-Cell[37065, 881, 712, 15, 70, "Output",ExpressionUUID->"0771f1c0-0e33-6d41-86f1-d774c917bdd6"],
-Cell[37780, 898, 115461, 2555, 70, "Output",ExpressionUUID->"65cee243-56b6-0249-8fc8-bfcad3cb87df"]
+Cell[7287, 202, 174, 2, 32, "Output",ExpressionUUID->"60651a84-502b-294c-b24c-69640b22d6e7"],
+Cell[7464, 206, 352, 8, 93, "Output",ExpressionUUID->"068270a0-6ed0-8649-b1a5-b2ea4beac99b"],
+Cell[7819, 216, 9756, 215, 59, "Output",ExpressionUUID->"acbe73a9-654c-fe49-b412-a47adf24edb2"],
+Cell[17578, 433, 11002, 207, 59, "Output",ExpressionUUID->"c0aaa6d5-86ae-e148-b27c-33afd7cc7c2a"],
+Cell[28583, 642, 4992, 145, 51, "Output",ExpressionUUID->"3c0722cc-ad98-9b4b-a05d-14378536b133"],
+Cell[33578, 789, 2074, 54, 32, "Output",ExpressionUUID->"6572f6de-9b33-5447-a631-57ed75e74526"],
+Cell[35655, 845, 867, 20, 32, "Output",ExpressionUUID->"fc670448-ed70-8d4a-ae04-633402ecc9a7"],
+Cell[36525, 867, 203, 3, 32, "Output",ExpressionUUID->"4cc7828a-956e-2e48-b0d6-d749e0c1b4a7"],
+Cell[36731, 872, 203, 3, 32, "Output",ExpressionUUID->"6283d8b3-c3cc-124d-81c5-88d01e855b29"],
+Cell[36937, 877, 203, 3, 32, "Output",ExpressionUUID->"b951c970-47b7-234c-b455-6dfcc8c3cd15"],
+Cell[37143, 882, 712, 15, 41, "Output",ExpressionUUID->"0771f1c0-0e33-6d41-86f1-d774c917bdd6"],
+Cell[37858, 899, 115461, 2555, 3502, "Output",ExpressionUUID->"65cee243-56b6-0249-8fc8-bfcad3cb87df"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[153290, 3459, 160, 3, 52, "Section",ExpressionUUID->"3b9d5fc2-8d62-7649-be8a-02dc8b35cb70"],
-Cell[153453, 3464, 805, 21, 66, "Input",ExpressionUUID->"c8a70db7-8845-aa41-9e72-87004c67867e"],
-Cell[154261, 3487, 190, 5, 28, "Input",ExpressionUUID->"99fef761-cc61-474f-b7d1-c2aae76b3fc6"],
+Cell[153368, 3460, 209, 4, 52, "Section",ExpressionUUID->"3b9d5fc2-8d62-7649-be8a-02dc8b35cb70"],
+Cell[153580, 3466, 833, 22, 66, "Input",ExpressionUUID->"c8a70db7-8845-aa41-9e72-87004c67867e"],
+Cell[154416, 3490, 235, 7, 28, "Input",ExpressionUUID->"99fef761-cc61-474f-b7d1-c2aae76b3fc6"],
 Cell[CellGroupData[{
-Cell[154476, 3496, 267, 6, 28, "Input",ExpressionUUID->"a1d76bcf-bdd6-334c-856b-4232e80f6e8f"],
-Cell[154746, 3504, 494, 12, 26, "Message",ExpressionUUID->"092ebd53-116a-cb4b-a883-dc4a4a42ad61"]
+Cell[154676, 3501, 267, 6, 28, "Input",ExpressionUUID->"a1d76bcf-bdd6-334c-856b-4232e80f6e8f"],
+Cell[154946, 3509, 494, 12, 26, "Message",ExpressionUUID->"092ebd53-116a-cb4b-a883-dc4a4a42ad61"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[155289, 3522, 223, 5, 103, "Section",ExpressionUUID->"7863703f-48d4-b94f-a8e6-3936ff67f36c"],
-Cell[155515, 3529, 76977, 1879, 9979, "Input",ExpressionUUID->"6c7a35cc-6332-5c4c-8acc-b1cc365ad17c"]
+Cell[155489, 3527, 223, 5, 103, "Section",ExpressionUUID->"7863703f-48d4-b94f-a8e6-3936ff67f36c"],
+Cell[155715, 3534, 1998, 36, 180, "Input",ExpressionUUID->"6c7a35cc-6332-5c4c-8acc-b1cc365ad17c"],
+Cell[157716, 3572, 79651, 1868, 9770, "Input",ExpressionUUID->"9b3bfd04-ca07-3940-88c7-86ff19b6a0e6"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[232529, 5413, 216, 4, 66, "Section",ExpressionUUID->"558f96ca-9959-4d4b-9388-a878e5d929c5"],
-Cell[232748, 5419, 382, 8, 28, "Input",ExpressionUUID->"95a0a24d-6767-8a48-9382-89741947ead5"]
+Cell[237404, 5445, 216, 4, 66, "Section",ExpressionUUID->"558f96ca-9959-4d4b-9388-a878e5d929c5"],
+Cell[237623, 5451, 406, 8, 28, "Input",ExpressionUUID->"95a0a24d-6767-8a48-9382-89741947ead5"]
 }, Open  ]]
 }
 ]

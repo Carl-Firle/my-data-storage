@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[    233321,       5431]
-NotebookOptionsPosition[    230492,       5380]
-NotebookOutlinePosition[    230908,       5397]
-CellTagsIndexPosition[    230865,       5394]
+NotebookDataLength[    235968,       5481]
+NotebookOptionsPosition[    233146,       5430]
+NotebookOutlinePosition[    233558,       5447]
+CellTagsIndexPosition[    233515,       5444]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -3541,7 +3541,10 @@ main/data/2024_effects-mask-wearing/raw-data-import-functions.nb\>\"", "]"}],
    "urlHead", 
     "=", "\"\<https://github.com/Carl-Firle/my-data-storage/raw/refs/heads/\
 main/data/2024_effects-mask-wearing/20260827-01_dynamometer%20breathing%20and%\
-20pexa/\>\""}], ";"}], "\[IndentingNewLine]"}], "\n", 
+20pexa/\>\""}], ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"mode", "=", "\"\<validation\>\""}], ";"}], "\n"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"airflowToVolume", "=."}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
@@ -3604,11 +3607,11 @@ main/data/2024_effects-mask-wearing/20260827-01_dynamometer%20breathing%20and%\
            RowBox[{"[", "2", "]"}], "]"}], "+", 
           RowBox[{"Quantity", "[", 
            RowBox[{".5", ",", "\"\<Seconds\>\""}], "]"}]}], ")"}]}], "&"}], 
-      ")"}]}], "]"}]}], "\n", "\[IndentingNewLine]", 
+      ")"}]}], "]"}]}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
   RowBox[{"(*", 
    RowBox[{
     RowBox[{"created", " ", "with", " ", "GPT"}], "-", 
-    RowBox[{"5.6", " ", "Sol", " ", "start"}]}], " ", "*)"}]}], "\[IndentingNewLine]", 
+    RowBox[{"5.6", " ", "Sol", " ", "start"}]}], " ", "*)"}]}], "\n", 
  RowBox[{"minMaxWithTime", "=."}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
@@ -3678,10 +3681,11 @@ main/data/2024_effects-mask-wearing/20260827-01_dynamometer%20breathing%20and%\
          RowBox[{"{", 
           
           RowBox[{"\"\<elapsed time [s]\>\"", 
-           ",", "\"\<volume breathing baseline corrected [100 ml]\>\"", 
-           ",", "\"\<dynamometer_1 force [N]\>\"", 
-           ",", "\"\<dynamometer_2 force [N]\>\""}], "}"}]}], "]"}]}], ";", 
-      "\[IndentingNewLine]", "\[IndentingNewLine]", 
+           ",", "\"\<volume breathing baseline corrected [100 ml]\>\"", ",", 
+           RowBox[{"nameDynamometerProtocol1", "<>", "\"\< force [N]\>\""}], ",", 
+           RowBox[{"nameDynamometerProtocol2", "<>", "\"\< force [N]\>\""}]}],
+           "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+      "\[IndentingNewLine]", 
       RowBox[{"minMaxVol", "=", 
        RowBox[{"minMaxWithTime", "[", 
         RowBox[{
@@ -3690,11 +3694,15 @@ main/data/2024_effects-mask-wearing/20260827-01_dynamometer%20breathing%20and%\
         "]"}]}], ";", "\n", 
       RowBox[{"minMaxDyn1", "=", 
        RowBox[{"minMaxWithTime", "[", 
-        RowBox[{"tExtr", ",", "\"\<dynamometer_1 force [N]\>\""}], "]"}]}], ";", 
+        RowBox[{"tExtr", ",", 
+         RowBox[{"nameDynamometerProtocol1", "<>", "\"\< force [N]\>\""}]}], 
+        "]"}]}], ";", 
       RowBox[{"minMaxDyn2", "=", 
        RowBox[{"minMaxWithTime", "[", 
-        RowBox[{"tExtr", ",", "\"\<dynamometer_2 force [N]\>\""}], "]"}]}], ";",
-       "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+        RowBox[{"tExtr", ",", 
+         RowBox[{"nameDynamometerProtocol2", "<>", "\"\< force [N]\>\""}]}], 
+        "]"}]}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+      "\[IndentingNewLine]", 
       RowBox[{"AppendTo", "[", 
        RowBox[{"dMinMax", ",", 
         RowBox[{"{", 
@@ -3749,20 +3757,22 @@ main/data/2024_effects-mask-wearing/20260827-01_dynamometer%20breathing%20and%\
             RowBox[{"{", 
              RowBox[{
               RowBox[{"{", 
-               
-               RowBox[{"\"\<elapsed time [s]\>\"", 
-                ",", "\"\<dynamometer_1 force [N]\>\""}], "}"}], ",", 
+               RowBox[{"\"\<elapsed time [s]\>\"", ",", 
+                RowBox[{
+                "nameDynamometerProtocol1", "<>", "\"\< force [N]\>\""}]}], 
+               "}"}], ",", 
               RowBox[{"{", 
-               
-               RowBox[{"\"\<elapsed time [s]\>\"", 
-                ",", "\"\<dynamometer_2 force [N]\>\""}], "}"}]}], "}"}]}], 
-           "\[IndentingNewLine]", ",", 
+               RowBox[{"\"\<elapsed time [s]\>\"", ",", 
+                RowBox[{
+                "nameDynamometerProtocol2", "<>", "\"\< force [N]\>\""}]}], 
+               "}"}]}], "}"}]}], "\[IndentingNewLine]", ",", 
            RowBox[{"PlotLegends", "->", 
             RowBox[{"{", 
-             
-             RowBox[{"\"\<dynamometer_1 force thorax [N]\>\"", 
-              ",", "\"\<dynamometer_2 force abdomen [N]\>\""}], "}"}]}], 
-           "\[IndentingNewLine]", ",", 
+             RowBox[{"\"\<dynamometer_1 force thorax [N]\>\"", ",", 
+              RowBox[{
+              "nameDynamometerProtocol2", " ", "<>", 
+               " ", "\"\< force [N]\>\""}]}], "}"}]}], "\[IndentingNewLine]", 
+           ",", 
            RowBox[{"myPlotSequence", "[", "]"}], ",", 
            RowBox[{"PlotRange", "->", 
             RowBox[{"{", 
@@ -4066,23 +4076,44 @@ main/data/2024_effects-mask-wearing/20260827-01_dynamometer%20breathing%20and%\
   "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
   "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"evaluateVolumeDynamometerData", "[", "ID_String", "]"}], ":=", 
+  RowBox[{"evaluateVolumeDynamometerData", "[", "\[IndentingNewLine]", 
+   RowBox[{"mode_String", "\[IndentingNewLine]", ",", 
+    RowBox[{"nameProtocol_String", ":", 
+     RowBox[{"\"\<protocol.txt\>\"", "\"\<protocol.txt\>\""}]}], 
+    "\[IndentingNewLine]", "\[IndentingNewLine]", ",", 
+    RowBox[{"namePexaData_String", ":", "\"\<pexa.txt\>\""}], 
+    "\[IndentingNewLine]", ",", 
+    RowBox[{"namePexaProtocol_String", ":", "\"\<pexa\>\""}], 
+    "\[IndentingNewLine]", "\[IndentingNewLine]", ",", 
+    RowBox[{"nameDynamometerData_String", ":", "\"\<dynamometer.csv\>\""}], 
+    "\[IndentingNewLine]", ",", "nameDynamometerProtocol1_String", 
+    "\[IndentingNewLine]", ",", "positionDynamometerCSV1_String", 
+    "\[IndentingNewLine]", ",", "nameDynamometerProtocol2_String", 
+    "\[IndentingNewLine]", ",", "positionDynamometerCSV2_String"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", "]"}], ":=", 
   RowBox[{"Module", "[", 
    RowBox[{
-    RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"{", "}"}], "\[IndentingNewLine]", ",", "\[IndentingNewLine]", 
+    RowBox[{"(*", 
+     RowBox[{"import", " ", "data"}], "*)"}], "\[IndentingNewLine]", 
     RowBox[{
-     RowBox[{"dProtocolImport", "[", "\"\<protocol.txt\>\"", "]"}], ";", 
+     RowBox[{"dProtocolImport", "[", "nameProtocol", "]"}], ";", 
      "\[IndentingNewLine]", 
      RowBox[{"dPexaImport", "[", 
-      RowBox[{"\"\<pexa.txt\>\"", ",", "\"\<pexa\>\""}], "]"}], ";", 
+      RowBox[{"namePexaData", ",", "namePexaProtocol"}], "]"}], ";", 
      "\[IndentingNewLine]", 
      RowBox[{"dDynamometerImport", "[", 
-      RowBox[{"\"\<dynamometer.csv\>\"", ",", "\"\<dynamometer_1\>\"", ",", 
-       "2"}], "]"}], ";", "\[IndentingNewLine]", 
+      RowBox[{
+      "nameDynamometerData", ",", "nameDynamometerProtocol1", ",", 
+       "positionDynamometerCSV1"}], "]"}], ";", "\[IndentingNewLine]", 
      RowBox[{"dDynamometerImport", "[", 
-      RowBox[{"\"\<dynamometer.csv\>\"", ",", "\"\<dynamometer_2\>\"", ",", 
-       "3"}], "]"}], " ", ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+      RowBox[{
+      "nameDynamometerData", ",", "nameDynamometerProtocol2", ",", 
+       "positionDynamometerCSV2"}], "]"}], " ", ";", "\[IndentingNewLine]", 
+     "\[IndentingNewLine]", 
      RowBox[{"createTabular", "[", "]"}], ";", "\[IndentingNewLine]", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Abort", "[", "]"}], ";", "\[IndentingNewLine]", 
      "\[IndentingNewLine]", 
      RowBox[{"(*", 
       RowBox[{
@@ -4090,10 +4121,6 @@ main/data/2024_effects-mask-wearing/20260827-01_dynamometer%20breathing%20and%\
        "pexa", " ", "airflow", " ", "data", " ", "and", " ", "dynamometer", " ",
         "data"}], "*)"}], "\[IndentingNewLine]", 
      RowBox[{"graphicCorrectionFactor", "=", "20"}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{
-     "graphicCorrectionVariable", 
-      "=", "\"\<pexa_Inhale Exhale Airflow [ml/(20 s)]\>\""}], ";", 
      "\[IndentingNewLine]", "\[IndentingNewLine]", 
      RowBox[{"oneTableTab", "=", 
       RowBox[{"TransformColumns", "[", 
@@ -4126,13 +4153,15 @@ main/data/2024_effects-mask-wearing/20260827-01_dynamometer%20breathing%20and%\
          RowBox[{"{", 
           RowBox[{
            RowBox[{"{", 
-            
-            RowBox[{"\"\<elapsed time [s]\>\"", 
-             ",", "\"\<dynamometer_1 force [N]\>\""}], "}"}], ",", 
+            RowBox[{"\"\<elapsed time [s]\>\"", ",", 
+             RowBox[{
+             "nameDynamometerProtocol1", "<>", "\"\< force [N]\>\""}]}], 
+            "}"}], ",", 
            RowBox[{"{", 
-            
-            RowBox[{"\"\<elapsed time [s]\>\"", 
-             ",", "\"\<dynamometer_2 force [N]\>\""}], "}"}], ",", 
+            RowBox[{"\"\<elapsed time [s]\>\"", ",", 
+             RowBox[{
+             "nameDynamometerProtocol2", "<>", "\"\< force [N]\>\""}]}], 
+            "}"}], ",", 
            RowBox[{"{", 
             
             RowBox[{"\"\<elapsed time [s]\>\"", 
@@ -4140,10 +4169,13 @@ main/data/2024_effects-mask-wearing/20260827-01_dynamometer%20breathing%20and%\
            "}"}]}], "\[IndentingNewLine]", ",", 
         RowBox[{"PlotLegends", "->", 
          RowBox[{"{", 
-          
-          RowBox[{"\"\<dynamometer_1 force abdomen [N]\>\"", 
-           ",", "\"\<dynamometer_2 force thorax [N]\>\"", 
-           ",", "\"\<pexa_Inhale Exhale Airflow [ml/(20 s)]\>\""}], "}"}]}], 
+          RowBox[{
+           RowBox[{
+           "nameDynamometerProtocol1", " ", "<>", " ", "\"\< force [N]\>\""}],
+            ",", 
+           RowBox[{
+           "nameDynamometerProtocol2", " ", "<>", " ", "\"\< force [N]\>\""}],
+            ",", "\"\<pexa_Inhale Exhale Airflow [ml/(20 s)]\>\""}], "}"}]}], 
         "\[IndentingNewLine]", ",", 
         RowBox[{"FrameLabel", "->", 
          RowBox[{"{", 
@@ -4462,21 +4494,25 @@ volume data\>\""}], ",", "300", ",", "True"}], "}"}], "]"}], ";",
            RowBox[{"{", 
             RowBox[{
              RowBox[{"{", 
-              
-              RowBox[{"\"\<elapsed time [s]\>\"", 
-               ",", "\"\<dynamometer_1 force [N]\>\""}], "}"}], ",", 
+              RowBox[{"\"\<elapsed time [s]\>\"", ",", 
+               RowBox[{
+               "nameDynamometerProtocol1", "<>", "\"\< force [N]\>\""}]}], 
+              "}"}], ",", 
              RowBox[{"{", 
-              
-              RowBox[{"\"\<elapsed time [s]\>\"", 
-               ",", "\"\<dynamometer_2 force [N]\>\""}], "}"}]}], "}"}]}], 
-          "\[IndentingNewLine]", ",", 
+              RowBox[{"\"\<elapsed time [s]\>\"", ",", 
+               RowBox[{
+               "nameDynamometerProtocol2", "<>", "\"\< force [N]\>\""}]}], 
+              "}"}]}], "}"}]}], "\[IndentingNewLine]", ",", 
           RowBox[{"PlotLegends", "->", 
            RowBox[{"{", 
-            
-            RowBox[{"\"\<dynamometer_1 force abdomen [N]\>\"", 
-             ",", "\"\<dynamometer_2 force thorax [N]\>\""}], "}"}]}], 
-          "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]",
-           ",", 
+            RowBox[{
+             RowBox[{
+             "nameDynamometerProtocol1", " ", "<>", 
+              " ", "\"\< force [N]\>\""}], ",", 
+             RowBox[{
+             "nameDynamometerProtocol2", " ", "<>", 
+              " ", "\"\< force [N]\>\""}]}], "}"}]}], "\[IndentingNewLine]", 
+          "\[IndentingNewLine]", "\[IndentingNewLine]", ",", 
           RowBox[{"myPlotSequence", "[", "]"}], ",", 
           RowBox[{"PlotRange", "->", 
            RowBox[{"{", 
@@ -4575,19 +4611,24 @@ corrected\>\""}], ",", "300", ",", "True"}], "}"}], "]"}], ";",
            RowBox[{"{", 
             RowBox[{
              RowBox[{"{", 
-              
-              RowBox[{"\"\<elapsed time [s]\>\"", 
-               ",", "\"\<dynamometer_1 force [N]\>\""}], "}"}], ",", 
+              RowBox[{"\"\<elapsed time [s]\>\"", ",", 
+               RowBox[{
+               "nameDynamometerProtocol1", "<>", "\"\< force [N]\>\""}]}], 
+              "}"}], ",", 
              RowBox[{"{", 
-              
-              RowBox[{"\"\<elapsed time [s]\>\"", 
-               ",", "\"\<dynamometer_2 force [N]\>\""}], "}"}]}], "}"}]}], 
-          "\[IndentingNewLine]", ",", 
+              RowBox[{"\"\<elapsed time [s]\>\"", ",", 
+               RowBox[{
+               "nameDynamometerProtocol2", "<>", "\"\< force [N]\>\""}]}], 
+              "}"}]}], "}"}]}], "\[IndentingNewLine]", ",", 
           RowBox[{"PlotLegends", "->", 
            RowBox[{"{", 
-            
-            RowBox[{"\"\<dynamometer_1 force abdomen [N]\>\"", 
-             ",", "\"\<dynamometer_2 force thorax [N]\>\""}], "}"}]}], ",", 
+            RowBox[{
+             RowBox[{
+             "nameDynamometerProtocol1", " ", "<>", 
+              " ", "\"\< force [N]\>\""}], ",", 
+             RowBox[{
+             "nameDynamometerProtocol2", " ", "<>", 
+              " ", "\"\< force [N]\>\""}]}], "}"}]}], ",", 
           RowBox[{"myPlotSequence", "[", "]"}], ",", 
           RowBox[{"PlotRange", "->", 
            RowBox[{"{", 
@@ -5060,14 +5101,15 @@ corrected with minima/maxima\>\""}], ",", "300", ",", "True"}], "}"}], "]"}],
            RowBox[{"{", 
             RowBox[{
              RowBox[{"{", 
-              
-              RowBox[{"\"\<elapsed time [s]\>\"", 
-               ",", "\"\<dynamometer_1 force [N]\>\""}], "}"}], ",", 
+              RowBox[{"\"\<elapsed time [s]\>\"", ",", 
+               RowBox[{
+               "nameDynamometerProtocol1", "<>", "\"\< force [N]\>\""}]}], 
+              "}"}], ",", 
              RowBox[{"{", 
-              
-              RowBox[{"\"\<elapsed time [s]\>\"", 
-               ",", "\"\<dynamometer_2 force [N]\>\""}], "}"}]}], "}"}]}], 
-          "\[IndentingNewLine]", ",", 
+              RowBox[{"\"\<elapsed time [s]\>\"", ",", 
+               RowBox[{
+               "nameDynamometerProtocol2", "<>", "\"\< force [N]\>\""}]}], 
+              "}"}]}], "}"}]}], "\[IndentingNewLine]", ",", 
           RowBox[{"PlotLegends", "->", 
            RowBox[{"{", 
             
@@ -5348,14 +5390,22 @@ abdomen\>\"", ",", "resLNM2Param"}], "]"}], ";", "\[IndentingNewLine]",
            "dstat"}], "}"}], "]"}]}], "]"}], ";"}]}], "\[IndentingNewLine]", 
    "\[IndentingNewLine]", "]"}]}]}], "Input",
  CellChangeTimes->{{3.9983130434009075`*^9, 3.9983130531141033`*^9}, {
-  3.998313086488371*^9, 3.99831312060598*^9}, {3.998313212164982*^9, 
-  3.9983132843305798`*^9}, {3.9983133204217625`*^9, 3.9983134630414352`*^9}, {
-  3.99831357302833*^9, 3.998313799981348*^9}, {3.998313864126156*^9, 
-  3.998314052515085*^9}, {3.9983140831701527`*^9, 3.998314114783001*^9}, {
-  3.9983141714540615`*^9, 3.9983141739598274`*^9}, {3.9983142252220535`*^9, 
-  3.9983145007904034`*^9}, {3.9983145315117416`*^9, 3.998314755727108*^9}, {
-  3.9983148494912376`*^9, 
-  3.998314942627432*^9}},ExpressionUUID->"6c7a35cc-6332-5c4c-8acc-\
+   3.998313086488371*^9, 3.99831312060598*^9}, {3.998313212164982*^9, 
+   3.9983132843305798`*^9}, {3.9983133204217625`*^9, 
+   3.9983134630414352`*^9}, {3.99831357302833*^9, 3.998313799981348*^9}, {
+   3.998313864126156*^9, 3.998314052515085*^9}, {3.9983140831701527`*^9, 
+   3.998314114783001*^9}, {3.9983141714540615`*^9, 3.9983141739598274`*^9}, {
+   3.9983142252220535`*^9, 3.9983145007904034`*^9}, {3.9983145315117416`*^9, 
+   3.998314755727108*^9}, {3.9983148494912376`*^9, 3.998314942627432*^9}, {
+   3.9988190894389553`*^9, 3.99881909879657*^9}, {3.998825353868471*^9, 
+   3.998825379985758*^9}, {3.9988355532714386`*^9, 3.998835615834614*^9}, {
+   3.99883569717152*^9, 3.9988357016830025`*^9}, {3.9988357929333897`*^9, 
+   3.9988359156148148`*^9}, {3.998836016933529*^9, 3.998836028353945*^9}, {
+   3.998836061121559*^9, 3.998836061932604*^9}, 3.998836107870329*^9, {
+   3.998836415113388*^9, 3.998836426629814*^9}, {3.99883649438126*^9, 
+   3.9988365039437504`*^9}, {3.9988368318051624`*^9, 
+   3.9988368504988136`*^9}, {3.9988369240950775`*^9, 
+   3.9988369643956776`*^9}},ExpressionUUID->"6c7a35cc-6332-5c4c-8acc-\
 b1cc365ad17c"]
 }, Open  ]],
 
@@ -5379,7 +5429,7 @@ Cell[BoxData[
 }, Open  ]]
 },
 WindowSize->{718.5, 735},
-WindowMargins->{{Automatic, -5.25}, {Automatic, 0}},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
 Visible->True,
 FrontEndVersion->"15.0 for Microsoft Windows (64-bit) (July 2, 2026)",
 StyleDefinitions->"Default.nb",
@@ -5397,23 +5447,23 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[576, 22, 156, 3, 92, "Section",ExpressionUUID->"8ff1d82e-23b6-8946-b6f1-973388bf1be6"],
-Cell[735, 27, 476, 11, 82, "Abstract",ExpressionUUID->"e17ddef2-373f-ea4d-920b-dc20af1d1e4c"],
+Cell[576, 22, 156, 3, 66, "Section",ExpressionUUID->"8ff1d82e-23b6-8946-b6f1-973388bf1be6"],
+Cell[735, 27, 476, 11, 70, "Abstract",ExpressionUUID->"e17ddef2-373f-ea4d-920b-dc20af1d1e4c"],
 Cell[CellGroupData[{
-Cell[1236, 42, 5970, 157, 710, "Input",ExpressionUUID->"66c95249-6edd-5542-bce4-513215ac611e",
+Cell[1236, 42, 5970, 157, 70, "Input",ExpressionUUID->"66c95249-6edd-5542-bce4-513215ac611e",
  InitializationCell->True],
-Cell[7209, 201, 174, 2, 32, "Output",ExpressionUUID->"60651a84-502b-294c-b24c-69640b22d6e7"],
-Cell[7386, 205, 352, 8, 93, "Output",ExpressionUUID->"068270a0-6ed0-8649-b1a5-b2ea4beac99b"],
-Cell[7741, 215, 9756, 215, 59, "Output",ExpressionUUID->"acbe73a9-654c-fe49-b412-a47adf24edb2"],
-Cell[17500, 432, 11002, 207, 59, "Output",ExpressionUUID->"c0aaa6d5-86ae-e148-b27c-33afd7cc7c2a"],
-Cell[28505, 641, 4992, 145, 51, "Output",ExpressionUUID->"3c0722cc-ad98-9b4b-a05d-14378536b133"],
-Cell[33500, 788, 2074, 54, 32, "Output",ExpressionUUID->"6572f6de-9b33-5447-a631-57ed75e74526"],
-Cell[35577, 844, 867, 20, 32, "Output",ExpressionUUID->"fc670448-ed70-8d4a-ae04-633402ecc9a7"],
-Cell[36447, 866, 203, 3, 32, "Output",ExpressionUUID->"4cc7828a-956e-2e48-b0d6-d749e0c1b4a7"],
-Cell[36653, 871, 203, 3, 32, "Output",ExpressionUUID->"6283d8b3-c3cc-124d-81c5-88d01e855b29"],
-Cell[36859, 876, 203, 3, 32, "Output",ExpressionUUID->"b951c970-47b7-234c-b455-6dfcc8c3cd15"],
-Cell[37065, 881, 712, 15, 41, "Output",ExpressionUUID->"0771f1c0-0e33-6d41-86f1-d774c917bdd6"],
-Cell[37780, 898, 115461, 2555, 3502, "Output",ExpressionUUID->"65cee243-56b6-0249-8fc8-bfcad3cb87df"]
+Cell[7209, 201, 174, 2, 70, "Output",ExpressionUUID->"60651a84-502b-294c-b24c-69640b22d6e7"],
+Cell[7386, 205, 352, 8, 70, "Output",ExpressionUUID->"068270a0-6ed0-8649-b1a5-b2ea4beac99b"],
+Cell[7741, 215, 9756, 215, 70, "Output",ExpressionUUID->"acbe73a9-654c-fe49-b412-a47adf24edb2"],
+Cell[17500, 432, 11002, 207, 70, "Output",ExpressionUUID->"c0aaa6d5-86ae-e148-b27c-33afd7cc7c2a"],
+Cell[28505, 641, 4992, 145, 70, "Output",ExpressionUUID->"3c0722cc-ad98-9b4b-a05d-14378536b133"],
+Cell[33500, 788, 2074, 54, 70, "Output",ExpressionUUID->"6572f6de-9b33-5447-a631-57ed75e74526"],
+Cell[35577, 844, 867, 20, 70, "Output",ExpressionUUID->"fc670448-ed70-8d4a-ae04-633402ecc9a7"],
+Cell[36447, 866, 203, 3, 70, "Output",ExpressionUUID->"4cc7828a-956e-2e48-b0d6-d749e0c1b4a7"],
+Cell[36653, 871, 203, 3, 70, "Output",ExpressionUUID->"6283d8b3-c3cc-124d-81c5-88d01e855b29"],
+Cell[36859, 876, 203, 3, 70, "Output",ExpressionUUID->"b951c970-47b7-234c-b455-6dfcc8c3cd15"],
+Cell[37065, 881, 712, 15, 70, "Output",ExpressionUUID->"0771f1c0-0e33-6d41-86f1-d774c917bdd6"],
+Cell[37780, 898, 115461, 2555, 70, "Output",ExpressionUUID->"65cee243-56b6-0249-8fc8-bfcad3cb87df"]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
@@ -5427,11 +5477,11 @@ Cell[154746, 3504, 494, 12, 26, "Message",ExpressionUUID->"092ebd53-116a-cb4b-a8
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[155289, 3522, 223, 5, 103, "Section",ExpressionUUID->"7863703f-48d4-b94f-a8e6-3936ff67f36c"],
-Cell[155515, 3529, 74323, 1829, 9541, "Input",ExpressionUUID->"6c7a35cc-6332-5c4c-8acc-b1cc365ad17c"]
+Cell[155515, 3529, 76977, 1879, 9979, "Input",ExpressionUUID->"6c7a35cc-6332-5c4c-8acc-b1cc365ad17c"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[229875, 5363, 216, 4, 66, "Section",ExpressionUUID->"558f96ca-9959-4d4b-9388-a878e5d929c5"],
-Cell[230094, 5369, 382, 8, 28, "Input",ExpressionUUID->"95a0a24d-6767-8a48-9382-89741947ead5"]
+Cell[232529, 5413, 216, 4, 66, "Section",ExpressionUUID->"558f96ca-9959-4d4b-9388-a878e5d929c5"],
+Cell[232748, 5419, 382, 8, 28, "Input",ExpressionUUID->"95a0a24d-6767-8a48-9382-89741947ead5"]
 }, Open  ]]
 }
 ]

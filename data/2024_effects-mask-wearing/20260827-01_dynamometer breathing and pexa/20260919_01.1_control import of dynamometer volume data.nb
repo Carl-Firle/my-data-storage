@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[    159683,       3575]
-NotebookOptionsPosition[    157557,       3537]
-NotebookOutlinePosition[    157958,       3553]
-CellTagsIndexPosition[    157915,       3550]
+NotebookDataLength[    161124,       3601]
+NotebookOptionsPosition[    158805,       3561]
+NotebookOutlinePosition[    159206,       3577]
+CellTagsIndexPosition[    159163,       3574]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -3521,7 +3521,7 @@ main/data/2024_effects-mask-wearing/20260827-01_dynamometer%20breathing%20and%\
 
 Cell[BoxData[
  RowBox[{"evaluateVolumeDynamometerData", "[", 
-  RowBox[{"\"\<validation\>\"", ",", "\"\<20260827-01.2_protocol.txt\>\"", 
+  RowBox[{"\"\<calibration\>\"", ",", "\"\<20260827-01.2_protocol.txt\>\"", 
    ",", "\"\<20260827-01.2_pexa.txt\>\"", ",", "\"\<pexa\>\"", 
    ",", "\"\<20260827-01.2_dynamometer%20breathing.csv\>\"", 
    ",", "\"\<dynamometer_abdomen\>\"", ",", "2", 
@@ -3530,13 +3530,37 @@ Cell[BoxData[
    3.9988374482931194`*^9, 3.9988374533495846`*^9}, {3.998837489873829*^9, 
    3.998837569760086*^9}, {3.998837786058836*^9, 3.998837789405203*^9}, {
    3.998837837547249*^9, 3.998837842057064*^9}, {3.9988379551935062`*^9, 
-   3.9988379940772057`*^9}, 3.9988382509318447`*^9, 3.9989213558513393`*^9},
+   3.9988379940772057`*^9}, 3.9988382509318447`*^9, 3.9989213558513393`*^9, {
+   3.9990951978050156`*^9, 3.999095207576351*^9}},
  CellLabel->
-  "In[108]:=",ExpressionUUID->"eedcae76-50ab-0948-a373-b3a9de41a603"]
+  "In[169]:=",ExpressionUUID->"eedcae76-50ab-0948-a373-b3a9de41a603"],
+
+Cell[BoxData[
+ RowBox[{"evaluateVolumeDynamometerData", "[", 
+  RowBox[{"\"\<validation\>\"", ",", "\"\<20260903-1.1_protocol.txt\>\"", 
+   ",", "\"\<20260903-01.1_pexa.txt\>\"", ",", "\"\<pexa\>\"", 
+   ",", "\"\<20260903-01.1_dynamometer%20breathing.csv\>\"", 
+   ",", "\"\<dynamometer_abdomen\>\"", ",", "2", 
+   ",", "\"\<dynamometer_thorax\>\"", ",", "4"}], "]"}]], "Input",
+ CellChangeTimes->{{3.9988369761992855`*^9, 3.9988369762867737`*^9}, {
+   3.9988374482931194`*^9, 3.9988374533495846`*^9}, {3.998837489873829*^9, 
+   3.998837569760086*^9}, {3.998837786058836*^9, 3.998837789405203*^9}, {
+   3.998837837547249*^9, 3.998837842057064*^9}, {3.9988379551935062`*^9, 
+   3.9988379940772057`*^9}, 3.9988382509318447`*^9, 3.9989213558513393`*^9, 
+   3.9990950671103153`*^9, {3.999095113314953*^9, 3.9990951481800766`*^9}, {
+   3.9990952036192703`*^9, 3.999095205554178*^9}, {3.999095292702072*^9, 
+   3.999095315309641*^9}},ExpressionUUID->"6abfede7-f315-a74b-a623-\
+b14398a9f2a9"],
+
+Cell[BoxData[
+ RowBox[{"?", "myExportF"}]], "Input",
+ CellChangeTimes->{{3.999094842491316*^9, 3.9990948470069447`*^9}},
+ CellLabel->
+  "In[149]:=",ExpressionUUID->"4b35c743-7d1b-754e-b6f2-82ee272f7f37"]
 }, Open  ]]
 },
-WindowSize->{1440, 741.75},
-WindowMargins->{{-6, Automatic}, {Automatic, -6}},
+WindowSize->{718.5, 735},
+WindowMargins->{{Automatic, -5.25}, {Automatic, 0}},
 FrontEndVersion->"15.0 for Microsoft Windows (64-bit) (July 2, 2026)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"ad1cb68f-0dd4-dd46-8401-b8d91b37a778"
@@ -3574,8 +3598,10 @@ Cell[39984, 931, 115659, 2558, 70, "Output",ExpressionUUID->"afb999c3-0e97-0242-
 }, Closed]],
 Cell[CellGroupData[{
 Cell[155692, 3495, 189, 3, 52, "Section",ExpressionUUID->"5aed68f0-ee16-6e44-af91-d2335eb70de5"],
-Cell[155884, 3500, 819, 19, 104, "Input",ExpressionUUID->"ab5fadea-de0f-b14d-a80e-546d1f5c2d01"],
-Cell[156706, 3521, 835, 13, 47, "Input",ExpressionUUID->"eedcae76-50ab-0948-a373-b3a9de41a603"]
+Cell[155884, 3500, 819, 19, 180, "Input",ExpressionUUID->"ab5fadea-de0f-b14d-a80e-546d1f5c2d01"],
+Cell[156706, 3521, 888, 14, 66, "Input",ExpressionUUID->"eedcae76-50ab-0948-a373-b3a9de41a603"],
+Cell[157597, 3537, 986, 15, 66, "Input",ExpressionUUID->"6abfede7-f315-a74b-a623-b14398a9f2a9"],
+Cell[158586, 3554, 203, 4, 28, "Input",ExpressionUUID->"4b35c743-7d1b-754e-b6f2-82ee272f7f37"]
 }, Open  ]]
 }
 ]

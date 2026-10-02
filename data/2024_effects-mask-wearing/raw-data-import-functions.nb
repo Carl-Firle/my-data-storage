@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[    321371,       6218]
-NotebookOptionsPosition[    319920,       6193]
-NotebookOutlinePosition[    320320,       6209]
-CellTagsIndexPosition[    320277,       6206]
+NotebookDataLength[    321295,       6216]
+NotebookOptionsPosition[    319844,       6191]
+NotebookOutlinePosition[    320244,       6207]
+CellTagsIndexPosition[    320201,       6204]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -6121,10 +6121,7 @@ Cell[BoxData[{
        RowBox[{
         RowBox[{
          RowBox[{"StringQ", "[", "mode", "]"}], "===", "False"}], ",", 
-        RowBox[{"mode", "=", "\"\<\>\""}], ",", 
-        RowBox[{"nameMode", "=", 
-         RowBox[{"\"\<_\>\"", "<>", "mode"}]}]}], "]"}], 
-      "\[IndentingNewLine]", ";", 
+        RowBox[{"mode", "=", "\"\<\>\""}]}], "]"}], "\[IndentingNewLine]", ";", 
       RowBox[{"oneTableCSV", "=", 
        RowBox[{"Map", "[", 
         RowBox[{
@@ -6147,10 +6144,10 @@ Cell[BoxData[{
      "\[IndentingNewLine]", ";", 
      RowBox[{"Export", "[", 
       RowBox[{
-       RowBox[{"exPath", "~~", "\"\<data_\>\"", "~~", 
-        RowBox[{
-        "id", "<>", "\"\<_\>\"", "<>", "mode", "<>", "\"\<.csv\>\""}]}], ",", 
-       "oneTableCSV"}], "]"}], "\[IndentingNewLine]", ";", 
+       RowBox[{
+       "exPath", "<>", "id", "<>", "\"\<_\>\"", "<>", "mode", 
+        "<>", "\"\<data.csv\>\""}], ",", "oneTableCSV"}], "]"}], 
+     "\[IndentingNewLine]", ";", 
      RowBox[{"oneTableTab", "=", 
       RowBox[{"ToTabular", "[", 
        RowBox[{
@@ -6162,8 +6159,8 @@ Cell[BoxData[{
      RowBox[{"Export", "[", 
       RowBox[{
        RowBox[{
-       "exPath", "<>", "id", "<>", "\"\<data\>\"", "<>", "nameMode", 
-        "<>", "\"\<.m\>\""}], ",", "oneTableTab"}], "]"}]}]}], 
+       "exPath", "<>", "id", "<>", "\"\<_\>\"", "<>", "mode", 
+        "<>", "\"\<data.m\>\""}], ",", "oneTableTab"}], "]"}]}]}], 
    "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]"}], "Input",
  CellChangeTimes->{{3.9730937040703907`*^9, 3.973093752514805*^9}, {
    3.9734883356802826`*^9, 3.9734883430413895`*^9}, {3.9734883802410507`*^9, 
@@ -6188,7 +6185,8 @@ Cell[BoxData[{
    3.998460200609005*^9}, {3.9988389648438587`*^9, 3.998838975175289*^9}, 
    3.9988404890338554`*^9, 3.998840534842098*^9, {3.999099018592594*^9, 
    3.9990990827520027`*^9}, {3.9999121455228424`*^9, 
-   3.9999122032103844`*^9}},ExpressionUUID->"dc9dae67-d705-d44d-ad1f-\
+   3.9999122032103844`*^9}, {3.9999382839305725`*^9, 
+   3.9999383188676834`*^9}},ExpressionUUID->"dc9dae67-d705-d44d-ad1f-\
 462b42d4d474"]
 },
 WindowSize->{718.5, 729.75},
@@ -6219,7 +6217,7 @@ Cell[276249, 5150, 17868, 417, 70, "Input",ExpressionUUID->"9c47a7e3-977b-0647-8
 Cell[294120, 5569, 9133, 226, 70, "Input",ExpressionUUID->"d091ce4a-bf3b-4f4f-aefb-2f411e347bb9"],
 Cell[303256, 5797, 5439, 139, 465, "Input",ExpressionUUID->"238e8eb6-5742-af4e-b536-7deac132983d"],
 Cell[308698, 5938, 4148, 100, 370, "Input",ExpressionUUID->"c350515d-5347-4e4e-ac17-445c4880aaad"],
-Cell[312849, 6040, 7067, 151, 522, "Input",ExpressionUUID->"dc9dae67-d705-d44d-ad1f-462b42d4d474"]
+Cell[312849, 6040, 6991, 149, 522, "Input",ExpressionUUID->"dc9dae67-d705-d44d-ad1f-462b42d4d474"]
 }
 ]
 *)

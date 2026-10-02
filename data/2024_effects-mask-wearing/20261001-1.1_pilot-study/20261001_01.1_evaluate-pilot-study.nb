@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       154,          7]
-NotebookDataLength[   1126179,      21688]
-NotebookOptionsPosition[   1119645,      21582]
-NotebookOutlinePosition[   1120076,      21599]
-CellTagsIndexPosition[   1120033,      21596]
+NotebookDataLength[   1127516,      21710]
+NotebookOptionsPosition[   1120982,      21604]
+NotebookOutlinePosition[   1121413,      21621]
+CellTagsIndexPosition[   1121370,      21618]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -3567,78 +3567,82 @@ Cell[BoxData[
       "\[IndentingNewLine]", 
       RowBox[{
        RowBox[{
-        RowBox[{"loop", "[", "t_Tabular", "]"}], ":=", 
+        RowBox[{"loop", "[", "oneTableTabExtractInput_Tabular", "]"}], ":=", 
         RowBox[{"Module", "[", 
          RowBox[{
-          RowBox[{"{", "oneTableTab", "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", "oneTableTabExtract", "}"}], ",", 
+          "\[IndentingNewLine]", "\[IndentingNewLine]", 
+          RowBox[{"(*", 
+           RowBox[{
+           "generate", " ", "raw", " ", "data", " ", "plot", " ", "with", " ",
+             "pexa", " ", "airflow", " ", "data", " ", "and", " ", 
+            "dynamometer", " ", "data"}], "*)"}], "\[IndentingNewLine]", 
           RowBox[{
            RowBox[{
-            RowBox[{"oneTableTab", "=", "t"}], ";", "\[IndentingNewLine]", 
-            "\[IndentingNewLine]", 
-            RowBox[{"(*", 
-             RowBox[{
-             "generate", " ", "raw", " ", "data", " ", "plot", " ", "with", " ",
-               "pexa", " ", "airflow", " ", "data", " ", "and", " ", 
-              "dynamometer", " ", "data"}], "*)"}], "\[IndentingNewLine]", 
             RowBox[{"graphicCorrectionFactor", "=", "20"}], ";", 
             "\[IndentingNewLine]", "\[IndentingNewLine]", 
-            RowBox[{"oneTableTab", "=", 
+            RowBox[{"oneTableTabExtract", "=", 
              RowBox[{"TransformColumns", "[", 
-              RowBox[{"oneTableTab", ",", 
-               RowBox[{"\"\<pexa_Inhale Exhale Airflow [ml/(20 s)]\>\"", "->", 
+              RowBox[{"oneTableTabExtractInput", ",", 
+               
+               RowBox[{"\"\<spiro_pexa_Inhale Exhale Airflow [ml/(20 s)]\>\"",
+                 "->", 
                 RowBox[{"(", 
                  RowBox[{
                   RowBox[{
                    RowBox[{
                    "QuantityMagnitude", "[", 
-                    "#\"pexa_Inhale Exhale Airflow [ml/s]\"", "]"}], "/", 
-                   "20"}], "&"}], ")"}]}]}], "]"}]}], ";", 
+                    "#\"spiro_pexa_Inhale Exhale Airflow [ml/s]\"", "]"}], "/",
+                    "20"}], "&"}], ")"}]}]}], "]"}]}], ";", 
             "\[IndentingNewLine]", 
             RowBox[{"plotRangeX", "=", 
              RowBox[{"MinMax", "[", 
               RowBox[{
                RowBox[{"Select", "[", 
-                RowBox[{"oneTableTab", ",", 
+                RowBox[{"oneTableTabExtract", ",", 
                  RowBox[{
                   RowBox[{"!", 
                    RowBox[{
-                   "MissingQ", "[", "#\"pexa_Inhale Exhale Airflow [ml/s]\"", 
-                    "]"}]}], "&"}]}], "]"}], "[", 
+                   "MissingQ", "[", 
+                    "#\"spiro_pexa_Inhale Exhale Airflow [ml/s]\"", "]"}]}], 
+                  "&"}]}], "]"}], "[", 
                RowBox[{"[", 
                 RowBox[{"All", ",", "\"\<elapsed time [s]\>\""}], "]"}], 
                "]"}], "]"}]}], ";", "\n", "\n", 
             RowBox[{"measurementPlot", "=", 
              RowBox[{"ListLinePlot", "[", 
               RowBox[{
-               RowBox[{"oneTableTab", "->", 
+               RowBox[{"oneTableTabExtract", "->", 
                 RowBox[{"{", 
                  RowBox[{
                   RowBox[{"{", 
                    RowBox[{"\"\<elapsed time [s]\>\"", ",", 
                     RowBox[{
-                    "nameDynamometerProtocol1", 
-                    "<>", "\"\< force [N]\>\""}]}], "}"}], ",", 
+                    "nameDynamometerProtocol1", "<>", "\"\<_\>\"", "<>", 
+                    "nameDynamometer1Spec", "<>", "\"\< force [N]\>\""}]}], 
+                   "}"}], ",", 
                   RowBox[{"{", 
                    RowBox[{"\"\<elapsed time [s]\>\"", ",", 
                     RowBox[{
-                    "nameDynamometerProtocol2", 
-                    "<>", "\"\< force [N]\>\""}]}], "}"}], ",", 
+                    "nameDynamometerProtocol2", "<>", "\"\<_\>\"", "<>", 
+                    "nameDynamometer2Spec", "<>", "\"\< force [N]\>\""}]}], 
+                   "}"}], ",", 
                   RowBox[{"{", 
                    
                    RowBox[{"\"\<elapsed time [s]\>\"", 
-                    ",", "\"\<pexa_Inhale Exhale Airflow [ml/(20 s)]\>\""}], 
-                   "}"}]}], "}"}]}], "\[IndentingNewLine]", ",", 
+                    ",", "\"\<spiro_pexa_Inhale Exhale Airflow [ml/(20 \
+s)]\>\""}], "}"}]}], "}"}]}], "\[IndentingNewLine]", ",", 
                RowBox[{"PlotLegends", "->", 
                 RowBox[{"{", 
                  RowBox[{
                   RowBox[{
-                  "nameDynamometerProtocol1", " ", "<>", 
-                   " ", "\"\< force [N]\>\""}], ",", 
+                  "nameDynamometerProtocol1", "<>", "\"\<_\>\"", "<>", 
+                   "nameDynamometer1Spec", "<>", "\"\< force [N]\>\""}], ",", 
                   RowBox[{
-                  "nameDynamometerProtocol2", " ", "<>", 
-                   " ", "\"\< force [N]\>\""}], 
-                  ",", "\"\<pexa_Inhale Exhale Airflow [ml/(20 s)]\>\""}], 
-                 "}"}]}], "\[IndentingNewLine]", ",", 
+                  "nameDynamometerProtocol2", "<>", "\"\<_\>\"", "<>", 
+                   "nameDynamometer2Spec", "<>", " ", "\"\< force [N]\>\""}], 
+                  ",", "\"\<spiro_pexa_Inhale Exhale Airflow [ml/(20 \
+s)]\>\""}], "}"}]}], "\[IndentingNewLine]", ",", 
                RowBox[{"FrameLabel", "->", 
                 RowBox[{"{", 
                  
@@ -3650,6 +3654,7 @@ Cell[BoxData[
                 RowBox[{"{", 
                  RowBox[{"plotRangeX", ",", "All"}], "}"}]}]}], "]"}]}], ";", 
             "\[IndentingNewLine]", "\[IndentingNewLine]", 
+            "\[IndentingNewLine]", 
             RowBox[{"myFigAppend", "[", 
              RowBox[{"measurementPlot", ",", "\"\<001\>\"", ",", 
               RowBox[{
@@ -3662,13 +3667,14 @@ Cell[BoxData[
               "airflow"}], "*)"}], "\[IndentingNewLine]", 
             RowBox[{"dExtr", "=", 
              RowBox[{"Select", "[", 
-              RowBox[{"oneTableTab", ",", 
+              RowBox[{"oneTableTabExtract", ",", 
                RowBox[{
                 RowBox[{
                  RowBox[{
-                 "MissingQ", "[", "#\"pexa_Inhale Exhale Airflow [ml/s]\"", 
-                  "]"}], "===", "False"}], "&"}]}], "]"}]}], ";", 
-            "\[IndentingNewLine]", "\[IndentingNewLine]", 
+                 "MissingQ", "[", 
+                  "#\"spiro_pexa_Inhale Exhale Airflow [ml/s]\"", "]"}], "===",
+                  "False"}], "&"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+            "\[IndentingNewLine]", 
             RowBox[{"timeFlowData", "=", 
              RowBox[{"Transpose", "[", 
               RowBox[{"{", 
@@ -3677,9 +3683,10 @@ Cell[BoxData[
                  RowBox[{"dExtr", ",", "\"\<elapsed time [s]\>\""}], "]"}], ",", 
                 RowBox[{"myNormalColumnTab", "[", 
                  RowBox[{
-                 "dExtr", ",", "\"\<pexa_Inhale Exhale Airflow [ml/s]\>\""}], 
-                 "]"}]}], "}"}], "]"}]}], ";", "\n", "\[IndentingNewLine]", 
-            "\[IndentingNewLine]", 
+                 "dExtr", 
+                  ",", "\"\<spiro_pexa_Inhale Exhale Airflow [ml/s]\>\""}], 
+                 "]"}]}], "}"}], "]"}]}], ";", "\[IndentingNewLine]", 
+            "\[IndentingNewLine]", "\[IndentingNewLine]", "\n", 
             RowBox[{"ClearAll", "[", "airflowToVolume", "]"}], ";", 
             "\[IndentingNewLine]", 
             RowBox[{
@@ -3762,14 +3769,15 @@ Cell[BoxData[
                    RowBox[{"t2", "-", "t1"}], ")"}], "/", 
                   RowBox[{"(", 
                    RowBox[{"q2", "-", "q1"}], ")"}]}]}]}]}]}], "]"}]}], ";", 
-           "\[IndentingNewLine]", "\[IndentingNewLine]", 
+           "\[IndentingNewLine]", "\[IndentingNewLine]", "\n", 
            RowBox[{"(*", 
             RowBox[{
              RowBox[{
              "interpolate", " ", "raw", " ", "volume", " ", "data", " ", 
               "and", " ", "baseline", " ", "points", " ", "from", " ", 
               "end"}], "-", 
-             RowBox[{"expiratory", " ", "phase"}]}], "*)"}], "\n", 
+             RowBox[{"expiratory", " ", "phase"}]}], "*)"}], 
+           "\[IndentingNewLine]", 
            RowBox[{"volumeFunction", "=", 
             RowBox[{"Interpolation", "[", 
              RowBox[{"rawVolume", ",", 
@@ -3815,8 +3823,8 @@ Cell[BoxData[
                RowBox[{"t", ",", 
                 RowBox[{"v", "-", 
                  RowBox[{"baseline", "[", "t", "]"}]}]}], "}"}]}]}]}], ";", 
-           "\n", "\[IndentingNewLine]", 
-           RowBox[{"(*", "plots", "*)"}], "\[IndentingNewLine]", 
+           "\[IndentingNewLine]", "\[IndentingNewLine]", 
+           RowBox[{"(*", "plots", "*)"}], "\n", 
            RowBox[{"volumePlot", "=", 
             RowBox[{"ListLinePlot", "[", 
              RowBox[{"correctedVolume", ",", 
@@ -3886,7 +3894,7 @@ vs raw volume data\>\""}], ",", "300", ",", "True"}], "}"}], "]"}], ";",
               "id", "<>", "\"\< plot raw volume with baseline \
 detection\>\""}], ",", "300", ",", "True"}], "}"}], "]"}], ";", 
            "\[IndentingNewLine]", "\[IndentingNewLine]", 
-           "\[IndentingNewLine]", 
+           "\[IndentingNewLine]", "\[IndentingNewLine]", 
            RowBox[{"(*", 
             RowBox[{
             "calculate", " ", "volume", " ", "of", " ", "breathing", " ", 
@@ -3994,14 +4002,15 @@ ml]\>\""}], "}"}]}], ",",
                    RowBox[{"{", 
                     RowBox[{"\"\<elapsed time [s]\>\"", ",", 
                     RowBox[{
-                    "nameDynamometerProtocol1", 
-                    "<>", "\"\< force [N]\>\""}]}], "}"}], ",", 
+                    "nameDynamometerProtocol1", "<>", "\"\<_\>\"", "<>", 
+                    "nameDynamometer1Spec", "<>", "\"\< force [N]\>\""}]}], 
+                    "}"}], ",", 
                    RowBox[{"{", 
                     RowBox[{"\"\<elapsed time [s]\>\"", ",", 
                     RowBox[{
-                    "nameDynamometerProtocol2", 
-                    "<>", "\"\< force [N]\>\""}]}], "}"}]}], "}"}]}], 
-                "\[IndentingNewLine]", ",", 
+                    "nameDynamometerProtocol2", "<>", "\"\<_\>\"", "<>", 
+                    "nameDynamometer2Spec", "<>", "\"\< force [N]\>\""}]}], 
+                    "}"}]}], "}"}]}], "\[IndentingNewLine]", ",", 
                 RowBox[{"PlotLegends", "->", 
                  RowBox[{"{", 
                   RowBox[{
@@ -4119,14 +4128,15 @@ baseline corrected\>\""}], ",", "300", ",", "True"}], "}"}], "]"}], ";",
                    RowBox[{"{", 
                     RowBox[{"\"\<elapsed time [s]\>\"", ",", 
                     RowBox[{
-                    "nameDynamometerProtocol1", 
-                    "<>", "\"\< force [N]\>\""}]}], "}"}], ",", 
+                    "nameDynamometerProtocol1", "<>", "\"\<_\>\"", "<>", 
+                    "nameDynamometer1Spec", "<>", "\"\< force [N]\>\""}]}], 
+                    "}"}], ",", 
                    RowBox[{"{", 
                     RowBox[{"\"\<elapsed time [s]\>\"", ",", 
                     RowBox[{
-                    "nameDynamometerProtocol2", 
-                    "<>", "\"\< force [N]\>\""}]}], "}"}]}], "}"}]}], 
-                "\[IndentingNewLine]", ",", 
+                    "nameDynamometerProtocol2", "<>", "\"\<_\>\"", "<>", 
+                    "nameDynamometer2Spec", "<>", "\"\< force [N]\>\""}]}], 
+                    "}"}]}], "}"}]}], "\[IndentingNewLine]", ",", 
                 RowBox[{"PlotLegends", "->", 
                  RowBox[{"{", 
                   RowBox[{
@@ -8377,7 +8387,7 @@ data \>\"", "<>", "#2"}], ",", "300", ",", "True"}], "}"}], "&"}], ",",
                   "\[IndentingNewLine]", ",", 
                   RowBox[{"PlotRange", "->", "All"}]}], "]"}]}], 
                "\[IndentingNewLine]", "}"}]}], "\[IndentingNewLine]", "]"}]}],
-            ";", "\[IndentingNewLine]", "\[IndentingNewLine]", "\n", 
+            ";", "\[IndentingNewLine]", "\n", "\[IndentingNewLine]", 
            RowBox[{"ClearAll", "[", "fitQuadratic", "]"}], ";", 
            "\[IndentingNewLine]", 
            RowBox[{
@@ -8490,12 +8500,12 @@ data \>\"", "<>", "#2"}], ",", "300", ",", "True"}], "}"}], "&"}], ",",
                    ",", "\"\<\[CapitalDelta]tInspDynT\>\"", 
                    ",", "\"\<\[CapitalDelta]tInspVol\>\""}], "}"}], "/.", " ",
                   "dDescRepl"}], ")"}]}]}], "\[IndentingNewLine]", "|>"}]}], ";",
-            "\[IndentingNewLine]", "\[IndentingNewLine]", 
-           "\[IndentingNewLine]", "\[IndentingNewLine]", 
+            "\n", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+           "\[IndentingNewLine]", 
            RowBox[{"(*", 
             RowBox[{
             "correlation", " ", "of", " ", "both", " ", "dynamometer", " ", 
-             "data"}], "*)"}], "\n", 
+             "data"}], "*)"}], "\[IndentingNewLine]", 
            RowBox[{"resCorrVInspVolDynADynT", "=", 
             RowBox[{"lnm", "[", 
              RowBox[{
@@ -8869,16 +8879,16 @@ thorax and abdomen\>\"", ",", "resLNM2ParamDur"}], "]"}], ";",
            RowBox[{"Export", "[", 
             RowBox[{
              RowBox[{
-             "exPath", "<>", "\"\<output dynamometer volume \>\"", "<>", " ", 
-              "id", "<>", "\"\< \>\"", " ", "<>", " ", "mode", 
+             "exPath", "<>", "id", "<>", "\"\<_\>\"", "<>", "mode", 
+              "<>", "\"\<_output-dynamometer-volume\>\"", 
               "<>", "\"\<.m\>\""}], ",", 
              RowBox[{"Association", "[", "myOutput", "]"}]}], "]"}], ";", 
-           "\[IndentingNewLine]", 
+           "\n", 
            RowBox[{"Export", "[", 
             RowBox[{
              RowBox[{
-             "exPath", "<>", "\"\<figures dynamometer volume \>\"", "<>", " ",
-               "id", "<>", "\"\< \>\"", " ", "<>", " ", "mode", 
+             "exPath", "<>", "id", "<>", "\"\<_\>\"", "<>", "mode", 
+              "<>", "\"\<_figures-dynamometer-volume\>\"", 
               "<>", "\"\<.m\>\""}], ",", "myExportFigureList"}], "]"}], 
            ";"}]}], "\[IndentingNewLine]", "]"}]}], " ", 
        RowBox[{"(*", "loop", "*)"}], ";", "\[IndentingNewLine]", 
@@ -9004,9 +9014,17 @@ thorax and abdomen\>\"", ",", "resLNM2ParamDur"}], "]"}], ";",
    3.9999080427371826`*^9, 3.999908215853405*^9}, {3.999910165962435*^9, 
    3.9999101968785305`*^9}, {3.9999102386437836`*^9, 3.999910274313324*^9}, {
    3.999910309774065*^9, 3.999910309942997*^9}, {3.99991036141296*^9, 
-   3.9999103698529453`*^9}, {3.9999104250092278`*^9, 3.999910429719496*^9}},
- CellLabel->
-  "In[130]:=",ExpressionUUID->"49400426-7836-d94e-a6bb-5b3c88c4636a"]
+   3.9999103698529453`*^9}, {3.9999104250092278`*^9, 3.999910429719496*^9}, {
+   3.9999106673923283`*^9, 3.9999106697443104`*^9}, 3.9999107572622433`*^9, 
+   3.9999108566396694`*^9, 3.9999108971740932`*^9, {3.9999110116997185`*^9, 
+   3.9999110226592007`*^9}, 3.999911061607046*^9, {3.9999110949682693`*^9, 
+   3.999911146225376*^9}, {3.9999111929082966`*^9, 3.9999112467908325`*^9}, {
+   3.999911300829275*^9, 3.9999113095458813`*^9}, {3.9999113514978104`*^9, 
+   3.999911426813776*^9}, {3.999911626210066*^9, 3.9999116835550632`*^9}, {
+   3.9999117639909763`*^9, 3.9999118807684193`*^9}, {3.999911942948271*^9, 
+   3.999911943318346*^9}, 
+   3.9999123711044655`*^9},ExpressionUUID->"29b6dca0-6589-f94e-b73c-\
+daf914e722bd"]
 }, Closed]],
 
 Cell[CellGroupData[{
@@ -9036,13 +9054,16 @@ main/data/2024_effects-mask-wearing/20261001-1.1_pilot-study/P01/\>\""}],
  CellLabel->
   "In[108]:=",ExpressionUUID->"ab5fadea-de0f-b14d-a80e-546d1f5c2d01"],
 
-Cell[BoxData[
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"myExportFigureList", "=", 
+   RowBox[{"{", "}"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{"evaluateVolumeDynamometerData", "[", 
   RowBox[{"\"\<P01_protocol.txt\>\"", ",", "\"\<P01_pexa.txt\>\"", 
    ",", "\"\<spiro_pexa\>\"", ",", "\"\<P01_dynamometer.csv\>\"", 
    ",", "\"\<dynamometer\>\"", ",", "4", ",", "\"\<thorax\>\"", 
    ",", "\"\<dynamometer\>\"", ",", "2", ",", "\"\<abdomen\>\""}], 
-  "]"}]], "Input",
+  "]"}]}], "Input",
  CellChangeTimes->{{3.9988369761992855`*^9, 3.9988369762867737`*^9}, {
    3.9988374482931194`*^9, 3.9988374533495846`*^9}, {3.998837489873829*^9, 
    3.998837569760086*^9}, {3.998837786058836*^9, 3.998837789405203*^9}, {
@@ -9055,9 +9076,10 @@ Cell[BoxData[
    3.9998747092154922`*^9, 3.999874709869934*^9}, {3.9998748311872215`*^9, 
    3.999874831800644*^9}, {3.999874863548252*^9, 3.9998748916121464`*^9}, 
    3.999874941562855*^9, 3.999874977052149*^9, {3.9998750348911095`*^9, 
-   3.9998750364786015`*^9}, {3.9998755852717476`*^9, 3.999875592255932*^9}},
+   3.9998750364786015`*^9}, {3.9998755852717476`*^9, 3.999875592255932*^9}, {
+   3.999911887528471*^9, 3.999911932200968*^9}},
  CellLabel->
-  "In[112]:=",ExpressionUUID->"eedcae76-50ab-0948-a373-b3a9de41a603"],
+  "In[271]:=",ExpressionUUID->"eedcae76-50ab-0948-a373-b3a9de41a603"],
 
 Cell[BoxData[{
  RowBox[{
@@ -21622,71 +21644,71 @@ Cell[CellGroupData[{
 Cell[156576, 3511, 189, 3, 42, "Section",ExpressionUUID->"5aed68f0-ee16-6e44-af91-d2335eb70de5"],
 Cell[CellGroupData[{
 Cell[156790, 3518, 168, 3, 42, "Subsection",ExpressionUUID->"da8a55b3-f39c-4b4d-9029-bd6b6ccfff31"],
-Cell[156961, 3523, 305825, 5485, 6986, "Input",ExpressionUUID->"49400426-7836-d94e-a6bb-5b3c88c4636a"]
+Cell[156961, 3523, 307006, 5503, 8874, "Input",ExpressionUUID->"29b6dca0-6589-f94e-b73c-daf914e722bd"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[462823, 9013, 156, 3, 30, "Subsection",ExpressionUUID->"c76eb69b-db3e-b448-beb7-97a3f3b9ff7a"],
-Cell[462982, 9018, 796, 18, 129, "Input",ExpressionUUID->"ab5fadea-de0f-b14d-a80e-546d1f5c2d01"],
-Cell[463781, 9038, 1411, 21, 37, "Input",ExpressionUUID->"eedcae76-50ab-0948-a373-b3a9de41a603"],
-Cell[465195, 9061, 695, 17, 129, "Input",ExpressionUUID->"f7cea5c4-ec77-7048-b839-d1ab219d891e"],
+Cell[464004, 9031, 156, 3, 30, "Subsection",ExpressionUUID->"c76eb69b-db3e-b448-beb7-97a3f3b9ff7a"],
+Cell[464163, 9036, 796, 18, 129, "Input",ExpressionUUID->"ab5fadea-de0f-b14d-a80e-546d1f5c2d01"],
+Cell[464962, 9056, 1567, 25, 53, "Input",ExpressionUUID->"eedcae76-50ab-0948-a373-b3a9de41a603"],
+Cell[466532, 9083, 695, 17, 129, "Input",ExpressionUUID->"f7cea5c4-ec77-7048-b839-d1ab219d891e"],
 Cell[CellGroupData[{
-Cell[465915, 9082, 653, 13, 37, "Input",ExpressionUUID->"909530f9-5bf8-3441-9acb-cd666bd11c55"],
-Cell[466571, 9097, 121646, 2220, 442, "Output",ExpressionUUID->"0c21ffed-4361-7d4b-81a3-00d59d9a3a62"],
-Cell[588220, 11319, 121624, 2225, 442, "Output",ExpressionUUID->"fd7d3f0f-84db-f94a-b76c-ccc8cd114e93"]
+Cell[467252, 9104, 653, 13, 37, "Input",ExpressionUUID->"909530f9-5bf8-3441-9acb-cd666bd11c55"],
+Cell[467908, 9119, 121646, 2220, 442, "Output",ExpressionUUID->"0c21ffed-4361-7d4b-81a3-00d59d9a3a62"],
+Cell[589557, 11341, 121624, 2225, 442, "Output",ExpressionUUID->"fd7d3f0f-84db-f94a-b76c-ccc8cd114e93"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[709881, 13549, 679, 16, 37, "Input",ExpressionUUID->"a01f635e-4939-8948-8d53-433d5d5e55dd"],
-Cell[710563, 13567, 4285, 89, 37, "Output",ExpressionUUID->"3d99d1a7-1030-764e-95e7-8e3a2805461d"],
-Cell[714851, 13658, 4531, 93, 37, "Output",ExpressionUUID->"37cbb3c9-dc46-4742-bdc6-9cda3fd358ba"]
+Cell[711218, 13571, 679, 16, 70, "Input",ExpressionUUID->"a01f635e-4939-8948-8d53-433d5d5e55dd"],
+Cell[711900, 13589, 4285, 89, 70, "Output",ExpressionUUID->"3d99d1a7-1030-764e-95e7-8e3a2805461d"],
+Cell[716188, 13680, 4531, 93, 70, "Output",ExpressionUUID->"37cbb3c9-dc46-4742-bdc6-9cda3fd358ba"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[719419, 13756, 429, 11, 22, "Input",ExpressionUUID->"fe85dc99-26de-6949-845c-cc53ac934e71"],
-Cell[719851, 13769, 1346, 24, 71, "Output",ExpressionUUID->"67a8f717-01de-7d4b-86b4-e3b02ad7ead1"]
+Cell[720756, 13778, 429, 11, 70, "Input",ExpressionUUID->"fe85dc99-26de-6949-845c-cc53ac934e71"],
+Cell[721188, 13791, 1346, 24, 70, "Output",ExpressionUUID->"67a8f717-01de-7d4b-86b4-e3b02ad7ead1"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[721234, 13798, 757, 16, 37, "Input",ExpressionUUID->"9cd20272-8569-1646-8795-86831b35aadd"],
-Cell[721994, 13816, 4153, 86, 70, "Output",ExpressionUUID->"81298197-cb7f-1c4b-8893-314755f35005"]
+Cell[722571, 13820, 757, 16, 70, "Input",ExpressionUUID->"9cd20272-8569-1646-8795-86831b35aadd"],
+Cell[723331, 13838, 4153, 86, 70, "Output",ExpressionUUID->"81298197-cb7f-1c4b-8893-314755f35005"]
 }, Open  ]],
-Cell[726162, 13905, 579, 13, 70, "Input",ExpressionUUID->"7567d810-f120-1748-a8d5-8a8618bcebb9"],
+Cell[727499, 13927, 579, 13, 70, "Input",ExpressionUUID->"7567d810-f120-1748-a8d5-8a8618bcebb9"],
 Cell[CellGroupData[{
-Cell[726766, 13922, 4326, 101, 70, "Input",ExpressionUUID->"1c8a6c8b-d1f4-4a4b-a348-ac6f42f79431"],
-Cell[731095, 14025, 122851, 2240, 70, "Output",ExpressionUUID->"1e1271ac-c9a0-7549-828e-7b1d1036cae4"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[853983, 16270, 618, 15, 70, "Input",ExpressionUUID->"369c4048-aeaa-aa4c-a436-f1e70718ce08"],
-Cell[854604, 16287, 1374, 25, 70, "Output",ExpressionUUID->"4dc4da1a-5685-2340-a73a-bb5727b0d93b"],
-Cell[855981, 16314, 206, 4, 70, "Output",ExpressionUUID->"c3d49d49-3780-0c4c-96a7-75504f75db40"],
-Cell[856190, 16320, 206, 4, 70, "Output",ExpressionUUID->"c572a974-b328-944c-81d6-fd7ac5f01114"]
+Cell[728103, 13944, 4326, 101, 70, "Input",ExpressionUUID->"1c8a6c8b-d1f4-4a4b-a348-ac6f42f79431"],
+Cell[732432, 14047, 122851, 2240, 70, "Output",ExpressionUUID->"1e1271ac-c9a0-7549-828e-7b1d1036cae4"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[856433, 16329, 1565, 33, 70, "Input",ExpressionUUID->"b0d1ca3f-d820-f248-a711-25687447d3b5"],
-Cell[858001, 16364, 122486, 2236, 70, "Output",ExpressionUUID->"c1449398-eecc-ce4c-88fb-c7288d2b9eb5"]
+Cell[855320, 16292, 618, 15, 70, "Input",ExpressionUUID->"369c4048-aeaa-aa4c-a436-f1e70718ce08"],
+Cell[855941, 16309, 1374, 25, 70, "Output",ExpressionUUID->"4dc4da1a-5685-2340-a73a-bb5727b0d93b"],
+Cell[857318, 16336, 206, 4, 70, "Output",ExpressionUUID->"c3d49d49-3780-0c4c-96a7-75504f75db40"],
+Cell[857527, 16342, 206, 4, 70, "Output",ExpressionUUID->"c572a974-b328-944c-81d6-fd7ac5f01114"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[980524, 18605, 5537, 120, 70, "Input",ExpressionUUID->"242ef4df-47bc-fb4f-a523-f2926db8fd72"],
-Cell[986064, 18727, 74505, 1359, 70, "Output",ExpressionUUID->"4e3492d3-774a-ff42-9088-7411f61a6ff1"]
+Cell[857770, 16351, 1565, 33, 70, "Input",ExpressionUUID->"b0d1ca3f-d820-f248-a711-25687447d3b5"],
+Cell[859338, 16386, 122486, 2236, 70, "Output",ExpressionUUID->"c1449398-eecc-ce4c-88fb-c7288d2b9eb5"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1060606, 20091, 1765, 39, 70, "Input",ExpressionUUID->"43cca6b9-9da8-7a40-a989-cf7e7b38d91c"],
-Cell[1062374, 20132, 446, 7, 70, "Output",ExpressionUUID->"48a9a959-6404-f044-aa41-cbf849e7268b"],
-Cell[1062823, 20141, 448, 7, 70, "Output",ExpressionUUID->"d5d57846-5921-9f4a-9013-18d3eb9cafba"],
-Cell[1063274, 20150, 450, 7, 70, "Output",ExpressionUUID->"5f52b1a6-5d7f-7949-b697-3741bad5fb22"],
-Cell[1063727, 20159, 9871, 302, 70, "Output",ExpressionUUID->"49198adf-a0ed-e343-8d08-016e0cd58e9f"]
+Cell[981861, 18627, 5537, 120, 70, "Input",ExpressionUUID->"242ef4df-47bc-fb4f-a523-f2926db8fd72"],
+Cell[987401, 18749, 74505, 1359, 70, "Output",ExpressionUUID->"4e3492d3-774a-ff42-9088-7411f61a6ff1"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1073635, 20466, 3885, 110, 70, "Input",ExpressionUUID->"d0be5f5a-e2b3-4d44-a772-7c639b874d2c"],
-Cell[1077523, 20578, 523, 10, 70, "Output",ExpressionUUID->"1bc02e6a-82ce-674a-b39c-ba7e9394a56b"],
-Cell[1078049, 20590, 11692, 274, 70, "Output",ExpressionUUID->"1ffce9c4-70c0-e34e-8266-1f40f067533e"]
+Cell[1061943, 20113, 1765, 39, 70, "Input",ExpressionUUID->"43cca6b9-9da8-7a40-a989-cf7e7b38d91c"],
+Cell[1063711, 20154, 446, 7, 70, "Output",ExpressionUUID->"48a9a959-6404-f044-aa41-cbf849e7268b"],
+Cell[1064160, 20163, 448, 7, 70, "Output",ExpressionUUID->"d5d57846-5921-9f4a-9013-18d3eb9cafba"],
+Cell[1064611, 20172, 450, 7, 70, "Output",ExpressionUUID->"5f52b1a6-5d7f-7949-b697-3741bad5fb22"],
+Cell[1065064, 20181, 9871, 302, 70, "Output",ExpressionUUID->"49198adf-a0ed-e343-8d08-016e0cd58e9f"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1089778, 20869, 2348, 62, 70, "Input",ExpressionUUID->"964c403d-0c59-564f-8937-612bc83704e2"],
-Cell[1092129, 20933, 12025, 282, 70, "Output",ExpressionUUID->"0102edba-d645-f047-9eeb-a6a361648303"]
+Cell[1074972, 20488, 3885, 110, 70, "Input",ExpressionUUID->"d0be5f5a-e2b3-4d44-a772-7c639b874d2c"],
+Cell[1078860, 20600, 523, 10, 70, "Output",ExpressionUUID->"1bc02e6a-82ce-674a-b39c-ba7e9394a56b"],
+Cell[1079386, 20612, 11692, 274, 70, "Output",ExpressionUUID->"1ffce9c4-70c0-e34e-8266-1f40f067533e"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1104191, 21220, 1095, 24, 70, "Input",ExpressionUUID->"a24ff2d5-1f4c-8d49-ac77-0fa8c53e9aef"],
-Cell[1105289, 21246, 12636, 289, 70, "Output",ExpressionUUID->"c8d204cd-4b61-014b-b9d6-4d8b77664bab"],
-Cell[1117928, 21537, 835, 19, 70, "Output",ExpressionUUID->"08e90994-a074-f243-b0ca-f66d067ed84d"],
-Cell[1118766, 21558, 839, 19, 70, "Output",ExpressionUUID->"b145eb5b-006f-5548-9bad-501e7b1919dc"]
+Cell[1091115, 20891, 2348, 62, 70, "Input",ExpressionUUID->"964c403d-0c59-564f-8937-612bc83704e2"],
+Cell[1093466, 20955, 12025, 282, 70, "Output",ExpressionUUID->"0102edba-d645-f047-9eeb-a6a361648303"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1105528, 21242, 1095, 24, 70, "Input",ExpressionUUID->"a24ff2d5-1f4c-8d49-ac77-0fa8c53e9aef"],
+Cell[1106626, 21268, 12636, 289, 70, "Output",ExpressionUUID->"c8d204cd-4b61-014b-b9d6-4d8b77664bab"],
+Cell[1119265, 21559, 835, 19, 70, "Output",ExpressionUUID->"08e90994-a074-f243-b0ca-f66d067ed84d"],
+Cell[1120103, 21580, 839, 19, 70, "Output",ExpressionUUID->"b145eb5b-006f-5548-9bad-501e7b1919dc"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
